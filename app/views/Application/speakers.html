@@ -1,0 +1,56 @@
+#{extends 'main.html' /}
+#{set title:'Orateurs' /}
+
+#{if user}
+	<a href="@{Speakers.blank()}">add</a>
+	<br/>
+#{/if}
+
+<table>
+	<caption>Orateurs</caption>
+	<tbody>
+		#{list items: speakers, as: 'speaker'}
+			<tr>
+				<td><img src="@{Application.speakerPhoto(speaker.id)}" width="200"/></td>
+				<td>
+					Name: <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
+					#{if user}
+						<br/>
+						<a href="@{Speakers.show(speaker.id)}">edit</a>
+					#{/if}
+					<br/>
+					Title: ${speaker.title}
+					<br/>
+					Bio: ${speaker.biography}
+					#{if speaker.company}
+						<br/>
+						Company: 
+						#{if speaker.companyURL}
+							<a href="${speaker.companyURL}">${speaker.company}</a>
+						#{/if}
+						#{else}
+							${speaker.company}
+						#{/else}
+					#{/if}
+					#{if speaker.twitterAccount}
+						<br/>
+						Twitter: <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
+					#{/if}
+					#{if speaker.blogURL}
+						<br/>
+						Blog: <a href="${speaker.blogURL}">${speaker.blogURL}</a>
+					#{/if}
+					<br/>
+					Talks:
+					<ul>
+						#{list items: speaker.talks, as: 'talk'}
+							<li>
+								<a href="@{Application.talk(talk.id)}">${talk.title}</a>
+							</li>
+						#{/list}
+					</ul>
+				</td>
+			</tr>
+		#{/list}
+	</tbody>
+</table>

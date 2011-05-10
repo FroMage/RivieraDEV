@@ -1,0 +1,44 @@
+#{extends 'main.html' /}
+#{set title:'Sessions' /}
+
+#{if user}
+	<a href="@{Talks.blank()}">add</a>
+	<br/>
+#{/if}
+
+<table>
+	<caption>Sessions</caption>
+	<tbody>
+		#{list items: talks, as: 'talk'}
+			<tr>
+				<td>
+					#{list items: talk.speakers, as: 'speaker'}
+						<img src="@{Application.speakerPhoto(speaker.id)}" width="100"/>
+					#{/list}
+				</td>
+				<td>
+					Title: <a href="@{Application.talk(talk.id)}">${talk.title}</a>
+					#{if user}
+						<br/>
+						<a href="@{Talks.show(talk.id)}">edit</a>
+					#{/if}
+					<br/>
+					Description: ${talk.description}
+					<br/>
+					Track: ${talk.track.title}
+					<br/>
+					Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+					<br/>
+					Speakers:
+					<ul>
+						#{list items: talk.speakers, as: 'speaker'}
+							<li>
+								<a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
+							</li>
+						#{/list}
+					</ul>
+				</td>
+			</tr>
+		#{/list}
+	</tbody>
+</table>

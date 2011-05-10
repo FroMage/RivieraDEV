@@ -1,0 +1,199 @@
+models.Sponsor(Sponsor:9):
+ about: "Fondé en 1993, Lunatech Research propose du consulting TIC, de la recherche de produits et des équipes de développement. Sous la forme d’une équipe d’experts programmeurs auto-managés travaillant avec une équipe commerciale expérimentée."
+ company: "Lunatech Research"
+ companyURL: "http://www.lunatech.com"
+ id: 9
+ twitterAccount: "Lunatech"
+
+models.Sponsor(Sponsor:25):
+ about: "Oracle provides the world’s most complete, open, and integrated business software and hardware systems, with more than 370,000 customers—including 100 of the Fortune 100—representing a variety of sizes and industries in more than 145 countries around the globe. Oracle's product strategy provides flexibility and choice to our customers across their IT infrastructure. Now, with Sun server, storage, operating-system, and virtualization technology, Oracle is the only vendor able to offer a complete technology stack in which every layer is integrated to work together as a single system. In addition, Oracle's open architecture and multiple operating-system options gives our customers unmatched benefits from industry-leading products, including excellent system availability, scalability, energy efficiency, powerful performance, and low total cost of ownership."
+ company: "Oracle"
+ companyURL: "http://www.oracle.com"
+ id: 25
+ twitterAccount: "Oracle"
+
+models.Sponsor(Sponsor:27):
+ about: "Avisto est une société d'ingénierie spécialisée dans les nouvelles technologies J2EE.
+\n
+\nDe l'édition logicielle à la prestation de service, Avisto est le partenaire privilégié de vos projets d'innovations."
+ company: "Avisto"
+ companyURL: "http://www.avisto.com"
+ id: 27
+ twitterAccount: "Avisto"
+
+models.Sponsor(Sponsor:26):
+ about: "Amadeus est le fournisseur leader mondial des solutions technologiques de gestion pour la distribution et la vente de services de voyages. Les solutions et services d’Amadeus sont utilisés par plus de 100 000 bureaux de vente de compagnies aériennes dans le monde.
+\n
+\nAmadeus sas, à Sophia Antipolis, est le principal centre de R&D et de marketing produits du Groupe. C’est ici que sont conçues les solutions innovantes pour les voyages de demain.
+\n
+\n8 500 salariés dans le monde, 2 400 à Sophia Antipolis 105 nationalités représentées dans le monde, plus de 60 sur le site de Sophia Antipolis."
+ company: "Amadeus"
+ companyURL: "http://www.amadeus.com"
+ id: 26
+ twitterAccount: "Amadeus"
+
+models.Sponsor(Sponsor:29):
+ about: "Stonesoft est un fournisseur novateur de solutions de sécurité réseau intégrées, visant à sécuriser le flux d'informations à l'échelle d'entreprises distribuées. La solution de connectivité sécurisée StoneGate™ fusionne les aspects de la sécurité réseau que sont le pare-feu (FW), le réseau privé virtuel (VPN), la prévention d'intrusion (IPS), le VPN SSL, la disponibilité de bout en bout, ainsi qu'un équilibrage des charges plébiscité, au sein d'un système dont la gestion est centralisée et unifiée."
+ company: "Stonesoft"
+ companyURL: "http://www.stonesoft.com/"
+ id: 29
+ twitterAccount: "Stonesoft"
+
+models.Sponsor(Sponsor:28):
+ about: "JBoss Enterprise Middleware intègre et consolide les fonctionnalités d'entreprise les plus récentes des projets communautaires dans des distributions Middleware supportées, stables, sécurisées et certifiées.
+\n
+\nQuels bénéfices ?
+\n
+\nmise sur le marche plus rapide des nouveaux projets
+\nProcessus métier et performances renforcés
+\nSupport inégalé, complet et stable
+\nRéduction des frais initiaux et du coût total de possession
+\nPour en savoir plus : www.jboss.com."
+ company: "JBoss"
+ companyURL: "http://www.jboss.com"
+ id: 28
+ twitterAccount: "JBoss"
+
+models.Slot(Slot:6):
+ endDate: 2011-09-29T10:00:00.000+02:00
+ id: 6
+ startDate: 2011-09-29T09:00:00.000+02:00
+
+models.Slot(Slot:7):
+ endDate: 2011-09-29T11:15:00.000+02:00
+ id: 7
+ startDate: 2011-09-29T10:15:00.000+02:00
+
+models.Slot(Slot:10):
+ endDate: 2011-09-29T12:30:00.000+02:00
+ id: 10
+ startDate: 2011-09-29T11:30:00.000+02:00
+
+models.Slot(Slot:11):
+ endDate: 2011-09-29T15:00:00.000+02:00
+ id: 11
+ startDate: 2011-09-29T14:00:00.000+02:00
+
+models.Slot(Slot:12):
+ endDate: 2011-09-29T16:15:00.000+02:00
+ id: 12
+ startDate: 2011-09-29T15:15:00.000+02:00
+
+models.Slot(Slot:13):
+ endDate: 2011-09-29T17:30:00.000+02:00
+ id: 13
+ startDate: 2011-09-29T16:30:00.000+02:00
+
+models.Slot(Slot:14):
+ endDate: 2011-09-30T10:00:00.000+02:00
+ id: 14
+ startDate: 2011-09-30T09:00:00.000+02:00
+
+models.Slot(Slot:15):
+ endDate: 2011-09-30T11:15:00.000+02:00
+ id: 15
+ startDate: 2011-09-30T10:15:00.000+02:00
+
+models.Slot(Slot:17):
+ endDate: 2011-09-30T15:00:00.000+02:00
+ id: 17
+ startDate: 2011-09-30T14:00:00.000+02:00
+
+models.Slot(Slot:16):
+ endDate: 2011-09-30T12:30:00.000+02:00
+ id: 16
+ startDate: 2011-09-30T11:30:00.000+02:00
+
+models.Slot(Slot:19):
+ endDate: 2011-09-30T17:30:00.000+02:00
+ id: 19
+ startDate: 2011-09-30T16:30:00.000+02:00
+
+models.Slot(Slot:18):
+ endDate: 2011-09-30T16:15:00.000+02:00
+ id: 18
+ startDate: 2011-09-30T15:15:00.000+02:00
+
+models.Track(Track:2):
+ id: 2
+ title: "Java"
+
+models.Track(Track:3):
+ id: 3
+ title: "INRIA"
+
+models.Track(Track:4):
+ id: 4
+ title: "Web"
+
+models.Speaker(Speaker:1):
+ biography: "Too long"
+ blogURL: "http://stephane.epardaud.net"
+ company: "Lunatech Research"
+ companyURL: "http://www.lunatech.com"
+ firstName: "Stéphane"
+ id: 1
+ lastName: "Épardaud"
+ title: "Soft Engineer"
+ twitterAccount: "UnFroMage"
+
+models.Speaker(Speaker:21):
+ biography: "Ego's life"
+ blogURL: ""
+ company: "Lunatech Research"
+ companyURL: "http://www.lunatech.com"
+ firstName: "Egor"
+ id: 21
+ lastName: "Kloos"
+ title: "Head of graphical inquisition"
+ twitterAccount: ""
+
+models.Speaker(Speaker:20):
+ biography: "Nico's bio"
+ blogURL: ""
+ company: "Lunatech Research"
+ companyURL: "http://www.lunatech.com"
+ firstName: "Nicolas"
+ id: 20
+ lastName: "Leroux"
+ title: "CTO"
+ twitterAccount: "pepite"
+
+models.Talk(Talk:8):
+ description: "His life, his work."
+ id: 8
+ slot: "Slot:6"
+ speakers: "Speaker:1"
+ title: "Stef's life"
+ track: "Track:2"
+
+models.Talk(Talk:23):
+ description: "All about play"
+ id: 23
+ slot: "Slot:14"
+ speakers: "Speaker:20"
+ title: "Play! Framework"
+ track: "Track:2"
+
+models.Talk(Talk:22):
+ description: "All about CSS"
+ id: 22
+ slot: "Slot:7"
+ speakers: "Speaker:21"
+ title: "CSS"
+ track: "Track:4"
+
+models.Talk(Talk:24):
+ description: "Complex stuff ;)"
+ id: 24
+ slot: "Slot:10"
+ title: "Research stuff"
+ track: "Track:3"
+
+models.User(User:5):
+ firstName: "Stéphane"
+ id: 5
+ lastName: "Épardaud"
+ password: "1q2w3e"
+ userName: "FroMage"
+

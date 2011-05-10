@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'Sponsors' /}
+
+#{if user}
+	<a href="@{Sponsors.blank()}">add</a>
+	<br/>
+#{/if}
+
+<table>
+	<caption>Sponsors</caption>
+	<tbody>
+		#{list items: sponsors, as: 'sponsor'}
+			<tr>
+				<td>
+					<img src="@{Application.sponsorLogo(sponsor.id)}" width="100"/>
+				</td>
+				<td>
+					Name: 
+					#{if sponsor.companyURL}
+						<a href="${sponsor.companyURL}">${sponsor.company}</a>
+					#{/if}
+					#{else}
+						${sponsor.company}
+					#{/else}
+					#{if user}
+						<br/>
+						<a href="@{Sponsors.show(sponsor.id)}">edit</a>
+					#{/if}
+					<br/>
+					About: ${sponsor.about}
+					#{if sponsor.twitterAccount}
+						<br/>
+						Twitter: <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
+					#{/if}
+				</td>
+			</tr>
+		#{/list}
+	</tbody>
+</table>

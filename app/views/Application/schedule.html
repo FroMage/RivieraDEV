@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:'Programme' /}
+
+#{list items: days, as: 'day'}
+	<table border="1">
+		<caption>Programme du ${day.format('dd MMM yyyy')}</caption>
+		<thead>
+			<tr>
+				<th>Horaire</th>
+				#{list items: tracks, as: 'track'}
+					<th>
+						${track.title}
+						#{if user}
+							<br/>
+							<a href="@{Tracks.show(track.id)}">edit</a>
+						#{/if}
+					</th>
+				#{/list}
+			</tr>
+		</thead>
+		<tbody>
+			#{list items: models.Slot.findPerDay(day), as: 'slot'}
+			<tr>
+				<td>
+					${slot.startDate.format('HH:mm')} - ${slot.endDate.format('HH:mm')}
+					#{if user}
+						<br/>
+						<a href="@{Slots.show(slot.id)}">edit</a>
+					#{/if}
+				</td> 
+				#{list items: tracks, as: 'track'}
+					%{
+						talk = slot.getTalkPerTrack(track);
+					}%
+					<td>
+						#{if talk}
+							<a href="@{Application.talk(talk.id)}">${talk.title}</a>
+							<br/>
+							By:
+							<ul>
+								#{list items: talk.speakers, as: 'speaker'}
+									<li><a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a></li>
+								#{/list}
+							</ul>
+							#{if user}
+								<br/>
+								<a href="@{Talks.show(talk.id)}">edit</a>
+							#{/if}
+						#{/if}
+						#{else}
+							#{if user}
+								<a href="@{Talks.blank()}">add talk</a>
+							#{/if}
+						#{/else}
+					</td>
+				#{/list}
+			</tr>
+			#{/list}
+			#{if user}
+				<tr>
+					<td><a href="@{Slots.blank()}">add slot</a></td>
+				</tr>
+			#{/if}
+		</tbody>
+	</table>
+#{/list}

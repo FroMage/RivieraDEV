@@ -1,0 +1,77 @@
+<html>
+ <head>
+  <title>Exporter</title>
+  <style>
+input[name=hql] {
+ width: 50em;
+}
+input[name=exclude] {
+ width: 20em;
+}
+textarea {
+ width: 100%;
+ height: 20em;
+}
+  </style>
+ </head>
+ <body>
+#{form @YMLExporter.export()}
+ <table>
+ #{list (hql ?: ['','','','','']), as: 'h'}
+  <tr>
+   <th>Select:</th>
+   <td>
+    <input type="text" name="hql" value="${h}"/>
+   </td>
+  </tr>
+ #{/list}
+ #{list (exclude ?: ['','','','','']), as: 'x'}
+  <tr>
+   <th>Exclude:</th>
+   <td>
+    <input type="text" name="exclude" value="${x}"/>
+   </td>
+  </tr>
+ #{/list}
+  <tr>
+   <th>Actions:</th>
+   <td>
+    <input type="submit"/>
+   </td>
+  </tr>
+ </table>
+#{/form}
+#{if serialised}
+<div>
+ Data was obtained with:
+ <ul>
+  #{list hql, as: 'h'}
+   #{if h}
+    <li>${h}</li>
+   #{/if}
+  #{/list}
+ </ul>
+ Excluding:
+ <ul>
+  #{list exclude, as: 'x'}
+   #{if x}
+    <li>${x}</li>
+   #{/if}
+  #{/list}
+ </ul>
+</div>
+<textarea>
+#{list serialised, as: 'o'}
+${o.type}(${o.id}):
+#{list o.properties.entrySet(), as: 'e'}
+ ${e.getKey()}: ${e.getValue()}
+#{/list}
+
+#{/list}
+</textarea>
+#{/if}
+#{else}
+No results found.
+#{/else}
+ </body>
+</html>

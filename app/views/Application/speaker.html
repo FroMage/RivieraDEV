@@ -1,0 +1,46 @@
+#{extends 'main.html' /}
+#{set title:speaker.firstName+' '+speaker.lastName /}
+
+#{if user}
+	<a href="@{Speakers.blank()}">add</a>
+	<br/>
+#{/if}
+
+<img src="@{Application.speakerPhoto(speaker.id)}" width="200"/>
+<br/>
+Name: ${speaker.firstName} ${speaker.lastName}
+#{if user}
+	<br/>
+	<a href="@{Speakers.show(speaker.id)}">edit</a>
+#{/if}
+<br/>
+Title: ${speaker.title}
+<br/>
+Bio: ${speaker.biography}
+#{if speaker.company}
+	<br/>
+	Company: 
+	#{if speaker.companyURL}
+		<a href="${speaker.companyURL}">${speaker.company}</a>
+	#{/if}
+	#{else}
+		${speaker.company}
+	#{/else}
+#{/if}
+#{if speaker.twitterAccount}
+	<br/>
+	Twitter: <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
+#{/if}
+#{if speaker.blogURL}
+	<br/>
+	Blog: <a href="${speaker.blogURL}">${speaker.blogURL}</a>
+#{/if}
+<br/>
+Talks:
+<ul>
+	#{list items: speaker.talks, as: 'talk'}
+		<li>
+			<a href="@{Application.talk(talk.id)}">${talk.title}</a>
+		</li>
+	#{/list}
+</ul>
