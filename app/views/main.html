@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
     <head>
         <title>#{get 'title' /}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/styles/riviera/css/main.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+        <script src="@{'/public/scripts/modernizr.js'}" type="text/javascript" charset="utf-8"></script>
+        <script src="@{'/public/scripts/jquery.js'}" type="text/javascript" charset="utf-8"></script>
         #{get 'moreScripts' /}
     </head>
     <body>
-    	#{if user}Logged in as ${user}#{/if}
+        <header>
+        	#{if user}Logged in as ${user}#{/if}
+        	<hgroup>
+        	   <h2>Riviera Dev 2011</h2>
+        	   <h4>Riviera JUG</h4>
+        	</hgroup>
+            <nav>
     	<ul>
     		<li><a href="@{Application.index}">Index</a></li>
     		<li><a href="@{Application.schedule}">Programme</a></li>
@@ -27,6 +34,13 @@
 	    		<li><a href="@{Secure.login}">Login</a></li>
 	    	#{/else}
     	</ul>
-        #{doLayout /}
+            </nav>
+        </header>
+        <section>
+            #{doLayout /}
+        </section>
+        <footer>
+               Copyright &copy; 2011 Riviera JUG / RivieraDev. All rights reserved.
+        </footer>
     </body>
 </html>

@@ -1,0 +1,165 @@
+/*  ###########################################################################
+    Author:     Lunatech
+    date:       January 2011
+    ########################################################################### */
+    
+    
+//  LESS LIBRARY ##############################################################
+//  THESE ARE THE VARIABLES TO SKIN THIS PROJECT ##############################
+
+
+
+//  Base units that set overal proportions ------------------------------------
+
+    @grid-unit:             12px;
+    @unit:                  0.2em;
+    @em:                    @unit*7;
+    
+    @base-height:           @em;
+    @base-width:            @grid-unit * 4;
+    @block-space:           @base-width / 2;
+    @text-block-width:      @base-width * 12;
+    @max-width:             @grid-unit*100;
+    
+    @line:                  1px;
+    @ui-line:               1px;
+    @top:                   0 - @ui-line;
+    @bottom:                @ui-line;
+    @rad:                   @grid-unit / 3;  // border radius setting
+    
+    
+//  Font elements -------------------------------------------------------------
+
+    @font-face {
+        font-family: 'CPMono';
+        src: url('../fonts/CPMono_v07_Plain-webfont.eot');
+        src: url('../fonts/CPMono_v07_Plain-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/CPMono_v07_Plain-webfont.woff') format('woff'),
+             url('../fonts/CPMono_v07_Plain-webfont.ttf') format('truetype'),
+             url('../fonts/CPMono_v07_Plain-webfont.svg#CPMono_v07Plain') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'DaysRegular';
+        src: url('../fonts/Days-webfont.eot');
+        src: url('../fonts/Days-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Days-webfont.woff') format('woff'),
+             url('../fonts/Days-webfont.ttf') format('truetype'),
+             url('../fonts/Days-webfont.svg#DaysRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-scale:            82.5%;
+    @transport:             1.6;
+    @interline:             @em/@em;
+    @typeface:              Arial, sans-serif;
+    @typeface-header:       "DaysRegular", sans-serif;
+    @typeface-mono:         "CPMono", monospace;
+    
+    
+//  Basic colour values -------------------------------------------------------
+
+    @light-color:           #F2E8D5;
+    @dark-color:            #272433;
+    @text-color:            #272433;
+    
+    
+//  Link colour values --------------------------------------------------------
+
+    @link-color:            #0080ff;
+    @link-color-visited:    #8000ff;
+    @link-color-visited:    #0080ff;
+    @link-color-hover:      @link-color;
+    @link-color-active:     @link-color;
+    
+    
+//  Color sets ----------------------------------------------------------------
+    
+    @brand-color:           #2669BF;
+
+    @blue1:                 #2669BF;
+    @blue2:                 darken(@blue1, 15%);
+    
+    @green1:                #B2D249;
+    @green2:                #77994C;
+    
+    @yellow1:               #ffe362;
+    @yellow2:               darken(@yellow1, 25%);
+    
+    @red1:                  #f83f21;
+    @red2:                  darken(@red1, 15%);
+    
+    
+    @grey0:                 #efefef;                            @base-color:                lighten(@light-color,4%);    
+    @grey1:                 darken(@grey0, 8%);                 @base-color1:               darken(@base-color, 0%);
+    @grey2:                 darken(@grey0, 16%);                @base-color2:               darken(@base-color, 4%);
+    @grey3:                 darken(@grey0, 26%);                @base-color3:               darken(@base-color, 8%);
+    @grey4:                 darken(@grey0, 38%);                @base-color4:               darken(@base-color, 16%);
+    @grey5:                 darken(@grey0, 54%);                @base-color5:               darken(@base-color, 26%);
+    @grey6:                 darken(@grey0, 76%);                @base-color6:               darken(@base-color, 38%);
+   
+    @error:                 #cd0a0a;
+    
+    @ui-highlight1:         @yellow1;                           @ui-error1:                  @red1;
+    @ui-highlight2:         darken(@ui-highlight1, 25%);        @ui-error2:                  darken(@ui-error1, 15%);
+    @ui-highlight3:         darken(@ui-highlight2, 5%);         @ui-error3:                  darken(@ui-error2, 5%);
+
+    
+
+//  Form elements -------------------------------------------------------------
+
+    @form-width:            @text-block-width;
+    @field-width:           @text-block-width;
+    
+    @input-padding-height:  @base-height/4;
+    @input-padding-width:   @block-space/6;
+    @text-input-padding:    @input-padding-height @input-padding-width;
+    
+    @label-width:           @text-block-width;
+    @text-input-width:      @text-block-width - @input-padding-width*2;
+    @label-orientation:     none; /* float value: left, right, none */
+    @label-text-orientation:left;
+
+
+//  Basic UI elements ---------------------------------------------------------
+
+    .text-shadow(@x, @y, @line, @color) {
+        text-shadow: @x @y @line @color;
+        }
+    .box-shadow(@size,@color) {
+        -moz-box-shadow: 0 @size @size @color;
+        -webkit-box-shadow: 0 @size @size @color;
+        box-shadow: 0 @size @size @color;
+        }
+    .gradient(@start,@stop){
+        background: @start; /* old browsers */
+        background: -moz-linear-gradient(top, @start 0%, @stop 100%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@stop)); /* webkit */
+        background: -ms-linear-gradient(top, @start 0%, @stop 100%); /* ie10 */
+        background: linear-gradient(top, @start 0%, @stop 100%); /* w3c */
+        /* IE HACK!!*/
+        //filter: e("progid:DXImageTransform.Microsoft.Gradient( StartColorStr=")@start e(", EndColorStr=")@stop e(",GradientType=0 )");/* ie */
+        }   
+    .rounded-corners(@rad) {
+        -moz-border-radius:@rad;
+        -webkit-border-radius:@rad;
+        border-radius:@rad;
+        }
+    .columns(@col) {
+        -moz-column-count: @col; 
+        -moz-column-gap: @block-space; 
+        -webkit-column-count: @col; 
+        -webkit-column-gap: @block-space; 
+        column-count: @col; 
+        column-gap: @block-space; 
+        }
+    .clear-fix {
+        content: ".";
+    	display: block;
+    	clear: both;
+    	visibility: hidden;
+    	line-height: 0;
+    	height: 0;
+        }

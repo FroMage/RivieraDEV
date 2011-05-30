@@ -5,13 +5,20 @@
 	<a href="@{Speakers.blank()}">add</a>
 	<br/>
 #{/if}
-
+<h1>Orateurs</h1>
 <table>
-	<caption>Orateurs</caption>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Speaker</th>
+            <th>Info</th>
+            <th>Talk</th>
+        </tr>
+    </thead>
 	<tbody>
 		#{list items: speakers, as: 'speaker'}
 			<tr>
-				<td><img src="@{Application.speakerPhoto(speaker.id)}" width="200"/></td>
+				<th><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></th>
 				<td>
 					Name: <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
 					#{if user}
@@ -20,8 +27,9 @@
 					#{/if}
 					<br/>
 					Title: ${speaker.title}
-					<br/>
-					Bio: ${speaker.biography}
+                </td>
+				<td>
+				    Bio: ${speaker.biography}
 					#{if speaker.company}
 						<br/>
 						Company: 
@@ -40,8 +48,8 @@
 						<br/>
 						Blog: <a href="${speaker.blogURL}">${speaker.blogURL}</a>
 					#{/if}
-					<br/>
-					Talks:
+                </td>
+				<td>
 					<ul>
 						#{list items: speaker.talks, as: 'talk'}
 							<li>

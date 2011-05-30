@@ -1,6 +1,6 @@
 #{extends 'main.html' /}
 #{set title:'Programme' /}
-
+<h1>Programme</h1>
 #{list items: days, as: 'day'}
 	<table border="1">
 		<caption>Programme du ${day.format('dd MMM yyyy')}</caption>
@@ -36,7 +36,7 @@
 						#{if talk}
 							<a href="@{Application.talk(talk.id)}">${talk.title}</a>
 							<br/>
-							By:
+							<!--By:-->
 							<ul>
 								#{list items: talk.speakers, as: 'speaker'}
 									<li><a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a></li>

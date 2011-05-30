@@ -5,17 +5,24 @@
 	<a href="@{Talks.blank()}">add</a>
 	<br/>
 #{/if}
-
+<h1>Sessions</h1>
 <table>
-	<caption>Sessions</caption>
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Track</th>
+            <th>Info</th>
+            <th>Speakers</th>
+        </tr>
+    </thead>
 	<tbody>
 		#{list items: talks, as: 'talk'}
 			<tr>
-				<td>
+				<th>
 					#{list items: talk.speakers, as: 'speaker'}
 						<img src="@{Application.speakerPhoto(speaker.id)}" width="100"/>
 					#{/list}
-				</td>
+				</th>
 				<td>
 					Title: <a href="@{Application.talk(talk.id)}">${talk.title}</a>
 					#{if user}
@@ -24,12 +31,13 @@
 					#{/if}
 					<br/>
 					Description: ${talk.description}
-					<br/>
+                </td>
+				<td>
 					Track: ${talk.track.title}
 					<br/>
 					Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
-					<br/>
-					Speakers:
+                </td>
+				<td>
 					<ul>
 						#{list items: talk.speakers, as: 'speaker'}
 							<li>

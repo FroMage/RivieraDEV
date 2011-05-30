@@ -6,11 +6,11 @@
 	<br/>
 #{/if}
 
-#{list items: talk.speakers, as: 'speaker'}
-	<img src="@{Application.speakerPhoto(speaker.id)}" width="100"/>
-#{/list}
-<br/>
-Title: <a href="@{Application.talk(talk.id)}">${talk.title}</a>
+<hgroup>
+    <h6>Session:</h6>
+    <!--h1><a href="@{Application.talk(talk.id)}">${talk.title}</a></h1-->
+    <h1>${talk.title}</h1>
+</hgroup>
 #{if user}
 	<br/>
 	<a href="@{Talks.show(talk.id)}">edit</a>
@@ -22,6 +22,9 @@ Track: ${talk.track.title}
 <br/>
 Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
 <br/>
+#{list items: talk.speakers, as: 'speaker'}
+	<img src="@{Application.speakerPhoto(speaker.id)}" width="100" style="float:left;"/>
+#{/list}
 Speakers:
 <ul>
 	#{list items: talk.speakers, as: 'speaker'}

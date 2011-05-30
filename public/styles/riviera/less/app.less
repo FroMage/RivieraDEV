@@ -1,0 +1,128 @@
+/*  ###########################################################################
+    Author:     Lunatech Labs
+    date:       January 2011
+    ########################################################################### */
+
+//  This LESS file is only used for this project. Each project would require
+//  its own 'app.less' file or whatever you will call it. 
+//  The 'main.less' file is where you can add as many files you want.
+
+
+/*  Mockup Layout */
+    
+
+    body {  
+        color: @text-color;
+        background-color: @base-color;
+        }
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+        font-family: @typeface-header;
+        color: @blue2;
+        }
+    table {
+        margin-bottom: @interline*2;
+        font-family: @typeface-mono;
+        width: 100%;
+        }
+        
+    body > header {
+        margin-bottom: @interline*3;
+        padding: @interline 0 0;
+        .gradient(@green1,@green2);
+        border-bottom: @line*4 solid @blue2;
+        }
+    body > footer,
+    body > section,
+    body > header nav,
+    body > header hgroup{
+        margin: 0 auto;
+        width: @max-width;
+        }
+    body > section {
+        padding: 0 @block-space 0 @max-width/7;
+        width: @max-width - @max-width/7 - @block-space;
+        min-height: 600px;
+        }
+    body > header hgroup h4 {
+        text-transform: uppercase;
+        .h6;
+        font-family: @typeface-mono;
+        color: @base-color;
+        .text-shadow(0 ,@top, @line, fadeout(@dark-color,50%));
+        }
+    body > header hgroup h2 {
+        text-transform: uppercase;
+        .h3;
+        .text-shadow(0 ,@bottom, @line, fadeout(@light-color,30%));
+        color: @dark-color;
+        }
+    body > header nav {
+        position: relative;
+        }
+    body > header nav ul {
+        padding: @interline/20;
+        position: absolute;
+        top: @base-height*2.5;
+        left: 0;
+        display: inline;
+        margin: 0;
+        .rounded-corners(@rad);
+        list-style: none;
+        width: @max-width/8;
+        .gradient(lighten(@blue1,30%),lighten(@blue1,10%));
+        overflow: hidden;
+        }
+    body > header nav li {
+        display: block;
+        }
+    body > header nav li a,
+    body > header nav li a:visited {
+        display: block;
+        padding: @interline/2 @block-space @interline/2;
+        .text-shadow(0 ,@bottom, @line, fadeout(@light-color,30%));
+        color: @dark-color;
+        }
+    body > header nav li a:hover {
+        color: @base-color;
+        .text-shadow(0 ,0, 0, fadeout(@light-color,100%));
+        background: @blue2;
+        }
+
+    body > footer { 
+        clear: both;
+        padding-top: @interline*2;
+        text-align: center;
+        }
+        
+    tbody tr:nth-child(odd) td{
+        background: @base-color2;
+        }
+    
+    caption {
+        padding: @interline 0;
+        font-weight: bold;
+        font-family: @typeface;
+        color: @text-color;
+        background: transparent;
+        }
+    th {
+        //border-bottom: @line solid @sand1;
+        .h5;
+        font-weight: normal;
+        color: @green2;
+        }
+    td {
+        border-right: @line solid @base-color;
+        }
+        
+        
+    body > section hgroup h6 {
+        text-transform: uppercase;
+        font-family: @typeface-mono;
+        color: @blue1;
+        }
+
+        
+        
+        
