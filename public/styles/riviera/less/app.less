@@ -37,11 +37,9 @@
     body > header nav,
     body > header hgroup{
         margin: 0 auto;
-        width: @max-width;
         }
     body > section {
         padding: 0 @block-space 0 @max-width/7;
-        width: @max-width - @max-width/7 - @block-space;
         min-height: 600px;
         }
     body > header hgroup h4 {
@@ -51,6 +49,9 @@
         color: @base-color;
         .text-shadow(0 ,@top, @line, fadeout(@dark-color,50%));
         }
+    body > header hgroup {
+        margin-left: 2em;
+    }
     body > header hgroup h2 {
         text-transform: uppercase;
         .h3;
@@ -59,6 +60,7 @@
         }
     body > header nav {
         position: relative;
+        margin-left: 1em;
         }
     body > header nav ul {
         padding: @interline/20;
