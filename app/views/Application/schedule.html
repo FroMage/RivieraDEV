@@ -2,7 +2,11 @@
 #{set title:'Programme' /}
 <h1>Programme</h1>
 #{list items: days, as: 'day'}
-	<table border="1">
+	<table border="1" class="schedule">
+		<col class="times">
+		#{list items: tracks, as: 'track'}
+			<col class="track">
+		#{/list}
 		<caption>Programme du ${day.format('dd MMM yyyy')}</caption>
 		<thead>
 			<tr>
