@@ -11,19 +11,13 @@ models.Sponsor(Sponsor:25):
  twitterAccount: "Oracle"
 
 models.Sponsor(Sponsor:27):
- about: "Avisto est une société d'ingénierie spécialisée dans les nouvelles technologies J2EE.
-\n
-\nDe l'édition logicielle à la prestation de service, Avisto est le partenaire privilégié de vos projets d'innovations."
+ about: "Avisto est une société d'ingénierie spécialisée dans les nouvelles technologies J2EE.\n\nDe l'édition logicielle à la prestation de service, Avisto est le partenaire privilégié de vos projets d'innovations."
  company: "Avisto"
  companyURL: "http://www.avisto.com"
  twitterAccount: "Avisto"
 
 models.Sponsor(Sponsor:26):
- about: "Amadeus est le fournisseur leader mondial des solutions technologiques de gestion pour la distribution et la vente de services de voyages. Les solutions et services d’Amadeus sont utilisés par plus de 100 000 bureaux de vente de compagnies aériennes dans le monde.
-\n
-\nAmadeus sas, à Sophia Antipolis, est le principal centre de R&D et de marketing produits du Groupe. C’est ici que sont conçues les solutions innovantes pour les voyages de demain.
-\n
-\n8 500 salariés dans le monde, 2 400 à Sophia Antipolis 105 nationalités représentées dans le monde, plus de 60 sur le site de Sophia Antipolis."
+ about: "Amadeus est le fournisseur leader mondial des solutions technologiques de gestion pour la distribution et la vente de services de voyages. Les solutions et services d’Amadeus sont utilisés par plus de 100 000 bureaux de vente de compagnies aériennes dans le monde.\n\nAmadeus sas, à Sophia Antipolis, est le principal centre de R&D et de marketing produits du Groupe. C’est ici que sont conçues les solutions innovantes pour les voyages de demain.\n\n8 500 salariés dans le monde, 2 400 à Sophia Antipolis 105 nationalités représentées dans le monde, plus de 60 sur le site de Sophia Antipolis."
  company: "Amadeus"
  companyURL: "http://www.amadeus.com"
  twitterAccount: "Amadeus"
@@ -35,15 +29,7 @@ models.Sponsor(Sponsor:29):
  twitterAccount: "Stonesoft"
 
 models.Sponsor(Sponsor:28):
- about: "JBoss Enterprise Middleware intègre et consolide les fonctionnalités d'entreprise les plus récentes des projets communautaires dans des distributions Middleware supportées, stables, sécurisées et certifiées.
-\n
-\nQuels bénéfices ?
-\n
-\nmise sur le marche plus rapide des nouveaux projets
-\nProcessus métier et performances renforcés
-\nSupport inégalé, complet et stable
-\nRéduction des frais initiaux et du coût total de possession
-\nPour en savoir plus : www.jboss.com."
+ about: "JBoss Enterprise Middleware intègre et consolide les fonctionnalités d'entreprise les plus récentes des projets communautaires dans des distributions Middleware supportées, stables, sécurisées et certifiées.\n\nQuels bénéfices ?\n\nmise sur le marche plus rapide des nouveaux projets\nProcessus métier et performances renforcés\nSupport inégalé, complet et stable\nRéduction des frais initiaux et du coût total de possession\nPour en savoir plus : www.jboss.com."
  company: "JBoss"
  companyURL: "http://www.jboss.com"
  twitterAccount: "JBoss"
