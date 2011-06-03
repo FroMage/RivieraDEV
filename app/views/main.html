@@ -25,6 +25,7 @@
     		<li class="${request.action == 'Application.schedule' ? 'selected' : ''}"><a href="@{Application.schedule}">Programme</a></li>
     		<li class="${request.action == 'Application.speakers' ? 'selected' : ''}"><a href="@{Application.speakers}">Orateurs</a></li>
     		<li class="${request.action == 'Application.talks' ? 'selected' : ''}"><a href="@{Application.talks}">Sessions</a></li>
+    		<li class="${request.action == 'Application.subscribe' ? 'selected' : ''}"><a href="@{Application.subscribe}">Inscriptions</a></li>
     		<li class="${request.action == 'Application.sponsors' ? 'selected' : ''}"><a href="@{Application.sponsors}">Sponsors</a></li>
     		<li class="${request.action == 'Application.about' ? 'selected' : ''}"><a href="@{Application.about}">À propos</a></li>
 	    	#{if user}
@@ -38,7 +39,7 @@
     	</ul>
             </nav>
         </header>
-        <section>
+        <section class="${request.action}">
             #{doLayout /}
         </section>
         <footer>

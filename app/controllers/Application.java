@@ -25,6 +25,10 @@ public class Application extends Controller {
     public static void about() {
         render();
     }
+
+    public static void subscribe() {
+        render();
+    }
     
     public static void schedule(){
     	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
