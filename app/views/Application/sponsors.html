@@ -6,31 +6,40 @@
 	<br/>
 #{/if}
 	<h1>Sponsors</h1>
-<table>
+<table class="sponsors">
 	<tbody>
 		#{list items: sponsors, as: 'sponsor'}
 			<tr>
 				<td>
+					#{if sponsor.companyURL}
+						<a href="${sponsor.companyURL}">
+					#{/if}
 					<img src="@{Application.sponsorLogo(sponsor.id)}" width="100"/>
+					#{if sponsor.companyURL}
+						</a>
+					#{/if}
 				</td>
 				<td>
-					Name: 
-					#{if sponsor.companyURL}
-						<a href="${sponsor.companyURL}">${sponsor.company}</a>
-					#{/if}
-					#{else}
+					<span class="sponsor">
+						#{if sponsor.companyURL}
+							<a href="${sponsor.companyURL}">
+						#{/if}
 						${sponsor.company}
-					#{/else}
-					#{if user}
-						<br/>
-						<a href="@{Sponsors.show(sponsor.id)}">edit</a>
-					#{/if}
-					<br/>
-					About: ${sponsor.about}
+						#{if sponsor.companyURL}
+							</a>
+						#{/if}
+					</span>
 					#{if sponsor.twitterAccount}
 						<br/>
 						Twitter: <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
 					#{/if}
+					#{if user}
+						<br/>
+						<a href="@{Sponsors.show(sponsor.id)}">edit</a>
+					#{/if}
+					<p>
+						${sponsor.about.nl2br()}
+					</p>
 				</td>
 			</tr>
 		#{/list}

@@ -28,9 +28,9 @@
         
     body > header {
         margin-bottom: @interline*3;
-        padding: @interline 0 0;
-        .gradient(@orange1,@orange2);
-        border-bottom: @line*4 solid @blue1;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .25),inset 0 -1px 0 rgba(0, 0, 0, .1);
+		-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25),inset 0 -1px 0 rgba(0, 0, 0, .1);
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25),inset 0 -1px 0 rgba(0, 0, 0, .1);
         }
     body > footer,
     body > section,
@@ -39,18 +39,20 @@
         margin: 0 auto;
         }
     body > section {
-        padding: 0 @block-space 0 @max-width/7;
+        padding: 0 50px 0 50px;
         min-height: 600px;
         }
     body > header hgroup h4 {
         text-transform: uppercase;
         .h6;
         font-family: @typeface-mono;
-        color: @link-color;
-        .text-shadow(0 ,@top, @line, fadeout(@dark-color,50%));
+        color: @blue1;
+        .text-shadow(0 ,@top, @line, fadeout(@blue1,80%));
         }
     body > header hgroup {
-        margin-left: 2em;
+        padding-left: 2em;
+        padding-top: @interline;
+        .gradient(@orange1,@orange2);
     }
     body > header hgroup h2 {
         text-transform: uppercase;
@@ -60,24 +62,22 @@
         }
     body > header nav {
         position: relative;
-        margin-left: 1em;
         }
     body > header nav ul {
         padding: @interline/20;
-        position: absolute;
         top: @base-height*2.5;
-        left: 0;
-        display: inline;
+        display: inline-block;
         margin: 0;
-        .rounded-corners(@rad);
         list-style: none;
-        width: @max-width/8;
+        width: 100%;
         .gradient(lighten(@blue1,30%),lighten(@blue1,10%));
-        overflow: hidden;
         }
     body > header nav li {
-        display: block;
+        display: inline-block;
         }
+    body > header nav li.selected {
+    	background: @orange2;
+    }
     body > header nav li a,
     body > header nav li a:visited {
         display: block;
@@ -86,11 +86,20 @@
         color: @dark-color;
         }
     body > header nav li a:hover {
-        color: @base-color;
-        .text-shadow(0 ,0, 0, fadeout(@light-color,100%));
-        background: @blue2;
+        color: @dark-color;
+        .text-shadow(0 ,@bottom, @line, fadeout(@dark-color,60%));
+        background: @base-color;
         }
-
+	body > header nav li.twitter {
+		float: right;
+	}
+	body > header nav li.twitter a {
+		padding-left: 30px;
+		background: url('/public/images/twitter.png') no-repeat 0 5px;
+	}
+	body > header nav li.twitter a:hover {
+		background: url('/public/images/twitter-yellow.png') no-repeat 0 5px;
+	}
     body > footer { 
         clear: both;
         padding-top: @interline*2;
@@ -130,6 +139,17 @@
     .schedule .track {
         width: 30%;
     }
-        
-        
+    table.sponsors {
+        font-family: @typeface;
+        font-size: 10pt;
+	}        
+    table.sponsors td {
+    	padding: 1em;
+    }
+    table.sponsors p {
+    	margin-top: 2em;
+    }
+    table.sponsors .sponsor {
+    	font-size: 120%;
+    }
         

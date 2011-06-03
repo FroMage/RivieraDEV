@@ -21,12 +21,12 @@
         	</hgroup>
             <nav>
     	<ul>
-    		<li><a href="@{Application.index}">Index</a></li>
-    		<li><a href="@{Application.schedule}">Programme</a></li>
-    		<li><a href="@{Application.speakers}">Orateurs</a></li>
-    		<li><a href="@{Application.talks}">Sessions</a></li>
-    		<li><a href="@{Application.sponsors}">Sponsors</a></li>
-    		<li><a href="@{Application.about}">À propos</a></li>
+    		<li class="${request.action == 'Application.index' ? 'selected' : ''}"><a href="@{Application.index}">Index</a></li>
+    		<li class="${request.action == 'Application.schedule' ? 'selected' : ''}"><a href="@{Application.schedule}">Programme</a></li>
+    		<li class="${request.action == 'Application.speakers' ? 'selected' : ''}"><a href="@{Application.speakers}">Orateurs</a></li>
+    		<li class="${request.action == 'Application.talks' ? 'selected' : ''}"><a href="@{Application.talks}">Sessions</a></li>
+    		<li class="${request.action == 'Application.sponsors' ? 'selected' : ''}"><a href="@{Application.sponsors}">Sponsors</a></li>
+    		<li class="${request.action == 'Application.about' ? 'selected' : ''}"><a href="@{Application.about}">À propos</a></li>
 	    	#{if user}
 	    		<li><a href="@{CRUD.index}">Admin</a></li>
 	    		<li><a href="@{Secure.logout}">Logout</a></li>
@@ -34,6 +34,7 @@
 	    	#{else}
 	    		<li><a href="@{Secure.login}">Login</a></li>
 	    	#{/else}
+	    	<li class="twitter"><a href="http://twitter.com/#!/RivieraDEV">Follow us</a></li>
     	</ul>
             </nav>
         </header>
