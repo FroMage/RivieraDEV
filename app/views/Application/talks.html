@@ -19,7 +19,7 @@
 		#{list items: talks, as: 'talk'}
 			#{if !talk.isBreak}
 			<tr>
-				<th>
+				<th style="width:110px;">
 					#{list items: talk.speakers, as: 'speaker'}
 						<a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
 					#{/list}
