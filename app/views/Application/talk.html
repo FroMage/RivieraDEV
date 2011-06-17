@@ -15,6 +15,13 @@
 	<br/>
 	<a href="@{Talks.show(talk.id)}">edit</a>
 #{/if}
+<div style="float:right;display:table-cell;">
+#{list items: talk.speakers, as: 'speaker'}
+	<a href="@{Application.speaker(speaker.id)}" 
+	 style="vertical-align:middle;display:inline-block;margin: 0 1em;" 
+	 ><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
+#{/list}
+</div>
 <br/>
 Description: ${talk.description}
 <br/>
@@ -22,9 +29,6 @@ Track: ${talk.track?.title ?: "Plénière"}
 <br/>
 Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
 <br/>
-#{list items: talk.speakers, as: 'speaker'}
-	<img src="@{Application.speakerPhoto(speaker.id)}" width="100" style="float:left;"/>
-#{/list}
 Speakers:
 <ul>
 	#{list items: talk.speakers, as: 'speaker'}

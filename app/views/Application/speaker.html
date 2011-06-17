@@ -14,9 +14,11 @@ Name: ${speaker.firstName} ${speaker.lastName}
 	<a href="@{Speakers.show(speaker.id)}">edit</a>
 #{/if}
 <br/>
-Title: ${speaker.title}
-<br/>
-Bio: ${speaker.biography}
+#{if speaker.title}
+ Title: ${speaker.title}
+ <br/>
+#{/if}
+Bio: ${speaker.biography?.raw()}
 #{if speaker.company}
 	<br/>
 	Company: 

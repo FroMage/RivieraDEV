@@ -21,7 +21,7 @@
 			<tr>
 				<th>
 					#{list items: talk.speakers, as: 'speaker'}
-						<img src="@{Application.speakerPhoto(speaker.id)}" width="100"/>
+						<a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
 					#{/list}
 				</th>
 				<td>

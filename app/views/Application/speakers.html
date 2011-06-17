@@ -18,18 +18,22 @@
 	<tbody>
 		#{list items: speakers, as: 'speaker'}
 			<tr>
-				<th><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></th>
+				<th>
+				 <a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
+				</th>
 				<td>
 					Name: <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
 					#{if user}
 						<br/>
 						<a href="@{Speakers.show(speaker.id)}">edit</a>
 					#{/if}
-					<br/>
-					Title: ${speaker.title}
+					#{if speaker.title}
+						<br/>
+						Title: ${speaker.title}
+					#{/if}
                 </td>
 				<td>
-				    Bio: ${speaker.biography}
+				    Bio: ${speaker.biography?.raw()}
 					#{if speaker.company}
 						<br/>
 						Company: 

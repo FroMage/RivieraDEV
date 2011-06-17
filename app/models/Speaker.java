@@ -16,7 +16,6 @@ import play.db.jpa.Model;
 
 @Entity
 public class Speaker extends Model {
-	@Required
 	public String firstName;
 	@Required
 	public String lastName;

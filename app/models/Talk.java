@@ -46,6 +46,6 @@ public class Talk extends Model {
 	
 	@Override
 	public String toString() {
-		return track+" "+slot+": "+title+" ("+StringUtils.join(speakers, ", ")+")";
+		return (track != null? track : "All tracks")+" "+slot+": "+title+" ("+StringUtils.join(speakers, ", ")+")";
 	}
 }
