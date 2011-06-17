@@ -44,4 +44,8 @@ public class Slot extends Model {
 				return talk;
 		return null;
 	}
+	
+	public Talk getAllTracksEvent(){
+		return talks.size() == 1 && talks.get(0).track == null ? talks.get(0) : null;
+	}
 }

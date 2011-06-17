@@ -18,7 +18,7 @@
 <br/>
 Description: ${talk.description}
 <br/>
-Track: ${talk.track.title}
+Track: ${talk.track?.title ?: "Plénière"}
 <br/>
 Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
 <br/>

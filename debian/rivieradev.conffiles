@@ -1,0 +1,3 @@
+etc/rivieradev/routes
+etc/rivieradev/log4j-prod.properties
+etc/rivieradev/application.conf

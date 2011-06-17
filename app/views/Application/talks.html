@@ -17,6 +17,7 @@
     </thead>
 	<tbody>
 		#{list items: talks, as: 'talk'}
+			#{if !talk.isBreak}
 			<tr>
 				<th>
 					#{list items: talk.speakers, as: 'speaker'}
@@ -33,7 +34,7 @@
 					Description: ${talk.description}
                 </td>
 				<td>
-					Track: ${talk.track.title}
+					Track: ${talk.track?.title ?: "Plénière"}
 					<br/>
 					Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
                 </td>
@@ -47,6 +48,7 @@
 					</ul>
 				</td>
 			</tr>
+			#{/if}
 		#{/list}
 	</tbody>
 </table>

@@ -31,9 +31,10 @@ public class Talk extends Model {
 	@MaxSize(10000)
 	public String description; 
 	
-	@Required
 	@ManyToOne
 	public Track track;
+	
+	public boolean isBreak;
 	
     @JoinTable(
             name="talk_speaker",
