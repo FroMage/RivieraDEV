@@ -38,7 +38,7 @@
 						<a href="@{Sponsors.show(sponsor.id)}">edit</a>
 					#{/if}
 					<p>
-						${sponsor.about.nl2br()}
+						${sponsor.about?.raw()}
 					</p>
 				</td>
 			</tr>

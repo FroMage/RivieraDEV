@@ -31,7 +31,7 @@
 						<a href="@{Talks.show(talk.id)}">edit</a>
 					#{/if}
 					<br/>
-					Description: ${talk.description}
+					Description: ${talk.description?.raw()}
                 </td>
 				<td>
 					Track: ${talk.track?.title ?: "Plénière"}
