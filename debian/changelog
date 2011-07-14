@@ -1,3 +1,9 @@
+rivieradev (1.2) maverick; urgency=low
+
+  * Fixed a few layout issues
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Thu, 14 Jul 2011 14:12:32 +0200
+
 rivieradev (1.1) maverick; urgency=low
 
   * New version
