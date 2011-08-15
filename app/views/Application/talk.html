@@ -23,13 +23,13 @@
 #{/list}
 </div>
 <br/>
-Description: ${talk.description?.raw()}
+<span class="label">Description:</span> ${talk.description?.raw()}
 <br/>
-Track: ${talk.track?.title ?: "Plénière"}
+<span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
 <br/>
-Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+<span class="label">Slot:</span> ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
 <br/>
-Speakers:
+<span class="label">Speakers:</span>
 <ul>
 	#{list items: talk.speakers, as: 'speaker'}
 		<li>

@@ -22,21 +22,21 @@
 				 <a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
 				</th>
 				<td>
-					Name: <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
+					<span class="label">Name:</span> <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
 					#{if user}
 						<br/>
 						<a href="@{Speakers.show(speaker.id)}">edit</a>
 					#{/if}
 					#{if speaker.title}
 						<br/>
-						Title: ${speaker.title}
+						<span class="label">Title:</span> ${speaker.title}
 					#{/if}
                 </td>
 				<td>
-				    Bio: ${speaker.biography?.raw()}
+				    <span class="label">Bio:</span> ${speaker.biography?.raw()}
 					#{if speaker.company}
 						<br/>
-						Company: 
+						<span class="label">Company:</span> 
 						#{if speaker.companyURL}
 							<a href="${speaker.companyURL}">${speaker.company}</a>
 						#{/if}
@@ -46,11 +46,11 @@
 					#{/if}
 					#{if speaker.twitterAccount}
 						<br/>
-						Twitter: <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
+						<span class="label">Twitter:</span> <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
 					#{/if}
 					#{if speaker.blogURL}
 						<br/>
-						Blog: <a href="${speaker.blogURL}">${speaker.blogURL}</a>
+						<span class="label">Blog:</span> <a href="${speaker.blogURL}">${speaker.blogURL}</a>
 					#{/if}
                 </td>
 				<td>

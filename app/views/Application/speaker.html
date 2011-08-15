@@ -8,20 +8,20 @@
 
 <img src="@{Application.speakerPhoto(speaker.id)}" width="200"/>
 <br/>
-Name: ${speaker.firstName} ${speaker.lastName}
+<span class="label">Name:</span> ${speaker.firstName} ${speaker.lastName}
 #{if user}
 	<br/>
 	<a href="@{Speakers.show(speaker.id)}">edit</a>
 #{/if}
 <br/>
 #{if speaker.title}
- Title: ${speaker.title}
+ <span class="label">Title:</span> ${speaker.title}
  <br/>
 #{/if}
-Bio: ${speaker.biography?.raw()}
+<span class="label">Bio:</span> ${speaker.biography?.raw()}
 #{if speaker.company}
 	<br/>
-	Company: 
+	<span class="label">Company:</span>
 	#{if speaker.companyURL}
 		<a href="${speaker.companyURL}">${speaker.company}</a>
 	#{/if}
@@ -31,14 +31,14 @@ Bio: ${speaker.biography?.raw()}
 #{/if}
 #{if speaker.twitterAccount}
 	<br/>
-	Twitter: <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
+	<span class="label">Twitter:</span> <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
 #{/if}
 #{if speaker.blogURL}
 	<br/>
-	Blog: <a href="${speaker.blogURL}">${speaker.blogURL}</a>
+	<span class="label">Blog:</span> <a href="${speaker.blogURL}">${speaker.blogURL}</a>
 #{/if}
 <br/>
-Talks:
+<span class="label">Talks:</span>
 <ul>
 	#{list items: speaker.talks, as: 'talk'}
 		<li>

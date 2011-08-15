@@ -25,18 +25,18 @@
 					#{/list}
 				</th>
 				<td>
-					Title: <a href="@{Application.talk(talk.id)}">${talk.title}</a>
+					<span class="label">Title:</span> <a href="@{Application.talk(talk.id)}">${talk.title}</a>
 					#{if user}
 						<br/>
 						<a href="@{Talks.show(talk.id)}">edit</a>
 					#{/if}
 					<br/>
-					Description: ${talk.description?.raw()}
+					<span class="label">Description:</span> ${talk.description?.raw()}
                 </td>
 				<td>
-					Track: ${talk.track?.title ?: "Plénière"}
+					<span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
 					<br/>
-					Slot: ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+					<span class="label">Slot:</span> ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
                 </td>
 				<td>
 					<ul>
