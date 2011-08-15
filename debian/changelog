@@ -1,3 +1,9 @@
+rivieradev (1.3) maverick; urgency=low
+
+  * Added analytics
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Thu, 28 Jul 2011 10:39:48 +0200
+
 rivieradev (1.2) maverick; urgency=low
 
   * Fixed a few layout issues
