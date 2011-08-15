@@ -21,7 +21,7 @@ USER=rivieradev
 CLUSTER=
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
-PLAY=/usr/bin/play-1.1
+PLAY=/usr/bin/play-1.2
 PLAY_ID=
 PLAY_ARGS=
 
