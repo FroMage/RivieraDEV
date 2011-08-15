@@ -4,6 +4,7 @@ import play.Logger;
 import play.data.binding.Global;
 import play.data.binding.TypeBinder;
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,7 +24,7 @@ public class DateBinder implements TypeBinder<Date> {
 
     public static final String ISO8601 = "'ISO8601:'yyyy-MM-dd'T'HH:mm:ssZ";
 
-    public Date bind(String name, Annotation[] annotations, String value, Class actualClass) throws Exception {
+    public Date bind(String name, Annotation[] annotations, String value, Class actualClass, Type genericType) throws Exception {
 
     	Field field = getAnnotation(Field.class, annotations);
     	String time = null;
@@ -78,5 +79,4 @@ public class DateBinder implements TypeBinder<Date> {
 				return (T) ann;
 		return null;
 	}
-
 }
