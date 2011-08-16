@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 
+import org.hibernate.annotations.Type;
+
 import play.data.validation.MaxSize;
 import play.data.validation.Required;
 import play.data.validation.URL;
@@ -20,6 +22,7 @@ public class Speaker extends Model {
 	@Required
 	public String lastName;
 	public String title;
+	@Type(type="org.hibernate.type.StringClobType")
 	@Lob
 	@Required
 	@MaxSize(10000)

@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
 
 import org.apache.commons.lang.StringUtils;
+import org.hibernate.annotations.Type;
 
 import play.data.validation.MaxSize;
 import play.data.validation.Required;
@@ -27,6 +28,7 @@ public class Talk extends Model {
 	public String title;
 	
 	@Required
+	@Type(type="org.hibernate.type.StringClobType")
 	@Lob
 	@MaxSize(10000)
 	public String description; 
