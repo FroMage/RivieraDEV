@@ -19,7 +19,7 @@
 #{list items: talk.speakers, as: 'speaker'}
 	<a href="@{Application.speaker(speaker.id)}" 
 	 style="vertical-align:middle;display:inline-block;margin: 0 1em;" 
-	 ><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
+	 ><img src="@{Application.speakerPhoto(speaker.id)}" width="100" class="speaker-photo"/></a>
 #{/list}
 </div>
 <br/>

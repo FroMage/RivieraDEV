@@ -6,8 +6,7 @@
 	<br/>
 #{/if}
 
-<img src="@{Application.speakerPhoto(speaker.id)}" width="200"/>
-<br/>
+<img src="@{Application.speakerPhoto(speaker.id)}" width="200" class="speaker-details-photo"/>
 <span class="label">Name:</span> ${speaker.firstName} ${speaker.lastName}
 #{if user}
 	<br/>
