@@ -1,3 +1,9 @@
+rivieradev (1.6) maverick; urgency=low
+
+  * CRUD improvements
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Tue, 30 Aug 2011 15:56:52 +0200
+
 rivieradev (1.5) maverick; urgency=low
 
   * Cosmetic details
