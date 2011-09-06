@@ -1,3 +1,9 @@
+rivieradev (1.7) maverick; urgency=low
+
+  * minor fixes
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Tue, 06 Sep 2011 16:07:14 +0200
+
 rivieradev (1.6) maverick; urgency=low
 
   * CRUD improvements
