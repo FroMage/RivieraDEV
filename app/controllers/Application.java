@@ -19,7 +19,8 @@ public class Application extends Controller {
 	}
 	
     public static void index() {
-        render();
+    	List<Sponsor> sponsors = Sponsor.findAll();
+        render(sponsors);
     }
 
     public static void about() {

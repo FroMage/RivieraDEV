@@ -10,7 +10,7 @@
 	<tbody>
 		#{list items: sponsors, as: 'sponsor'}
 			<tr>
-				<td>
+				<td id="${sponsor.company.slugify()}">
 					#{if sponsor.companyURL}
 						<a href="${sponsor.companyURL}">
 					#{/if}

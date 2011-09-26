@@ -1,6 +1,13 @@
 #{extends 'main.html' /}
 #{set title:'RivieraDEV' /}
 
+<div class="sponsor-box">
+ <h3>Sponsors</h3>
+ #{list items: sponsors, as: 'sponsor'}
+  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img src="@{Application.sponsorLogo(sponsor.id)}" width="100"/></a><br/>
+ #{/list}
+</div>
+
 <h1>Riviera DEV</h1>
 <p>
  Bienvenue au Riviera DEV, la plus grande conférence de développeurs de la Côte d´Azur, les 20 et 21 octobre 2011
