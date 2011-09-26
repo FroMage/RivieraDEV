@@ -4,6 +4,12 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /about                                  Application.about
+GET     /schedule                               Application.schedule
+GET     /speakers                               Application.speakers
+GET     /talks                                  Application.talks
+GET     /subscribe                              Application.subscribe
+GET     /sponsors                               Application.sponsors
 
 *		/admin									module:crud
 *		/										module:secure
