@@ -94,7 +94,8 @@
         .text-shadow(0 ,@bottom, @line, fadeout(@dark-color,60%));
         background: @base-color;
         }
-	body > header nav li.twitter {
+	body > header nav li.twitter,
+	body > header nav li.contact {
 		float: right;
 	}
 	body > header nav li.twitter a {
@@ -103,6 +104,13 @@
 	}
 	body > header nav li.twitter a:hover {
 		background: url('/public/images/twitter-yellow.png') no-repeat 0 5px;
+	}
+	body > header nav li.contact a {
+		padding-left: 30px;
+		background: url('/public/images/feather.png') no-repeat 0 5px;
+	}
+	body > header nav li.contact a:hover {
+		background: url('/public/images/feather-yellow.png') no-repeat 0 5px;
 	}
     body > footer { 
         clear: both;
