@@ -49,11 +49,13 @@ public class Application extends Controller {
 
     public static void speaker(Long id){
     	Speaker speaker= Speaker.findById(id);
+    	notFoundIfNull(speaker);
     	render(speaker);
     }
 
     public static void talk(Long id){
     	Talk talk = Talk.findById(id);
+    	notFoundIfNull(talk);
     	render(talk);
     }
 
@@ -64,12 +66,14 @@ public class Application extends Controller {
     
     public static void speakerPhoto(Long id){
     	Speaker speaker = Speaker.findById(id);
+    	notFoundIfNull(speaker);
     	response.contentType = speaker.photo.type();
     	renderBinary(speaker.photo.get());
     }
 
     public static void sponsorLogo(Long id){
     	Sponsor sponsor = Sponsor.findById(id);
+    	notFoundIfNull(sponsor);
     	response.contentType = sponsor.logo.type();
     	renderBinary(sponsor.logo.get());
     }
