@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# Startup script for rivieradev.
+# Startup script for rivieradev-2015.
 #
 # Stephane Epardaud <stephane@epardaud.fr>
 # Copyright 2010, Stephane Epardaud
@@ -16,12 +16,12 @@
 # Description: rivieradev- application
 ### END INIT INFO
 
-APP=rivieradev
+APP=rivieradev-2015
 USER=rivieradev
 CLUSTER=
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
-PLAY=/usr/share/play/1.2.2/play
+PLAY=/usr/share/play/1.2.4/play
 PLAY_ID=
 PLAY_ARGS=
 

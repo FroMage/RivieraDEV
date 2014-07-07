@@ -13,7 +13,7 @@ random () {
  echo
 }
 
-APP=rivieradev
+APP=rivieradev-2015
 PLAY_USER=rivieradev
 CLUSTER=
 
@@ -33,6 +33,11 @@ upgrade)
 	# Remove tmp contents before upgrading
 	rm -rf /var/lib/$APP_FOLDER/tmp/*
 esac
+
+if test \! -d /etc/$APP_FOLDER
+then
+    mkdir -p /etc/$APP_FOLDER
+fi
 
 if test \! -f /etc/$APP_FOLDER/application-secret.conf
 then

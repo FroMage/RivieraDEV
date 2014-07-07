@@ -1,3 +1,15 @@
+rivieradev-2015 (1.13) oneiric; urgency=low
+
+  * Riviera Dev 2015 onwards!
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Mon, 07 Jul 2014 14:42:58 +0200
+
+rivieradev (1.12) oneiric; urgency=low
+
+  * Depend on Play 1.2.4
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Mon, 07 Jul 2014 14:32:09 +0200
+
 rivieradev (1.11) oneiric; urgency=low
 
   * Changed secret key for prod
