@@ -30,11 +30,13 @@
     <body>
         <header>
         	<hgroup>
+        	   <!--
         		<a class="organiser" href="http://www.inria.fr/sophia"><img class="organiser" src="@{'/public/images/inria-2-header.png'}"/></a>
+        	   -->
         		<a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a>
 	        	#{if user}<p>Logged in as ${user}.</p>#{/if}
-        		<h2>Riviera Dev 2011</h2>
-        		<h4>Les conférences du soleil : 20-21 octobre 2011 à Sophia-Antipolis</h4>
+        		<h2>Riviera Dev 2015</h2>
+        		<h4>Les conférences du soleil : printemps 2015 à Sophia-Antipolis</h4>
         	</hgroup>
             <nav>
     	<ul>
@@ -45,6 +47,7 @@
     		<li class="${request.action == 'Application.subscribe' ? 'selected' : ''}"><a href="@{Application.subscribe}">Inscriptions</a></li>
     		<li class="${request.action == 'Application.sponsors' ? 'selected' : ''}"><a href="@{Application.sponsors}">Sponsors</a></li>
     		<li class="${request.action == 'Application.about' ? 'selected' : ''}"><a href="@{Application.about}">À propos</a></li>
+            <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
 	    	#{if user}
 	    		<li><a href="@{CRUD.index}">Admin</a></li>
 	    		<li><a href="@{Secure.logout}">Logout</a></li>
@@ -61,7 +64,7 @@
             #{doLayout /}
         </section>
         <footer>
-               Copyright &copy; 2011 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
+               Copyright &copy; 2011-2014 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
         </footer>
     </body>
 </html>
