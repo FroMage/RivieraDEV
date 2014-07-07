@@ -6,6 +6,8 @@ import models.Slot;
 import models.Speaker;
 import models.Sponsor;
 import play.Logger;
+import play.Play;
+import play.Play.Mode;
 import play.db.jpa.Blob;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
@@ -15,7 +17,7 @@ import play.test.Fixtures;
 @OnApplicationStart
 public class BootstrapJob extends Job {
     public void doJob() throws Exception {
-    	if(Slot.count() == 0){
+    	if(Play.mode == Mode.DEV && Slot.count() == 0){
     		Logger.info("Loading test data");
     		Fixtures.load("test-data.yml");
     		updateSpeaker("Épardaud", "stef-epardaud.jpg");
