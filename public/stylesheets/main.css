@@ -1,0 +1,109 @@
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        margin: 10px;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+.rd-header {
+ padding-top: 60px;
+ padding-bottom: 60px;
+ font-size: 24px;
+ background: #ffcd2b;
+ background: -moz-linear-gradient(top, #ffcd2b 0%, #fffbac 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffcd2b), color-stop(100%, #fffbac));
+ background: -ms-linear-gradient(top, #ffcd2b 0%, #fffbac 100%);
+ background: linear-gradient(top, #ffcd2b 0%, #fffbac 100%);
+ border-color: #ffcd2b;
+}
+
+.rd-header h1 {
+ color: white;
+ font-size: 60px;
+}
+
+.rd-header p {
+ color: #3399ff;
+}
+
+.rd-header .organiser {
+ float: right;
+}
+
+a {
+ color: #3399ff;
+}
+
+.navbar-brand, 
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+ color: #3399ff;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+ background-color: #f9f9f9;
+}
+
+.navbar-default .navbar-nav>.active>a {
+ color: #3399ff;
+ background-color: #f9f9f9;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+ color: #3399ff;
+ background-color: #f9f9f9;
+}
+.navbar-default .dropdown-menu > li > a {
+ color: #3399ff;
+}
+
+.navbar-default {
+ background: white;
+ border-bottom: none;
+ margin-bottom: 0;
+}
+
+nav li.twitter a {
+ padding-left: 30px;
+ background: url('/public/images/twitter.png') no-repeat 0 5px;
+}
+
+.monies-box {
+ float: right;
+ margin-left: 10px;
+}
+
+.monies-box a img {
+ margin-bottom: 10px;
+}

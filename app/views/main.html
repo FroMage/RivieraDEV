@@ -3,13 +3,19 @@
 <html lang="fr">
     <head>
         <title>#{get 'title' /}</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet/less" type="text/css" media="screen" href="@{'/public/stylesheets/riviera/less/main.less'}">
-        #{get 'moreStyles' /}
+
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-		<script src="@{'/public/javascripts/less-1.1.3.min.js'}" type="text/javascript"></script>
-        <script src="@{'/public/javascripts/modernizr.js'}" type="text/javascript" charset="utf-8"></script>
-        <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="utf-8"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="@{'/public/stylesheets/bootstrap.css'}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        
+        <script src="@{'/public/javascripts/jquery-1.11.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+        <script src="@{'/public/javascripts/bootstrap.min.js'}"></script>
         #{get 'moreScripts' /}
 <script type="text/javascript">
 
@@ -28,44 +34,70 @@
 </script>
     </head>
     <body>
-        <header>
-        	<hgroup>
-        	   <!--
-        		<a class="organiser" href="http://www.inria.fr/sophia"><img class="organiser" src="@{'/public/images/inria-2-header.png'}"/></a>
-        	   -->
-        		<a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a>
-	        	#{if user}<p>Logged in as ${user}.</p>#{/if}
-        		<h2>Riviera Dev 2015</h2>
-        		<h4>Les conférences du soleil : 11 et 12 juin 2015 au campus Sophia-Tech à Sophia-Antipolis</h4>
-        	</hgroup>
-            <nav>
-    	<ul>
-    		<li class="${request.action == 'Application.index' ? 'selected' : ''}"><a href="@{Application.index}">Index</a></li>
-    		<li class="${request.action == 'Application.schedule' ? 'selected' : ''}"><a href="@{Application.schedule}">Programme</a></li>
-    		<li class="${request.action == 'Application.speakers' ? 'selected' : ''}"><a href="@{Application.speakers}">Orateurs</a></li>
-            <li class="${request.action == 'Application.cfp' ? 'selected' : ''}"><a href="@{Application.cfp}">CFP</a></li>
-    		<li class="${request.action == 'Application.talks' ? 'selected' : ''}"><a href="@{Application.talks}">Sessions</a></li>
-    		<li class="${request.action == 'Application.subscribe' ? 'selected' : ''}"><a href="@{Application.subscribe}">Inscriptions</a></li>
-    		<li class="${request.action == 'Application.sponsors' ? 'selected' : ''}"><a href="@{Application.sponsors}">Sponsors</a></li>
-    		<li class="${request.action == 'Application.about' ? 'selected' : ''}"><a href="@{Application.about}">À propos</a></li>
+    <div id="wrap">
+        <header class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+   		<li class="${request.action == 'Application.index' ? 'active' : ''}"><a href="@{Application.index}">Index</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Programme <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+    		<li class="${request.action == 'Application.schedule' ? 'active' : ''}"><a href="@{Application.schedule}">Programme</a></li>
+    		<li class="${request.action == 'Application.speakers' ? 'active' : ''}"><a href="@{Application.speakers}">Orateurs</a></li>
+    		<li class="${request.action == 'Application.talks' ? 'active' : ''}"><a href="@{Application.talks}">Sessions</a></li>
+    	  </ul>
+    	</li>
+    		<li class="${request.action == 'Application.subscribe' ? 'active' : ''}"><a href="@{Application.subscribe}">Inscriptions</a></li>
+            <li class="${request.action == 'Application.cfp' ? 'active' : ''}"><a href="@{Application.cfp}">CFP</a></li>
+    		<li class="${request.action == 'Application.sponsors' ? 'active' : ''}"><a href="@{Application.sponsors}">Sponsors</a></li>
+    		<li class="${request.action == 'Application.about' ? 'active' : ''}"><a href="@{Application.about}">À propos</a></li>
             <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
 	    	#{if user}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">${user} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
 	    		<li><a href="@{CRUD.index}">Admin</a></li>
 	    		<li><a href="@{Secure.logout}">Logout</a></li>
+	    		</ul>
+	    		</li>
 	    	#{/if}
 	    	#{else}
 	    		<li><a href="@{Secure.login}">Login</a></li>
 	    	#{/else}
-	    	<li class="contact"><a href="mailto:info@rivieradev.fr">Contactez-nous</a></li>
-	    	<li class="twitter"><a href="http://twitter.com/#!/RivieraDEV">Suivez-nous</a></li>
     	</ul>
-            </nav>
+        <ul class="nav navbar-nav navbar-right">
+             <li><a href="mailto:info@rivieradev.fr" class="navbar-link"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Contactez-nous</a></li>
+             <li><a href="http://twitter.com/#!/RivieraDEV" class="navbar-link">@RivieraDEV</a></li>
+        </ul>
+    	</nav>
+    	</div>
         </header>
-        <section class="${request.action}">
+            <div class="rd-header">
+               <div class="container">
+                <a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a>
+                <h1>Riviera Dev 2015</h1>
+                <p>Les conférences du soleil : 11 et 12 juin 2015 au campus Sophia-Tech à Sophia-Antipolis</p>
+                </div>
+            </div>
+        <div class="container">
             #{doLayout /}
-        </section>
-        <footer>
-               Copyright &copy; 2011-2014 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
+        </div>
+          <div id="push"></div>
+        </div> <!-- wrap -->
+        <footer id="footer">
+            <div class="container">
+                Copyright &copy; 2011-2015 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
+            </div>
         </footer>
     </body>
 </html>
