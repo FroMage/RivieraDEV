@@ -27,6 +27,10 @@ public class Application extends Controller {
         render();
     }
 
+    public static void cfp() {
+        render();
+    }
+
     public static void subscribe() {
         render();
     }
