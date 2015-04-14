@@ -25,3 +25,4 @@ override_dh_auto_install:
 	cp conf/* $(DEB_PATH)$(ETC_PATH)
 	rm $(DEB_PATH)$(ETC_PATH)/application-secret.conf
 	ln -s $(ETC_PATH) $(DEB_PATH)$(INSTALL_PATH)/conf
+	ln -s /www/rivieradev.fr/data $(DEB_PATH)$(INSTALL_PATH)/data

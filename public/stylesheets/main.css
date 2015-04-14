@@ -161,3 +161,7 @@ table.sponsors .sponsor {
 table.sponsors .sponsor a {
  color: inherit;
 }
+
+.speaker-details-photo {
+ margin-right: 15px;
+}
