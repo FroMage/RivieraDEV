@@ -1,3 +1,9 @@
+rivieradev-2015 (1.14) UNRELEASED; urgency=medium
+
+  * Enabled program
+
+ -- Stephane Epardaud <stephane@epardaud.fr>  Tue, 14 Apr 2015 22:13:07 +0200
+
 rivieradev-2015 (1.13) oneiric; urgency=low
 
   * Riviera Dev 2015 onwards!

@@ -4,11 +4,18 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /a-propos                               Application.about
 GET     /about                                  Application.about
+GET     /programme                              Application.schedule
 GET     /schedule                               Application.schedule
+GET     /orateurs                               Application.speakers
 GET     /speakers                               Application.speakers
+GET     /orateur/{id}                           Application.speaker(id)
 GET     /cfp                                    Application.cfp
+GET     /sessions                               Application.talks
 GET     /talks                                  Application.talks
+GET     /session/{id}                           Application.talk(id)
+GET     /inscriptions                           Application.subscribe
 GET     /subscribe                              Application.subscribe
 GET     /sponsors                               Application.sponsors
 
