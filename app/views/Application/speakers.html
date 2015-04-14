@@ -1,61 +1,55 @@
 #{extends 'main.html' /}
 #{set title:'Orateurs' /}
 
-<!--
 #{if user}
 	<a href="@{Speakers.blank()}">add</a>
 	<br/>
 #{/if}
--->
 
 <h1>Orateurs</h1>
-<i>À venir</i>
 
-<!--
-<table>
+<table class="lines">
     <thead>
         <tr>
             <th>&nbsp;</th>
             <th>Orateur</th>
-            <th>Info</th>
-            <th>Talk</th>
+            <th>Information</th>
+            <th>Présentations</th>
         </tr>
     </thead>
 	<tbody>
 		#{list items: speakers, as: 'speaker'}
-			<tr>
+			<tr class="${speaker_isLast ? 'last' : ''}">
 				<th>
 				 <a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
 				</th>
 				<td>
-					<span class="label">Name:</span> <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
+					<span class="label">Nom:</span> <a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
 					#{if user}
 						<br/>
 						<a href="@{Speakers.show(speaker.id)}">edit</a>
 					#{/if}
 					#{if speaker.title}
 						<br/>
-						<span class="label">Title:</span> ${speaker.title}
+						<span class="label">Titre:</span> ${speaker.title}
 					#{/if}
                 </td>
 				<td>
-				    <span class="label">Bio:</span> ${speaker.biography?.raw()}
 					#{if speaker.company}
-						<br/>
-						<span class="label">Company:</span> 
+						<span class="label">Compagnie:</span> 
 						#{if speaker.companyURL}
 							<a href="${speaker.companyURL}">${speaker.company}</a>
 						#{/if}
 						#{else}
 							${speaker.company}
 						#{/else}
+                        <br/>
 					#{/if}
 					#{if speaker.twitterAccount}
-						<br/>
 						<span class="label">Twitter:</span> <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
+                        <br/>
 					#{/if}
 					#{if speaker.blogURL}
-						<br/>
 						<span class="label">Blog:</span> <a href="${speaker.blogURL}">${speaker.blogURL}</a>
 					#{/if}
                 </td>
@@ -72,4 +66,3 @@
 		#{/list}
 	</tbody>
 </table>
--->

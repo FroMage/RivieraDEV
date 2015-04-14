@@ -6,10 +6,10 @@
 	<br/>
 #{/if}
 	<h1>Sponsors</h1>
-<table class="sponsors">
+<table class="sponsors lines">
 	<tbody>
 		#{list items: sponsors, as: 'sponsor'}
-			<tr>
+            <tr class="${sponsor_isLast ? 'last' : ''}">
 				<td id="${sponsor.company.slugify()}">
 					#{if sponsor.companyURL}
 						<a href="${sponsor.companyURL}">
@@ -29,15 +29,16 @@
 							</a>
 						#{/if}
 					</span>
-					#{if sponsor.twitterAccount}
-						<br/>
-						<span class="label">Twitter:</span> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
-					#{/if}
+                    <br/>
 					#{if user}
-						<br/>
 						<a href="@{Sponsors.show(sponsor.id)}">edit</a>
+                        <br/>
 					#{/if}
 					${sponsor.about?.raw()}
+                    #{if sponsor.twitterAccount}
+                        <br/>
+                        <span class="label">Twitter:</span> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
+                    #{/if}
 				</td>
 			</tr>
 		#{/list}

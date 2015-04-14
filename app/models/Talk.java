@@ -20,7 +20,6 @@ import play.db.jpa.Model;
 @Entity
 public class Talk extends Model {
 
-	@Required
 	@ManyToOne
 	public Slot slot;
 
@@ -48,6 +47,8 @@ public class Talk extends Model {
 	
 	@Override
 	public String toString() {
-		return (track != null? track : "All tracks")+" "+slot+": "+title+" ("+StringUtils.join(speakers, ", ")+")";
+		return (track != null? track : "All tracks")+" "
+				+(slot != null ? slot : "no slot")
+				+": "+title+" ("+StringUtils.join(speakers, ", ")+")";
 	}
 }

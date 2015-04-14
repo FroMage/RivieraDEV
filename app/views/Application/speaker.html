@@ -6,21 +6,27 @@
 	<br/>
 #{/if}
 
-<img src="@{Application.speakerPhoto(speaker.id)}" width="200" class="speaker-details-photo"/>
-<span class="label">Name:</span> ${speaker.firstName} ${speaker.lastName}
+<table class="details">
+ <tr>
+  <td>
+   <span class="photo-with-label">
+    <img src="@{Application.speakerPhoto(speaker.id)}" width="200" class="speaker-details-photo"/>
+    <span class="photo-label">${speaker.firstName} ${speaker.lastName}</span> 
+   </span>
+  </td>
+  <td>
 #{if user}
-	<br/>
 	<a href="@{Speakers.show(speaker.id)}">edit</a>
+	<br/>
 #{/if}
-<br/>
 #{if speaker.title}
- <span class="label">Title:</span> ${speaker.title}
+ <span class="label">Titre:</span> ${speaker.title}
  <br/>
 #{/if}
 <span class="label">Bio:</span> ${speaker.biography?.raw()}
 #{if speaker.company}
 	<br/>
-	<span class="label">Company:</span>
+	<span class="label">Compagnie:</span>
 	#{if speaker.companyURL}
 		<a href="${speaker.companyURL}">${speaker.company}</a>
 	#{/if}
@@ -37,7 +43,7 @@
 	<span class="label">Blog:</span> <a href="${speaker.blogURL}">${speaker.blogURL}</a>
 #{/if}
 <br/>
-<span class="label">Talks:</span>
+<span class="label">Présentations:</span>
 <ul>
 	#{list items: speaker.talks, as: 'talk'}
 		<li>
@@ -45,3 +51,6 @@
 		</li>
 	#{/list}
 </ul>
+</td>
+</tr>
+</table>

@@ -1,37 +1,33 @@
 #{extends 'main.html' /}
 #{set title:'Sessions' /}
 
-<!--
 #{if user}
 	<a href="@{Talks.blank()}">add</a>
 	<br/>
 #{/if}
--->
 
 <h1>Sessions</h1>
-<i>À venir</i>
 
-<!--
-<table>
+<table class="lines">
     <thead>
         <tr>
             <th>&nbsp;</th>
-            <th>Track</th>
-            <th>Info</th>
+            <th>Titre</th>
+            <th>Information</th>
             <th>Orateurs</th>
         </tr>
     </thead>
 	<tbody>
 		#{list items: talks, as: 'talk'}
 			#{if !talk.isBreak}
-			<tr>
+            <tr class="${talk_isLast ? 'last' : ''}">
 				<th style="width:110px;">
 					#{list items: talk.speakers, as: 'speaker'}
 						<a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
 					#{/list}
 				</th>
 				<td>
-					<span class="label">Title:</span> <a href="@{Application.talk(talk.id)}">${talk.title}</a>
+					<span class="label">Titre:</span> <a href="@{Application.talk(talk.id)}">${talk.title}</a>
 					#{if user}
 						<br/>
 						<a href="@{Talks.show(talk.id)}">edit</a>
@@ -40,9 +36,13 @@
 					<span class="label">Description:</span> ${talk.description?.raw()}
                 </td>
 				<td>
-					<span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
-					<br/>
-					<span class="label">Slot:</span> ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+				    <!--
+       					<span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
+		    			<br/>
+		    		-->
+		    		#{if talk.slot}
+					 <span class="label">Horaire:</span> ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+					#{/if}
                 </td>
 				<td>
 					<ul>
@@ -58,4 +58,3 @@
 		#{/list}
 	</tbody>
 </table>
--->
