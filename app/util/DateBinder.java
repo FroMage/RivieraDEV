@@ -29,7 +29,7 @@ public class DateBinder implements TypeBinder<Date> {
     	Field field = getAnnotation(Field.class, annotations);
     	String time = null;
     	if(field != null){
-    		 time = Request.current().params.get(name+"."+field.value()+"_time");
+    		time = Request.current().params.get(name+"_time");
     	}
     	Logger.debug("Invoked date binder for %s=%s time: %s", name, value, time);
     	
