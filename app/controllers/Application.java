@@ -40,7 +40,13 @@ public class Application extends Controller {
     	List<Track> tracks = Track.findAll();
     	render(days, tracks);
     }
-    
+
+    public static void scheduleSuperSecret(){
+    	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
+    	List<Track> tracks = Track.findAll();
+    	render("Application/schedule-supersecret.html", days, tracks);
+    }
+
     public static void talks(){
     	List<Talk> talks = Talk.find("ORDER BY title").fetch();
     	render(talks);
