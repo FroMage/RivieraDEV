@@ -165,3 +165,11 @@ table.sponsors .sponsor a {
 .speaker-details-photo {
  margin-right: 15px;
 }
+
+.schedule .times {
+ width: 10%;
+}
+
+.schedule .track {
+ width: 30%;
+}

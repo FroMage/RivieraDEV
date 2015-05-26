@@ -5,18 +5,20 @@
 
 <i>Le programme heure par heure viendra un peu plus tard, en attendant vous pouvez consulter <a href="@{Application.talks}">les sessions</a>
  et <a href="@{Application.speakers}">les orateurs</a>.</i>
+
 <!--
 <p>
  Le programme actuel est susceptible d´être modifié légèrement.
 </p>
+-->
 
 #{list items: days, as: 'day'}
-	<table border="1" class="schedule">
+	<table border="1" class="schedule table">
 		<col class="times">
 		#{list items: tracks, as: 'track'}
 			<col class="track">
 		#{/list}
-		<caption>Programme du ${day.format('dd MMM yyyy')}</caption>
+		<caption>Journée du ${day.format('dd MMMM yyyy')}</caption>
 		<thead>
 			<tr>
 				<th>Horaire</th>
@@ -105,4 +107,3 @@
 		</tbody>
 	</table>
 #{/list}
--->
