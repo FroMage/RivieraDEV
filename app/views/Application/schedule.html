@@ -3,26 +3,29 @@
 
 <h1>Programme</h1>
 
-<i>Le programme heure par heure viendra un peu plus tard, en attendant vous pouvez consulter <a href="@{Application.talks}">les sessions</a>
- et <a href="@{Application.speakers}">les orateurs</a>.</i>
-
-<!--
 <p>
- Le programme actuel est susceptible d´être modifié légèrement.
+ Voici le programme heure par heure. Vous pouvez également consulter <a href="@{Application.talks}">les sessions</a>
+ et <a href="@{Application.speakers}">les orateurs</a>.
 </p>
--->
+
+<div class="alert alert-warning" role="alert">
+ Le programme actuel est susceptible d´être modifié légèrement.
+</div>
 
 #{list items: days, as: 'day'}
+    %{
+        tracksToday = tracksPerDays.get(day);
+    }%
 	<table border="1" class="schedule table">
 		<col class="times">
-		#{list items: tracks, as: 'track'}
-			<col class="track">
+		#{list items: tracksToday, as: 'track'}
+			<col class="track track-${tracksToday.size()}">
 		#{/list}
-		<caption>Journée du ${day.format('dd MMMM yyyy')}</caption>
+		<caption>Journée du ${day.format('EEEE dd MMMM yyyy')}</caption>
 		<thead>
 			<tr>
 				<th>Horaire</th>
-				#{list items: tracks, as: 'track'}
+				#{list items: tracksToday, as: 'track'}
 					<th>
 						${track.title}
 						#{if user}
@@ -45,7 +48,7 @@
 				</td>
 				%{ allTracksEvent = slot.allTracksEvent }%
 				#{if allTracksEvent }
-					<td colspan="${tracks.size()}" class="allTracksEvent ${allTracksEvent.isBreak ? 'isbreak' : ''}">
+					<td colspan="${tracksToday.size()}" class="allTracksEvent ${allTracksEvent.isBreak ? 'isbreak' : ''}">
 						#{if allTracksEvent.isBreak}
 							${allTracksEvent.title}
 						#{/if}
@@ -68,9 +71,32 @@
 					</td>
 				#{/if}
 				#{else}
-					#{list items: tracks, as: 'track'}
+					#{list items: tracksToday, as: 'track'}
+						%{
+							talk = slot.getTalkPerTrack(track);
+						}%
 						<td>
+							#{if talk}
+								<a href="@{Application.talk(talk.id)}">${talk.title}</a>
+								<br/>
+								<!- -By:- ->
+								<ul>
+									#{list items: talk.speakers, as: 'speaker'}
+										<li><a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a></li>
+									#{/list}
+								</ul>
+								#{if user}
+									<br/>
+									<a href="@{Talks.show(talk.id)}">edit</a>
+								#{/if}
+							#{/if}
+							#{else}
 								À venir.
+								#{if user}
+									<br/>
+									<a href="@{Talks.blank()}">add talk</a>
+								#{/if}
+							#{/else}
 						</td>
 					#{/list}
 				#{/else}

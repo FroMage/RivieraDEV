@@ -1,7 +1,9 @@
 package controllers;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import models.Slot;
 import models.Speaker;
@@ -38,13 +40,15 @@ public class Application extends Controller {
     public static void schedule(){
     	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
-    	render(days, tracks);
+    	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
+    	for(Date day : days){
+    		tracksPerDays.put(day, Talk.findTracksPerDay(day));
+    	}
+    	render(days, tracks, tracksPerDays);
     }
 
     public static void scheduleSuperSecret(){
-    	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
-    	List<Track> tracks = Track.findAll();
-    	render("Application/schedule-supersecret.html", days, tracks);
+    	schedule();
     }
 
     public static void talks(){

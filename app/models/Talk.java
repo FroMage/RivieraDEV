@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -50,5 +51,9 @@ public class Talk extends Model {
 		return (track != null? track : "All tracks")+" "
 				+(slot != null ? slot : "no slot")
 				+": "+title+" ("+StringUtils.join(speakers, ", ")+")";
+	}
+
+	public static List<Track> findTracksPerDay(Date day) {
+		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?", day).fetch();
 	}
 }

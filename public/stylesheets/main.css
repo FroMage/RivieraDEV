@@ -170,6 +170,14 @@ table.sponsors .sponsor a {
  width: 10%;
 }
 
-.schedule .track {
+.schedule .track-3 {
  width: 30%;
+}
+
+.schedule .track-2 {
+ width: 45%;
+}
+
+.schedule .track-1 {
+ width: 90%;
 }
