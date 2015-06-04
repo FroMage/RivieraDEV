@@ -15,13 +15,13 @@
     "company": "${speaker.company?.jsonEscape()}"#{/if}#{if speaker.photo},
     "avatar": "http://rivieradev.fr@{Application.speakerPhoto(speaker.id)}"#{/if}#{if speaker.blogURL},
     "profilUrl": "${speaker.blogURL?.jsonEscape()}"#{/if}#{if speaker.twitterAccount},
-    "social": [
+    "social": {
      "twitterUrl": "http://twitter.com/${speaker.twitterAccount?.jsonEscape()}"
-    ]#{/if}
+    }#{/if}
    }#{if !speaker_isLast},#{/if} 
 #{/list}
   ]
  }#{if !talk_isLast},#{/if} 
 #{/if}
 #{/list}
-]}
+]
