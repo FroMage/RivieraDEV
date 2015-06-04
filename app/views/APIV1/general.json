@@ -1,0 +1,30 @@
+{  
+   "name":"Riviera DEV 2015",
+   "description":"2 jours, 2 tracks, 4 keynotes, 24 conférences, des ateliers.",
+   "logoUrl":"http://rivieradev.fr/public/images/logo-600.png",
+   "siteUrl":"http://rivieradev.fr/",
+   "start":${Date.parse("dd/MM/yy HH:mm", "11/06/2015 08:00").time},
+   "end":${Date.parse("dd/MM/yy HH:mm", "12/06/2015 18:00").time},
+   "address":{  
+      "name":"Campus Sophia-Tech",
+      "street":"450 Route des Chappes",
+      "zipCode":"06410",
+      "city":"Sophia Antipolis"
+   },
+   "price":"30€ - 60€",
+   "priceUrl":"http://www.rivieradev.fr/inscriptions",
+   "twitterAccount":"RivieraDEV",
+   "tags":[  
+      "angularjs",
+      "emberjs",
+      "web",
+      "nodejs",
+      "cordova",
+      "meetup",
+      "paris",
+      "d3js",
+      "backbonejs",
+      "css",
+      "javascript"
+   ]
+}

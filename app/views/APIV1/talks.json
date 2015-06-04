@@ -1,0 +1,27 @@
+[
+#{list talks, as: 'talk'}
+#{if talk.slot && talk.slot.startDate && talk.slot?.endDate}
+ {
+  "name": "${talk.title?.jsonEscape()}",
+  "description": "${talk.description?.jsonEscape()}",
+  "start": ${talk.slot.startDate.time},
+  "end": ${talk.slot.endDate.time}#{if talk.track},
+  "category": "${talk.track.title.jsonEscape()}"#{/if},
+  "speakers": [
+#{list talk.speakers, as: 'speaker'}
+   {
+    "name": "${speaker.toString()?.jsonEscape()}",
+    "description": "${speaker.biography?.jsonEscape()}"#{if speaker.company},
+    "company": "${speaker.company?.jsonEscape()}"#{/if}#{if speaker.photo},
+    "avatar": "http://rivieradev.fr@{Application.speakerPhoto(speaker.id)}"#{/if}#{if speaker.blogURL},
+    "profilUrl": "${speaker.blogURL?.jsonEscape()}"#{/if}#{if speaker.twitterAccount},
+    "social": [
+     "twitterUrl": "http://twitter.com/${speaker.twitterAccount?.jsonEscape()}"
+    ]#{/if}
+   }#{if !speaker_isLast},#{/if} 
+#{/list}
+  ]
+ }#{if !talk_isLast},#{/if} 
+#{/if}
+#{/list}
+]}

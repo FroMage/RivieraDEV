@@ -1,0 +1,11 @@
+[  
+#{list sponsors, as: 'sponsor'}
+ {  
+      "name":"${sponsor.company.jsonEscape()}",
+      "description":"${sponsor.about.jsonEscape()}",
+      "logoUrl": "http://rivieradev.fr@{Application.sponsorLogo(sponsor.id)}",
+      "siteUrl":"${sponsor.companyURL.jsonEscape()}",
+      "sponsor":true
+ }#{if !sponsor_isLast},#{/if} 
+#{/list}
+]
