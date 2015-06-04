@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +43,9 @@ public class Application extends Controller {
     	List<Track> tracks = Track.findAll();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
-    		tracksPerDays.put(day, Talk.findTracksPerDay(day));
+    		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
+    		Collections.sort(tracksPerDay);
+    		tracksPerDays.put(day, tracksPerDay);
     	}
     	render(days, tracks, tracksPerDays);
     }

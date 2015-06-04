@@ -10,7 +10,7 @@ import play.data.validation.Required;
 import play.db.jpa.Model;
 
 @Entity
-public class Track extends Model{
+public class Track extends Model implements Comparable<Track>{
 	@Required
 	public String title;
 	
@@ -20,5 +20,10 @@ public class Track extends Model{
 	@Override
 	public String toString(){
 		return title;
+	}
+
+	@Override
+	public int compareTo(Track other) {
+		return title.compareTo(other.title);
 	}
 }
