@@ -2,8 +2,8 @@
 #{list talks, as: 'talk'}
 #{if talk.slot && talk.slot.startDate && talk.slot?.endDate}
  {
-  "name": "${talk.title?.jsonEscape()}",
-  "description": "${talk.description?.jsonEscape()}",
+  "name": "${talk.title?.jsonEscape()}"#{if !talk.isBreak},
+  "description": "${talk.description?.jsonEscape()}"#{/if},
   "start": ${talk.slot.startDate.time},
   "end": ${talk.slot.endDate.time}#{if talk.track},
   "category": "${talk.track.title.jsonEscape()}"#{/if},
