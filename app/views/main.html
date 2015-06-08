@@ -60,16 +60,22 @@
     		<li class="${request.action == 'Application.subscribe' ? 'active' : ''}"><a href="@{Application.subscribe}">Inscriptions</a></li>
             <li class="${request.action == 'Application.cfp' ? 'active' : ''}"><a href="@{Application.cfp}">CFP</a></li>
     		<li class="${request.action == 'Application.sponsors' ? 'active' : ''}"><a href="@{Application.sponsors}">Sponsors</a></li>
-    		<li class="${request.action == 'Application.about' ? 'active' : ''}"><a href="@{Application.about}">À propos</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Info <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="@{Application.about}">À propos</a></li>
+                    <li><a href="@{Application.access}">Accès</a></li>
+                </ul>
+            </li>
             <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
 	    	#{if user}
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">${user} <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-	    		<li><a href="@{CRUD.index}">Admin</a></li>
-	    		<li><a href="@{Secure.logout}">Logout</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">${user} <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+	    		    <li><a href="@{CRUD.index}">Admin</a></li>
+	    		    <li><a href="@{Secure.logout}">Logout</a></li>
 	    		</ul>
-	    		</li>
+	        </li>
 	    	#{/if}
 	    	#{else}
 	    		<li><a href="@{Secure.login}">Login</a></li>

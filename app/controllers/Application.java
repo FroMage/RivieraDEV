@@ -30,6 +30,10 @@ public class Application extends Controller {
         render();
     }
 
+    public static void access() {
+        render();
+    }
+
     public static void cfp() {
         render();
     }
