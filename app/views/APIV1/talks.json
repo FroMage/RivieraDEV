@@ -6,7 +6,8 @@
   "description": "${talk.description?.jsonEscape()}"#{/if},
   "start": ${talk.slot.startDate.time},
   "end": ${talk.slot.endDate.time}#{if talk.track},
-  "category": "${talk.track.title.jsonEscape()}"#{/if},
+  "category": "${talk.track.title.jsonEscape()}",
+  "place": "${talk.track.title.jsonEscape()}"#{/if},
   "speakers": [
 #{list talk.speakers, as: 'speaker'}
    {
