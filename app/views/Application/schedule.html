@@ -3,16 +3,20 @@
 
 <h1>Programme</h1>
 
+<i>À venir<i>
+
+<!--
+
 <p>
  Voici le programme heure par heure. Vous pouvez également consulter <a href="@{Application.talks}">les sessions</a>
  et <a href="@{Application.speakers}">les orateurs</a>.
 </p>
 
-<!--
+<!- -
 <div class="alert alert-warning" role="alert">
  Le programme actuel est susceptible d´être modifié légèrement.
 </div>
--->
+- ->
 
 #{list items: days, as: 'day'}
     %{
@@ -93,7 +97,7 @@
 								#{/if}
 							#{/if}
 							#{else}
-								<!-- À venir. -->
+								<!- - À venir. - ->
 								#{if user}
 									<br/>
 									<a href="@{Talks.blank()}">add talk</a>
@@ -112,3 +116,5 @@
 		</tbody>
 	</table>
 #{/list}
+
+-->

@@ -67,7 +67,13 @@
                     <li><a href="@{Application.access}">Accès</a></li>
                 </ul>
             </li>
-            <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Anciennes éditions <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
+                    <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
+                </ul>
+            </li>
 	    	#{if user}
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">${user} <span class="caret"></span></a>
@@ -91,8 +97,8 @@
             <div class="rd-header">
                <div class="container">
                 <a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a>
-                <h1>Riviera DEV 2015</h1>
-                <p>Les conférences du soleil : 11 et 12 juin 2015 au campus Sophia-Tech à Sophia-Antipolis</p>
+                <h1>Riviera DEV 2016</h1>
+                <p>Les conférences du soleil : 16 et 17 juin 2016 à Sophia-Antipolis</p>
                 </div>
             </div>
         <div class="container">
@@ -102,7 +108,7 @@
         </div> <!-- wrap -->
         <footer id="footer">
             <div class="container">
-                Copyright &copy; 2011-2015 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
+                Copyright &copy; 2011-2016 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
             </div>
         </footer>
     </body>
