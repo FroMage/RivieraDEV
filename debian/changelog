@@ -1,8 +1,8 @@
-rivieradev-2015 (1.14) UNRELEASED; urgency=medium
+rivieradev-2016 (1.14ubuntu1) UNRELEASED; urgency=medium
 
-  * Enabled program
+  * Riviera DEV 2016
 
- -- Stephane Epardaud <stephane@epardaud.fr>  Tue, 14 Apr 2015 22:13:07 +0200
+ -- Stephane Epardaud <stephane@epardaud.fr>  Mon, 15 Feb 2016 15:07:57 +0100
 
 rivieradev-2015 (1.13) oneiric; urgency=low
 
