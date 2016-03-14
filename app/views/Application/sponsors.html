@@ -5,44 +5,24 @@
 	<a href="@{Sponsors.blank()}">add</a>
 	<br/>
 #{/if}
-	<h1>Sponsors</h1>
-	
-<table class="sponsors lines">
-	<tbody>
-		#{list items: sponsors, as: 'sponsor'}
-            <tr class="${sponsor_isLast ? 'last' : ''}">
-				<td id="${sponsor.company.slugify()}">
-					#{if sponsor.companyURL}
-						<a href="${sponsor.companyURL}">
-					#{/if}
-					<img src="@{Application.sponsorLogo(sponsor.id)}" width="100"/>
-					#{if sponsor.companyURL}
-						</a>
-					#{/if}
-				</td>
-				<td>
-					<span class="sponsor">
-						#{if sponsor.companyURL}
-							<a href="${sponsor.companyURL}">
-						#{/if}
-						${sponsor.company}
-						#{if sponsor.companyURL}
-							</a>
-						#{/if}
-					</span>
-                    <br/>
-					#{if user}
-						<a href="@{Sponsors.show(sponsor.id)}">edit</a>
-                        <br/>
-					#{/if}
-					${sponsor.about?.raw()}
-                    #{if sponsor.twitterAccount}
-                        <br/>
-                        <span class="label">Twitter:</span> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
-                    #{/if}
-				</td>
-			</tr>
-		#{/list}
-	</tbody>
-</table>
 
+<div class="alert alert-info" role="alert">
+ <a href="mailto:info@rivieradev.fr">Contactez-nous</a> si vous souhaitez aider Riviera DEV en
+devenant sponsor.
+</div>
+
+<p>
+Les sponsors suivants nous aident à organiser Riviera DEV. Merci à eux !
+</p>
+
+#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Gold}, title: "Sponsors or" /}
+
+#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Silver}, title: "Sponsors argent"  /}
+
+#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Lanyard}, title: "Sponsors tour-de-cou"  /}
+
+#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Buffet}, title: "Sponsors buffet"  /}
+
+#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Apero}, title: "Sponsors apéro"  /}
+
+#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Breakfast}, title: "Sponsors petit-déjeuner"  /}

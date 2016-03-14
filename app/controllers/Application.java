@@ -23,6 +23,7 @@ public class Application extends Controller {
 	
     public static void index() {
     	List<Sponsor> sponsors = Sponsor.findAll();
+    	Collections.sort(sponsors);
         render(sponsors);
     }
 
