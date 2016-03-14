@@ -1,14 +1,12 @@
 #{extends 'main.html' /}
 #{set title:'Riviera DEV' /}
 
-<!--
 <div class="monies-box">
  <h3>Sponsors</h3>
  #{list items: sponsors, as: 'sponsor'}
   <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img src="@{Application.sponsorLogo(sponsor.id)}" width="100"/></a><br/>
  #{/list}
 </div>
--->
 
 <h1>Riviera DEV 2016, c’est parti !</h1>
 <p>
