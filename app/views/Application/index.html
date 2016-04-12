@@ -4,7 +4,8 @@
 <div class="monies-box">
  <h3>Sponsors</h3>
  #{list items: sponsors, as: 'sponsor'}
-  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img src="@{Application.sponsorLogo(sponsor.id)}" width="100"/></a><br/>
+  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img 
+   src="@{Application.sponsorLogo(sponsor.id)}" width="${sponsor.getWidth(5000, 100)}px" height="${sponsor.getHeight(5000, 100)}px"/></a><br/>
  #{/list}
 </div>
 
