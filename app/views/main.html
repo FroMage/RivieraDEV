@@ -49,6 +49,7 @@
     <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
    		<li class="${request.action == 'Application.index' ? 'active' : ''}"><a href="@{Application.index}">Index</a></li>
+        <li class="${request.action == 'Application.news' ? 'active' : ''}"><a href="@{Application.news}">Nouvelles</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Programme <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">

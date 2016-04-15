@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Nouvelles' /}
+
+#{if user}
+	<a href="@{News.blank()}">add</a>
+	<br/>
+#{/if}
+
+<h1>Nouvelles</h1>
+
+#{list items: news, as: 'item'}
+  <div class="news" id="${item.publishedDate.format('yyyy-dd-MM')}-${item.title.slugify()}">
+   <h2><a href="#${item.publishedDate.format('yyyy-dd-MM')}-${item.title.slugify()}">${item.title}</a></h2>
+   <div class="date">Publié le ${item.publishedDate.format('dd MMMM yyyy HH:mm')}</div>
+   <div class="contents">${item.contents.md()}</div>
+  </div>
+#{/list}

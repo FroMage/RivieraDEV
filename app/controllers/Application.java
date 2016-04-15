@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import models.News;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
@@ -22,11 +23,17 @@ public class Application extends Controller {
 	}
 	
     public static void index() {
+    	News latestNews = News.latest();
     	List<Sponsor> sponsors = Sponsor.findAll();
     	Collections.sort(sponsors);
-        render(sponsors);
+        render(sponsors, latestNews);
     }
 
+    public static void news() {
+    	List<News> news = News.byDate();
+    	render(news);
+    }
+    
     public static void about() {
         render();
     }

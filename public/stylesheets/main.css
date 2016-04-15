@@ -183,3 +183,16 @@ table.sponsors .sponsor a {
 .schedule .track-1 {
  width: 90%;
 }
+
+.news .date {
+ font-style: italic;
+ color: gray;
+}
+
+.news .contents {
+ margin-top: 1em;
+}
+
+.news h2 a {
+ color: inherit;
+}

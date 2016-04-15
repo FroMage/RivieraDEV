@@ -16,6 +16,13 @@
  early-bird ne dure que jusqu’à mi-avril !!
 </p>
 
+#{if latestNews}
+<h2>Dernières nouvelles</h2>
+<p>
+ <a href="@{Application.news()}#${latestNews.publishedDate.format('yyyy-dd-MM')}-${latestNews.title.slugify()}">${latestNews.title}</a>.
+</p>
+#{/if}
+
 <p>
 <center>
 <a href="https://plus.google.com/b/104322794282801309280/photos/104322794282801309280/albums/6248693510062331857?gmbpt=true&hl=en-GB&authkey=CKTM7Zv92cmMPg"
