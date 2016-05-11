@@ -23,7 +23,7 @@
  <span class="label">Titre:</span> ${speaker.title}
  <br/>
 #{/if}
-<span class="label">Bio:</span> ${speaker.biography?.raw()}
+<span class="label">Bio:</span> ${speaker.biography?.md()}
 #{if speaker.company}
 	<br/>
 	<span class="label">Compagnie:</span>

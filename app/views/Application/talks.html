@@ -33,7 +33,7 @@
 						<a href="@{Talks.show(talk.id)}">edit</a>
 					#{/if}
 					<br/>
-					<span class="label">Description:</span> ${talk.description?.raw()}
+					<span class="label">Description:</span> ${talk.description?.md()}
                 </td>
 				<td>
 				    <!--

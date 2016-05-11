@@ -30,7 +30,7 @@
                         <a href="@{Sponsors.show(sponsor.id)}">edit</a>
                         <br/>
                     #{/if}
-                    ${sponsor.about?.raw()}
+                    ${sponsor.about?.md()}
                     #{if sponsor.twitterAccount}
                         <br/>
                         <span class="label">Twitter:</span> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
