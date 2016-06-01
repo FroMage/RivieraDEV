@@ -3,23 +3,21 @@
 
 <h1>Programme</h1>
 
+<!--
 <p>
  Le programme heure par heure n'est pas encore disponible, mais vous pouvez consulter <a href="@{Application.talks}">les sessions</a>
  et <a href="@{Application.speakers}">les orateurs</a>.
 </p>
-
-<!--
+-->
 
 <p>
  Voici le programme heure par heure. Vous pouvez également consulter <a href="@{Application.talks}">les sessions</a>
  et <a href="@{Application.speakers}">les orateurs</a>.
 </p>
 
-<!- -
 <div class="alert alert-warning" role="alert">
  Le programme actuel est susceptible d´être modifié légèrement.
 </div>
-- ->
 
 #{list items: days, as: 'day'}
     %{
@@ -65,7 +63,7 @@
 							<a href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
 						#{/else}
 						<br/>
-						<!- -By:- ->
+						<!--By:-->
 						#{if allTracksEvent.speakers}
 							<ul>
 								#{list items: allTracksEvent.speakers, as: 'speaker'}
@@ -88,7 +86,7 @@
 							#{if talk}
 								<a href="@{Application.talk(talk.id)}">${talk.title}</a>
 								<br/>
-								<!- -By:- ->
+								<!--By:-->
 								<ul>
 									#{list items: talk.speakers, as: 'speaker'}
 										<li><a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a></li>
@@ -100,7 +98,7 @@
 								#{/if}
 							#{/if}
 							#{else}
-								<!- - À venir. - ->
+								<!-- À venir. -->
 								#{if user}
 									<br/>
 									<a href="@{Talks.blank()}">add talk</a>
@@ -120,4 +118,3 @@
 	</table>
 #{/list}
 
--->
