@@ -34,6 +34,10 @@
 					#{/if}
 					<br/>
 					<span class="label">Description:</span> ${talk.description?.md()}
+                    #{if talk.slidesUrl}
+                        <span class="label">Présentation:</span> <a href="${talk.slidesUrl}">${talk.slidesUrl}</a>
+                        <br/>
+                    #{/if}
                 </td>
 				<td>
 				    <!--

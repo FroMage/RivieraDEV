@@ -25,6 +25,10 @@
 <br/>
 <span class="label">Description:</span> ${talk.description?.md()}
 <br/>
+#{if talk.slidesUrl}
+    <span class="label">Présentation:</span> <a href="${talk.slidesUrl}">${talk.slidesUrl}</a>
+    <br/>
+#{/if}
 <!--
  <span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
  <br/>

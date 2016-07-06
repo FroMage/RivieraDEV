@@ -38,6 +38,8 @@ public class Talk extends Model {
 	
 	public boolean isBreak;
 	
+	public String slidesUrl;
+	
     @JoinTable(
             name="talk_speaker",
             joinColumns=@JoinColumn(name="talk_id"),

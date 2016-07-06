@@ -61,6 +61,9 @@
 						#{/if}
 						#{else}
 							<a href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
+                            #{if allTracksEvent.slidesUrl}
+                                (<a href="${allTracksEvent.slidesUrl}">Présentation</a>)
+                            #{/if}
 						#{/else}
 						<br/>
 						<!--By:-->
@@ -85,6 +88,9 @@
 						<td>
 							#{if talk}
 								<a href="@{Application.talk(talk.id)}">${talk.title}</a>
+                                #{if talk.slidesUrl}
+                                    (<a href="${talk.slidesUrl}">Présentation</a>)
+                                #{/if}
 								<br/>
 								<!--By:-->
 								<ul>
