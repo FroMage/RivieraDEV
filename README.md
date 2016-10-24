@@ -6,22 +6,7 @@ are going to move it to Play 1.3 as soon as possible to fix that.
 1. [Download Play Framework 1.2.7.2](https://downloads.typesafe.com/play/1.2.7.2/play-1.2.7.2.zip) and install it
 1. Clone the [RivieraDEV repository](https://github.com/FroMage/RivieraDEV)
 1. Open a shell and go to the `RivieraDEV` directory you just cloned
-1. Run `play dependencies` to download the required modules
-    - Note: the `play` script requires Python 2, but runs on `/usr/bin/env python`,
-      which may default to Python 3 depending on your system.
-      If you get an error like this:
-
-      ```
-        File "/tmp/play-1.2.7.2/play", line 50
-          print r"~        _            _ "
-                                          ^
-      SyntaxError: Missing parentheses in call to 'print'
-      ```
-      then change the first line of the script to
-      ```python
-      #!/usr/bin/env python2
-      ```
-1. Create your Postgres DB
+1. Create your Postgres DB (9.x)
     1. `sudo su - postgres`
     1. `createuser -PSRD rivieradev`
     1. _enter `rivieradev` as password when prompted_
