@@ -17,6 +17,7 @@ import play.test.Fixtures;
 @OnApplicationStart
 public class BootstrapJob extends Job {
     public void doJob() throws Exception {
+/*
     	if(Play.mode == Mode.DEV && Slot.count() == 0){
     		Logger.info("Loading test data");
     		Fixtures.load("test-data.yml");
@@ -30,6 +31,7 @@ public class BootstrapJob extends Job {
     		updateSponsor("Stonesoft", "stonesoft.png");
     		updateSponsor("Oracle", "oracle.png");
     	}
+*/
     }
 
 	private void updateSpeaker(String name, String file) throws FileNotFoundException {
