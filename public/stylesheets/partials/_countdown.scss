@@ -1,0 +1,32 @@
+.countdown {
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    padding: 1em;
+    font-size: 1.5em;
+    height: 5em;
+    width: 50%;
+    position: absolute;
+    right: 3em;
+    bottom: -2.5em;
+    z-index: 1;
+    background-color: lightgray;
+
+    &-parent {
+        position: relative;
+    }
+
+    &-day, 
+    &-hour,
+    &-min,
+    &-sec {
+        display: inline-block;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}

@@ -8,3 +8,5 @@ debian/*.debhelper
 debian/*.debhelper.log
 debian/rivieradev
 debian/rivieradev.substvars
+**/prepros.cfg
+**/.DS_Store
