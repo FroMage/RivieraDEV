@@ -13,14 +13,6 @@
 
 </div> <!-- /.parallax -->
 
-<div class="monies-box">
- <h3>Sponsors</h3>
- #{list items: sponsors, as: 'sponsor'}
-  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img 
-   src="@{Application.sponsorLogo(sponsor.id)}" width="${sponsor.getWidth(5000, 100)}px" height="${sponsor.getHeight(5000, 100)}px"/></a><br/>
- #{/list}
-</div>
-
 <h1>Riviera DEV 2016, c’est fini !</h1>
 <p>
  Merci d'être encore une fois venu nombreux et à l'année prochaine !
@@ -73,3 +65,37 @@
  <li>&#10003; Les jeudi 16 et vendredi 17 juin 2016 : on fait une super conférence !</li>
  <li>&#10003; On met les présentations et photos en ligne</li>
 </ul>
+
+<div class="sponsors">
+    <div class="sponsors-or">
+        <div class="sponsors-title sponsors-title-or">Or</div>
+        <div class="sponsors-list">
+            <div class="sponsor">
+                <a href="#" title="Sponsor">
+                    <img src="" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="#" title="Sponsor">
+                    <img src="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sponsors-argent">
+        <div class="sponsors-title sponsors-title-argent">Argent</div>
+    </div>
+    <div class="sponsors-bronze">
+        <div class="sponsors-title sponsors-title-bronze">Bronze</div>
+    </div>
+</div>
+
+<!--
+    <div class="monies-box">
+ <h3>Sponsors</h3>
+ #{list items: sponsors, as: 'sponsor'}
+  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img 
+   src="@{Application.sponsorLogo(sponsor.id)}" width="${sponsor.getWidth(5000, 100)}px" height="${sponsor.getHeight(5000, 100)}px"/></a><br/>
+ #{/list}
+</div>
+-->
