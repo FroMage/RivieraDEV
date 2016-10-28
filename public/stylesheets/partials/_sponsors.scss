@@ -4,36 +4,34 @@
     text-transform: uppercase;
     font-family: 'Righteous', cursive;
 
-    &-title::before,
-    &-title::after {
+    &-title:before,
+    &-title:after {
         width: 20%;
         content: '';
         position: absolute;
         top: 0.7em;
         border-top: 1px solid $color-argent;
-
-        &-or{
-            width: 20%;
-        }
-
-        &-argent{
-
-        }
-
-        &-bronze{
-            
-        }
     }
 
-    &-title::before{
+    &-title:before{
         left: auto !important;
         right: 50%;
+        margin-right: 2.2em;
+    }
+
+    &-title:after {
+        left: 50% !important;
+        right: auto !important;
+        margin-left: 2.2em;
+    }
+
+    &-title-or:before{
+        width: 22.5%;
         margin-right: 1em;
     }
 
-    &-title::after {
-        left: 50% !important;
-        right: auto !important;
+    &-title-or:after {
+        width: 22.5%;
         margin-left: 1em;
     }
 
