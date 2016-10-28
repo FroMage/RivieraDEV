@@ -1,6 +1,7 @@
 .navbar-animated{
     height: $navbar-height;
     line-height: $navbar-height;
+    background: #fff;
 
     @include transition(all 0.3s);
 

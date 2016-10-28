@@ -9,4 +9,22 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &-title {
+        text-align: center;
+        color: white;
+        padding-top: 7em;
+        //@include text-shadow(0px 0px 5px #888);
+        font-family: 'Raleway', sans-serif;
+
+        &-title {
+           margin-top: 0;
+           font-size: 3em;
+        font-weight: 600;
+        }
+
+        &-subtitle {
+            font-size: 1.5em;
+        }
+    }
 }

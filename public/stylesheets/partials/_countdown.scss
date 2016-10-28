@@ -1,32 +1,45 @@
-.countdown {
-    text-align: center;
-    color: white;
-    border: 2px solid white;
-    padding: 1em;
-    font-size: 1.5em;
-    height: 5em;
-    width: 50%;
-    position: absolute;
-    right: 3em;
-    bottom: -2.5em;
-    z-index: 1;
-    background-color: lightgray;
 
+.countdown {
+    
     &-parent {
         position: relative;
     }
-
-    &-day, 
-    &-hour,
-    &-min,
-    &-sec {
+    
+    &, &-bg {
+        position: absolute;
+        font-size: 4em;
+        width: 8.5em;
+        height: 3.5em;
+        right: 2em;
+        bottom: -1.75em;
+        padding: 1em 0.5em;
+        background-color: rgba(35, 35, 35, 0.9);
+        color: #eee;
+    }
+    
+    &-bg {
+        background-color: rgba(35, 35, 35, 0.9);
+        @include filter(blur(10px));
+    }
+    
+    &-day, &-hour, &-min, &-sec {
         display: inline-block;
-        border: 2px solid white;
-        border-radius: 50%;
-        width: 3em;
-        height: 3em;
-        line-height: 3em;
-        margin-left: 3px;
-        margin-right: 3px;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+    
+    &-sec {
+        margin-right: 0;
+    }
+    
+    &-desc {
+        font-size: 0.25em;
+        line-height: 1.5em;
+        display: block;
+        color: #bbb;
     }
 }
