@@ -104,11 +104,11 @@ body, html {
 .countdown, .countdown-bg {
   position: absolute;
   font-size: 4em;
-  width: 8.5em;
-  height: 3.5em;
-  right: 2em;
-  bottom: -1.75em;
-  padding: 1em 0.5em;
+  width: 9.5em;
+  height: 3em;
+  left: calc(50% - (9.5em / 2));
+  bottom: -1.5em;
+  padding: 0.5em 0.5em;
   background-color: rgba(35, 35, 35, 0.9);
   color: #eee;
 }
@@ -119,9 +119,8 @@ body, html {
 }
 .countdown-day, .countdown-hour, .countdown-min, .countdown-sec {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  line-height: 1.5em;
+  width: 1.75em;
+  height: 2em;
   text-align: center;
   vertical-align: middle;
   margin-right: 0.5em;
@@ -129,13 +128,19 @@ body, html {
 .countdown-sec {
   margin-right: 0;
 }
+.countdown-number, .countdown-desc {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
 .countdown-desc {
   font-size: 0.25em;
   line-height: 1.5em;
-  display: block;
   color: #bbb;
 }
 
+<<<<<<< 0cd520f42df31dee02d4b039d9d0a7b30cda6e81
 .sponsors {
   text-align: center;
   font-size: 2.5em;
@@ -178,4 +183,11 @@ body, html {
 .sponsors-bronze {
   position: relative;
   color: #bd3a13;
+=======
+@media (max-width: 767px) {
+  .countdown,
+  .countdown-bg {
+    font-size: 2em;
+  }
+>>>>>>> Enhance countdown on mobile devices
 }
