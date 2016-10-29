@@ -3,13 +3,14 @@
     
     &-parent {
         position: relative;
+        margin-bottom: ($countdown-height / 2) * $countdown-font-size;
     }
     
     &, &-bg {
         position: absolute;
-        font-size: 4em;
+        font-size: #{$countdown-font-size}em;
         width: $countdown-width;
-        height: 3em;
+        height: $countdown-height;
         //right: 2em;
         // Centers countdown horizontally 
         left: calc(50% - (#{$countdown-width} / 2));

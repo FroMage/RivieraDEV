@@ -2,13 +2,10 @@
 @import "compass/css3";
 @import "variables";
 
-body { 
-    padding-top: $navbar-height;
-    font-family: 'Open Sans', sans-serif;
-}
-
-@import "partials/_navbar-animated";
+@import "partials/common";
+@import "partials/navbar-animated";
 @import "partials/parallax";
 @import "partials/countdown";
+@import "partials/newsletter";
 @import "partials/sponsors";
 
