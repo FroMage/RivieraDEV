@@ -13,10 +13,40 @@
 
 </div> <!-- /.parallax -->
 
-<h1>Riviera DEV 2016, c’est fini !</h1>
-<p>
- Merci d'être encore une fois venu nombreux et à l'année prochaine !
-</p>
+<div class="newsletter">
+    <h2 class="newsletter-title">Get in touch !</h2>
+    <p class="newsletter-subtitle">
+        Suivez les actualités du Riviera Dev 2017 : ouverture des inscriptions, nouveaux speakers, nouvelles conférences, ...
+        Inscrivez-vous à la newsletter.
+    </p>
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address</label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+    </div><!--End mc_embed_signup-->
+</div> <!-- /.newletter -->
+
+
+<div class="monies-box">
+ <h3>Sponsors</h3>
+ #{list items: sponsors, as: 'sponsor'}
+  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img 
+   src="@{Application.sponsorLogo(sponsor.id)}" width="${sponsor.getWidth(5000, 100)}px" height="${sponsor.getHeight(5000, 100)}px"/></a><br/>
+ #{/list}
+</div>
+
+
 
 #{if latestNews}
 <h2>Dernières nouvelles</h2>
@@ -25,46 +55,6 @@
 </p>
 #{/if}
 
-<p>
-<center>
-<a href="https://plus.google.com/b/104322794282801309280/photos/104322794282801309280/albums/6248693510062331857?gmbpt=true&hl=en-GB&authkey=CKTM7Zv92cmMPg"
- title="Photos de Riviera DEV 2015"
-><img src="https://lh3.googleusercontent.com/-5GgfsF849_8/VrfRpHqwlfI/AAAAAAAABCo/MBypzeCfznI/w714-h476-no/RivieraDEV-26.jpg"/></a>
-</center>
-</p>
-
-<p>
- Riviera DEV 2016, c’était :
-</p>
-<ul>
- <li>2 jours de conférence</li>
- <li>5 keynotes d’exception</li>
- <li>2 tracks</li>
- <li>6 talks par track chaque jour… soit pas moins de 24 présentations</li>
- <li>Des ateliers sur le thème « on n’est pas que des développeurs »</li>
- <li>Un apéro pour échanger tous ensemble, avec les orateurs, jeudi en fin de journée</li>
- <li>Un concert de Genesya et de la bière locale pendant la soirée apéro</li>
- <li>De bons orateurs</li>
- <li>Une bonne ambiance</li>
- <li>À prix coûtant (65€ les deux jours repas compris, 30€ pour les étudiants) pour ceux qui achètent leurs places dans le premier mois, 
-     plus cher pour ceux qui attendent.</li>
- <li>Une attention particulière portée sur les repas, cafés, avec encore une fois le four à socca</li>
- <li>Du beau temps :)</li>
-</ul>
-<h2>Riviera DEV 2016, calendrier</h2>
-<ul>
- <li>&#10003; Février 2016 : on lance l’organisation</li>
- <li>&#10003; Février 2016 : on fixe les dates (sur deux jours) au 16 et 17 juin, et le lieu : au campus Sophia-Tech</li>
- <li>&#10003; Février 2016 : on ouvre le <a href="@{Application.cfp()}">CFP</a> (appel à orateur)</li>
- <li>&#10003; Février 2016 : on forme le comité de séléction</li>
- <li>&#10003; Février 2016 : on forme l’équipe organisatrice (eh oui : le jour J, la magie ne se fait pas toute seule)</li>
- <li>&#10003; Février 2016 : on fixe le lieu au campus Sophia-Tech</li>
- <li>&#10003; Mars 2016 : on ouvre <a href="@{Application.subscribe()}">les inscriptions</a></li>
- <li>&#10003; Avril 2015 : on ferme le CFP</li>
- <li>&#10003; Mai 2015 : on annonce le programme</li>
- <li>&#10003; Les jeudi 16 et vendredi 17 juin 2016 : on fait une super conférence !</li>
- <li>&#10003; On met les présentations et photos en ligne</li>
-</ul>
 
 <div class="sponsors">
     <div class="sponsors-or">
