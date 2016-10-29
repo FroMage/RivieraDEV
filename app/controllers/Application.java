@@ -10,6 +10,7 @@ import models.News;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
+import models.SponsorShip;
 import models.Talk;
 import models.Track;
 import play.mvc.Before;
@@ -25,8 +26,12 @@ public class Application extends Controller {
     public static void index() {
     	News latestNews = News.latest();
     	List<Sponsor> sponsors = Sponsor.findAll();
+		List<Sponsor> sponsorsGold = Sponsor.find("level", SponsorShip.Gold).fetch();
+		List<Sponsor> sponsorsSilver = Sponsor.find("level", SponsorShip.Silver).fetch();
+		List<Sponsor> sponsorsBronze = Sponsor.find("level", SponsorShip.Bronze).fetch();
     	Collections.sort(sponsors);
-        render(sponsors, latestNews);
+		Collections.sort(sponsorsGold);
+        render(sponsors, sponsorsGold, sponsorsSilver, sponsorsBronze, latestNews);
     }
 
     public static void news() {

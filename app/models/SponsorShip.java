@@ -1,5 +1,5 @@
 package models;
 
 public enum SponsorShip {
-	Gold, Silver, Lanyard, Buffet, Apero, Breakfast;
+	Gold, Silver, Bronze, Lanyard, Buffet, Apero, Breakfast;
 }

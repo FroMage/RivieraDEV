@@ -50,3 +50,21 @@
         color: $color-bronze;
     }
 }
+
+.sponsor{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    display: inline-block;
+
+    margin: 10px;
+    
+    text-align:center;
+    border: 1px solid $color-gray-ultralight;
+    text-decoration: none;
+
+    &-logo{
+        width: 80%;
+        vertical-align: middle;
+    }
+}

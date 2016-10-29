@@ -37,16 +37,6 @@
 </div> <!-- /.newletter -->
 
 
-<div class="monies-box">
- <h3>Sponsors</h3>
- #{list items: sponsors, as: 'sponsor'}
-  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img 
-   src="@{Application.sponsorLogo(sponsor.id)}" width="${sponsor.getWidth(5000, 100)}px" height="${sponsor.getHeight(5000, 100)}px"/></a><br/>
- #{/list}
-</div>
-
-
-
 #{if latestNews}
 <h2>Dernières nouvelles</h2>
 <p>
@@ -56,26 +46,30 @@
 
 
 <div class="sponsors">
+    <div class="sponsors-title">Nos Sponsors</div>
     <div class="sponsors-or">
         <div class="sponsors-title sponsors-title-or">Or</div>
         <div class="sponsors-list">
-            <div class="sponsor">
-                <a href="#" title="Sponsor">
-                    <img src="" class="sponsor-logo">
-                </a>
-            </div>
-            <div class="sponsor">
-                <a href="#" title="Sponsor">
-                    <img src="">
-                </a>
-            </div>
+            #{list items: sponsorsGold, as: 'sponsor'}
+                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
+            #{/list}
         </div>
     </div>
     <div class="sponsors-argent">
         <div class="sponsors-title sponsors-title-argent">Argent</div>
+        <div class="sponsors-list">
+            #{list items: sponsorsSilver, as: 'sponsor'}
+                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
+            #{/list}
+        </div>
     </div>
     <div class="sponsors-bronze">
         <div class="sponsors-title sponsors-title-bronze">Bronze</div>
+        <div class="sponsors-list">
+            #{list items: sponsorsBronze, as: 'sponsor'}
+                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
+            #{/list}
+        </div>
     </div>
 </div>
 
