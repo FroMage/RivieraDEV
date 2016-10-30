@@ -12,22 +12,30 @@
         margin-top: 2em;
         padding-right: 4em;
 
-        // TODO mixins
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include display-flex;
+        @include flex-direction(column);
+        @include justify-content(center);
     }
 
     &-address {
         background-color: #fff;
-        width: 30em;
+        width: 25em;
         padding: 2em;
         margin-left: auto;
         @include box-shadow(0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16));
 
+        &-title {
+            margin-top: 0;
+        }
+
         &-line {
             display: block;
         }
+    }
+
+    &-details {
+        margin-top: 2em;
+        text-align: center;
     }
 
 }

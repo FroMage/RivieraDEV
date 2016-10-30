@@ -191,21 +191,31 @@ body, html {
   background-size: cover;
   margin-top: 2em;
   padding-right: 4em;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .location-address {
   background-color: #fff;
-  width: 30em;
+  width: 25em;
   padding: 2em;
   margin-left: auto;
   -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
 }
+.location-address-title {
+  margin-top: 0;
+}
 .location-address-line {
   display: block;
+}
+.location-details {
+  margin-top: 2em;
+  text-align: center;
 }
 
 .newsletter {
