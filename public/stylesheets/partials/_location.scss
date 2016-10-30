@@ -39,3 +39,24 @@
     }
 
 }
+
+
+@media (max-width: $screen-xs-max) {
+
+    .location {
+
+        &-map {
+            height: auto;
+            padding-right: 0;
+            background-size: auto;
+        }
+
+        &-address {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            @include box-shadow(none);
+        }
+
+    }
+
+}

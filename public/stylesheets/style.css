@@ -218,6 +218,20 @@ body, html {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .location-map {
+    height: auto;
+    padding-right: 0;
+    background-size: auto;
+  }
+  .location-address {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
 .newsletter {
   padding-top: 0.5em;
   text-align: center;
