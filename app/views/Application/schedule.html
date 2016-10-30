@@ -1,7 +1,20 @@
 #{extends 'main.html' /}
 #{set title:'Programme' /}
 
-<h1>Programme</h1>
+<div class="page-title-container parallax parallax-page parallax-page-schedule">
+	<h1 class="title page-title">Programme</h1>
+</div>
+
+<div class="container page-container data-unavailable">
+
+	<p>
+		Le programme n'est pas encore disponible.
+	</p>
+	<p>
+		Vous pouvez <a href="@{Application.index}#newsletter">vous abonner à la newsletter</a> pour être prévenu dès qui'l y a du nouveau.
+	</p>
+
+</div>
 
 <!--
 <p>
@@ -10,6 +23,7 @@
 </p>
 -->
 
+<!--
 <p>
  Voici le programme heure par heure. Vous pouvez également consulter <a href="@{Application.talks}">les sessions</a>
  et <a href="@{Application.speakers}">les orateurs</a>.
@@ -66,7 +80,7 @@
                             #{/if}
 						#{/else}
 						<br/>
-						<!--By:-->
+						// By:
 						#{if allTracksEvent.speakers}
 							<ul>
 								#{list items: allTracksEvent.speakers, as: 'speaker'}
@@ -92,7 +106,7 @@
                                     (<a href="${talk.slidesUrl}">Présentation</a>)
                                 #{/if}
 								<br/>
-								<!--By:-->
+								// By:
 								<ul>
 									#{list items: talk.speakers, as: 'speaker'}
 										<li><a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a></li>
@@ -104,7 +118,7 @@
 								#{/if}
 							#{/if}
 							#{else}
-								<!-- À venir. -->
+								// À venir.
 								#{if user}
 									<br/>
 									<a href="@{Talks.blank()}">add talk</a>
@@ -123,4 +137,4 @@
 		</tbody>
 	</table>
 #{/list}
-
+-->

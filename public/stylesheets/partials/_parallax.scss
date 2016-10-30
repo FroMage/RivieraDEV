@@ -3,12 +3,24 @@ body, html {
 }
 
 .parallax {
-    background-image: url('../images/header_parallax.jpg');
-    height: 80%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &-home {
+        background-image: url('../images/header_parallax.jpg');
+        height: 80%;
+    }
+
+    &-page {
+        height: auto;
+        font-size: $font-size-title;
+
+        &-schedule {
+            background-image: url('../images/schedule_parallax.jpg');
+        }
+    }
 
     &-title {
         text-align: center;
