@@ -1,0 +1,18 @@
+.registration{
+    &-buttons{
+        margin-top: 3em;
+        text-align: center;
+    }
+
+    &-button,
+    &-button-active{
+        margin: 10px;
+        width: 11em;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        border-radius: 3px;
+        border-bottom: 3px solid rgba(0,0,0,0.15);
+        transition: none;
+    }
+}
