@@ -13,7 +13,7 @@ $(function () {
          }
     };
 
-    window.addEventListener('scroll', function(e){
+    var resizeNavbar = function() {
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
             shrinkOn = 300;
 
@@ -24,6 +24,10 @@ $(function () {
                 navbar.removeClass("navbar-animated-small");
             }
         }
+    };
+
+    window.addEventListener('scroll', function(e){
+        resizeNavbar();
     });
 
      window.addEventListener('resize', function(e){
@@ -31,4 +35,5 @@ $(function () {
      });
 
     toggleAnimatedClass();
+    resizeNavbar();
 });
