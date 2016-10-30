@@ -1,0 +1,33 @@
+.location {
+
+    &-subtitle {
+        text-align: center;
+    }
+
+    &-map {
+        width: 100%;
+        height: 500px;
+        background: url('../images/map_skema.png') center bottom;
+        background-size: cover;
+        margin-top: 2em;
+        padding-right: 4em;
+
+        // TODO mixins
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-address {
+        background-color: #fff;
+        width: 30em;
+        padding: 2em;
+        margin-left: auto;
+        @include box-shadow(0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16));
+
+        &-line {
+            display: block;
+        }
+    }
+
+}
