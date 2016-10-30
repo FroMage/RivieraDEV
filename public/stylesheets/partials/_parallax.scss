@@ -18,7 +18,16 @@ body, html {
         font-size: $font-size-title;
 
         &-schedule {
-            background-image: url('../images/schedule_parallax.jpg');
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-speakers {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-subscribe {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
         }
     }
 

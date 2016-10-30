@@ -1,13 +1,27 @@
 #{extends 'main.html' /}
 #{set title:'Orateurs' /}
 
+<div class="page-title-container parallax parallax-page parallax-page-speakers">
+	<h1 class="title page-title">Orateurs</h1>
+</div>
+
 #{if user}
 	<a href="@{Speakers.blank()}">add</a>
 	<br/>
 #{/if}
 
-<h1>Orateurs</h1>
+<div class="container page-container data-unavailable">
 
+	<p>
+		La liste des orateurs n'est pas encore disponible.
+	</p>
+	<p>
+		Vous pouvez <a href="@{Application.index}#newsletter">vous abonner à la newsletter</a> pour être prévenu dès qu'il y a du nouveau.
+	</p>
+
+</div>
+
+<!--
 <table class="lines">
     <thead>
         <tr>
@@ -66,3 +80,4 @@
 		#{/list}
 	</tbody>
 </table>
+-->

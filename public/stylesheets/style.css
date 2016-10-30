@@ -124,7 +124,13 @@ body, html {
   font-size: 2.5em;
 }
 .parallax-page-schedule {
-  background-image: url("../images/schedule_parallax.jpg");
+  background-image: url("../images/speakers_parallax.jpg");
+}
+.parallax-page-speakers {
+  background-image: url("../images/speakers_parallax.jpg");
+}
+.parallax-page-subscribe {
+  background-image: url("../images/speakers_parallax.jpg");
 }
 .parallax-title {
   text-align: center;
