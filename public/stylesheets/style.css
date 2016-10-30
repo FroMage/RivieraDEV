@@ -158,6 +158,29 @@ body, html {
     font-size: 2em;
   }
 }
+.presentation-introduction {
+  text-align: center;
+}
+.presentation-item {
+  text-align: center;
+  padding: 2em;
+}
+.presentation-icon {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.presentation-item:hover .presentation-icon {
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .newsletter {
   padding-top: 0.5em;
   text-align: center;
