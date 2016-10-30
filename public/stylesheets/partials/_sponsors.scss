@@ -1,6 +1,16 @@
 .sponsors {
     text-align: center;
 
+    &-header{
+        background-color: rgba(255, 255, 255, 0.7);
+
+        &-subtitle {
+            text-align: center;
+            margin-bottom: 0;
+            padding-bottom: 1.5em;;
+        }
+    }
+
     &-title {
         font-family: 'Righteous', cursive;
         text-transform: uppercase;
@@ -39,6 +49,7 @@
     }
 
     &-or {
+        margin-top: 1.5em;
         position: relative;
         color: $color-or;
     }

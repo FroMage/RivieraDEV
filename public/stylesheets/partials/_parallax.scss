@@ -11,6 +11,14 @@ body, html {
     &-home {
         background-image: url('../images/header_parallax.jpg');
         height: 80%;
+
+        &-location{
+            background-image: url('../images/location_parallax.jpg');
+        }
+
+        &-sponsors{
+            background-image: url('../images/sponsors_parallax.jpeg');
+        }
     }
 
     &-page {

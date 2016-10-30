@@ -119,6 +119,12 @@ body, html {
   background-image: url("../images/header_parallax.jpg");
   height: 80%;
 }
+.parallax-home-location {
+  background-image: url("../images/location_parallax.jpg");
+}
+.parallax-home-sponsors {
+  background-image: url("../images/sponsors_parallax.jpeg");
+}
 .parallax-page {
   height: auto;
   font-size: 2.5em;
@@ -233,15 +239,19 @@ body, html {
   transform: scale(1.2);
 }
 
+.location-header {
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .location-subtitle {
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
 }
 .location-map {
   width: 100%;
   height: 500px;
   background: url("../images/map_skema.png") center bottom;
   background-size: cover;
-  margin-top: 2em;
   padding-right: 4em;
   display: -webkit-flex;
   display: flex;
@@ -286,11 +296,20 @@ body, html {
 }
 .newsletter {
   padding-top: 0.5em;
+  margin-bottom: 4em;
   text-align: center;
 }
 
 .sponsors {
   text-align: center;
+}
+.sponsors-header {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.sponsors-header-subtitle {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
 }
 .sponsors-title {
   font-family: 'Righteous', cursive;
@@ -323,6 +342,7 @@ body, html {
   margin-left: 1em;
 }
 .sponsors-or {
+  margin-top: 1.5em;
   position: relative;
   color: #f8a912;
 }
