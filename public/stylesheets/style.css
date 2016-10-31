@@ -116,18 +116,30 @@ body, html {
   background-size: cover;
 }
 .parallax-home {
-  background-image: url("../images/header_parallax.jpg");
+  background-image: url("../images/header_parallax_2.jpg");
   height: 80%;
 }
 .parallax-home-location {
   background-image: url("../images/location_parallax.jpg");
+  height: 40%;
+}
+.parallax-home-newsletter {
+  background-image: url("../images/newsletter_parallax.jpg");
+  height: 40%;
 }
 .parallax-home-sponsors {
-  background-image: url("../images/sponsors_parallax.jpeg");
+  background-image: url("../images/sponsors_parallax_2.jpg");
+  height: 40%;
 }
 .parallax-page {
   height: auto;
   font-size: 2.5em;
+}
+.parallax-page-about {
+  background-image: url("../images/speakers_parallax.jpg");
+}
+.parallax-page-access {
+  background-image: url("../images/speakers_parallax.jpg");
 }
 .parallax-page-schedule {
   background-image: url("../images/speakers_parallax.jpg");
@@ -152,12 +164,17 @@ body, html {
   font-size: 1.5em;
 }
 
+@media (max-width: 767px) {
+  .parallax-title {
+    padding-top: 1.5em;
+  }
+}
 .registration-buttons {
   margin-top: 3em;
   text-align: center;
 }
 .registration-button, .registration-button-active {
-  margin: 10px;
+  margin: 0.5em;
   width: 11em;
   font-family: 'Raleway', sans-serif;
   font-size: 1.5em;
@@ -167,6 +184,14 @@ body, html {
   transition: none;
 }
 
+@media (max-width: 767px) {
+  .registration-buttons {
+    margin-top: 1em;
+  }
+  .registration-button {
+    margin: 0.2em;
+  }
+}
 .countdown-parent {
   position: relative;
   margin-bottom: 6em;
@@ -214,6 +239,10 @@ body, html {
   .countdown,
   .countdown-bg {
     font-size: 2em;
+  }
+
+  .countdown-parent {
+    margin-bottom: 3em;
   }
 }
 .presentation-introduction {
@@ -298,6 +327,9 @@ body, html {
   padding-top: 0.5em;
   margin-bottom: 4em;
   text-align: center;
+}
+.newsletter-form {
+  margin-top: 3em;
 }
 
 .sponsors {

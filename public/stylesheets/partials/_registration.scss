@@ -6,7 +6,7 @@
 
     &-button,
     &-button-active{
-        margin: 10px;
+        margin: 0.5em;
         width: 11em;
         font-family: 'Raleway', sans-serif;
         font-size: 1.5em;
@@ -14,5 +14,21 @@
         border-radius: 3px;
         border-bottom: 3px solid rgba(0,0,0,0.15);
         transition: none;
+    }
+}
+
+
+@media (max-width: $screen-xs-max) {
+
+    .registration{
+
+        &-buttons {
+            margin-top: 1em;
+        }
+
+        &-button {
+            margin: 0.2em;
+        }
+
     }
 }

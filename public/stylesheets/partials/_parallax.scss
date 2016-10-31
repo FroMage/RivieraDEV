@@ -9,15 +9,22 @@ body, html {
     background-size: cover;
 
     &-home {
-        background-image: url('../images/header_parallax.jpg');
+        background-image: url('../images/header_parallax_2.jpg');
         height: 80%;
 
         &-location{
             background-image: url('../images/location_parallax.jpg');
+            height: 40%;
+        }
+
+        &-newsletter{
+            background-image: url('../images/newsletter_parallax.jpg');
+            height: 40%;
         }
 
         &-sponsors{
-            background-image: url('../images/sponsors_parallax.jpeg');
+            background-image: url('../images/sponsors_parallax_2.jpg');
+            height: 40%;
         }
     }
 
@@ -25,6 +32,14 @@ body, html {
         height: auto;
         font-size: $font-size-title;
 
+        &-about {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-access {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
         &-schedule {
             // TODO : choose another photo
             background-image: url('../images/speakers_parallax.jpg');
@@ -46,13 +61,24 @@ body, html {
         //@include text-shadow(0px 0px 5px #888);
 
         &-title {
-           margin-top: 0;
-           font-size: 3em;
-        font-weight: 600;
+            margin-top: 0;
+            font-size: 3em;
+            font-weight: 600;
         }
 
         &-subtitle {
             font-size: 1.5em;
         }
     }
+}
+
+
+@media (max-width: $screen-xs-max) {
+
+    .parallax {
+        &-title {
+            padding-top: 1.5em;
+        }
+    }
+
 }
