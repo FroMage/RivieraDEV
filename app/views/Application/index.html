@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-#{set title:'Riviera DEV' /}
+#{set title:'Accueil' /}
 
 <div class="parallax parallax-home countdown-parent">
     
@@ -9,7 +9,7 @@
     </div>
     
     <div class="registration-buttons">
-        <a class="btn btn-primary btn-lg registration-button" href="#">Préinscription</a>
+        <a class="btn btn-primary btn-lg registration-button" href="@{Application.preregistration()}">Préinscription</a>
         <!--<a class="btn btn-primary btn-lg registration-button" href="#">J'achète ma place</a>-->
         <a class="btn btn-default btn-lg registration-button" href="@{Application.sponsors()}">Devenir sponsor</a>
     </div>

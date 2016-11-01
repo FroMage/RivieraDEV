@@ -141,6 +141,9 @@ body, html {
 .parallax-page-access {
   background-image: url("../images/speakers_parallax.jpg");
 }
+.parallax-page-orga {
+  background-image: url("../images/speakers_parallax.jpg");
+}
 .parallax-page-schedule {
   background-image: url("../images/speakers_parallax.jpg");
 }
@@ -148,6 +151,9 @@ body, html {
   background-image: url("../images/speakers_parallax.jpg");
 }
 .parallax-page-subscribe {
+  background-image: url("../images/speakers_parallax.jpg");
+}
+.parallax-page-preregistration {
   background-image: url("../images/speakers_parallax.jpg");
 }
 .parallax-title {

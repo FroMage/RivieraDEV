@@ -111,4 +111,16 @@ public class Application extends Controller {
     	response.contentType = sponsor.logo.type();
     	renderBinary(sponsor.logo.get());
     }
+
+	public static void orga() {
+		render();
+	}
+
+	public static void contact() {
+		render();
+	}
+
+	public static void preregistration() {
+		render();
+	}
 }
