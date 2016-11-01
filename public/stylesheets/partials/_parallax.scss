@@ -1,7 +1,3 @@
-body, html {
-    height: 100%;
-}
-
 .parallax {
     background-attachment: fixed;
     background-position: center;
@@ -14,11 +10,6 @@ body, html {
 
         &-location{
             background-image: url('../images/location_parallax.jpg');
-            height: 40%;
-        }
-
-        &-newsletter{
-            background-image: url('../images/newsletter_parallax.jpg');
             height: 40%;
         }
 

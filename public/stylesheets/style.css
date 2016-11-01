@@ -1,6 +1,13 @@
+html {
+  height: 100%;
+}
+
 body {
   padding-top: 75px;
+  padding-bottom: 17em;
   font-family: 'Open Sans', sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
 .title {
@@ -105,10 +112,6 @@ li a.navbar-animated-link {
     line-height: 45px;
   }
 }
-body, html {
-  height: 100%;
-}
-
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -121,10 +124,6 @@ body, html {
 }
 .parallax-home-location {
   background-image: url("../images/location_parallax.jpg");
-  height: 40%;
-}
-.parallax-home-newsletter {
-  background-image: url("../images/newsletter_parallax.jpg");
   height: 40%;
 }
 .parallax-home-sponsors {
@@ -406,4 +405,40 @@ body, html {
 .sponsor-logo {
   width: 80%;
   vertical-align: middle;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15em;
+  padding-top: 1.5em;
+  background-color: #333;
+  color: #ddd;
+}
+.footer a {
+  color: #ddd;
+  transition: all 0.1s;
+}
+.footer a:hover {
+  color: #fff;
+}
+.footer-infos {
+  padding-left: 2em;
+}
+.footer-logo {
+  font-size: 1.8em;
+}
+.footer-contact {
+  margin-top: 3em;
+}
+.footer-social-item {
+  font-size: 3em;
+}
+.footer-social-item:hover {
+  text-decoration: none;
+}
+.footer-copyright {
+  text-align: right;
+  font-size: 0.8em;
 }

@@ -1,0 +1,47 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+    padding-top: 1.5em;
+    background-color: #333;
+    color: #ddd;
+
+    a {
+        color: #ddd;
+        transition: all 0.1s;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &-infos {
+        padding-left: 2em;
+    }
+
+    &-logo {
+        font-size: 1.8em;
+    }
+
+    &-contact {
+        margin-top: 3em;
+    }
+
+    &-social {
+
+        &-item {
+            font-size: 3em;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    &-copyright {
+        text-align: right;
+        font-size: 0.8em;
+    }
+}

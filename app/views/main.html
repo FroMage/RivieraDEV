@@ -71,35 +71,64 @@
 <li class="${request.action == 'Application.news' ? 'active' : ''}"><a href="@{Application.news}">Nouvelles</a></li>
 <li class="${request.action == 'Application.talks' ? 'active' : ''}"><a href="@{Application.talks}">Sessions</a></li>
 <li class="${request.action == 'Application.cfp' ? 'active' : ''}"><a href="@{Application.cfp}">CFP</a></li>
-<li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
-<li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
 -->
 
-        <!-- <div class="container"> -->
-            #{doLayout /}
-        <!-- </div> -->
-        <div id="push"></div>
+    <!-- <div class="container"> -->
+        #{doLayout /}
+    <!-- </div> -->
+    <div id="push"></div>
 
-        <footer id="footer">
-            <ul>
-	    	#{if user}
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">${user} <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-	    		    <li><a href="@{CRUD.index}">Admin</a></li>
-	    		    <li><a href="@{Secure.logout}">Logout</a></li>
-	    		</ul>
-	            </li>
-	    	#{/if}
-	    	#{else}
-	    		<li><a href="@{Secure.login}">Login</a></li>
-	    	#{/else}
-                <li><a href="http://twitter.com/#!/RivieraDEV" class="navbar-link">@RivieraDEV</a></li>
-            </ul>
-            <div class="container">
-                Copyright &copy; 2011-2016 Riviera JUG / Riviera DEV. All rights reserved. Contact: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>.
+    <footer class="footer container">
+        <div class="row">
+            
+            <div class="col-sm-5 footer-infos">
+                <div class="footer-logo">Riviera DEV</div>
+                <div class="footer-slogan">La conférence du soleil</div>
+                <div class="footer-contact">Email : info@rivieradev.fr</div>
             </div>
-        </footer>
+
+            <div class="col-sm-4">
+                <div class="footer-archives">Archives</div>
+                <ul>
+                    <li><a href="//2016.rivieradev.fr">Édition 2016</a></li>
+                    <li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
+                    <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
+                </ul>
+
+                <div class="footer-admin">Espace privé #{if user}[${user}]#{/if}</div>
+                <ul>
+                    #{if user}
+                        <li><a href="@{CRUD.index}">Admin</a></li>
+                        <li><a href="@{Secure.logout}">Logout</a></li>
+                    #{/if}
+                    #{else}
+                        <li><a href="@{Secure.login}">Login</a></li>
+                    #{/else}
+                </ul>
+            </div>
+
+            <div class="col-sm-3">
+                <div>Suivez-nous sur</div>
+                <a class="footer-social-item footer-social-twitter" href="https://twitter.com/rivieradev">
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+                <a class="footer-social-item footer-social-facebook" href="https://www.facebook.com/RivieraDEVConf/">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 footer-copyright">
+                Copyright &copy; 2011-2017 Riviera JUG / Riviera DEV. All rights reserved.
+            </div>
+        </div>
+
+    </footer>
 
     <!-- External libs -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -111,8 +140,8 @@
     <script src="@{'/public/javascripts/navbar-animated.js'}"></script>
     <script src="@{'/public/javascripts/countdown.js'}"></script>
 
-        #{get 'moreScripts' /}
-        <script type="text/javascript">
+    #{get 'moreScripts' /}
+    <script type="text/javascript">
 
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-24807954-1']);
@@ -126,7 +155,8 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
-        </script>
-    </body>
+    </script>
+    
+</body>
 </html>
 

@@ -1,7 +1,13 @@
+html {
+    height: 100%;
+}
 
 body { 
     padding-top: $navbar-height;
+    padding-bottom: $footer-height + 2em;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
 .title {
