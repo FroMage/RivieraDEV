@@ -46,20 +46,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Riviera DEV <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="@{Application.about}">La conférence</a></li>
-                            <li><a href="@{Application.access}">Informations pratiques</a></li>
-                            <li><a href="@{Application.orga}">Les organisateurs</a></li>
-                            <!-- <a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a> -->
-                        </ul>
-                    </li>
                     <li><a class="navbar-animated-link" href="@{Application.schedule}">Programme</a></li>
                     <li><a class="navbar-animated-link" href="@{Application.speakers}">Orateurs</a></li>
                     <li><a class="navbar-animated-link" href="@{Application.subscribe}">Billetterie</a></li>
+                    <li><a class="navbar-animated-link" href="@{Application.access}">Informations pratiques</a></li>
+                    <li><a class="navbar-animated-link" href="@{Application.orga}">Les organisateurs</a></li>
                     <li><a class="navbar-animated-link" href="@{Application.sponsors}">Sponsors</a></li>
                     <li><a class="navbar-animated-link" href="@{Application.contact}">Contact</a></li>
                 </ul>
@@ -68,6 +59,8 @@
     </nav>
 
 <!--
+<li><a href="@{Application.about}">La conférence</a></li>
+<a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a>
 <li class="${request.action == 'Application.news' ? 'active' : ''}"><a href="@{Application.news}">Nouvelles</a></li>
 <li class="${request.action == 'Application.talks' ? 'active' : ''}"><a href="@{Application.talks}">Sessions</a></li>
 <li class="${request.action == 'Application.cfp' ? 'active' : ''}"><a href="@{Application.cfp}">CFP</a></li>
@@ -84,7 +77,7 @@
             <div class="col-sm-5 footer-infos">
                 <div class="footer-logo">Riviera DEV</div>
                 <div class="footer-slogan">La conférence du soleil</div>
-                <div class="footer-contact">Email : info@rivieradev.fr</div>
+                <div class="footer-contact">Contact : info@rivieradev.fr</div>
             </div>
 
             <div class="col-sm-4 footer-menu">
@@ -116,6 +109,10 @@
                 <a class="footer-social-item footer-social-facebook" href="https://www.facebook.com/RivieraDEVConf/">
                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
                     <span class="sr-only">Facebook</span>
+                </a>
+                <a class="footer-social-item footer-social-google" href="https://plus.google.com/+RivieraJUGPage">
+                    <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                    <span class="sr-only">Google +</span>
                 </a>
                 
             </div>
