@@ -5,11 +5,6 @@
 	<h1 class="title page-title">Orateurs</h1>
 </div>
 
-#{if user}
-	<a href="@{Speakers.blank()}">add</a>
-	<br/>
-#{/if}
-
 <div class="container page-container data-unavailable">
 
 	<p>
@@ -20,6 +15,14 @@
 	</p>
 
 </div>
+
+
+#{if user}
+<div class="container page-container text-center">
+	<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
+</div>
+#{/if}
+
 
 <!--
 <table class="lines">
