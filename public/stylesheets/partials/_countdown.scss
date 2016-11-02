@@ -4,6 +4,7 @@
     &-parent {
         position: relative;
         margin-bottom: ($countdown-height / 2) * $countdown-font-size;
+        padding-bottom: ($countdown-height / 2) * $countdown-font-size;
     }
     
     &, &-bg {
@@ -62,5 +63,6 @@
 
     .countdown-parent {
         margin-bottom: 3em;
+        padding-bottom: 3em;
     }
 }

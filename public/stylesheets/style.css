@@ -125,7 +125,6 @@ li a.navbar-animated-link {
 }
 .parallax-home {
   background-image: url("../images/header_parallax_2.jpg");
-  height: 80%;
 }
 .parallax-home-location {
   background-image: url("../images/location_parallax.jpg");
@@ -181,6 +180,7 @@ li a.navbar-animated-link {
 }
 .registration-buttons {
   margin-top: 3em;
+  margin-bottom: 3em;
   text-align: center;
 }
 .registration-button, .registration-button-active {
@@ -197,6 +197,7 @@ li a.navbar-animated-link {
 @media (max-width: 767px) {
   .registration-buttons {
     margin-top: 1em;
+    margin-bottom: 1em;
   }
   .registration-button {
     margin: 0.2em;
@@ -205,6 +206,7 @@ li a.navbar-animated-link {
 .countdown-parent {
   position: relative;
   margin-bottom: 6em;
+  padding-bottom: 6em;
 }
 .countdown, .countdown-bg {
   position: absolute;
@@ -253,6 +255,7 @@ li a.navbar-animated-link {
 
   .countdown-parent {
     margin-bottom: 3em;
+    padding-bottom: 3em;
   }
 }
 .presentation-introduction {
