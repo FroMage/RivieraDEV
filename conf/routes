@@ -23,7 +23,6 @@ GET     /subscribe                              Application.subscribe
 GET     /sponsors                               Application.sponsors
 GET     /orga                                   Application.orga
 GET     /contact                                Application.contact
-GET     /preregistration                        Application.preregistration
 
 *		/admin									module:crud
 *		/										module:secure
