@@ -10,6 +10,11 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 0;
+  }
+}
 .title {
   font-family: 'Raleway', sans-serif;
 }
@@ -441,4 +446,26 @@ li a.navbar-animated-link {
 .footer-copyright {
   text-align: right;
   font-size: 0.8em;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    position: static;
+    height: auto;
+  }
+  .footer-contact {
+    margin-top: 1em;
+  }
+  .footer-infos, .footer-menu, .footer-social {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .footer-menu, .footer-social {
+    margin-top: 2em;
+  }
+  .footer-copyright {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
 }

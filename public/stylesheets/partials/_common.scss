@@ -10,6 +10,13 @@ body {
     min-height: 100vh;
 }
 
+@media (max-width: $screen-xs-max) {
+    body {
+        padding-bottom: 0;
+    }
+}
+
+
 .title {
     font-family: 'Raleway', sans-serif;
 }
