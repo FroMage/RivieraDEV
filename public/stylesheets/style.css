@@ -425,7 +425,7 @@ li a.navbar-animated-link {
   color: #ddd;
   transition: all 0.1s;
 }
-.footer a:hover {
+.footer a:hover, .footer a:focus, .footer a:active {
   color: #fff;
 }
 .footer-infos {
@@ -440,12 +440,34 @@ li a.navbar-animated-link {
 .footer-social-item {
   font-size: 3em;
 }
-.footer-social-item:hover {
+.footer-social-item:hover, .footer-social-item:focus, .footer-social-item:active {
   text-decoration: none;
 }
 .footer-copyright {
   text-align: right;
   font-size: 0.8em;
+}
+
+a.footer-social-item {
+  transition: all 0.3s;
+}
+
+a.footer-social-twitter:hover,
+a.footer-social-twitter:focus,
+a.footer-social-twitter:active {
+  color: #1da1f2;
+}
+
+a.footer-social-facebook:hover,
+a.footer-social-facebook:focus,
+a.footer-social-facebook:active {
+  color: #3b5998;
+}
+
+a.footer-social-google:hover,
+a.footer-social-google:focus,
+a.footer-social-google:active {
+  color: #d34836;
 }
 
 @media (max-width: 767px) {

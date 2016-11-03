@@ -11,7 +11,9 @@
         color: #ddd;
         transition: all 0.1s;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             color: #fff;
         }
     }
@@ -33,7 +35,9 @@
         &-item {
             font-size: 3em;
 
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
                 text-decoration: none;
             }
         }
@@ -44,6 +48,28 @@
         text-align: right;
         font-size: 0.8em;
     }
+}
+
+a.footer-social-item {
+    transition: all 0.3s;
+}
+
+a.footer-social-twitter:hover,
+a.footer-social-twitter:focus,
+a.footer-social-twitter:active {
+    color: #1da1f2;
+}
+
+a.footer-social-facebook:hover,
+a.footer-social-facebook:focus,
+a.footer-social-facebook:active {
+    color: #3b5998;
+}
+
+a.footer-social-google:hover,
+a.footer-social-google:focus,
+a.footer-social-google:active {
+    color: #d34836;
 }
 
 @media (max-width: $screen-xs-max) {
