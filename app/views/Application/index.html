@@ -111,6 +111,8 @@
         <h2 class="title home-title sponsors-header-title container">Nos Sponsors</h2>
         <p class="home-subtitle sponsors-header-subtitle container">Sans eux rien ne serait possible !</p>
     </div>
+    
+    #{if sponsorsGold != null && sponsorsGold.size() > 0}
     <div class="sponsors-or">
         <div class="sponsors-title sponsors-title-or">Or</div>
         <div class="sponsors-list">
@@ -119,6 +121,8 @@
             #{/list}
         </div>
     </div>
+    #{/if}
+    #{if sponsorsSilver != null && sponsorsSilver.size() > 0}
     <div class="sponsors-argent">
         <div class="sponsors-title sponsors-title-argent">Argent</div>
         <div class="sponsors-list">
@@ -127,6 +131,8 @@
             #{/list}
         </div>
     </div>
+    #{/if}
+    #{if sponsorsBronze != null && sponsorsBronze.size() > 0}
     <div class="sponsors-bronze">
         <div class="sponsors-title sponsors-title-bronze">Bronze</div>
         <div class="sponsors-list">
@@ -135,6 +141,23 @@
             #{/list}
         </div>
     </div>
+    #{/if}
+
+    #{if sponsorsPreviousYears != null && sponsorsPreviousYears.size() > 0 &&
+         (sponsorsGold == null || sponsorsGold.size() == 0) &&
+         (sponsorsSilver == null || sponsorsSilver.size() == 0) && 
+         (sponsorsBronze == null || sponsorsBronze.size() == 0)
+    }
+    <div class="sponsors">
+        <div class="sponsors-old-title">Ils nous ont fait confiance les années précédentes</div>
+        <div class="sponsors-list">
+            #{list items: sponsorsPreviousYears, as: 'sponsor'}
+                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
+            #{/list}
+        </div>
+    </div>
+    #{/if}
+
 </div>
 
 <!--

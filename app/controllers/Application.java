@@ -25,13 +25,20 @@ public class Application extends Controller {
 	
     public static void index() {
     	News latestNews = News.latest();
+
     	List<Sponsor> sponsors = Sponsor.findAll();
 		List<Sponsor> sponsorsGold = Sponsor.find("level", SponsorShip.Gold).fetch();
 		List<Sponsor> sponsorsSilver = Sponsor.find("level", SponsorShip.Silver).fetch();
 		List<Sponsor> sponsorsBronze = Sponsor.find("level", SponsorShip.Bronze).fetch();
+		List<Sponsor> sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
+
     	Collections.sort(sponsors);
 		Collections.sort(sponsorsGold);
-        render(sponsors, sponsorsGold, sponsorsSilver, sponsorsBronze, latestNews);
+		Collections.sort(sponsorsSilver);
+		Collections.sort(sponsorsBronze);
+		Collections.sort(sponsorsPreviousYears);
+
+		render(sponsors, sponsorsPreviousYears, sponsorsGold, sponsorsSilver, sponsorsBronze, latestNews);
     }
 
     public static void news() {
