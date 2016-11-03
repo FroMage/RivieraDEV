@@ -22,7 +22,6 @@ GET     /inscriptions                           Application.subscribe
 GET     /subscribe                              Application.subscribe
 GET     /sponsors                               Application.sponsors
 GET     /orga                                   Application.orga
-GET     /contact                                Application.contact
 
 *		/admin									module:crud
 *		/										module:secure
