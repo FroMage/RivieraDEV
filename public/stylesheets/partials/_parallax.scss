@@ -6,16 +6,15 @@
 
     &-home {
         background-image: url('../images/header_parallax_2.jpg');
-        //height: 80%;
 
         &-location{
             background-image: url('../images/location_parallax.jpg');
-            height: 40%;
+            height: 250px;
         }
 
         &-sponsors{
             background-image: url('../images/sponsors_parallax_2.jpg');
-            height: 40%;
+            height: 250px;
         }
     }
 
