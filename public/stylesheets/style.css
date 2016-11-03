@@ -180,6 +180,9 @@ li a.navbar-animated-link {
   margin-bottom: 3em;
   text-align: center;
 }
+.registration-sponsor {
+  margin-top: 1em;
+}
 .registration-button, .registration-button-active {
   margin: 0.5em;
   width: 11em;
@@ -395,6 +398,10 @@ li a.navbar-animated-link {
 .sponsors-bronze {
   position: relative;
   color: #bd3a13;
+}
+.sponsors-previous-title {
+  font-size: 1.5em;
+  margin-bottom: 1.1em;
 }
 
 .sponsor {

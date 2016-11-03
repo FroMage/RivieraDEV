@@ -149,7 +149,7 @@
          (sponsorsBronze == null || sponsorsBronze.size() == 0)
     }
     <div class="sponsors">
-        <div class="sponsors-old-title">Ils nous ont fait confiance les années précédentes</div>
+        <div class="sponsors-previous-title">Ils nous ont fait confiance les années précédentes</div>
         <div class="sponsors-list">
             #{list items: sponsorsPreviousYears, as: 'sponsor'}
                 <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
@@ -157,6 +157,10 @@
         </div>
     </div>
     #{/if}
+
+    <div class="registration-buttons registration-sponsor">
+        <a class="btn btn-primary btn-lg registration-button" href="@{Application.sponsors()}">Devenir sponsor</a>
+    </div>
 
 </div>
 
