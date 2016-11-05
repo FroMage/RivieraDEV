@@ -100,7 +100,7 @@
 #{if latestNews}
 <h2>Dernières nouvelles</h2>
 <p>
- <a href="@{Application.news()}#${latestNews.publishedDate.format('yyyy-dd-MM')}-${latestNews.title.slugify()}">${latestNews.title}</a>.
+    <a href="@{Application.news()}#${latestNews.publishedDate.format('yyyy-dd-MM')}-${latestNews.title.slugify()}">${latestNews.title}</a>.
 </p>
 #{/if}
 
@@ -145,20 +145,10 @@
     </div>
     #{/if}
 
-    #{if sponsorsPreviousYears != null && sponsorsPreviousYears.size() > 0 &&
-         (sponsorsGold == null || sponsorsGold.size() == 0) &&
-         (sponsorsSilver == null || sponsorsSilver.size() == 0) && 
-         (sponsorsBronze == null || sponsorsBronze.size() == 0)
-    }
-    <div class="sponsors">
-        <div class="sponsors-previous-title">Ils nous ont fait confiance les années précédentes</div>
-        <div class="sponsors-list">
-            #{list items: sponsorsPreviousYears, as: 'sponsor'}
-                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
-            #{/list}
-        </div>
-    </div>
-    #{/if}
+	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears, 
+                            sponsorsGold: sponsorsGold, 
+                            sponsorsSilver: sponsorsSilver, 
+                            sponsorsBronze: sponsorsBronze /}
 
     <div class="registration-buttons registration-sponsor">
         <a class="btn btn-primary btn-lg registration-button" href="@{Application.sponsors()}">Devenir sponsor</a>

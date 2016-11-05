@@ -16,18 +16,27 @@
 		</p>
 	</div>
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Gold}, title: "Or", level: "or"/}
+	#{sponsorsByLevel sponsors: sponsorsGold, title: "Or", level: "or"/}
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Silver}, title: "Argent", level: "argent"/}
+	#{sponsorsByLevel sponsors: sponsorsSilver, title: "Argent", level: "argent"/}
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Bronze}, title: "Bronze", level: "bronze"/}
+	#{sponsorsByLevel sponsors: sponsorsBronze, title: "Bronze", level: "bronze"/}
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Lanyard}, title: "Sponsors tour-de-cou", level:"lanyard"/}
+	<!-- TODO other levels -->
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Buffet}, title: "Sponsors buffet", level:"buffet" /}
+	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Lanyard}, title: "Sponsors tour-de-cou", level:"lanyard"/}
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Apero}, title: "Sponsors apéro", level:"apero"/}
+	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Buffet}, title: "Sponsors buffet", level:"buffet" /}
 
-	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Breakfast}, title: "Sponsors petit-déjeuner", level:"breakfast" /}
+	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Apero}, title: "Sponsors apéro", level:"apero"/}
+
+	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Breakfast}, title: "Sponsors petit-déjeuner", level:"breakfast" /}
+
+	<!-- /TODO -->
+
+	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears, 
+                            sponsorsGold: sponsorsGold, 
+                            sponsorsSilver: sponsorsSilver, 
+                            sponsorsBronze: sponsorsBronze/}
 
 </div>

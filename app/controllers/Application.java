@@ -101,8 +101,17 @@ public class Application extends Controller {
     }
 
     public static void sponsors(){
-    	List<Sponsor> sponsors = Sponsor.find("ORDER BY company").fetch();
-    	render(sponsors);
+		List<Sponsor> sponsorsGold = Sponsor.find("level", SponsorShip.Gold).fetch();
+		List<Sponsor> sponsorsSilver = Sponsor.find("level", SponsorShip.Silver).fetch();
+		List<Sponsor> sponsorsBronze = Sponsor.find("level", SponsorShip.Bronze).fetch();
+		List<Sponsor> sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
+
+		Collections.sort(sponsorsGold);
+		Collections.sort(sponsorsSilver);
+		Collections.sort(sponsorsBronze);
+		Collections.sort(sponsorsPreviousYears);
+
+		render(sponsorsGold, sponsorsSilver, sponsorsBronze, sponsorsPreviousYears);
     }
     
     public static void speakerPhoto(Long id){
