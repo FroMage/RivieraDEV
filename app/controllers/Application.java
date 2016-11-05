@@ -77,8 +77,11 @@ public class Application extends Controller {
     }
 
     public static void speakers(){
-    	List<Speaker> speakers = Speaker.find("ORDER BY lastName, firstName").fetch();
-    	render(speakers);
+		// TODO : Récupérer l'année en BD
+		int newRivieraDevYear = 2017;
+    	List<Speaker> speakers = Speaker.find("year = ? ORDER BY lastName, firstName", newRivieraDevYear).fetch();
+		List<Speaker> speakersPreviousYears = Speaker.find("year is null OR year < ? ORDER BY lastName, firstName",newRivieraDevYear).fetch();
+    	render(speakers, speakersPreviousYears);
     }
 
     public static void speaker(Long id){

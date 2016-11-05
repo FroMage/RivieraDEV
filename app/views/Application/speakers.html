@@ -23,7 +23,13 @@
 	<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
 </div>
 #{/if}
-
+  
+#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
+	<div class="container text-center">
+		<p class="speakers-previous-title">Ils sont venus chez nous !</p>
+	</div>
+	#{speakers speakers: speakersPreviousYears, enableLink: false/}
+#{/if}
 
 <!--
 <table class="lines">

@@ -348,6 +348,34 @@ li a.navbar-animated-link {
   margin-top: 3em;
 }
 
+.speakers {
+  text-align: center;
+}
+.speakers-previous-title {
+  font-size: 1.5em;
+  margin-bottom: 1.1em;
+}
+
+.speaker {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 30px 30px;
+  color: #333;
+}
+.speaker-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.speaker-names {
+  font-weight: bold;
+}
+
 .sponsors-header {
   background-color: rgba(255, 255, 255, 0.7);
 }
