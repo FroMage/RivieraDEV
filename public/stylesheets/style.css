@@ -156,6 +156,9 @@ li a.navbar-animated-link {
 .parallax-page-subscribe {
   background-image: url("../images/speakers_parallax.jpg");
 }
+.parallax-page-sponsors {
+  background-image: url("../images/speakers_parallax.jpg");
+}
 .parallax-title {
   text-align: center;
   color: white;
@@ -400,6 +403,12 @@ li a.navbar-animated-link {
 .sponsors-previous-title {
   font-size: 1.5em;
   margin-bottom: 1.1em;
+}
+.sponsors-contactUs {
+  font-size: 1.5em;
+  margin: 2em;
+  background-color: #ddd;
+  padding: 1em;
 }
 
 .sponsor {
