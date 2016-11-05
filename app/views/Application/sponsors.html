@@ -1,28 +1,33 @@
 #{extends 'main.html' /}
 #{set title:'Sponsors' /}
 
-#{if user}
-	<a href="@{Sponsors.blank()}">add</a>
-	<br/>
-#{/if}
-
-<div class="alert alert-info" role="alert">
- <a href="mailto:info@rivieradev.fr">Contactez-nous</a> si vous souhaitez aider Riviera DEV en
-devenant sponsor.
+<div class="page-title-container parallax parallax-page parallax-page-sponsors">
+	<h1 class="title page-title">Sponsors</h1>
 </div>
 
-<p>
-Les sponsors suivants nous aident à organiser Riviera DEV. Merci à eux !
-</p>
+<div class="container page-container">
 
-#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Gold}, title: "Sponsors or" /}
+	<div class="text-center">
+		<p>
+			Les sponsors nous aident à organiser Riviera DEV. Sans eux rien ne serrait possible ! Merci !
+		</p>
+		<p>
+			Pour devenir sponsor du Riviera DEV, contactez-nous par mail à <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
+		</p>
+	</div>
 
-#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Silver}, title: "Sponsors argent"  /}
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Gold}, title: "Or", level: "or"/}
 
-#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Lanyard}, title: "Sponsors tour-de-cou"  /}
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Silver}, title: "Argent", level: "argent"/}
 
-#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Buffet}, title: "Sponsors buffet"  /}
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Bronze}, title: "Bronze", level: "bronze"/}
 
-#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Apero}, title: "Sponsors apéro"  /}
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Lanyard}, title: "Sponsors tour-de-cou", level:"lanyard"/}
 
-#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Breakfast}, title: "Sponsors petit-déjeuner"  /}
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Buffet}, title: "Sponsors buffet", level:"buffet" /}
+
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Apero}, title: "Sponsors apéro", level:"apero"/}
+
+	#{sponsors sponsors: sponsors.findAll {it.level == models.SponsorShip.Breakfast}, title: "Sponsors petit-déjeuner", level:"breakfast" /}
+
+</div>

@@ -1,43 +1,23 @@
 #{if !_sponsors.empty}
-<h1>${_title}</h1>
-
-<table class="sponsors lines">
-    <tbody>
-        #{list items: _sponsors, as: 'sponsor'}
-            <tr class="${sponsor_isLast ? 'last' : ''}">
-                <td id="${sponsor.company.slugify()}">
-                    #{if sponsor.companyURL}
-                        <a href="${sponsor.companyURL}">
-                    #{/if}
-                    <img src="@{Application.sponsorLogo(sponsor.id)}" 
-                     width="${sponsor.getWidth(20000, 200)}px" height="${sponsor.getHeight(20000, 200)}px"/>
-                    #{if sponsor.companyURL}
-                        </a>
-                    #{/if}
-                </td>
-                <td>
-                    <span class="sponsor">
-                        #{if sponsor.companyURL}
-                            <a href="${sponsor.companyURL}">
-                        #{/if}
-                        ${sponsor.company}
-                        #{if sponsor.companyURL}
-                            </a>
-                        #{/if}
-                    </span>
-                    <br/>
-                    #{if user}
-                        <a href="@{Sponsors.show(sponsor.id)}">edit</a>
-                        <br/>
-                    #{/if}
-                    ${sponsor.about?.md()}
-                    #{if sponsor.twitterAccount}
-                        <br/>
-                        <span class="label">Twitter:</span> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
-                    #{/if}
-                </td>
-            </tr>
-        #{/list}
-    </tbody>
-</table>
+<div class="sponsors">
+    <div class="sponsors-${_level}">
+        <div class="sponsors-title sponsors-title-${_level}">${_title}</div>
+    </div>
+    #{list items: _sponsors, as: 'sponsor'}
+        <div class="row sponsor-description">
+            <div class="col-sm-4 col-md-3 text-center">
+                <a class="sponsor" href="${sponsor.companyURL}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
+            </div>
+            <div class="col-sm-8 col-md-9 sponsor-description-about">
+                <div>${sponsor.about?.md()}</div>
+                #{if sponsor.companyURL}
+                <div><i class="fa fa-globe" aria-hidden="true"></i> <a href="${sponsor.companyURL}" title="${sponsor.company}">${sponsor.companyURL}</a></div>
+                #{/if}
+                #{if sponsor.twitterAccount}
+                <div><i class="fa fa-twitter" aria-hidden="true"></i> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a></div>
+                #{/if}
+            </div>
+        </div>
+    #{/list}
+</div>
 #{/if}

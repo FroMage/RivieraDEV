@@ -156,6 +156,9 @@ li a.navbar-animated-link {
 .parallax-page-subscribe {
   background-image: url("../images/speakers_parallax.jpg");
 }
+.parallax-page-sponsors {
+  background-image: url("../images/speakers_parallax.jpg");
+}
 .parallax-title {
   text-align: center;
   color: white;
@@ -345,9 +348,6 @@ li a.navbar-animated-link {
   margin-top: 3em;
 }
 
-.sponsors {
-  text-align: center;
-}
 .sponsors-header {
   background-color: rgba(255, 255, 255, 0.7);
 }
@@ -357,6 +357,7 @@ li a.navbar-animated-link {
   padding-bottom: 1.5em;
 }
 .sponsors-title {
+  text-align: center;
   font-family: 'Righteous', cursive;
   text-transform: uppercase;
   font-size: 2.5em;
@@ -417,6 +418,12 @@ li a.navbar-animated-link {
 .sponsor-logo {
   width: 80%;
   vertical-align: middle;
+}
+.sponsor-description {
+  margin-top: 20px;
+}
+.sponsor-description-about {
+  margin-top: 10px;
 }
 
 .footer {
@@ -506,4 +513,10 @@ a.footer-social-google:active {
 }
 .orga-photo {
   width: 100%;
+}
+
+.access-map {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
