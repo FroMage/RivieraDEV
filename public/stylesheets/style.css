@@ -411,7 +411,7 @@ li a.navbar-animated-link {
   padding: 1em;
 }
 
-.sponsor {
+.sponsor-logo {
   width: 200px;
   height: 200px;
   line-height: 200px;
@@ -420,10 +420,19 @@ li a.navbar-animated-link {
   text-align: center;
   border: 1px solid #ddd;
   text-decoration: none;
+  overflow: hidden;
+  transition: all 0.2s;
 }
-.sponsor-logo {
+.sponsor-logo:hover, .sponsor-logo:focus, .sponsor-logo:active {
+  border-color: #bbb;
+}
+.sponsor-logo-img {
   width: 80%;
   vertical-align: middle;
+  transition: all 0.2s;
+}
+.sponsor-logo:hover .sponsor-logo-img, .sponsor-logo:focus .sponsor-logo-img, .sponsor-logo:active .sponsor-logo-img {
+  transform: scale(1.1);
 }
 .sponsor-description {
   margin-top: 20px;

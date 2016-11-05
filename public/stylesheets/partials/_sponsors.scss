@@ -79,21 +79,40 @@
     }
 }
 
-.sponsor{
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
-    display: inline-block;
+.sponsor {
 
-    margin: 10px;
-    
-    text-align:center;
-    border: 1px solid $color-gray-ultralight;
-    text-decoration: none;
+    &-logo {
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        display: inline-block;
 
-    &-logo{
-        width: 80%;
-        vertical-align: middle;
+        margin: 10px;
+        
+        text-align:center;
+        border: 1px solid $color-gray-ultralight;
+        text-decoration: none;
+
+        overflow: hidden;
+        transition: all 0.2s;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: $color-gray;
+        }
+
+        &-img {
+            width: 80%;
+            vertical-align: middle;
+            transition: all 0.2s;
+        }
+
+        &:hover &-img,
+        &:focus &-img,
+        &:active &-img {
+            transform: scale(1.1);
+        }
     }
 
     &-description{
