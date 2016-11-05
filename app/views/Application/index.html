@@ -114,54 +114,19 @@
         <p class="home-subtitle sponsors-header-subtitle container">Sans eux rien ne serait possible !</p>
     </div>
     
-    #{if sponsorsGold != null && sponsorsGold.size() > 0}
-    <div class="sponsors-or">
-        <div class="sponsors-title sponsors-title-or">Or</div>
-        <div class="sponsors-list">
-            #{list items: sponsorsGold, as: 'sponsor'}
-                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
-            #{/list}
-        </div>
-    </div>
-    #{/if}
-    #{if sponsorsSilver != null && sponsorsSilver.size() > 0}
-    <div class="sponsors-argent">
-        <div class="sponsors-title sponsors-title-argent">Argent</div>
-        <div class="sponsors-list">
-            #{list items: sponsorsSilver, as: 'sponsor'}
-                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
-            #{/list}
-        </div>
-    </div>
-    #{/if}
-    #{if sponsorsBronze != null && sponsorsBronze.size() > 0}
-    <div class="sponsors-bronze">
-        <div class="sponsors-title sponsors-title-bronze">Bronze</div>
-        <div class="sponsors-list">
-            #{list items: sponsorsBronze, as: 'sponsor'}
-                <a class="sponsor" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img class="sponsor-logo" src="@{Application.sponsorLogo(sponsor.id)}" /></a>
-            #{/list}
-        </div>
-    </div>
-    #{/if}
-
-	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears, 
-                            sponsorsGold: sponsorsGold, 
-                            sponsorsSilver: sponsorsSilver, 
-                            sponsorsBronze: sponsorsBronze /}
-
+    %{ if (sponsors != null && sponsors.size() > 0) {
+        for (models.SponsorShip sponsorShip : sponsors.keySet()) {
+    }%
+        #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), title: sponsorShip.title, level: sponsorShip.code/}
+    %{
+        }
+    }
+    }%
+    
+	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
+    
     <div class="registration-buttons registration-sponsor">
         <a class="btn btn-primary btn-lg registration-button" href="@{Application.sponsors()}">Devenir sponsor</a>
     </div>
 
 </div>
-
-<!--
-    <div class="monies-box">
- <h3>Sponsors</h3>
- #{list items: sponsors, as: 'sponsor'}
-  <a href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}"><img 
-   src="@{Application.sponsorLogo(sponsor.id)}" width="${sponsor.getWidth(5000, 100)}px" height="${sponsor.getHeight(5000, 100)}px"/></a><br/>
- #{/list}
-</div>
--->

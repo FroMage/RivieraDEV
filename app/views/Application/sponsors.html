@@ -16,27 +16,16 @@
 		</p>
 	</div>
 
-	#{sponsorsByLevel sponsors: sponsorsGold, title: "Or", level: "or"/}
+    %{ if (sponsors != null && sponsors.size() > 0) {
+        for (models.SponsorShip sponsorShip : sponsors.keySet()) {
+    }%
+        #{sponsorsByLevelDetails sponsors: sponsors.get(sponsorShip), title: sponsorShip.title, level: sponsorShip.code/}
+    %{
+        }
+    }
+    }%
 
-	#{sponsorsByLevel sponsors: sponsorsSilver, title: "Argent", level: "argent"/}
 
-	#{sponsorsByLevel sponsors: sponsorsBronze, title: "Bronze", level: "bronze"/}
-
-	<!-- TODO other levels -->
-
-	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Lanyard}, title: "Sponsors tour-de-cou", level:"lanyard"/}
-
-	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Buffet}, title: "Sponsors buffet", level:"buffet" /}
-
-	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Apero}, title: "Sponsors apéro", level:"apero"/}
-
-	#{sponsorsByLevel sponsors: sponsors.findAll {it.level == models.SponsorShip.Breakfast}, title: "Sponsors petit-déjeuner", level:"breakfast" /}
-
-	<!-- /TODO -->
-
-	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears, 
-                            sponsorsGold: sponsorsGold, 
-                            sponsorsSilver: sponsorsSilver, 
-                            sponsorsBronze: sponsorsBronze/}
+	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
 
 </div>

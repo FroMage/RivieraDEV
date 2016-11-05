@@ -387,18 +387,20 @@ li a.navbar-animated-link {
   width: 22.5%;
   margin-left: 1em;
 }
-.sponsors-or {
-  margin-top: 1.5em;
-  position: relative;
+.sponsors-title-or {
   color: #f8a912;
 }
-.sponsors-argent {
-  position: relative;
+.sponsors-title-argent {
   color: #b6b6b6;
 }
-.sponsors-bronze {
-  position: relative;
+.sponsors-title-bronze {
   color: #bd3a13;
+}
+.sponsors-level {
+  position: relative;
+}
+.sponsors-level:first-child {
+  margin-top: 1.5em;
 }
 .sponsors-previous-title {
   font-size: 1.5em;

@@ -47,22 +47,27 @@
         width: 22.5%;
         margin-left: 1em;
     }
-
-    &-or {
-        margin-top: 1.5em;
-        position: relative;
+    
+    &-title-or {
         color: $color-or;
     }
 
-    &-argent{
-        position: relative;
+    &-title-argent {
         color: $color-argent;
     }
 
-    &-bronze{
-        position: relative;
+    &-title-bronze {
         color: $color-bronze;
     }
+
+    &-level {
+        position: relative;
+
+        &:first-child {
+            margin-top: 1.5em;
+        }
+    }
+
 
     &-previous{
         &-title{

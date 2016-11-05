@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import models.News;
 import models.Slot;
@@ -26,19 +27,11 @@ public class Application extends Controller {
     public static void index() {
     	News latestNews = News.latest();
 
-    	List<Sponsor> sponsors = Sponsor.findAll();
-		List<Sponsor> sponsorsGold = Sponsor.find("level", SponsorShip.Gold).fetch();
-		List<Sponsor> sponsorsSilver = Sponsor.find("level", SponsorShip.Silver).fetch();
-		List<Sponsor> sponsorsBronze = Sponsor.find("level", SponsorShip.Bronze).fetch();
-		List<Sponsor> sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
+		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
 
-    	Collections.sort(sponsors);
-		Collections.sort(sponsorsGold);
-		Collections.sort(sponsorsSilver);
-		Collections.sort(sponsorsBronze);
-		Collections.sort(sponsorsPreviousYears);
-
-		render(sponsors, sponsorsPreviousYears, sponsorsGold, sponsorsSilver, sponsorsBronze, latestNews);
+		render(sponsors, sponsorsPreviousYears, latestNews);
     }
 
     public static void news() {
@@ -100,18 +93,12 @@ public class Application extends Controller {
     	render(talk);
     }
 
-    public static void sponsors(){
-		List<Sponsor> sponsorsGold = Sponsor.find("level", SponsorShip.Gold).fetch();
-		List<Sponsor> sponsorsSilver = Sponsor.find("level", SponsorShip.Silver).fetch();
-		List<Sponsor> sponsorsBronze = Sponsor.find("level", SponsorShip.Bronze).fetch();
-		List<Sponsor> sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
-
-		Collections.sort(sponsorsGold);
-		Collections.sort(sponsorsSilver);
-		Collections.sort(sponsorsBronze);
-		Collections.sort(sponsorsPreviousYears);
-
-		render(sponsorsGold, sponsorsSilver, sponsorsBronze, sponsorsPreviousYears);
+    public static void sponsors() {
+		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
+		
+		render(sponsors, sponsorsPreviousYears);
     }
     
     public static void speakerPhoto(Long id){
@@ -131,5 +118,45 @@ public class Application extends Controller {
 	public static void orga() {
 		render();
 	}
+
+
+	private static SponsorsToDisplay getSponsorsToDisplay() {
+		boolean mustDisplaySponsorsPreviousYears = true;
+
+		Map<SponsorShip, List<Sponsor>> sponsors = new TreeMap<SponsorShip, List<Sponsor>>();
+		for(SponsorShip sponsorShip : SponsorShip.values()) {
+			if (sponsorShip != SponsorShip.PreviousYears) {
+				List<Sponsor> sponsorsBySponsorShip = Sponsor.find("level", sponsorShip).fetch();
+				if (sponsorsBySponsorShip != null && sponsorsBySponsorShip.size() > 0) {
+					mustDisplaySponsorsPreviousYears = false;
+					Collections.sort(sponsorsBySponsorShip);
+					sponsors.put(sponsorShip, sponsorsBySponsorShip);
+				}
+			}
+		}
+
+		List<Sponsor> sponsorsPreviousYears = null;
+		if (mustDisplaySponsorsPreviousYears) {
+			sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
+			Collections.sort(sponsorsPreviousYears);
+		}
+
+		return new SponsorsToDisplay(sponsors, sponsorsPreviousYears);
+	}
+
+
+	private static class SponsorsToDisplay {
+		private Map<SponsorShip, List<Sponsor>> sponsors;
+		private List<Sponsor> sponsorsPreviousYears;
+
+		public SponsorsToDisplay(Map<SponsorShip, List<Sponsor>> sponsors, List<Sponsor> sponsorsPreviousYears) {
+			this.sponsors = sponsors;
+			this.sponsorsPreviousYears = sponsorsPreviousYears;
+		}
+
+		public Map<SponsorShip, List<Sponsor>> getSponsors() { return this.sponsors; }
+		public List<Sponsor> getSponsorsPreviousYears() { return this.sponsorsPreviousYears; }
+	}
+
 
 }
