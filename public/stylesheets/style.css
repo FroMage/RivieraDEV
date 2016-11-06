@@ -15,6 +15,16 @@ body {
     padding-bottom: 0;
   }
 }
+.loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../images/Preloader_2.gif) center no-repeat #fff;
+}
+
 .title {
   font-family: 'Raleway', sans-serif;
 }
