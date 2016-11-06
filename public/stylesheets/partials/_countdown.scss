@@ -1,0 +1,68 @@
+
+.countdown {
+    
+    &-parent {
+        position: relative;
+        margin-bottom: ($countdown-height / 2) * $countdown-font-size;
+        padding-bottom: ($countdown-height / 2) * $countdown-font-size;
+    }
+    
+    &, &-bg {
+        position: absolute;
+        font-size: #{$countdown-font-size}em;
+        width: $countdown-width;
+        height: $countdown-height;
+        //right: 2em;
+        // Centers countdown horizontally 
+        left: calc(50% - (#{$countdown-width} / 2));
+        bottom: -1.5em;
+        padding: 0.5em 0.5em;
+        background-color: rgba(35, 35, 35, 0.9);
+        color: #eee;
+    }
+    
+    &-bg {
+        background-color: rgba(35, 35, 35, 0.9);
+        @include filter(blur(10px));
+    }
+
+    &-day, &-hour, &-min, &-sec {
+        display: inline-block;
+        width: 1.75em;
+        height: 2em;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+    
+    &-sec {
+        margin-right: 0;
+    }
+    
+    &-number,
+    &-desc {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+    &-desc {
+        font-size: 0.25em;
+        line-height: 1.5em;
+        color: #bbb;
+    }
+}
+
+
+@media (max-width: $screen-xs-max) {
+    .countdown,
+    .countdown-bg {
+        font-size: 2em;
+    }
+
+    .countdown-parent {
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+    }
+}

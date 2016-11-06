@@ -1,0 +1,13 @@
+
+#{if _sponsorsPreviousYears != null && _sponsorsPreviousYears.size() > 0 }
+<div class="sponsors text-center">
+    <div class="sponsors-previous-title">Ils nous ont fait confiance les années précédentes</div>
+    <div class="sponsors-list">
+        #{list items: _sponsorsPreviousYears, as: 'sponsor'}
+            <a class="sponsor-logo" href="${sponsor.companyURL}" target="_blank" title="${sponsor.company}">
+                <img class="sponsor-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
+            </a>
+        #{/list}
+    </div>
+</div>
+#{/if}

@@ -1,0 +1,82 @@
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-home {
+        background-image: url('../images/header_parallax_2.jpg');
+
+        &-location{
+            background-image: url('../images/location_parallax.jpg');
+            height: 250px;
+        }
+
+        &-sponsors{
+            background-image: url('../images/sponsors_parallax_2.jpg');
+            height: 250px;
+        }
+    }
+
+    &-page {
+        height: auto;
+        font-size: $font-size-title;
+
+        &-about {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-access {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-orga {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-schedule {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-speakers {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-subscribe {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+        &-sponsors {
+            // TODO : choose another photo
+            background-image: url('../images/speakers_parallax.jpg');
+        }
+    }
+
+    &-title {
+        text-align: center;
+        color: white;
+        padding-top: 7em;
+        //@include text-shadow(0px 0px 5px #888);
+
+        &-title {
+            margin-top: 0;
+            font-size: 3em;
+            font-weight: 600;
+        }
+
+        &-subtitle {
+            font-size: 1.5em;
+        }
+    }
+}
+
+
+@media (max-width: $screen-xs-max) {
+
+    .parallax {
+        &-title {
+            padding-top: 1.5em;
+        }
+    }
+
+}

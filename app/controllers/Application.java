@@ -5,11 +5,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import models.News;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
+import models.SponsorShip;
 import models.Talk;
 import models.Track;
 import play.mvc.Before;
@@ -24,9 +26,12 @@ public class Application extends Controller {
 	
     public static void index() {
     	News latestNews = News.latest();
-    	List<Sponsor> sponsors = Sponsor.findAll();
-    	Collections.sort(sponsors);
-        render(sponsors, latestNews);
+
+		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
+
+		render(sponsors, sponsorsPreviousYears, latestNews);
     }
 
     public static void news() {
@@ -72,8 +77,11 @@ public class Application extends Controller {
     }
 
     public static void speakers(){
-    	List<Speaker> speakers = Speaker.find("ORDER BY lastName, firstName").fetch();
-    	render(speakers);
+		// TODO : Récupérer l'année en BD
+		int newRivieraDevYear = 2017;
+    	List<Speaker> speakers = Speaker.find("year = ? ORDER BY lastName, firstName", newRivieraDevYear).fetch();
+		List<Speaker> speakersPreviousYears = Speaker.find("year is null OR year < ? ORDER BY lastName, firstName",newRivieraDevYear).fetch();
+    	render(speakers, speakersPreviousYears);
     }
 
     public static void speaker(Long id){
@@ -88,9 +96,12 @@ public class Application extends Controller {
     	render(talk);
     }
 
-    public static void sponsors(){
-    	List<Sponsor> sponsors = Sponsor.find("ORDER BY company").fetch();
-    	render(sponsors);
+    public static void sponsors() {
+		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
+		
+		render(sponsors, sponsorsPreviousYears);
     }
     
     public static void speakerPhoto(Long id){
@@ -106,4 +117,49 @@ public class Application extends Controller {
     	response.contentType = sponsor.logo.type();
     	renderBinary(sponsor.logo.get());
     }
+
+	public static void orga() {
+		render();
+	}
+
+
+	private static SponsorsToDisplay getSponsorsToDisplay() {
+		boolean mustDisplaySponsorsPreviousYears = true;
+
+		Map<SponsorShip, List<Sponsor>> sponsors = new TreeMap<SponsorShip, List<Sponsor>>();
+		for(SponsorShip sponsorShip : SponsorShip.values()) {
+			if (sponsorShip != SponsorShip.PreviousYears) {
+				List<Sponsor> sponsorsBySponsorShip = Sponsor.find("level", sponsorShip).fetch();
+				if (sponsorsBySponsorShip != null && sponsorsBySponsorShip.size() > 0) {
+					mustDisplaySponsorsPreviousYears = false;
+					Collections.sort(sponsorsBySponsorShip);
+					sponsors.put(sponsorShip, sponsorsBySponsorShip);
+				}
+			}
+		}
+
+		List<Sponsor> sponsorsPreviousYears = null;
+		if (mustDisplaySponsorsPreviousYears) {
+			sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
+			Collections.sort(sponsorsPreviousYears);
+		}
+
+		return new SponsorsToDisplay(sponsors, sponsorsPreviousYears);
+	}
+
+
+	private static class SponsorsToDisplay {
+		private Map<SponsorShip, List<Sponsor>> sponsors;
+		private List<Sponsor> sponsorsPreviousYears;
+
+		public SponsorsToDisplay(Map<SponsorShip, List<Sponsor>> sponsors, List<Sponsor> sponsorsPreviousYears) {
+			this.sponsors = sponsors;
+			this.sponsorsPreviousYears = sponsorsPreviousYears;
+		}
+
+		public Map<SponsorShip, List<Sponsor>> getSponsors() { return this.sponsors; }
+		public List<Sponsor> getSponsorsPreviousYears() { return this.sponsorsPreviousYears; }
+	}
+
+
 }

@@ -1,13 +1,37 @@
 #{extends 'main.html' /}
 #{set title:'Orateurs' /}
 
+<div class="page-title-container parallax parallax-page parallax-page-speakers">
+	<h1 class="title page-title">Orateurs</h1>
+</div>
+
+<div class="container page-container data-unavailable">
+
+	<p>
+		La liste des orateurs n'est pas encore disponible.
+	</p>
+	<p>
+		Abonnez-vous à la newsletter pour être prévenu dès que les orateurs sont connus.
+	</p>
+	#{newsletter /}
+
+</div>
+
+
 #{if user}
-	<a href="@{Speakers.blank()}">add</a>
-	<br/>
+<div class="container page-container text-center">
+	<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
+</div>
+#{/if}
+  
+#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
+	<div class="container text-center">
+		<p class="speakers-previous-title">Ils sont venus chez nous !</p>
+	</div>
+	#{speakers speakers: speakersPreviousYears, enableLink: false/}
 #{/if}
 
-<h1>Orateurs</h1>
-
+<!--
 <table class="lines">
     <thead>
         <tr>
@@ -66,3 +90,4 @@
 		#{/list}
 	</tbody>
 </table>
+-->

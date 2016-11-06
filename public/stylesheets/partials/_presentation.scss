@@ -1,0 +1,23 @@
+.presentation {
+
+    &-introduction {
+        text-align: center;
+    }
+
+    &-item {
+        text-align: center;
+        padding: 2em;
+    }
+
+    &-icon {
+        display: block;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        @include transition(all 0.2s);
+    }
+
+    &-item:hover &-icon {
+        @include transform(scale(1.2));
+    }
+
+}

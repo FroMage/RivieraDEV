@@ -21,6 +21,7 @@ GET     /session/{id}                           Application.talk(id)
 GET     /inscriptions                           Application.subscribe
 GET     /subscribe                              Application.subscribe
 GET     /sponsors                               Application.sponsors
+GET     /orga                                   Application.orga
 
 *		/admin									module:crud
 *		/										module:secure

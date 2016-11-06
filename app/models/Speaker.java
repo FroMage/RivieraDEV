@@ -35,6 +35,10 @@ public class Speaker extends Model {
 	
 	public Blob photo;
 	
+	/* La dernière année à laquelle l'orateur a participé au RivieraDEV */
+	@MaxSize(4)
+	public Integer year;
+
 	@ManyToMany(mappedBy = "speakers")
 	public List<Talk> talks = new ArrayList<Talk>();
 	

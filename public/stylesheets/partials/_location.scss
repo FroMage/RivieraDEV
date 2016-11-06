@@ -1,0 +1,67 @@
+.location {
+
+    &-header{
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &-subtitle {
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 1.5em;;
+    }
+
+    &-map {
+        width: 100%;
+        height: 500px;
+        background: url('../images/map_skema.png') center bottom;
+        background-size: cover;
+        padding-right: 4em;
+
+        @include display-flex;
+        @include flex-direction(column);
+        @include justify-content(center);
+    }
+
+    &-address {
+        background-color: #fff;
+        width: 25em;
+        padding: 2em;
+        margin-left: auto;
+        @include box-shadow(0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16));
+
+        &-title {
+            margin-top: 0;
+        }
+
+        &-line {
+            display: block;
+        }
+    }
+
+    &-details {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: $screen-xs-max) {
+
+    .location {
+
+        &-map {
+            height: auto;
+            padding-right: 0;
+            background-size: auto;
+        }
+
+        &-address {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            @include box-shadow(none);
+        }
+
+    }
+
+}
