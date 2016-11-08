@@ -1,6 +1,6 @@
 #!/bin/sh
 
-APP=rivieradev-2016
+APP=rivieradev-2017
 PLAY_USER=rivieradev
 CLUSTER=
 
