@@ -11,3 +11,4 @@ debian/rivieradev.substvars
 **/prepros.cfg
 **/.DS_Store
 data/attachments/*
+modules
