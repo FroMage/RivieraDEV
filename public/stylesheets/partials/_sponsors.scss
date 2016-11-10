@@ -113,3 +113,50 @@
         }
     }
 }
+
+.sponsorship {
+    color: $color-white;
+    padding: 2em;
+
+    &-title {
+        margin-top: 0;
+    }
+
+    &--gold {
+        background-color: $color-or;
+    }
+
+    &--silver {
+        background-color: $color-argent;
+    }
+
+    &-features {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    &-feature {
+        list-style-type: none;
+        padding: 0 0 0 2em;
+        margin: 1em 0;
+        position: relative;
+
+        i {
+            font-size: 1.8em;
+            width: 1em;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: -0.2em;
+        }
+
+        &--no i {
+            color: $color-white-transparent;
+        }
+    }
+
+    &-price {
+        font-size: 2.5em;
+    }
+
+}

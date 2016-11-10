@@ -53,7 +53,16 @@
                     <li><a class="navbar-animated-link" href="@{Application.subscribe}">Billetterie</a></li>
                     <li><a class="navbar-animated-link" href="@{Application.access}">Informations pratiques</a></li>
                     <li><a class="navbar-animated-link" href="@{Application.orga}">Organisateurs</a></li>
-                    <li><a class="navbar-animated-link" href="@{Application.sponsors}">Sponsors</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Sponsors
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@{Application.sponsors}">Nos sponsors</a></li>
+                            <li><a href="@{Application.becomeSponsor}">Devenir sponsor</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

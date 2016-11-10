@@ -1,8 +1,8 @@
 #{extends 'main.html' /}
-#{set title:'Sponsors' /}
+#{set title:'Nos sponsors' /}
 
 <div class="page-title-container parallax parallax-page parallax-page-sponsors">
-	<h1 class="title page-title">Sponsors</h1>
+	<h1 class="title page-title">Nos sponsors</h1>
 </div>
 
 <div class="container page-container">
@@ -11,9 +11,11 @@
 		<p>
 			Les sponsors nous aident à organiser Riviera DEV. Sans eux rien ne serait possible ! Merci !
 		</p>
-		<p class="sponsors-contactUs">
-			Pour devenir sponsor du Riviera DEV, contactez-nous par mail à <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
-		</p>
+
+		<div class="registration-buttons registration-sponsor">
+			<a class="btn btn-primary btn-lg registration-button" href="@{Application.becomeSponsor()}">Devenir sponsor</a>
+		</div>
+
 	</div>
 
     %{ if (sponsors != null && sponsors.size() > 0) {

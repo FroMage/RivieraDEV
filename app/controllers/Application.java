@@ -104,6 +104,10 @@ public class Application extends Controller {
 		render(sponsors, sponsorsPreviousYears);
     }
     
+	public static void becomeSponsor() {
+		render();
+	}
+
     public static void speakerPhoto(Long id){
     	Speaker speaker = Speaker.findById(id);
     	notFoundIfNull(speaker);
