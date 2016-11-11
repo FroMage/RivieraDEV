@@ -1,16 +1,16 @@
 #{if !_sponsors.empty}
-<div class="sponsors">
-    <div class="sponsors-level">
-        <div class="sponsors-title sponsors-title-${_level}">${_title}</div>
+<div class="partenaires">
+    <div class="partenaires-level">
+        <div class="partenaires-title partenaires-title-${_level}">${_title}</div>
     </div>
     #{list items: _sponsors, as: 'sponsor'}
-        <div class="row sponsor-description">
+        <div class="row partenaire-description">
             <div class="col-sm-4 col-md-3 text-center">
-                <a class="sponsor-logo" href="${sponsor.companyURL}" title="${sponsor.company}">
-                    <img class="sponsor-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
+                <a class="partenaire-logo" href="${sponsor.companyURL}" title="${sponsor.company}">
+                    <img class="partenaire-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
                 </a>
             </div>
-            <div class="col-sm-8 col-md-9 sponsor-description-about">
+            <div class="col-sm-8 col-md-9 partenaire-description-about">
                 <div>${sponsor.about?.md()}</div>
                 #{if sponsor.companyURL}
                 <div><i class="fa fa-globe" aria-hidden="true"></i> <a href="${sponsor.companyURL}" title="${sponsor.company}">${sponsor.companyURL}</a></div>

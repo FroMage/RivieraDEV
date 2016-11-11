@@ -143,7 +143,7 @@ li a.navbar-animated-link {
   background-image: url("../images/location_parallax.jpg");
   height: 250px;
 }
-.parallax-home-sponsors {
+.parallax-home-partenaires {
   background-image: url("../images/sponsors_parallax_2.jpg");
   height: 250px;
 }
@@ -169,7 +169,7 @@ li a.navbar-animated-link {
 .parallax-page-subscribe {
   background-image: url("../images/speakers_parallax.jpg");
 }
-.parallax-page-sponsors {
+.parallax-page-partenaires {
   background-image: url("../images/speakers_parallax.jpg");
 }
 .parallax-title {
@@ -196,7 +196,7 @@ li a.navbar-animated-link {
   margin-bottom: 3em;
   text-align: center;
 }
-.registration-sponsor {
+.registration-partenaire {
   margin-top: 1em;
 }
 .registration-button, .registration-button-active {
@@ -389,15 +389,15 @@ li a.navbar-animated-link {
   font-weight: bold;
 }
 
-.sponsors-header {
+.partenaires-header {
   background-color: rgba(255, 255, 255, 0.7);
 }
-.sponsors-header-subtitle {
+.partenaires-header-subtitle {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 1.5em;
 }
-.sponsors-title {
+.partenaires-title {
   margin: 1em auto 0 auto;
   font-family: 'Righteous', cursive;
   text-align: center;
@@ -411,42 +411,42 @@ li a.navbar-animated-link {
   -webkit-align-items: center;
   align-items: center;
 }
-.sponsors-title-text {
+.partenaires-title-text {
   padding: 0 0.5em;
 }
-.sponsors-title:before, .sponsors-title:after {
+.partenaires-title:before, .partenaires-title:after {
   content: '';
   background-color: #b6b6b6;
   height: 1px;
   flex-grow: 1;
 }
-.sponsors-title-or {
+.partenaires-title-or {
   color: #f8a912;
 }
-.sponsors-title-argent {
+.partenaires-title-argent {
   color: #b6b6b6;
 }
-.sponsors-title-bronze {
+.partenaires-title-bronze {
   color: #bd3a13;
 }
-.sponsors-level {
+.partenaires-level {
   position: relative;
 }
-.sponsors-level:first-child {
+.partenaires-level:first-child {
   margin-top: 1.5em;
 }
-.sponsors-previous-title {
+.partenaires-previous-title {
   font-size: 1.5em;
   margin-bottom: 1.1em;
 }
-.sponsors-contactUs {
+.partenaires-contactUs {
   font-size: 1.5em;
   margin: 2em;
   background-color: #ddd;
   padding: 1em;
 }
 
-.sponsor-logo {
+.partenaire-logo {
   width: 200px;
   height: 200px;
   line-height: 200px;
@@ -458,21 +458,21 @@ li a.navbar-animated-link {
   overflow: hidden;
   transition: all 0.2s;
 }
-.sponsor-logo:hover, .sponsor-logo:focus, .sponsor-logo:active {
+.partenaire-logo:hover, .partenaire-logo:focus, .partenaire-logo:active {
   border-color: #bbb;
 }
-.sponsor-logo-img {
+.partenaire-logo-img {
   width: 80%;
   vertical-align: middle;
   transition: all 0.2s;
 }
-.sponsor-logo:hover .sponsor-logo-img, .sponsor-logo:focus .sponsor-logo-img, .sponsor-logo:active .sponsor-logo-img {
+.partenaire-logo:hover .partenaire-logo-img, .partenaire-logo:focus .partenaire-logo-img, .partenaire-logo:active .partenaire-logo-img {
   transform: scale(1.1);
 }
-.sponsor-description {
+.partenaire-description {
   margin-top: 20px;
 }
-.sponsor-description-about {
+.partenaire-description-about {
   margin-top: 10px;
 }
 
