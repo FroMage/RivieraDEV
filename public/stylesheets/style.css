@@ -78,6 +78,9 @@ body {
   padding-top: 0;
   padding-bottom: 0;
 }
+.navbar-animated-logo img {
+  height: 100%;
+}
 
 li a.navbar-animated-link {
   -moz-transition: all 0.3s;

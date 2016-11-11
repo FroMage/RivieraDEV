@@ -11,6 +11,10 @@
         line-height: $navbar-height;
         padding-top: 0;
         padding-bottom: 0;
+        
+        img {
+            height: 100%;
+        }
     }
 
 }
