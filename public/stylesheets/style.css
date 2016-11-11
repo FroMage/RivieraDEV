@@ -539,10 +539,10 @@ li a.navbar-animated-link {
 .footer-contact {
   margin-top: 3em;
 }
-.footer-social-item {
+.footer-rs-item {
   font-size: 3em;
 }
-.footer-social-item:hover, .footer-social-item:focus, .footer-social-item:active {
+.footer-rs-item:hover, .footer-rs-item:focus, .footer-rs-item:active {
   text-decoration: none;
 }
 .footer-copyright {
@@ -550,25 +550,25 @@ li a.navbar-animated-link {
   font-size: 0.8em;
 }
 
-a.footer-social-item {
+a.footer-rs-item {
   transition: all 0.3s;
 }
 
-a.footer-social-twitter:hover,
-a.footer-social-twitter:focus,
-a.footer-social-twitter:active {
+a.footer-rs-twitter:hover,
+a.footer-rs-twitter:focus,
+a.footer-rs-twitter:active {
   color: #1da1f2;
 }
 
-a.footer-social-facebook:hover,
-a.footer-social-facebook:focus,
-a.footer-social-facebook:active {
+a.footer-rs-facebook:hover,
+a.footer-rs-facebook:focus,
+a.footer-rs-facebook:active {
   color: #3b5998;
 }
 
-a.footer-social-google:hover,
-a.footer-social-google:focus,
-a.footer-social-google:active {
+a.footer-rs-google:hover,
+a.footer-rs-google:focus,
+a.footer-rs-google:active {
   color: #d34836;
 }
 
@@ -580,11 +580,11 @@ a.footer-social-google:active {
   .footer-contact {
     margin-top: 1em;
   }
-  .footer-infos, .footer-menu, .footer-social {
+  .footer-infos, .footer-menu, .footer-rs {
     padding-left: 1em;
     padding-right: 1em;
   }
-  .footer-menu, .footer-social {
+  .footer-menu, .footer-rs {
     margin-top: 2em;
   }
   .footer-copyright {

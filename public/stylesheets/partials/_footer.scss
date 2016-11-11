@@ -30,7 +30,7 @@
         margin-top: 3em;
     }
 
-    &-social {
+    &-rs {
 
         &-item {
             font-size: 3em;
@@ -50,25 +50,25 @@
     }
 }
 
-a.footer-social-item {
+a.footer-rs-item {
     transition: all 0.3s;
 }
 
-a.footer-social-twitter:hover,
-a.footer-social-twitter:focus,
-a.footer-social-twitter:active {
+a.footer-rs-twitter:hover,
+a.footer-rs-twitter:focus,
+a.footer-rs-twitter:active {
     color: #1da1f2;
 }
 
-a.footer-social-facebook:hover,
-a.footer-social-facebook:focus,
-a.footer-social-facebook:active {
+a.footer-rs-facebook:hover,
+a.footer-rs-facebook:focus,
+a.footer-rs-facebook:active {
     color: #3b5998;
 }
 
-a.footer-social-google:hover,
-a.footer-social-google:focus,
-a.footer-social-google:active {
+a.footer-rs-google:hover,
+a.footer-rs-google:focus,
+a.footer-rs-google:active {
     color: #d34836;
 }
 
@@ -84,13 +84,13 @@ a.footer-social-google:active {
 
         &-infos,
         &-menu,
-        &-social {
+        &-rs {
             padding-left: 1em;
             padding-right: 1em;
         }
 
         &-menu,
-        &-social {
+        &-rs {
             margin-top: 2em;
         }
 
