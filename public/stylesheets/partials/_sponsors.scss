@@ -64,9 +64,10 @@
 
     &-contactUs{
         font-size: 1.5em;
-        margin: 2em;
+        margin: 2em 0;
         background-color: $color-gray-ultralight;
         padding: 1em;
+        text-align: center;
     }
 }
 
@@ -115,23 +116,24 @@
 }
 
 .sponsorship {
-    color: $color-white;
     padding: 2em;
 
     &-title {
         margin-top: 0;
+        text-align: center;
     }
 
     &--gold {
         background-color: $color-or;
+        color: $color-white;
     }
 
     &--silver {
         background-color: $color-argent;
+        color: $color-white;
     }
 
     &-features {
-        text-align: left;
         padding-left: 0;
     }
 
@@ -156,7 +158,9 @@
     }
 
     &-price {
+        display: block;
         font-size: 2.5em;
+        text-align: center;
     }
 
 }

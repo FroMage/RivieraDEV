@@ -441,9 +441,10 @@ li a.navbar-animated-link {
 }
 .partenaires-contactUs {
   font-size: 1.5em;
-  margin: 2em;
+  margin: 2em 0;
   background-color: #ddd;
   padding: 1em;
+  text-align: center;
 }
 
 .partenaire-logo {
@@ -477,20 +478,21 @@ li a.navbar-animated-link {
 }
 
 .sponsorship {
-  color: #fff;
   padding: 2em;
 }
 .sponsorship-title {
   margin-top: 0;
+  text-align: center;
 }
 .sponsorship--gold {
   background-color: #f8a912;
+  color: #fff;
 }
 .sponsorship--silver {
   background-color: #b6b6b6;
+  color: #fff;
 }
 .sponsorship-features {
-  text-align: left;
   padding-left: 0;
 }
 .sponsorship-feature {
@@ -511,7 +513,9 @@ li a.navbar-animated-link {
   color: rgba(255, 255, 255, 0.2);
 }
 .sponsorship-price {
+  display: block;
   font-size: 2.5em;
+  text-align: center;
 }
 
 .footer {
