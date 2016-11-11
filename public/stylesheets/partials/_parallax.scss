@@ -5,7 +5,8 @@
     background-size: cover;
 
     &-home {
-        background-image: url('../images/header_parallax_2.jpg');
+        background-image: url('../images/header_parallax_4_flou.jpg');
+        //filter: blur(20px);
 
         &-location{
             background-image: url('../images/location_parallax.jpg');
