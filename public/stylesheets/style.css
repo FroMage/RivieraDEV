@@ -219,6 +219,14 @@ li a.navbar-animated-link {
     margin: 0.2em;
   }
 }
+.countdown {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  /*&-bg {
+      background-color: rgba(35, 35, 35, 0.9);
+      @include filter(blur(10px));
+  }*/
+}
 .countdown-parent {
   position: relative;
   margin-bottom: 6em;
@@ -227,26 +235,31 @@ li a.navbar-animated-link {
 .countdown, .countdown-bg {
   position: absolute;
   font-size: 4em;
-  width: 9.5em;
+  width: 10.5em;
   height: 3em;
-  left: calc(50% - (9.5em / 2));
-  bottom: -1.5em;
+  left: calc(50% - (10.5em / 2));
+  bottom: -1.1em;
   padding: 0.5em 0.5em;
-  background-color: rgba(35, 35, 35, 0.9);
-  color: #eee;
-}
-.countdown-bg {
-  background-color: rgba(35, 35, 35, 0.9);
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
 }
 .countdown-day, .countdown-hour, .countdown-min, .countdown-sec {
   display: inline-block;
-  width: 1.75em;
+  width: 2em;
   height: 2em;
   text-align: center;
   vertical-align: middle;
   margin-right: 0.5em;
+}
+.countdown-day {
+  background-color: rgba(0, 143, 212, 0.8);
+}
+.countdown-hour {
+  background-color: rgba(245, 187, 40, 0.8);
+}
+.countdown-min {
+  background-color: rgba(122, 62, 141, 0.8);
+}
+.countdown-sec {
+  background-color: rgba(58, 152, 74, 0.8);
 }
 .countdown-sec {
   margin-right: 0;
@@ -258,9 +271,11 @@ li a.navbar-animated-link {
   text-align: center;
 }
 .countdown-desc {
-  font-size: 0.25em;
-  line-height: 1.5em;
-  color: #bbb;
+  font-size: 0.27em;
+  line-height: 1.8em;
+}
+.countdown-number {
+  font-family: 'Oswald', sans-serif;
 }
 
 @media (max-width: 767px) {
