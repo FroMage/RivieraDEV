@@ -66,7 +66,7 @@ li.open a.navbar-animated-link {
 ul.dropdown-menu {
     padding: 0;
     border: none;
-    border-radius: 0;
+    @include border-radius(0);
 
     & > li > a {
         color: $color-gray-dark;
