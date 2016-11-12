@@ -317,10 +317,10 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
   padding-top: 0.1em;
 }
 .countdown-day {
-  background-color: rgba(0, 143, 212, 0.8);
+  background-color: rgba(0, 144, 205, 0.8);
 }
 .countdown-hour {
-  background-color: rgba(245, 187, 40, 0.8);
+  background-color: rgba(255, 183, 66, 0.8);
 }
 .countdown-min {
   background-color: rgba(122, 62, 141, 0.8);

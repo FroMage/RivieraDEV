@@ -30,23 +30,19 @@
     }
     
     &-day{
-        //background-color: #008FD4;
-        background-color: rgba(0, 143, 212, 0.8);
+        background-color: $color-blue-transparent;
     }
 
     &-hour{
-        //background-color: #F5BB28;
-        background-color: rgba(245, 187, 40, 0.8);
+        background-color: $color-yellow-transparent;
     }
 
     &-min{
-        //background-color: #7A3E8D;
-        background-color: rgba(122, 62, 141, 0.8);
+        background-color: $color-purple-transparent;
     }
 
     &-sec{
-        //background-color: #3A984A;
-        background-color: rgba(58, 152, 74, 0.8);
+        background-color: $color-green-transparent;
     }
 
     &-sec {
