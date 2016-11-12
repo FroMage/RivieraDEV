@@ -31,8 +31,8 @@ body {
 
 .home-title {
   font-size: 2.5em;
-  margin-top: 0;
-  padding-top: 1.5em;
+  margin-top: 0.5em;
+  padding-top: 0;
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -282,13 +282,6 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 .countdown {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   color: #fff;
-}
-.countdown-parent {
-  position: relative;
-  margin-bottom: 6em;
-  padding-bottom: 6em;
-}
-.countdown, .countdown-bg {
   position: absolute;
   font-size: 4em;
   width: 11.3em;
@@ -296,6 +289,11 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
   left: calc(50% - (11.3em / 2));
   bottom: -1em;
   padding: 0.5em 0.5em;
+}
+.countdown-parent {
+  position: relative;
+  margin-bottom: 4em;
+  padding-bottom: 6em;
 }
 .countdown-day, .countdown-hour, .countdown-min, .countdown-sec {
   display: inline-block;
@@ -345,6 +343,9 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
     margin-bottom: 3em;
     padding-bottom: 3em;
   }
+}
+.presentation {
+  padding-top: 1.5em;
 }
 .presentation-introduction {
   text-align: center;
