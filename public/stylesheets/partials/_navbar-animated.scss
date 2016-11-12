@@ -1,4 +1,5 @@
 .navbar-animated{
+    min-height: $navbar-small-height;
     height: $navbar-height;
     line-height: $navbar-height;
     background: #fff;
@@ -19,13 +20,68 @@
 
 }
 
-// Pour surcharger le selecteur de Bootstrap
-li a.navbar-animated-link{
-    @include transition(all 0.3s);
+// Complicated selectors to override those of Bootstrap
+
+li a.navbar-animated-link {
+    @include transition(height 0.3s);
     height: $navbar-height;
     line-height: $navbar-height;
     padding-top: 0;
     padding-bottom: 0;
+
+    .navbar-default .navbar-nav > & {
+        color: $color-gray-dark;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-black-light;
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-bottom: 4px solid $color-blue;
+    }
+}
+li.open a.navbar-animated-link {
+    border-bottom: 4px solid $color-blue;
+}
+
+.navbar-default .navbar-nav > li.open > a.navbar-animated-link {
+    &:hover,
+    &:focus,
+    &:active {
+        background-image: none;
+        background-color: $color-white;
+    }
+}
+
+.dropdown-caret {
+    font-size: 1.2em;
+    padding-left: 0.2em;
+}
+
+ul.dropdown-menu {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+
+    & > li > a {
+        color: $color-gray-dark;
+        padding: 0.8em 1em;
+        border-left: 4px solid $color-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-image: none;
+            background-color: $color-white;
+            border-color: $color-blue;
+            color: $color-black-light;
+        }
+    }
 }
 
 .navbar-animated-small{
@@ -43,7 +99,29 @@ li a.navbar-animated-link{
     }
 }
 
-// Only on mobile
+// ----- Only on mobile ---------------------------------------------------------------------------
+
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: 100vh;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+
+        .icon-bar {
+            background-color: $color-blue;
+        }
+    }
+
+}
+
+
 @media (max-width: $screen-xs-max) {
 
     body{
@@ -66,9 +144,18 @@ li a.navbar-animated-link{
 
     }
 
-    // Pour surcharger le selecteur de Bootstrap
+    // Complicated selectors to override those of Bootstrap
     li a.navbar-animated-link{
         height: $navbar-small-height;
         line-height: $navbar-small-height;
+        border-left: 4px solid $color-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-bottom: none;
+            border-color: $color-blue;
+        }
     }
+
 }
