@@ -17,23 +17,19 @@
         //right: 2em;
         // Centers countdown horizontally 
         left: calc(50% - (#{$countdown-width} / 2));
-        bottom: -1.1em;
+        bottom: -1em;
         padding: 0.5em 0.5em;
         //background-color: rgba(35, 35, 35, 0.9);
     }
-    
-    /*&-bg {
-        background-color: rgba(35, 35, 35, 0.9);
-        @include filter(blur(10px));
-    }*/
 
     &-day, &-hour, &-min, &-sec {
         display: inline-block;
-        width: 2em;
-        height: 2em;
+        width: 2.2em;
+        height: 2.2em;
         text-align: center;
         vertical-align: middle;
         margin-right: 0.5em;
+        padding-top: 0.1em;
     }
     
     &-day{
