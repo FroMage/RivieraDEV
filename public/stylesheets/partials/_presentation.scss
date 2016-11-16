@@ -1,5 +1,5 @@
 .presentation {
-    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 
     &-introduction {
         text-align: center;
@@ -8,6 +8,7 @@
     &-item {
         text-align: center;
         padding: 2em;
+        border: 1px solid transparent;
     }
 
     &-icon {
@@ -15,10 +16,7 @@
         font-size: 2em;
         margin-bottom: 0.5em;
         @include transition(all 0.2s);
-    }
-
-    &-item:hover &-icon {
-        @include transform(scale(1.2));
+        color: $color-yellow;
     }
 
 }

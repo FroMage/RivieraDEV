@@ -25,24 +25,61 @@ body {
   background: url(../images/Preloader_2.gif) center no-repeat #fff;
 }
 
+.button,
+.button-active {
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+  width: 11em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.1s;
+}
+.button:hover, .button:active, .button:focus,
+.button-active:hover,
+.button-active:active,
+.button-active:focus {
+  background-color: #eee;
+}
+.button.btn-primary,
+.button-active.btn-primary {
+  background-color: #0090CD;
+}
+.button.btn-primary:hover, .button.btn-primary:active, .button.btn-primary:focus,
+.button-active.btn-primary:hover,
+.button-active.btn-primary:active,
+.button-active.btn-primary:focus {
+  background-color: #00709D;
+}
+
 .home-title {
-  font-size: 2.5em;
+  font-size: 2.8em;
   margin-top: 0.5em;
   padding-top: 0;
   margin-bottom: 0.5em;
   text-align: center;
+  color: #0090CD;
+  font-weight: 300;
+}
+.home-subtitle {
+  font-size: 1.1em;
 }
 
 .page-title {
-  height: 3em;
-  line-height: 3em;
+  height: 3.3em;
+  line-height: 3.3em;
   margin: 0;
   padding: 0 1em;
   font-size: 1em;
   background-color: rgba(255, 255, 255, 0.6);
 }
 .page-title-container {
-  font-size: 2.5em;
+  font-size: 2.8em;
 }
 
 .page-container {
@@ -207,7 +244,7 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 }
 .parallax-page {
   height: auto;
-  font-size: 2.5em;
+  font-size: 2.8em;
 }
 .parallax-page-about {
   background-image: url("../images/speakers_parallax.jpg");
@@ -258,28 +295,6 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 }
 .registration-partenaire {
   margin-top: 1em;
-}
-.registration-button, .registration-button-active {
-  background-image: none;
-  border: none;
-  border-radius: 0;
-  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  margin: 0.5em;
-  width: 11em;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  transition: background-color 0.1s;
-}
-.registration-button:hover, .registration-button:active, .registration-button:focus, .registration-button-active:hover, .registration-button-active:active, .registration-button-active:focus {
-  background-color: #eee;
-}
-.registration-button.btn-primary, .registration-button-active.btn-primary {
-  background-color: #0090CD;
-}
-.registration-button.btn-primary:hover, .registration-button.btn-primary:active, .registration-button.btn-primary:focus, .registration-button-active.btn-primary:hover, .registration-button-active.btn-primary:active, .registration-button-active.btn-primary:focus {
-  background-color: #00709D;
 }
 
 @media (max-width: 767px) {
@@ -357,7 +372,7 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
   }
 }
 .presentation {
-  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 .presentation-introduction {
   text-align: center;
@@ -365,6 +380,7 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 .presentation-item {
   text-align: center;
   padding: 2em;
+  border: 1px solid transparent;
 }
 .presentation-icon {
   display: block;
@@ -374,12 +390,7 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-.presentation-item:hover .presentation-icon {
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  color: #FDB742;
 }
 
 .location-header {
