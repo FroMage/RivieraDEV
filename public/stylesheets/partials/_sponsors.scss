@@ -78,14 +78,14 @@
 
     &-logo {
         width: 200px;
-        height: 200px;
-        line-height: 200px;
+        height: 150px;
+        line-height: 150px;
         display: inline-block;
 
         margin: 10px;
         
         text-align:center;
-        border: 1px solid $color-gray-ultralight;
+        border: 1px solid transparent;
         text-decoration: none;
 
         overflow: hidden;
@@ -94,20 +94,16 @@
         &:hover,
         &:focus,
         &:active {
-            border-color: $color-gray;
+            border-color: $color-gray-light;
         }
 
         &-img {
-            width: 80%;
+            max-width: 80%;
+            max-height: 80%;
             vertical-align: middle;
             transition: all 0.2s;
         }
 
-        &:hover &-img,
-        &:focus &-img,
-        &:active &-img {
-            transform: scale(1.1);
-        }
     }
 
     &-description{

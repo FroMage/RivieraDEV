@@ -88,44 +88,55 @@
         <div class="row">
             
             <div class="col-sm-5 footer-infos">
-                <div class="footer-logo">Riviera DEV</div>
+                <div class="footer-logo">
+                    <img src="@{'/public/images/logo_RD_v4.png'}" alt="RivieraDev">
+                </div>
                 <div class="footer-slogan">La conférence du soleil</div>
                 <div class="footer-contact">Contact : info@rivieradev.fr</div>
             </div>
 
-            <div class="col-sm-4 footer-menu">
-                <div class="footer-archives">Archives</div>
-                <ul>
-                    <li><a href="//2016.rivieradev.fr">Édition 2016</a></li>
-                    <li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
-                    <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
-                </ul>
+            <div class="col-sm-4">
 
-                <div class="footer-admin">Espace privé #{if user}[${user}]#{/if}</div>
-                <ul>
-                    #{if user}
-                        <li><a href="@{CRUD.index}">Admin</a></li>
-                        <li><a href="@{Secure.logout}">Logout</a></li>
-                    #{/if}
-                    #{else}
-                        <li><a href="@{Secure.login}">Login</a></li>
-                    #{/else}
-                </ul>
+                <div class="footer-archives">
+                    <h2 class="footer-title">Archives</h2>
+                    <ul class="footer-menu">
+                        <li><a href="//2016.rivieradev.fr">Édition 2016</a></li>
+                        <li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
+                        <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-admin">
+                    <h2 class="footer-title">Espace privé #{if user}[${user}]#{/if}</h2>
+                    <ul class="footer-menu">
+                        #{if user}
+                            <li><a href="@{CRUD.index}">Admin</a></li>
+                            <li><a href="@{Secure.logout}">Logout</a></li>
+                        #{/if}
+                        #{else}
+                            <li><a href="@{Secure.login}">Login</a></li>
+                        #{/else}
+                    </ul>
+                </div>
             </div>
 
             <div class="col-sm-3 footer-rs">
                 <div>Suivez-nous sur</div>
                 <a class="footer-rs-item footer-rs-twitter" href="https://twitter.com/rivieradev">
-                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
                     <span class="sr-only">Twitter</span>
                 </a>
                 <a class="footer-rs-item footer-rs-facebook" href="https://www.facebook.com/RivieraDEVConf/">
-                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
                     <span class="sr-only">Facebook</span>
                 </a>
                 <a class="footer-rs-item footer-rs-google" href="https://plus.google.com/+RivieraJUGPage">
-                    <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
                     <span class="sr-only">Google +</span>
+                </a>
+                <a class="footer-rs-item footer-rs-instagram" href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
                 </a>
                 
             </div>

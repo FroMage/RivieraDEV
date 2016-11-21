@@ -565,26 +565,24 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 
 .partenaire-logo {
   width: 200px;
-  height: 200px;
-  line-height: 200px;
+  height: 150px;
+  line-height: 150px;
   display: inline-block;
   margin: 10px;
   text-align: center;
-  border: 1px solid #eee;
+  border: 1px solid transparent;
   text-decoration: none;
   overflow: hidden;
   transition: all 0.2s;
 }
 .partenaire-logo:hover, .partenaire-logo:focus, .partenaire-logo:active {
-  border-color: #bbb;
+  border-color: #ddd;
 }
 .partenaire-logo-img {
-  width: 80%;
+  max-width: 80%;
+  max-height: 80%;
   vertical-align: middle;
   transition: all 0.2s;
-}
-.partenaire-logo:hover .partenaire-logo-img, .partenaire-logo:focus .partenaire-logo-img, .partenaire-logo:active .partenaire-logo-img {
-  transform: scale(1.1);
 }
 .partenaire-description {
   margin-top: 20px;
@@ -656,11 +654,30 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 .footer-logo {
   font-size: 1.8em;
 }
+.footer-logo img {
+  height: 75px;
+}
 .footer-contact {
-  margin-top: 3em;
+  margin-top: 2em;
+}
+.footer-title {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+.footer-menu {
+  list-style-type: none;
+  padding-left: 1em;
+  font-size: 0.9em;
+}
+.footer-archives {
+  margin-top: 0.5em;
+}
+.footer-rs {
+  margin-top: 0.5em;
 }
 .footer-rs-item {
-  font-size: 3em;
+  font-size: 2em;
 }
 .footer-rs-item:hover, .footer-rs-item:focus, .footer-rs-item:active {
   text-decoration: none;
@@ -671,6 +688,10 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 }
 
 a.footer-rs-item {
+  display: inline-block;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
   transition: all 0.3s;
 }
 
@@ -690,6 +711,12 @@ a.footer-rs-google:hover,
 a.footer-rs-google:focus,
 a.footer-rs-google:active {
   color: #d34836;
+}
+
+a.footer-rs-instagram:hover,
+a.footer-rs-instagram:focus,
+a.footer-rs-instagram:active {
+  color: #E62F65;
 }
 
 @media (max-width: 767px) {

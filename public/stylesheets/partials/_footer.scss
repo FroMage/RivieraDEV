@@ -24,16 +24,37 @@
 
     &-logo {
         font-size: 1.8em;
+
+        & img {
+            height: 75px;
+        }
     }
 
     &-contact {
-        margin-top: 3em;
+        margin-top: 2em;
+    }
+
+    &-title {
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0.2em
+    }
+
+    &-menu {
+        list-style-type: none;
+        padding-left: 1em;
+        font-size: 0.9em;
+    }
+
+    &-archives {
+        margin-top: 0.5em;
     }
 
     &-rs {
+        margin-top: 0.5em;
 
         &-item {
-            font-size: 3em;
+            font-size: 2em;
 
             &:hover,
             &:focus,
@@ -51,6 +72,10 @@
 }
 
 a.footer-rs-item {
+    display: inline-block;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
     transition: all 0.3s;
 }
 
@@ -70,6 +95,12 @@ a.footer-rs-google:hover,
 a.footer-rs-google:focus,
 a.footer-rs-google:active {
     color: #d34836;
+}
+
+a.footer-rs-instagram:hover,
+a.footer-rs-instagram:focus,
+a.footer-rs-instagram:active {
+    color: #E62F65;
 }
 
 @media (max-width: $screen-xs-max) {
