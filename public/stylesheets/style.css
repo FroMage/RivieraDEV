@@ -97,6 +97,14 @@ body {
   font-size: 1.25em;
 }
 
+.diaporama {
+  width: 100%;
+}
+.diaporama-item {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-animated {
   min-height: 50px;
   height: 75px;
