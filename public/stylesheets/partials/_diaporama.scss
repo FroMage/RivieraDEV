@@ -1,6 +1,11 @@
 .diaporama{
     width: 100%;
 
+    &-row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     &-item{
         margin: 0;
         padding: 0;
