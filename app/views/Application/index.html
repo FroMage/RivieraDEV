@@ -61,6 +61,14 @@
 
 </div> <!-- /.presentation -->
 
+#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
+<div class="container speakers">
+    <h2 class="title home-title speakers-title">Nos orateurs</h2>
+    <p class="home-subtitle speakers-previous-subtitle">Ils sont venus chez nous !</p>
+	#{speakers speakers: speakersPreviousYears, enableLink: false/}
+</div>
+#{/if}
+
 <!--
 <div class="parallax parallax-home-location">
 </div>
@@ -87,7 +95,6 @@
 
     </div>
 </div> <!-- /.location -->
-
 
 <div id="newsletter" class="container newsletter">
     <h2 class="title home-title newsletter-title">Get in touch !</h2>
@@ -131,3 +138,4 @@
     </div>
 
 </div>
+
