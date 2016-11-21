@@ -4,7 +4,7 @@ html {
 
 body { 
     padding-top: $navbar-height;
-    padding-bottom: $footer-height + 2em;
+    padding-bottom: $footer-height;
     font-family: 'Open Sans', sans-serif;
     position: relative;
     min-height: 100vh;
@@ -44,7 +44,7 @@ body {
     letter-spacing: 0.5px;
     //border-radius: 3px;
     //border-bottom: 3px solid rgba(0,0,0,0.15);
-    transition: background-color 0.1s;
+    transition: background-color 0.2s;
     
     &:hover,
     &:active,
@@ -63,6 +63,10 @@ body {
     }
 }
 
+.button-large {
+    width: 14.5em;
+}
+
 .home {
     &-title {
         font-size: $font-size-title;
@@ -76,6 +80,7 @@ body {
 
     &-subtitle {
         font-size: $font-size-subtitle;
+        text-align: center;
     }
 }
 

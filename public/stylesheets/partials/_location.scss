@@ -28,7 +28,7 @@
         width: 25em;
         padding: 2em;
         margin-left: auto;
-        @include box-shadow(0 3px 6px rgba(0,0,0,0.23),0 3px 6px rgba(0,0,0,0.16));
+        @include box-shadow(0 3px 6px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.16));
 
         &-title {
             margin-top: 0;

@@ -4,7 +4,7 @@ html {
 
 body {
   padding-top: 75px;
-  padding-bottom: 17em;
+  padding-bottom: 15em;
   font-family: 'Open Sans', sans-serif;
   position: relative;
   min-height: 100vh;
@@ -38,7 +38,7 @@ body {
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background-color 0.1s;
+  transition: background-color 0.2s;
 }
 .button:hover, .button:active, .button:focus,
 .button-active:hover,
@@ -57,6 +57,10 @@ body {
   background-color: #00709D;
 }
 
+.button-large {
+  width: 14.5em;
+}
+
 .home-title {
   font-size: 2.8em;
   margin-top: 0.5em;
@@ -68,6 +72,7 @@ body {
 }
 .home-subtitle {
   font-size: 1.1em;
+  text-align: center;
 }
 
 .page-title {
@@ -453,11 +458,11 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 }
 .newsletter {
   padding-top: 0.5em;
-  margin-bottom: 4em;
-  text-align: center;
+  margin-bottom: 2em;
 }
 .newsletter-form {
-  margin-top: 3em;
+  margin-top: 2em;
+  text-align: center;
 }
 
 .speakers {
@@ -488,8 +493,12 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
   font-weight: bold;
 }
 
-.partenaires-header {
-  background-color: rgba(255, 255, 255, 0.7);
+.partenaires {
+  width: 100%;
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #eee;
 }
 .partenaires-header-subtitle {
   text-align: center;
