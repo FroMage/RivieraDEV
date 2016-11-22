@@ -103,10 +103,13 @@ body {
 .diaporama-row {
   margin-left: 0;
   margin-right: 0;
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 .diaporama-item {
   margin: 0;
-  padding: 1px;
+  padding: 0;
 }
 
 .navbar-animated {
