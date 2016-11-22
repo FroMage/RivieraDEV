@@ -12,3 +12,9 @@ debian/rivieradev.substvars
 **/.DS_Store
 data/attachments/*
 modules
+
+test-data-images/emmanuel-bernard.jpg
+test-data-images/katia-aresti.png
+test-data-images/thomas-Guenoux.jpg
+test-data-images/yacine-rezgui.jpg
+test-data-images/zach-holman.jpg
