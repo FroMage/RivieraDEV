@@ -665,7 +665,15 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
   height: 75px;
 }
 .footer-contact {
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+.footer-contact-deco {
+  color: #FDB742;
+  font-size: 2em;
+  vertical-align: middle;
+}
+.footer-contact-text {
+  vertical-align: sub;
 }
 .footer-title {
   font-size: 1.2em;
@@ -679,6 +687,9 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 }
 .footer-archives {
   margin-top: 0.5em;
+}
+.footer-admin {
+  margin-top: 1em;
 }
 .footer-rs {
   margin-top: 0.5em;

@@ -31,7 +31,18 @@
     }
 
     &-contact {
-        margin-top: 2em;
+        margin-top: 1.5em;
+
+        &-deco {
+            color: $color-yellow;
+            font-size: 2em;
+            vertical-align: middle;
+        }
+
+        &-text {
+            vertical-align: sub; // little hack to align text with {}
+        }
+        
     }
 
     &-title {
@@ -48,6 +59,10 @@
 
     &-archives {
         margin-top: 0.5em;
+    }
+
+    &-admin {
+        margin-top: 1em;
     }
 
     &-rs {
