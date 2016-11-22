@@ -48,6 +48,12 @@ body {
   letter-spacing: 0.5px;
   transition: background-color 0.2s;
 }
+@media (max-width: 767px) {
+  .button,
+  .button-active {
+    font-size: 1.3em;
+  }
+}
 .button:hover, .button:active, .button:focus,
 .button-active:hover,
 .button-active:active,
@@ -525,6 +531,9 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   margin-top: 2em;
   text-align: center;
 }
+.newsletter-form-group {
+  margin-bottom: 0;
+}
 .newsletter-icon {
   font-size: 3.8em;
   padding-bottom: 0.1em;
@@ -536,7 +545,9 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .newsletter-form .newsletter-mail {
   height: 3em;
   width: 22em;
+  max-width: 95%;
   border-radius: 0;
+  display: inline-block;
 }
 
 .speakers {

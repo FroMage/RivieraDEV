@@ -5,6 +5,10 @@
     &-form {
         margin-top: 2em;
         text-align: center;
+
+        &-group {
+            margin-bottom: 0;
+        }
     }
 
     &-icon {
@@ -23,5 +27,17 @@
 .newsletter-form .newsletter-mail {
     height: 3em;
     width: 22em;
+    max-width: 95%;
     border-radius: 0;
+    display: inline-block;
+}
+
+
+// ----- Only on mobile ---------------------------------------------------------------------------
+
+
+@media (max-width: $screen-xs-max) {
+
+
+
 }
