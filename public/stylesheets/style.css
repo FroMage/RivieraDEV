@@ -41,6 +41,7 @@ body {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   margin: 0.5em;
   width: 11em;
+  min-height: 2em;
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -465,6 +466,19 @@ ul.dropdown-menu > li > a:hover, ul.dropdown-menu > li > a:focus, ul.dropdown-me
 .newsletter-form {
   margin-top: 2em;
   text-align: center;
+}
+.newsletter-icon {
+  font-size: 3.8em;
+  padding-bottom: 0.1em;
+  vertical-align: middle;
+  margin-right: 0.3em;
+  color: #FDB742;
+}
+
+.newsletter-form .newsletter-mail {
+  height: 3em;
+  width: 22em;
+  border-radius: 0;
 }
 
 .speakers {
