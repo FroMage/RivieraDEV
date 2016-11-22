@@ -1,4 +1,4 @@
-.navbar-animated{
+.navbar-animated {
     min-height: $navbar-small-height;
     height: $navbar-height;
     line-height: $navbar-height;
@@ -6,7 +6,7 @@
 
     @include transition(all 0.3s);
 
-    &-logo{
+    &-logo {
         @include transition(all 0.3s);
         height: $navbar-height;
         line-height: $navbar-height;
@@ -29,25 +29,41 @@ li a.navbar-animated-link {
     padding-top: 0;
     padding-bottom: 0;
 
-    .navbar-default .navbar-nav > & {
-        color: $color-gray-dark;
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: $color-black-light;
-        }
-    }
-
     &:hover,
     &:focus,
     &:active {
         border-bottom: 4px solid $color-blue;
     }
 }
+
+.navbar-default .navbar-nav > li a.navbar-animated-link {
+    color: $color-gray-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-black-light;
+    }
+}
+
+.navbar-default .navbar-nav > li.active a.navbar-animated-link {
+    background-image: none;
+    background-color: $color-white;
+    border-bottom: 4px solid $color-yellow;
+    @include box-shadow(none);
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $color-blue;
+    }
+}
+
 li.open a.navbar-animated-link {
     border-bottom: 4px solid $color-blue;
 }
+
+
 
 .navbar-default .navbar-nav > li.open > a.navbar-animated-link {
     &:hover,
@@ -67,20 +83,37 @@ ul.dropdown-menu {
     padding: 0;
     border: none;
     @include border-radius(0);
+}
 
-    & > li > a {
-        color: $color-gray-dark;
-        padding: 0.8em 1em;
-        border-left: 4px solid $color-white;
 
-        &:hover,
-        &:focus,
-        &:active {
-            background-image: none;
-            background-color: $color-white;
-            border-color: $color-blue;
-            color: $color-black-light;
-        }
+ul.dropdown-menu > li > a {
+    color: $color-gray-dark;
+    padding: 0.8em 1em;
+    border-left: 4px solid $color-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-image: none;
+        background-color: $color-white;
+        border-color: $color-blue;
+        color: $color-black-light;
+    }
+}
+
+ul.dropdown-menu > li.active > a {
+    background-color: $color-white;
+    border-color: $color-yellow;
+    background-image: none;
+    color: $color-gray-dark;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        background-image: none;
+        background-color: $color-white;
+        border-color: $color-blue;
+        color: $color-black-light;
     }
 }
 
@@ -97,6 +130,12 @@ ul.dropdown-menu {
         height: $navbar-small-height;
         line-height: $navbar-small-height;
     }
+}
+
+.navbar .label-primary {
+    font-size: 100%;
+    padding: 0.6em 1em 0.7em 1em;
+    background-color: $color-yellow;
 }
 
 // ----- Only on mobile ---------------------------------------------------------------------------
@@ -144,7 +183,8 @@ ul.dropdown-menu {
 
     }
 
-    // Complicated selectors to override those of Bootstrap
+    // Complicated selectors to override those of Bootstrap :-(
+
     li a.navbar-animated-link{
         height: $navbar-small-height;
         line-height: $navbar-small-height;
@@ -157,5 +197,32 @@ ul.dropdown-menu {
             border-color: $color-blue;
         }
     }
+
+    .navbar-default .navbar-nav > li.open > a.navbar-animated-link {
+        &:hover,
+        &:focus,
+        &:active {
+            background-image: none;
+            background-color: $color-white;
+        }
+    }
+
+    .navbar .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav > li.active a.navbar-animated-link {
+        background-image: none;
+        background-color: $color-white;
+        border-bottom: none;
+        border-left: 4px solid $color-yellow;
+        color: $color-black-light;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-image: none;
+            background-color: $color-white;
+            border-color: $color-blue;
+            color: $color-black-light;
+        }
+}
 
 }
