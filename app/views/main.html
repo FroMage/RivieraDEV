@@ -10,10 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
+    <!-- Bootstrap has been customized to modify a variable :
+         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
+         (http://getbootstrap.com/customize/) 
+    -->
+    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}" >
+    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}" >
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext" rel="stylesheet">
@@ -175,9 +177,18 @@
 
     <!-- External libs -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <!-- Bootstrap has been customized to modify a variable :
+         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
+         (http://getbootstrap.com/customize/) 
+    -->
+    <script src="@{'/public/bootstrap/3.3.7/js/bootstrap.min.js'}"></script>
+
+    <!-- Countdown -->
     <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
+
+    <!-- Google maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
 
     <!-- Custom JS -->
