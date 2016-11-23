@@ -13,8 +13,7 @@
         padding-bottom: 1.5em;;
     }
 
-    &-map,
-    &-adress-container {
+    &-map{
         width: 100%;
         height: 400px;
     }
@@ -33,10 +32,11 @@
         padding: 2em;
 
         &-sm{
+            position: absolute;
+            top: 4em;
+            right: 4em;
             width: 25em;
             background-color: #fff;
-            @include align-self(flex-end);
-            margin-right: 4em;
             @include box-shadow(0 3px 6px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.16));
         }
 
