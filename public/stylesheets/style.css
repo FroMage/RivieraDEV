@@ -88,10 +88,15 @@ body {
 .page-title {
   color: white;
   height: 3.3em;
-  line-height: 3.3em;
   margin: 0;
   padding: 0 1em;
   font-size: 1em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .page-title-container {
   font-size: 2.8em;

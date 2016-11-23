@@ -101,10 +101,13 @@ body {
 
     color: white;
     height: $font-size-title + 0.5em;
-    line-height: $font-size-title + 0.5em;
     margin: 0;
     padding: 0 1em;
     font-size: 1em;
+
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(center);
 }
 
 .page-container {
