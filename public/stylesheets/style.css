@@ -27,8 +27,7 @@ body {
 
 .title {
   text-align: center;
-  /*color: $color-blue;*/
-  color: white;
+  color: #0090CD;
   font-weight: 300;
 }
 
@@ -87,6 +86,7 @@ body {
 }
 
 .page-title {
+  color: white;
   height: 3.3em;
   line-height: 3.3em;
   margin: 0;
