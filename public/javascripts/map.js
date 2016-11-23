@@ -10,6 +10,7 @@ $(function () {
         
             // Other options for the map, pretty much selfexplanatory
             var mapOptions = {
+                scrollwheel: false,
                 zoom: 16,
                 center: myLatlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
