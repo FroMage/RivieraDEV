@@ -518,6 +518,9 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .location-address-title {
   margin-top: 0;
 }
+.location-address-title-map {
+  font-weight: bold;
+}
 .location-address-line {
   display: block;
 }

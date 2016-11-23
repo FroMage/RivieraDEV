@@ -48,6 +48,10 @@
             margin-top: 0;
         }
 
+        &-title-map{
+            font-weight: bold;
+        }
+
         &-line {
             display: block;
         }
@@ -57,10 +61,5 @@
         margin-top: 2em;
         text-align: center;
     }
-
-}
-
-
-@media (max-width: $screen-sm-max) {
 
 }

@@ -14,13 +14,30 @@ $(function () {
                 center: myLatlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-        
+            
             // Attach a map to the DOM Element, with the defined settings
             var map = new google.maps.Map(element, mapOptions);
+
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<span class="location-address-title-map">SKEMA Business School - Sophia Antipolis</span>'+
+                '<span class="location-address-line">Sophia Antipolis</span>'+
+                '<span class="location-address-line">60 Rue Fedor Dostoïevski</span>'+
+                '<span class="location-address-line">06902 Valbonne</span>'+
+                '<div class="view-link"><a target="_blank" href="https://goo.gl/maps/ruuNcjcupC82"> <span>Voir sur Google&nbsp;Maps</span> </a> </div>'+                
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
 
             var marker = new google.maps.Marker({
                 position: myLatlng,
                 map: map
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
             });
         
         }
