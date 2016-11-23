@@ -676,18 +676,30 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 
 .sponsorship {
   padding: 2em;
+  background-color: #fff;
 }
 .sponsorship-title {
-  margin-top: 0;
   text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
-.sponsorship--gold {
-  background-color: #f8a912;
-  color: #fff;
+.sponsorship--small p {
+  height: 8em;
 }
-.sponsorship--silver {
-  background-color: #b6b6b6;
-  color: #fff;
+.sponsorship-level {
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.sponsorship-level--gold {
+  background-image: url("../images/backgrounds/polygon-05.jpg");
+}
+.sponsorship-level--silver {
+  background-image: url("../images/backgrounds/polygon-02.jpg");
+}
+.sponsorship-level--small {
+  background-image: url("../images/backgrounds/polygon-03.jpg");
 }
 .sponsorship-features {
   padding-left: 0;
@@ -707,7 +719,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   top: -0.2em;
 }
 .sponsorship-feature--no i {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(51, 51, 51, 0.2);
 }
 .sponsorship-price {
   display: block;

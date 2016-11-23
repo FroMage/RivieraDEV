@@ -116,20 +116,36 @@
 
 .sponsorship {
     padding: 2em;
+    background-color: $color-white;
 
     &-title {
-        margin-top: 0;
         text-align: center;
+        font-size: 2em;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 1em;
     }
 
-    &--gold {
-        background-color: $color-or;
-        color: $color-white;
+    // TODO DEGUEU !!!
+    &--small p {
+        height: 8em;
     }
 
-    &--silver {
-        background-color: $color-argent;
-        color: $color-white;
+    &-level {
+        padding: 1em;
+        margin-bottom: 2em;
+
+        &--gold {
+            background-image: url('../images/backgrounds/polygon-05.jpg');
+        }
+
+        &--silver {
+            background-image: url('../images/backgrounds/polygon-02.jpg');
+        }
+
+        &--small {
+            background-image: url('../images/backgrounds/polygon-03.jpg');
+        }
     }
 
     &-features {
@@ -152,7 +168,8 @@
         }
 
         &--no i {
-            color: $color-white-transparent;
+            //color: $color-white-transparent;
+            color: $color-black-transparent;
         }
     }
 
