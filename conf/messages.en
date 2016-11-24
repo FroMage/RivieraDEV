@@ -146,6 +146,10 @@ views.application.becomeSponsor.packs.party.1=The evening with food, local draft
 views.application.becomeSponsor.packs.party.2=Associate your company brand with a chill-out moment, good atmosphere and sharing.
 views.application.becomeSponsor.contact-us=To become a Riviera DEV sponsor, contact us by email at <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
 
+views.application.schedule.title=Program
+views.application.schedule.unavailable=The program is not available yet.
+views.application.schedule.subscribe=Subscribe to the newsletter to be notified when the program is published.
+
 views.application.cfp.title=Call for papers
 views.application.cfp.opens=<strong>CFP opens:</strong> early December
 views.application.cfp.closes=<strong>CFP closes:</strong> end of January
