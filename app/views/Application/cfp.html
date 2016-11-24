@@ -1,8 +1,8 @@
 #{extends 'main.html' /}
-#{set title:'Call For Paper' /}
+#{set title:play.i18n.Messages.get('views.application.cfp.title') /}
 
 <div class="page-title-container parallax parallax-page parallax-page-cfp">
-	<h1 class="title page-title"><span>Appel aux conférenciers<span></h1>
+	<h1 class="title page-title"><span>&{'views.application.cfp.title'}<span></h1>
 </div>
 
 <div class="container page-container">
@@ -15,9 +15,9 @@
             </h1>
 
             <!-- TODO Mettre des dates plus précises -->
-            <p><strong>Ouverture du CFP :</strong> Début décembre</p>
-            <p><strong>Fermeture du CFP :</strong> Fin janvier</p>
-            <p><strong>Annonce du programme :</strong> Fin février</p>
+            <p>&{'views.application.cfp.opens'}</p>
+            <p>&{'views.application.cfp.closes'}</p>
+            <p>&{'views.application.cfp.announce'}</p>
 
         </div>
 
@@ -27,7 +27,9 @@
                 Format
             </h2>
 
-            <p>Chaque talk doit durer 1 heure questions comprises.</p>
+            <p>
+                &{'views.application.cfp.conference.format'}
+            </p>
         </div>
 
     </div>
@@ -35,7 +37,7 @@
     <div class="row">
         <div class="col-xs-12 text-center">
             <a class="btn btn-primary button button-large" href="https://rivieradev.cfp.io/">
-                Proposer un sujet
+                &{'views.application.cfp.propose'}
             </a>
         </div>
     </div>

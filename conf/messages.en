@@ -1,4 +1,162 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+views.main.schedule=Program
+views.main.speakers=Speakers
+views.main.cfp=CFP
+views.main.tickets=Tickets
+views.main.access=Practical information
+views.main.team=Organisers
+views.main.sponsors=Sponsors
+views.main.sponsors.list=Our sponsors
+views.main.sponsors.join=Become sponsor
+views.main.language=Language
+views.main.language.fr=Français
+views.main.language.en=English
+views.main.contact=Contact:
+views.main.archives=Archives
+views.main.editions.2016=2016 Edition
+views.main.editions.2015=2015 Edition
+views.main.editions.2011=2011 Edition
+views.main.private=Private space
+views.main.follow=Follow us on
+
+views.application.index.title=Welcome
 views.application.index.subtitle=May 11-12 2017 in Sophia-Antipolis
+views.application.index.tickets=Tickets
+views.application.index.sponsors=Our Sponsors
+views.application.index.sponsors.tagline=Without them, none of this would be possible!
+views.application.index.sponsors.join=Become sponsor
+views.application.index.intro.1=Riviera DEV, that's <strong>2 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
+views.application.index.intro.2=in the heart of Sophia-Antipolis, <strong>the most beautiful European technopole</strong>.
+views.application.index.points.1=A conference for developpers, but not only
+views.application.index.points.2=A mix of technologies: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...
+views.application.index.points.3=The ideal conference to update your skills in a rapidly evolving field
+views.application.index.points.4=A chance to meet and share with other people from the industry
+views.application.index.points.5=An evening to share with <i>apéritif</i>, live music and local beer
+views.application.index.points.6=Thanks to our sponsors, a very reasonable price including food and evening
+views.application.index.address=Address
+views.application.index.access=How to get there
+views.application.index.get-in-touch=Get in touch!
+views.application.index.follow=Follow Riviera DEV 2017: sale date, new speakers, new talks…
+views.application.index.speakers=Our speakers
+views.application.index.speakers.tagline=They were here!
+
+views.application.speakers.title=Speakers
+views.application.speakers.unavailable=The speaker list is not available yet.
+views.application.speakers.subscribe=Subscribe to the newsletter to be notified when the speaker list is published.
+
+views.application.subscribe.title=Tickets
+views.application.subscribe.unavailable=Registration is not open yet.
+views.application.subscribe.subscribe=Subscribe to the newsletter to be notified when registration opens.
+
+views.application.access.title=Practical information
+views.application.access.in-sophia.1=In Sophia-Antipolis
+views.application.access.in-sophia.2=Meet at the <strong>Skema Business School</strong>, in the heart of Sophia-Antipolis.
+views.application.access.dates.1=May 11th-12th 2017
+views.application.access.dates.2=Riviera DEV takes place mid-May when the weather turns back to gorgeous.
+views.application.access.car.title=Coming by car
+views.application.access.car.from.cannes.1=<strong>Coming from Cannes</strong>: on the A8 highway, take the 44th exit "Antibes/Sophia Antipolis".
+views.application.access.car.from.cannes.2=After the toll, turn right "direction Sophia Antipolis" (D35).
+views.application.access.car.from.nice.1=<strong>Coming from Nice</strong>: on the A8 highway take the 44th exit "Antibes/Sophia Antipolis".
+views.application.access.car.from.nice.2=After the toll, turn left "direction antibes" (D535).
+views.application.access.car.from.nice.3=After a large curb, turn right in the direction of "Grasse-Vallauris" (route de Grasse).
+views.application.access.car.from.nice.4=Go straight (approximately 1.4 km), you will arrive on the Parc road.
+views.application.access.car.from.nice.5=Go straight then turn right on "accès 3 les lucioles". You are on the Albert Einstein road.
+views.application.access.car.skema.1=SKEMA Business School: Take the first right (rue Ludwig Van Beethoven) and the first right again (rue Dostoïevski).
+views.application.access.car.skema.2=The entrance to SKEMA is at N°60 on your right.
+views.application.access.car.skema.3=SKEMA Bachelor: Once on the rue Albert Einstein, the entrance to Bachelor is on your left.
+views.application.access.train.title=Coming by train
+views.application.access.train.station.to.1=The nearest train station to Sophia Antipolis is that of <strong>Antibes</strong>.
+views.application.access.train.station.to.2=Depending on your departing train station, check the timetables: 
+views.application.access.train.station.to.3=for long-distance lines on the <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a> website,
+views.application.access.train.station.to.4=and for regional lines those of <a href="http://www.ter.sncf.com/paca" target="_blank">TER</a>.
+views.application.access.train.station.from.1=Once in the Antibes train station, take the 
+views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">Envibus 100 Express but</a> - Price: 1€.
+views.application.access.train.station.from.3=To reach the bus stop, get out of the station and take the suspended walkway above the tracks.
+views.application.access.train.station.from.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
+views.application.access.bus.title=Coming by bus
+views.application.access.bus.from.antibes.1=From the Antibes train station: you can take 
+views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">the Envibus 100 Express bus</a>
+views.application.access.bus.from.antibes.3=- Price: 1€.
+views.application.access.bus.from.antibes.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
+views.application.access.bus.from.sophia.1=From the Sophia Antipolis municipality: use
+views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" target="_blank">the Envibus network</a>.
+views.application.access.bus.from.elsewhere.1=From other cities : use
+views.application.access.bus.from.elsewhere.2=the regional network of TAM busses (Transports Alpes-Maritimes)
+views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis. 
+views.application.access.plane.title=Coming by plaine
+views.application.access.plane.1=The Nice Côte d'Azur airport
+views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free shuttle to get to Terminal 1.
+views.application.access.plane.3=Take <a href="https://www.departement06.fr/vous-deplacer-en-bus/lignes-et-horaires-3029.html" target="_blank">the 230 bus</a>:
+views.application.access.plane.4=Nice Sophia Express. Beware: the 230 line does not stop in the airport.
+views.application.access.plane.5=The bus stop is at "Aéroport/Promenade" (in front of Terminal 1).
+views.application.access.plane.6=The trip duration is 45 minutes approximately and costs 1.50€. Get out at the "SKEMA" stop.
+views.application.access.plane.7=From Sophia Antipolis, this bus stops at the airport, but only if you notify the driver.
+
+views.application.orga.title=Organisers
+views.application.orga.text.1=Riviera DEV is a conference organised <strong>by developers for developers</strong>.
+views.application.orga.text.2=It started in 2009 (under a different name) by the <strong><a href="http://rivierajug.org/" target="_blank">Riviera JUG</a></strong>.
+views.application.orga.text.3=Every organiser is <strong>an unpaid geek</strong> who works their backs off to craft a formidable conference.
+views.application.orga.contact=You can contact them by email at <strong><a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a></strong>.
+
+views.application.sponsors.title=Our sponsors
+views.application.sponsors.thanks=Sponsors help us organise Riviera DEV. Without them, none of this would be possible! Thanks!
+views.application.sponsors.join=Become sponsor
+
+views.application.becomeSponsor.title=Become sponsor
+views.application.becomeSponsor.why=Why sponsor Riviera DEV&nbsp;?
+views.application.becomeSponsor.reason.1=Riviera DEV is organised by unpaid volunteers whose only motivation is to offer
+views.application.becomeSponsor.reason.2=a quality developer event in Sophia-Antipolis.
+views.application.becomeSponsor.reason.3=For this, we need <strong>you</strong>.
+views.application.becomeSponsor.reason.4=Your participation allows us to rent the rooms, pay travel for speakers,
+views.application.becomeSponsor.reason.5=have great food for every one for two days and organise an evening allowing every attendee, speaker and organiser
+views.application.becomeSponsor.reason.6=to meet, exchange and have a great time.
+views.application.becomeSponsor.reason.7=In return, we thrive to give you maximum visibility, on the
+views.application.becomeSponsor.reason.8=Web but also throughout the event. This is the ideal opportunity
+views.application.becomeSponsor.reason.9=if you're trying to hire developers with a passion for their work,
+views.application.becomeSponsor.reason.10=if you want to push your brand in ground-breaking communities or promote your services.
+views.application.becomeSponsor.packs.title=Our packs
+views.application.becomeSponsor.packs.text=We propose several levels of sponsorship.
+views.application.becomeSponsor.packs.included=Included
+views.application.becomeSponsor.packs.excluded=Non-included
+views.application.becomeSponsor.packs.silver.footer=Your logo in middle size in the website footer
+views.application.becomeSponsor.packs.silver.newsletter=Your logo in middle size in the newsletter
+views.application.becomeSponsor.packs.silver.press-release=Your logo in the Riviera DEV press releases
+views.application.becomeSponsor.packs.silver.page=A dedicated page of your company on our website
+views.application.becomeSponsor.packs.silver.article=A dedicated article before the event on our website, on our mailing-list and our social networks
+views.application.becomeSponsor.packs.silver.program=Your logo in middle size on the printed program at the conference
+views.application.becomeSponsor.packs.silver.banner=Your logo in middle size on the visuals at the conference
+views.application.becomeSponsor.packs.silver.booth=A booth at the conference
+views.application.becomeSponsor.packs.silver.keynote=Your company mentioned by the organisers during the introduction keynote
+views.application.becomeSponsor.packs.gold.footer=Your logo in large size in the website footer
+views.application.becomeSponsor.packs.gold.newsletter=Your logo in large size in the newsletter
+views.application.becomeSponsor.packs.gold.press-release=Your logo in the Riviera DEV press releases
+views.application.becomeSponsor.packs.gold.page=A dedicated page of your company on our website
+views.application.becomeSponsor.packs.gold.article=A dedicated article before the event on our website, on our mailing-list and our social networks
+views.application.becomeSponsor.packs.gold.program=Your logo in large size on the printed program at the conference
+views.application.becomeSponsor.packs.gold.banner=Your logo in large size on the visuals at the conference
+views.application.becomeSponsor.packs.gold.booth=A booth at the conference
+views.application.becomeSponsor.packs.gold.keynote=Your company mentioned by the organisers during the introduction keynote
+views.application.becomeSponsor.packs.food.title=Food pack
+views.application.becomeSponsor.packs.food.1=Breakfasts and lunches under your company brand.
+views.application.becomeSponsor.packs.food.2=Attendees hunger for these moments with amazing local gastronomy.
+views.application.becomeSponsor.packs.party.title=Evening pack
+views.application.becomeSponsor.packs.party.1=The evening with food, local draft beers and concert under your company brand.
+views.application.becomeSponsor.packs.party.2=Associate your company brand with a chill-out moment, good atmosphere and sharing.
+views.application.becomeSponsor.contact-us=To become a Riviera DEV sponsor, contact us by email at <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
+
+views.application.cfp.title=Call for papers
+views.application.cfp.opens=<strong>CFP opens:</strong> early December
+views.application.cfp.closes=<strong>CFP closes:</strong> end of January
+views.application.cfp.announce=<strong>Program announced</strong> mid-February
+views.application.cfp.conference.format=Conference talks last one hour including questions.
+views.application.cfp.propose=Propose a talk
+
+tags.sponsorsPreviousYears.title=They trusted us the previous years
+tags.newsletter.placeholder=Email address
+tags.newsletter.subscribe=Subscribe to the newsletter
+tags.countdown.days=Days
+tags.countdown.hours=Hours
+tags.countdown.minutes=Minutes
+tags.countdown.seconds=Seconds

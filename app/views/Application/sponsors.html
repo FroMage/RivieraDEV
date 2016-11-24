@@ -1,19 +1,19 @@
 #{extends 'main.html' /}
-#{set title:'Nos sponsors' /}
+#{set title:play.i18n.Messages.get('views.application.sponsors.title') /}
 
 <div class="page-title-container">
-	<h1 class="title page-title"><span>Nos sponsors</span></h1>
+	<h1 class="title page-title"><span>&{'views.application.sponsors.title'}</span></h1>
 </div>
 
 <div class="container page-container">
 
 	<div class="text-center">
 		<p>
-			Les sponsors nous aident à organiser Riviera DEV. Sans eux rien ne serait possible ! Merci !
+		    &{'views.application.sponsors.thanks'}
 		</p>
 
 		<div class="registration-buttons registration-partenaire">
-			<a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">Devenir sponsor</a>
+			<a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.sponsors.join'}</a>
 		</div>
 
 	</div>

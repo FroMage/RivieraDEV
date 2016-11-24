@@ -1,18 +1,18 @@
 #{extends 'main.html' /}
-#{set title:'Orateurs' /}
+#{set title:play.i18n.Messages.get('views.application.speakers.title') /}
 
 <div class="page-title-container">
-	<h1 class="title page-title"><span>Orateurs</span></h1>
+	<h1 class="title page-title"><span>&{'views.application.speakers.title'}</span></h1>
 </div>
 
 <div class="container page-container">
 
 	<div class="data-unavailable">
 		<p>
-			La liste des orateurs n'est pas encore disponible.
+			&{'views.application.speakers.unavailable'}
 		</p>
 		<p>
-			Abonnez-vous à la newsletter pour être prévenu dès que les orateurs sont connus.
+		    &{'views.application.speakers.subscribe'}
 		</p>
 	</div>
 
@@ -29,7 +29,7 @@
   
 #{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
 	<div class="container text-center">
-		<p class="speakers-previous-title">Ils sont venus chez nous !</p>
+		<p class="speakers-previous-title">&{'views.application.index.speakers.tagline'}</p>
 	</div>
 	#{speakers speakers: speakersPreviousYears, enableLink: false/}
 #{/if}

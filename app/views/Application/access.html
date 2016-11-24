@@ -1,8 +1,8 @@
 #{extends 'main.html' /}
-#{set title:'Informations pratiques' /}
+#{set title:play.i18n.Messages.get('views.application.access.title') /}
 
 <div class="page-title-container">
-	<h1 class="title page-title"><span>Informations pratiques</span></h1>
+	<h1 class="title page-title"><span>&{'views.application.access.title'}</span></h1>
 </div>
 
 <div class="container">
@@ -13,10 +13,10 @@
 		<div class="col-sm-6 col-md-5 col-md-offset-1">
 			<h3>
 				<i class="fa fa-map-marker" aria-hidden="true"></i>
-				A Sophia-Antipolis
+				&{'views.application.access.in-sophia.1'}
 			</h3>
 			<p>
-				Rendez-vous au <strong>Skema Business School</strong>, en plein coeur de Sophia-Antipolis.
+			    &{'views.application.access.in-sophia.2'}
 			</p>
 			<p>
 				Sophia Antipolis
@@ -24,16 +24,18 @@
 				60 Rue Fedor Dostoïevski
 				<br>
 				06902 Valbonne
+                <br>
+                France
 			</p>
 		</div>
 
 		<div class="col-sm-6 col-md-5">
 			<h3>
 				<i class="fa fa-calendar" aria-hidden="true"></i>
-				Les 11 et 12 mai 2017
+				&{'views.application.access.dates.1'}
 			</h3>
 			<p>
-				Le Riviera DEV se déroulera mi-mai lorsque les beaux jours reviendront.
+                &{'views.application.access.dates.2'}
 			</p>
 		</div>
 	</div>
@@ -45,88 +47,88 @@
 
 	<h3>
 		<i class="fa fa-car" aria-hidden="true"></i>
-		Accès en voiture
+        &{'views.application.access.car.title'}
 	</h3>
 
 	<p>
-		<strong>En provenance de Cannes</strong> : sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis". 
-		Après le péage prendre à droite "direction Sophia Antipolis" (D35).
+        &{'views.application.access.car.from.cannes.1'}
+        &{'views.application.access.car.from.cannes.2'}
 	</p>
 	<p>
-		<strong>En provenance de Nice</strong> : sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis". 
-		Après le péage prendre à gauche "direction antibes" (D535). 
-		Après un grand virage prendre à droite direction "Grasse-Vallauris" (route de grasse). 
-		Continuez tout droit (environ 1,4 km), vous arrivez sur la route du Parc. 
-		Continuez tout droit puis prendre sur votre droite "accès 3 les lucioles". Vous êtes dans la rue Albert Einstein.
+        &{'views.application.access.car.from.nice.1'}
+        &{'views.application.access.car.from.nice.2'}
+        &{'views.application.access.car.from.nice.3'}
+        &{'views.application.access.car.from.nice.4'}
+        &{'views.application.access.car.from.nice.5'}
 	</p>
 
 	<p><strong>TODO : dans quel Skema sera la conf ?</strong></p>
 
 	<p>
-		SKEMA Business School : Prendre ensuite la première à droite (rue Ludwig Van Beethoven) et encore la premiere à droite (rue Dostoïevski). 
-		L'entrée de SKEMA se situe au N°60 sur votre droite. 
+        &{'views.application.access.car.skema.1'}
+        &{'views.application.access.car.skema.2'}
 	</p>
 
 	<p>
-		SKEMA Bachelor : Une fois sur la rue Albert Einstein, l'entrée Bachelors se trouve sur votre gauche.
+        &{'views.application.access.car.skema.3'}
 	</p>
 
 	<h3>
 		<i class="fa fa-train" aria-hidden="true"></i>
-		Accès en train
+        &{'views.application.access.train.title'}
 	</h3>
 
 	<p>
-		La gare SNCF la plus proche de Sophia Antipolis est celle d'<strong>Antibes</strong>. 
-		Selon votre gare de départ, consultez les horaires : 
-		pour les grandes lignes sur le site de la <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a> 
-		et pour les trains régionaux ceux du <a href="http://www.ter.sncf.com/paca" target="_blank">Ter</a>. 
+        &{'views.application.access.train.station.to.1'}
+        &{'views.application.access.train.station.to.2'}
+        &{'views.application.access.train.station.to.3'}
+        &{'views.application.access.train.station.to.4'}
 	</p>
 	<p>
-		Arrivé à la Gare d'Antibes, prendre le 
-		<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">bus Envibus 100 Express</a> - Prix : 1€. 
-		Pour joindre l'arrêt, sortir de la gare et prendre la passerelle piétonne au-dessus des voies. 
-		La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA. 
+        &{'views.application.access.train.station.from.1'}
+        &{'views.application.access.train.station.from.2'}
+        &{'views.application.access.train.station.from.3'}
+        &{'views.application.access.train.station.from.4'}
 	</p>
 
 	<h3>
 		<i class="fa fa-bus" aria-hidden="true"></i>
-		Accès en bus
+        &{'views.application.access.bus.title'}
 	</h3>
 
 	<p>
-		A partir de la gare d'Antibes : vous pouvez prendre 
-		<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">le bus Envibus 100 Express</a>
-		 - Prix : 1€.
-		 La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA.
+        &{'views.application.access.bus.from.antibes.1'}
+        &{'views.application.access.bus.from.antibes.2'}
+        &{'views.application.access.bus.from.antibes.3'}
+        &{'views.application.access.bus.from.antibes.4'}
 	</p>
 	<p>
-		A partir des communes de la Communauté d'Agglomération Sophia Antipolis : utiliser 
-		<a href="http://www.envibus.fr/" target="_blank">le réseau Envibus</a>.
+        &{'views.application.access.bus.from.sophia.1'}
+        &{'views.application.access.bus.from.sophia.2'}
 	</p>
 	<p>
-		A partir des autres communes : utiliser
+        &{'views.application.access.bus.from.elsewhere.1'}
 		<a href="http://www.cg06.fr/fr/servir-les-habitants/deplacements/transport-collectifs/lignes-et-horaires/lignes-et-horaires/" target="_blank">
-			le réseau départemental de bus TAM (Transports Alpes-Maritimes)
+            &{'views.application.access.bus.from.elsewhere.2'}
 		</a>. 
-		La ligne 230 relie l'aéroport de Nice à Sophia Antipolis. 
+        &{'views.application.access.bus.from.elsewhere.3'}
 	</p>
 
 	<h3>
 		<i class="fa fa-plane" aria-hidden="true"></i>
-		Accès en avion
+        &{'views.application.access.plane.title'}
 	</h3>
 
 	<p>
-		<a href="http://www.nice.aeroport.fr/" target="_blank">L'Aéroport Nice Côte d'Azur</a>
-		est situé à 20 km de Sophia Antipolis. Du Terminal 2 de l'aéroport, prendre la navette gratuite pour vous rendre au Terminal 1. 
+		<a href="http://www.nice.aeroport.fr/" target="_blank">&{'views.application.access.plane.1'}</a>
+		&{'views.application.access.plane.2'}
 	</p>
 	<p>
-		Prendre <a href="https://www.departement06.fr/vous-deplacer-en-bus/lignes-et-horaires-3029.html" target="_blank">le Bus 230</a> : 
-		Nice Sophia Express. Attention : la ligne 230 ne passe pas dans l’Aéroport. 
-		La dépose et prise en charge se fait à l'arrêt "Aéroport/Promenade" (face au terminal 1). 
-		Le trajet dure 45 minutes environ et coûte 1,50€. Descendre à l'arrêt  "SKEMA". 
-		Au départ de Sophia Antipolis, ce bus dessert l’Aéroport, uniquement sur demande au chauffeur.
+        &{'views.application.access.plane.3'}
+        &{'views.application.access.plane.4'}
+        &{'views.application.access.plane.5'}
+        &{'views.application.access.plane.6'}
+        &{'views.application.access.plane.7'}
 	</p>
 
 </div> <!-- /.container -->

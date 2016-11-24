@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-#{set title:'Accueil' /}
+#{set title:play.i18n.Messages.get('views.application.index.title') /}
 
 <div class="parallax parallax-home countdown-parent">
     
@@ -9,9 +9,9 @@
     </div>
     
     <div class="registration-buttons">
-        <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">Préinscription</a>
+        <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
         <!--<a class="btn btn-primary btn-lg button" href="#">J'achète ma place</a>-->
-        <a class="btn btn-default btn-lg button" href="@{Application.becomeSponsor()}">Devenir sponsor</a>
+        <a class="btn btn-default btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
     
     <div id="js-countdown" class="countdown"></div>
@@ -24,38 +24,38 @@
 
     <div class="home-subtitle presentation-introduction">
         <p>
-            Le Riviera DEV, c'est <strong>2 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
+            &{'views.application.index.intro.1'}
             <br>
-            en plein cœur de Sophia-Antipolis, <strong>la plus importante technopole d'Europe</strong>.
+            &{'views.application.index.intro.2'}
         </p>
     </div>
 
     <div class="row">
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-terminal presentation-icon" aria-hidden="true"></i>
-            <span>Une conférence orientée développeurs mais pas que</span>
+            <span>&{'views.application.index.points.1'}</span>
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-th presentation-icon" aria-hidden="true"></i>
-            <span>Un mix de technologies : Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...</span>
+            <span>&{'views.application.index.points.2'}</span>
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-graduation-cap presentation-icon" aria-hidden="true"></i>
-            <span>La conférence idéale pour mettre à jour ses connaissances dans un milieu qui évolue sans cesse</span>
+            <span>&{'views.application.index.points.3'}</span>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-comments presentation-icon" aria-hidden="true"></i>
-            <span>L'occasion de rencontrer et de partager avec d'autres personnes qui font le même métier</span>
+            <span>&{'views.application.index.points.4'}</span>
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-star presentation-icon" aria-hidden="true"></i>
-            <span>Une soirée pour échanger avec apéritif, concert et tireuse à bière</span>
+            <span>&{'views.application.index.points.5'}</span>
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-eur presentation-icon" aria-hidden="true"></i>
-            <span>Grâce à nos sponsors, un tarif très raisonnable incluant les déjeuners et la soirée</span>
+            <span>&{'views.application.index.points.6'}</span>
         </div>
     </div>
 
@@ -76,8 +76,8 @@
 
 #{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
 <div class="container speakers">
-    <h2 class="title home-title speakers-title">Nos orateurs</h2>
-    <p class="home-subtitle speakers-previous-subtitle">Ils sont venus chez nous !</p>
+    <h2 class="title home-title speakers-title">&{'views.application.index.speakers'}</h2>
+    <p class="home-subtitle speakers-previous-subtitle">&{'views.application.index.speakers.tagline'}</p>
 	#{speakers speakers: speakersPreviousYears, enableLink: false/}
 </div>
 #{/if}
@@ -94,11 +94,12 @@
     </div>
     -->
     <div class="location-address location-address-xs visible-xs">
-        <h3 class="title location-address-title">Adresse</h3>
+        <h3 class="title location-address-title">&{'views.application.index.address'}</h3>
         <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
         <span class="location-address-line">Sophia Antipolis</span>
         <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
         <span class="location-address-line">06902 Valbonne</span>
+        <span class="location-address-line">France</span>
 
         <div class="location-details">
             <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">Accès</a>
@@ -106,22 +107,23 @@
     </div>
     <div id="location-map" class="location-map"></div>
     <div class="location-address location-address-sm hidden-xs">
-        <h3 class="title location-address-title">Adresse</h3>
+        <h3 class="title location-address-title">&{'views.application.index.address'}</h3>
         <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
         <span class="location-address-line">Sophia Antipolis</span>
         <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
         <span class="location-address-line">06902 Valbonne</span>
+        <span class="location-address-line">France</span>
 
         <div class="location-details">
-            <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">Accès</a>
+            <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
         </div>
     </div>
 </div> <!-- /.location -->
 
 <div id="newsletter" class="container newsletter">
-    <h2 class="title home-title newsletter-title">Get in touch !</h2>
+    <h2 class="title home-title newsletter-title">&{'views.application.index.get-in-touch'}</h2>
     <p class="home-subtitle newsletter-subtitle">
-        Suivez les actualités du Riviera DEV 2017&nbsp;: ouverture des inscriptions, nouveaux speakers, nouvelles conférences, ...
+        &{'views.application.index.follow'}
     </p>
     #{newsletter /}
 </div> <!-- /.newletter -->
@@ -142,8 +144,8 @@
 
 <div class="partenaires container text-center">
     <div class="partenaires-header">
-        <h2 class="title home-title partenaires-header-title container">Nos Sponsors</h2>
-        <p class="home-subtitle partenaires-header-subtitle container">Sans eux rien ne serait possible !</p>
+        <h2 class="title home-title partenaires-header-title container">&{'views.application.index.sponsors'}</h2>
+        <p class="home-subtitle partenaires-header-subtitle container">&{'views.application.index.sponsors.tagline'}</p>
     </div>
     
     %{ if (sponsors != null && sponsors.size() > 0) {
@@ -158,7 +160,7 @@
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
     
     <div class="registration-buttons registration-partenaire">
-        <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">Devenir sponsor</a>
+        <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
 
 </div>

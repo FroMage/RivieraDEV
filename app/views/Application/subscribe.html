@@ -1,18 +1,18 @@
 #{extends 'main.html' /}
-#{set title:'Inscriptions' /}
+#{set title:play.i18n.Messages.get('views.application.subscribe.title') /}
 
 <div class="page-title-container">
-	<h1 class="title page-title"><span>Inscriptions</span></h1>
+	<h1 class="title page-title"><span>&{'views.application.subscribe.title'}</span></h1>
 </div>
 
 <div class="container page-container">
 
 	<div class="data-unavailable">
 		<p>
-			Les inscriptions ne sont pas encore ouvertes.
+            &{'views.application.subscribe.unavailable'}
 		</p>
 		<p>
-			Abonnez-vous à la newsletter pour être prévenu dès que les inscriptions sont ouvertes.
+            &{'views.application.subscribe.subscribe'}
 		</p>
 	</div>
 	

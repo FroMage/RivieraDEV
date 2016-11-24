@@ -1,7 +1,7 @@
 
 #{if _sponsorsPreviousYears != null && _sponsorsPreviousYears.size() > 0 }
 <div class="text-center">
-    <div class="partenaires-previous-title">Ils nous ont fait confiance les années précédentes</div>
+    <div class="partenaires-previous-title">&{'tags.sponsorsPreviousYears.title'}</div>
     <div class="partenaires-list">
         #{list items: _sponsorsPreviousYears, as: 'sponsor'}
             <a class="partenaire-logo" href="${sponsor.companyURL}" target="_blank" title="${sponsor.company}">
