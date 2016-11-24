@@ -14,6 +14,7 @@ import models.Sponsor;
 import models.SponsorShip;
 import models.Talk;
 import models.Track;
+import play.i18n.Lang;
 import play.mvc.Before;
 import play.mvc.Controller;
 
@@ -24,6 +25,16 @@ public class Application extends Controller {
 		renderArgs.put("user", Security.connected());
 	}
 	
+	public static void fr(String url){
+		Lang.change("fr");
+		redirect(url);
+	}
+
+	public static void en(String url){
+		Lang.change("en");
+		redirect(url);
+	}
+
     public static void index() {
     	News latestNews = News.latest();
 

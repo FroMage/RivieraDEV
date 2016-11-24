@@ -1,0 +1,4 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+views.application.index.subtitle=May 11-12 2017 in Sophia-Antipolis
