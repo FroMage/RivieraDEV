@@ -1,25 +1,14 @@
-.registration{
-    &-buttons{
+.registration {
+    &-buttons {
         margin-top: 3em;
         margin-bottom: 3em;
         text-align: center;
     }
 
-    &-sponsor{
+    &-partenaire{
         margin-top: 1em;
     }
 
-    &-button,
-    &-button-active{
-        margin: 0.5em;
-        width: 11em;
-        font-family: 'Raleway', sans-serif;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        border-radius: 3px;
-        border-bottom: 3px solid rgba(0,0,0,0.15);
-        transition: none;
-    }
 }
 
 

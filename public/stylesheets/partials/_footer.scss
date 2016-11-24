@@ -24,16 +24,52 @@
 
     &-logo {
         font-size: 1.8em;
+
+        & img {
+            height: 75px;
+        }
     }
 
     &-contact {
-        margin-top: 3em;
+        margin-top: 1.5em;
+
+        &-deco {
+            color: $color-yellow;
+            font-size: 2em;
+            vertical-align: middle;
+        }
+
+        &-text {
+            vertical-align: sub; // little hack to align text with {}
+        }
+        
     }
 
-    &-social {
+    &-title {
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 0.2em
+    }
+
+    &-menu {
+        list-style-type: none;
+        padding-left: 1em;
+        font-size: 0.9em;
+    }
+
+    &-archives {
+        margin-top: 0.5em;
+    }
+
+    &-admin {
+        margin-top: 1em;
+    }
+
+    &-rs {
+        margin-top: 0.5em;
 
         &-item {
-            font-size: 3em;
+            font-size: 2em;
 
             &:hover,
             &:focus,
@@ -50,26 +86,36 @@
     }
 }
 
-a.footer-social-item {
+a.footer-rs-item {
+    display: inline-block;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
     transition: all 0.3s;
 }
 
-a.footer-social-twitter:hover,
-a.footer-social-twitter:focus,
-a.footer-social-twitter:active {
+a.footer-rs-twitter:hover,
+a.footer-rs-twitter:focus,
+a.footer-rs-twitter:active {
     color: #1da1f2;
 }
 
-a.footer-social-facebook:hover,
-a.footer-social-facebook:focus,
-a.footer-social-facebook:active {
+a.footer-rs-facebook:hover,
+a.footer-rs-facebook:focus,
+a.footer-rs-facebook:active {
     color: #3b5998;
 }
 
-a.footer-social-google:hover,
-a.footer-social-google:focus,
-a.footer-social-google:active {
+a.footer-rs-google:hover,
+a.footer-rs-google:focus,
+a.footer-rs-google:active {
     color: #d34836;
+}
+
+a.footer-rs-instagram:hover,
+a.footer-rs-instagram:focus,
+a.footer-rs-instagram:active {
+    color: #E62F65;
 }
 
 @media (max-width: $screen-xs-max) {
@@ -84,13 +130,13 @@ a.footer-social-google:active {
 
         &-infos,
         &-menu,
-        &-social {
+        &-rs {
             padding-left: 1em;
             padding-right: 1em;
         }
 
         &-menu,
-        &-social {
+        &-rs {
             margin-top: 2em;
         }
 

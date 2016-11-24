@@ -1,18 +1,21 @@
 #{extends 'main.html' /}
 #{set title:'Programme' /}
 
-<div class="page-title-container parallax parallax-page parallax-page-schedule">
-	<h1 class="title page-title">Programme</h1>
+<div class="page-title-container">
+	<h1 class="title page-title"><span>Programme</span></h1>
 </div>
 
-<div class="container page-container data-unavailable">
+<div class="container page-container">
 
-	<p>
-		Le programme n'est pas encore disponible.
-	</p>
-	<p>
-		Abonnez-vous à la newsletter pour être prévenu dès que le programme est disponible.
-	</p>
+	<div class="data-unavailable">
+		<p>
+			Le programme n'est pas encore disponible.
+		</p>
+		<p>
+			Abonnez-vous à la newsletter pour être prévenu dès que le programme est disponible.
+		</p>
+	</div>
+	
 	#{newsletter /}
 
 </div>

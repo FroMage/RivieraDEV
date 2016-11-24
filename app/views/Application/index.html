@@ -9,12 +9,11 @@
     </div>
     
     <div class="registration-buttons">
-        <a class="btn btn-primary btn-lg registration-button" href="@{Application.subscribe()}">Préinscription</a>
-        <!--<a class="btn btn-primary btn-lg registration-button" href="#">J'achète ma place</a>-->
-        <a class="btn btn-default btn-lg registration-button" href="@{Application.sponsors()}">Devenir sponsor</a>
+        <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">Préinscription</a>
+        <!--<a class="btn btn-primary btn-lg button" href="#">J'achète ma place</a>-->
+        <a class="btn btn-default btn-lg button" href="@{Application.becomeSponsor()}">Devenir sponsor</a>
     </div>
-
-    <div class="countdown-bg"></div>
+    
     <div id="js-countdown" class="countdown"></div>
 
 </div> <!-- /.parallax -->
@@ -25,9 +24,9 @@
 
     <div class="home-subtitle presentation-introduction">
         <p>
-            Le Riviera DEV, c'est <strong>2 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>.
+            Le Riviera DEV, c'est <strong>2 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
             <br>
-            En plein cœur de Sophia-Antipolis, <strong>la plus importante technopole d'Europe</strong>.
+            en plein cœur de Sophia-Antipolis, <strong>la plus importante technopole d'Europe</strong>.
         </p>
     </div>
 
@@ -38,7 +37,7 @@
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-th presentation-icon" aria-hidden="true"></i>
-            <span>Avant tout un mix de technologies : Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...</span>
+            <span>Un mix de technologies : Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...</span>
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-graduation-cap presentation-icon" aria-hidden="true"></i>
@@ -56,42 +55,73 @@
         </div>
         <div class="col-sm-4 presentation-item">
             <i class="fa fa-eur presentation-icon" aria-hidden="true"></i>
-            <span>Grâce à nos sponsors, un tarif très raisonnable incluant les déjeuners et la soirée.</span>
+            <span>Grâce à nos sponsors, un tarif très raisonnable incluant les déjeuners et la soirée</span>
         </div>
     </div>
 
 </div> <!-- /.presentation -->
 
+<div class="diaporama">
+    <div class="row diaporama-row">
+        <img src="public/images/RivieraDEV2015-74.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2016-3.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2015-183.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2015-34.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2015-42.jpg" class="col-md-3 hidden-sm col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2016-99.jpg" class="col-md-3 hidden-sm col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2015-26.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
+        <img src="public/images/RivieraDEV2015-88.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
+    </div>
+</div> <!-- ./diaporama -->
+
+#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
+<div class="container speakers">
+    <h2 class="title home-title speakers-title">Nos orateurs</h2>
+    <p class="home-subtitle speakers-previous-subtitle">Ils sont venus chez nous !</p>
+	#{speakers speakers: speakersPreviousYears, enableLink: false/}
+</div>
+#{/if}
+
+<!--
 <div class="parallax parallax-home-location">
 </div>
-
+-->
 <div class="location">
+    <!--
     <div class="location-header">
         <h2 class="title home-title location-title container">C'est par là que ça se passe </h2>
         <p class="home-subtitle location-subtitle container">Rejoignez-nous en plein cœur de Sophia-Antipolis.</p>
     </div>
+    -->
+    <div class="location-address location-address-xs visible-xs">
+        <h3 class="title location-address-title">Adresse</h3>
+        <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
+        <span class="location-address-line">Sophia Antipolis</span>
+        <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
+        <span class="location-address-line">06902 Valbonne</span>
 
-    <div class="location-map">
-        <div class="location-address">
-            <h3 class="title location-address-title">Adresse</h3>
-            <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
-            <span class="location-address-line">Sophia Antipolis</span>
-            <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
-            <span class="location-address-line">06902 Valbonne</span>
-
-            <div class="location-details">
-                <a class="btn btn-default location-details-btn" href="@{Application.access}" role="button">Accès et hébergement</a>
-            </div>
+        <div class="location-details">
+            <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">Accès</a>
         </div>
+    </div>
+    <div id="location-map" class="location-map"></div>
+    <div class="location-address location-address-sm hidden-xs">
+        <h3 class="title location-address-title">Adresse</h3>
+        <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
+        <span class="location-address-line">Sophia Antipolis</span>
+        <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
+        <span class="location-address-line">06902 Valbonne</span>
 
+        <div class="location-details">
+            <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">Accès</a>
+        </div>
     </div>
 </div> <!-- /.location -->
-
 
 <div id="newsletter" class="container newsletter">
     <h2 class="title home-title newsletter-title">Get in touch !</h2>
     <p class="home-subtitle newsletter-subtitle">
-        Suivez les actualités du Riviera DEV 2017 : ouverture des inscriptions, nouveaux speakers, nouvelles conférences, ...
+        Suivez les actualités du Riviera DEV 2017&nbsp;: ouverture des inscriptions, nouveaux speakers, nouvelles conférences, ...
     </p>
     #{newsletter /}
 </div> <!-- /.newletter -->
@@ -105,13 +135,15 @@
 #{/if}
 
 
-<div class="parallax parallax-home-sponsors">
+<!--
+<div class="parallax parallax-home-partenaires">
 </div>
+-->
 
-<div class="sponsors container text-center">
-    <div class="sponsors-header">
-        <h2 class="title home-title sponsors-header-title container">Nos Sponsors</h2>
-        <p class="home-subtitle sponsors-header-subtitle container">Sans eux rien ne serait possible !</p>
+<div class="partenaires container text-center">
+    <div class="partenaires-header">
+        <h2 class="title home-title partenaires-header-title container">Nos Sponsors</h2>
+        <p class="home-subtitle partenaires-header-subtitle container">Sans eux rien ne serait possible !</p>
     </div>
     
     %{ if (sponsors != null && sponsors.size() > 0) {
@@ -125,8 +157,9 @@
     
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
     
-    <div class="registration-buttons registration-sponsor">
-        <a class="btn btn-primary btn-lg registration-button" href="@{Application.sponsors()}">Devenir sponsor</a>
+    <div class="registration-buttons registration-partenaire">
+        <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">Devenir sponsor</a>
     </div>
 
 </div>
+

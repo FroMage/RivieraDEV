@@ -1,40 +1,50 @@
 
 .countdown {
-    
+    @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
+    color: #fff;
+    position: absolute;
+    font-size: #{$countdown-font-size}em;
+    width: $countdown-width;
+    height: $countdown-height;
+    //right: 2em;
+    // Centers countdown horizontally 
+    left: calc(50% - (#{$countdown-width} / 2));
+    bottom: -1em;
+    padding: 0.5em 0.5em;
+    //background-color: rgba(35, 35, 35, 0.9);
+
     &-parent {
         position: relative;
-        margin-bottom: ($countdown-height / 2) * $countdown-font-size;
+        margin-bottom: ($countdown-height / 3) * $countdown-font-size;
         padding-bottom: ($countdown-height / 2) * $countdown-font-size;
-    }
-    
-    &, &-bg {
-        position: absolute;
-        font-size: #{$countdown-font-size}em;
-        width: $countdown-width;
-        height: $countdown-height;
-        //right: 2em;
-        // Centers countdown horizontally 
-        left: calc(50% - (#{$countdown-width} / 2));
-        bottom: -1.5em;
-        padding: 0.5em 0.5em;
-        background-color: rgba(35, 35, 35, 0.9);
-        color: #eee;
-    }
-    
-    &-bg {
-        background-color: rgba(35, 35, 35, 0.9);
-        @include filter(blur(10px));
     }
 
     &-day, &-hour, &-min, &-sec {
         display: inline-block;
-        width: 1.75em;
-        height: 2em;
+        width: 2.2em;
+        height: 2.2em;
         text-align: center;
         vertical-align: middle;
         margin-right: 0.5em;
+        padding-top: 0.1em;
     }
     
+    &-day{
+        background-color: $color-blue-transparent;
+    }
+
+    &-hour{
+        background-color: $color-yellow-transparent;
+    }
+
+    &-min{
+        background-color: $color-purple-transparent;
+    }
+
+    &-sec{
+        background-color: $color-green-transparent;
+    }
+
     &-sec {
         margin-right: 0;
     }
@@ -48,9 +58,12 @@
     }
 
     &-desc {
-        font-size: 0.25em;
-        line-height: 1.5em;
-        color: #bbb;
+        font-size: 0.27em;
+        line-height: 1.8em;
+    }
+
+    &-number{
+        font-family: 'Oswald', sans-serif;
     }
 }
 

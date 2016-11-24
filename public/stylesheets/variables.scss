@@ -1,20 +1,39 @@
 
 $screen-xs-max: 767px;
+$screen-sm-max: 991px;
 
 $navbar-height: 75px;
-$navbar-small-height: 45px;
+$navbar-small-height: 50px;
+
+$color-blue: #0090CD;
+$color-blue-dark: #00709D;
+$color-blue-transparent: rgba(0, 144, 205, 0.8);
+
+$color-yellow: #FDB742;
+$color-yellow-transparent: rgba(255, 183, 66, 0.8);
+
+$color-purple-transparent: rgba(122, 62, 141, 0.8);
+
+$color-green-transparent: rgba(58, 152, 74, 0.8);
+
 
 $color-or: #f8a912;
 $color-argent: #b6b6b6;
 $color-bronze: #bd3a13;
 $color-gray: #bbb;
-$color-gray-ultralight: #ddd;
+$color-gray-dark: #777;
+$color-gray-light: #ddd;
+$color-gray-ultralight: #eee;
 $color-black-light: #333;
+$color-black-transparent: rgba(51, 51, 51, 0.2);
+$color-white: #fff;
+$color-white-transparent: rgba(255, 255, 255, 0.2);
 
-$countdown-width: 9.5em;
+$countdown-width: 11.3em;
 $countdown-height: 3em;
 $countdown-font-size: 4;
 
-$font-size-title: 2.5em;
+$font-size-title: 2.8em;
+$font-size-subtitle: 1.1em;
 
 $footer-height: 15em;

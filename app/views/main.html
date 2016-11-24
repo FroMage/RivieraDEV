@@ -10,13 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
+    <!-- Bootstrap has been customized to modify a variable :
+         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
+         (http://getbootstrap.com/customize/) 
+    -->
+    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}" >
+    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}" >
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
     <!-- Font awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -42,18 +45,48 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand navbar-animated-logo" href="@{Application.index}">Riviera DEV</a>
+                <a class="navbar-brand navbar-animated-logo" href="@{Application.index}">
+                    <img src="@{'/public/images/logo_RD_v4.png'}" alt="RivieraDev">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="navbar-animated-link" href="@{Application.schedule}">Programme</a></li>
-                    <li><a class="navbar-animated-link" href="@{Application.speakers}">Orateurs</a></li>
-                    <li><a class="navbar-animated-link" href="@{Application.subscribe}">Billetterie</a></li>
-                    <li><a class="navbar-animated-link" href="@{Application.access}">Informations pratiques</a></li>
-                    <li><a class="navbar-animated-link" href="@{Application.orga}">Organisateurs</a></li>
-                    <li><a class="navbar-animated-link" href="@{Application.sponsors}">Sponsors</a></li>
+                    <li class="${request.action == 'Application.schedule' ? 'active' : ''}">
+                        <a class="navbar-animated-link" href="@{Application.schedule}">Programme</a>
+                    </li>
+                    <li class="${request.action == 'Application.speakers' ? 'active' : ''}">
+                        <a class="navbar-animated-link" href="@{Application.speakers}">Orateurs</a>
+                    </li>
+                    <li class="${request.action == 'Application.cfp' ? 'active' : ''}">
+                        <a class="navbar-animated-link navbar-link-primary" href="@{Application.cfp}">
+                            <span class="label label-primary">CFP</span>
+                        </a>
+                    </li>
+                    <li class="${request.action == 'Application.subscribe' ? 'active' : ''}">
+                        <a class="navbar-animated-link" href="@{Application.subscribe}">Billetterie</a>
+                    </li>
+                    <li class="${request.action == 'Application.access' ? 'active' : ''}">
+                        <a class="navbar-animated-link" href="@{Application.access}">Informations pratiques</a>
+                    </li>
+                    <li class="${request.action == 'Application.orga' ? 'active' : ''}">
+                        <a class="navbar-animated-link" href="@{Application.orga}">Organisateurs</a>
+                    </li>
+                    <li class="dropdown ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'active' : ''}">
+                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Sponsors
+                            <i class="fa fa-angle-down dropdown-caret" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="${request.action == 'Application.sponsors' ? 'active' : ''}">
+                                <a href="@{Application.sponsors}">Nos sponsors</a>
+                            </li>
+                            <li class="${request.action == 'Application.becomeSponsor' ? 'active' : ''}">
+                                <a href="@{Application.becomeSponsor}">Devenir sponsor</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -64,7 +97,6 @@
 <a class="organiser" href="http://rivierajug.org"><img src="@{'/public/images/rivierajug-header.png'}"/></a>
 <li class="${request.action == 'Application.news' ? 'active' : ''}"><a href="@{Application.news}">Nouvelles</a></li>
 <li class="${request.action == 'Application.talks' ? 'active' : ''}"><a href="@{Application.talks}">Sessions</a></li>
-<li class="${request.action == 'Application.cfp' ? 'active' : ''}"><a href="@{Application.cfp}">CFP</a></li>
 -->
 
     <!-- <div class="container"> -->
@@ -76,44 +108,59 @@
         <div class="row">
             
             <div class="col-sm-5 footer-infos">
-                <div class="footer-logo">Riviera DEV</div>
+                <div class="footer-logo">
+                    <img src="@{'/public/images/logo_RD_v4.png'}" alt="RivieraDev">
+                </div>
                 <div class="footer-slogan">La conférence du soleil</div>
-                <div class="footer-contact">Contact : info@rivieradev.fr</div>
+                <div class="footer-contact">
+                    <span class="footer-contact-deco">{</span>
+                    <span class="footer-contact-text">Contact : info@rivieradev.fr</span>
+                    <span class="footer-contact-deco">}</span>
+                </div>
             </div>
 
-            <div class="col-sm-4 footer-menu">
-                <div class="footer-archives">Archives</div>
-                <ul>
-                    <li><a href="//2016.rivieradev.fr">Édition 2016</a></li>
-                    <li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
-                    <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
-                </ul>
+            <div class="col-sm-4">
 
-                <div class="footer-admin">Espace privé #{if user}[${user}]#{/if}</div>
-                <ul>
-                    #{if user}
-                        <li><a href="@{CRUD.index}">Admin</a></li>
-                        <li><a href="@{Secure.logout}">Logout</a></li>
-                    #{/if}
-                    #{else}
-                        <li><a href="@{Secure.login}">Login</a></li>
-                    #{/else}
-                </ul>
+                <div class="footer-archives">
+                    <h2 class="footer-title">Archives</h2>
+                    <ul class="footer-menu">
+                        <li><a href="//2016.rivieradev.fr">Édition 2016</a></li>
+                        <li><a href="//2015.rivieradev.fr">Édition 2015</a></li>
+                        <li><a href="//2011.rivieradev.fr">Édition 2011</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-admin">
+                    <h2 class="footer-title">Espace privé #{if user}[${user}]#{/if}</h2>
+                    <ul class="footer-menu">
+                        #{if user}
+                            <li><a href="@{CRUD.index}">Admin</a></li>
+                            <li><a href="@{Secure.logout}">Logout</a></li>
+                        #{/if}
+                        #{else}
+                            <li><a href="@{Secure.login}">Login</a></li>
+                        #{/else}
+                    </ul>
+                </div>
             </div>
 
-            <div class="col-sm-3 footer-social">
+            <div class="col-sm-3 footer-rs">
                 <div>Suivez-nous sur</div>
-                <a class="footer-social-item footer-social-twitter" href="https://twitter.com/rivieradev">
-                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                <a class="footer-rs-item footer-rs-twitter" href="https://twitter.com/rivieradev">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
                     <span class="sr-only">Twitter</span>
                 </a>
-                <a class="footer-social-item footer-social-facebook" href="https://www.facebook.com/RivieraDEVConf/">
-                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <a class="footer-rs-item footer-rs-facebook" href="https://www.facebook.com/RivieraDEVConf/">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
                     <span class="sr-only">Facebook</span>
                 </a>
-                <a class="footer-social-item footer-social-google" href="https://plus.google.com/+RivieraJUGPage">
-                    <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                <a class="footer-rs-item footer-rs-google" href="https://plus.google.com/+RivieraJUGPage">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
                     <span class="sr-only">Google +</span>
+                </a>
+                <a class="footer-rs-item footer-rs-instagram" href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
                 </a>
                 
             </div>
@@ -130,13 +177,24 @@
 
     <!-- External libs -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <!-- Bootstrap has been customized to modify a variable :
+         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
+         (http://getbootstrap.com/customize/) 
+    -->
+    <script src="@{'/public/bootstrap/3.3.7/js/bootstrap.min.js'}"></script>
+
+    <!-- Countdown -->
     <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
+
+    <!-- Google maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
 
     <!-- Custom JS -->
     <script src="@{'/public/javascripts/navbar-animated.js'}"></script>
     <script src="@{'/public/javascripts/countdown.js'}"></script>
+    <script src="@{'/public/javascripts/map.js'}"></script>
 
     #{get 'moreScripts' /}
     <script type="text/javascript">

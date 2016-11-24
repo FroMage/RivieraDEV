@@ -30,8 +30,9 @@ public class Application extends Controller {
 		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
 		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
 		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
+		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();
 
-		render(sponsors, sponsorsPreviousYears, latestNews);
+		render(sponsors, sponsorsPreviousYears, speakersPreviousYears, latestNews);
     }
 
     public static void news() {
@@ -77,10 +78,10 @@ public class Application extends Controller {
     }
 
     public static void speakers(){
-		// TODO : Récupérer l'année en BD
-		int newRivieraDevYear = 2017;
+		// TODO : Récupérer l'année en BD ou dans une config
+		int newRivieraDevYear = getRivieraDevYear();
     	List<Speaker> speakers = Speaker.find("year = ? ORDER BY lastName, firstName", newRivieraDevYear).fetch();
-		List<Speaker> speakersPreviousYears = Speaker.find("year is null OR year < ? ORDER BY lastName, firstName",newRivieraDevYear).fetch();
+		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();
     	render(speakers, speakersPreviousYears);
     }
 
@@ -104,6 +105,10 @@ public class Application extends Controller {
 		render(sponsors, sponsorsPreviousYears);
     }
     
+	public static void becomeSponsor() {
+		render();
+	}
+
     public static void speakerPhoto(Long id){
     	Speaker speaker = Speaker.findById(id);
     	notFoundIfNull(speaker);
@@ -122,6 +127,14 @@ public class Application extends Controller {
 		render();
 	}
 
+	private static int getRivieraDevYear(){
+		// TODO : Récupérer l'année en BD ou dans une config
+		return 2017;
+	}
+
+	private static List<Speaker> getSpeakersPreviousYears(){
+		return Speaker.find("year is null OR year < ? ORDER BY lastName, firstName",getRivieraDevYear()).fetch();
+	}
 
 	private static SponsorsToDisplay getSponsorsToDisplay() {
 		boolean mustDisplaySponsorsPreviousYears = true;
@@ -160,6 +173,5 @@ public class Application extends Controller {
 		public Map<SponsorShip, List<Sponsor>> getSponsors() { return this.sponsors; }
 		public List<Sponsor> getSponsorsPreviousYears() { return this.sponsorsPreviousYears; }
 	}
-
 
 }

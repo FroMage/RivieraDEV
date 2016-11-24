@@ -1,4 +1,7 @@
 .location {
+    position: relative;
+
+    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.3));
 
     &-header{
         background-color: rgba(255, 255, 255, 0.7);
@@ -10,27 +13,43 @@
         padding-bottom: 1.5em;;
     }
 
-    &-map {
+    &-map{
         width: 100%;
-        height: 500px;
-        background: url('../images/map_skema.png') center bottom;
-        background-size: cover;
-        padding-right: 4em;
+        height: 400px;
+    }
 
+    &-adress-container {
+        position: absolute;
+        top: 0;
+        left: 0;
         @include display-flex;
         @include flex-direction(column);
         @include justify-content(center);
     }
 
     &-address {
-        background-color: #fff;
-        width: 25em;
+
         padding: 2em;
-        margin-left: auto;
-        @include box-shadow(0 3px 10px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16));
+
+        &-sm{
+            position: absolute;
+            top: 4em;
+            right: 4em;
+            width: 25em;
+            background-color: #fff;
+            @include box-shadow(0 3px 6px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.16));
+        }
+
+        &-xs{
+            width: 100%;
+        }
 
         &-title {
             margin-top: 0;
+        }
+
+        &-title-map{
+            font-weight: bold;
         }
 
         &-line {
@@ -41,27 +60,6 @@
     &-details {
         margin-top: 2em;
         text-align: center;
-    }
-
-}
-
-
-@media (max-width: $screen-xs-max) {
-
-    .location {
-
-        &-map {
-            height: auto;
-            padding-right: 0;
-            background-size: auto;
-        }
-
-        &-address {
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.7);
-            @include box-shadow(none);
-        }
-
     }
 
 }

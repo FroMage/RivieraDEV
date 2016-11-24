@@ -1,27 +1,120 @@
-.navbar-animated{
+.navbar-animated {
+    min-height: $navbar-small-height;
     height: $navbar-height;
     line-height: $navbar-height;
     background: #fff;
 
     @include transition(all 0.3s);
 
-    &-logo{
+    &-logo {
         @include transition(all 0.3s);
         height: $navbar-height;
         line-height: $navbar-height;
         padding-top: 0;
         padding-bottom: 0;
+        
+        img {
+            height: 100%;
+        }
     }
 
 }
 
-// Pour surcharger le selecteur de Bootstrap
-li a.navbar-animated-link{
-    @include transition(all 0.3s);
+// Complicated selectors to override those of Bootstrap
+
+li a.navbar-animated-link {
+    @include transition(height 0.3s);
     height: $navbar-height;
     line-height: $navbar-height;
     padding-top: 0;
     padding-bottom: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-bottom: 4px solid $color-blue;
+    }
+}
+
+.navbar-default .navbar-nav > li a.navbar-animated-link {
+    color: $color-gray-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-black-light;
+    }
+}
+
+.navbar-default .navbar-nav > li.active a.navbar-animated-link {
+    background-image: none;
+    background-color: $color-white;
+    border-bottom: 4px solid $color-yellow;
+    @include box-shadow(none);
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $color-blue;
+    }
+}
+
+li.open a.navbar-animated-link {
+    border-bottom: 4px solid $color-blue;
+}
+
+
+
+.navbar-default .navbar-nav > li.open > a.navbar-animated-link {
+    &:hover,
+    &:focus,
+    &:active {
+        background-image: none;
+        background-color: $color-white;
+    }
+}
+
+.dropdown-caret {
+    font-size: 1.2em;
+    padding-left: 0.2em;
+}
+
+ul.dropdown-menu {
+    padding: 0;
+    border: none;
+    @include border-radius(0);
+}
+
+
+ul.dropdown-menu > li > a {
+    color: $color-gray-dark;
+    padding: 0.8em 1em;
+    border-left: 4px solid $color-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-image: none;
+        background-color: $color-white;
+        border-color: $color-blue;
+        color: $color-black-light;
+    }
+}
+
+ul.dropdown-menu > li.active > a {
+    background-color: $color-white;
+    border-color: $color-yellow;
+    background-image: none;
+    color: $color-gray-dark;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        background-image: none;
+        background-color: $color-white;
+        border-color: $color-blue;
+        color: $color-black-light;
+    }
 }
 
 .navbar-animated-small{
@@ -39,7 +132,35 @@ li a.navbar-animated-link{
     }
 }
 
-// Only on mobile
+.navbar .label-primary {
+    font-size: 100%;
+    padding: 0.6em 1em 0.7em 1em;
+    background-color: $color-yellow;
+}
+
+// ----- Only on mobile ---------------------------------------------------------------------------
+
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: 100vh;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+
+        .icon-bar {
+            background-color: $color-blue;
+        }
+    }
+
+}
+
+
 @media (max-width: $screen-xs-max) {
 
     body{
@@ -62,9 +183,46 @@ li a.navbar-animated-link{
 
     }
 
-    // Pour surcharger le selecteur de Bootstrap
+    // Complicated selectors to override those of Bootstrap :-(
+
     li a.navbar-animated-link{
         height: $navbar-small-height;
         line-height: $navbar-small-height;
+        border-left: 4px solid $color-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-bottom: none;
+            border-color: $color-blue;
+        }
     }
+
+    .navbar-default .navbar-nav > li.open > a.navbar-animated-link {
+        &:hover,
+        &:focus,
+        &:active {
+            background-image: none;
+            background-color: $color-white;
+        }
+    }
+
+    .navbar .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav > li.active a.navbar-animated-link {
+        background-image: none;
+        background-color: $color-white;
+        border-bottom: none;
+        border-left: 4px solid $color-yellow;
+        color: $color-black-light;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-image: none;
+            background-color: $color-white;
+            border-color: $color-blue;
+            color: $color-black-light;
+        }
+}
+
 }

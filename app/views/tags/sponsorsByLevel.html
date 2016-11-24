@@ -1,11 +1,11 @@
 
 #{if _sponsors != null && _sponsors.size() > 0}
-<div class="sponsors-level">
-    <div class="sponsors-title sponsors-title-${_level}"><span class="sponsors-title-text">${_title}</span></div>
-    <div class="sponsors-list">
+<div class="partenaires-level">
+    <div class="partenaires-title partenaires-title-${_level}"><span class="partenaires-title-text">${_title}</span></div>
+    <div class="partenaires-list">
         #{list items: _sponsors, as: 'sponsor'}
-            <a class="sponsor-logo" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}">
-                <img class="sponsor-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
+            <a class="partenaire-logo" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}">
+                <img class="partenaire-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
             </a>
         #{/list}
     </div>
