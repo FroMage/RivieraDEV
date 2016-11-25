@@ -198,13 +198,13 @@
     <!-- Countdown -->
     <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
 
-    <!-- Google maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
-
     <!-- Custom JS -->
     <script src="@{'/public/javascripts/navbar-animated.js'}"></script>
     <script src="@{'/public/javascripts/countdown.js'}"></script>
     <script src="@{'/public/javascripts/map.js'}"></script>
+
+    <!-- Google maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&callback=initMap"></script>
 
     #{get 'moreScripts' /}
     <script type="text/javascript">

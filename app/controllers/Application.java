@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import models.Configuration;
+import models.ConfigurationKey;
 import models.News;
 import models.Slot;
 import models.Speaker;
@@ -36,6 +38,8 @@ public class Application extends Controller {
 	}
 
     public static void index() {
+		String googleMapApiKey = getGoogleMapApiKey();
+
     	News latestNews = News.latest();
 
 		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
@@ -43,7 +47,7 @@ public class Application extends Controller {
 		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
 		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();
 
-		render(sponsors, sponsorsPreviousYears, speakersPreviousYears, latestNews);
+		render(googleMapApiKey, sponsors, sponsorsPreviousYears, speakersPreviousYears, latestNews);
     }
 
     public static void news() {
@@ -171,6 +175,13 @@ public class Application extends Controller {
 		return new SponsorsToDisplay(sponsors, sponsorsPreviousYears);
 	}
 
+    private static String getGoogleMapApiKey(){
+        Configuration config = Configuration.find("key",ConfigurationKey.GOOGLE_MAP_API_KEY).first();
+		if(config != null){
+			return config.value;
+		}
+		return "";
+    }
 
 	private static class SponsorsToDisplay {
 		private Map<SponsorShip, List<Sponsor>> sponsors;
