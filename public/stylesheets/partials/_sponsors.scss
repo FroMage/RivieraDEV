@@ -123,11 +123,19 @@
         font-weight: 300;
         margin-top: 0;
         margin-bottom: 1em;
+
+        /*&:after{
+            content: '';
+            width: 90px;
+            height: 90px;
+            background-repeat: no-repeat;
+            display: block;
+            margin: 0.5em auto 0 auto;
+        }*/
     }
 
-    // TODO DEGUEU !!!
-    &--small p {
-        height: 8em;
+    &-levels--small {
+        margin-top: 3em;
     }
 
     &-level {
@@ -136,15 +144,40 @@
 
         &--gold {
             background-image: url('../images/backgrounds/polygon-05.jpg');
+            & .sponsorship-title:after{
+                //background-image: url('../images/icons/airplane.svg');
+            }
         }
 
         &--silver {
             background-image: url('../images/backgrounds/polygon-02.jpg');
+            & .sponsorship-title:after{
+                //background-image: url('../images/icons/paper-plane.svg');
+            }
+        }
+
+        &--platinum {
+            background-image: url('../images/backgrounds/polygon-04.jpg');
+            & .sponsorship-title:after{
+                //background-image: url('../images/icons/rocket.svg');
+            }
         }
 
         &--small {
             background-image: url('../images/backgrounds/polygon-03.jpg');
         }
+
+        /*&--breakfasts .sponsorship-title:after{
+            background-image: url('../images/icons/croissant.svg');
+        }
+
+        &--lunches .sponsorship-title:after{
+            background-image: url('../images/icons/burger.svg');
+        }
+
+        &--party .sponsorship-title:after{
+            background-image: url('../images/icons/beer.svg');
+        }*/
     }
 
     &-features {
@@ -166,8 +199,7 @@
             top: -0.2em;
         }
 
-        &--no i {
-            //color: $color-white-transparent;
+        &--no {
             color: $color-black-transparent;
         }
     }
@@ -178,4 +210,21 @@
         text-align: center;
     }
 
+    &-available{
+        text-align: center;
+        font-style: italic;
+    }
+
+}
+
+.sold-out:before{
+    content: '';
+    background-image: url(../images/sold_out.png);
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    width: 10em;
+    height: 7em;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

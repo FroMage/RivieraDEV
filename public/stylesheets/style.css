@@ -684,19 +684,41 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 1em;
+  /*&:after{
+      content: '';
+      width: 90px;
+      height: 90px;
+      background-repeat: no-repeat;
+      display: block;
+      margin: 0.5em auto 0 auto;
+  }*/
 }
-.sponsorship--small p {
-  height: 8em;
+.sponsorship-levels--small {
+  margin-top: 3em;
 }
 .sponsorship-level {
   padding: 1em;
   margin-bottom: 2em;
+        /*&--breakfasts .sponsorship-title:after{
+            background-image: url('../images/icons/croissant.svg');
+        }
+
+        &--lunches .sponsorship-title:after{
+            background-image: url('../images/icons/burger.svg');
+        }
+
+        &--party .sponsorship-title:after{
+            background-image: url('../images/icons/beer.svg');
+        }*/
 }
 .sponsorship-level--gold {
   background-image: url("../images/backgrounds/polygon-05.jpg");
 }
 .sponsorship-level--silver {
   background-image: url("../images/backgrounds/polygon-02.jpg");
+}
+.sponsorship-level--platinum {
+  background-image: url("../images/backgrounds/polygon-04.jpg");
 }
 .sponsorship-level--small {
   background-image: url("../images/backgrounds/polygon-03.jpg");
@@ -718,13 +740,29 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   left: 0;
   top: -0.2em;
 }
-.sponsorship-feature--no i {
-  color: rgba(51, 51, 51, 0.2);
+.sponsorship-feature--no {
+  color: rgba(51, 51, 51, 0.4);
 }
 .sponsorship-price {
   display: block;
   font-size: 2.5em;
   text-align: center;
+}
+.sponsorship-available {
+  text-align: center;
+  font-style: italic;
+}
+
+.sold-out:before {
+  content: '';
+  background-image: url(../images/sold_out.png);
+  position: absolute;
+  top: 1em;
+  left: 2em;
+  width: 10em;
+  height: 7em;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .footer {

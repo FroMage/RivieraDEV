@@ -120,30 +120,58 @@ views.application.becomeSponsor.packs.title=Our packs
 views.application.becomeSponsor.packs.text=We propose several levels of sponsorship.
 views.application.becomeSponsor.packs.included=Included
 views.application.becomeSponsor.packs.excluded=Non-included
-views.application.becomeSponsor.packs.silver.footer=Your logo in middle size in the website footer
-views.application.becomeSponsor.packs.silver.newsletter=Your logo in middle size in the newsletter
-views.application.becomeSponsor.packs.silver.press-release=Your logo in the Riviera DEV press releases
-views.application.becomeSponsor.packs.silver.page=A dedicated page of your company on our website
-views.application.becomeSponsor.packs.silver.article=A dedicated article before the event on our website, on our mailing-list and our social networks
-views.application.becomeSponsor.packs.silver.program=Your logo in middle size on the printed program at the conference
-views.application.becomeSponsor.packs.silver.banner=Your logo in middle size on the visuals at the conference
-views.application.becomeSponsor.packs.silver.booth=A booth at the conference
-views.application.becomeSponsor.packs.silver.keynote=Your company mentioned by the organisers during the introduction keynote
-views.application.becomeSponsor.packs.gold.footer=Your logo in large size in the website footer
-views.application.becomeSponsor.packs.gold.newsletter=Your logo in large size in the newsletter
-views.application.becomeSponsor.packs.gold.press-release=Your logo in the Riviera DEV press releases
-views.application.becomeSponsor.packs.gold.page=A dedicated page of your company on our website
-views.application.becomeSponsor.packs.gold.article=A dedicated article before the event on our website, on our mailing-list and our social networks
-views.application.becomeSponsor.packs.gold.program=Your logo in large size on the printed program at the conference
-views.application.becomeSponsor.packs.gold.banner=Your logo in large size on the visuals at the conference
-views.application.becomeSponsor.packs.gold.booth=A booth at the conference
-views.application.becomeSponsor.packs.gold.keynote=Your company mentioned by the organisers during the introduction keynote
-views.application.becomeSponsor.packs.food.title=Food pack
-views.application.becomeSponsor.packs.food.1=Breakfasts and lunches under your company brand.
-views.application.becomeSponsor.packs.food.2=Attendees hunger for these moments with amazing local gastronomy.
-views.application.becomeSponsor.packs.party.title=Evening pack
-views.application.becomeSponsor.packs.party.1=The evening with food, local draft beers and concert under your company brand.
-views.application.becomeSponsor.packs.party.2=Associate your company brand with a chill-out moment, good atmosphere and sharing.
+
+views.application.becomeSponsor.packs.silver.title=Silver Package
+views.application.becomeSponsor.packs.silver.co-branding=<strong>Co-branding:</strong> your brand name associated with Riviera DEV on all media
+views.application.becomeSponsor.packs.silver.track=Ownership of a <strong>branded conference track</strong> (12 talks) <em>– includes the selection of the 12 talks, which we request to be oriented towards software development</em>
+views.application.becomeSponsor.packs.silver.logo=Your <strong>normal-sized logo</strong> on the conference <strong>website, banners, staff <span class='text-nowrap'>t-shirts</span></strong>
+views.application.becomeSponsor.packs.silver.booth=<strong>A booth</strong> in the conference lounge <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.silver.mailing-list=Sponsorship advertised on our <strong>mailing-list</strong> and the <strong>social media</strong>
+views.application.becomeSponsor.packs.silver.keynote=Your brand quoted during the conference <strong>introduction keynote</strong>
+views.application.becomeSponsor.packs.silver.price=1,500€
+views.application.becomeSponsor.packs.silver.available=Limited to 8 partners
+
+views.application.becomeSponsor.packs.gold.title=Gold Package
+views.application.becomeSponsor.packs.gold.co-branding=<strong>Co-branding:</strong> your brand name associated with Riviera DEV on all media
+views.application.becomeSponsor.packs.gold.track=Ownership of a <strong>branded conference track</strong> (12 talks) <em>– includes the selection of the 12 talks, which we request to be oriented towards software development</em>
+views.application.becomeSponsor.packs.gold.logo=Your <strong>large-sized logo</strong> on the conference <strong>website, banners, staff <span class='text-nowrap'>t-shirts</span></strong>
+views.application.becomeSponsor.packs.gold.booth=<strong>A booth</strong> in the conference lounge <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.gold.mailing-list=Sponsorship advertised on our <strong>mailing-list</strong> and the <strong>social media</strong>
+views.application.becomeSponsor.packs.gold.keynote=Your brand quoted during the conference <strong>introduction keynote</strong>
+views.application.becomeSponsor.packs.gold.price=3,000€
+views.application.becomeSponsor.packs.gold.available=Limited to 4 partners
+
+views.application.becomeSponsor.packs.platinum.title=Platinum Package
+views.application.becomeSponsor.packs.platinum.co-branding=<strong>Co-branding:</strong> your brand name associated with Riviera DEV on all media
+views.application.becomeSponsor.packs.platinum.track=Ownership of a <strong>branded conference track</strong> (12 talks) <em>– includes the selection of the 12 talks, which we request to be oriented towards software development</em>
+views.application.becomeSponsor.packs.platinum.logo=Your <strong>extra-large-sized logo</strong> on the conference <strong>website, banners, staff <span class='text-nowrap'>t-shirts</span></strong>
+views.application.becomeSponsor.packs.platinum.booth=<strong>A booth</strong> in the conference lounge <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.platinum.mailing-list=Sponsorship advertised on our <strong>mailing-list</strong> and the <strong>social media</strong>
+views.application.becomeSponsor.packs.platinum.keynote=Your brand quoted during the conference <strong>introduction keynote</strong>
+views.application.becomeSponsor.packs.platinum.price=Contact us
+views.application.becomeSponsor.packs.platinum.available=Limited to 1 exclusive partner
+
+views.application.becomeSponsor.packs.breakfasts.title=Breakfasts Package
+views.application.becomeSponsor.packs.breakfasts.booth=<strong>A booth</strong> in the breakfasts area during the breakfasts <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.breakfasts.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>breakfasts on Thursday & Friday</strong>
+views.application.becomeSponsor.packs.breakfasts.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
+views.application.becomeSponsor.packs.breakfasts.price=1,000€
+views.application.becomeSponsor.packs.breakfasts.available=Limited to 1 partner
+
+views.application.becomeSponsor.packs.lunches.title=Lunches Package
+views.application.becomeSponsor.packs.lunches.booth=<strong>A booth</strong> in the lunches area during the lunches <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.lunches.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>lunches on Thursday & Friday</strong>
+views.application.becomeSponsor.packs.lunches.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
+views.application.becomeSponsor.packs.lunches.price=2,000€
+views.application.becomeSponsor.packs.lunches.available=Limited to 1 partner
+
+views.application.becomeSponsor.packs.party.title=Party Package
+views.application.becomeSponsor.packs.party.booth=<strong>A booth</strong> in the cocktail area during the party <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.party.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>cocktail party on Thursday evening</strong>
+views.application.becomeSponsor.packs.party.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
+views.application.becomeSponsor.packs.party.price=2,500€
+views.application.becomeSponsor.packs.party.available=Limited to 1 partner
+
 views.application.becomeSponsor.contact-us=To become a Riviera DEV sponsor, contact us by email at <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
 
 views.application.schedule.title=Program
