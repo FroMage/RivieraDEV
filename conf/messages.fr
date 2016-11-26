@@ -5,7 +5,7 @@ views.main.schedule=Programme
 views.main.speakers=Orateurs
 views.main.cfp=CFP
 views.main.tickets=Billetterie
-views.main.access=Informations pratiques
+views.main.access=Infos pratiques
 views.main.team=Organisateurs
 views.main.sponsors=Sponsors
 views.main.sponsors.list=Nos sponsors
@@ -24,23 +24,26 @@ views.main.follow=Suivez-nous sur
 views.application.index.title=Accueil
 views.application.index.subtitle=Le 11 et 12 mai 2017 à Sophia-Antipolis
 views.application.index.tickets=Inscription
+views.application.index.cfp.join=Devenez orateur
+views.application.index.cfp.join2=Prenez la parole
 views.application.index.sponsors=Nos Sponsors
 views.application.index.sponsors.tagline=Sans eux rien ne serait possible&nbsp;!
-views.application.index.sponsors.join=Devenir sponsor
+views.application.index.sponsors.join=Devenez sponsor
 views.application.index.intro.1=Riviera DEV, c'est <strong>2 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
 views.application.index.intro.2=en plein cœur de Sophia-Antipolis, <strong>la plus belle technopole d'Europe</strong>.
-views.application.index.points.1=Une conférence orientée développeurs mais pas que
-views.application.index.points.2=Un mix de technologies&nbsp;: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...
-views.application.index.points.3=La conférence idéale pour mettre à jour ses connaissances dans un milieu qui évolue sans cesse
-views.application.index.points.4=L'occasion de rencontrer et de partager avec d'autres personnes qui font le même métier
-views.application.index.points.5=Une soirée pour échanger avec apéritif, concert et tireuse à bière
-views.application.index.points.6=Grâce à nos sponsors, un tarif très raisonnable incluant les déjeuners et la soirée
+views.application.index.points.1=Une conférence qui s’adresse aux développeurs et tous les mordus de technique
+views.application.index.points.2=Les dernières technos de pointe&nbsp;: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...
+views.application.index.points.3=Un moment pour se mettre à la page
+views.application.index.points.4=Des rencontres et des échanges riches avec des gens du métier
+views.application.index.points.5=Une soirée festive pour se retrouver autour de la tireuse à bière, avec un bon concert
+views.application.index.points.6=Un tarif super sympa pour deux jours, avec déjeuners et soirée
 views.application.index.address=Adresse
 views.application.index.access=Accès
-views.application.index.get-in-touch=Tenez-vous au courant&nbsp;!
+views.application.index.get-in-touch=Restez au courant&nbsp;!
 views.application.index.follow=Suivez les actualités du Riviera DEV 2017&nbsp;: ouverture des inscriptions, nouveaux orateurs, nouvelles conférences…
 views.application.index.speakers=Nos orateurs
 views.application.index.speakers.tagline=Ils sont venus chez nous&nbsp;!
+views.application.index.speakers.baseline=Vous avez un sujet à partager&nbsp;? 
 
 views.application.speakers.title=Orateurs
 views.application.speakers.unavailable=La liste des orateurs n'est pas encore disponible.
@@ -48,9 +51,9 @@ views.application.speakers.subscribe=Abonnez-vous à la newsletter pour être pr
 
 views.application.subscribe.title=Billeterie
 views.application.subscribe.unavailable=Les inscriptions ne sont pas encore ouvertes.
-views.application.subscribe.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que les inscriptions sont ouvertes.
+views.application.subscribe.subscribe=Soyez dans les premiers à connaître le programme et à acheter votre billet.
 
-views.application.access.title=Informations pratiques
+views.application.access.title=Infos pratiques
 views.application.access.in-sophia.1=À Sophia-Antipolis
 views.application.access.in-sophia.2=Rendez-vous au <strong>Skema Business School</strong>, en plein coeur de Sophia-Antipolis.
 views.application.access.dates.1=Les 11 et 12 mai 2017
@@ -97,7 +100,7 @@ views.application.access.plane.7=Au départ de Sophia Antipolis, ce bus dessert 
 views.application.orga.title=Organisateurs
 views.application.orga.text.1=Riviera DEV est une conférence faite <strong>par des développeurs pour des développeurs</strong>.
 views.application.orga.text.2=Elle a été créée en 2009 (sous un autre nom) à l'initiative du <strong><a href="http://rivierajug.org/" target="_blank">Riviera JUG</a></strong>.
-views.application.orga.text.3=Tous les organisateurs sont des <strong>geeks bénévoles</strong> qui se plient en 4 pour vous concocter une formidable conférence.
+views.application.orga.text.3=Tous les organisateurs sont des <strong>geeks bénévoles</strong> qui se plient en 4 pour vous concocter une conférence aux p'tits oignons.
 views.application.orga.contact=Vous pouvez les contacter par mail à l'adresse <strong><a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a></strong>.
 
 views.application.sponsors.title=Nos sponsors
@@ -160,7 +163,7 @@ views.application.cfp.propose=Proposer un sujet
 
 tags.sponsorsPreviousYears.title=Ils nous ont fait confiance les années précédentes
 tags.newsletter.placeholder=Adresse email
-tags.newsletter.subscribe=Recevoir la newsletter
+tags.newsletter.subscribe=Recevez la newsletter
 tags.countdown.days=Jours
 tags.countdown.hours=Heures
 tags.countdown.minutes=Minutes

@@ -1,24 +1,18 @@
-<div class="container">
-	<div class="row">
-		<div class="speakers">
-			<div class="speakers-list">
-				#{list items: _speakers, as: 'speaker'}
-                    #{if _enableLink}
-                    <a href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
-                    #{/if}
-						<figure class="speaker">
-                            <img class="speaker-photo" src="@{Application.speakerPhoto(speaker.id)}"/>
-							<figcaption>
-								<div class="speaker-names">${speaker}</div>
-								<div>${speaker.company}</div>
-                                <div>${speaker.year}</div>
-							</figcaption>
-						</figure>
-                    #{if _enableLink}
-					</a>
-                    #{/if}
-				#{/list}
-			</div>
-		</div>
-	</div>
+<div class="speakers-list">
+	#{list items: _speakers, as: 'speaker'}
+		#{if _enableLink}
+		<a href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
+		#{/if}
+			<figure class="speaker">
+				<img class="speaker-photo" src="@{Application.speakerPhoto(speaker.id)}"/>
+				<figcaption>
+					<div class="speaker-names">${speaker}</div>
+					<div>${speaker.company}</div>
+					<div>${speaker.year}</div>
+				</figcaption>
+			</figure>
+		#{if _enableLink}
+		</a>
+		#{/if}
+	#{/list}
 </div>
