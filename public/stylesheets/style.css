@@ -684,14 +684,17 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 1em;
-  /*&:after{
-      content: '';
-      width: 90px;
-      height: 90px;
-      background-repeat: no-repeat;
-      display: block;
-      margin: 0.5em auto 0 auto;
-  }*/
+}
+.sponsorship-title--icon:after {
+  content: '';
+  width: 90px;
+  height: 90px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0.5em auto 0 auto;
+}
+.sponsorship--small {
+  background: #ddd;
 }
 .sponsorship-levels--small {
   margin-top: 3em;
@@ -699,17 +702,6 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .sponsorship-level {
   padding: 1em;
   margin-bottom: 2em;
-        /*&--breakfasts .sponsorship-title:after{
-            background-image: url('../images/icons/croissant.svg');
-        }
-
-        &--lunches .sponsorship-title:after{
-            background-image: url('../images/icons/burger.svg');
-        }
-
-        &--party .sponsorship-title:after{
-            background-image: url('../images/icons/beer.svg');
-        }*/
 }
 .sponsorship-level--gold {
   background-image: url("../images/backgrounds/polygon-05.jpg");
@@ -721,7 +713,16 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   background-image: url("../images/backgrounds/polygon-04.jpg");
 }
 .sponsorship-level--small {
-  background-image: url("../images/backgrounds/polygon-03.jpg");
+  background: #ddd;
+}
+.sponsorship-level--breakfasts .sponsorship-title:after {
+  background-image: url("../images/icons/croissant.svg");
+}
+.sponsorship-level--lunches .sponsorship-title:after {
+  background-image: url("../images/icons/burger.svg");
+}
+.sponsorship-level--party .sponsorship-title:after {
+  background-image: url("../images/icons/beer.svg");
 }
 .sponsorship-features {
   padding-left: 0;
@@ -765,6 +766,19 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   background-repeat: no-repeat;
 }
 
+@media (min-width: 992px) {
+  .sponsorship {
+    height: 100%;
+  }
+  .sponsorship-levels {
+    display: -webkit-flex;
+    display: flex;
+  }
+  .sponsorship-level {
+    margin-bottom: 0;
+    height: 100%;
+  }
+}
 .footer {
   position: absolute;
   bottom: 0;

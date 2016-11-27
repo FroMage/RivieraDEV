@@ -124,14 +124,18 @@
         margin-top: 0;
         margin-bottom: 1em;
 
-        /*&:after{
+        &--icon:after{
             content: '';
             width: 90px;
             height: 90px;
             background-repeat: no-repeat;
             display: block;
             margin: 0.5em auto 0 auto;
-        }*/
+        }
+    }
+
+    &--small{
+        background: $color-gray-light;
     }
 
     &-levels--small {
@@ -164,20 +168,22 @@
         }
 
         &--small {
-            background-image: url('../images/backgrounds/polygon-03.jpg');
+            //background-image: url('../images/backgrounds/polygon-03.jpg');
+            background: $color-gray-light;
         }
 
-        /*&--breakfasts .sponsorship-title:after{
+        &--breakfasts .sponsorship-title:after{
             background-image: url('../images/icons/croissant.svg');
         }
 
+        
         &--lunches .sponsorship-title:after{
             background-image: url('../images/icons/burger.svg');
         }
 
         &--party .sponsorship-title:after{
             background-image: url('../images/icons/beer.svg');
-        }*/
+        }
     }
 
     &-features {
@@ -227,4 +233,17 @@
     height: 7em;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media (min-width: $screen-md-min) {
+    .sponsorship {
+        height: 100%;
+        &-levels {
+            @include display-flex();
+        }
+        &-level{
+            margin-bottom: 0;
+            height: 100%;
+        }
+    }
 }
