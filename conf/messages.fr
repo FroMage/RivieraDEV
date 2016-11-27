@@ -23,9 +23,8 @@ views.main.follow=Suivez-nous sur
 
 views.application.index.title=Accueil
 views.application.index.subtitle=Le 11 et 12 mai 2017 à Sophia-Antipolis
-views.application.index.tickets=Inscription
-views.application.index.cfp.join=Devenez orateur
-views.application.index.cfp.join2=Prenez la parole
+views.application.index.tickets=Inscrivez-vous
+views.application.index.cfp.join=Prenez la parole
 views.application.index.sponsors=Nos Sponsors
 views.application.index.sponsors.tagline=Sans eux rien ne serait possible&nbsp;!
 views.application.index.sponsors.join=Devenez sponsor

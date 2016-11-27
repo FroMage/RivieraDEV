@@ -21,6 +21,9 @@
 }
 
 // Complicated selectors to override those of Bootstrap
+.nav>li>a {
+    padding: 10px 10px;
+}
 
 li a.navbar-animated-link {
     @include transition(height 0.3s);
@@ -138,11 +141,17 @@ ul.dropdown-menu > li.active > a {
     background-color: $color-yellow;
 }
 
+
 // ----- Only on mobile ---------------------------------------------------------------------------
 
 
 .navbar-fixed-top .navbar-collapse {
     max-height: 100vh;
+    background-color: $color-white;
+
+    &.in {
+        @include box-shadow(0 3px 3px rgba(0,0,0,0.2));
+    }
 }
 
 .navbar-default .navbar-toggle {
@@ -161,14 +170,14 @@ ul.dropdown-menu > li.active > a {
 }
 
 
-@media (max-width: $screen-xs-max) {
+@media (max-width: $screen-md-min) {
 
     body{
         padding-top: 0;
     }
 
     .navbar-fixed-top {
-        position: static;
+        position: inherit;
         margin-bottom: 0;
     }
 
@@ -223,6 +232,6 @@ ul.dropdown-menu > li.active > a {
             border-color: $color-blue;
             color: $color-black-light;
         }
-}
+    }
 
 }
