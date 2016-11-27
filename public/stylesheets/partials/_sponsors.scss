@@ -116,6 +116,9 @@
 .sponsorship {
     padding: 2em;
     background-color: $color-white;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(space-between);
 
     &-title {
         text-align: center;
