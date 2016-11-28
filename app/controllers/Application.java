@@ -187,10 +187,10 @@ public class Application extends Controller {
 
 	/**
 	 * Retourne l'API KEY sauvée en BD.
-	 * En local, si la clée n'est pas définie alors la google map fonctionne quand même.
+	 * En local, si la clé n'est pas définie alors la google map fonctionne quand même.
 	 * MAIS en Prod/Staging, il FAUT une API Key sinon la carte ne fonctionne pas c'est certainement une restriction google.
 	 * L'API KEY de Prod ne peut pas être utilisée en local, car nous l'avons restreinte pour ne fonctionner qu'avec les domaines *.rivieradev.fr
-	 * afin de suivre les recommandations de sécurité décrites par Google.
+	 * et *.rivieradev.com afin de suivre les recommandations de sécurité décrites par Google.
 	 * Pour générer une nouvelle API KEY : https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr 
 	 */
     private static String getGoogleMapApiKey(){
