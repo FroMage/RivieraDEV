@@ -75,7 +75,7 @@ body {
 }
 
 .button-x-large {
-    width: 17em;
+  width: 17em;
 }
 
 .home-title {
@@ -599,6 +599,54 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   font-weight: bold;
 }
 
+.wrapper {
+  position: relative;
+  z-index: 90;
+}
+
+.ribbon-wrapper {
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -10px;
+  top: 26px;
+  width: 184px;
+  background-color: #0090CD;
+  color: #fff;
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+.ribbon:before, .ribbon:after {
+  content: "";
+  border-top: 4px solid #00709D;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  bottom: -4px;
+}
+.ribbon:before {
+  left: 0;
+}
+.ribbon:after {
+  right: 0;
+}
+
 .partenaires {
   width: 100%;
   -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -722,6 +770,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .sponsorship-level {
   padding: 1em;
   margin-bottom: 2em;
+  position: relative;
 }
 .sponsorship-level--gold {
   background-image: url("../images/backgrounds/polygon-05.jpg");
@@ -772,18 +821,6 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .sponsorship-available {
   text-align: center;
   font-style: italic;
-}
-
-.sold-out:before {
-  content: '';
-  background-image: url(../images/sold_out.png);
-  position: absolute;
-  top: 1em;
-  left: 2em;
-  width: 10em;
-  height: 7em;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 @media (min-width: 992px) {

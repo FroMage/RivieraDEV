@@ -120,6 +120,7 @@ views.application.becomeSponsor.reason.9=if you're trying to hire developers wit
 views.application.becomeSponsor.reason.10=if you want to push your brand in ground-breaking communities or promote your services.
 views.application.becomeSponsor.packs.title=Our packs
 views.application.becomeSponsor.packs.text=We propose several levels of sponsorship.
+views.application.becomeSponsor.packs.soldout=Sold-out
 views.application.becomeSponsor.packs.included=Included
 views.application.becomeSponsor.packs.excluded=Non-included
 

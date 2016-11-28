@@ -148,6 +148,7 @@
     &-level {
         padding: 1em;
         margin-bottom: 2em;
+        position: relative;
 
         &--gold {
             background-image: url('../images/backgrounds/polygon-05.jpg');
@@ -224,18 +225,6 @@
         font-style: italic;
     }
 
-}
-
-.sold-out:before{
-    content: '';
-    background-image: url(../images/sold_out.png);
-    position: absolute;
-    top: 1em;
-    left: 2em;
-    width: 10em;
-    height: 7em;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 @media (min-width: $screen-md-min) {
