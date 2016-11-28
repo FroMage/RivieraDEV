@@ -16,17 +16,18 @@
 			<p>
                 &{'views.application.orga.text.3'}
 			</p>
-			<p class="orga-contact">
+			<p class="orgas-contact">
                 &{'views.application.orga.contact'}
 			</p>
 		</div>
 		<div class="col-sm-2 text-center">
-			<img class="orga-rivierajug" src="@{'/public/images/rivierajug-header.png'}">
+			<img class="orgas-rivierajug" src="@{'/public/images/rivierajug-header.png'}">
 		</div>
 	</div>
 
+	#{orgas orgas: orgas/}
+	
 </div>
 
-<img class="orga-photo" src="@{'/public/images/organisateurs.jpg'}">
+<!-- <img class="orgas-photo" src="@{'/public/images/organisateurs.jpg'}"> -->
 
-#{orgas orgas: orgas, title: "Les organisateurs"/}

@@ -992,14 +992,43 @@ a.footer-rs-instagram:active {
     margin-bottom: 0.5em;
   }
 }
-.orga-rivierajug {
+.orgas-rivierajug {
   width: auto;
 }
-.orga-contact {
+.orgas-contact {
   margin-top: 3em;
 }
-.orga-photo {
+.orgas-photo {
   width: 100%;
+}
+.orgas-list {
+  margin-top: 2em;
+}
+
+.orga {
+  margin-top: 2em;
+}
+.orga:before {
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-bottom: 2em;
+  background-color: #0090CD;
+}
+.orga-name-title {
+  margin-bottom: 1em;
+}
+.orga-name {
+  text-transform: uppercase;
+  color: #0090CD;
+  font-size: 1.3em;
+}
+.orga-title {
+  font-style: italic;
+}
+.orga-photo {
+  max-width: 100%;
+  height: auto;
 }
 
 .access-map {

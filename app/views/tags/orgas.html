@@ -1,12 +1,46 @@
-<div class="speakers-list">
-    <h2>${_title}</h2>
-    #{list items: _orgas, as: 'orga'}
-            <figure class="speaker">
-                <img class="speaker-photo" src="@{Application.orgaPhoto(orga.id)}"/>
-                <figcaption>
-                    <div class="speaker-names">${orga}</div>
-                    <div>${orga.company}</div>
-                </figcaption>
-            </figure>
-    #{/list}
-</div>
+#{if _orgas != null && _orgas.size() > 0}
+    <div class="orgas-list">
+        #{list items: _orgas, as: 'orga'}
+            <div class="row orga">
+                
+                <div class="col-sm-2">
+                    <img class="orga-photo" src="@{Application.orgaPhoto(orga.id)}" alt="${orga}"/>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="orga-name-title">
+                        <div class="orga-name">${orga.firstName} ${orga.lastName}</div>
+                        #{if orga.title.length() > 0} 
+                        <div class="orga-title">${orga.title}</div>
+                        #{/if}
+                    </div>
+                    <div class="orga-biography">${orga.biography}</div>
+                </div>
+
+                <div class="col-sm-4">
+
+                    #{if orga.company.length() > 0 && orga.companyURL.length() > 0} 
+                    <div class="orga-company">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
+                    </div>
+                    #{/if}
+
+                    #{if orga.twitterAccount.length() > 0} 
+                    <div class="orga-twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <a href="https://twitter.com/${orga.twitterAccount}" target="_blank">@${orga.twitterAccount}</a>
+                    </div>
+                    #{/if}
+
+                    #{if orga.blogURL.length() > 0} 
+                    <div class="orga-blog">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
+                    </div>
+                    #{/if}
+                </div>
+            </div>
+        #{/list}
+    </div>
+#{/if}
