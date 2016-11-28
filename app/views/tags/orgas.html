@@ -1,0 +1,12 @@
+<div class="speakers-list">
+    <h2>${_title}</h2>
+    #{list items: _orgas, as: 'orga'}
+            <figure class="speaker">
+                <img class="speaker-photo" src="@{Application.orgaPhoto(orga.id)}"/>
+                <figcaption>
+                    <div class="speaker-names">${orga}</div>
+                    <div>${orga.company}</div>
+                </figcaption>
+            </figure>
+    #{/list}
+</div>

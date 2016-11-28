@@ -10,6 +10,7 @@ import java.util.TreeMap;
 import models.Configuration;
 import models.ConfigurationKey;
 import models.News;
+import models.Organiser;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
@@ -64,7 +65,8 @@ public class Application extends Controller {
     }
 
     public static void cfp() {
-        render();
+    	List<Organiser> orgas = Organiser.cfp();
+        render(orgas);
     }
 
     public static void subscribe() {
@@ -138,8 +140,16 @@ public class Application extends Controller {
     	renderBinary(sponsor.logo.get());
     }
 
+    public static void orgaPhoto(Long id){
+    	Organiser organiser = Organiser.findById(id);
+    	notFoundIfNull(organiser);
+    	response.contentType = organiser.photo.type();
+    	renderBinary(organiser.photo.get());
+    }
+
 	public static void orga() {
-		render();
+    	List<Organiser> orgas = Organiser.organisers();
+		render(orgas);
 	}
 
 	private static int getRivieraDevYear(){
