@@ -20,22 +20,22 @@
                 <div class="col-sm-4">
 
                     #{if orga.company.length() > 0 && orga.companyURL.length() > 0} 
-                    <div class="orga-company">
-                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <div class="orga-company orga-link">
+                        <i class="fa fa-briefcase orga-icon" aria-hidden="true"></i>
                         <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
                     </div>
                     #{/if}
 
                     #{if orga.twitterAccount.length() > 0} 
-                    <div class="orga-twitter">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <div class="orga-twitter orga-link">
+                        <i class="fa fa-twitter orga-icon" aria-hidden="true"></i>
                         <a href="https://twitter.com/${orga.twitterAccount}" target="_blank">@${orga.twitterAccount}</a>
                     </div>
                     #{/if}
 
                     #{if orga.blogURL.length() > 0} 
-                    <div class="orga-blog">
-                        <i class="fa fa-globe" aria-hidden="true"></i>
+                    <div class="orga-blog orga-link">
+                        <i class="fa fa-globe orga-icon" aria-hidden="true"></i>
                         <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
                     </div>
                     #{/if}

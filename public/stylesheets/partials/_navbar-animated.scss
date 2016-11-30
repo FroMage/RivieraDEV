@@ -6,6 +6,10 @@
 
     @include transition(all 0.3s);
 
+    a {
+        text-decoration: none;
+    }
+
     &-logo {
         @include transition(all 0.3s);
         height: $navbar-height;

@@ -39,6 +39,9 @@ body {
     background-image: none;
     border: none;
     border-radius: 0;
+    text-decoration: none;
+
+    background-color: $color-white;
     @include box-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
     margin: 0.5em;
     width: 11em;
@@ -57,7 +60,7 @@ body {
     &:hover,
     &:active,
     &:focus {
-        background-color: $color-gray-ultralight;
+        background-color: $color-gray-light;
     }
     
     &.btn-primary {
@@ -77,6 +80,16 @@ body {
 
 .button-x-large {
     width: 17em;
+}
+
+a {
+    color: $color-blue;
+    text-decoration: underline;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-blue-dark;
+    }
 }
 
 .home {

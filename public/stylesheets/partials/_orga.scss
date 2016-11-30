@@ -10,6 +10,7 @@
 
     &-photo {
         width: 100%;
+        @include box-shadow(0 0 6px rgba(0, 0, 0, 0.3));
     }
 
     &-list {
@@ -48,7 +49,11 @@
         height: auto;
     }
 
-    &-name {
+    &-icon {
+        color: $color-yellow;
+    }
 
+    &-link {
+        margin-bottom: 0.5em;
     }
 }
