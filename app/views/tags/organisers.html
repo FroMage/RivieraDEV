@@ -1,46 +1,15 @@
 #{if _orgas != null && _orgas.size() > 0}
-    <div class="orgas-list">
+    <div class="personsList">
         #{list items: _orgas, as: 'orga'}
-            <div class="row orga">
-                
-                <div class="col-sm-2">
-                    <img class="orga-photo" src="@{Application.orgaPhoto(orga.id)}" alt="${orga}"/>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="orga-name-title">
-                        <div class="orga-name">${orga.firstName} ${orga.lastName}</div>
-                        #{if orga.title.length() > 0} 
-                        <div class="orga-title">${orga.title}</div>
-                        #{/if}
-                    </div>
-                    <div class="orga-biography">${orga.biography}</div>
-                </div>
-
-                <div class="col-sm-4">
-
-                    #{if orga.company.length() > 0 && orga.companyURL.length() > 0} 
-                    <div class="orga-company orga-link">
-                        <i class="fa fa-briefcase orga-icon" aria-hidden="true"></i>
-                        <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
-                    </div>
-                    #{/if}
-
-                    #{if orga.twitterAccount.length() > 0} 
-                    <div class="orga-twitter orga-link">
-                        <i class="fa fa-twitter orga-icon" aria-hidden="true"></i>
-                        <a href="https://twitter.com/${orga.twitterAccount}" target="_blank">@${orga.twitterAccount}</a>
-                    </div>
-                    #{/if}
-
-                    #{if orga.blogURL.length() > 0} 
-                    <div class="orga-blog orga-link">
-                        <i class="fa fa-globe orga-icon" aria-hidden="true"></i>
-                        <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
-                    </div>
-                    #{/if}
-                </div>
-            </div>
+            <a href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}" class="personSummary-link">
+                <figure class="personSummary">
+                    <img class="personSummary-photo" src="@{Application.orgaPhoto(orga.id)}"/>
+                    <figcaption class="personSummary-desc">
+                        <div class="personSummary-name">${orga}</div>
+                        <div class="personSummary-title">${orga.title}</div>
+                    </figcaption>
+                </figure>
+            </a>
         #{/list}
     </div>
 #{/if}

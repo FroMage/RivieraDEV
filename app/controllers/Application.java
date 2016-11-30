@@ -152,6 +152,12 @@ public class Application extends Controller {
 		render(orgas);
 	}
 
+	public static void organiser(Long id) {
+		Organiser orga = Organiser.findById(id);
+    	notFoundIfNull(orga);
+    	render(orga);
+	}
+
 	private static int getRivieraDevYear(){
 		// TODO : Récupérer l'année en BD ou dans une config
 		return 2017;

@@ -1,0 +1,51 @@
+#{extends 'main.html' /}
+#{set title: orga /}
+
+<div class="page-title-container">
+	<h1 class="title page-title"><span>${orga.firstName} ${orga.lastName}</span></h1>
+</div>
+
+<div class="container page-container">
+    <div class="row personDetails">
+                
+        <div class="col-sm-2 personDetails-photo">
+            <img class="personDetails-photo-img" src="@{Application.orgaPhoto(orga.id)}" alt="${orga}"/>
+        </div>
+
+        <div class="col-sm-6 personDetails-desc">
+            <div class="personDetails-name-title">
+                <div class="personDetails-name">${orga.firstName} ${orga.lastName}</div>
+                #{if orga.title.length() > 0} 
+                <div class="personDetails-title">${orga.title}</div>
+                #{/if}
+            </div>
+            <div class="personDetails-biography">${orga.biography}</div>
+        </div>
+
+        <div class="col-sm-4 personDetails-links">
+
+            #{if orga.company.length() > 0 && orga.companyURL.length() > 0} 
+            <div class="personDetails-company personDetails-link">
+                <i class="fa fa-briefcase personDetails-icon" aria-hidden="true"></i>
+                <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
+            </div>
+            #{/if}
+
+            #{if orga.twitterAccount.length() > 0} 
+            <div class="personDetails-twitter personDetails-link">
+                <i class="fa fa-twitter personDetails-icon" aria-hidden="true"></i>
+                <a href="https://twitter.com/${orga.twitterAccount}" target="_blank">@${orga.twitterAccount}</a>
+            </div>
+            #{/if}
+
+            #{if orga.blogURL.length() > 0} 
+            <div class="personDetails-blog personDetails-link">
+                <i class="fa fa-globe personDetails-icon" aria-hidden="true"></i>
+                <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
+            </div>
+            #{/if}
+        </div>
+
+        <div class="clearfix"></div>
+    </div> <!-- /.row -->
+</div>

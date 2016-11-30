@@ -1,0 +1,119 @@
+.personsList {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.personSummary {
+    display: inline-block;
+    text-align:center;
+    text-decoration: none;
+    margin: 0 30px 30px;
+    color: $color-black-light;
+
+    &-link {
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &-desc {
+        margin-top: 0.5em;
+    }
+
+    &-name {
+        text-transform: uppercase;
+        font-size: 1.1em;
+        color: $color-blue;
+    }
+
+    &-title {
+        font-style: italic;
+    }
+}
+
+
+.personDetails {
+    margin-top: 2em;
+
+    &:before,
+    &:after {
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 2em 0;
+        background-color: $color-blue;
+    }
+
+    &-name-title {
+        margin-bottom: 1em;
+    }
+
+    &-name {
+        text-transform: uppercase;
+        color: $color-blue;
+        font-size: 1.3em;
+    }
+
+    &-title {
+        font-style: italic;
+    }
+
+    &-photo-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &-icon {
+        color: $color-yellow;
+    }
+
+    &-link {
+        margin-bottom: 0.5em;
+    }
+
+}
+
+
+// Only on xs devices (smartphones)
+@media (max-width: $screen-xs-max) {
+    
+    .personDetails {
+        margin-top: 0;
+
+        &:before,
+        &:after {
+            height: 0;
+        }
+
+        &-photo {
+            text-align: center;
+            
+            &-img {
+                max-width: 200px;
+            }
+        }
+
+        &-name-title {
+            text-align: center;
+        }
+
+        &-biography {
+            margin: 2em 0;
+        }
+    }
+
+}

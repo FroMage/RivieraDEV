@@ -1,33 +1,15 @@
-.speakers{
+.speakers {
     text-align: center;
     padding-bottom: 1.5em;
 
-    &-previous{
+    &-previous {
         &-title{
             font-size: 1.5em;
             margin-bottom: 1.1em;
         }
-    }
-}
 
-.speaker{
-    display: inline-block;
-    text-align:center;
-    text-decoration: none;
-    margin: 0 30px 30px;
-    color: $color-black-light;
-
-    &-photo {
-        width: 150px;
-        height: 150px;
-        border-radius: 150px;
-        overflow: hidden;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    &-names{
-        font-weight: bold;
+        &-subtitle {
+            margin-bottom: 2em;
+        }
     }
 }

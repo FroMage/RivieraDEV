@@ -1,3 +1,7 @@
+nav a {
+    text-decoration: none;
+}
+
 .navbar-animated {
     min-height: $navbar-small-height;
     height: $navbar-height;
@@ -5,10 +9,6 @@
     background: #fff;
 
     @include transition(all 0.3s);
-
-    a {
-        text-decoration: none;
-    }
 
     &-logo {
         @include transition(all 0.3s);

@@ -125,6 +125,12 @@ a:hover, a:active, a:focus {
   margin-top: 3em;
   margin-bottom: 3em;
 }
+@media (max-width: 767px) {
+  .page-container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
 
 .data-unavailable {
   text-align: center;
@@ -183,6 +189,10 @@ a:hover, a:active, a:focus {
   padding: 0;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 .navbar-animated {
   min-height: 50px;
   height: 75px;
@@ -192,9 +202,6 @@ a:hover, a:active, a:focus {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-.navbar-animated a {
-  text-decoration: none;
 }
 .navbar-animated-logo {
   -moz-transition: all 0.3s;
@@ -620,35 +627,6 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   display: inline-block;
 }
 
-.speakers {
-  text-align: center;
-  padding-bottom: 1.5em;
-}
-.speakers-previous-title {
-  font-size: 1.5em;
-  margin-bottom: 1.1em;
-}
-
-.speaker {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  margin: 0 30px 30px;
-  color: #333;
-}
-.speaker-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.speaker-names {
-  font-weight: bold;
-}
-
 .wrapper {
   position: relative;
   z-index: 90;
@@ -1005,6 +983,115 @@ a.footer-rs-instagram:active {
     margin-bottom: 0.5em;
   }
 }
+.access-map {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.personsList {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.personSummary {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 30px 30px;
+  color: #333;
+}
+.personSummary-link {
+  text-decoration: none;
+}
+.personSummary-link:hover, .personSummary-link:active, .personSummary-link:focus {
+  text-decoration: none;
+}
+.personSummary-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.personSummary-desc {
+  margin-top: 0.5em;
+}
+.personSummary-name {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #0090CD;
+}
+.personSummary-title {
+  font-style: italic;
+}
+
+.personDetails {
+  margin-top: 2em;
+}
+.personDetails:before, .personDetails:after {
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin: 2em 0;
+  background-color: #0090CD;
+}
+.personDetails-name-title {
+  margin-bottom: 1em;
+}
+.personDetails-name {
+  text-transform: uppercase;
+  color: #0090CD;
+  font-size: 1.3em;
+}
+.personDetails-title {
+  font-style: italic;
+}
+.personDetails-photo-img {
+  max-width: 100%;
+  height: auto;
+}
+.personDetails-icon {
+  color: #FDB742;
+}
+.personDetails-link {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 767px) {
+  .personDetails {
+    margin-top: 0;
+  }
+  .personDetails:before, .personDetails:after {
+    height: 0;
+  }
+  .personDetails-photo {
+    text-align: center;
+  }
+  .personDetails-photo-img {
+    max-width: 200px;
+  }
+  .personDetails-name-title {
+    text-align: center;
+  }
+  .personDetails-biography {
+    margin: 2em 0;
+  }
+}
+.speakers {
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+.speakers-previous-title {
+  font-size: 1.5em;
+  margin-bottom: 1.1em;
+}
+.speakers-previous-subtitle {
+  margin-bottom: 2em;
+}
+
 .orgas-rivierajug {
   width: auto;
 }
@@ -1016,45 +1103,4 @@ a.footer-rs-instagram:active {
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-}
-.orgas-list {
-  margin-top: 2em;
-}
-
-.orga {
-  margin-top: 2em;
-}
-.orga:before {
-  display: block;
-  width: 100%;
-  height: 5px;
-  margin-bottom: 2em;
-  background-color: #0090CD;
-}
-.orga-name-title {
-  margin-bottom: 1em;
-}
-.orga-name {
-  text-transform: uppercase;
-  color: #0090CD;
-  font-size: 1.3em;
-}
-.orga-title {
-  font-style: italic;
-}
-.orga-photo {
-  max-width: 100%;
-  height: auto;
-}
-.orga-icon {
-  color: #FDB742;
-}
-.orga-link {
-  margin-bottom: 0.5em;
-}
-
-.access-map {
-  text-align: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
