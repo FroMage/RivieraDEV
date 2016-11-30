@@ -137,6 +137,26 @@ a:hover, a:active, a:focus {
   font-size: 1.25em;
 }
 
+.cfp-intro {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  max-width: 60%;
+  margin: 0 auto;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.cfp-propose {
+  -webkit-align-self: center;
+  align-self: center;
+}
+.cfp-propose--button {
+  margin: 1em 0;
+}
+
 .talk {
   padding: 1em;
   margin-top: 2em;

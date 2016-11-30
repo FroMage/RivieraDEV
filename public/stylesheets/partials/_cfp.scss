@@ -1,3 +1,20 @@
+.cfp{
+    &-intro{
+        @include display-flex();
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        max-width: 60%;
+        margin: 0 auto;
+        @include flex-wrap(wrap);
+    }
+    &-propose{
+        @include align-self(center);
+        &--button{
+            margin: 1em 0;
+        }
+    }
+}
+
 .talk{
     padding: 1em;
     margin-top: 2em;
