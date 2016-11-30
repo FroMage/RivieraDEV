@@ -147,7 +147,7 @@ public class Application extends Controller {
     	renderBinary(organiser.photo.get());
     }
 
-	public static void orga() {
+	public static void organisers() {
     	List<Organiser> orgas = Organiser.organisers();
 		render(orgas);
 	}
