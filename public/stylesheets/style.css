@@ -156,6 +156,9 @@ a:hover, a:active, a:focus {
 .cfp-propose--button {
   margin: 1em 0;
 }
+.cfp-title {
+  margin-top: 2em;
+}
 
 .talk {
   padding: 1em;
