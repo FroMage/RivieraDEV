@@ -1,10 +1,29 @@
 .talk{
-    background-image: url(../images/backgrounds/polygon-04.jpg);
     padding: 1em;
+    margin-top: 2em;
+
+    &-keynote{
+        background-image: url(../images/backgrounds/polygon-05.jpg);
+    }
+
+    &-conference{
+        background-image: url(../images/backgrounds/polygon-02.jpg);
+    }
+
+    &-RedHat{
+        background-image: url(../images/backgrounds/polygon-04.jpg);
+    }
+
+    &-atelier{
+        background-image: url(../images/backgrounds/polygon-07.jpg);
+    }
 
     &-title{
         text-align: left;
         color: inherit;
+        margin-top: 0;
+        margin-bottom: 0.8em;
+        padding-top: 0.8em;
         padding-left: 1em;
     }
 
@@ -13,15 +32,31 @@
     }
 
     &-items{
-        padding: 0 2em;
+        padding: 0 2em 1em 2em;
         line-height: 2em;
         font-size: 1.1em;
+    }
+
+    &-photos{
+        padding: 0;
+        text-align: center;
+
+        &--RedHat{
+            padding: 2em 0;
+        }
     }
 
     &-photo{
         max-width: 100%;
         max-height: 100%;
         padding: 1em;
+        &--RedHat{
+            width: 100%
+        }
+    }
+
+    &-description{
+        padding: 0 2em 1em 2em;
     }
 
     &-public:before,
@@ -30,6 +65,8 @@
         font: normal normal normal 14px/1 FontAwesome;
         margin-right: 1em;
         font-size: 1.5em;
+        display: inline-block;
+        width: 0.7em;
     }
 
     &-public:before{

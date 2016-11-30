@@ -138,31 +138,61 @@ a:hover, a:active, a:focus {
 }
 
 .talk {
-  background-image: url(../images/backgrounds/polygon-04.jpg);
   padding: 1em;
+  margin-top: 2em;
+}
+.talk-keynote {
+  background-image: url(../images/backgrounds/polygon-05.jpg);
+}
+.talk-conference {
+  background-image: url(../images/backgrounds/polygon-02.jpg);
+}
+.talk-RedHat {
+  background-image: url(../images/backgrounds/polygon-04.jpg);
+}
+.talk-atelier {
+  background-image: url(../images/backgrounds/polygon-07.jpg);
 }
 .talk-title {
   text-align: left;
   color: inherit;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  padding-top: 0.8em;
   padding-left: 1em;
 }
 .talk-item {
   background-color: white;
 }
 .talk-items {
-  padding: 0 2em;
+  padding: 0 2em 1em 2em;
   line-height: 2em;
   font-size: 1.1em;
+}
+.talk-photos {
+  padding: 0;
+  text-align: center;
+}
+.talk-photos--RedHat {
+  padding: 2em 0;
 }
 .talk-photo {
   max-width: 100%;
   max-height: 100%;
   padding: 1em;
 }
+.talk-photo--RedHat {
+  width: 100%;
+}
+.talk-description {
+  padding: 0 2em 1em 2em;
+}
 .talk-public:before, .talk-time:before, .talk-number:before {
   font: normal normal normal 14px/1 FontAwesome;
   margin-right: 1em;
   font-size: 1.5em;
+  display: inline-block;
+  width: 0.7em;
 }
 .talk-public:before {
   content: "\f007";
