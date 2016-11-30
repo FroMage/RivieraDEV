@@ -188,7 +188,7 @@ views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> Fin janvie
 views.application.cfp.announce=<strong>Annonce du programme&nbsp;:</strong> Mi-février
 views.application.cfp.conference.format=Chaque talk doit durer 1 heure questions comprises.
 views.application.cfp.propose=Proposer un sujet
-
+views.application.cfp.jury=Jury
 
 tags.sponsorsPreviousYears.title=Ils nous ont fait confiance les années précédentes
 tags.newsletter.placeholder=Adresse email

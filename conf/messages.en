@@ -187,6 +187,7 @@ views.application.cfp.closes=<strong>CFP closes:</strong> end of January
 views.application.cfp.announce=<strong>Program announced</strong> mid-February
 views.application.cfp.conference.format=Conference talks last one hour including questions.
 views.application.cfp.propose=Propose a talk
+views.application.cfp.jury=Jury
 
 tags.sponsorsPreviousYears.title=They trusted us the previous years
 tags.newsletter.placeholder=Email address

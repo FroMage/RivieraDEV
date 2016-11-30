@@ -1,15 +1,17 @@
 #{if _orgas != null && _orgas.size() > 0}
     <div class="personsList">
         #{list items: _orgas, as: 'orga'}
-            <a href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}" class="personSummary-link">
-                <figure class="personSummary">
-                    <img class="personSummary-photo" src="@{Application.orgaPhoto(orga.id)}"/>
-                    <figcaption class="personSummary-desc">
-                        <div class="personSummary-name">${orga}</div>
-                        <div class="personSummary-title">${orga.title}</div>
-                    </figcaption>
-                </figure>
-            </a>
+            #{if (_cfp && orga.cfp) || (_orga && orga.orga)}
+                <a href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}" class="personSummary-link">
+                    <figure class="personSummary">
+                        <img class="personSummary-photo" src="@{Application.orgaPhoto(orga.id)}"/>
+                        <figcaption class="personSummary-desc">
+                            <div class="personSummary-name">${orga}</div>
+                            <div class="personSummary-title">${orga.title}</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            #{/if}
         #{/list}
     </div>
 #{/if}
