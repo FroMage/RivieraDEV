@@ -1,9 +1,19 @@
 .access {
+    margin-bottom: 2em;
 
     &-map {
         text-align: center;
         margin-top: 2em;
         margin-bottom: 2em;
+    }
+
+    &-icon {
+        color: $color-yellow;
+    }
+
+    &-title {
+        text-align: left;
+        margin-top: 2em;
     }
 
 }

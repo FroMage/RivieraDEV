@@ -1036,10 +1036,20 @@ a.footer-rs-instagram:active {
     margin-bottom: 0.5em;
   }
 }
+.access {
+  margin-bottom: 2em;
+}
 .access-map {
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+.access-icon {
+  color: #FDB742;
+}
+.access-title {
+  text-align: left;
+  margin-top: 2em;
 }
 
 .personsList {
