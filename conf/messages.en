@@ -123,6 +123,7 @@ views.application.becomeSponsor.packs.text=We propose several levels of sponsors
 views.application.becomeSponsor.packs.soldout=Sold-out
 views.application.becomeSponsor.packs.included=Included
 views.application.becomeSponsor.packs.excluded=Non-included
+views.application.becomeSponsor.packs.contactUs=Contact us
 
 views.application.becomeSponsor.packs.silver.title=Silver Package
 views.application.becomeSponsor.packs.silver.co-branding=<strong>Co-branding:</strong> your brand name associated with Riviera DEV on all media

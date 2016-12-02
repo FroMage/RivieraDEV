@@ -123,6 +123,7 @@ views.application.becomeSponsor.packs.text=Nous proposons différents niveaux de
 views.application.becomeSponsor.packs.soldout=Epuisé
 views.application.becomeSponsor.packs.included=Inclus
 views.application.becomeSponsor.packs.excluded=Non-inclus
+views.application.becomeSponsor.packs.contactUs=Contactez-nous
 
 views.application.becomeSponsor.packs.silver.title=Pack Silver
 views.application.becomeSponsor.packs.silver.co-branding=<strong>Partenariat :</strong> votre companie associée à Riviera DEV sur tous les médias

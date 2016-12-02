@@ -904,6 +904,13 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   text-align: center;
   font-style: italic;
 }
+.sponsorship-bottom {
+  text-align: center;
+}
+.sponsorship-contactUs {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
 
 @media (min-width: 992px) {
   .sponsorship {

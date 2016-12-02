@@ -225,6 +225,15 @@
         font-style: italic;
     }
 
+    &-bottom{
+        text-align: center;
+    }
+
+    &-contactUs{
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
 }
 
 @media (min-width: $screen-md-min) {
