@@ -25,22 +25,22 @@ views.main.motto=La conférence du Soleil
 views.application.index.title=Accueil
 views.application.index.subtitle=Le 11 et 12 mai 2017 à Sophia-Antipolis
 views.application.index.tickets=Inscrivez-vous
-views.application.index.cfp.join=Prenez la parole
+views.application.index.cfp.join=Prenez la parole à Riviera DEV
 views.application.index.sponsors=Nos Sponsors
 views.application.index.sponsors.tagline=Sans eux rien ne serait possible&nbsp;!
 views.application.index.sponsors.join=Devenez sponsor
 views.application.index.intro.1=Riviera DEV, c'est <strong>2 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
 views.application.index.intro.2=en plein cœur de Sophia-Antipolis, <strong>la plus belle technopole d'Europe</strong>.
 views.application.index.points.1=Une conférence qui s’adresse aux développeurs et tous les mordus de technique
-views.application.index.points.2=Les dernières technos de pointe&nbsp;: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...
+views.application.index.points.2=Les dernières technos&nbsp;: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic...
 views.application.index.points.3=Un moment pour se mettre à la page
 views.application.index.points.4=Des rencontres et des échanges riches avec des gens du métier
 views.application.index.points.5=Une soirée festive pour se retrouver autour de la tireuse à bière, avec un bon concert
-views.application.index.points.6=Un tarif super sympa pour deux jours, avec déjeuners et soirée
+views.application.index.points.6=Grâce à nos sponsors, un tarif plus que correct pour deux jours, incluant déjeuners et soirée
 views.application.index.address=Adresse
 views.application.index.access=Accès
 views.application.index.get-in-touch=Restez au courant&nbsp;!
-views.application.index.follow=Suivez les actualités du Riviera DEV 2017&nbsp;: ouverture des inscriptions, nouveaux orateurs, nouvelles conférences…
+views.application.index.follow=Suivez l'actualité de Riviera DEV 2017&nbsp;: ouverture des inscriptions, nouveaux orateurs, nouvelles conférences…
 views.application.index.speakers=Nos orateurs
 views.application.index.speakers.tagline=Ils sont venus chez nous&nbsp;!
 views.application.index.speakers.baseline=Vous avez un sujet à partager&nbsp;?
@@ -109,14 +109,14 @@ views.application.sponsors.join=Devenir sponsor
 
 views.application.becomeSponsor.title=Devenir sponsor
 views.application.becomeSponsor.why=Pourquoi sponsoriser Riviera DEV&nbsp;?
-views.application.becomeSponsor.reason.1=Riviera DEV est organisé par des bénévoles dont la seule motivation est d'offrir
-views.application.becomeSponsor.reason.2=un évènement Dev de qualité sur Sophia-Antipolis.
+views.application.becomeSponsor.reason.1=Riviera DEV est organisé par des geeks bénévoles dont la seule motivation est d'offrir
+views.application.becomeSponsor.reason.2=une conférence de qualité par et pour les developeurs sur Sophia-Antipolis.
 views.application.becomeSponsor.reason.3=Pour cela nous avons besoin de <strong>vous</strong>.
-views.application.becomeSponsor.reason.4=Votre participation nous permet de louer le lieu, payer le transport et l’hébergement des orateurs,
-views.application.becomeSponsor.reason.5=bien nourrir tout le monde pendant deux jours et organiser une soirée qui permet à tous les participants
+views.application.becomeSponsor.reason.4=Votre participation nous permet de louer le lieu, défrayer les orateurs indépendants,
+views.application.becomeSponsor.reason.5=partager des repas de qualité pendant deux jours et organiser une soirée permettant à tous les participants, orateurs et organisateurs
 views.application.becomeSponsor.reason.6=de se rencontrer, d'échanger et de passer un moment agréable.
-views.application.becomeSponsor.reason.7=En échange nous nous engageons à vous donner un maximum de visibilité, sur le
-views.application.becomeSponsor.reason.8=Web mais également pendant toute la durée de l’évènement. C'est l'opportunité idéale
+views.application.becomeSponsor.reason.7=En retour, nous nous engageons à vous donner un maximum de visibilité, sur le
+views.application.becomeSponsor.reason.8=web mais également pendant toute la durée de l’évènement. C'est l'opportunité idéale
 views.application.becomeSponsor.reason.9=si vous cherchez à recruter des développeurs et développeuses passionnés par leur métier,
 views.application.becomeSponsor.reason.10=si vous voulez affirmer votre image dans les communautés novatrices ou faire connaître vos services auprès des ces dernières.
 views.application.becomeSponsor.packs.title=Nos packs
@@ -126,54 +126,53 @@ views.application.becomeSponsor.packs.included=Inclus
 views.application.becomeSponsor.packs.excluded=Non-inclus
 
 views.application.becomeSponsor.packs.silver.title=Pack Silver
-views.application.becomeSponsor.packs.silver.co-branding=<strong>Partenariat :</strong> votre companie associée à Riviera DEV sur tous les médias
-views.application.becomeSponsor.packs.silver.track=Une <strong>track réservée</strong> (12 sessions) <em>– comprends la sélection des 12 sessions, qui doivent être axées sur le développement</em>
-views.application.becomeSponsor.packs.silver.logo=Votre <strong>logo en taille normale</strong> sur le <strong>site web, bannières, <span class='text-nowrap'>t-shirts</span> de l'équipe</strong> de la conférence
-views.application.becomeSponsor.packs.silver.booth=<strong>Un stand</strong> dans l'espace exposants <em>– nous demandons à tous les stands de Riviera DEV de le rendre attractif et d'avoir des attractions geek</em>
-views.application.becomeSponsor.packs.silver.mailing-list=Sponsoring présent sur notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
-views.application.becomeSponsor.packs.silver.keynote=Votre sponsoring mentionné pendant <strong>la keynote d'ouverture</strong>
+views.application.becomeSponsor.packs.silver.co-branding=<strong>Association de marques :</strong> votre société associée à Riviera DEV sur tous les médias
+views.application.becomeSponsor.packs.silver.track=Une <strong>track réservée</strong> (12 sessions) <em>– comprend la sélection des 12 sessions, qui doivent être axées sur le dévelopement logiciel</em>
+views.application.becomeSponsor.packs.silver.logo=Votre <strong>logo en taille normale</strong> sur le <strong>site web, les bannières, <span class='text-nowrap'>t-shirts</span> de l'équipe organisatrice</strong>
+views.application.becomeSponsor.packs.silver.booth=<strong>Un stand</strong> dans l'espace lounge de la conférence <em>– nous demandons à tous les exposants à Riviera DEV de le rendre leur stand attractif pour nos amis les geeks</em>
+views.application.becomeSponsor.packs.silver.mailing-list=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
+views.application.becomeSponsor.packs.silver.keynote=Votre marque mentionnée pendant <strong>la keynote d'ouverture</strong>
 views.application.becomeSponsor.packs.silver.price=1 500 €
 views.application.becomeSponsor.packs.silver.available=Limité à 8 partenaires
 
 views.application.becomeSponsor.packs.gold.title=Pack Gold
-views.application.becomeSponsor.packs.gold.co-branding=<strong>Partenariat :</strong> votre companie associée à Riviera DEV sur tous les médias
-views.application.becomeSponsor.packs.gold.track=Une <strong>track réservée</strong> (12 sessions) <em>– comprends la sélection des 12 sessions, qui doivent être axées sur le développement</em>
-views.application.becomeSponsor.packs.gold.logo=Votre <strong>logo en taille large</strong> sur le <strong>site web, bannières, <span class='text-nowrap'>t-shirts</span> de l'équipe</strong> de la conférence
-views.application.becomeSponsor.packs.gold.booth=<strong>Un stand</strong> dans l'espace exposants <em>– nous demandons à tous les stands de Riviera DEV de le rendre attractif et d'avoir des attractions geek</em>
-views.application.becomeSponsor.packs.gold.mailing-list=Sponsoring présent sur notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
-views.application.becomeSponsor.packs.gold.keynote=Votre sponsoring mentionné pendant <strong>la keynote d'ouverture</strong>
+views.application.becomeSponsor.packs.gold.co-branding=<strong>Association de marques :</strong> votre société associée à Riviera DEV sur tous les médias
+views.application.becomeSponsor.packs.gold.track=Une <strong>track réservée</strong> (12 sessions) <em>– comprend la sélection des 12 sessions, qui doivent être axées sur le dévelopement logiciel</em>
+views.application.becomeSponsor.packs.gold.logo=Votre <strong>logo en taille large</strong> sur le <strong>site web, les bannières, <span class='text-nowrap'>t-shirts</span> de l'équipe organisatrice</strong>
+views.application.becomeSponsor.packs.gold.booth=<strong>Un stand</strong> dans l'espace lounge de la conférence <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
+views.application.becomeSponsor.packs.gold.mailing-list=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
+views.application.becomeSponsor.packs.gold.keynote=Votre marque mentionnée pendant <strong>la keynote d'ouverture</strong>
 views.application.becomeSponsor.packs.gold.price=3 000 €
 views.application.becomeSponsor.packs.gold.available=Limité à 4 partenaires
 
 views.application.becomeSponsor.packs.platinum.title=Pack Platinum
-views.application.becomeSponsor.packs.platinum.co-branding=<strong>Partenariat :</strong> votre companie associée à Riviera DEV sur tous les médias
-views.application.becomeSponsor.packs.platinum.track=Une <strong>track réservée</strong> (12 sessions) <em>– comprends la sélection des 12 sessions, qui doivent être axées sur le développement</em>
-views.application.becomeSponsor.packs.platinum.logo=Votre <strong>logo en taille extra-large</strong> sur le <strong>site web, bannières, <span class='text-nowrap'>t-shirts</span> de l'équipe</strong> de la conférence
-views.application.becomeSponsor.packs.platinum.booth=<strong>Un stand</strong> dans l'espace exposants <em>– nous demandons à tous les stands de Riviera DEV de le rendre attractif et d'avoir des attractions geek</em>
-views.application.becomeSponsor.packs.platinum.mailing-list=Sponsoring présent sur notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
-views.application.becomeSponsor.packs.platinum.keynote=Votre sponsoring mentionné pendant <strong>la keynote d'ouverture</strong>
-views.application.becomeSponsor.packs.platinum.co-branding=<strong>Co-branding:</strong> your brand name associated with Riviera DEV on all media
+views.application.becomeSponsor.packs.platinum.co-branding=<strong>Association de marques :</strong> votre société associée à Riviera DEV sur tous les médias
+views.application.becomeSponsor.packs.platinum.track=Une <strong>track réservée</strong> (12 sessions) <em>– comprend la sélection des 12 sessions, qui doivent être axées sur le dévelopement logiciel</em>
+views.application.becomeSponsor.packs.platinum.logo=Votre <strong>logo en taille extra-large</strong> sur le <strong>site web, les bannières, <span class='text-nowrap'>t-shirts</span> de l'équipe organisatrice</strong>
+views.application.becomeSponsor.packs.platinum.booth=<strong>Un stand</strong> dans l'espace lounge de la conférence <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
+views.application.becomeSponsor.packs.platinum.mailing-list=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
+views.application.becomeSponsor.packs.platinum.keynote=Votre marque mentionnée pendant <strong>la keynote d'ouverture</strong>
 views.application.becomeSponsor.packs.platinum.price=Contactez-nous
 views.application.becomeSponsor.packs.platinum.available=Limité à 1 partenaire exclusif
 
 views.application.becomeSponsor.packs.breakfasts.title=Pack Petit Déjeuners
-views.application.becomeSponsor.packs.breakfasts.booth=<strong>Un stand</strong> dans la partie restauration pendant les petits-déjeuners <em>– nous demandons à tous les stands de Riviera DEV de le rendre attractif et d'avoir des attractions geek</em>
-views.application.becomeSponsor.packs.breakfasts.brand=Votre companie mentionnée sur les <strong>bannières</strong> lors des <strong>petits-déjeuners de jeudi et vendredi</strong>
-views.application.becomeSponsor.packs.breakfasts.mailing=Sponsoring présent sur notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
+views.application.becomeSponsor.packs.breakfasts.brand=Votre marque mentionnée oralement et exposée sur les <strong>bannières</strong> lors des <strong>petits-déjeuners de jeudi et vendredi</strong>
+views.application.becomeSponsor.packs.breakfasts.booth=<strong>Un stand</strong> dans la zone restauration pendant les petits-déjeuners <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
+views.application.becomeSponsor.packs.breakfasts.mailing=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
 views.application.becomeSponsor.packs.breakfasts.price=1 000 €
 views.application.becomeSponsor.packs.breakfasts.available=Limité à 1 partenaire
 
 views.application.becomeSponsor.packs.lunches.title=Pack Buffets
-views.application.becomeSponsor.packs.lunches.booth=<strong>Un stand</strong> dans la partie restauration pendant les déjeuners <em>– nous demandons à tous les stands de Riviera DEV de le rendre attractif et d'avoir des attractions geek</em>
-views.application.becomeSponsor.packs.lunches.brand=Votre companie mentionnée sur les <strong>bannières</strong> lors des <strong>déjeuners de jeudi et vendredi</strong>
-views.application.becomeSponsor.packs.lunches.mailing=Sponsoring présent sur notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
+views.application.becomeSponsor.packs.lunches.brand=Votre marque mentionnée oralement et exposée sur les <strong>bannières</strong> lors des <strong>déjeuners de jeudi et vendredi</strong>
+views.application.becomeSponsor.packs.lunches.booth=<strong>Un stand</strong> dans la zone restauration pendant les déjeuners <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
+views.application.becomeSponsor.packs.lunches.mailing=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
 views.application.becomeSponsor.packs.lunches.price=2 000 €
 views.application.becomeSponsor.packs.lunches.available=Limité à 1 partenaire
 
 views.application.becomeSponsor.packs.party.title=Pack Soirée
-views.application.becomeSponsor.packs.party.booth=<strong>Un stand</strong> dans la partie boissons de la soirée <em>– nous demandons à tous les stands de Riviera DEV de le rendre attractif et d'avoir des attractions geek</em>
 views.application.becomeSponsor.packs.party.brand=Votre companie mentionnée sur les <strong>bannières</strong> lors de <strong>la soirée du jeudi</strong>
-views.application.becomeSponsor.packs.party.mailing=Sponsoring présent sur notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
+views.application.becomeSponsor.packs.party.booth=<strong>Un stand</strong> dans la zone cocktail pendant la soirée <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
+views.application.becomeSponsor.packs.party.mailing=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
 views.application.becomeSponsor.packs.party.price=2 500 €
 views.application.becomeSponsor.packs.party.available=Limité à 1 partenaire
 
@@ -188,7 +187,7 @@ views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> Début déc
 views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> Fin janvier
 views.application.cfp.announce=<strong>Annonce du programme&nbsp;:</strong> Mi-février
 views.application.cfp.conference.format=Chaque talk doit durer 1 heure questions comprises.
-views.application.cfp.propose=Proposer un sujet
+views.application.cfp.propose=Proposez un sujet
 views.application.cfp.jury=Jury
 
 tags.sponsorsPreviousYears.title=Ils nous ont fait confiance les années précédentes
