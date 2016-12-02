@@ -20,6 +20,7 @@ views.main.editions.2015=Édition 2015
 views.main.editions.2011=Édition 2011
 views.main.private=Espace privé
 views.main.follow=Suivez-nous sur
+views.main.motto=La conférence du Soleil
 
 views.application.index.title=Accueil
 views.application.index.subtitle=Le 11 et 12 mai 2017 à Sophia-Antipolis
@@ -42,7 +43,7 @@ views.application.index.get-in-touch=Restez au courant&nbsp;!
 views.application.index.follow=Suivez les actualités du Riviera DEV 2017&nbsp;: ouverture des inscriptions, nouveaux orateurs, nouvelles conférences…
 views.application.index.speakers=Nos orateurs
 views.application.index.speakers.tagline=Ils sont venus chez nous&nbsp;!
-views.application.index.speakers.baseline=Vous avez un sujet à partager&nbsp;? 
+views.application.index.speakers.baseline=Vous avez un sujet à partager&nbsp;?
 
 views.application.speakers.title=Orateurs
 views.application.speakers.unavailable=La liste des orateurs n'est pas encore disponible.
@@ -70,15 +71,15 @@ views.application.access.car.skema.2=L'entrée de SKEMA se situe au N°60 sur vo
 views.application.access.car.skema.3=SKEMA Bachelor&nbsp;: Une fois sur la rue Albert Einstein, l'entrée Bachelors se trouve sur votre gauche.
 views.application.access.train.title=Accès en train
 views.application.access.train.station.to.1=La gare SNCF la plus proche de Sophia Antipolis est celle d'<strong>Antibes</strong>.
-views.application.access.train.station.to.2=Selon votre gare de départ, consultez les horaires&nbsp;: 
+views.application.access.train.station.to.2=Selon votre gare de départ, consultez les horaires&nbsp;:
 views.application.access.train.station.to.3=pour les grandes lignes sur le site de la <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a>
 views.application.access.train.station.to.4=et pour les trains régionaux ceux du <a href="http://www.ter.sncf.com/paca" target="_blank">TER</a>.
-views.application.access.train.station.from.1=Arrivé à la Gare d'Antibes, prendre le 
+views.application.access.train.station.from.1=Arrivé à la Gare d'Antibes, prendre le
 views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">bus Envibus 100 Express</a> - Prix&nbsp;: 1€.
 views.application.access.train.station.from.3=Pour joindre l'arrêt, sortir de la gare et prendre la passerelle piétonne au-dessus des voies.
 views.application.access.train.station.from.4=La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA.
 views.application.access.bus.title=Accès en bus
-views.application.access.bus.from.antibes.1=À partir de la gare d'Antibes&nbsp;: vous pouvez prendre 
+views.application.access.bus.from.antibes.1=À partir de la gare d'Antibes&nbsp;: vous pouvez prendre
 views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">le bus Envibus 100 Express</a>
 views.application.access.bus.from.antibes.3=- Prix&nbsp;: 1€.
 views.application.access.bus.from.antibes.4=La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA.
@@ -86,7 +87,7 @@ views.application.access.bus.from.sophia.1=À partir des communes de la Communau
 views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" target="_blank">le réseau Envibus</a>.
 views.application.access.bus.from.elsewhere.1=A partir des autres communes&nbsp;: utiliser
 views.application.access.bus.from.elsewhere.2=le réseau départemental de bus TAM (Transports Alpes-Maritimes)
-views.application.access.bus.from.elsewhere.3=La ligne 230 relie l'aéroport de Nice à Sophia Antipolis. 
+views.application.access.bus.from.elsewhere.3=La ligne 230 relie l'aéroport de Nice à Sophia Antipolis.
 views.application.access.plane.title=Accès en avion
 views.application.access.plane.1=L'Aéroport Nice Côte d'Azur
 views.application.access.plane.2=est situé à 20 km de Sophia Antipolis. Du Terminal 2 de l'aéroport, prendre la navette gratuite pour vous rendre au Terminal 1.

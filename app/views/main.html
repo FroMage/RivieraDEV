@@ -8,11 +8,11 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    
+
     <!-- Bootstrap -->
     <!-- Bootstrap has been customized to modify a variable :
          Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
-         (http://getbootstrap.com/customize/) 
+         (http://getbootstrap.com/customize/)
     -->
     <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}" >
     <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}" >
@@ -116,12 +116,12 @@
 
     <footer class="footer container">
         <div class="row">
-            
+
             <div class="col-sm-5 footer-infos">
                 <div class="footer-logo">
                     <img src="@{'/public/images/logo_RD_white.svg'}" alt="RivieraDEV">
                 </div>
-                <div class="footer-slogan">La conférence du soleil</div>
+                <div class="footer-slogan">&{'views.main.motto'}</div>
                 <div class="footer-contact">
                     <span class="footer-contact-deco">{</span>
                     <span class="footer-contact-text">&{'views.main.contact'} info@rivieradev.fr</span>
@@ -172,7 +172,7 @@
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                     <span class="sr-only">Instagram</span>
                 </a>
-                
+
             </div>
 
         </div>
@@ -191,7 +191,7 @@
     <!-- Bootstrap -->
     <!-- Bootstrap has been customized to modify a variable :
          Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
-         (http://getbootstrap.com/customize/) 
+         (http://getbootstrap.com/customize/)
     -->
     <script src="@{'/public/bootstrap/3.3.7/js/bootstrap.min.js'}"></script>
 
@@ -209,10 +209,10 @@
     #{get 'moreScripts' /}
     <script type="text/javascript">
 
-        var countDownDaysLabel = "&{'tags.countdown.days'}"; 
-        var countDownHoursLabel = "&{'tags.countdown.hours'}"; 
-        var countDownMinutesLabel = "&{'tags.countdown.minutes'}"; 
-        var countDownSecondsLabel = "&{'tags.countdown.seconds'}"; 
+        var countDownDaysLabel = "&{'tags.countdown.days'}";
+        var countDownHoursLabel = "&{'tags.countdown.hours'}";
+        var countDownMinutesLabel = "&{'tags.countdown.minutes'}";
+        var countDownSecondsLabel = "&{'tags.countdown.seconds'}";
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-24807954-1']);
         _gaq.push(['_setDomainName', 'none']);
@@ -231,7 +231,6 @@
         });
 
     </script>
-    
+
 </body>
 </html>
-
