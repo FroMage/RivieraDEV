@@ -80,6 +80,11 @@ body {
   width: 18em;
 }
 
+@media (max-width: 767px) {
+  .button-x-large {
+    font-size: 1.1em;
+  }
+}
 a {
   color: #0090CD;
   text-decoration: underline;
@@ -534,16 +539,16 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   padding-top: 0.1em;
 }
 .countdown-day {
-  background-color: rgba(255, 183, 66, 0.8);
+  background-color: rgba(0, 144, 205, 0.8);
 }
 .countdown-hour {
   background-color: rgba(255, 183, 66, 0.8);
 }
 .countdown-min {
-  background-color: rgba(255, 183, 66, 0.8);
+  background-color: rgba(122, 62, 141, 0.8);
 }
 .countdown-sec {
-  background-color: rgba(255, 183, 66, 0.8);
+  background-color: rgba(58, 152, 74, 0.8);
 }
 .countdown-sec {
   margin-right: 0;
