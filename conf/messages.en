@@ -20,6 +20,7 @@ views.main.editions.2015=2015 Edition
 views.main.editions.2011=2011 Edition
 views.main.private=Private space
 views.main.follow=Follow us on
+views.main.motto=The shiny conference
 
 views.application.index.title=Welcome
 views.application.index.subtitle=May 11-12 2017 in Sophia-Antipolis
@@ -31,18 +32,18 @@ views.application.index.sponsors.join=Become sponsor
 views.application.index.intro.1=Riviera DEV, that's <strong>2 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
 views.application.index.intro.2=in the heart of Sophia-Antipolis, <strong>the most beautiful European technopole</strong>.
 views.application.index.points.1=A conference for developpers, but not only
-views.application.index.points.2=A mix of technologies: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic, ...
+views.application.index.points.2=A mix of technologies: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic...
 views.application.index.points.3=The ideal conference to update your skills in a rapidly evolving field
 views.application.index.points.4=A chance to meet and share with other people from the industry
 views.application.index.points.5=An evening to share with <i>apéritif</i>, live music and local beer
-views.application.index.points.6=Thanks to our sponsors, a very reasonable price including food and evening
+views.application.index.points.6=Thanks to our sponsors, a very reasonable price including food and cocktail
 views.application.index.address=Address
 views.application.index.access=How to get there
 views.application.index.get-in-touch=Get in touch!
 views.application.index.follow=Follow Riviera DEV 2017: sale date, new speakers, new talks…
 views.application.index.speakers=Our speakers
 views.application.index.speakers.tagline=They were here!
-views.application.index.speakers.baseline=You have something to share? 
+views.application.index.speakers.baseline=You have something to share?
 
 views.application.speakers.title=Speakers
 views.application.speakers.unavailable=The speaker list is not available yet.
@@ -70,15 +71,15 @@ views.application.access.car.skema.2=The entrance to SKEMA is at N°60 on your r
 views.application.access.car.skema.3=SKEMA Bachelor: Once on the rue Albert Einstein, the entrance to Bachelor is on your left.
 views.application.access.train.title=Coming by train
 views.application.access.train.station.to.1=The nearest train station to Sophia Antipolis is that of <strong>Antibes</strong>.
-views.application.access.train.station.to.2=Depending on your departing train station, check the timetables: 
+views.application.access.train.station.to.2=Depending on your departing train station, check the timetables:
 views.application.access.train.station.to.3=for long-distance lines on the <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a> website,
 views.application.access.train.station.to.4=and for regional lines those of <a href="http://www.ter.sncf.com/paca" target="_blank">TER</a>.
-views.application.access.train.station.from.1=Once in the Antibes train station, take the 
+views.application.access.train.station.from.1=Once in the Antibes train station, take the
 views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">Envibus 100 Express but</a> - Price: 1€.
 views.application.access.train.station.from.3=To reach the bus stop, get out of the station and take the suspended walkway above the tracks.
 views.application.access.train.station.from.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
 views.application.access.bus.title=Coming by bus
-views.application.access.bus.from.antibes.1=From the Antibes train station: you can take 
+views.application.access.bus.from.antibes.1=From the Antibes train station: you can take
 views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">the Envibus 100 Express bus</a>
 views.application.access.bus.from.antibes.3=- Price: 1€.
 views.application.access.bus.from.antibes.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
@@ -86,7 +87,7 @@ views.application.access.bus.from.sophia.1=From the Sophia Antipolis municipalit
 views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" target="_blank">the Envibus network</a>.
 views.application.access.bus.from.elsewhere.1=From other cities : use
 views.application.access.bus.from.elsewhere.2=the regional network of TAM busses (Transports Alpes-Maritimes)
-views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis. 
+views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis.
 views.application.access.plane.title=Coming by plaine
 views.application.access.plane.1=The Nice Côte d'Azur airport
 views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free shuttle to get to Terminal 1.
@@ -108,15 +109,15 @@ views.application.sponsors.join=Become sponsor
 
 views.application.becomeSponsor.title=Become sponsor
 views.application.becomeSponsor.why=Why sponsor Riviera DEV&nbsp;?
-views.application.becomeSponsor.reason.1=Riviera DEV is organised by unpaid volunteers whose only motivation is to offer
-views.application.becomeSponsor.reason.2=a quality developer event in Sophia-Antipolis.
+views.application.becomeSponsor.reason.1=Riviera DEV is organised by unpaid geeks whose only motivation is to offer
+views.application.becomeSponsor.reason.2=a quality conference focusing on developers in the French Riviera.
 views.application.becomeSponsor.reason.3=For this, we need <strong>you</strong>.
-views.application.becomeSponsor.reason.4=Your participation allows us to rent the rooms, pay travel for speakers,
-views.application.becomeSponsor.reason.5=have great food for every one for two days and organise an evening allowing every attendee, speaker and organiser
-views.application.becomeSponsor.reason.6=to meet, exchange and have a great time.
+views.application.becomeSponsor.reason.4=Your participation allows us to rent the rooms, sponsor freelance speakers,
+views.application.becomeSponsor.reason.5=have great food for everyone during two days and organise an evening where every attendee, speaker and staff
+views.application.becomeSponsor.reason.6=can meet, exchange and have a great time.
 views.application.becomeSponsor.reason.7=In return, we thrive to give you maximum visibility, on the
-views.application.becomeSponsor.reason.8=Web but also throughout the event. This is the ideal opportunity
-views.application.becomeSponsor.reason.9=if you're trying to hire developers with a passion for their work,
+views.application.becomeSponsor.reason.8=web but also throughout the event. This is the ideal opportunity
+views.application.becomeSponsor.reason.9=if you are trying to hire developers with a passion for their work,
 views.application.becomeSponsor.reason.10=if you want to push your brand in ground-breaking communities or promote your services.
 views.application.becomeSponsor.packs.title=Our packs
 views.application.becomeSponsor.packs.text=We propose several levels of sponsorship.
@@ -156,22 +157,22 @@ views.application.becomeSponsor.packs.platinum.price=Contact us
 views.application.becomeSponsor.packs.platinum.available=Limited to 1 exclusive partner
 
 views.application.becomeSponsor.packs.breakfasts.title=Breakfasts Package
-views.application.becomeSponsor.packs.breakfasts.booth=<strong>A booth</strong> in the breakfasts area during the breakfasts <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.breakfasts.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>breakfasts on Thursday & Friday</strong>
+views.application.becomeSponsor.packs.breakfasts.booth=<strong>A booth</strong> in the breakfast area during the breakfasts <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.breakfasts.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
 views.application.becomeSponsor.packs.breakfasts.price=1,000€
 views.application.becomeSponsor.packs.breakfasts.available=Limited to 1 partner
 
 views.application.becomeSponsor.packs.lunches.title=Lunches Package
-views.application.becomeSponsor.packs.lunches.booth=<strong>A booth</strong> in the lunches area during the lunches <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.lunches.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>lunches on Thursday & Friday</strong>
+views.application.becomeSponsor.packs.lunches.booth=<strong>A booth</strong> in the lunch area during the lunches <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.lunches.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
 views.application.becomeSponsor.packs.lunches.price=2,000€
 views.application.becomeSponsor.packs.lunches.available=Limited to 1 partner
 
 views.application.becomeSponsor.packs.party.title=Party Package
-views.application.becomeSponsor.packs.party.booth=<strong>A booth</strong> in the cocktail area during the party <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.party.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>cocktail party on Thursday evening</strong>
+views.application.becomeSponsor.packs.party.booth=<strong>A booth</strong> in the cocktail area during the party <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.party.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
 views.application.becomeSponsor.packs.party.price=2,500€
 views.application.becomeSponsor.packs.party.available=Limited to 1 partner
@@ -187,7 +188,7 @@ views.application.cfp.opens=<strong>CFP opens:</strong> early December
 views.application.cfp.closes=<strong>CFP closes:</strong> end of January
 views.application.cfp.announce=<strong>Program announced</strong> mid-February
 views.application.cfp.conference.format=Conference talks last one hour including questions.
-views.application.cfp.propose=Propose a talk
+views.application.cfp.propose=Submit a talk
 views.application.cfp.jury=Jury
 views.application.cfp.keynote.title=Keynote
 views.application.cfp.keynote.attendees=250-300 attendees

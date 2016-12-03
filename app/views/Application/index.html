@@ -2,25 +2,25 @@
 #{set title:play.i18n.Messages.get('views.application.index.title') /}
 
 <div class="parallax parallax-home countdown-parent">
-    
+
     <div class="parallax-title">
         <h1 class="title parallax-title-title">Riviera DEV 2017</h1>
         <p class="title parallax-title-subtitle">&{'views.application.index.subtitle'}</p>
     </div>
-    
+
     <div class="registration-buttons">
         <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
         <!--<a class="btn btn-primary btn-lg button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>-->
         <a class="btn btn-default btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
-    
+
     <div id="js-countdown" class="countdown"></div>
 
 </div> <!-- /.parallax -->
 
 
 <div class="container presentation">
-    <h2 class="title home-title presentation-title">La conférence du soleil</h2>
+    <h2 class="title home-title presentation-title">&{'views.main.motto'}</h2>
 
     <div class="home-subtitle presentation-introduction">
         <p>
@@ -82,7 +82,7 @@
 
     <p class="home-subtitle">&{'views.application.index.speakers.baseline'}</p>
 
-    <a class="btn btn-primary btn-lg button button-large" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
+    <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
 </div>
 #{/if}
 
@@ -151,7 +151,7 @@
         <h2 class="title home-title partenaires-header-title container">&{'views.application.index.sponsors'}</h2>
         <p class="home-subtitle partenaires-header-subtitle container">&{'views.application.index.sponsors.tagline'}</p>
     </div>
-    
+
     %{ if (sponsors != null && sponsors.size() > 0) {
         for (models.SponsorShip sponsorShip : sponsors.keySet()) {
     }%
@@ -160,12 +160,11 @@
         }
     }
     }%
-    
+
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
-    
+
     <div class="registration-buttons registration-partenaire">
         <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
 
 </div>
-
