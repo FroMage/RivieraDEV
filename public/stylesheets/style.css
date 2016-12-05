@@ -372,11 +372,40 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   height: 50px;
   line-height: 50px;
 }
+.navbar-animated-small .navbar-RedHat {
+  font-size: 0.8em;
+}
 
 .navbar .label-primary {
   font-size: 100%;
   padding: 0.6em 1em 0.7em 1em;
   background-color: #FDB742;
+}
+
+.navbar-RedHat {
+  display: -webkit-flex;
+  display: flex;
+}
+.navbar-RedHat img.navbar-RedHat--logo {
+  display: inline-block;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  height: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.25em;
+}
+.navbar-RedHat--featuring {
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  margin-bottom: 0.6em;
+}
+
+#navbar-RedHat {
+  margin-left: -25px;
 }
 
 .navbar-fixed-top .navbar-collapse {
@@ -449,6 +478,11 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
     background-color: #fff;
     border-color: #0090CD;
     color: #333;
+  }
+
+  #navbar-RedHat {
+    font-size: 0.8em;
+    margin-left: 0;
   }
 }
 .parallax {
