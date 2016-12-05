@@ -10,6 +10,10 @@ nav a {
 
     @include transition(all 0.3s);
 
+    & .container-fluid{
+        background-color: $color-white;
+    }
+
     &-logo {
         @include transition(all 0.3s);
         height: $navbar-height;
