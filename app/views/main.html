@@ -9,6 +9,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@RivieraDEV" />
+    <meta property="og:title" content="#{get 'title' /} - Riviera DEV" />
+    <meta property="og:type" content="image/svg+xml" />
+    <meta property="og:url" content="@@{Application.index}" />
+    <meta property="og:image" content="@@{'/public/images/logo_RD_black.svg'}" />
+
     <!-- Bootstrap -->
     <!-- Bootstrap has been customized to modify a variable :
          Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
@@ -48,8 +55,8 @@
                 <a class="navbar-brand navbar-animated-logo" href="@{Application.index}">
                     <img src="@{'/public/images/logo_RD_black.svg'}" alt="RivieraDEV">
                 </a>
-                <a class="navbar-brand navbar-animated-logo" href="@{Application.index}">
-                    <img src="@{'/public/images/logo_MadHat.svg'}" alt="MadHat">
+                <a id="navbar-RedHat" class="navbar-brand navbar-animated-logo navbar-RedHat" href="@{Application.index}">
+                    <span class="navbar-RedHat--featuring">&{'views.main.logo.featuring.before'}</span><img src="@{'/public/images/logos/Red_Hat_RGB.png'}" alt="Red Hat" class="navbar-RedHat--logo"><span class="navbar-RedHat--featuring">&{'views.main.logo.featuring.after'}</span>
                 </a>
             </div>
 

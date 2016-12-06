@@ -79,7 +79,13 @@ body {
 }
 
 .button-x-large {
-    width: 17em;
+    width: 18em;
+}
+
+@media (max-width: $screen-xs-max) {
+    .button-x-large {
+        font-size: 1.1em;
+    }
 }
 
 a {

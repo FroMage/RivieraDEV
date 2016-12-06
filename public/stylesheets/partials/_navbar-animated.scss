@@ -10,6 +10,10 @@ nav a {
 
     @include transition(all 0.3s);
 
+    & .container-fluid{
+        background-color: $color-white;
+    }
+
     &-logo {
         @include transition(all 0.3s);
         height: $navbar-height;
@@ -137,6 +141,10 @@ ul.dropdown-menu > li.active > a {
         height: $navbar-small-height;
         line-height: $navbar-small-height;
     }
+
+    & .navbar-RedHat{
+        font-size: 0.8em;
+    }
 }
 
 .navbar .label-primary {
@@ -145,8 +153,29 @@ ul.dropdown-menu > li.active > a {
     background-color: $color-yellow;
 }
 
-
-// ----- Only on mobile ---------------------------------------------------------------------------
+.navbar{
+    &-RedHat{
+        @include display-flex();
+        & img.navbar-RedHat--logo{
+            display: inline-block;
+            @include align-self(flex-end);
+            height: 2em;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            margin-bottom: 0.25em;
+        }
+        &--featuring{
+            display: inline-block;
+            height: 1em;
+            line-height: 1em;
+            @include align-self(flex-end);
+            margin-bottom: 0.6em;
+        }
+    }
+}
+#navbar-RedHat{
+    margin-left: -25px;
+}
 
 
 .navbar-fixed-top .navbar-collapse {
@@ -173,6 +202,7 @@ ul.dropdown-menu > li.active > a {
 
 }
 
+// ----- Only on mobile ---------------------------------------------------------------------------
 
 @media (max-width: $screen-md-min) {
 
@@ -236,6 +266,11 @@ ul.dropdown-menu > li.active > a {
             border-color: $color-blue;
             color: $color-black-light;
         }
+    }
+
+    #navbar-RedHat{
+        font-size: 0.8em;
+        margin-left: 0;
     }
 
 }
