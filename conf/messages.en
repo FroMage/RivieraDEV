@@ -55,8 +55,8 @@ views.application.subscribe.unavailable=Registration is not open yet.
 views.application.subscribe.subscribe=Subscribe to the newsletter to be notified when registration opens.
 
 views.application.access.title=Practical information
-views.application.access.in-sophia.1=In Sophia-Antipolis
-views.application.access.in-sophia.2=Meet at the <strong>Skema Business School</strong>, in the heart of Sophia-Antipolis.
+views.application.access.in-sophia.1=In Sophia Antipolis
+views.application.access.in-sophia.2=Meet at the <strong>Skema Business School</strong> campus, in the heart of Sophia Antipolis.
 views.application.access.dates.1=May 11th-12th 2017
 views.application.access.dates.2=Riviera DEV takes place mid-May when the weather turns back to gorgeous.
 views.application.access.car.title=Coming by car

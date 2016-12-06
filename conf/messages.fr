@@ -55,8 +55,8 @@ views.application.subscribe.unavailable=Les inscriptions ne sont pas encore ouve
 views.application.subscribe.subscribe=Soyez dans les premiers à connaître le programme et à acheter votre billet.
 
 views.application.access.title=Infos pratiques
-views.application.access.in-sophia.1=À Sophia-Antipolis
-views.application.access.in-sophia.2=Rendez-vous au <strong>Skema Business School</strong>, en plein coeur de Sophia-Antipolis.
+views.application.access.in-sophia.1=À Sophia Antipolis
+views.application.access.in-sophia.2=Rendez-vous au campus <strong>Skema Business School</strong>, en plein coeur de Sophia Antipolis.
 views.application.access.dates.1=Les 11 et 12 mai 2017
 views.application.access.dates.2=Riviera DEV se déroulera mi-mai lorsque les beaux jours reviendront.
 views.application.access.car.title=Accès en voiture
