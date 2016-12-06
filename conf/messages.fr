@@ -21,8 +21,7 @@ views.main.editions.2011=Édition 2011
 views.main.private=Espace privé
 views.main.follow=Suivez-nous sur
 views.main.motto=La conférence du Soleil
-views.main.logo.featuring.before=featuring a&nbsp;
-views.main.logo.featuring.after=&nbsp;track
+views.main.logo.featuring=featuring a track by&nbsp;
 
 views.application.index.title=Accueil
 views.application.index.subtitle=Le 11 et 12 mai 2017 à Sophia-Antipolis
