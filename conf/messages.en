@@ -67,9 +67,8 @@ views.application.access.car.from.nice.2=After the toll, turn left "direction an
 views.application.access.car.from.nice.3=After a large curb, turn right in the direction of "Grasse-Vallauris" (route de Grasse).
 views.application.access.car.from.nice.4=Go straight (approximately 1.4 km), you will arrive on the Parc road.
 views.application.access.car.from.nice.5=Go straight then turn right on "accès 3 les lucioles". You are on the Albert Einstein road.
-views.application.access.car.skema.1=SKEMA Business School: Take the first right (rue Ludwig Van Beethoven) and the first right again (rue Dostoïevski).
-views.application.access.car.skema.2=The entrance to SKEMA is at N°60 on your right.
-views.application.access.car.skema.3=SKEMA Bachelor: Once on the rue Albert Einstein, the entrance to Bachelor is on your left.
+views.application.access.car.skema.1=Take the first right (rue Ludwig Van Beethoven) and the first right again (rue Dostoïevski).
+views.application.access.car.skema.2=The entrance to SKEMA Business School campus is at N°60 on your right.
 views.application.access.train.title=Coming by train
 views.application.access.train.station.to.1=The nearest train station to Sophia Antipolis is that of <strong>Antibes</strong>.
 views.application.access.train.station.to.2=Depending on your departing train station, check the timetables:
@@ -89,7 +88,7 @@ views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" targ
 views.application.access.bus.from.elsewhere.1=From other cities : use
 views.application.access.bus.from.elsewhere.2=the regional network of TAM busses (Transports Alpes-Maritimes)
 views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis.
-views.application.access.plane.title=Coming by plaine
+views.application.access.plane.title=Coming by plane
 views.application.access.plane.1=The Nice Côte d'Azur airport
 views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free shuttle to get to Terminal 1.
 views.application.access.plane.3=Take <a href="https://www.departement06.fr/vous-deplacer-en-bus/lignes-et-horaires-3029.html" target="_blank">the 230 bus</a>:
