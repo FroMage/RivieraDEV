@@ -14,12 +14,16 @@ nav a {
         background-color: $color-white;
     }
 
+    &-logos {
+        margin-left: 0.5em;
+    }
+
     &-logo {
         @include transition(all 0.3s);
         height: $navbar-height;
         line-height: $navbar-height;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0;
+        margin: 0;
         
         img {
             height: 100%;
@@ -154,6 +158,9 @@ ul.dropdown-menu > li.active > a {
 }
 
 .navbar{
+    &-rivieradev {
+        margin-right: 0.3em;
+    }
     &-RedHat{
         @include display-flex();
         & img.navbar-RedHat--logo{
@@ -173,8 +180,9 @@ ul.dropdown-menu > li.active > a {
         }
     }
 }
+// To override bootstrap selector
 #navbar-RedHat{
-    margin-left: -25px;
+    margin-left: 0;
 }
 
 
@@ -213,6 +221,10 @@ ul.dropdown-menu > li.active > a {
     .navbar-fixed-top {
         position: inherit;
         margin-bottom: 0;
+
+        // Override bootstrap design
+        background-image: none;
+        background-color: $color-white;
     }
 
     .navbar-animated{

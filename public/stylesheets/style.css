@@ -265,6 +265,9 @@ nav a {
 .navbar-animated .container-fluid {
   background-color: #fff;
 }
+.navbar-animated-logos {
+  margin-left: 0.5em;
+}
 .navbar-animated-logo {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -272,8 +275,8 @@ nav a {
   transition: all 0.3s;
   height: 75px;
   line-height: 75px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
 .navbar-animated-logo img {
   height: 100%;
@@ -385,6 +388,9 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   background-color: #FDB742;
 }
 
+.navbar-rivieradev {
+  margin-right: 0.3em;
+}
 .navbar-RedHat {
   display: -webkit-flex;
   display: flex;
@@ -408,7 +414,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 
 #navbar-RedHat {
-  margin-left: -25px;
+  margin-left: 0;
 }
 
 .navbar-fixed-top .navbar-collapse {
@@ -439,6 +445,8 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   .navbar-fixed-top {
     position: inherit;
     margin-bottom: 0;
+    background-image: none;
+    background-color: #fff;
   }
 
   .navbar-animated {
