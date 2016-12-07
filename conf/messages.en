@@ -24,14 +24,14 @@ views.main.motto=The shiny conference
 views.main.logo.featuring=featuring a track by&nbsp;
 
 views.application.index.title=Welcome
-views.application.index.subtitle=May 11-12 2017 in Sophia-Antipolis
+views.application.index.subtitle=May 11-12 2017 in Sophia Antipolis
 views.application.index.tickets=Tickets
 views.application.index.cfp.join=Talk at Riviera DEV
 views.application.index.sponsors=Our Sponsors
 views.application.index.sponsors.tagline=Without them, none of this would be possible!
 views.application.index.sponsors.join=Become sponsor
 views.application.index.intro.1=Riviera DEV, that's <strong>2 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
-views.application.index.intro.2=in the heart of Sophia-Antipolis, <strong>the most beautiful European technopole</strong>.
+views.application.index.intro.2=in the heart of Sophia Antipolis, <strong>the most beautiful European technopole</strong>.
 views.application.index.points.1=A conference for developpers, but not only
 views.application.index.points.2=A mix of technologies: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic...
 views.application.index.points.3=The ideal conference to update your skills in a rapidly evolving field
