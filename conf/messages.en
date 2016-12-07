@@ -156,18 +156,11 @@ views.application.becomeSponsor.packs.platinum.keynote=Your brand quoted during 
 views.application.becomeSponsor.packs.platinum.price=Contact us
 views.application.becomeSponsor.packs.platinum.available=Limited to 1 exclusive partner
 
-views.application.becomeSponsor.packs.breakfasts.title=Breakfasts Package
-views.application.becomeSponsor.packs.breakfasts.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>breakfasts on Thursday & Friday</strong>
-views.application.becomeSponsor.packs.breakfasts.booth=<strong>A booth</strong> in the breakfast area during the breakfasts <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
-views.application.becomeSponsor.packs.breakfasts.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
-views.application.becomeSponsor.packs.breakfasts.price=1,000€
-views.application.becomeSponsor.packs.breakfasts.available=Limited to 1 partner
-
 views.application.becomeSponsor.packs.lunches.title=Lunches Package
-views.application.becomeSponsor.packs.lunches.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>lunches on Thursday & Friday</strong>
-views.application.becomeSponsor.packs.lunches.booth=<strong>A booth</strong> in the lunch area during the lunches <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
+views.application.becomeSponsor.packs.lunches.brand=Your brand quoted and advertised on a <strong>banner</strong> during the <strong>breakfasts and lunches on Thursday & Friday</strong>
+views.application.becomeSponsor.packs.lunches.booth=<strong>A booth</strong> in the lunch area during the breakfasts and lunches <em>– we ask anyone with a booth at Riviera DEV to make sure it is attractive and features geeky attractions</em>
 views.application.becomeSponsor.packs.lunches.mailing=Sponsorship advertised on our <strong>mailing-list</strong> and <strong>the social media</strong>
-views.application.becomeSponsor.packs.lunches.price=2,000€
+views.application.becomeSponsor.packs.lunches.price=2,500€
 views.application.becomeSponsor.packs.lunches.available=Limited to 1 partner
 
 views.application.becomeSponsor.packs.party.title=Party Package

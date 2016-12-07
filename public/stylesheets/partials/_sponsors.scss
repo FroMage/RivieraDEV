@@ -114,7 +114,6 @@
 }
 
 .sponsorship {
-    padding: 2em;
     background-color: $color-white;
     @include display-flex();
     @include flex-direction(column);
@@ -182,7 +181,7 @@
 
         
         &--lunches .sponsorship-title:after{
-            background-image: url('../images/icons/burger.svg');
+            background-image: url('../images/icons/lunch.svg');
         }
 
         &--party .sponsorship-title:after{
@@ -225,15 +224,21 @@
         font-style: italic;
     }
 
+    &-top{
+        padding: 2em 2em 0 2em;
+    }
+
     &-bottom{
         text-align: center;
+        padding-bottom: 2em;
     }
 
     &-contactUs{
         margin-top: 1em;
         margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
-
 }
 
 @media (min-width: $screen-md-min) {
