@@ -33,11 +33,12 @@ views.application.index.sponsors.join=Become sponsor
 views.application.index.intro.1=Riviera DEV, that's <strong>2 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
 views.application.index.intro.2=in the heart of Sophia Antipolis, <strong>the most beautiful European technopole</strong>.
 views.application.index.points.1=A conference for developpers, but not only
-views.application.index.points.2=A mix of technologies: Java, JavaScript, Angular, Git, MongoDB, Docker, Go, Ionic...
+views.application.index.points.2=A rich mix of topics: Java & alternate languages, Front-end & UX, Mobile & IoT, Big Data & AI, NoSQL, Containers & Cloud, Performance, Agility, DevOps...
 views.application.index.points.3=The ideal conference to update your skills in a rapidly evolving field
 views.application.index.points.4=A chance to meet and share with other people from the industry
 views.application.index.points.5=An evening to share with <i>apéritif</i>, live music and local beer
 views.application.index.points.6=Thanks to our sponsors, a very reasonable price including food and cocktail
+views.application.index.schedule=Discover the program
 views.application.index.address=Address
 views.application.index.access=How to get there
 views.application.index.get-in-touch=Get in touch!
@@ -173,7 +174,8 @@ views.application.becomeSponsor.packs.party.available=Limited to 1 partner
 views.application.becomeSponsor.contact-us=To become a Riviera DEV sponsor, contact us by email at <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
 
 views.application.schedule.title=Program
-views.application.schedule.unavailable=The program is not available yet.
+views.application.schedule.intro=Riviera DEV is a 2 days conference with at least 3 tracks on a rich mix of topics : Java and the JVM (present and future), alternate languages, Front-end technologies and UX, Mobile and IoT, Big Data and Machine Learning, NoSQL, Containers, VMs and Cloud Computing, Performance, Reactive Programming, Agility, Good Practices, DevOps, ...
+views.application.schedule.unavailable=The program is not available yet, but you can have a look at the <a href="http://2015.rivieradev.fr/programme" target="_blank">2015 session</a> as well as the <a href="http://2016.rivieradev.fr/programme" target="_blank">2016 session</a>.
 views.application.schedule.subscribe=Subscribe to the newsletter to be notified when the program is published.
 
 views.application.cfp.title=Call for papers

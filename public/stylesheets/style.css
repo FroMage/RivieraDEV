@@ -1230,3 +1230,7 @@ a.footer-rs-instagram:active {
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
+.schedule-intro {
+  margin-bottom: 3em;
+}
