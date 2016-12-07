@@ -21,4 +21,6 @@ $(function() {
     $('#js-countdown').countdown(finalDate, function(event) {
         $(this).html(event.strftime(format));
     });
+
+    //$('#js-countdown').countdown("pause");
 });
