@@ -23,6 +23,8 @@ views.main.follow=Follow us on
 views.main.motto=The shiny conference
 views.main.logo.featuring=featuring a track by&nbsp;
 
+views.application.openGraph=Riviera DEV, that's 2 days of conferences and workshops on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
+
 views.application.index.title=Welcome
 views.application.index.subtitle=May 11-12 2017 in Sophia Antipolis
 views.application.index.tickets=Tickets

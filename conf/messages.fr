@@ -23,6 +23,8 @@ views.main.follow=Suivez-nous sur
 views.main.motto=La conférence du Soleil
 views.main.logo.featuring=featuring a track by&nbsp;
 
+views.application.openGraph=Riviera DEV, c'est 2 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
+
 views.application.index.title=Accueil
 views.application.index.subtitle=Le 11 et 12 mai 2017 à Sophia Antipolis
 views.application.index.tickets=Inscrivez-vous

@@ -3,16 +3,25 @@
 <html lang="fr">
 <head>
     <title>#{get 'title' /} - Riviera DEV</title>
+    <meta name="description" content="&{'views.application.openGraph'}" />
 
     <!--<link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">-->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@RivieraDEV" />
-    <meta property="og:title" content="#{get 'title' /} - Riviera DEV" />
-    <meta property="og:type" content="image/png" />
+    <meta name="twitter:title" content="Riviera DEV" />
+    <meta name="twitter:description" content="&{'views.application.openGraph'}" />
+    <meta name="twitter:image" content="@@{'/public/images/logo_open_graph.png'}" />
+    <meta name="twitter:image:alt" content="Riviera DEV" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Riviera DEV" />
+    <meta property="og:description" content="&{'views.application.openGraph'}" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="@@{Application.index}" />
     <meta property="og:image" content="@@{'/public/images/logo_open_graph.png'}" />
 
