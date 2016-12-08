@@ -42,7 +42,8 @@ public class Organiser extends Model {
 	}
 
 	public static List<Organiser> organisers() {
-		return find("orga = true ORDER BY firstname, lastname").fetch();
+		//return find("orga = true ORDER BY firstname, lastname").fetch();
+		return find("ORDER BY firstname, lastname").fetch();
 	}
 
 	public static List<Organiser> cfp() {
