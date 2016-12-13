@@ -57,7 +57,7 @@ public class Application extends Controller {
     }
     
     public static void about() {
-        render();
+    	organisers();
     }
 
     public static void access() {
