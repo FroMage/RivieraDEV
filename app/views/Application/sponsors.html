@@ -21,7 +21,7 @@
     %{ if (sponsors != null && sponsors.size() > 0) {
         for (models.SponsorShip sponsorShip : sponsors.keySet()) {
     }%
-        #{sponsorsByLevelDetails sponsors: sponsors.get(sponsorShip), title: sponsorShip.title, level: sponsorShip.code/}
+        #{sponsorsByLevelDetails sponsors: sponsors.get(sponsorShip), level: sponsorShip.code/}
     %{
         }
     }

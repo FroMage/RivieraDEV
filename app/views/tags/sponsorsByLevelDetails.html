@@ -1,24 +1,37 @@
 #{if !_sponsors.empty}
-<div class="partenaires">
-    <div class="partenaires-level">
-        <div class="partenaires-title partenaires-title-${_level}">${_title}</div>
-    </div>
+<div class="">
+
+    <div class="partenaires-title partenaires-title-${_level}"><span class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</span></div>
+
     #{list items: _sponsors, as: 'sponsor'}
-        <div class="row partenaire-description">
-            <div class="col-sm-4 col-md-3 text-center">
-                <a class="partenaire-logo" href="${sponsor.companyURL}" title="${sponsor.company}">
-                    <img class="partenaire-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
-                </a>
+        <div class="row partenaireDetails">
+
+            <div class="col-sm-3">
+                <div class="partenaireDetails-logo text-center">
+                    <img class="partenaireDetails-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" alt=""/>
+                </div>
             </div>
-            <div class="col-sm-8 col-md-9 partenaire-description-about">
-                <div>${sponsor.about?.md()}</div>
+
+            <div class="col-sm-5 partenaireDetails-desc">
+                <div class="partenaireDetails-name">${sponsor.company}</div>
+                <div class="partenaireDetails-about">${sponsor.about?.md()}</div>
+            </div>
+
+            <div class="col-sm-4 partenaireDetails-links">
                 #{if sponsor.companyURL}
-                <div><i class="fa fa-globe" aria-hidden="true"></i> <a href="${sponsor.companyURL}" title="${sponsor.company}">${sponsor.companyURL}</a></div>
+                <div class="partenaireDetails-link">
+                    <i class="fa fa-globe partenaireDetails-icon" aria-hidden="true"></i> 
+                    <a href="${sponsor.companyURL}" title="${sponsor.company}">${sponsor.companyURL}</a>
+                </div>
                 #{/if}
                 #{if sponsor.twitterAccount}
-                <div><i class="fa fa-twitter" aria-hidden="true"></i> <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a></div>
+                <div class="partenaireDetails-link">
+                    <i class="fa fa-twitter partenaireDetails-icon" aria-hidden="true"></i> 
+                    <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
+                </div>
                 #{/if}
             </div>
+            <div class="clearfix"></div>
         </div>
     #{/list}
 </div>

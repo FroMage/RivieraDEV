@@ -46,9 +46,12 @@ public class Application extends Controller {
 		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
 		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
 		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
-		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();
+		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();				
 
-		render(googleMapApiKey, sponsors, sponsorsPreviousYears, speakersPreviousYears, latestNews);
+		boolean lunchesAndPartySoldOut = sponsors.get(SponsorShip.Lunches) != null && sponsors.get(SponsorShip.Lunches).size() > 0
+		                              && sponsors.get(SponsorShip.Party) != null && sponsors.get(SponsorShip.Party).size() > 0;
+
+		render(googleMapApiKey, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, latestNews);
     }
 
     public static void news() {
@@ -168,14 +171,14 @@ public class Application extends Controller {
 	}
 
 	private static SponsorsToDisplay getSponsorsToDisplay() {
-		//boolean mustDisplaySponsorsPreviousYears = true;
+		boolean mustDisplaySponsorsPreviousYears = true;
 
 		Map<SponsorShip, List<Sponsor>> sponsors = new TreeMap<SponsorShip, List<Sponsor>>();
 		for(SponsorShip sponsorShip : SponsorShip.values()) {
 			if (sponsorShip != SponsorShip.PreviousYears) {
 				List<Sponsor> sponsorsBySponsorShip = Sponsor.find("level", sponsorShip).fetch();
 				if (sponsorsBySponsorShip != null && sponsorsBySponsorShip.size() > 0) {
-					//mustDisplaySponsorsPreviousYears = false;
+					mustDisplaySponsorsPreviousYears = false;
 					Collections.sort(sponsorsBySponsorShip);
 					sponsors.put(sponsorShip, sponsorsBySponsorShip);
 				}
@@ -183,10 +186,10 @@ public class Application extends Controller {
 		}
 
 		List<Sponsor> sponsorsPreviousYears = null;
-		//if (mustDisplaySponsorsPreviousYears) {
+		if (mustDisplaySponsorsPreviousYears) {
 			sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
 			Collections.sort(sponsorsPreviousYears);
-		//}
+		}
 
 		return new SponsorsToDisplay(sponsors, sponsorsPreviousYears);
 	}

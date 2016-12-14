@@ -156,16 +156,15 @@
         <p class="home-subtitle partenaires-header-subtitle container">&{'views.application.index.sponsors.tagline'}</p>
     </div>
 
-    <!--
-    %{ if (sponsors != null && sponsors.size() > 0) {
-        for (models.SponsorShip sponsorShip : sponsors.keySet()) {
-    }%
-        #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), title: sponsorShip.title, level: sponsorShip.code/}
-    %{
-        }
-    }
-    }%
-    -->
+    
+    %{ if (sponsors != null && sponsors.size() > 0) { }%
+    <div class="row">
+    %{ for (models.SponsorShip sponsorShip : sponsors.keySet()) { }%
+        #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), level: sponsorShip.code, lunchesAndPartySoldOut: lunchesAndPartySoldOut/}
+    %{ } // End for loop }%
+    </div>
+    %{ } // End if condition }%
+
 
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
 

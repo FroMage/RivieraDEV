@@ -1,23 +1,18 @@
 package models;
 
 public enum SponsorShip {
-	Gold			("or", "Or"), 
-	Silver			("argent", "Argent"), 
-	Bronze			("bronze", "Bronze"), 
-	Lanyard			("lanyard", "Tour de cou"), 
-	Buffet			("buffet", "Buffet"), 
-	Apero			("apero", "Apéritif"), 
-	Breakfast		("breakfast", "Petit déjeuner"), 
-	PreviousYears	("previousYears", "Années précédentes");
+	Platinum		("platinum"),
+	Gold			("gold"), 
+	Silver			("silver"), 
+	Lunches			("lunches"), 
+	Party			("party"),
+	PreviousYears	("previousYears");
 
 	private final String code;
-    private final String title;
 
-	SponsorShip(String code, String title) {
+	SponsorShip(String code) {
 		this.code = code;
-		this.title = title;
 	}
 
 	public String getCode() { return this.code; }
-	public String getTitle() { return this.title; }
 }

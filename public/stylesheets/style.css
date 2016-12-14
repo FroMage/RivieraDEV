@@ -792,12 +792,12 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   padding-bottom: 1.5em;
 }
 .partenaires-title {
-  margin: 1em auto 0 auto;
-  font-family: 'Righteous', cursive;
+  margin: 1.5em auto 0 auto;
   text-align: center;
   text-transform: uppercase;
   font-size: 2.5em;
-  width: 80%;
+  font-weight: 700;
+  width: 100%;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
@@ -810,18 +810,21 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 .partenaires-title:before, .partenaires-title:after {
   content: '';
-  background-color: #b6b6b6;
+  background-color: #777;
   height: 1px;
   flex-grow: 1;
 }
-.partenaires-title-or {
-  color: #f8a912;
+.partenaires-title-platinum {
+  color: #AC2742;
 }
-.partenaires-title-argent {
-  color: #b6b6b6;
+.partenaires-title-silver {
+  color: #3363C9;
 }
-.partenaires-title-bronze {
-  color: #bd3a13;
+.partenaires-title-gold {
+  color: #DD7E00;
+}
+.partenaires-title-lunches, .partenaires-title-party {
+  color: #777;
 }
 .partenaires-level {
   position: relative;
@@ -841,9 +844,9 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 
 .partenaire-logo {
-  width: 200px;
-  height: 150px;
-  line-height: 150px;
+  width: 250px;
+  height: 115px;
+  line-height: 115px;
   display: inline-block;
   margin: 10px;
   text-align: center;
@@ -852,22 +855,61 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   overflow: hidden;
   transition: all 0.2s;
 }
+.partenaire-logo-platinum {
+  width: 350px;
+  height: 161px;
+  line-height: 161px;
+}
+.partenaire-logo-silver {
+  width: 180px;
+  height: 83px;
+  line-height: 83px;
+}
 .partenaire-logo:hover, .partenaire-logo:focus, .partenaire-logo:active {
   border-color: #ddd;
 }
 .partenaire-logo-img {
-  max-width: 80%;
+  max-width: 90%;
   max-height: 80%;
   vertical-align: middle;
   transition: all 0.2s;
 }
-.partenaire-description {
-  margin-top: 20px;
+
+.partenaireDetails {
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
-.partenaire-description-about {
-  margin-top: 10px;
+.partenaireDetails-logo {
+  max-width: 250px;
+  height: 115px;
+  line-height: 115px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+}
+.partenaireDetails-logo-img {
+  max-width: 80%;
+  max-height: 80%;
+  height: auto;
+}
+.partenaireDetails-name {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  color: #0090CD;
+  font-size: 1.3em;
+}
+.partenaireDetails-link {
+  margin-bottom: 0.5em;
+}
+.partenaireDetails-icon {
+  color: #FDB742;
 }
 
+@media (max-width: 767px) {
+  .partenaireDetails-name {
+    text-align: center;
+    margin-top: 0.5em;
+  }
+}
 .sponsorship {
   background-color: #fff;
   display: -webkit-flex;
