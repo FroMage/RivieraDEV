@@ -29,7 +29,7 @@
                     #{/if}
                 </div>
                 <div class="partenaireDetails-about">
-                    #{if play.i18n.Lang.get() == "en"}
+                    #{if play.i18n.Lang.get() == "en" && sponsor.aboutEN}
                         ${sponsor.aboutEN?.md()}
                     #{/if}
                     #{else}
