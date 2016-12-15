@@ -18,14 +18,9 @@
 
 	</div>
 
-    %{ if (sponsors != null && sponsors.size() > 0) {
-        for (models.SponsorShip sponsorShip : sponsors.keySet()) {
-    }%
+    #{list sponsors?.keySet(), as: 'sponsorShip'}
         #{sponsorsByLevelDetails sponsors: sponsors.get(sponsorShip), level: sponsorShip.code/}
-    %{
-        }
-    }
-    }%
+    #{/list}
 
 
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}

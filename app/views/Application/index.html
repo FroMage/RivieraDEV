@@ -157,13 +157,13 @@
     </div>
 
     
-    %{ if (sponsors != null && sponsors.size() > 0) { }%
-    <div class="row">
-    %{ for (models.SponsorShip sponsorShip : sponsors.keySet()) { }%
-        #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), level: sponsorShip.code, lunchesAndPartySoldOut: lunchesAndPartySoldOut/}
-    %{ } // End for loop }%
-    </div>
-    %{ } // End if condition }%
+    #{if sponsors != null && !sponsors.isEmpty()}
+        <div class="row">
+            #{list sponsors.keySet(), as: 'sponsorShip'}
+                #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), level: sponsorShip.code, lunchesAndPartySoldOut: lunchesAndPartySoldOut/}
+            #{/list}
+        </div>
+    #{/if}
 
 
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
