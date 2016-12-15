@@ -14,7 +14,14 @@
 
             <div class="col-sm-5 partenaireDetails-desc">
                 <div class="partenaireDetails-name">${sponsor.company}</div>
-                <div class="partenaireDetails-about">${sponsor.about?.md()}</div>
+                <div class="partenaireDetails-about">
+                    #{if play.i18n.Lang.get() == "en"}
+                        ${sponsor.aboutEN?.md()}
+                    #{/if}
+                    #{else}
+                        ${sponsor.about?.md()}
+                    #{/else}
+                </div>
             </div>
 
             <div class="col-sm-4 partenaireDetails-links">

@@ -30,6 +30,11 @@ public class Sponsor extends Model implements Comparable<Sponsor> {
 	@Required
 	@MaxSize(10000)
 	public String about;
+	@Type(type="org.hibernate.type.StringClobType")
+	@Lob
+	@Required
+	@MaxSize(10000)
+	public String aboutEN;
 	@URL
 	public String companyURL;
 	public String twitterAccount;
