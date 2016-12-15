@@ -4,7 +4,7 @@
     <div class="partenaires-title partenaires-title-${_level}"><span class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</span></div>
 
     #{list items: _sponsors, as: 'sponsor'}
-        <div class="row partenaireDetails">
+        <div class="row partenaireDetails" id="${sponsor.company.slugify()}">
 
             <div class="col-sm-3">
                 <div class="partenaireDetails-logo text-center">
