@@ -8,12 +8,26 @@
 
             <div class="col-sm-3">
                 <div class="partenaireDetails-logo text-center">
+                    #{if sponsor.companyURL}
+                        <a href="${sponsor.companyURL}" title="${sponsor.company}">
+                    #{/if}
                     <img class="partenaireDetails-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" alt=""/>
+                    #{if sponsor.companyURL}
+                        </a>
+                    #{/if}
                 </div>
             </div>
 
             <div class="col-sm-5 partenaireDetails-desc">
-                <div class="partenaireDetails-name">${sponsor.company}</div>
+                <div class="partenaireDetails-name">
+                    #{if sponsor.companyURL}
+                        <a href="${sponsor.companyURL}" title="${sponsor.company}">
+                    #{/if}
+                    ${sponsor.company}
+                    #{if sponsor.companyURL}
+                        </a>
+                    #{/if}
+                </div>
                 <div class="partenaireDetails-about">
                     #{if play.i18n.Lang.get() == "en"}
                         ${sponsor.aboutEN?.md()}
