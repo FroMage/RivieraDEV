@@ -268,13 +268,23 @@ nav a {
 .navbar-animated-logos {
   margin-left: 0.5em;
 }
+.navbar-animated-brand {
+  padding: 0;
+  height: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 .navbar-animated-logo {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 75px;
-  line-height: 75px;
   padding: 0;
   margin: 0;
 }
@@ -370,7 +380,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   height: 50px;
   line-height: 50px;
 }
-.navbar-animated-small .navbar-animated-logo {
+.navbar-animated-small .navbar-rivieradev {
   height: 50px;
   line-height: 50px;
 }
@@ -390,6 +400,8 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 
 .navbar-rivieradev {
   margin-right: 0.3em;
+  height: 75px;
+  line-height: 75px;
 }
 .navbar-RedHat {
   display: -webkit-flex;
@@ -402,7 +414,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   height: 2em;
   margin-left: 0.5em;
   margin-right: 0.5em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
 }
 .navbar-RedHat--featuring {
   display: inline-block;
@@ -410,11 +422,12 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   line-height: 1em;
   -webkit-align-self: flex-end;
   align-self: flex-end;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.45em;
 }
 
 #navbar-RedHat {
   margin-left: 0;
+  align-self: flex-end;
 }
 
 .navbar-fixed-top .navbar-collapse {
@@ -453,7 +466,11 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
     height: 50px;
     line-height: 50px;
   }
-  .navbar-animated-logo {
+  .navbar-animated-brand {
+    width: calc(100vw - 80px);
+  }
+
+  .navbar-rivieradev {
     height: 50px;
     line-height: 50px;
   }
@@ -492,7 +509,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   }
 
   #navbar-RedHat {
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin-left: 0;
   }
 }
