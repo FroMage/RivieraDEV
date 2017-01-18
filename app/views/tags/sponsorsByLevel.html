@@ -17,7 +17,7 @@
 #{/else}
 
     <div class="partenaires-level">
-        <div class="partenaires-title partenaires-title-${_level}"><span class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</span></div>
+        <div class="partenaires-title partenaires-title-${_level}"><h3 class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</h3></div>
         <div class="partenaires-list">
             #{list items: _sponsors, as: 'sponsor'}
                 <a class="partenaire-logo partenaire-logo-${_level}" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}">
