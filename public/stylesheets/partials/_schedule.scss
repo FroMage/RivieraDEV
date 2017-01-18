@@ -1,6 +1,43 @@
 .schedule {
 
     &-intro {
-        margin-bottom: 3em;
     }
+}
+
+.scheduleBasic {
+    margin-bottom: 3em;
+
+    &-day {
+        @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
+        color: #fff;
+        line-height: 1.5em;
+        margin-left: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &-day1 {
+        background-color: $color-blue-transparent;
+    }
+    &-day2 {
+        background-color: $color-yellow-transparent;
+    }
+
+    &-slot {
+        border-bottom: 1px solid $color-gray-light;
+        margin-right: 0;
+        font-size: 1.25em;
+    }
+
+    &-time {
+        font-family: 'Oswald', sans-serif;
+        font-weight: normal;
+        padding-right: 0;
+        line-height: 2em;
+    }
+
+    &-title {
+        line-height: 2em;
+    }
+
 }

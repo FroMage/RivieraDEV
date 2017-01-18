@@ -23,6 +23,12 @@ public class Slot extends Model {
 	@Required
 	public Date endDate;
 	
+	// Only used for the "basic" schedule (displayed before knowing the exact program) 
+	@Field("labelEN")
+	public String labelEN;
+	@Field("labelFR")
+	public String labelFR;
+
 	@OneToMany(mappedBy = "slot")
 	public List<Talk> talks = new ArrayList<Talk>();
 	
@@ -35,15 +41,21 @@ public class Slot extends Model {
 		
 		strbuf.append(dateFormat.format(startDate)).append(" ")
 		.append(timeFormat.format(startDate)).append(" - ").append(timeFormat.format(endDate));
-		strbuf.append(" (");
-		boolean first = true;
-		for(Talk talk : talks){
-			if(!first)
-				strbuf.append(", ");
-			first = false;
-			strbuf.append(talk.track);
+
+		if (labelEN != null && labelEN.length() > 0) {
+			strbuf.append(" (" + labelEN + ")");	
+		
+		} else {
+			strbuf.append(" (");
+			boolean first = true;
+			for(Talk talk : talks){
+				if(!first)
+					strbuf.append(", ");
+				first = false;
+				strbuf.append(talk.track);
+			}
+			strbuf.append(")");
 		}
-		strbuf.append(")");
 		return strbuf.toString();
 	}
 	

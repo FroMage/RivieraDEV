@@ -27,7 +27,7 @@
 						value_date = params[field.name] ?: '';
 						value_time = params[field.name+"_time"] ?: ''; 
 					}%
-					<label for="${field.id}">&{'startDate'}</label>
+					<label for="${field.id}">&{'endDate'}</label>
 					<input id="${field.id}" class="${field.errorClass} date" type="text" name="${field.name}" value="${value_date}" size="10" />
 					<input id="${field.id}_time" class="${field.errorClass} time" type="text" name="${field.name}_time" value="${value_time}" size="10" />
 					#{ifError field.name}

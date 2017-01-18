@@ -31,7 +31,7 @@
 						value_time = params[field.name+"_time"] ?: 
 							field.error?.message == 'validation.required' ? '' : field.value.format('HH:mm');
 					}%
-					<label for="${field.id}">&{'startDate'}</label>
+					<label for="${field.id}">&{'endDate'}</label>
 					<input id="${field.id}" class="${field.errorClass} date" type="text" name="${field.name}" value="${value_date}" size="10" />
 					<input id="${field.id}_time" class="${field.errorClass} time" type="text" name="${field.name}_time" value="${value_time}" size="10" />
 					#{ifError field.name}
@@ -55,7 +55,7 @@
 
 	<script type="text/javascript">
 		jQuery(".date").calendricalDate({});
-		jQuery(".time").calendricalTime({isoTime: true, timeInterval: 15, minTime: {hour: 9, minute: 0}});
+		jQuery(".time").calendricalTime({isoTime: true, timeInterval: 15, minTime: {hour: 8, minute: 0}});
 	</script>
 
 </div>
