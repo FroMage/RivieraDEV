@@ -190,7 +190,7 @@ views.application.schedule.subscribe=Subscribe to the newsletter to be notified 
 
 views.application.cfp.title=Call for papers
 views.application.cfp.opens=<strong>CFP opens:</strong> early December
-views.application.cfp.closes=<strong>CFP closes:</strong> mid-February
+views.application.cfp.closes=<strong>CFP closes:</strong> February 15
 views.application.cfp.announce=<strong>Program announced</strong> early March
 views.application.cfp.conference.format=Conference talks last one hour including questions.
 views.application.cfp.propose=Submit a talk

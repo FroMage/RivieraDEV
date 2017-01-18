@@ -190,7 +190,7 @@ views.application.schedule.subscribe=Abonnez-vous à la newsletter pour être pr
 
 views.application.cfp.title=Appel aux orateurs
 views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> Début décembre
-views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> Mi-février
+views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> 15 février
 views.application.cfp.announce=<strong>Annonce du programme&nbsp;:</strong> Début mars
 views.application.cfp.conference.format=Chaque talk doit durer 1 heure questions comprises.
 views.application.cfp.propose=Proposez un sujet
