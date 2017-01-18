@@ -1,7 +1,7 @@
 #{if !_sponsors.empty}
 <div class="">
 
-    <div class="partenaires-title partenaires-title-${_level}"><span class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</span></div>
+    <div class="partenaires-title partenaires-title-${_level}"><h2 class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</h2></div>
 
     #{list items: _sponsors, as: 'sponsor'}
         <div class="row partenaireDetails" id="${sponsor.company.slugify()}">
@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-sm-5 partenaireDetails-desc">
-                <div class="partenaireDetails-name">
+                <h3 class="partenaireDetails-name">
                     #{if sponsor.companyURL}
                         <a href="${sponsor.companyURL}" title="${sponsor.company}">
                     #{/if}
@@ -27,7 +27,7 @@
                     #{if sponsor.companyURL}
                         </a>
                     #{/if}
-                </div>
+                </h3>
                 <div class="partenaireDetails-about">
                     #{if play.i18n.Lang.get() == "en" && sponsor.aboutEN}
                         ${sponsor.aboutEN?.md()}

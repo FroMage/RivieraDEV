@@ -37,6 +37,10 @@ $sponsor-silver-height: 83px;
 
         &-text {
             padding: 0 0.5em;
+            margin: 0;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
         }
     }
 
@@ -152,10 +156,12 @@ $sponsor-silver-height: 83px;
     }
 
     &-name {
-        margin-bottom: 1em;
+        margin: 0 0 1em 0;
         text-transform: uppercase;
         color: $color-blue;
         font-size: 1.3em;
+        line-height: inherit;
+        font-weight: inherit;
     }
 
     &-link {

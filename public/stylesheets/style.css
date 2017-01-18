@@ -824,6 +824,10 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 .partenaires-title-text {
   padding: 0 0.5em;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 .partenaires-title:before, .partenaires-title:after {
   content: '';
@@ -909,10 +913,12 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   height: auto;
 }
 .partenaireDetails-name {
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
   text-transform: uppercase;
   color: #0090CD;
   font-size: 1.3em;
+  line-height: inherit;
+  font-weight: inherit;
 }
 .partenaireDetails-link {
   margin-bottom: 0.5em;
