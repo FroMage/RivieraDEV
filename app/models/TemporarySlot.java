@@ -13,7 +13,7 @@ import play.db.jpa.Model;
 
 @SuppressWarnings("serial")
 @Entity
-public class Slot extends Model {
+public class TemporarySlot extends Model {
 	
 	@Field("startDate")
 	@Required
@@ -22,9 +22,11 @@ public class Slot extends Model {
 	@Field("endDate")
 	@Required
 	public Date endDate;
-
-	@OneToMany(mappedBy = "slot")
-	public List<Talk> talks = new ArrayList<Talk>();
+	
+	@Field("labelEN")
+	public String labelEN;
+	@Field("labelFR")
+	public String labelFR;
 	
 	@Override
 	public String toString() {
@@ -37,16 +39,9 @@ public class Slot extends Model {
 		      .append(" ")
 		      .append(timeFormat.format(startDate))
 			  .append(" - ")
-			  .append(timeFormat.format(endDate))
-			  .append(" (");
-		boolean first = true;
-		for(Talk talk : talks){
-			if(!first)
-				strbuf.append(", ");
-			first = false;
-			strbuf.append(talk.track);
-		}
-		strbuf.append(")");
+			  .append(timeFormat.format(endDate));
+
+		strbuf.append(" (" + labelEN + ")");	
 		
 		return strbuf.toString();
 	}
@@ -55,14 +50,4 @@ public class Slot extends Model {
 		return find("date_trunc('day', startDate) = ? ORDER BY startDate", day).fetch();
 	}
 	
-	public Talk getTalkPerTrack(Track track){
-		for(Talk talk : talks)
-			if(talk.track == track)
-				return talk;
-		return null;
-	}
-	
-	public Talk getAllTracksEvent(){
-		return talks.size() == 1 && talks.get(0).track == null ? talks.get(0) : null;
-	}
 }

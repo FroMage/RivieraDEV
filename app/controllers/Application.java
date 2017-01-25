@@ -16,6 +16,7 @@ import models.Speaker;
 import models.Sponsor;
 import models.SponsorShip;
 import models.Talk;
+import models.TemporarySlot;
 import models.Track;
 import play.i18n.Lang;
 import play.mvc.Before;
@@ -77,7 +78,7 @@ public class Application extends Controller {
     }
     
     public static void schedule(){
-    	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
+    	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
@@ -85,6 +86,7 @@ public class Application extends Controller {
     		Collections.sort(tracksPerDay);
     		tracksPerDays.put(day, tracksPerDay);
     	}
+
     	render(days, tracks, tracksPerDays);
     }
 

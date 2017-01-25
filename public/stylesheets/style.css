@@ -1301,10 +1301,10 @@ a.footer-rs-instagram:active {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.scheduleBasic {
+.tempSchedule {
   margin-bottom: 3em;
 }
-.scheduleBasic-day {
+.tempSchedule-day {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   color: #fff;
   line-height: 1.5em;
@@ -1312,23 +1312,23 @@ a.footer-rs-instagram:active {
   padding-left: 15px;
   padding-right: 15px;
 }
-.scheduleBasic-day1 {
+.tempSchedule-day1 {
   background-color: rgba(0, 144, 205, 0.8);
 }
-.scheduleBasic-day2 {
+.tempSchedule-day2 {
   background-color: rgba(255, 183, 66, 0.8);
 }
-.scheduleBasic-slot {
+.tempSchedule-slot {
   border-bottom: 1px solid #ddd;
   margin-right: 0;
   font-size: 1.25em;
 }
-.scheduleBasic-time {
+.tempSchedule-time {
   font-family: 'Oswald', sans-serif;
   font-weight: normal;
   padding-right: 0;
   line-height: 2em;
 }
-.scheduleBasic-title {
+.tempSchedule-title {
   line-height: 2em;
 }

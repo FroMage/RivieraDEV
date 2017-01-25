@@ -5,21 +5,21 @@
     #{list items: _days, as: 'day'}
     
         #{if day_isFirst}
-        <div class="scheduleBasic col-md-6 col-lg-5">
+        <div class="tempSchedule col-md-6 col-lg-5">
         #{/if}
         #{else}
-        <div class="scheduleBasic col-md-6 col-lg-5 col-lg-offset-1">
+        <div class="tempSchedule col-md-6 col-lg-5 col-lg-offset-1">
         #{/else}
 
-            <h2 class="scheduleBasic-day scheduleBasic-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
+            <h2 class="tempSchedule-day tempSchedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
             <dl>
-            #{list items: models.Slot.findPerDay(day), as: 'slot'}
-                <div class="row scheduleBasic-slot">
-                    <dt class="col-sm-2 col-md-3 scheduleBasic-time">
+            #{list items: models.TemporarySlot.findPerDay(day), as: 'slot'}
+                <div class="row tempSchedule-slot">
+                    <dt class="col-sm-2 col-md-3 tempSchedule-time">
                         ${slot.startDate.format('HH:mm')} - ${slot.endDate.format('HH:mm')}
                     </dt>
-                    <dd class="col-sm-10 col-md-9 scheduleBasic-title">
+                    <dd class="col-sm-10 col-md-9 tempSchedule-title">
                         #{if play.i18n.Lang.get() == "en" && slot.labelEN}
                             ${slot.labelEN}
                         #{/if}
