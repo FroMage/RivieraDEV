@@ -45,6 +45,25 @@
 
 }
 
+
+.filter {
+    margin-top: 20px;
+
+    &-item{
+        cursor: pointer;
+
+        & [data-filter-theme='hidden'],
+        & [data-filter-level='hidden'] {
+            display: none
+        }
+
+        & [data-filter-theme='hidden'] [data-filter-level='hidden']{
+            display: none
+        }
+    }
+}
+
+
 .fullSchedule-container {
     width: 100%;
     max-width: 1170px; // page-container width in xl
@@ -95,6 +114,10 @@
 
     &-track {
         text-align: center;
+    }
+
+    &-track-title {
+        color: $color-gray-dark;
     }
 
     &-talk {
@@ -190,21 +213,6 @@
     &-party-title {
         background-image: url('../images/icons/pint.svg');
     }
-
-    &-filter-item{
-        cursor: pointer;
-
-        & [data-filter-theme='hidden'],
-        & [data-filter-level='hidden'] {
-            display: none
-        }
-
-        & [data-filter-theme='hidden'] [data-filter-level='hidden']{
-            display: none
-        }
-
-    }
-
 }
 
 

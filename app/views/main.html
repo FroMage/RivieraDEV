@@ -87,12 +87,13 @@
                         <a class="navbar-animated-link" href="@{Application.speakers}">&{'views.main.speakers'}</a>
                     </li>
                     <li class="${request.action == 'Application.cfp' ? 'active' : ''}">
-                        <a class="navbar-animated-link navbar-link-primary" href="@{Application.cfp}">
-                            <span class="label label-primary">&{'views.main.cfp'}</span>
+                        <a class="navbar-animated-link" href="@{Application.cfp}">&{'views.main.cfp'}
                         </a>
                     </li>
                     <li class="${request.action == 'Application.subscribe' ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.subscribe}">&{'views.main.tickets'}</a>
+                        <a class="navbar-animated-link navbar-link-primary" href="@{Application.subscribe}">
+                            <span class="label label-primary">&{'views.main.tickets'}</span>
+                        </a>
                     </li>
                     <li class="${request.action == 'Application.access' ? 'active' : ''}">
                         <a class="navbar-animated-link" href="@{Application.access}">&{'views.main.access'}</a>
