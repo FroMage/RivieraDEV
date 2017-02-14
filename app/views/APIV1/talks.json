@@ -2,7 +2,7 @@
 #{list talks, as: 'talk'}
 #{if talk.slot && talk.slot.startDate && talk.slot?.endDate}
  {
-  "name": "${talk.title?.jsonEscape()}"#{if !talk.isBreak},
+  "name": "${talk.getTitle().jsonEscape()}"#{if talk.isBreak == models.BreakType.NotABreak},
   "description": "${talk.description?.jsonEscape()}"#{/if},
   "start": ${talk.slot.startDate.time},
   "end": ${talk.slot.endDate.time}#{if talk.track},

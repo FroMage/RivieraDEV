@@ -34,20 +34,25 @@ public class Slot extends Model {
 		StringBuffer strbuf = new StringBuffer();
 		
 		strbuf.append(dateFormat.format(startDate))
-		      .append(" ")
+		      .append(" [")
 		      .append(timeFormat.format(startDate))
 			  .append(" - ")
 			  .append(timeFormat.format(endDate))
-			  .append(" (");
+			  .append("]");
+		/*
+		strbuf.append(" (");
 		boolean first = true;
 		for(Talk talk : talks){
-			if(!first)
+			if(!first) {
 				strbuf.append(", ");
+			}
 			first = false;
-			strbuf.append(talk.track);
+			if(talk.track != null) {
+				strbuf.append(talk.track);
+			}
 		}
 		strbuf.append(")");
-		
+		*/
 		return strbuf.toString();
 	}
 	

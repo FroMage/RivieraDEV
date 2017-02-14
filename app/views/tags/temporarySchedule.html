@@ -11,12 +11,12 @@
         <div class="tempSchedule col-md-6 col-lg-5 col-lg-offset-1">
         #{/else}
 
-            <h2 class="tempSchedule-day tempSchedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
+            <h2 class="schedule-day tempSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
             <dl>
             #{list items: models.TemporarySlot.findPerDay(day), as: 'slot'}
                 <div class="row tempSchedule-slot">
-                    <dt class="col-sm-2 col-md-3 tempSchedule-time">
+                    <dt class="col-sm-2 col-md-3 schedule-time tempSchedule-time">
                         ${slot.startDate.format('HH:mm')} - ${slot.endDate.format('HH:mm')}
                     </dt>
                     <dd class="col-sm-10 col-md-9 tempSchedule-title">

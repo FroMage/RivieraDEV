@@ -36,12 +36,13 @@ public class TemporarySlot extends Model {
 		StringBuffer strbuf = new StringBuffer();
 		
 		strbuf.append(dateFormat.format(startDate))
-		      .append(" ")
+		      .append(" [")
 		      .append(timeFormat.format(startDate))
 			  .append(" - ")
-			  .append(timeFormat.format(endDate));
+			  .append(timeFormat.format(endDate))
+			  .append("]");
 
-		strbuf.append(" (" + labelEN + ")");	
+		strbuf.append(" " + labelEN);
 		
 		return strbuf.toString();
 	}

@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
@@ -17,6 +19,7 @@ import org.hibernate.annotations.Type;
 import play.data.validation.MaxSize;
 import play.data.validation.Required;
 import play.db.jpa.Model;
+import play.i18n.Lang;
 
 @Entity
 public class Talk extends Model {
@@ -24,20 +27,34 @@ public class Talk extends Model {
 	@ManyToOne
 	public Slot slot;
 
-	@Required
-	public String title;
+	// At least one title must be filled
+	public String titleEN;
+	public String titleFR;
 	
-	@Required
+	// At least one description must be filled
 	@Type(type="org.hibernate.type.StringClobType")
 	@Lob
 	@MaxSize(10000)
-	public String description; 
+	public String descriptionEN;
+
+	@Type(type="org.hibernate.type.StringClobType")
+	@Lob
+	@MaxSize(10000)
+	public String descriptionFR; 
 	
 	@ManyToOne
 	public Track track;
 	
-	public boolean isBreak;
+	@Required
+	@Enumerated(EnumType.STRING)
+	public BreakType isBreak;
 	
+	@Enumerated(EnumType.STRING)
+	public Level level;
+
+	@ManyToOne
+	public TalkTheme theme;
+
 	public String slidesUrl;
 	
     @JoinTable(
@@ -48,11 +65,37 @@ public class Talk extends Model {
 	@ManyToMany
 	public List<Speaker> speakers = new ArrayList<Speaker>();
 	
+
+	public String getTitle() {
+		String displayedTitle = "";
+
+		if (Lang.get().equals("en")) { // English
+			if (titleEN != null && titleEN.length() > 0) {
+				displayedTitle = titleEN;
+			} 
+			else if (titleFR != null && titleFR.length() > 0) {
+				displayedTitle = titleFR;
+			}
+		}
+		else { // French
+			if (titleFR != null && titleFR.length() > 0) {
+				displayedTitle = titleFR;
+			}
+			else if (titleEN != null && titleEN.length() > 0) {
+				displayedTitle = titleEN;
+			} 
+		}
+		return displayedTitle;
+	}
+
+
 	@Override
 	public String toString() {
-		return (track != null? track : "All tracks")+" "
-				+(slot != null ? slot : "no slot")
-				+": "+title+" ("+StringUtils.join(speakers, ", ")+")";
+		return (slot != null ? slot : "no slot") 
+		        + " "
+		        + (track != null ? track : "All tracks")
+				+ ": " + getTitle() 
+				+ (speakers.size() > 0 ? " (" + StringUtils.join(speakers, ", ") + ")" : "");
 	}
 
 	public static List<Track> findTracksPerDay(Date day) {

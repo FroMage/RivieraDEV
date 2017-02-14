@@ -9,6 +9,7 @@ import java.util.TreeMap;
 
 import models.Configuration;
 import models.ConfigurationKey;
+import models.Level;
 import models.News;
 import models.Organiser;
 import models.Slot;
@@ -16,6 +17,7 @@ import models.Speaker;
 import models.Sponsor;
 import models.SponsorShip;
 import models.Talk;
+import models.TalkTheme;
 import models.TemporarySlot;
 import models.Track;
 import play.i18n.Lang;
@@ -91,7 +93,17 @@ public class Application extends Controller {
     }
 
     public static void scheduleSuperSecret(){
-    	schedule();
+    	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
+    	List<Track> tracks = Track.findAll();
+		List<TalkTheme> themes = TalkTheme.findAll();
+		Level[] levels = Level.values();
+    	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
+    	for(Date day : days){
+    		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
+    		Collections.sort(tracksPerDay);
+    		tracksPerDays.put(day, tracksPerDay);
+    	}
+    	render(days, tracks, tracksPerDays, themes, levels);
     }
 
     public static void talks(){

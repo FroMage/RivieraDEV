@@ -187,6 +187,9 @@ views.application.schedule.title=Program
 views.application.schedule.intro=Riviera DEV is a 2 days conference with at least 3 tracks on a rich mix of topics : Java and the JVM (present and future), alternate languages, Front-end technologies and UX, Mobile and IoT, Big Data and Machine Learning, NoSQL, Containers, VMs and Cloud Computing, Performance, Reactive Programming, Agility, Good Practices, DevOps, ...
 views.application.schedule.unavailable=The detailed program is not available yet, but you can have a look at the <a href="http://2015.rivieradev.fr/programme" target="_blank">2015 session</a> as well as the <a href="http://2016.rivieradev.fr/programme" target="_blank">2016 session</a>.
 views.application.schedule.subscribe=Subscribe to the newsletter to be notified when the detailed program is published.
+views.application.schedule.level.beginner=Beginner
+views.application.schedule.level.intermediate=Intermediate
+views.application.schedule.level.advanced=Advanced
 
 views.application.cfp.title=Call for papers
 views.application.cfp.opens=<strong>CFP opens:</strong> early December

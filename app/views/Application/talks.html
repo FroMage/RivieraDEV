@@ -19,7 +19,7 @@
     </thead>
 	<tbody>
 		#{list items: talks, as: 'talk'}
-			#{if !talk.isBreak}
+			#{if talk.isBreak == models.BreakType.NotABreak}
             <tr class="${talk_isLast ? 'last' : ''}">
 				<th style="width:110px;">
 					#{list items: talk.speakers, as: 'speaker'}

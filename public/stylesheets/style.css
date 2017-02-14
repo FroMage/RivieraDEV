@@ -1301,22 +1301,29 @@ a.footer-rs-instagram:active {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+.schedule-day {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  line-height: 1.5em;
+}
+.schedule-day1 {
+  background-color: rgba(0, 144, 205, 0.8);
+}
+.schedule-day2 {
+  background-color: rgba(255, 183, 66, 0.8);
+}
+.schedule-time {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+}
+
 .tempSchedule {
   margin-bottom: 3em;
 }
 .tempSchedule-day {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  line-height: 1.5em;
   margin-left: -15px;
   padding-left: 15px;
   padding-right: 15px;
-}
-.tempSchedule-day1 {
-  background-color: rgba(0, 144, 205, 0.8);
-}
-.tempSchedule-day2 {
-  background-color: rgba(255, 183, 66, 0.8);
 }
 .tempSchedule-slot {
   border-bottom: 1px solid #ddd;
@@ -1324,11 +1331,131 @@ a.footer-rs-instagram:active {
   font-size: 1.25em;
 }
 .tempSchedule-time {
-  font-family: 'Oswald', sans-serif;
-  font-weight: normal;
   padding-right: 0;
   line-height: 2em;
 }
 .tempSchedule-title {
   line-height: 2em;
+}
+
+.fullSchedule-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.fullSchedule {
+  width: 100%;
+}
+.fullSchedule-day {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.fullSchedule th, .fullSchedule td {
+  border: 3px solid #eee;
+  padding: 0.5em;
+}
+.fullSchedule-col-time {
+  width: 10%;
+}
+.fullSchedule-col-2tracks {
+  width: 45%;
+}
+.fullSchedule-col-3tracks {
+  width: 30%;
+}
+.fullSchedule-time {
+  text-align: center;
+  font-size: 1.1em;
+}
+.fullSchedule-time-begin, .fullSchedule-time-end {
+  display: block;
+}
+.fullSchedule-track {
+  text-align: center;
+}
+.fullSchedule-talk-title {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #00709D;
+}
+.fullSchedule-talk-theme {
+  padding: 0 0.4em;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  /*&-orange {
+      background-color: $color-orange;
+  }*/
+}
+.fullSchedule-talk-theme-blue {
+  background-color: #0090CD;
+}
+.fullSchedule-talk-theme-yellow {
+  background-color: #FDB742;
+}
+.fullSchedule-talk-theme-green {
+  background-color: #7BA218;
+}
+.fullSchedule-talk-theme-purple {
+  background-color: #844990;
+}
+.fullSchedule-talk-theme-red {
+  background-color: #CC0000;
+}
+.fullSchedule-talk-level {
+  font-style: italic;
+  margin-left: 0.3em;
+}
+.fullSchedule-talk-speakers {
+  list-style-type: none;
+  padding-left: 0;
+}
+.fullSchedule-talk-speaker {
+  color: #777;
+  text-decoration-style: dotted;
+  font-style: italic;
+}
+.fullSchedule-breakfast, .fullSchedule-lunch, .fullSchedule-cofeeBreak, .fullSchedule-party {
+  background-color: #fefaf1;
+  font-style: italic;
+}
+.fullSchedule-breakfast-title, .fullSchedule-lunch-title, .fullSchedule-cofeeBreak-title, .fullSchedule-party-title {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 2.5em;
+  font-weight: normal;
+  margin-bottom: 0;
+  color: inherit;
+  line-height: 2em;
+}
+.fullSchedule-breakfast-title {
+  background-image: url("../images/icons/croissant_2.svg");
+}
+.fullSchedule-cofeeBreak-title {
+  background-image: url("../images/icons/hot-drink.svg");
+}
+.fullSchedule-lunch-title {
+  background-image: url("../images/icons/cutlery.svg");
+}
+.fullSchedule-party-title {
+  background-image: url("../images/icons/pint.svg");
+}
+.fullSchedule-filter-item {
+  cursor: pointer;
+}
+.fullSchedule-filter-item [data-filter-theme='hidden'], .fullSchedule-filter-item [data-filter-level='hidden'] {
+  display: none;
+}
+.fullSchedule-filter-item [data-filter-theme='hidden'] [data-filter-level='hidden'] {
+  display: none;
+}
+
+th.fullSchedule-time-title {
+  border-top: none;
+  border-left: none;
 }

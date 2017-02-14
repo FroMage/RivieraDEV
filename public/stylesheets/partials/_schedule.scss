@@ -1,19 +1,9 @@
 .schedule {
 
-    &-intro {
-    }
-}
-
-.tempSchedule {
-    margin-bottom: 3em;
-
     &-day {
         @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
         color: #fff;
         line-height: 1.5em;
-        margin-left: -15px;
-        padding-left: 15px;
-        padding-right: 15px;
     }
 
     &-day1 {
@@ -23,6 +13,21 @@
         background-color: $color-yellow-transparent;
     }
 
+    &-time {
+        font-family: 'Oswald', sans-serif;
+        font-weight: normal;
+    }
+}
+
+.tempSchedule {
+    margin-bottom: 3em;
+
+    &-day {
+        margin-left: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     &-slot {
         border-bottom: 1px solid $color-gray-light;
         margin-right: 0;
@@ -30,8 +35,6 @@
     }
 
     &-time {
-        font-family: 'Oswald', sans-serif;
-        font-weight: normal;
         padding-right: 0;
         line-height: 2em;
     }
@@ -40,4 +43,172 @@
         line-height: 2em;
     }
 
+}
+
+.fullSchedule-container {
+    width: 100%;
+    max-width: 1170px; // page-container width in xl
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.fullSchedule {
+    width: 100%;
+
+    &-day {
+        padding-left: 15px;
+        padding-right: 15px; 
+    }
+
+    & th,
+    & td {
+        border: 3px solid $color-gray-ultralight;
+        padding: 0.5em;
+    }
+
+    &-col-time {
+        width: 10%;
+    }
+
+    &-col-2tracks {
+        width: 45%;
+    }
+
+    &-col-3tracks {
+        width: 30%;
+    }
+
+    &-col-XStracks {
+        width: 90%;
+    }
+
+    &-time {
+        text-align: center;
+        font-size: 1.1em;
+
+        &-begin,
+        &-end {
+            display: block;
+        }
+    }
+
+    &-track {
+        text-align: center;
+    }
+
+    &-talk {
+        &-title {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            color: $color-blue-dark;
+        }
+
+        &-theme {
+            padding: 0 0.4em;
+            border-radius: 4px;
+            color: white;
+            margin-bottom: 0.5em;
+            display: inline-block;
+
+            &-blue {
+                background-color: $color-blue;
+            }
+
+            &-yellow {
+                background-color: $color-yellow;
+            }
+
+            &-green {
+                background-color: $color-green;
+            }
+
+            &-purple {
+                background-color: $color-purple;
+            }
+
+            /*&-orange {
+                background-color: $color-orange;
+            }*/
+
+            &-red {
+                background-color: $color-red;
+            }
+        }
+
+        &-level {
+            font-style: italic;
+            margin-left: 0.3em;
+        }
+
+        &-speakers {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        &-speaker {
+            color: $color-gray-dark;
+            text-decoration-style: dotted;
+            font-style: italic;
+        }
+    }
+
+    &-breakfast,
+    &-lunch,
+    &-cofeeBreak,
+    &-party {
+        background-color: $color-yellow-ultralight;
+        font-style: italic;
+    }
+
+    &-breakfast-title,
+    &-lunch-title,
+    &-cofeeBreak-title,
+    &-party-title {
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 2.5em;
+        font-weight: normal;
+        margin-bottom: 0;
+        color: inherit;
+        line-height: 2em;
+    }
+
+    &-breakfast-title {
+        background-image: url('../images/icons/croissant_2.svg');
+    }
+
+    &-cofeeBreak-title {
+        background-image: url('../images/icons/hot-drink.svg');
+    }
+
+    &-lunch-title {
+        background-image: url('../images/icons/cutlery.svg');
+    }
+    
+    &-party-title {
+        background-image: url('../images/icons/pint.svg');
+    }
+
+    &-filter-item{
+        cursor: pointer;
+
+        & [data-filter-theme='hidden'],
+        & [data-filter-level='hidden'] {
+            display: none
+        }
+
+        & [data-filter-theme='hidden'] [data-filter-level='hidden']{
+            display: none
+        }
+
+    }
+
+}
+
+
+th.fullSchedule-time-title {
+    border-top: none;
+    border-left: none;
 }

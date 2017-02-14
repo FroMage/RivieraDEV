@@ -1,0 +1,81 @@
+<div class="fullSchedule-container">
+
+#{list items: _days, as: 'day'}
+
+    %{tracks = _tracksPerDays.get(day);}%
+	
+	<h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
+
+	<table class="fullSchedule">
+
+		<col class="fullSchedule-col-time">
+		<col class="fullSchedule-col-XStracks">
+
+		#{list items: models.Slot.findPerDay(day), as: 'slot'}
+			#{list items: tracks, as: 'track'}
+				%{talk = slot.getTalkPerTrack(track);}%
+				
+				%{allTracksEvent = slot.allTracksEvent}%
+				#{if allTracksEvent} <!-- One talk for all tracks -->
+					%{talk = allTracksEvent}%
+				#{/if}
+
+				<tr>
+					<th class="schedule-time fullSchedule-time" scope="row">
+						<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
+						<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
+						#{if user}
+							<br/>
+							<a href="@{Slots.show(slot.id)}">edit</a>
+						#{/if}
+					</th>
+
+					<td class="fullSchedule-talk-all fullSchedule-${talk.isBreak.code}">
+						
+						#{ifnot allTracksEvent } <!-- One talk per track -->
+							<span class="fullSchedule-track-title">${track.title}</span>
+						#{/ifnot}
+
+						#{if talk.isBreak != models.BreakType.NotABreak}
+							<span class="fullSchedule-talk-title fullSchedule-${talk.isBreak.code}-title">${talk.title}</span>
+						#{/if}
+						#{else}
+							<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
+						#{/else}
+
+						#{if talk.theme != null}
+							<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+						#{/if}
+
+						#{if talk.speakers.size() > 0}
+							#{if talk.speakers}
+								<ul class="fullSchedule-talk-speakers">
+									#{list items: talk.speakers, as: 'speaker'}
+										<li>
+											<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
+												${speaker.firstName} ${speaker.lastName}
+											</a>
+										</li>
+									#{/list}
+								</ul>
+							#{/if}
+						#{/if}
+
+						#{if user}
+							<br/>
+							<a href="@{Talks.show(talk.id)}">edit</a>
+						#{/if}
+					</td>
+				</tr>	
+			#{/list}
+		#{/list}
+		
+		#{if user}
+			<tr>
+				<td><a href="@{Slots.blank()}">add slot</a></td>
+			</tr>
+		#{/if}
+	</table>
+#{/list}
+
+</div>
