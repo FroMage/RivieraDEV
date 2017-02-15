@@ -62,7 +62,7 @@ body {
     &:focus {
         background-color: $color-gray-light;
     }
-    
+
     &.btn-primary {
         background-color: $color-blue;
 
@@ -71,6 +71,16 @@ body {
         &:focus {
             background-color: $color-blue-dark;
         }
+    }
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:active,
+    &[disabled]:focus {
+        pointer-events: none;
+        cursor: default;
+        background-color: $color-gray-dark;
+        color: $color-gray-light;
     }
 }
 
@@ -81,6 +91,7 @@ body {
 .button-x-large {
     width: 18em;
 }
+
 
 @media (max-width: $screen-xs-max) {
     .button-x-large {
