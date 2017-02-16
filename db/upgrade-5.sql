@@ -16,8 +16,8 @@ alter table Talk add column level varchar(255);
 alter table Talk add column theme_id int8;
 
 alter table Talk add column isBreak2 varchar(255);
-update Talk set isBreak2 = "NotABreak" where isBreak = false;
-update Talk set isBreak2 = "CofeeBreak" where isBreak = true;
+update Talk set isBreak2 = 'NotABreak' where isBreak = false;
+update Talk set isBreak2 = 'CofeeBreak' where isBreak = true;
 alter table Talk drop column isBreak;
 alter table Talk rename column isBreak2 to isBreak;
  
