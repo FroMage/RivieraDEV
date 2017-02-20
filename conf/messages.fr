@@ -101,11 +101,13 @@ views.application.access.plane.5=La dépose et prise en charge se fait à l'arr�
 views.application.access.plane.6=Le trajet dure 45 minutes environ et coûte 1,50€. Descendre à l'arrêt "SKEMA".
 views.application.access.plane.7=Au départ de Sophia Antipolis, ce bus dessert l’Aéroport, uniquement sur demande au chauffeur.
 
-views.application.orga.title=Organisateurs
-views.application.orga.text.1=Riviera DEV est une conférence faite <strong>par des développeurs pour des développeurs</strong>.
-views.application.orga.text.2=Elle a été créée en 2009 (sous un autre nom) à l'initiative du <strong><a href="http://rivierajug.org/" target="_blank">Riviera JUG</a></strong>.
-views.application.orga.text.3=Tous les organisateurs sont des <strong>geeks bénévoles</strong> qui se plient en 4 pour vous concocter une conférence aux p'tits oignons.
-views.application.orga.contact=Vous pouvez les contacter par mail à l'adresse <strong><a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a></strong>.
+views.application.orgas.title=Organisateurs
+views.application.orgas.text.1=Riviera DEV est une conférence faite <strong>par des développeurs pour des développeurs</strong>.
+views.application.orgas.text.2=Elle a été créée en 2009 (sous un autre nom) à l'initiative du <strong><a href="http://rivierajug.org/" target="_blank">Riviera JUG</a></strong>.
+views.application.orgas.text.3=Tous les organisateurs sont des <strong>geeks bénévoles</strong> qui se plient en 4 pour vous concocter une conférence aux p'tits oignons.
+views.application.orgas.contact=Vous pouvez les contacter par mail à l'adresse <strong><a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a></strong>.
+
+views.application.orga.title=Organisateur
 
 views.application.sponsors.title=Nos sponsors
 views.application.sponsors.thanks=Les sponsors nous aident à organiser Riviera DEV. Sans eux rien ne serait possible&nbsp;! Merci&nbsp;!

@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-#{set title: orga /}
+#{set title: orga.toString() + ' - ' + play.i18n.Messages.get('views.application.orga.title')  /}
 
 <div class="page-title-container">
 	<h1 class="title page-title"><span>${orga.firstName} ${orga.lastName}</span></h1>
