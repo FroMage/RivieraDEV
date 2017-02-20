@@ -1500,17 +1500,29 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule-filter {
   margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #eee;
+}
+.fullSchedule-filter-title {
+  display: inline-block;
+  vertical-align: top;
+}
+.fullSchedule-filter-options {
+  display: inline-block;
+}
+.fullSchedule-filter-option-level {
+  margin: 0;
+  background-color: #bbb;
+  padding: 0.15px;
+  padding: 0 0.4em;
+  border-radius: 4px;
 }
 .fullSchedule-filter-item {
   cursor: pointer;
   transition: all 0.3s;
 }
-.fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-item[data-filter-level='hidden'] {
-  opacity: 0.3;
-  transition: all 0.3s;
-}
-.fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
-  opacity: 0.3;
+.fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-item[data-filter-level='hidden'], .fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+  opacity: 0.1;
   transition: all 0.3s;
 }
 

@@ -197,19 +197,36 @@
 
     &-filter {
         margin-top: 20px;
+        padding: 10px 15px;
+        background-color: $color-gray-ultralight;
+
+        &-title{
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &-options {
+            display: inline-block;
+        }
+
+        &-option {
+            &-level{
+                margin: 0;
+                background-color: $color-gray;
+                padding: 0.15px;
+                padding: 0 0.4em;
+                border-radius: 4px;
+            }
+        }
 
         &-item{
             cursor: pointer;
             transition: all 0.3s;
 
             &[data-filter-theme='hidden'],
-            &[data-filter-level='hidden'] {
-                opacity: 0.3;
-                transition: all 0.3s;
-            }
-
+            &[data-filter-level='hidden'],
             &[data-filter-theme='hidden'][data-filter-level='hidden']{
-                opacity: 0.3;
+                opacity: 0.1;
                 transition: all 0.3s;
             }
         }
