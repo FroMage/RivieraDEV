@@ -5,6 +5,11 @@
 	<h1 class="title page-title"><span>${orga.firstName} ${orga.lastName}</span></h1>
 </div>
 
+#{if user}
+	<a href="@{Organisers.blank()}" class="btn btn-default">add</a>
+	<a href="@{Organisers.show(orga.id)}" class="btn btn-default">edit</a>
+#{/if}
+
 <div class="container page-container">
     <div class="row personDetails">
                 
@@ -15,19 +20,24 @@
         <div class="col-sm-6 personDetails-desc">
             <div class="personDetails-name-title">
                 <div class="personDetails-name">${orga.firstName} ${orga.lastName}</div>
-                #{if orga.title.length() > 0} 
+                #{if orga.title} 
                 <div class="personDetails-title">${orga.title}</div>
                 #{/if}
             </div>
-            <div class="personDetails-biography">${orga.biography}</div>
+            <div class="personDetails-biography">${orga.biography?.md()}</div>
         </div>
 
         <div class="col-sm-4 personDetails-links">
 
-            #{if orga.company.length() > 0 && orga.companyURL.length() > 0} 
+            #{if orga.company} 
             <div class="personDetails-company personDetails-link">
                 <i class="fa fa-briefcase personDetails-icon" aria-hidden="true"></i>
-                <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
+                #{if orga.companyURL}
+                    <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
+                #{/if}
+				#{else}
+					${orga.company}
+				#{/else}
             </div>
             #{/if}
 
