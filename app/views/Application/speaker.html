@@ -1,56 +1,71 @@
 #{extends 'main.html' /}
-#{set title:speaker.firstName+' '+speaker.lastName+' - Orateurs' /}
+#{set title: speaker.toString() + ' - ' + play.i18n.Messages.get('views.application.speaker.title')  /}
+
+<div class="page-title-container">
+	<h1 class="title page-title"><span>${speaker.firstName} ${speaker.lastName}</span></h1>
+</div>
 
 #{if user}
-	<a href="@{Speakers.blank()}">add</a>
-	<br/>
+	<a href="@{Speakers.blank()}" class="btn btn-default">add</a>
+	<a href="@{Speakers.show(speaker.id)}" class="btn btn-default">edit</a>
 #{/if}
 
-<table class="details">
- <tr>
-  <td>
-   <span class="photo-with-label">
-    <img src="@{Application.speakerPhoto(speaker.id)}" width="200" class="speaker-details-photo"/>
-    <span class="photo-label">${speaker.firstName} ${speaker.lastName}</span> 
-   </span>
-  </td>
-  <td>
-#{if user}
-	<a href="@{Speakers.show(speaker.id)}">edit</a>
-	<br/>
-#{/if}
-#{if speaker.title}
- <span class="label">Titre:</span> ${speaker.title}
- <br/>
-#{/if}
-<span class="label">Bio:</span> ${speaker.biography?.md()}
-#{if speaker.company}
-	<br/>
-	<span class="label">Compagnie:</span>
-	#{if speaker.companyURL}
-		<a href="${speaker.companyURL}">${speaker.company}</a>
-	#{/if}
-	#{else}
-		${speaker.company}
-	#{/else}
-#{/if}
-#{if speaker.twitterAccount}
-	<br/>
-	<span class="label">Twitter:</span> <a href="http://twitter.com/${speaker.twitterAccount}">@${speaker.twitterAccount}</a>
-#{/if}
-#{if speaker.blogURL}
-	<br/>
-	<span class="label">Blog:</span> <a href="${speaker.blogURL}">${speaker.blogURL}</a>
-#{/if}
-<br/>
-<span class="label">Présentations:</span>
-<ul>
-	#{list items: speaker.talks, as: 'talk'}
-		<li>
-			<a href="@{Application.talk(talk.id)}">${talk.title}</a>
-		</li>
-	#{/list}
-</ul>
-</td>
-</tr>
-</table>
+<div class="container page-container">
+    <div class="row personDetails">
+                
+        <div class="col-sm-2 personDetails-photo">
+            <img class="personDetails-photo-img" src="@{Application.speakerPhoto(speaker.id)}" alt="${speaker}"/>
+        </div>
+
+        <div class="col-sm-6 personDetails-desc">
+            <div class="personDetails-name-title">
+                <div class="personDetails-name">${speaker.firstName} ${speaker.lastName}</div>
+                #{if speaker.title} 
+                <div class="personDetails-title">${speaker.title}</div>
+                #{/if}
+            </div>
+            <div class="personDetails-biography">${speaker.biography?.md()}</div>
+
+			<ul class="speaker-talks">
+				#{list items: speaker.talks, as: 'talk'}
+					<li>
+						<i class="fa fa-comment personDetails-icon" aria-hidden="true"></i>
+						<a href="@{Application.talk(talk.id)}">${talk.title}</a>
+					</li>
+				#{/list}
+			</ul>
+
+        </div>
+
+        <div class="col-sm-4 personDetails-links">
+
+            #{if speaker.company} 
+            <div class="personDetails-company personDetails-link">
+                <i class="fa fa-briefcase personDetails-icon" aria-hidden="true"></i>
+				#{if speaker.companyURL}
+	                <a href="${speaker.companyURL}" target="_blank">${speaker.company}</a>
+				#{/if}
+				#{else}
+					${speaker.company}
+				#{/else}
+            </div>
+            #{/if}
+
+            #{if speaker.twitterAccount} 
+            <div class="personDetails-twitter personDetails-link">
+                <i class="fa fa-twitter personDetails-icon" aria-hidden="true"></i>
+                <a href="https://twitter.com/${speaker.twitterAccount}" target="_blank">@${speaker.twitterAccount}</a>
+            </div>
+            #{/if}
+
+            #{if speaker.blogURL} 
+            <div class="personDetails-blog personDetails-link">
+                <i class="fa fa-globe personDetails-icon" aria-hidden="true"></i>
+                <a href="${speaker.blogURL}" target="_blank">${speaker.blogURL}</a>
+            </div>
+            #{/if}
+        </div>
+
+        <div class="clearfix"></div>
+    </div> <!-- /.row -->
+</div>

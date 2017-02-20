@@ -54,6 +54,8 @@ views.application.speakers.title=Orateurs
 views.application.speakers.unavailable=La liste des orateurs n'est pas encore disponible.
 views.application.speakers.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que les orateurs sont connus.
 
+views.application.speaker.title=Orateur
+
 views.application.subscribe.title=Billetterie
 views.application.subscribe.unavailable=Les inscriptions ne sont pas encore ouvertes.
 views.application.subscribe.subscribe=Soyez dans les premiers à connaître le programme et à acheter votre billet.

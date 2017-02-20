@@ -13,3 +13,23 @@
         }
     }
 }
+
+.speaker {
+
+    &-talks {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 2em;
+    }
+
+}
+
+
+// Only on xs devices (smartphones)
+@media (max-width: $screen-xs-max) {
+
+    .speaker-talks {
+        margin-bottom: 2em;
+    }
+
+}

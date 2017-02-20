@@ -54,6 +54,8 @@ views.application.speakers.title=Speakers
 views.application.speakers.unavailable=The speaker list is not available yet.
 views.application.speakers.subscribe=Subscribe to the newsletter to be notified when the speaker list is published.
 
+views.application.speaker.title=Speaker
+
 views.application.subscribe.title=Tickets
 views.application.subscribe.unavailable=Registration is not open yet.
 views.application.subscribe.subscribe=Subscribe to the newsletter to be notified when registration opens.

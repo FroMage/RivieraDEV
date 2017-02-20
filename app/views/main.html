@@ -83,7 +83,7 @@
                     <li class="${request.action == 'Application.schedule' ? 'active' : ''}">
                         <a class="navbar-animated-link" href="@{Application.schedule}">&{'views.main.schedule'}</a>
                     </li>
-                    <li class="${request.action == 'Application.speakers' ? 'active' : ''}">
+                    <li class="${(request.action == 'Application.speakers' || request.action == 'Application.speaker') ? 'active' : ''}">
                         <a class="navbar-animated-link" href="@{Application.speakers}">&{'views.main.speakers'}</a>
                     </li>
                     <li class="${request.action == 'Application.cfp' ? 'active' : ''}">
