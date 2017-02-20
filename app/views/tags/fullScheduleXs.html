@@ -72,42 +72,44 @@
 							#{/if}
 						</th>
 						<td class="fullSchedule-talk">
-							<span class="fullSchedule-track-title">${track.title}</span>
+							<div class="fullSchedule-talk-theme-${talk.theme} fullSchedule-filter-item fullSchedule-talk-level-${talk.level}">
+								<span class="fullSchedule-track-title">${track.title}</span>
 
-							#{if talk}
-								<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
+								#{if talk}
+									<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
 
-								#{if talk.theme != null}
-									<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+									#{if talk.theme != null}
+										<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+									#{/if}
+
+									#{if talk.level != null}
+										<span class="fullSchedule-talk-level">&{'views.application.schedule.level.' + talk.level.code}</span>
+									#{/if}
+									
+									<ul class="fullSchedule-talk-speakers">
+										#{list items: talk.speakers, as: 'speaker'}
+											<li>
+												<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
+													${speaker.firstName} ${speaker.lastName}
+												</a>
+											</li>
+										#{/list}
+									</ul>
+
+									#{if user}
+										<br/>
+										<a href="@{Talks.show(talk.id)}">edit</a>
+									#{/if}
 								#{/if}
 
-								#{if talk.level != null}
-									<span class="fullSchedule-talk-level">&{'views.application.schedule.level.' + talk.level.code}</span>
-								#{/if}
-								
-								<ul class="fullSchedule-talk-speakers">
-									#{list items: talk.speakers, as: 'speaker'}
-										<li>
-											<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
-												${speaker.firstName} ${speaker.lastName}
-											</a>
-										</li>
-									#{/list}
-								</ul>
-
-								#{if user}
-									<br/>
-									<a href="@{Talks.show(talk.id)}">edit</a>
-								#{/if}
-							#{/if}
-
-							#{else}
-								<span class="fullSchedule-talk-unknown">&{'views.application.schedule.full.talk.unknown'}</span>
-								#{if user}
-									<br/>
-									<a href="@{Talks.blank()}">add talk</a>
-								#{/if}
-							#{/else}
+								#{else}
+									<span class="fullSchedule-talk-unknown">&{'views.application.schedule.full.talk.unknown'}</span>
+									#{if user}
+										<br/>
+										<a href="@{Talks.blank()}">add talk</a>
+									#{/if}
+								#{/else}
+							</div>
 						</td>
 					</tr>
 				#{/list}

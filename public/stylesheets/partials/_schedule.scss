@@ -45,25 +45,6 @@
 
 }
 
-
-.filter {
-    margin-top: 20px;
-
-    &-item{
-        cursor: pointer;
-
-        & [data-filter-theme='hidden'],
-        & [data-filter-level='hidden'] {
-            display: none
-        }
-
-        & [data-filter-theme='hidden'] [data-filter-level='hidden']{
-            display: none
-        }
-    }
-}
-
-
 .fullSchedule-container {
     width: 100%;
     max-width: 1170px; // page-container width in xl
@@ -212,6 +193,26 @@
     
     &-party-title {
         background-image: url('../images/icons/pint.svg');
+    }
+
+    &-filter {
+        margin-top: 20px;
+
+        &-item{
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &[data-filter-theme='hidden'],
+            &[data-filter-level='hidden'] {
+                opacity: 0.3;
+                transition: all 0.3s;
+            }
+
+            &[data-filter-theme='hidden'][data-filter-level='hidden']{
+                opacity: 0.3;
+                transition: all 0.3s;
+            }
+        }
     }
 }
 

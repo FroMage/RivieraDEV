@@ -1348,19 +1348,6 @@ a.footer-rs-instagram:active {
   line-height: 2em;
 }
 
-.filter {
-  margin-top: 20px;
-}
-.filter-item {
-  cursor: pointer;
-}
-.filter-item [data-filter-theme='hidden'], .filter-item [data-filter-level='hidden'] {
-  display: none;
-}
-.filter-item [data-filter-theme='hidden'] [data-filter-level='hidden'] {
-  display: none;
-}
-
 .fullSchedule-container {
   width: 100%;
   max-width: 1170px;
@@ -1473,6 +1460,21 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule-party-title {
   background-image: url("../images/icons/pint.svg");
+}
+.fullSchedule-filter {
+  margin-top: 20px;
+}
+.fullSchedule-filter-item {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-item[data-filter-level='hidden'] {
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+.fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+  opacity: 0.3;
+  transition: all 0.3s;
 }
 
 th.fullSchedule-time-title {
