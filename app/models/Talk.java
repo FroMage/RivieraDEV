@@ -88,6 +88,28 @@ public class Talk extends Model {
 		return displayedTitle;
 	}
 
+	public String getDescription() {
+		String displayedDescription = "";
+
+		if (Lang.get().equals("en")) { // English
+			if (descriptionEN != null && descriptionEN.length() > 0) {
+				displayedDescription = descriptionEN;
+			} 
+			else if (descriptionFR != null && descriptionFR.length() > 0) {
+				displayedDescription = descriptionFR;
+			}
+		}
+		else { // French
+			if (descriptionFR != null && descriptionFR.length() > 0) {
+				displayedDescription = descriptionFR;
+			}
+			else if (descriptionEN != null && descriptionEN.length() > 0) {
+				displayedDescription = descriptionEN;
+			} 
+		}
+		return displayedDescription;
+	}
+
 
 	@Override
 	public String toString() {

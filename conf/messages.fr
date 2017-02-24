@@ -194,8 +194,10 @@ views.application.schedule.subscribe=Abonnez-vous à la newsletter pour être pr
 views.application.schedule.level.beginner=Débutant
 views.application.schedule.level.intermediate=Confirmé
 views.application.schedule.level.advanced=Expert
-views.application.schedule.full.slots=Horaires
 views.application.schedule.full.talk.unknown=En cours de finalisation
+
+views.application.talk.title=Session
+views.application.talk.slides=Slides
 
 views.application.cfp.title=Appel aux orateurs
 views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> Début décembre

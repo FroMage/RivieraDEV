@@ -1,47 +1,60 @@
 #{extends 'main.html' /}
-#{set title:talk.title+ ' - Sessions' /}
+#{set title: talk.title + ' - ' + play.i18n.Messages.get('views.application.talk.title') /}
 
-#{if user}
-	<a href="@{Talks.blank()}">add</a>
-	<br/>
-#{/if}
-
-<hgroup>
-    <h6>Session:</h6>
-    <!--h1><a href="@{Application.talk(talk.id)}">${talk.title}</a></h1-->
-    <h1>${talk.title}</h1>
-</hgroup>
-#{if user}
-	<br/>
-	<a href="@{Talks.show(talk.id)}">edit</a>
-#{/if}
-<div style="float:right;display:table-cell;">
-#{list items: talk.speakers, as: 'speaker'}
-	<a href="@{Application.speaker(speaker.id)}" 
-	 style="vertical-align:middle;display:inline-block;margin: 0 1em;" 
-	 ><img src="@{Application.speakerPhoto(speaker.id)}" width="100" class="speaker-photo"/></a>
-#{/list}
+<div class="page-title-container">
+	<h1 class="title page-title"><span>&{'views.application.talk.title'}</span></h1>
 </div>
-<br/>
-<span class="label">Description:</span> ${talk.description?.md()}
-<br/>
-#{if talk.slidesUrl}
-    <span class="label">Présentation:</span> <a href="${talk.slidesUrl}">${talk.slidesUrl}</a>
-    <br/>
+
+#{if user}
+	<a href="@{Talks.blank()}" class="btn btn-default">add</a>
+	<a href="@{Talks.show(talk.id)}" class="btn btn-default">edit</a>
 #{/if}
-<!--
- <span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
- <br/>
--->
-#{if talk.slot}
- <span class="label">Horaire:</span> ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
- <br/>
-#{/if}
-<span class="label">Orateurs:</span>
-<ul>
-	#{list items: talk.speakers, as: 'speaker'}
-		<li>
-			<a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
-		</li>
-	#{/list}
-</ul>
+
+<div class="container page-container">
+	
+	<div class="row talkDetails">
+
+		<div class="col-sm-8">
+			<div class="talkDetails-title">${talk.title}</div>
+
+			<div class="talkDetails-description">${talk.getDescription()?.md()}</div>
+
+			<div class="talkDetails-speakers">
+				#{list items: talk.speakers, as: 'speaker'}
+					<a class="talkDetails-speaker" href="@{Application.speaker(speaker.id)}">
+						<div class="talkDetails-speaker-photo">
+							<img class="talkDetails-speaker-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
+						</div>
+						<div class="talkDetails-speaker-name">
+							${speaker}
+						</div>
+					</a>
+				#{/list}
+			</div>
+		</div> <!-- /.col -->
+
+		<div class="col-sm-4">
+
+			<div class="talkDetails-track">
+				<i class="fa fa-map-signs talkDetails-icon" aria-hidden="true"></i>
+				${talk.track?.title ?: "Plénière"}
+			</div>
+			
+			#{if talk.slot}
+				<div class="talkDetails-slot">
+					<i class="fa fa-clock-o talkDetails-icon" aria-hidden="true"></i>
+					<span>${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}</span>
+				</div>
+			#{/if}
+
+			#{if talk.slidesUrl}
+				<div class="talkDetails-slides">
+					<i class="fa fa-television talkDetails-icon" aria-hidden="true"></i>
+					<a href="${talk.slidesUrl}">&{'views.application.talk.slides'}</a>
+				</div>
+			#{/if}
+
+		</div> <!-- /.col -->
+
+	</div> <!-- ./row -->
+</div> <!-- /.container -->

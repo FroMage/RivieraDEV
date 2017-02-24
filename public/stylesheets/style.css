@@ -1492,3 +1492,54 @@ th.fullSchedule-time-title {
   border-top: none;
   border-left: none;
 }
+
+.talkDetails {
+  margin-top: 2em;
+}
+.talkDetails:before, .talkDetails:after {
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin: 2em 0;
+  background-color: #0090CD;
+}
+.talkDetails-title {
+  text-transform: uppercase;
+  color: #0090CD;
+  font-size: 1.3em;
+}
+.talkDetails-description {
+  margin-top: 1em;
+}
+.talkDetails-speakers {
+  margin-bottom: 2em;
+}
+.talkDetails-speaker {
+  margin-bottom: 1em;
+  margin-right: 3em;
+}
+.talkDetails-speaker, .talkDetails-speaker:hover, .talkDetails-speaker:focus, .talkDetails-speaker:active {
+  text-decoration: none;
+}
+.talkDetails-speaker-photo {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+}
+.talkDetails-speaker-photo-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.talkDetails-speaker-name {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #0090CD;
+}
+.talkDetails-icon {
+  color: #FDB742;
+  font-size: 1.2em;
+  width: 1.2em;
+  text-align: center;
+}

@@ -80,7 +80,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="${request.action == 'Application.schedule' ? 'active' : ''}">
+                    <li class="${(request.action == 'Application.schedule' || request.action == 'Application.talk') ? 'active' : ''}">
                         <a class="navbar-animated-link" href="@{Application.schedule}">&{'views.main.schedule'}</a>
                     </li>
                     <li class="${(request.action == 'Application.speakers' || request.action == 'Application.speaker') ? 'active' : ''}">

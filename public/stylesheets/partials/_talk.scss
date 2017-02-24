@@ -1,0 +1,64 @@
+.talkDetails {
+    margin-top: 2em;
+
+    &:before,
+    &:after {
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 2em 0;
+        background-color: $color-blue;
+    }
+
+    &-title {
+        text-transform: uppercase;
+        color: $color-blue;
+        font-size: 1.3em;
+    }
+
+    &-description {
+        margin-top: 1em;
+    }
+
+    &-speakers {
+        margin-bottom: 2em;
+    }
+
+    &-speaker {
+        margin-bottom: 1em;
+        margin-right: 3em;
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+        
+        &-photo {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+
+            &-img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+        }
+
+        &-name {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            color: $color-blue;
+        }
+    }
+
+    &-icon {
+        color: $color-yellow;
+        font-size: 1.2em;
+        width: 1.2em;
+        text-align: center;
+    }
+}

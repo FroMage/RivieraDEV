@@ -194,6 +194,10 @@ views.application.schedule.subscribe=Subscribe to the newsletter to be notified 
 views.application.schedule.level.beginner=Beginner
 views.application.schedule.level.intermediate=Intermediate
 views.application.schedule.level.advanced=Advanced
+views.application.schedule.full.talk.unknown=Being finalized
+
+views.application.talk.title=Talk
+views.application.talk.slides=Slides
 
 views.application.cfp.title=Call for papers
 views.application.cfp.opens=<strong>CFP opens:</strong> early December
