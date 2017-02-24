@@ -3,7 +3,9 @@
         #{list items: _orgas, as: 'orga'}
             <a href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}" class="personSummary-link">
                 <figure class="personSummary">
-                    <img class="personSummary-photo" src="@{Application.orgaPhoto(orga.id)}"/>
+                    <div class="personSummary-photo">
+                        <img class="personSummary-photo-img" src="@{Application.orgaPhoto(orga.id)}"/>
+                    </div>
                     <figcaption class="personSummary-desc">
                         <div class="personSummary-name">${orga}</div>
                         <div class="personSummary-title">${orga.title}</div>

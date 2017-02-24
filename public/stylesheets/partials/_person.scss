@@ -21,13 +21,19 @@
     }
 
     &-photo {
+        display: inline-block;
         width: 150px;
         height: 150px;
         border-radius: 150px;
         overflow: hidden;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include transition(all 0.5s ease);
+
+        &-img {
+            height: 100%;
+            width: auto;
+            @include transition(all 0.5s ease);
+            @include transform(scale(1));
+        }
     }
 
     &-desc {
@@ -42,6 +48,21 @@
 
     &-title {
         font-style: italic;
+    }
+}
+
+.personSummary-link {
+    &:hover,
+    &:active,
+    &:focus {
+
+        .personSummary-photo {
+            @include box-shadow(0 0 0 5px $color-blue);
+        }
+
+        .personSummary-photo-img {
+            @include transform(scale(1.15));
+        }
     }
 }
 

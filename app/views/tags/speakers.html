@@ -4,7 +4,9 @@
 		<a href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
 		#{/if}
 			<figure class="personSummary">
-				<img class="personSummary-photo" src="@{Application.speakerPhoto(speaker.id)}"/>
+				<div class="personSummary-photo">
+					<img class="personSummary-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
+				</div>
 				<figcaption class="personSummary-desc">
 					<div class="personSummary-name">${speaker}</div>
 					<div class="personSummary-title">${speaker.company}</div>
