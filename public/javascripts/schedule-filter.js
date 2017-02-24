@@ -2,6 +2,50 @@ $(function() {
 
     window.toggleTheme = function (theme){
         toggleThemeFilterClass($('.fullSchedule-talk-theme-' + theme));
+	}
+
+    window.toggleTheme2 = function (theme){
+		// Le filtre sélectionné
+		let currentFilter = $('.fullSchedule-filter-themes .fullSchedule-talk-theme-' + theme)
+		console.log('Filtre courant:',currentFilter)
+
+		// Les éléments à filtrer
+		let currentElems = $('.fullSchedule-talk-theme-' + theme)
+		console.log('Elms:',currentElems)
+
+		if(currentFilter && currentFilter.attr('data-filter-theme')){
+			// Si element courant est désactivé alors le réactiver
+			console.log(theme + " doit être visible");
+			toggleThemeFilterClass(currentFilter[0]);
+			currentElems.each(function(index, element) {
+				toggleThemeFilterClass(element);
+			}, this);
+		}
+		else{
+			console.log(theme + " doit être caché");
+			
+			let otherFilters = $('.fullSchedule-filter-themes .fullSchedule-filter-item').not('.fullSchedule-talk-theme-' + theme)
+			let otherElems = $('.fullSchedule-talk .fullSchedule-filter-item').not('.fullSchedule-talk-theme-' + theme)
+			if(otherFilters.length > 0){
+				otherFilters.each(function(index, element) {
+					toggleThemeFilterClass(element);
+				}, this);
+				otherElems.each(function(index, element) {
+					toggleThemeFilterClass(element);
+				}, this);
+			}
+			else{
+				toggleThemeFilterClass($('.fullSchedule-talk-theme-' + theme));
+			}
+			console.log('Elms:',currentElems)
+		}
+
+
+		// Sinon {
+			// Si aucun élément désactivé on désactive tous les autres
+			// Sinon on désactive l'élément courant
+		//}
+
     }
 
     window.toggleLevel = function (level){
@@ -16,12 +60,22 @@ $(function() {
 		toggleFilterClass(elem, 'data-filter-level', 'hidden');
 	}
 	
-	var toggleFilterClass = function(elem, attrName, className){
-		if(elem && (!elem.attr(attrName))){
-			elem.attr(attrName,className);
+    var toggleFilterClass = function(elem, attrName, className){
+        if(elem && (!elem.attr(attrName))){
+            elem.attr(attrName,className);
+		}
+        else{
+            elem.removeAttr(attrName,className);
+            elem.removeAttribute(attrName);
+        }
+    }
+
+	var toggleFilterClass2 = function(elem, attrName, className){
+		if(elem && (!elem.getAttribute(attrName))){
+			elem.setAttribute(attrName,className);
 		}
 		else{
-			elem.removeAttr(attrName,className);
+			elem.removeAttribute(attrName);
 		}
 	}
 });
