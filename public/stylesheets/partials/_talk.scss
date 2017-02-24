@@ -18,37 +18,46 @@
 
     &-description {
         margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    &-track,
+    &-slot-day,
+    &-slot-hour,
+    &-slides {
+        margin-bottom: 0.5em;
     }
 
     &-speakers {
+        margin-top: 2em;
         margin-bottom: 2em;
     }
 
     &-speaker {
         margin-bottom: 1em;
-        margin-right: 3em;
-
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-            text-decoration: none;
-        }
+        display: block;
+        text-decoration: none;
         
         &-photo {
             display: inline-block;
-            width: 75px;
-            height: 75px;
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            @include border-radius(50%);
+            overflow: hidden;
+            transition: all 0.5s ease;
 
             &-img {
                 max-width: 100%;
                 height: auto;
-                border-radius: 50%;
+                @include transform(scale(1));
+                transition: all 0.5s ease;
             }
         }
 
         &-name {
             display: inline-block;
+            vertical-align: middle;
             text-transform: uppercase;
             font-size: 1.1em;
             color: $color-blue;
@@ -60,5 +69,36 @@
         font-size: 1.2em;
         width: 1.2em;
         text-align: center;
+    }
+}
+
+.talkDetails-speaker {
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+
+        .talkDetails-speaker-photo {
+            @include box-shadow(0 0 0 3px $color-blue);
+        }
+
+        .talkDetails-speaker-photo-img {
+            @include transform(scale(1.15));
+        }
+
+    }
+}
+
+
+// Only on xs devices (smartphones)
+@media (max-width: $screen-xs-max) {
+    
+    .talkDetails {
+        margin-top: 0;
+
+        &:before,
+        &:after {
+            height: 0;
+        }
     }
 }

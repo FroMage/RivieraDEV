@@ -198,6 +198,7 @@ views.application.schedule.full.talk.unknown=Being finalized
 
 views.application.talk.title=Talk
 views.application.talk.slides=Slides
+views.application.talk.track.allTracks=Plenary
 
 views.application.cfp.title=Call for papers
 views.application.cfp.opens=<strong>CFP opens:</strong> early December

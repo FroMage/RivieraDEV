@@ -198,6 +198,7 @@ views.application.schedule.full.talk.unknown=En cours de finalisation
 
 views.application.talk.title=Session
 views.application.talk.slides=Slides
+views.application.talk.track.allTracks=Plénière
 
 views.application.cfp.title=Appel aux orateurs
 views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> Début décembre
