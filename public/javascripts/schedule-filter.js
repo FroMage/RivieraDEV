@@ -76,7 +76,6 @@ $(function() {
 		}
         else{
             elem.removeAttr(attrName,className);
-            elem.removeAttribute(attrName);
         }
     }
 
