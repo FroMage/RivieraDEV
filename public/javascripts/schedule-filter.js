@@ -16,15 +16,25 @@ $(function() {
 		if(currentFilter && currentFilter.attr('data-filter-theme')){
 			// Si element courant est désactivé alors le réactiver
 			console.log(theme + " doit être visible");
-			toggleThemeFilterClass(currentFilter[0]);
 			currentElems.each(function(index, element) {
 				toggleThemeFilterClass(element);
 			}, this);
 		}
 		else{
 			console.log(theme + " doit être caché");
-			
+
+			let otherHiddenFilters = $('.fullSchedule-filter-themes .fullSchedule-filter-item[data-filter-theme]').not('.fullSchedule-talk-theme-' + theme)
 			let otherFilters = $('.fullSchedule-filter-themes .fullSchedule-filter-item').not('.fullSchedule-talk-theme-' + theme)
+			// Si d'autres éléments sont déjà cachés alors on cache l'élément sélectionné
+			if(otherHiddenFilters.length > 0 && otherHiddenFilters.length !== otherFilters.length){
+				currentElems.each(function(index, element) {
+					toggleThemeFilterClass(element);
+				}, this);
+				return;
+			}
+
+			// Si aucun éléments n'est cachés alors on cache tous les autres
+
 			let otherElems = $('.fullSchedule-talk .fullSchedule-filter-item').not('.fullSchedule-talk-theme-' + theme)
 			if(otherFilters.length > 0){
 				otherFilters.each(function(index, element) {
