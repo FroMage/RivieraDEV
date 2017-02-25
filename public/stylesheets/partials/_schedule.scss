@@ -143,11 +143,11 @@
 
         &-level {
             font-style: italic;
-            margin-left: 0.3em;
-            margin: 0;
             background-color: $color-gray;
             padding: 0 0.4em;
             border-radius: 4px;
+            display: inline-block;
+            margin: 0 0 0.5em 0.3em;
         }
 
         &-speakers {
@@ -207,6 +207,8 @@
         &-title{
             display: inline-block;
             vertical-align: top;
+            font-weight: bold;
+            margin-right: 0.5em;
         }
 
         &-options {
@@ -216,19 +218,34 @@
         &-item{
             cursor: pointer;
             transition: all 0.3s;
+            margin-left: 0;
 
             &[data-filter-theme='hidden'],
             &[data-filter-level='hidden'],
             &[data-filter-theme='hidden'][data-filter-level='hidden']{
-                opacity: 0.1;
+                opacity: 0.2;
                 transition: all 0.3s;
             }
         }
+
+
     }
 }
-
 
 th.fullSchedule-time-title {
     border-top: none;
     border-left: none;
+}
+
+// Only on xs devices (smartphones)
+@media (max-width: $screen-xs-max) {
+
+    .fullSchedule-filter-options .fullSchedule-filter-item {
+        padding: 0.5em;
+    }
+
+    .fullSchedule-filter-levels {
+        margin-top: 0.5em;
+    }
+
 }
