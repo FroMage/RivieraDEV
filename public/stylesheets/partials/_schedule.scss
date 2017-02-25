@@ -144,6 +144,10 @@
         &-level {
             font-style: italic;
             margin-left: 0.3em;
+            margin: 0;
+            background-color: $color-gray;
+            padding: 0 0.4em;
+            border-radius: 4px;
         }
 
         &-speakers {
@@ -207,16 +211,6 @@
 
         &-options {
             display: inline-block;
-        }
-
-        &-option {
-            &-level{
-                margin: 0;
-                background-color: $color-gray;
-                padding: 0.15px;
-                padding: 0 0.4em;
-                border-radius: 4px;
-            }
         }
 
         &-item{

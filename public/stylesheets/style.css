@@ -1463,6 +1463,10 @@ a.footer-rs-instagram:active {
 .fullSchedule-talk-level {
   font-style: italic;
   margin-left: 0.3em;
+  margin: 0;
+  background-color: #bbb;
+  padding: 0 0.4em;
+  border-radius: 4px;
 }
 .fullSchedule-talk-speakers {
   list-style-type: none;
@@ -1509,13 +1513,6 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule-filter-options {
   display: inline-block;
-}
-.fullSchedule-filter-option-level {
-  margin: 0;
-  background-color: #bbb;
-  padding: 0.15px;
-  padding: 0 0.4em;
-  border-radius: 4px;
 }
 .fullSchedule-filter-item {
   cursor: pointer;
