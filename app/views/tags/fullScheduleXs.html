@@ -24,37 +24,42 @@
 					#{/if}
 				</th>
 
-				<td class="fullSchedule-talk-all fullSchedule-${allTracksEvent.isBreak.code}">
-					
-					#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-						<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
-					#{/if}
-					#{else}
-						<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
-					#{/else}
-
-					#{if allTracksEvent.theme != null}
-						<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
-					#{/if}
-
-					#{if allTracksEvent.speakers.size() > 0}
-						#{if allTracksEvent.speakers}
-							<ul class="fullSchedule-talk-speakers">
-								#{list items: allTracksEvent.speakers, as: 'speaker'}
-									<li>
-										<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
-											${speaker.firstName} ${speaker.lastName}
-										</a>
-									</li>
-								#{/list}
-							</ul>
+				<td class="fullSchedule-talk fullSchedule-${allTracksEvent.isBreak.code}">
+					<div class="fullSchedule-talk-theme-${allTracksEvent.theme.getUtilityName()} fullSchedule-filter-item fullSchedule-talk-level-${allTracksEvent.level.code}">
+						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+							<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
 						#{/if}
-					#{/if}
+						#{else}
+							<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
+						#{/else}
 
-					#{if user}
-						<br/>
-						<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
-					#{/if}
+						#{if allTracksEvent.theme != null}
+							<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
+						#{/if}
+
+						#{if allTracksEvent.level != null}
+							<span class="fullSchedule-talk-level">&{'views.application.schedule.level.' + allTracksEvent.level.code}</span>
+						#{/if}
+
+						#{if allTracksEvent.speakers.size() > 0}
+							#{if allTracksEvent.speakers}
+								<ul class="fullSchedule-talk-speakers">
+									#{list items: allTracksEvent.speakers, as: 'speaker'}
+										<li>
+											<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
+												${speaker.firstName} ${speaker.lastName}
+											</a>
+										</li>
+									#{/list}
+								</ul>
+							#{/if}
+						#{/if}
+
+						#{if user}
+							<br/>
+							<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
+						#{/if}
+					</div>
 				</td>
 			</tr>
 			#{/if}
@@ -72,7 +77,7 @@
 							#{/if}
 						</th>
 						<td class="fullSchedule-talk">
-							<div class="fullSchedule-talk-theme-${talk.theme} fullSchedule-filter-item fullSchedule-talk-level-${talk.level}">
+							<div class="fullSchedule-talk-theme-${talk.theme.getUtilityName()} fullSchedule-filter-item fullSchedule-talk-level-${talk.level.code}">
 								<span class="fullSchedule-track-title">${track.title}</span>
 
 								#{if talk}

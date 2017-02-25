@@ -1,5 +1,6 @@
 package models;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
+
 
 import play.data.validation.Required;
 import play.db.jpa.Model;
@@ -32,5 +34,14 @@ public class TalkTheme extends Model implements Comparable<TalkTheme>{
 	@Override
 	public int compareTo(TalkTheme other) {
 		return theme.compareTo(other.theme);
+	}
+
+	public String getUtilityName () {
+		String name = Normalizer.normalize(theme, Normalizer.Form.NFD);
+		// Remove accent
+		name = name.replaceAll("[^\\p{ASCII}]", "");
+		// Remove blank
+		name = name.replaceAll(" ","");
+		return name;
 	}
 }
