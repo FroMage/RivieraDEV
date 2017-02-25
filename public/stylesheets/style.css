@@ -1441,9 +1441,6 @@ a.footer-rs-instagram:active {
   color: white;
   margin-bottom: 0.5em;
   display: inline-block;
-  /*&-orange {
-      background-color: $color-orange;
-  }*/
 }
 .fullSchedule-talk-theme-blue {
   background-color: #0090CD;
@@ -1456,6 +1453,9 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule-talk-theme-purple {
   background-color: #844990;
+}
+.fullSchedule-talk-theme-orange {
+  background-color: #ff7826;
 }
 .fullSchedule-talk-theme-red {
   background-color: #CC0000;
