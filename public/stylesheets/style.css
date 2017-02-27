@@ -1227,14 +1227,6 @@ a.footer-rs-instagram:active {
 .personSummary-photo-img {
   height: 100%;
   width: auto;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
 }
 .personSummary-desc {
   margin-top: 0.5em;
@@ -1252,12 +1244,6 @@ a.footer-rs-instagram:active {
   -moz-box-shadow: 0 0 0 5px #0090CD;
   -webkit-box-shadow: 0 0 0 5px #0090CD;
   box-shadow: 0 0 0 5px #0090CD;
-}
-.personSummary-link:hover .personSummary-photo-img, .personSummary-link:active .personSummary-photo-img, .personSummary-link:focus .personSummary-photo-img {
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
 }
 
 .personDetails {
@@ -1585,11 +1571,6 @@ th.fullSchedule-time-title {
 .talkDetails-speaker-photo-img {
   max-width: 100%;
   height: auto;
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  transition: all 0.5s ease;
 }
 .talkDetails-speaker-name {
   display: inline-block;
@@ -1612,12 +1593,6 @@ th.fullSchedule-time-title {
   -moz-box-shadow: 0 0 0 3px #0090CD;
   -webkit-box-shadow: 0 0 0 3px #0090CD;
   box-shadow: 0 0 0 3px #0090CD;
-}
-.talkDetails-speaker:hover .talkDetails-speaker-photo-img, .talkDetails-speaker:focus .talkDetails-speaker-photo-img, .talkDetails-speaker:active .talkDetails-speaker-photo-img {
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15);
 }
 
 @media (max-width: 767px) {

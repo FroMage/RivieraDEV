@@ -31,8 +31,6 @@
         &-img {
             height: 100%;
             width: auto;
-            @include transition(all 0.5s ease);
-            @include transform(scale(1));
         }
     }
 
@@ -58,10 +56,6 @@
 
         .personSummary-photo {
             @include box-shadow(0 0 0 5px $color-blue);
-        }
-
-        .personSummary-photo-img {
-            @include transform(scale(1.15));
         }
     }
 }

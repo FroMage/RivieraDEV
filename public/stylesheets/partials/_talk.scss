@@ -50,8 +50,6 @@
             &-img {
                 max-width: 100%;
                 height: auto;
-                @include transform(scale(1));
-                transition: all 0.5s ease;
             }
         }
 
@@ -80,10 +78,6 @@
 
         .talkDetails-speaker-photo {
             @include box-shadow(0 0 0 3px $color-blue);
-        }
-
-        .talkDetails-speaker-photo-img {
-            @include transform(scale(1.15));
         }
 
     }
