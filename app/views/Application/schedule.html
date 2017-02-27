@@ -5,29 +5,57 @@
 	<h1 class="title page-title"><span>&{'views.application.schedule.title'}</span></h1>
 </div>
 
-<div class="container page-container">
 
-	<div class="schedule-intro">
-		<p>
-			&{'views.application.schedule.intro'}
-		</p>
-	</div>
+	#{if displayFullSchedule }
+		<div class="fullSchedule-container">
 
-	#{temporarySchedule days: days/}
+			<div class="fullSchedule-filter">
+				<div class="fullSchedule-filter-title">&{'views.application.schedule.filter'} : </div>
+				<div class="fullSchedule-filter-options">
+					<div class="fullSchedule-filter-themes">
+						#{list items: themes, as: 'theme'}
+							<span onclick="toggleTheme('${theme.getUtilityName()}')" class="fullSchedule-filter-item fullSchedule-talk-theme fullSchedule-talk-theme-${theme.getUtilityName()} fullSchedule-talk-theme-${theme.color.code}">${theme}</span>
+						#{/list}
+					</div>
+					<div class="fullSchedule-filter-levels">
+						#{list items: levels, as: 'level'}
+							<span onclick="toggleLevel('${level.code}')" class="fullSchedule-filter-item fullSchedule-talk-level fullSchedule-talk-level-${level.code}">&{'views.application.schedule.level.' + level.code}</span>
+						#{/list}
+					</div>
+				</div>
+			</div>
 
-	<div class="data-unavailable">
-		<p>
-            &{'views.application.schedule.unavailable'}
-		</p>
-		<p>
-            &{'views.application.schedule.subscribe'}
-		</p>
-	</div>
-	
-	#{newsletter /}
+			<div class="hidden-xs">
+				#{fullSchedule days: days, tracksPerDays: tracksPerDays/}
+			</div>
 
+			<div class="visible-xs">
+				#{fullScheduleXs days: days, tracksPerDays: tracksPerDays/}
+			</div>
+		</div>
+	#{/if}
+	#{else}
+		<div class="container page-container">
 
-</div>
+			<div class="schedule-intro">
+				<p>
+					&{'views.application.schedule.intro'}
+				</p>
+			</div>
+			#{temporarySchedule days: days/}
+
+			<div class="data-unavailable">
+				<p>
+					&{'views.application.schedule.unavailable'}
+				</p>
+				<p>
+					&{'views.application.schedule.subscribe'}
+				</p>
+			</div>
+			
+			#{newsletter /}
+		</div>
+	#{/else}
 
 <!--
 <p>

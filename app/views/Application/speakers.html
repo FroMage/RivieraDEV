@@ -7,6 +7,15 @@
 
 <div class="container page-container">
 
+	#{if user}
+	<div class="row">
+		<div class="text-center">
+			<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
+		</div>
+	</div>
+	#{/if}
+
+	#{if displayPreviousSpeakers}
 	<div class="row">
 		<div class="data-unavailable">
 			<p>
@@ -21,22 +30,22 @@
 	<div class="row">
 		#{newsletter /}
 	</div>
-
-	#{if user}
-	<div class="row">
-		<div class="container page-container text-center">
-			<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
-		</div>
-	</div>
-	#{/if}
   
 	#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
 		<div class="row text-center">
 			<p class="speakers-previous-title">&{'views.application.index.speakers.tagline'}</p>
 
-			#{speakers speakers: speakersPreviousYears, enableLink: false/}
+			#{previousSpeakers speakers: speakersPreviousYears/}
 		</div>
 	#{/if}
+
+	#{/if}
+
+	#{else}
+	<div class="container speakers">
+		#{speakers speakers: speakers/}
+	</div>
+	#{/else}
 
 </div>
 

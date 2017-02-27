@@ -49,6 +49,7 @@ views.application.index.follow=Follow Riviera DEV 2017: sale date, new speakers,
 views.application.index.speakers=Our speakers
 views.application.index.speakers.tagline=They were here!
 views.application.index.speakers.baseline=You have something to share?
+views.application.index.speakers.link=Discover all the speakers
 
 views.application.speakers.title=Speakers
 views.application.speakers.unavailable=The speaker list is not available yet.

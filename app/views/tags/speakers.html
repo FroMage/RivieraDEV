@@ -1,8 +1,6 @@
 <div class="speakers-list">
 	#{list items: _speakers, as: 'speaker'}
-		#{if _enableLink}
-		<a href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
-		#{/if}
+		<a class="personSummary-link" href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
 			<figure class="personSummary">
 				<div class="personSummary-photo">
 					<img class="personSummary-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
@@ -10,11 +8,11 @@
 				<figcaption class="personSummary-desc">
 					<div class="personSummary-name">${speaker}</div>
 					<div class="personSummary-title">${speaker.company}</div>
-					<div>${speaker.year}</div>
+					#{if speaker.year}
+						<div>${speaker.year}</div>
+					#{/if}
 				</figcaption>
 			</figure>
-		#{if _enableLink}
 		</a>
-		#{/if}
 	#{/list}
 </div>

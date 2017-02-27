@@ -49,6 +49,7 @@ views.application.index.follow=Suivez l'actualité de Riviera DEV 2017&nbsp;: ou
 views.application.index.speakers=Nos orateurs
 views.application.index.speakers.tagline=Ils sont venus chez nous&nbsp;!
 views.application.index.speakers.baseline=Vous avez un sujet à partager&nbsp;?
+views.application.index.speakers.link=Découvrez tous les orateurs
 
 views.application.speakers.title=Orateurs
 views.application.speakers.unavailable=La liste des orateurs n'est pas encore disponible.

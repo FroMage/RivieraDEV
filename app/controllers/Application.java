@@ -12,6 +12,7 @@ import models.ConfigurationKey;
 import models.Level;
 import models.News;
 import models.Organiser;
+import models.PreviousSpeaker;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
@@ -49,12 +50,15 @@ public class Application extends Controller {
 		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
 		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
 		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
-		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();				
+		List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
+		List<Speaker> speakersStar = Speaker.find("star = true ORDER BY lastName, firstName").fetch();
 
 		boolean lunchesAndPartySoldOut = sponsors.get(SponsorShip.Lunches) != null && sponsors.get(SponsorShip.Lunches).size() > 0
 		                              && sponsors.get(SponsorShip.Party) != null && sponsors.get(SponsorShip.Party).size() > 0;
 
-		render(googleMapApiKey, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, latestNews);
+		boolean displayPreviousSpeakers = !displayFullSchedule();
+
+		render(googleMapApiKey, displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
     }
 
     public static void news() {
@@ -82,6 +86,8 @@ public class Application extends Controller {
     public static void schedule(){
     	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
+		List<TalkTheme> themes = TalkTheme.findAll();
+		Level[] levels = Level.values();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
     		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
@@ -89,7 +95,9 @@ public class Application extends Controller {
     		tracksPerDays.put(day, tracksPerDay);
     	}
 
-    	render(days, tracks, tracksPerDays);
+		boolean displayFullSchedule = displayFullSchedule();
+
+    	render(displayFullSchedule, days, tracks, tracksPerDays, themes, levels);
     }
 
     public static void scheduleSuperSecret(){
@@ -112,11 +120,11 @@ public class Application extends Controller {
     }
 
     public static void speakers(){
-		// TODO : Récupérer l'année en BD ou dans une config
-		int newRivieraDevYear = getRivieraDevYear();
-    	List<Speaker> speakers = Speaker.find("year = ? ORDER BY lastName, firstName", newRivieraDevYear).fetch();
-		List<Speaker> speakersPreviousYears = getSpeakersPreviousYears();
-    	render(speakers, speakersPreviousYears);
+    	List<Speaker> speakers = Speaker.find("ORDER BY lastName, firstName").fetch();
+		List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
+		boolean displayPreviousSpeakers = !displayFullSchedule();
+
+    	render(speakers, speakersPreviousYears, displayPreviousSpeakers);
     }
 
     public static void speaker(Long id){
@@ -142,6 +150,13 @@ public class Application extends Controller {
 	public static void becomeSponsor() {
 		render();
 	}
+
+    public static void previousSpeakerPhoto(Long id){
+    	PreviousSpeaker speaker = PreviousSpeaker.findById(id);
+    	notFoundIfNull(speaker);
+    	response.contentType = speaker.photo.type();
+    	renderBinary(speaker.photo.get());
+    }
 
     public static void speakerPhoto(Long id){
     	Speaker speaker = Speaker.findById(id);
@@ -173,15 +188,6 @@ public class Application extends Controller {
 		Organiser orga = Organiser.findById(id);
     	notFoundIfNull(orga);
     	render(orga);
-	}
-
-	private static int getRivieraDevYear(){
-		// TODO : Récupérer l'année en BD ou dans une config
-		return 2017;
-	}
-
-	private static List<Speaker> getSpeakersPreviousYears(){
-		return Speaker.find("year is null OR year < ? ORDER BY lastName, firstName",getRivieraDevYear()).fetch();
 	}
 
 	private static SponsorsToDisplay getSponsorsToDisplay() {
@@ -222,6 +228,14 @@ public class Application extends Controller {
 			return config.value;
 		}
 		return "";
+    }
+
+	/**
+	 * Retourne true si le programme complet doit être affiché, faux sinon.
+	 */
+    private static boolean displayFullSchedule(){
+        Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_FULL_SCHEDULE).first();
+		return config != null && config.value.equals("true") ;
     }
 
 	private static class SponsorsToDisplay {

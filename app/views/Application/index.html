@@ -78,17 +78,26 @@
     </div>
 </div> <!-- ./diaporama -->
 
-#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
+#{if !displayPreviousSpeakers && speakersStar != null && speakersStar.size() > 0}
+<div class="container speakers">
+    <h2 class="title home-title speakers-title">&{'views.application.index.speakers'}</h2>
+	#{speakers speakers: speakersStar/}
+
+    <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
+</div>
+#{/if}
+
+#{elseif speakersPreviousYears != null && speakersPreviousYears.size() > 0}
 <div class="container speakers">
     <h2 class="title home-title speakers-title">&{'views.application.index.speakers'}</h2>
     <p class="home-subtitle speakers-previous-subtitle">&{'views.application.index.speakers.tagline'}</p>
-	#{speakers speakers: speakersPreviousYears, enableLink: false/}
+	#{previousSpeakers speakers: speakersPreviousYears/}
 
     <p class="home-subtitle">&{'views.application.index.speakers.baseline'}</p>
 
     <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
 </div>
-#{/if}
+#{/elseif}
 
 <!--
 <div class="parallax parallax-home-location">

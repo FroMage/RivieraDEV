@@ -11,39 +11,26 @@ import org.hibernate.annotations.Type;
 
 import play.data.validation.MaxSize;
 import play.data.validation.Required;
-import play.data.validation.URL;
 import play.db.jpa.Blob;
 import play.db.jpa.Model;
 
 @Entity
-public class Speaker extends Model {
+public class PreviousSpeaker extends Model {
+
+	@Required
 	public String firstName;
+
 	@Required
 	public String lastName;
-	public String title;
-	@Type(type="org.hibernate.type.StringClobType")
-	@Lob
+	
 	@Required
-	@MaxSize(10000)
-	public String biography;
 	public String company;
-	@URL
-	public String companyURL;
-	@URL
-	public String blogURL;
-	public String twitterAccount;
 	
 	public Blob photo;
 	
-	/** Est-ce que ce speaker mérite d'être sur la page d'accueil ? */
-	public Boolean star = false;
-
-	// TODO supprimer dès que ce champ n'est plus utilisé en BD
+	/* La dernière année à laquelle l'orateur a participé au RivieraDEV */
 	@MaxSize(4)
 	public Integer year;
-
-	@ManyToMany(mappedBy = "speakers")
-	public List<Talk> talks = new ArrayList<Talk>();
 	
 	@Override
 	public String toString() {
