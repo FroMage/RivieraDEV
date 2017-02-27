@@ -1508,8 +1508,12 @@ a.footer-rs-instagram:active {
   margin-left: 0;
 }
 .fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-item[data-filter-level='hidden'], .fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
-  opacity: 0.2;
+  opacity: 0.05;
   transition: all 0.3s;
+}
+
+.fullSchedule-filter-options .fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-options .fullSchedule-filter-item[data-filter-level='hidden'], .fullSchedule-filter-options .fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+  opacity: 0.2;
 }
 
 th.fullSchedule-time-title {
