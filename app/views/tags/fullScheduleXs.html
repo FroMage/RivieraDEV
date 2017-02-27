@@ -25,7 +25,7 @@
 				</th>
 
 				<td class="fullSchedule-talk fullSchedule-${allTracksEvent.isBreak.code}">
-					<div class="fullSchedule-talk-theme-${allTracksEvent.theme.getUtilityName()} fullSchedule-filter-item fullSchedule-talk-level-${allTracksEvent.level.code}">
+					<div class="fullSchedule-talk-theme-${allTracksEvent.theme?.getUtilityName()} fullSchedule-filter-item fullSchedule-talk-level-${allTracksEvent.level?.code}">
 						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
 							<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
 						#{/if}
