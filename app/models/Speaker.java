@@ -36,7 +36,7 @@ public class Speaker extends Model {
 	public Blob photo;
 	
 	/** Est-ce que ce speaker mérite d'être sur la page d'accueil ? */
-	public Boolean star = false;
+	public boolean star;
 
 	// TODO supprimer dès que ce champ n'est plus utilisé en BD
 	@MaxSize(4)
