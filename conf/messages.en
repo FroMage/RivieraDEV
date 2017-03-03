@@ -21,7 +21,7 @@ views.main.editions.2011=2011 Edition
 views.main.private=Private space
 views.main.follow=Follow us on
 views.main.motto=The shiny conference
-views.main.logo.featuring=featuring a track by&nbsp;
+views.main.logo.featuring=with
 
 views.application.openGraph=Riviera DEV, that's 2 days of conferences and workshops on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
 
@@ -221,7 +221,7 @@ views.application.cfp.conf.duration=50 minutes
 views.application.cfp.conf.slots=24 available
 views.application.cfp.conf.1=Come present a topic you care about in one of our two tracks.
 views.application.cfp.conf.2=From diving into the JVM internals to presenting the latest cool JS framework running inside a container, we are open to a wide spectrum of topics.
-views.application.cfp.redhat.title=Conference / Red Hat
+views.application.cfp.redhat.title=Conference / JUDCon
 views.application.cfp.redhat.attendees=100-150 attendees
 views.application.cfp.redhat.duration=50 minutes
 views.application.cfp.redhat.slots=12 available

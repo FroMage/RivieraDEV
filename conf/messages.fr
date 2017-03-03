@@ -21,7 +21,7 @@ views.main.editions.2011=Édition 2011
 views.main.private=Espace privé
 views.main.follow=Suivez-nous sur
 views.main.motto=La conférence du Soleil
-views.main.logo.featuring=featuring a track by&nbsp;
+views.main.logo.featuring=avec
 
 views.application.openGraph=Riviera DEV, c'est 2 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
@@ -221,7 +221,7 @@ views.application.cfp.conf.duration=50 minutes
 views.application.cfp.conf.slots=24 disponibles
 views.application.cfp.conf.1=Venez présenter un sujet qui vous tient à cœur sur un de nos deux tracks.
 views.application.cfp.conf.2=Vous voulez nous expliquer les entrailles de la JVM ou bien nous présenter le dernier framework JS à la mode tournant sous docker ? On est ouvert à tous les sujets.
-views.application.cfp.redhat.title=Conférence / Red Hat
+views.application.cfp.redhat.title=Conférence / JUDCon
 views.application.cfp.redhat.attendees=100-150 personnes
 views.application.cfp.redhat.duration=50 minutes
 views.application.cfp.redhat.slots=12 disponibles
