@@ -421,7 +421,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   display: inline-block;
   -webkit-align-self: flex-end;
   align-self: flex-end;
-  height: 2.2em;
+  height: 2em;
   margin-right: 0.5em;
   margin-bottom: 0.05em;
 }

@@ -175,7 +175,7 @@ ul.dropdown-menu > li.active > a {
         & img.navbar-RedHat--logo{
             display: inline-block;
             @include align-self(flex-end);
-            height: 2.2em;
+            height: 2em;
             margin-right: 0.5em;
             margin-bottom: 0.05em;
         }
