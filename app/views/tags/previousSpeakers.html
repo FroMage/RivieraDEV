@@ -1,8 +1,7 @@
 <div class="speakers-list">
 	#{list items: _speakers, as: 'speaker'}
 		<figure class="personSummary">
-			<div class="personSummary-photo">
-				<img class="personSummary-photo-img" src="@{Application.previousSpeakerPhoto(speaker.id)}"/>
+			<div class="personSummary-photo" style="background-image: url('@{Application.previousSpeakerPhoto(speaker.id)}')">
 			</div>
 			<figcaption class="personSummary-desc">
 				<div class="personSummary-name">${speaker}</div>

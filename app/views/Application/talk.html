@@ -59,8 +59,7 @@
 				<div class="talkDetails-speakers">
 					#{list items: talk.speakers, as: 'speaker'}
 						<a class="talkDetails-speaker" href="@{Application.speaker(speaker.id)}">
-							<div class="talkDetails-speaker-photo">
-								<img class="talkDetails-speaker-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
+							<div class="talkDetails-speaker-photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
 							</div>
 							<div class="talkDetails-speaker-name">
 								${speaker}

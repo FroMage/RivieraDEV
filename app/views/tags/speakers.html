@@ -2,8 +2,7 @@
 	#{list items: _speakers, as: 'speaker'}
 		<a class="personSummary-link" href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
 			<figure class="personSummary">
-				<div class="personSummary-photo">
-					<img class="personSummary-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
+				<div class="personSummary-photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
 				</div>
 				<figcaption class="personSummary-desc">
 					<div class="personSummary-name">${speaker}</div>

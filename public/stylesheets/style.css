@@ -1217,15 +1217,11 @@ a.footer-rs-instagram:active {
   width: 150px;
   height: 150px;
   border-radius: 150px;
-  overflow: hidden;
+  background-size: cover;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-.personSummary-photo-img {
-  height: 100%;
-  width: auto;
 }
 .personSummary-desc {
   margin-top: 0.5em;
@@ -1568,12 +1564,8 @@ th.fullSchedule-time-title {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  overflow: hidden;
+  background-size: cover;
   transition: all 0.5s ease;
-}
-.talkDetails-speaker-photo-img {
-  max-width: 100%;
-  height: auto;
 }
 .talkDetails-speaker-name {
   display: inline-block;

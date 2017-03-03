@@ -25,13 +25,8 @@
         width: 150px;
         height: 150px;
         border-radius: 150px;
-        overflow: hidden;
+        background-size: cover;
         @include transition(all 0.5s ease);
-
-        &-img {
-            height: 100%;
-            width: auto;
-        }
     }
 
     &-desc {
