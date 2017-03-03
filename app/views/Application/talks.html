@@ -13,9 +13,13 @@
 
     #{list items: talks, as: 'talk'}
 
-        <div class="row talkDetails talkDetails-all">
-            #{talk talk: talk, displayFullSchedule: displayFullSchedule/}
-        </div> <!-- ./row -->
+        #{if talk.isBreak == models.BreakType.NotABreak}
+
+            <div class="row talkDetails talkDetails-all">
+                #{talk talk: talk, displayFullSchedule: displayFullSchedule/}
+            </div> <!-- ./row -->
+
+        #{/if}
 
     #{/list}
 </div> <!-- /.container -->
