@@ -56,7 +56,7 @@ public class Application extends Controller {
 		boolean lunchesAndPartySoldOut = sponsors.get(SponsorShip.Lunches) != null && sponsors.get(SponsorShip.Lunches).size() > 0
 		                              && sponsors.get(SponsorShip.Party) != null && sponsors.get(SponsorShip.Party).size() > 0;
 
-		boolean displayPreviousSpeakers = !displayFullSchedule();
+		boolean displayPreviousSpeakers = !displayNewSpeakers();
 
 		render(googleMapApiKey, displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
     }
