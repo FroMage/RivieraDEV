@@ -6,7 +6,7 @@
 </div>
 
 
-	#{if displayFullSchedule }
+	#{if false }
 		<div class="fullSchedule-container">
 
 			<div class="fullSchedule-filter">
@@ -37,23 +37,72 @@
 	#{else}
 		<div class="container page-container">
 
-			<div class="schedule-intro">
-				<p>
-					&{'views.application.schedule.intro'}
-				</p>
-			</div>
-			#{temporarySchedule days: days/}
+<div class="container page-container">
+    #{list items: talks, as: 'talk'}
+    
+    <div class="row talkDetailsList #{if talk_isLast}last#{/if}">
 
-			<div class="data-unavailable">
-				<p>
-					&{'views.application.schedule.unavailable'}
-				</p>
-				<p>
-					&{'views.application.schedule.subscribe'}
-				</p>
-			</div>
-			
-			#{newsletter /}
+        <div class="col-sm-8">
+            <div class="talkDetails-title">${talk.title}</div>
+
+            #{if talk.theme != null}
+                <span class="fullSchedule-talk-theme fullSchedule-talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+            #{/if}
+
+            <div class="talkDetails-description">${talk.getDescription()?.md()}</div>
+        </div> <!-- /.col -->
+
+        <div class="col-sm-4">
+
+            <div class="talkDetails-track">
+                <i class="fa fa-map-signs talkDetails-icon" aria-hidden="true"></i>
+                #{if talk.track?.title}
+                    ${talk.track.title}
+                #{/if}
+                #{else}
+                    &{'views.application.talk.track.allTracks'}
+                #{/else}
+            </div>
+            
+            #{if talk.slot}
+                <div class="talkDetails-slot-day">
+                    <i class="fa fa-calendar talkDetails-icon" aria-hidden="true"></i>
+                    ${talk.slot.startDate.format('dd MMM yyyy')}
+                </div>
+
+                <div class="talkDetails-slot-hour">
+                    <i class="fa fa-clock-o talkDetails-icon" aria-hidden="true"></i>
+                    ${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+                </div>
+            #{/if}
+
+            #{if talk.slidesUrl}
+                <div class="talkDetails-slides">
+                    <i class="fa fa-television talkDetails-icon" aria-hidden="true"></i>
+                    <a href="${talk.slidesUrl}">&{'views.application.talk.slides'}</a>
+                </div>
+            #{/if}
+
+            #{if talk.speakers}
+                <div class="talkDetails-speakers">
+                    #{list items: talk.speakers, as: 'speaker'}
+                        <a class="talkDetails-speaker" href="@{Application.speaker(speaker.id)}">
+                            <div class="talkDetails-speaker-photo">
+                                <img class="talkDetails-speaker-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
+                            </div>
+                            <div class="talkDetails-speaker-name">
+                                ${speaker}
+                            </div>
+                        </a>
+                    #{/list}
+                </div>
+            #{/if}
+
+        </div> <!-- /.col -->
+
+    </div> <!-- ./row -->
+    #{/list}
+</div> <!-- /.container -->
 		</div>
 	#{/else}
 

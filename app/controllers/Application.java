@@ -96,8 +96,9 @@ public class Application extends Controller {
     	}
 
 		boolean displayFullSchedule = displayFullSchedule();
+    	List<Talk> talks = Talk.find("ORDER BY "+("fr".equals(Lang.get()) ? "titleFR" : "titleEN")).fetch();
 
-    	render(displayFullSchedule, days, tracks, tracksPerDays, themes, levels);
+    	render(displayFullSchedule, days, tracks, tracksPerDays, themes, levels, talks);
     }
 
     public static void scheduleSuperSecret(){
@@ -115,7 +116,7 @@ public class Application extends Controller {
     }
 
     public static void talks(){
-    	List<Talk> talks = Talk.find("ORDER BY title").fetch();
+    	List<Talk> talks = Talk.find("ORDER BY "+("fr".equals(Lang.get()) ? "titleFR" : "titleEN")).fetch();
     	render(talks);
     }
 

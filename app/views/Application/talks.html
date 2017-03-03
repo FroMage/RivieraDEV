@@ -8,57 +8,70 @@
 
 <h1>Sessions</h1>
 
-<table class="lines">
-    <thead>
-        <tr>
-            <th>&nbsp;</th>
-            <th>Titre</th>
-            <th>Information</th>
-            <th>Orateurs</th>
-        </tr>
-    </thead>
-	<tbody>
-		#{list items: talks, as: 'talk'}
-			#{if talk.isBreak == models.BreakType.NotABreak}
-            <tr class="${talk_isLast ? 'last' : ''}">
-				<th style="width:110px;">
-					#{list items: talk.speakers, as: 'speaker'}
-						<a href="@{Application.speaker(speaker.id)}"><img src="@{Application.speakerPhoto(speaker.id)}" width="100"/></a>
-					#{/list}
-				</th>
-				<td>
-					<span class="label">Titre:</span> <a href="@{Application.talk(talk.id)}">${talk.title}</a>
-					#{if user}
-						<br/>
-						<a href="@{Talks.show(talk.id)}">edit</a>
-					#{/if}
-					<br/>
-					<span class="label">Description:</span> ${talk.description?.md()}
-                    #{if talk.slidesUrl}
-                        <span class="label">Présentation:</span> <a href="${talk.slidesUrl}">${talk.slidesUrl}</a>
-                        <br/>
-                    #{/if}
-                </td>
-				<td>
-				    <!--
-       					<span class="label">Track:</span> ${talk.track?.title ?: "Plénière"}
-		    			<br/>
-		    		-->
-		    		#{if talk.slot}
-					 <span class="label">Horaire:</span> ${talk.slot.startDate.format('dd MMM yyyy HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
-					#{/if}
-                </td>
-				<td>
-					<ul>
-						#{list items: talk.speakers, as: 'speaker'}
-							<li>
-								<a href="@{Application.speaker(speaker.id)}">${speaker.firstName} ${speaker.lastName}</a>
-							</li>
-						#{/list}
-					</ul>
-				</td>
-			</tr>
-			#{/if}
-		#{/list}
-	</tbody>
-</table>
+<div class="container page-container">
+    #{list items: talks, as: 'talk'}
+    
+    <div class="row talkDetailsList #{if talk_isLast}last#{/if}">
+
+        <div class="col-sm-8">
+            <div class="talkDetails-title">${talk.title}</div>
+
+            #{if talk.theme != null}
+                <span class="fullSchedule-talk-theme fullSchedule-talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+            #{/if}
+
+            <div class="talkDetails-description">${talk.getDescription()?.md()}</div>
+        </div> <!-- /.col -->
+
+        <div class="col-sm-4">
+
+            <div class="talkDetails-track">
+                <i class="fa fa-map-signs talkDetails-icon" aria-hidden="true"></i>
+                #{if talk.track?.title}
+                    ${talk.track.title}
+                #{/if}
+                #{else}
+                    &{'views.application.talk.track.allTracks'}
+                #{/else}
+            </div>
+            
+            #{if talk.slot}
+                <div class="talkDetails-slot-day">
+                    <i class="fa fa-calendar talkDetails-icon" aria-hidden="true"></i>
+                    ${talk.slot.startDate.format('dd MMM yyyy')}
+                </div>
+
+                <div class="talkDetails-slot-hour">
+                    <i class="fa fa-clock-o talkDetails-icon" aria-hidden="true"></i>
+                    ${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+                </div>
+            #{/if}
+
+            #{if talk.slidesUrl}
+                <div class="talkDetails-slides">
+                    <i class="fa fa-television talkDetails-icon" aria-hidden="true"></i>
+                    <a href="${talk.slidesUrl}">&{'views.application.talk.slides'}</a>
+                </div>
+            #{/if}
+
+            #{if talk.speakers}
+                <div class="talkDetails-speakers">
+                    #{list items: talk.speakers, as: 'speaker'}
+                        <a class="talkDetails-speaker" href="@{Application.speaker(speaker.id)}">
+                            <div class="talkDetails-speaker-photo">
+                                <img class="talkDetails-speaker-photo-img" src="@{Application.speakerPhoto(speaker.id)}"/>
+                            </div>
+                            <div class="talkDetails-speaker-name">
+                                ${speaker}
+                            </div>
+                        </a>
+                    #{/list}
+                </div>
+            #{/if}
+
+        </div> <!-- /.col -->
+
+    </div> <!-- ./row -->
+    #{/list}
+</div> <!-- /.container -->
+

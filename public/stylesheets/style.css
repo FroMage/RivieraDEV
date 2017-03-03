@@ -1532,6 +1532,7 @@ th.fullSchedule-time-title {
 .talkDetails {
   margin-top: 2em;
 }
+.talkDetailsList:before, .talkDetailsList.last:after,
 .talkDetails:before, .talkDetails:after {
   display: block;
   width: 100%;
