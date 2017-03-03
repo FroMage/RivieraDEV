@@ -124,7 +124,7 @@ public class Application extends Controller {
     public static void speakers(){
     	List<Speaker> speakers = Speaker.find("ORDER BY lastName, firstName").fetch();
 		List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
-		boolean displayPreviousSpeakers = !displayFullSchedule();
+		boolean displayPreviousSpeakers = !displayNewSpeakers();
 
     	render(speakers, speakersPreviousYears, displayPreviousSpeakers);
     }
@@ -238,6 +238,15 @@ public class Application extends Controller {
 	 */
     private static boolean displayFullSchedule(){
         Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_FULL_SCHEDULE).first();
+		return config != null && config.value.equals("true") ;
+    }
+
+	/**
+	 * Retourne true si les speakers de la nouvelle édition doivent être affichés
+	 * (utile avant que le programme définitif ne soit connu)
+	 */
+    private static boolean displayNewSpeakers(){
+        Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_NEW_SPEAKERS).first();
 		return config != null && config.value.equals("true") ;
     }
 
