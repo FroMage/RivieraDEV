@@ -22,7 +22,7 @@ import play.db.jpa.Model;
 import play.i18n.Lang;
 
 @Entity
-public class Talk extends Model {
+public class Talk extends Model implements Comparable<Talk> {
 
 	@ManyToOne
 	public Slot slot;
@@ -122,5 +122,9 @@ public class Talk extends Model {
 
 	public static List<Track> findTracksPerDay(Date day) {
 		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?", day).fetch();
+	}
+
+	public int compareTo(Talk other){
+		return this.getTitle().compareTo(other.getTitle());
 	}
 }

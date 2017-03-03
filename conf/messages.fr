@@ -192,6 +192,7 @@ views.application.becomeSponsor.contact-us=Pour devenir sponsor de Riviera DEV, 
 views.application.schedule.title=Programme
 views.application.schedule.intro=Riviera DEV est une conférence sur 2 jours avec au moins 3 tracks sur un large panel de sujets : Java et la JVM (présent et futur), langages alternatifs, technologies Front-end et UX, Mobile et IoT, Big Data et Machine Learning, NoSQL, Containers, VMs et Cloud Computing, Performance, Programmation réactive, Agilité, bonnes pratiques, DevOps, ...
 views.application.schedule.unavailable=Le programme détaillé n'est pas encore disponible, mais vous pouvez consulter <a href="http://2015.rivieradev.fr/programme" target="_blank">le programme de l'édition 2015</a> et <a href="http://2016.rivieradev.fr/programme" target="_blank">celui de 2016</a>.
+views.application.schedule.unavailable.speakers.available=Le programme détaillé n'est pas encore disponible, mais vous pouvez déjà consulter <a href="http://rivieradev.fr/talks">les sessions</a> et <a href="http://rivieradev.fr/speakers">les orateurs</a>.
 views.application.schedule.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que le programme détaillé est disponible.
 views.application.schedule.filter=Filtrer
 views.application.schedule.level.beginner=Débutant
