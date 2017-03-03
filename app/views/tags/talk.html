@@ -1,0 +1,61 @@
+
+<div class="col-sm-8">
+    <div class="talkDetails-title">${_talk.title}</div>
+
+    #{if _talk.theme != null}
+        <span class="fullSchedule-talk-theme fullSchedule-talk-theme-${_talk.theme.color.code}">${_talk.theme}</span>
+    #{/if}
+
+    <div class="talkDetails-description">${_talk.getDescription()?.md()}</div>
+</div> <!-- /.col -->
+
+<div class="col-sm-4">
+
+    #{if _displayFullSchedule}
+
+        <div class="talkDetails-track">
+            <i class="fa fa-map-signs talkDetails-icon" aria-hidden="true"></i>
+            #{if _talk.track?.title}
+                ${_talk.track.title}
+            #{/if}
+            #{else}
+                &{'views.application.talk.track.allTracks'}
+            #{/else}
+        </div>
+        
+        #{if _talk.slot}
+            <div class="talkDetails-slot-day">
+                <i class="fa fa-calendar talkDetails-icon" aria-hidden="true"></i>
+                ${_talk.slot.startDate.format('dd MMM yyyy')}
+            </div>
+
+            <div class="talkDetails-slot-hour">
+                <i class="fa fa-clock-o talkDetails-icon" aria-hidden="true"></i>
+                ${_talk.slot.startDate.format('HH:mm')} - ${_talk.slot.endDate.format('HH:mm')}
+            </div>
+        #{/if}
+
+    #{/if}
+
+    #{if _talk.slidesUrl}
+        <div class="talkDetails-slides">
+            <i class="fa fa-television talkDetails-icon" aria-hidden="true"></i>
+            <a href="${_talk.slidesUrl}">&{'views.application.talk.slides'}</a>
+        </div>
+    #{/if}
+
+    #{if _talk.speakers}
+        <div class="talkDetails-speakers">
+            #{list items: _talk.speakers, as: 'speaker'}
+                <a class="talkDetails-speaker" href="@{Application.speaker(speaker.id)}">
+                    <div class="talkDetails-speaker-photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
+                    </div>
+                    <div class="talkDetails-speaker-name">
+                        ${speaker}
+                    </div>
+                </a>
+            #{/list}
+        </div>
+    #{/if}
+
+</div> <!-- /.col -->

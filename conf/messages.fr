@@ -3,6 +3,7 @@
 #
 views.main.schedule=Programme
 views.main.speakers=Orateurs
+views.main.talks=Sessions
 views.main.cfp=CFP
 views.main.tickets=Billetterie
 views.main.access=Infos pratiques
@@ -197,6 +198,8 @@ views.application.schedule.level.beginner=Débutant
 views.application.schedule.level.intermediate=Confirmé
 views.application.schedule.level.advanced=Expert
 views.application.schedule.full.talk.unknown=En cours de finalisation
+
+views.application.talks.title=Sessions
 
 views.application.talk.title=Session
 views.application.talk.slides=Slides

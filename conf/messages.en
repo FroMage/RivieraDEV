@@ -3,6 +3,7 @@
 #
 views.main.schedule=Program
 views.main.speakers=Speakers
+views.main.talks=Talks
 views.main.cfp=CFP
 views.main.tickets=Tickets
 views.main.access=Practical information
@@ -197,6 +198,8 @@ views.application.schedule.level.beginner=Beginner
 views.application.schedule.level.intermediate=Intermediate
 views.application.schedule.level.advanced=Advanced
 views.application.schedule.full.talk.unknown=Being finalized
+
+views.application.talks.title=Talks
 
 views.application.talk.title=Talk
 views.application.talk.slides=Slides

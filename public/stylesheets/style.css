@@ -1535,6 +1535,9 @@ th.fullSchedule-time-title {
   margin: 2em 0;
   background-color: #0090CD;
 }
+.talkDetails-all:after {
+  height: 0;
+}
 .talkDetails-title {
   text-transform: uppercase;
   color: #0090CD;

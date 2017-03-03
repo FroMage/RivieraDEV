@@ -80,12 +80,30 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="${(request.action == 'Application.schedule' || request.action == 'Application.talk') ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.schedule}">&{'views.main.schedule'}</a>
+
+                    <li class="dropdown ${(request.action == 'Application.schedule' 
+                                        || request.action == 'Application.speakers'
+                                        || request.action == 'Application.speaker'
+                                        || request.action == 'Application.talks'
+                                        || request.action == 'Application.talk') 
+                                        ? 'active' : ''}">
+                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            &{'views.main.schedule'}
+                            <i class="fa fa-angle-down dropdown-caret" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="${request.action == 'Application.schedule' ? 'active' : ''}">
+                                <a href="@{Application.schedule}">&{'views.main.schedule'}</a>
+                            </li>
+                            <li class="${(request.action == 'Application.speakers' || request.action == 'Application.speaker') ? 'active' : ''}">
+                                <a href="@{Application.speakers}">&{'views.main.speakers'}</a>
+                            </li>
+                            <li class="${(request.action == 'Application.talks' || request.action == 'Application.talk') ? 'active' : ''}">
+                                <a href="@{Application.talks}">&{'views.main.talks'}</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="${(request.action == 'Application.speakers' || request.action == 'Application.speaker') ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.speakers}">&{'views.main.speakers'}</a>
-                    </li>
+
                     <li class="${request.action == 'Application.cfp' ? 'active' : ''}">
                         <a class="navbar-animated-link" href="@{Application.cfp}">&{'views.main.cfp'}
                         </a>

@@ -117,7 +117,8 @@ public class Application extends Controller {
 
     public static void talks(){
     	List<Talk> talks = Talk.find("ORDER BY "+("fr".equals(Lang.get()) ? "titleFR" : "titleEN")).fetch();
-    	render(talks);
+		boolean displayFullSchedule = displayFullSchedule();
+    	render(talks, displayFullSchedule);
     }
 
     public static void speakers(){
@@ -137,7 +138,8 @@ public class Application extends Controller {
     public static void talk(Long id){
     	Talk talk = Talk.findById(id);
     	notFoundIfNull(talk);
-    	render(talk);
+		boolean displayFullSchedule = displayFullSchedule();
+    	render(talk, displayFullSchedule);
     }
 
     public static void sponsors() {

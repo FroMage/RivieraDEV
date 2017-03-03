@@ -10,6 +10,10 @@
         background-color: $color-blue;
     }
 
+    &-all:after {
+        height: 0;
+    }
+
     &-title {
         text-transform: uppercase;
         color: $color-blue;
