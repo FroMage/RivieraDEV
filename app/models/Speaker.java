@@ -42,6 +42,8 @@ public class Speaker extends Model {
 	@MaxSize(4)
 	public Integer year;
 
+	public Boolean isJUDConSpeaker = false;
+
 	@ManyToMany(mappedBy = "speakers")
 	public List<Talk> talks = new ArrayList<Talk>();
 	

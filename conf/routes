@@ -14,6 +14,7 @@ GET     /schedule                               Application.schedule
 GET     /orateurs                               Application.speakers
 GET     /speakers                               Application.speakers
 GET     /orateur/{id}                           Application.speaker(id)
+GET     /judcon                                 Application.judcon
 GET     /cfp                                    Application.cfp
 GET     /sessions                               Application.talks
 GET     /talks                                  Application.talks

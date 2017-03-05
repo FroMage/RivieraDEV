@@ -1,0 +1,46 @@
+#{extends 'main.html' /}
+#{set title:play.i18n.Messages.get('views.application.judcon.title') /}
+
+<div class="page-title-container">
+	<h1 class="title page-title"><span>&{'views.application.judcon.title'}</span></h1>
+</div>
+
+<div class="container page-container">
+
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<img src="@{'/public/images/logos/judcon.png'}" alt="JUDCon2017:Riviera" class="navbar-RedHat--logo">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 judcon-intro">
+			<div class="judcon-intro-quote">
+				<p>
+					Welcome to the sunny French Riviera and our very first JUDCon in this locale! I’m extremely excited for Red Hat to be able to sponsor a JUDCon here because throughout the history of JBoss and then Red Hat, French developers and users have been at the heart of everything we do. Whether it’s the Ceylon language, Camel, ActiveMQ, or WildFly, for instance, you can find French core developers working for us or other companies driving the innovation forward at a rapid pace. Therefore, it is only fitting that we have a JUDCon here because, as many of you will know from the history of JUDCon, this is an event ‘By Developers and For Developers’. We’ve been running JUDCons throughout the world for many years and whilst the themes of the tracks may have changed between events, the underlying theme remains the same: if you want to learn about the innovative things going on with enterprise Java in all of its guises then come to JUDCon and listen to the presentations; if you want to share your experiences with others in the audience then you’ll find plenty of opportunity at the events in and around the sessions; if you just want to be inspired for the next great coding adventure ahead of you then this is one of the best events to be at. JUDCon is about community participation in all of its forms and I really hope you enjoy this event as much as we have enjoyed pulling it together.
+				</p>
+				<p>
+					Onward!
+				</p>
+			</div>
+			<p class="judcon-intro-signature">
+				Mark Little, VP Red Hat, CTO JBoss.
+			</p>
+		</div>
+	</div>
+
+	<h2 class="title">&{'views.application.judcon.speakers'}</h2>
+
+	#{if user}
+	<div class="row">
+		<div class="text-center">
+			<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
+		</div>
+	</div>
+	#{/if}
+
+	<div class="container speakers">
+		#{speakers speakers: speakers/}
+	</div>
+
+</div>

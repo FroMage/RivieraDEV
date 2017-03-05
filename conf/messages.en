@@ -4,6 +4,7 @@
 views.main.schedule=Program
 views.main.speakers=Speakers
 views.main.talks=Talks
+views.main.judcon=JUDCon
 views.main.cfp=CFP
 views.main.tickets=Tickets
 views.main.access=Practical information
@@ -57,6 +58,9 @@ views.application.speakers.unavailable=The speaker list is not available yet.
 views.application.speakers.subscribe=Subscribe to the newsletter to be notified when the speaker list is published.
 
 views.application.speaker.title=Speaker
+
+views.application.judcon.title=JUDCon2017:Riviera
+views.application.judcon.speakers=Speakers
 
 views.application.subscribe.title=Tickets
 views.application.subscribe.unavailable=Registration is not open yet.

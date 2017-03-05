@@ -143,6 +143,11 @@ public class Application extends Controller {
     	render(talk, displayFullSchedule);
     }
 
+    public static void judcon(){
+    	List<Speaker> speakers = Speaker.find("isJUDConSpeaker = true ORDER BY lastName, firstName").fetch();
+    	render(speakers);
+    }
+
     public static void sponsors() {
 		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
 		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();

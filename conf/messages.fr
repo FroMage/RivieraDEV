@@ -4,6 +4,7 @@
 views.main.schedule=Programme
 views.main.speakers=Orateurs
 views.main.talks=Sessions
+views.main.judcon=JUDCon
 views.main.cfp=CFP
 views.main.tickets=Billetterie
 views.main.access=Infos pratiques
@@ -57,6 +58,9 @@ views.application.speakers.unavailable=La liste des orateurs n'est pas encore di
 views.application.speakers.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que les orateurs sont connus.
 
 views.application.speaker.title=Orateur
+
+views.application.judcon.title=JUDCon2017:Riviera
+views.application.judcon.speakers=Orateurs
 
 views.application.subscribe.title=Billetterie
 views.application.subscribe.unavailable=Les inscriptions ne sont pas encore ouvertes.
