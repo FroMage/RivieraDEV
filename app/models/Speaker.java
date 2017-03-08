@@ -38,10 +38,6 @@ public class Speaker extends Model {
 	/** Est-ce que ce speaker mérite d'être sur la page d'accueil ? */
 	public boolean star;
 
-	// TODO supprimer dès que ce champ n'est plus utilisé en BD
-	@MaxSize(4)
-	public Integer year;
-
 	public Boolean isJUDConSpeaker = false;
 
 	@ManyToMany(mappedBy = "speakers")
