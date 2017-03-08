@@ -5,15 +5,14 @@
 	<h1 class="title page-title"><span>&{'views.application.talk.title'}</span></h1>
 </div>
 
-#{if user}
-	<a href="@{Talks.blank()}" class="btn btn-default">add</a>
-	<a href="@{Talks.show(talk.id)}" class="btn btn-default">edit</a>
-#{/if}
-
 <div class="container page-container">
 
+	#{if user}
+		<a href="@{Talks.blank()}" class="btn btn-default">add</a>
+	#{/if}
+
 	<div class="row talkDetails">
-		#{talk talk: talk, displayFullSchedule: displayFullSchedule/}
+		#{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
 	</div> <!-- ./row -->
 
 </div> <!-- /.container -->

@@ -5,12 +5,13 @@
 	<h1 class="title page-title"><span>&{'views.application.speaker.title'}</span></h1>
 </div>
 
-#{if user}
-	<a href="@{Speakers.blank()}" class="btn btn-default">add</a>
-	<a href="@{Speakers.show(speaker.id)}" class="btn btn-default">edit</a>
-#{/if}
-
 <div class="container page-container">
+
+    #{if user}
+        <a href="@{Speakers.blank()}" class="btn btn-default">add</a>
+    #{/if}
+
+
     <div class="row personDetails">
                 
         <div class="col-sm-2 personDetails-photo">
@@ -34,6 +35,10 @@
 					</li>
 				#{/list}
 			</ul>
+
+            #{if user}
+                <a href="@{Speakers.show(speaker.id)}" class="btn btn-default">edit</a>
+            #{/if}
 
         </div>
 

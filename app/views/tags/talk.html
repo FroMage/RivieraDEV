@@ -2,11 +2,19 @@
 <div class="col-sm-8">
     <div class="talkDetails-title">${_talk.title}</div>
 
-    #{if _talk.theme != null}
+    #{if _talk.theme}
         <span class="fullSchedule-talk-theme fullSchedule-talk-theme-${_talk.theme.color.code}">${_talk.theme}</span>
     #{/if}
 
+    #{if _talk.level && _talk.track}
+        <span class="fullSchedule-talk-level">&{'views.application.schedule.level.' + _talk.level.code}</span>
+    #{/if}
+
     <div class="talkDetails-description">${_talk.getDescription()?.md()}</div>
+
+    #{if _user}
+	    <a href="@{Talks.show(_talk.id)}" class="btn btn-default">edit</a>
+    #{/if}
 </div> <!-- /.col -->
 
 <div class="col-sm-4">
