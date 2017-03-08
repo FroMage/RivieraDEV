@@ -1594,10 +1594,10 @@ th.fullSchedule-time-title {
 }
 
 @media (max-width: 767px) {
-  .talkDetails {
+  .talkDetails-onlyOne {
     margin-top: 0;
   }
-  .talkDetails:before, .talkDetails:after {
+  .talkDetails-onlyOne:before, .talkDetails-onlyOne:after {
     height: 0;
   }
 }
