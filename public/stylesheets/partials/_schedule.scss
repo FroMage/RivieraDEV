@@ -109,47 +109,6 @@
             color: $color-blue-dark;
         }
 
-        &-theme {
-            padding: 0 0.4em;
-            border-radius: 4px;
-            color: white;
-            margin-bottom: 0.5em;
-            display: inline-block;
-
-            &-blue {
-                background-color: $color-blue;
-            }
-
-            &-yellow {
-                background-color: $color-yellow;
-            }
-
-            &-green {
-                background-color: $color-green;
-            }
-
-            &-purple {
-                background-color: $color-purple;
-            }
-
-            &-orange {
-                background-color: $color-orange;
-            }
-
-            &-red {
-                background-color: $color-red;
-            }
-        }
-
-        &-level {
-            font-style: italic;
-            background-color: $color-gray;
-            padding: 0 0.4em;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 0 0 0.5em 0.3em;
-        }
-
         &-speakers {
             list-style-type: none;
             padding-left: 0;
@@ -199,59 +158,9 @@
         background-image: url('../images/icons/pint.svg');
     }
 
-    &-filter {
-        margin-top: 20px;
-        padding: 10px 15px;
-        background-color: $color-gray-ultralight;
-
-        &-title{
-            display: inline-block;
-            vertical-align: top;
-            font-weight: bold;
-            margin-right: 0.5em;
-        }
-
-        &-options {
-            display: inline-block;
-        }
-
-        &-item{
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-left: 0;
-
-            &[data-filter-theme='hidden'],
-            &[data-filter-level='hidden'],
-            &[data-filter-theme='hidden'][data-filter-level='hidden']{
-                opacity: 0.05;
-                transition: all 0.3s;
-            }
-        }
-    }
-}
-
-.fullSchedule-filter-options .fullSchedule-filter-item {
-    &[data-filter-theme='hidden'],
-            &[data-filter-level='hidden'],
-            &[data-filter-theme='hidden'][data-filter-level='hidden']{
-                opacity: 0.2;
-            }
 }
 
 th.fullSchedule-time-title {
     border-top: none;
     border-left: none;
-}
-
-// Only on xs devices (smartphones)
-@media (max-width: $screen-xs-max) {
-
-    .fullSchedule-filter-options .fullSchedule-filter-item {
-        padding: 0.5em;
-    }
-
-    .fullSchedule-filter-levels {
-        margin-top: 0.5em;
-    }
-
 }

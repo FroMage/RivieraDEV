@@ -1,0 +1,25 @@
+
+<div class="talksFilter">
+    <div class="talksFilter-title">&{'views.application.schedule.filter'} : </div>
+    <div class="talksFilter-options">
+        <div class="js-talksFilter-themes">
+            #{list items: _themes, as: 'theme'}
+                <span onclick="toggleTheme('${theme.getUtilityName()}')" 
+                      class="talksFilter-item talk-theme 
+                             js-talksFilter-item js-talksFilter-theme-${theme.getUtilityName()} talk-theme-${theme.color.code}">
+                             ${theme}
+                </span>
+            #{/list}
+        </div>
+        <div class="js-talksFilter-levels">
+            #{list items: _levels, as: 'level'}
+                <span onclick="toggleLevel('${level.code}')" 
+                      class="talksFilter-item talk-level 
+                             js-talksFilter-item js-talksFilter-level-${level.code}">
+                      &{'views.application.schedule.level.' + level.code}
+                </span>
+            #{/list}
+        </div>
+    </div>
+</div>
+

@@ -10,10 +10,10 @@ $(function() {
 
     window.filterSchedule = function (filter, option, filterMethod){
 		// Le filtre sélectionné
-		let currentFilter = $('.fullSchedule-filter-' + filter + 's .fullSchedule-talk-' + filter + '-' + option)
+		let currentFilter = $('.js-talksFilter-' + filter + 's .js-talksFilter-' + filter + '-' + option)
 
 		// Les éléments à filtrer
-		let currentElems = $('.fullSchedule-talk-' + filter + '-' + option)
+		let currentElems = $('.js-talksFilter-' + filter + '-' + option)
 
 		if(currentFilter && currentFilter.attr('data-filter-' + filter)){
 			// Si element courant est désactivé alors le réactiver
@@ -22,7 +22,7 @@ $(function() {
 			}, this);
 		}
 		else{
-			let otherFilters = $('.fullSchedule-filter-' + filter + 's .fullSchedule-filter-item').not('.fullSchedule-talk-' + filter + '-' + option)
+			let otherFilters = $('.js-talksFilter-' + filter + 's .js-talksFilter-item').not('.js-talksFilter-' + filter + '-' + option)
 			let otherHiddenFilters = otherFilters.not('[data-filter-' + filter + ']')
 			// Si d'autres éléments sont déjà cachés alors on cache l'élément sélectionné
 			if(otherHiddenFilters.length > 0 && otherHiddenFilters.length !== otherFilters.length){
@@ -33,7 +33,7 @@ $(function() {
 			}
 
 			// Si aucun éléments n'est cachés alors on cache tous les autres
-			let otherElems = $('.fullSchedule-talk .fullSchedule-filter-item').not('.fullSchedule-talk-' + filter + '-' + option)
+			let otherElems = $('.js-talksFilter-toFilter .js-talksFilter-item').not('.js-talksFilter-' + filter + '-' + option)
 			if(otherFilters.length > 0){
 				otherFilters.each(function(index, element) {
 					filterMethod(element);
@@ -43,7 +43,7 @@ $(function() {
 				}, this);
 			}
 			else{
-				filterMethod($('.fullSchedule-talk-' + filter + '-' + option));
+				filterMethod($('.js-talksFilter-' + filter + '-' + option));
 			}
 		}
     }

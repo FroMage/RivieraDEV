@@ -86,7 +86,7 @@ public class Application extends Controller {
     public static void schedule(){
     	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
-		List<TalkTheme> themes = TalkTheme.findAll();
+		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
@@ -104,7 +104,7 @@ public class Application extends Controller {
     public static void scheduleSuperSecret(){
     	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
-		List<TalkTheme> themes = TalkTheme.findAll();
+		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
@@ -116,10 +116,12 @@ public class Application extends Controller {
     }
 
     public static void talks(){
+		List<TalkTheme> themes = TalkTheme.findUsedThemes();
+		Level[] levels = Level.values();
     	List<Talk> talks = Talk.findAll();
 		Collections.sort(talks);
 		boolean displayFullSchedule = displayFullSchedule();
-    	render(talks, displayFullSchedule);
+    	render(themes, levels, talks, displayFullSchedule);
     }
 
     public static void speakers(){

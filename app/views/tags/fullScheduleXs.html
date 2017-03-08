@@ -24,7 +24,7 @@
 					#{/if}
 				</th>
 
-				<td class="fullSchedule-talk fullSchedule-${allTracksEvent.isBreak.code}">
+				<td class="js-talksFilter-toFilter fullSchedule-${allTracksEvent.isBreak.code}">
 					#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
 						<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
 					#{/if}
@@ -32,12 +32,12 @@
 						<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
 
 						<!--
-						#{if allTracksEvent.theme != null}
-							<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
+						#{if allTracksEvent.theme}
+							<span class="talk-theme talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
 						#{/if}
 
 						#{if allTracksEvent.level != null}
-							<span class="fullSchedule-talk-level">&{'views.application.schedule.level.' + allTracksEvent.level.code}</span>
+							<span class="talk-level">&{'views.application.schedule.level.' + allTracksEvent.level.code}</span>
 						#{/if}
 						-->
 
@@ -77,19 +77,19 @@
 								<a href="@{Slots.show(slot.id)}">edit</a>
 							#{/if}
 						</th>
-						<td class="fullSchedule-talk">
-							<div class="fullSchedule-talk-theme-${talk.theme.getUtilityName()} fullSchedule-filter-item fullSchedule-talk-level-${talk.level.code}">
+						<td class="js-talksFilter-toFilter">
+							<div class="talksFilter-item js-talksFilter-theme-${talk.theme.getUtilityName()} js-talksFilter-item js-talksFilter-level-${talk.level.code}">
 								<span class="fullSchedule-track-title">${track.title}</span>
 
 								#{if talk}
 									<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
 
 									#{if talk.theme != null}
-										<span class="fullSchedule-talk-theme fullSchedule-talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+										<span class="talk-theme talk-theme-${talk.theme.color.code}">${talk.theme}</span>
 									#{/if}
 
 									#{if talk.level != null}
-										<span class="fullSchedule-talk-level">&{'views.application.schedule.level.' + talk.level.code}</span>
+										<span class="talk-level">&{'views.application.schedule.level.' + talk.level.code}</span>
 									#{/if}
 									
 									<ul class="fullSchedule-talk-speakers">

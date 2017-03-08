@@ -42,6 +42,13 @@ public class TalkTheme extends Model implements Comparable<TalkTheme>{
 		name = name.replaceAll("[^\\p{ASCII}]", "");
 		// Remove blank
 		name = name.replaceAll(" ","");
+		// Remove &
+		name = name.replaceAll("&","-");
 		return name;
 	}
+
+	public static List<TalkTheme> findUsedThemes() {
+		return find("SELECT DISTINCT talk.theme FROM Talk talk").fetch();
+	}
+
 }

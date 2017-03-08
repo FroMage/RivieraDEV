@@ -11,16 +11,23 @@
         <a class="btn btn-default" href="@{Talks.blank()}">add</a>
     #{/if}
 
-    #{list items: talks, as: 'talk'}
+    #{filterForTalks themes: themes, levels: levels/}
 
-        #{if talk.isBreak == models.BreakType.NotABreak}
+    <div class="talks js-talksFilter-toFilter">
 
-            <div class="row talkDetails talkDetails-all">
-                #{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
-            </div> <!-- ./row -->
+        #{list items: talks, as: 'talk'}
 
-        #{/if}
+            #{if talk.isBreak == models.BreakType.NotABreak}
 
-    #{/list}
+                <div class="row talkDetails talkDetails-all talksFilter-item
+                            js-talksFilter-item js-talksFilter-theme-${talk.theme?.getUtilityName()} js-talksFilter-level-${talk.level?.code}">
+                    #{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
+                </div> <!-- ./row -->
+
+            #{/if}
+
+        #{/list}
+    </div>
+    
 </div> <!-- /.container -->
 

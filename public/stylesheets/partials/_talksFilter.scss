@@ -1,0 +1,66 @@
+.talksFilter {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: $color-gray-ultralight;
+
+    &-title {
+        display: inline-block;
+        vertical-align: top;
+        font-weight: bold;
+        margin-right: 0.5em;
+    }
+
+    &-options {
+        display: inline-block;
+    }
+
+    &-item {
+        transition: all 0.3s;
+        margin-left: 0;
+    }
+}
+
+.talksFilter-options .talksFilter-item {
+    cursor: pointer;
+
+    &[data-filter-theme='hidden'],
+    &[data-filter-level='hidden'],
+    &[data-filter-theme='hidden'][data-filter-level='hidden']{
+        opacity: 0.2;
+    }
+}
+
+
+// Only on xs devices (smartphones)
+@media (max-width: $screen-xs-max) {
+
+    .talksFilter-options .talksFilter-item {
+        padding: 0.5em;
+    }
+
+    .talksFilter-levels {
+        margin-top: 0.5em;
+    }
+
+}
+
+
+// Hide items on the schedule page
+.fullSchedule .talksFilter-item {
+    &[data-filter-theme='hidden'],
+    &[data-filter-level='hidden'],
+    &[data-filter-theme='hidden'][data-filter-level='hidden']{
+        opacity: 0.05;
+        transition: all 0.3s;
+    }
+}
+
+
+// Hide items on the talks page
+.talks .talksFilter-item {
+    &[data-filter-theme='hidden'],
+    &[data-filter-level='hidden'],
+    &[data-filter-theme='hidden'][data-filter-level='hidden']{
+        display: none;
+    }
+}

@@ -1416,39 +1416,6 @@ a.footer-rs-instagram:active {
   font-weight: 600;
   color: #00709D;
 }
-.fullSchedule-talk-theme {
-  padding: 0 0.4em;
-  border-radius: 4px;
-  color: white;
-  margin-bottom: 0.5em;
-  display: inline-block;
-}
-.fullSchedule-talk-theme-blue {
-  background-color: #0090CD;
-}
-.fullSchedule-talk-theme-yellow {
-  background-color: #FDB742;
-}
-.fullSchedule-talk-theme-green {
-  background-color: #7BA218;
-}
-.fullSchedule-talk-theme-purple {
-  background-color: #844990;
-}
-.fullSchedule-talk-theme-orange {
-  background-color: #ff7826;
-}
-.fullSchedule-talk-theme-red {
-  background-color: #CC0000;
-}
-.fullSchedule-talk-level {
-  font-style: italic;
-  background-color: #bbb;
-  padding: 0 0.4em;
-  border-radius: 4px;
-  display: inline-block;
-  margin: 0 0 0.5em 0.3em;
-}
 .fullSchedule-talk-speakers {
   list-style-type: none;
   padding-left: 0;
@@ -1483,48 +1450,47 @@ a.footer-rs-instagram:active {
 .fullSchedule-party-title {
   background-image: url("../images/icons/pint.svg");
 }
-.fullSchedule-filter {
-  margin-top: 20px;
-  padding: 10px 15px;
-  background-color: #eee;
-}
-.fullSchedule-filter-title {
-  display: inline-block;
-  vertical-align: top;
-  font-weight: bold;
-  margin-right: 0.5em;
-}
-.fullSchedule-filter-options {
-  display: inline-block;
-}
-.fullSchedule-filter-item {
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-left: 0;
-}
-.fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-item[data-filter-level='hidden'], .fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
-  opacity: 0.05;
-  transition: all 0.3s;
-}
-
-.fullSchedule-filter-options .fullSchedule-filter-item[data-filter-theme='hidden'], .fullSchedule-filter-options .fullSchedule-filter-item[data-filter-level='hidden'], .fullSchedule-filter-options .fullSchedule-filter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
-  opacity: 0.2;
-}
 
 th.fullSchedule-time-title {
   border-top: none;
   border-left: none;
 }
 
-@media (max-width: 767px) {
-  .fullSchedule-filter-options .fullSchedule-filter-item {
-    padding: 0.5em;
-  }
-
-  .fullSchedule-filter-levels {
-    margin-top: 0.5em;
-  }
+.talk-theme {
+  padding: 0 0.4em;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 0.5em;
+  display: inline-block;
 }
+.talk-theme-blue {
+  background-color: #0090CD;
+}
+.talk-theme-yellow {
+  background-color: #FDB742;
+}
+.talk-theme-green {
+  background-color: #7BA218;
+}
+.talk-theme-purple {
+  background-color: #844990;
+}
+.talk-theme-orange {
+  background-color: #ff7826;
+}
+.talk-theme-red {
+  background-color: #CC0000;
+}
+
+.talk-level {
+  font-style: italic;
+  background-color: #bbb;
+  padding: 0 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 0 0.5em 0.3em;
+}
+
 .talkDetails {
   margin-top: 2em;
 }
@@ -1601,6 +1567,50 @@ th.fullSchedule-time-title {
     height: 0;
   }
 }
+.talksFilter {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #eee;
+}
+.talksFilter-title {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+.talksFilter-options {
+  display: inline-block;
+}
+.talksFilter-item {
+  transition: all 0.3s;
+  margin-left: 0;
+}
+
+.talksFilter-options .talksFilter-item {
+  cursor: pointer;
+}
+.talksFilter-options .talksFilter-item[data-filter-theme='hidden'], .talksFilter-options .talksFilter-item[data-filter-level='hidden'], .talksFilter-options .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+  opacity: 0.2;
+}
+
+@media (max-width: 767px) {
+  .talksFilter-options .talksFilter-item {
+    padding: 0.5em;
+  }
+
+  .talksFilter-levels {
+    margin-top: 0.5em;
+  }
+}
+.fullSchedule .talksFilter-item[data-filter-theme='hidden'], .fullSchedule .talksFilter-item[data-filter-level='hidden'], .fullSchedule .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+  opacity: 0.05;
+  transition: all 0.3s;
+}
+
+.talks .talksFilter-item[data-filter-theme='hidden'], .talks .talksFilter-item[data-filter-level='hidden'], .talks .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+  display: none;
+}
+
 .judcon-intro {
   font-size: 1.1em;
   line-height: 1.5;

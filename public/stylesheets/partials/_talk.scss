@@ -1,3 +1,46 @@
+
+.talk-theme {
+    padding: 0 0.4em;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 0.5em;
+    display: inline-block;
+
+    &-blue {
+        background-color: $color-blue;
+    }
+
+    &-yellow {
+        background-color: $color-yellow;
+    }
+
+    &-green {
+        background-color: $color-green;
+    }
+
+    &-purple {
+        background-color: $color-purple;
+    }
+
+    &-orange {
+        background-color: $color-orange;
+    }
+
+    &-red {
+        background-color: $color-red;
+    }
+}
+
+.talk-level {
+    font-style: italic;
+    background-color: $color-gray;
+    padding: 0 0.4em;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 0 0.5em 0.3em;
+}
+
+
 .talkDetails {
     margin-top: 2em;
 
