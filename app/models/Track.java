@@ -17,18 +17,19 @@ public class Track extends Model implements Comparable<Track>{
 	
 	@Required
 	@MaxSize(1)
-	public Integer order;
+	public int position;
 
 	@OneToMany(mappedBy = "track")
 	public List<Talk> talks = new ArrayList<Talk>();
 	
 	@Override
 	public String toString(){
-		return title;
+		return "[" + position + "] " + title;
 	}
 
 	@Override
 	public int compareTo(Track other) {
-		return order.compareTo(other.order);
+		//return order.compareTo(other.order);
+		return position - other.position;
 	}
 }
