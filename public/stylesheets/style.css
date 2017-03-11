@@ -1394,6 +1394,9 @@ a.footer-rs-instagram:active {
 .fullSchedule-col-3tracks {
   width: 30%;
 }
+.fullSchedule-col-4tracks {
+  width: 22.5%;
+}
 .fullSchedule-col-XStracks {
   width: 90%;
 }
