@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import play.data.validation.MaxSize;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
@@ -14,6 +15,10 @@ public class Track extends Model implements Comparable<Track>{
 	@Required
 	public String title;
 	
+	@Required
+	@MaxSize(1)
+	public Integer order;
+
 	@OneToMany(mappedBy = "track")
 	public List<Talk> talks = new ArrayList<Talk>();
 	
@@ -24,6 +29,6 @@ public class Track extends Model implements Comparable<Track>{
 
 	@Override
 	public int compareTo(Track other) {
-		return title.compareTo(other.title);
+		return order.compareTo(other.order);
 	}
 }
