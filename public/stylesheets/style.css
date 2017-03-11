@@ -1400,6 +1400,9 @@ a.footer-rs-instagram:active {
 .fullSchedule-col-XStracks {
   width: 90%;
 }
+.fullSchedule-talk-cell {
+  vertical-align: top;
+}
 .fullSchedule-time {
   text-align: center;
   font-size: 1.1em;

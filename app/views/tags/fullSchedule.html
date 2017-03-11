@@ -81,7 +81,7 @@
 			#{else}
 				#{list items: tracks, as: 'track'}
 					%{talk = slot.getTalkPerTrack(track);}%
-					<td class="js-talksFilter-toFilter">
+					<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
 						#{if talk}
 							<div class="talksFilter-item js-talksFilter-theme-${talk.theme?.getUtilityName()} js-talksFilter-item js-talksFilter-level-${talk.level?.code}">
 								<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
