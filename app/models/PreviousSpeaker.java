@@ -29,6 +29,7 @@ public class PreviousSpeaker extends Model {
 	public Blob photo;
 	
 	/* La dernière année à laquelle l'orateur a participé au RivieraDEV */
+	@Required
 	@MaxSize(4)
 	public Integer year;
 	
