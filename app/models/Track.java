@@ -29,7 +29,7 @@ public class Track extends Model implements Comparable<Track>{
 
 	@Override
 	public int compareTo(Track other) {
-		//return order.compareTo(other.order);
+		//return position.compareTo(other.position);
 		return position - other.position;
 	}
 }
