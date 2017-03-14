@@ -57,6 +57,10 @@ public class Talk extends Model implements Comparable<Talk> {
 
 	public String slidesUrl;
 	
+	// Permet de cacher ce talk dans la page qui liste les talks.
+	// (Ex: 'Keynote des Orga', 'Accueil', etc...)
+	public boolean isHiddenInTalksPage;
+
     @JoinTable(
             name="talk_speaker",
             joinColumns=@JoinColumn(name="talk_id"),

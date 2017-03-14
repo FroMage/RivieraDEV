@@ -118,7 +118,7 @@ public class Application extends Controller {
     public static void talks(){
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
-    	List<Talk> talks = Talk.findAll();
+    	List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
 		Collections.sort(talks);
 		boolean displayFullSchedule = displayFullSchedule();
     	render(themes, levels, talks, displayFullSchedule);
