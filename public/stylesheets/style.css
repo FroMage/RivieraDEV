@@ -152,6 +152,11 @@ a:hover, a:active, a:focus {
   font-size: 1.25em;
 }
 
+.video {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .cfp-intro {
   display: -webkit-flex;
   display: flex;
