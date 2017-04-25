@@ -1,5 +1,20 @@
 $(function() {
-    var finalDate = '2017/05/11 08:30:00';
+    // TODO aller chercher ces dates dans la BD plutôt qu'en dur dans le JS
+    var begin = '2017/05/11 08:20:00';
+    var end = '2017/05/12 18:00:00';
+    var now = new Date();
+
+    if (now < new Date(begin)) {
+        beforeConf(begin);
+    } else if (now < new Date(end)) {
+        whileConf();
+    } else {
+        afterConf();
+    }
+
+});
+
+function beforeConf(begin) {
     var format = 
       '<span class="countdown-day">'
     + '    <span class="countdown-number">%D</span>'
@@ -18,9 +33,32 @@ $(function() {
     + '    <span class="countdown-desc">' + countDownSecondsLabel + '</span>'
     + '</span>';
 
-    $('#js-countdown').countdown(finalDate, function(event) {
+    $('#js-countdown').countdown(begin, function(event) {
         $(this).html(event.strftime(format));
+    }).on('finish.countdown', function(event) {
+        whileConf();
     });
 
+    // DEBUG
     //$('#js-countdown').countdown("pause");
-});
+}
+
+function whileConf() {
+    $('#js-countdown').empty();
+    // TODO mettre un message stylé genre "C'est maintenant !"
+    updateControlsAfterCountdown();
+}
+
+function afterConf() {
+    $('#js-countdown').empty();
+    // TODO mettre un message stylé genre "On vous retrouve l'année prochaine"
+    updateControlsAfterCountdown();
+}
+
+// TODO dégager ce code ailleurs
+function updateControlsAfterCountdown() {
+    // Cache les boutons qui se trouvent au dessus du compteur
+    $('.js-registration-buttons').empty();
+    // Ne met plus le menu "Billeterie" en avant
+    $(".js-navbar-link-primary .label").removeClass('label').removeClass('label-primary');
+}
