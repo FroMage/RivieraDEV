@@ -42,17 +42,17 @@ var tracks = {
  "Keynotes": [
   #{list keynotes, as: 'talk'}
    {
-    "titleEN": "${talk.titleEN}", 
-    "titleFR": "${talk.titleFR}", 
-    "descriptionEN": "${talk.descriptionEN}", 
-    "descriptionFR": "${talk.descriptionFR}", 
+    "titleEN": "${talk.titleEN.jsonEscape()}", 
+    "titleFR": "${talk.titleFR.jsonEscape()}", 
+    "descriptionEN": "${talk.descriptionEN.jsonEscape()}", 
+    "descriptionFR": "${talk.descriptionFR.jsonEscape()}", 
     "start": ${talk.slot.startDate.time}, 
     "end": ${talk.slot.endDate.time},
     "track": "Keynotes",
     "speakers": [
     #{list talk.speakers, as: 'speaker'}
      {
-    	 "name": "${speaker.firstName} ${speaker.lastName}",
+    	 "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
          "photo": "@{Application.speakerPhoto(speaker.id)}"
      }#{if !speaker_isLast},#{/if}
     #{/list}
@@ -64,17 +64,17 @@ var tracks = {
   "${track.title}": [
    #{list track.talks, as: 'talk'}
     {
-     "titleEN": "${talk.titleEN}", 
-     "titleFR": "${talk.titleFR}", 
-     "descriptionEN": "${talk.descriptionEN}", 
-     "descriptionFR": "${talk.descriptionFR}", 
+     "titleEN": "${talk.titleEN.jsonEscape()}", 
+     "titleFR": "${talk.titleFR.jsonEscape()}", 
+     "descriptionEN": "${talk.descriptionEN.jsonEscape()}", 
+     "descriptionFR": "${talk.descriptionFR.jsonEscape()}", 
      "start": ${talk.slot.startDate.time}, 
      "end": ${talk.slot.endDate.time},
-     "track": "${track.title}", 
+     "track": "${track.title.jsonEscape()}", 
      "speakers": [
       #{list talk.speakers, as: 'speaker'}
       {
-          "name": "${speaker.firstName} ${speaker.lastName}",
+          "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
           "photo": "@{Application.speakerPhoto(speaker.id)}"
       }#{if !speaker_isLast},#{/if}
       #{/list}
