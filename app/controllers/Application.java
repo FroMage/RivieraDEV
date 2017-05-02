@@ -271,4 +271,9 @@ public class Application extends Controller {
 		public List<Sponsor> getSponsorsPreviousYears() { return this.sponsorsPreviousYears; }
 	}
 
+	public static void slides(String track){
+    	List<Track> tracks = Track.findAll();
+    	List<Talk> keynotes = Talk.findKeynotes();
+		render(tracks, track, keynotes);
+	}
 }

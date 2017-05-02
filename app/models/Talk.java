@@ -7,11 +7,11 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
 
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.annotations.Type;
@@ -130,5 +130,9 @@ public class Talk extends Model implements Comparable<Talk> {
 
 	public int compareTo(Talk other){
 		return this.getTitle().compareTo(other.getTitle());
+	}
+
+	public static List<Talk> findKeynotes() {
+		return Talk.find("track IS NULL").fetch();
 	}
 }
