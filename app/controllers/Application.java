@@ -84,7 +84,7 @@ public class Application extends Controller {
     }
     
     public static void schedule(){
-    	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
+    	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
