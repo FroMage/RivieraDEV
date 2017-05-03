@@ -117,7 +117,6 @@
                             for(var n=0;n<nextOtherTracks.length;n++){
                                 if(nextOtherTracks[n].track == talk.track){
                                     if(nextOtherTracks[n].start > talk.start){
-                                        console.log("remove");
                                         nextOtherTracks.splice(n, 1);
                                     }else{
                                         addIt = false;
@@ -133,6 +132,7 @@
             }
             var t = jQuery("#target");
             t.empty();
+            t.append("<h1>Current date: "+formatDate(new Date(now))+" "+formatTime(new Date(now))+"</h1>")
             var markup = "<div class='row'>";
             markup += "<div class='current col-md-6'>";
             markup += talkToString(current);
@@ -183,7 +183,7 @@
         "Decembre",
         ];
         function formatDate(date){
-            return pad(date.getDay()) + " " + months[date.getMonth()];
+            return pad(date.getDate()) + " " + months[date.getMonth()];
         }
         function formatTime(date){
             return pad(date.getHours()) + ":" + pad(date.getMinutes());
@@ -194,7 +194,6 @@
             return s;
         }
         function duration(time){
-            console.log(time);
             var seconds = Math.floor(time / 1000);
             var minutes = Math.floor(seconds / 60);
             var secondsMod = seconds % 60;
