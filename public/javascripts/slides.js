@@ -14,10 +14,10 @@ function showTalks(){
             if(talk.start <= now && talk.end >= now){
                 if(talk.track == showTrack){
                     current = talk;
-                }else{
+                } else {
                     currentOtherTracks.push(talk);
                 }
-            }else if(talk.start > now){
+            } else if(talk.start > now) {
                 if(talk.track == showTrack){
                     if(next == null || next.start > talk.start){
                         next = talk;
@@ -40,6 +40,8 @@ function showTalks(){
             }
         }
     }
+
+    // Display the current date
     $(".js-slides-currentDate").append(formatDate(new Date(now)) + " " + formatTime(new Date(now)));
     
     var t = jQuery("#target");
@@ -55,32 +57,42 @@ function showTalks(){
         markup += "<div class='next col-md-6'>" + talkToString(next) + "</div>";
     }
     markup += "</div>";
-    t.append(markup);
 
     // Other tracks
-    if (currentOtherTracks.length > 0) {
 
-        t.append("Currently in other tracks:");
-        var co = jQuery("<div class='current-other'/>").appendTo(t);
-        for(var n=0;n<currentOtherTracks.length;n++){
+    // -- Current talks
+    if (currentOtherTracks.length > 0) {
+        markup += "<div class='current-other'>";
+        markup += "Currently in other tracks:";
+        markup += "<div class='row'>";
+        for(var n = 0; n < currentOtherTracks.length; n++) {
             var talk = currentOtherTracks[n];
-            co.append(talkToString(talk));
-        }
-    }
-    if(nextOtherTracks.length > 0){
-        t.append("Next in other tracks:");
-        var no = jQuery("<div class='next-other'/>").appendTo(t);
-        var markup = "<div class='row'>";
-        for(var n=0;n<nextOtherTracks.length;n++){
             markup += "<div class='col-md-3'>";
-            var talk = nextOtherTracks[n];
-            markup += "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
-            markup += talkToString(talk);
+            markup +=     "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
+            markup +=     talkToString(talk);
             markup += "</div>";
         }
         markup += "</div>";
-        no.append(markup);
+        markup += "</div>";
     }
+
+    // -- Next talks
+    if (nextOtherTracks.length > 0) {
+        markup += "<div class='next-other'>";
+        markup += "Next in other tracks:";
+        markup += "<div class='row'>";
+        for (var n = 0; n < nextOtherTracks.length; n++) {
+            var talk = nextOtherTracks[n];
+            markup += "<div class='col-md-3'>";
+            markup +=     "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
+            markup +=     talkToString(talk);
+            markup += "</div>";
+        }
+        markup += "</div>";
+        markup += "</div>";
+    }
+
+    t.append(markup);
 }
 var months = [
 "Janvier",
@@ -143,33 +155,45 @@ function talkToString(talk){
     }else{
         durationString = " (" + duration(end.getTime() - now)+" remaining)";
     }
-    var markup = "<div class='talk'>" +
-            "<div class='date'>"+formatDate(start)+" "+
-            formatTime(start)+" - "+
-            formatTime(end)+durationString+"</div>";
+    var markup = "<div class='talk'>";
 
+    // Title
     markup += "<div class='talkDetails-title'>" + talk.title + "</div>";
 
+    // Slot
+    markup += "<div class='talkDetails-slot-hour'>"
+            + "    <i class='fa fa-clock-o talkDetails-icon' aria-hidden='true'></i>"
+            +      formatTime(start) + " - " + formatTime(end) + durationString
+            + "</div>";
+
+    // Theme 
     if (talk.theme) {
-        markup += "<span class=\"talk-theme talk-theme-" + talk.themeColor + "\">" + talk.theme + "</span>";
+        markup += "<span class='talk-theme talk-theme-" + talk.themeColor + "'>" + talk.theme + "</span>";
     }
+
+    // Level
     if (talk.level) {
-        markup += "<span class=\"talk-level\">" + talk.level + "</span>";
+        markup += "<span class='talk-level'>" + talk.level + "</span>";
     }
 
     //markup += "<div class='description'>"+talk.description+"</div>";
-    for(var n=0;n<talk.speakers.length;n++){
+
+    // Speakers
+    markup += "<div class='talkDetails-speakers'>";
+    for(var n = 0; n < talk.speakers.length; n++) {
         var speaker = talk.speakers[n];
-        markup += "<figure class='personSummary'>";
-            markup += "<div class='personSummary-photo' style='background-image: url(" + speaker.photo + ")'></div>";
-            markup += "<figcaption class='personSummary-desc'>";
-                markup += "<div class='personSummary-name'>"+speaker.name+"</div>";
-            markup += "</figcaption>";
-        markup += "</figure>";
+        markup += "<div class='talkDetails-speaker'>";
+            markup += "<div class='talkDetails-speaker-photo' style='background-image: url(" + speaker.photo + ")'></div>";
+            markup += "<div class='talkDetails-speaker-name'>" + speaker.name + "</div>";
+        markup += "</div>";
     }
+    markup += "</div>";
+
+    // End of the div .talk
     markup += "</div>";
     return markup;
 }
+
 jQuery(function(){
     showTalks();
 });

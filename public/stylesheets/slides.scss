@@ -2,6 +2,30 @@
 @import "compass/css3";
 @import "variables";
 
+@import "partials/countdown";
 @import "partials/person";
 @import "partials/schedule";
 @import "partials/talk";
+
+.slides-currentDate {
+    background-color: $color-purple-transparent;
+    @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
+    @include box-shadow(2px 2px 2px rgba(0,0,0,0.2));
+    color: #fff;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    padding: 0.5em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 180%;
+}
+
+.talkDetails-speakers {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.talkDetails-speaker-name {
+    padding-left: 0.3em;
+}

@@ -133,6 +133,6 @@ public class Talk extends Model implements Comparable<Talk> {
 	}
 
 	public static List<Talk> findKeynotes() {
-		return Talk.find("track IS NULL").fetch();
+		return Talk.find("track IS NULL AND isBreak = '" + BreakType.NotABreak + "'").fetch();
 	}
 }
