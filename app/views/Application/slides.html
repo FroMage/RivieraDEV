@@ -4,6 +4,8 @@
 <head>
     <title>${play.i18n.Messages.get('views.application.schedule.title')}</title>
 
+    <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
+
     <!-- Bootstrap -->
     <!-- Bootstrap has been customized to modify a variable :
          Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
@@ -29,8 +31,6 @@
     <div class="container-fluid">
 
     <div class="slides-currentDate"><span class="js-slides-currentDate"></span></div>
-
-    <h2 class="schedule-day fullSchedule-day schedule-day1">${track}</h2>
 
     <div id="target"></div>
 

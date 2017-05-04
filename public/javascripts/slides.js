@@ -1,43 +1,37 @@
 
 // var now = new Date();
-var now = Date.parse("Thu, 11 May 2017 10:21:00 +0200");
+var now = Date.parse("Thu, 11 May 2017 09:21:00 +0200");
 
 function showTalks(){
-    var current = null;
-    var currentOtherTracks = [];
-    var next = null;
-    var nextOtherTracks = [];
+    var currentTalks = [];
+    var nextTalks = [];
+
     for(var t in tracks){
         var track = tracks[t];
         for(var i=0;i<track.length;i++){
             var talk = track[i];
             if(talk.start <= now && talk.end >= now){
-                if(talk.track == showTrack){
-                    current = talk;
-                } else {
-                    currentOtherTracks.push(talk);
-                }
+                currentTalks.push(talk);
             } else if(talk.start > now) {
                 if(talk.track == showTrack){
-                    if(next == null || next.start > talk.start){
-                        next = talk;
-                    }
-                }else{
+                    nextTalks.push(talk);
+                } else {
                     var addIt = true;
-                    for(var n=0;n<nextOtherTracks.length;n++){
-                        if(nextOtherTracks[n].track == talk.track){
-                            if(nextOtherTracks[n].start > talk.start){
-                                nextOtherTracks.splice(n, 1);
+                    for(var n = 0; n < nextTalks.length; n++){
+                        if(nextTalks[n].track == talk.track){
+                            if(nextTalks[n].start > talk.start){
+                                nextTalks.splice(n, 1);
                             }else{
                                 addIt = false;
                             }
                             break;
                         }
                     }
-                    if(addIt)
-                        nextOtherTracks.push(talk);
+                    if(addIt) {
+                        nextTalks.push(talk);
+                    }
                 }
-            }
+            } 
         }
     }
 
@@ -47,45 +41,40 @@ function showTalks(){
     var t = jQuery("#target");
     t.empty();
     
-    // Current track
-    var markup = "<div class='row'>";
-    // -- Current talk
-    markup += "<div class='current col-md-6'>" + talkToString(current) + "</div>";
-    // -- Next talk
-    if(next){
-        markup += "Coming next in this track:";
-        markup += "<div class='next col-md-6'>" + talkToString(next) + "</div>";
-    }
-    markup += "</div>";
-
-    // Other tracks
+    var markup = "<h2 class='schedule-day fullSchedule-day schedule-day1'>Currently</h2>";
 
     // -- Current talks
-    if (currentOtherTracks.length > 0) {
+    if (currentTalks.length > 0) {
         markup += "<div class='current-other'>";
-        markup += "Currently in other tracks:";
+        //markup += "Currently in other tracks:";
         markup += "<div class='row'>";
-        for(var n = 0; n < currentOtherTracks.length; n++) {
-            var talk = currentOtherTracks[n];
+        for(var n = 0; n < currentTalks.length; n++) {
+            var talk = currentTalks[n];
             markup += "<div class='col-md-3'>";
-            markup +=     "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
-            markup +=     talkToString(talk);
+            markup +=     "<div class='slides-talk" + (talk.track == showTrack? " slides-currentTrack" : "") + "'>";
+            markup +=         "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
+            markup +=         talkToString(talk);
+            markup +=     "</div>";
             markup += "</div>";
         }
         markup += "</div>";
         markup += "</div>";
     }
 
+    markup += "<h2 class='schedule-day fullSchedule-day schedule-day1'>Next</h2>";
+
     // -- Next talks
-    if (nextOtherTracks.length > 0) {
+    if (nextTalks.length > 0) {
         markup += "<div class='next-other'>";
-        markup += "Next in other tracks:";
+        //markup += "Next in other tracks:";
         markup += "<div class='row'>";
-        for (var n = 0; n < nextOtherTracks.length; n++) {
-            var talk = nextOtherTracks[n];
+        for (var n = 0; n < nextTalks.length; n++) {
+            var talk = nextTalks[n];
             markup += "<div class='col-md-3'>";
-            markup +=     "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
-            markup +=     talkToString(talk);
+            markup +=     "<div class='slides-talk" + (talk.track == showTrack? " slides-currentTrack" : "") + "'>";
+            markup +=         "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
+            markup +=         talkToString(talk);
+            markup +=     "</div>";
             markup += "</div>";
         }
         markup += "</div>";

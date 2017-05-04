@@ -273,6 +273,7 @@ public class Application extends Controller {
 
 	public static void slides(String track){
     	List<Track> tracks = Track.findAll();
+		Collections.sort(tracks);
     	List<Talk> keynotes = Talk.findKeynotes();
 		render(tracks, track, keynotes);
 	}
