@@ -31,7 +31,7 @@ function showTalks(){
     }
 
     // Display the current date
-    $(".js-live-currentDate").text(formatDate(new Date(now)) + " " + formatTime(new Date(now)));
+    $(".js-live-currentDate").text(formatDate(new Date(now)) + " " + formatTimeSeconds(new Date(now)));
     
     var t = jQuery("#target");
     t.empty();
@@ -102,6 +102,9 @@ function formatDate(date){
 function formatTime(date){
     return pad(date.getHours()) + ":" + pad(date.getMinutes());
 }
+function formatTimeSeconds(date){
+    return formatTime(date) + ":" + pad(date.getSeconds());
+}
 function pad(num) {
     var s = num+"";
     while (s.length < 2) s = "0" + s;
@@ -120,16 +123,14 @@ function duration(time){
     
     var ret=" ";
     if(weeks > 0)
-        ret += weeks+" weeks ";
+        ret += weeks+" week"+(weeks>1?"s":"")+" ";
     if(daysMod > 0)
-        ret += daysMod+" days ";
-    if(hoursMod > 0)
-        ret += hoursMod+" hours ";
-    if(minutesMod > 0)
-        ret += minutesMod+" minutes ";
-    if(secondsMod > 0)
-        ret += secondsMod+" seconds";
-    ret = ret.substring(0, ret.length-1);
+        ret += daysMod+" day"+(days>1?"s":"")+" ";
+    ret += pad(hoursMod)+":"+pad(minutesMod)+":"+pad(secondsMod);
+    if(ret.endsWith(" "))
+    	ret = ret.substring(0, ret.length-1);
+    if(ret.startsWith(" "))
+    	ret = ret.substring(1);
     return ret;
 }
 
