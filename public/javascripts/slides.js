@@ -118,7 +118,7 @@ function duration(time){
     var weeks = Math.floor(days / 7);
     var daysMod = days % 7;
     
-    var ret="";
+    var ret=" ";
     if(weeks > 0)
         ret += weeks+" weeks ";
     if(daysMod > 0)
@@ -129,6 +129,7 @@ function duration(time){
         ret += minutesMod+" minutes ";
     if(secondsMod > 0)
         ret += secondsMod+" seconds";
+    ret = ret.substring(0, ret.length-1);
     return ret;
 }
 
