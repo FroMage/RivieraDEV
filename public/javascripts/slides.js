@@ -15,12 +15,11 @@ function showTalks(){
             } else if(talk.start > now) {
                 var addIt = true;
                 for(var n = 0; n < nextTalks.length; n++){
-                    if(nextTalks[n].track == talk.track){
-                        if(nextTalks[n].start > talk.start){
-                            nextTalks.splice(n, 1);
-                        }else{
-                            addIt = false;
-                        }
+                	// only keep the closest talks
+                    if(nextTalks[n].start > talk.start){
+                        nextTalks.splice(n, 1);
+                    }else if(nextTalks[n].start < talk.start){
+                        addIt = false;
                         break;
                     }
                 }
