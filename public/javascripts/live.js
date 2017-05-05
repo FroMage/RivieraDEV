@@ -1,6 +1,6 @@
 
-// var now = new Date();
-var now = Date.parse("Thu, 11 May 2017 09:21:00 +0200");
+var now = new Date();
+var nowOffset = 0;
 
 function showTalks(){
     var currentTalks = [];
@@ -184,5 +184,8 @@ function talkToString(talk){
 }
 
 jQuery(function(){
-    showTalks();
+	window.setInterval(function(){
+		now = new Date().getTime() + nowOffset;
+		showTalks();
+	}, 1000);
 });
