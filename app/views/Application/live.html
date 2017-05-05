@@ -39,88 +39,16 @@
 
 	<div class="container-fluid">
 
-		<div class="live-currentDate">
-			<span class="js-live-currentDate"></span>
-		</div>
-
-		<div id="target"></div>
-
 		<ul>
-			<li><a href="@{Application.live("Keynotes")}">Keynotes
-					[Amphi 339]</a></li> #{list tracks, as: 'trackItem'}
-			<li><a href="@{Application.live(trackItem.title)}">${trackItem.title}</a></li>
+            <li><a href="@{Application.liveTrack("All")}">All</a></li>
+			<li><a href="@{Application.liveTrack("Keynotes")}">Keynotes [Amphi 339]</a></li>
+		    #{list tracks, as: 'trackItem'}
+			 <li><a href="@{Application.liveTrack(trackItem.title)}">${trackItem.title}</a></li>
 			#{/list}
 		</ul>
 
 	</div>
 	<!-- /.container -->
-
-	<!-- External libs -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-	<!-- Custom JS -->
-	<script>
-        var showTrack = "${track}";
-
-        var tracks = {
-        "Keynotes [Amphi 339]": [
-        #{list keynotes, as: 'talk'}
-        {
-            "title": "${talk.getTitle().jsonEscape()}",
-            "description": "${talk.getDescription().jsonEscape()}", 
-            "start": ${talk.slot.startDate.time}, 
-            "end": ${talk.slot.endDate.time},
-            #{if talk.theme}
-                "theme": "${talk.theme}",
-                "themeColor": "${talk.theme.color.code}",
-            #{/if}
-            #{if talk.level}
-                "level": "&{'views.application.schedule.level.' + talk.level.code}",
-            #{/if}
-            "track": "Keynotes",
-            "speakers": [
-                #{list talk.speakers, as: 'speaker'}
-                {
-                    "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
-                    "photo": "@{Application.speakerPhoto(speaker.id)}"
-                }#{if !speaker_isLast},#{/if}
-                #{/list}
-            ]
-        }#{if !talk_isLast},#{/if}
-        #{/list}
-        ], 
-        #{list tracks, as: 'track'}
-        "${track.title}": [
-        #{list track.talks, as: 'talk'}
-            {
-            "title": "${talk.getTitle().jsonEscape()}",
-            "description": "${talk.getDescription().jsonEscape()}", 
-            "start": ${talk.slot.startDate.time}, 
-            "end": ${talk.slot.endDate.time},
-            #{if talk.theme}
-                "theme": "${talk.theme}",
-                "themeColor": "${talk.theme.color.code}",
-            #{/if}
-            #{if talk.level}
-                "level": "&{'views.application.schedule.level.' + talk.level.code}",
-            #{/if}
-            "track": "${track.title.jsonEscape()}", 
-            "speakers": [
-            #{list talk.speakers, as: 'speaker'}
-            {
-                "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
-                "photo": "@{Application.speakerPhoto(speaker.id)}"
-            }#{if !speaker_isLast},#{/if}
-            #{/list}
-            ]
-            }#{if !talk_isLast},#{/if}
-        #{/list}
-        ]#{if !track_isLast},#{/if} 
-        #{/list}
-        };
-    </script>
-
-	<script src="@{'/public/javascripts/live.js'}"></script>
 
 </body>
 </html>

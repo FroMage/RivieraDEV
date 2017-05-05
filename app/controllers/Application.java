@@ -271,7 +271,13 @@ public class Application extends Controller {
 		public List<Sponsor> getSponsorsPreviousYears() { return this.sponsorsPreviousYears; }
 	}
 
-	public static void live(String track){
+	public static void live(){
+    	List<Track> tracks = Track.findAll();
+		Collections.sort(tracks);
+		render(tracks);
+	}
+	
+	public static void liveTrack(String track){
     	List<Track> tracks = Track.findAll();
 		Collections.sort(tracks);
     	List<Talk> keynotes = Talk.findKeynotes();

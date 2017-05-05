@@ -24,6 +24,8 @@ GET     /subscribe                              Application.subscribe
 GET     /sponsors                               Application.sponsors
 GET     /becomeSponsor                          Application.becomeSponsor
 GET     /orga                                   Application.organisers
+GET     /live                                   Application.live
+GET     /live/{track}                           Application.liveTrack(track)
 
 *		/admin									module:crud
 *		/										module:secure
