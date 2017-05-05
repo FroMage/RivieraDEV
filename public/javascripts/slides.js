@@ -54,6 +54,8 @@ function showTalks(){
         }
         markup += "</div>";
         markup += "</div>";
+    }else{
+    	markup += "<div class='nothing'>Oh noes!! We haven’ts gots any talks righter now!! :(</div>";
     }
 
     markup += "<h2 class='schedule-day fullSchedule-day schedule-day1'>Next</h2>";
@@ -74,6 +76,8 @@ function showTalks(){
         }
         markup += "</div>";
         markup += "</div>";
+    }else{
+    	markup += "<div class='nothing'>Oh noes!! Its a doner, see youse nexts years!! :)</div>";
     }
 
     t.append(markup);

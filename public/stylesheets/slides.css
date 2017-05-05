@@ -451,3 +451,8 @@ th.fullSchedule-time-title {
 .talkDetails-speaker-name {
   padding-left: 0.3em;
 }
+
+.nothing {
+    margin-top: 1.5em;
+    margin-left: 1em;
+}
