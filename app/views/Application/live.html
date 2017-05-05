@@ -41,9 +41,9 @@
 
 		<ul>
             <li><a href="@{Application.liveTrack("All")}">All</a></li>
-			<li><a href="@{Application.liveTrack("Keynotes")}">Keynotes [Amphi 339]</a></li>
+			<li><a href="/live/${'Keynotes [Amphi 339]'.urlPathEncode()}">Keynotes [Amphi 339]</a></li>
 		    #{list tracks, as: 'trackItem'}
-			 <li><a href="/live/${trackItem.title.urlEncode().raw()}">${trackItem.title}</a></li>
+			 <li><a href="/live/${trackItem.title.urlPathEncode()}">${trackItem.title}</a></li>
 			#{/list}
 		</ul>
 

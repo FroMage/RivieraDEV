@@ -8,6 +8,10 @@ import play.templates.BaseTemplate.RawData;
 import play.utils.HTML;
 
 public class JavaExtensions extends play.templates.JavaExtensions {
+	public static RawData urlPathEncode(String str){
+		return new RawData(urlEncode(str).replace("+", "%20"));
+	}
+	
     public static RawData jsonEscape(String str) {
         // quick check
         char[] chars = str.toCharArray();
