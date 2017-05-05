@@ -31,7 +31,7 @@ function showTalks(){
     }
 
     // Display the current date
-    $(".js-slides-currentDate").append(formatDate(new Date(now)) + " " + formatTime(new Date(now)));
+    $(".js-slides-currentDate").text(formatDate(new Date(now)) + " " + formatTime(new Date(now)));
     
     var t = jQuery("#target");
     t.empty();
@@ -83,18 +83,18 @@ function showTalks(){
     t.append(markup);
 }
 var months = [
-"Janvier",
-"Février",
-"Mars",
-"Avril",
-"Mai",
-"Juin",
-"Juillet",
-"Août",
-"Septembre",
-"Octobre",
-"Novembre",
-"Decembre",
+"January",
+"February",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"December",
 ];
 function formatDate(date){
     return pad(date.getDate()) + " " + months[date.getMonth()];
