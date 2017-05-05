@@ -31,7 +31,7 @@ function showTalks(){
     }
 
     // Display the current date
-    $(".js-slides-currentDate").text(formatDate(new Date(now)) + " " + formatTime(new Date(now)));
+    $(".js-live-currentDate").text(formatDate(new Date(now)) + " " + formatTime(new Date(now)));
     
     var t = jQuery("#target");
     t.empty();
@@ -46,7 +46,7 @@ function showTalks(){
         for(var n = 0; n < currentTalks.length; n++) {
             var talk = currentTalks[n];
             markup += "<div class='col-md-3'>";
-            markup +=     "<div class='slides-talk" + (talk.track == showTrack? " slides-currentTrack" : "") + "'>";
+            markup +=     "<div class='live-talk" + (talk.track == showTrack? " live-currentTrack" : "") + "'>";
             markup +=         "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
             markup +=         talkToString(talk);
             markup +=     "</div>";
@@ -68,7 +68,7 @@ function showTalks(){
         for (var n = 0; n < nextTalks.length; n++) {
             var talk = nextTalks[n];
             markup += "<div class='col-md-3'>";
-            markup +=     "<div class='slides-talk" + (talk.track == showTrack? " slides-currentTrack" : "") + "'>";
+            markup +=     "<div class='live-talk" + (talk.track == showTrack? " live-currentTrack" : "") + "'>";
             markup +=         "<h2 class='schedule-day fullSchedule-day schedule-day2'>"+talk.track+"</h2>";
             markup +=         talkToString(talk);
             markup +=     "</div>";

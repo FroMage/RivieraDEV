@@ -2,52 +2,64 @@
 
 <html lang="&{play.i18n.Lang.get()}">
 <head>
-    <title>${play.i18n.Messages.get('views.application.schedule.title')}</title>
+<title>${play.i18n.Messages.get('views.application.schedule.title')}</title>
 
-    <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
+<link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
 
-    <!-- Bootstrap -->
-    <!-- Bootstrap has been customized to modify a variable :
+<!-- Bootstrap -->
+<!-- Bootstrap has been customized to modify a variable :
          Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
          (http://getbootstrap.com/customize/)
     -->
-    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}" >
-    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}" >
+<link rel="stylesheet"
+	href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}">
+<link rel="stylesheet"
+	href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald"
+	rel="stylesheet">
 
-    <!-- Font awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Font awesome -->
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
 
-    <!-- Custom -->
-    <link rel="stylesheet" href="@{'/public/stylesheets/slides.css'}">
+<!-- Custom -->
+<link rel="stylesheet" href="@{'/public/stylesheets/live.css'}">
 
-    #{get 'moreStyles' /}
+#{get 'moreStyles' /}
 </head>
 <body>
 
-    <div class="container-fluid">
+	<div class="container-fluid">
 
-    <div class="slides-currentDate"><span class="js-slides-currentDate"></span></div>
+		<div class="live-currentDate">
+			<span class="js-live-currentDate"></span>
+		</div>
 
-    <div id="target"></div>
+		<div id="target"></div>
 
-    <ul>
-        <li><a href="@{Application.slides("Keynotes")}">Keynotes [Amphi 339]</a></li>
-        #{list tracks, as: 'trackItem'}
-            <li><a href="@{Application.slides(trackItem.title)}">${trackItem.title}</a></li>
-        #{/list}
-    </ul>
+		<ul>
+			<li><a href="@{Application.live("Keynotes")}">Keynotes
+					[Amphi 339]</a></li> #{list tracks, as: 'trackItem'}
+			<li><a href="@{Application.live(trackItem.title)}">${trackItem.title}</a></li>
+			#{/list}
+		</ul>
 
-    </div> <!-- /.container -->
+	</div>
+	<!-- /.container -->
 
-    <!-- External libs -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- External libs -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Custom JS -->
-    <script>
+	<!-- Custom JS -->
+	<script>
         var showTrack = "${track}";
 
         var tracks = {
@@ -108,7 +120,7 @@
         };
     </script>
 
-    <script src="@{'/public/javascripts/slides.js'}"></script>
+	<script src="@{'/public/javascripts/live.js'}"></script>
 
 </body>
 </html>
