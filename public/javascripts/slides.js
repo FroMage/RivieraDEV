@@ -13,23 +13,19 @@ function showTalks(){
             if(talk.start <= now && talk.end >= now){
                 currentTalks.push(talk);
             } else if(talk.start > now) {
-                if(talk.track == showTrack){
-                    nextTalks.push(talk);
-                } else {
-                    var addIt = true;
-                    for(var n = 0; n < nextTalks.length; n++){
-                        if(nextTalks[n].track == talk.track){
-                            if(nextTalks[n].start > talk.start){
-                                nextTalks.splice(n, 1);
-                            }else{
-                                addIt = false;
-                            }
-                            break;
+                var addIt = true;
+                for(var n = 0; n < nextTalks.length; n++){
+                    if(nextTalks[n].track == talk.track){
+                        if(nextTalks[n].start > talk.start){
+                            nextTalks.splice(n, 1);
+                        }else{
+                            addIt = false;
                         }
+                        break;
                     }
-                    if(addIt) {
-                        nextTalks.push(talk);
-                    }
+                }
+                if(addIt) {
+                    nextTalks.push(talk);
                 }
             } 
         }
