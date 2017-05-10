@@ -185,8 +185,12 @@ function talkToString(talk){
 }
 
 jQuery(function(){
+	showTalks();
 	window.setInterval(function(){
 		now = new Date().getTime() + nowOffset;
 		showTalks();
 	}, 1000);
+	window.setInterval(function(){
+		jQuery.get("http://rivieradev.fr");
+	}, 1000 *60*30 );
 });
