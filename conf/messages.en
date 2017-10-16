@@ -28,7 +28,7 @@ views.main.logo.featuring=with
 views.application.openGraph=Riviera DEV, that's 2 days of conferences and workshops on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
 
 views.application.index.title=Welcome
-views.application.index.subtitle=May 11-12 2017 in Sophia Antipolis
+views.application.index.subtitle=May 11-12 2018 in Sophia Antipolis
 views.application.index.tickets=Tickets
 views.application.index.cfp.join=Talk at Riviera DEV
 views.application.index.sponsors=Our Sponsors
@@ -36,7 +36,7 @@ views.application.index.sponsors.tagline=Without them, none of this would be pos
 views.application.index.sponsors.join=Become sponsor
 views.application.index.intro.1=Riviera DEV, that's <strong>2 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
 views.application.index.intro.2=in the heart of Sophia Antipolis, <strong>the most beautiful European technopole</strong>.
-views.application.index.intro.3=In 2017, Riviera DEV will move to a bigger and more comfortable venue, with a third track or more depending on registrations!
+views.application.index.intro.3=In 2018, Riviera DEV will move to a bigger and more comfortable venue, with a third track or more depending on registrations!
 views.application.index.points.1=A conference for developers, but not only
 views.application.index.points.2=Java & alternate languages, Front-end & UX, Mobile & IoT, Big Data & AI, NoSQL, Containers & Cloud, Performance, Agility, DevOps...
 views.application.index.points.3=The ideal conference to update your skills in a rapidly evolving field
@@ -59,7 +59,7 @@ views.application.speakers.subscribe=Subscribe to the newsletter to be notified 
 
 views.application.speaker.title=Speaker
 
-views.application.judcon.title=JUDCon2017:Riviera
+views.application.judcon.title=JUDCon2018:Riviera
 views.application.judcon.speakers=Speakers
 
 views.application.subscribe.title=Tickets
@@ -69,7 +69,7 @@ views.application.subscribe.subscribe=Subscribe to the newsletter to be notified
 views.application.access.title=Practical information
 views.application.access.in-sophia.1=In Sophia Antipolis
 views.application.access.in-sophia.2=Meet at the <strong>Skema Business School</strong> campus, in the heart of Sophia Antipolis.
-views.application.access.dates.1=May 11th-12th 2017
+views.application.access.dates.1=May 11th-12th 2018
 views.application.access.dates.2=Riviera DEV takes place mid-May when the weather turns back to gorgeous.
 views.application.access.car.title=Coming by car
 views.application.access.car.from.cannes.1=<strong>Coming from Cannes</strong>: on the A8 highway, take the 44th exit "Antibes/Sophia Antipolis".

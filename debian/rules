@@ -7,7 +7,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-NAME=rivieradev-2017
+NAME=rivieradev-2018
 
 DEB_PATH=debian/$(NAME)
 INSTALL_PATH=/usr/share/$(NAME)
@@ -25,4 +25,4 @@ override_dh_auto_install:
 	cp conf/* $(DEB_PATH)$(ETC_PATH)
 	rm $(DEB_PATH)$(ETC_PATH)/application-secret.conf
 	ln -s $(ETC_PATH) $(DEB_PATH)$(INSTALL_PATH)/conf
-	ln -s /www/2017.rivieradev.fr/data $(DEB_PATH)$(INSTALL_PATH)/data
+	ln -s /www/2018.rivieradev.fr/data $(DEB_PATH)$(INSTALL_PATH)/data

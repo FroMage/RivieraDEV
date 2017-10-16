@@ -1,0 +1,4 @@
+etc/rivieradev-2018/routes
+etc/rivieradev-2018/log4j-prod.properties
+etc/rivieradev-2018/application.conf
+etc/rivieradev-2018/dependencies.yml

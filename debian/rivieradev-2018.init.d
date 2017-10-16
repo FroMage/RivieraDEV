@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# Startup script for rivieradev-2017.
+# Startup script for rivieradev-2018.
 #
 # Stephane Epardaud <stephane@epardaud.fr>
 # Copyright 2010, Stephane Epardaud
@@ -16,7 +16,7 @@
 # Description: rivieradev- application
 ### END INIT INFO
 
-APP=rivieradev-2017
+APP=rivieradev-2018
 USER=rivieradev
 CLUSTER=
 
