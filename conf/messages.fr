@@ -17,6 +17,7 @@ views.main.language.fr=Français
 views.main.language.en=English
 views.main.contact=Contact&nbsp;:
 views.main.archives=Archives
+views.main.editions.2017=Édition 2017
 views.main.editions.2016=Édition 2016
 views.main.editions.2015=Édition 2015
 views.main.editions.2011=Édition 2011
@@ -28,7 +29,7 @@ views.main.logo.featuring=avec
 views.application.openGraph=Riviera DEV, c'est 2 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
 views.application.index.title=Accueil
-views.application.index.subtitle=Le 11 et 12 mai 2018 à Sophia Antipolis
+views.application.index.subtitle=Début mai 2018 à Sophia Antipolis
 views.application.index.tickets=Inscrivez-vous
 views.application.index.cfp.join=Prenez la parole à Riviera DEV
 views.application.index.sponsors=Nos Sponsors
@@ -69,8 +70,8 @@ views.application.subscribe.subscribe=Soyez dans les premiers à connaître le p
 views.application.access.title=Infos pratiques
 views.application.access.in-sophia.1=À Sophia Antipolis
 views.application.access.in-sophia.2=Rendez-vous au campus <strong>Skema Business School</strong>, en plein coeur de Sophia Antipolis.
-views.application.access.dates.1=Les 11 et 12 mai 2018
-views.application.access.dates.2=Riviera DEV se déroulera mi-mai lorsque les beaux jours reviendront.
+views.application.access.dates.1=Début mai 2018
+views.application.access.dates.2=Riviera DEV se déroulera en mai lorsque les beaux jours reviendront.
 views.application.access.car.title=Accès en voiture
 views.application.access.car.from.cannes.1=<strong>En provenance de Cannes</strong>&nbsp;: sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis".
 views.application.access.car.from.cannes.2=Après le péage prendre à droite "direction Sophia Antipolis" (D35).
@@ -139,6 +140,7 @@ views.application.becomeSponsor.reason.8=web mais également pendant toute la du
 views.application.becomeSponsor.reason.9=si vous cherchez à recruter des développeurs et développeuses passionnés par leur métier,
 views.application.becomeSponsor.reason.10=si vous voulez affirmer votre image dans les communautés novatrices ou faire connaître vos services auprès des ces dernières.
 views.application.becomeSponsor.packs.title=Nos packs
+views.application.becomeSponsor.packs.soon.text=Bientôt disponibles
 views.application.becomeSponsor.packs.text=Nous proposons différents niveaux de partenariats.
 views.application.becomeSponsor.packs.soldout=Epuisé
 views.application.becomeSponsor.packs.included=Inclus
@@ -195,7 +197,7 @@ views.application.becomeSponsor.contact-us=Pour devenir sponsor de Riviera DEV, 
 
 views.application.schedule.title=Programme
 views.application.schedule.intro=Riviera DEV est une conférence sur 2 jours avec au moins 3 tracks sur un large panel de sujets : Java et la JVM (présent et futur), langages alternatifs, technologies Front-end et UX, Mobile et IoT, Big Data et Machine Learning, NoSQL, Containers, VMs et Cloud Computing, Performance, Programmation réactive, Agilité, bonnes pratiques, DevOps, ...
-views.application.schedule.unavailable=Le programme détaillé n'est pas encore disponible, mais vous pouvez consulter <a href="http://2015.rivieradev.fr/programme" target="_blank">le programme de l'édition 2015</a> et <a href="http://2016.rivieradev.fr/programme" target="_blank">celui de 2016</a>.
+views.application.schedule.unavailable=Le programme détaillé n'est pas encore disponible, mais vous pouvez consulter <a href="http://2016.rivieradev.fr/programme" target="_blank">le programme de l'édition 2016</a> et <a href="http://2017.rivieradev.fr/programme" target="_blank">celui de 2017</a>.
 views.application.schedule.unavailable.speakers.available=Le programme détaillé n'est pas encore disponible, mais vous pouvez déjà consulter <a href="http://rivieradev.fr/talks">les sessions</a> et <a href="http://rivieradev.fr/speakers">les orateurs</a>.
 views.application.schedule.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que le programme détaillé est disponible.
 views.application.schedule.filter=Filtrer
@@ -211,8 +213,8 @@ views.application.talk.slides=Slides
 views.application.talk.track.allTracks=Plénière
 
 views.application.cfp.title=Appel aux orateurs
-views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> Début décembre
-views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> 15 février
+views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> Début novembre
+views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> Fin janvier
 views.application.cfp.announce=<strong>Annonce du programme&nbsp;:</strong> Début mars
 views.application.cfp.conference.format=Chaque talk doit durer 1 heure questions comprises.
 views.application.cfp.propose=Proposez un sujet

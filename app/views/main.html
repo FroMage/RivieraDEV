@@ -69,10 +69,10 @@
                         <span class="navbar-rivieradev navbar-animated-logo">
                             <img src="@{'/public/images/logo_RD_black.svg'}" alt="RivieraDEV">
                         </span>
-                        <span id="navbar-RedHat" class="navbar-RedHat navbar-animated-logo" href="@{Application.index}">
-                            <span class="navbar-RedHat--featuring">&{'views.main.logo.featuring'}</span><!-- Do not remove this comment
-                            --><img src="@{'/public/images/logos/judcon.png'}" alt="JUDCon2017:Riviera" class="navbar-RedHat--logo">
-                        </span>
+                        <!--<span id="navbar-RedHat" class="navbar-RedHat navbar-animated-logo" href="@{Application.index}">
+                            <span class="navbar-RedHat--featuring">&{'views.main.logo.featuring'}</span>--><!-- Do not remove this comment
+                            --><!--<img src="@{'/public/images/logos/judcon.png'}" alt="JUDCon2017:Riviera" class="navbar-RedHat--logo">
+                        </span>-->
                     </a>
                 </div>
             </div>
@@ -98,12 +98,12 @@
                             <li class="${(request.action == 'Application.speakers' || request.action == 'Application.speaker') ? 'active' : ''}">
                                 <a href="@{Application.speakers}">&{'views.main.speakers'}</a>
                             </li>
-                            <li class="${(request.action == 'Application.talks' || request.action == 'Application.talk') ? 'active' : ''}">
+                            <!--<li class="${(request.action == 'Application.talks' || request.action == 'Application.talk') ? 'active' : ''}">
                                 <a href="@{Application.talks}">&{'views.main.talks'}</a>
                             </li>
                             <li class="${(request.action == 'Application.judcon') ? 'active' : ''}">
                                 <a href="@{Application.judcon}">&{'views.main.judcon'}</a>
-                            </li>
+                            </li>-->
                             
                         </ul>
                     </li>
@@ -184,6 +184,7 @@
                 <div class="footer-archives">
                     <h2 class="footer-title">&{'views.main.archives'}</h2>
                     <ul class="footer-menu">
+                        <li><a href="//2017.rivieradev.fr">&{'views.main.editions.2017'}</a></li>
                         <li><a href="//2016.rivieradev.fr">&{'views.main.editions.2016'}</a></li>
                         <li><a href="//2015.rivieradev.fr">&{'views.main.editions.2015'}</a></li>
                         <li><a href="//2011.rivieradev.fr">&{'views.main.editions.2011'}</a></li>
