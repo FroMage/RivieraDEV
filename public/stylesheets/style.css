@@ -1345,6 +1345,9 @@ a.footer-rs-instagram:active {
 .schedule-day2 {
   background-color: rgba(255, 183, 66, 0.8);
 }
+.schedule-day3 {
+  background-color: rgba(140, 70, 162, 0.8);
+}
 .schedule-time {
   font-family: 'Oswald', sans-serif;
   font-weight: normal;

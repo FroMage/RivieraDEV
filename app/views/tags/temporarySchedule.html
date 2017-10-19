@@ -4,13 +4,7 @@
 
     #{list items: _days, as: 'day'}
     
-        #{if day_isFirst}
-        <div class="tempSchedule col-md-6 col-lg-5">
-        #{/if}
-        #{else}
-        <div class="tempSchedule col-md-6 col-lg-5 col-lg-offset-1">
-        #{/else}
-
+        <div class="tempSchedule col-md-8 col-md-offset-2">
             <h2 class="schedule-day tempSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
             <dl>
