@@ -29,7 +29,7 @@ views.main.logo.featuring=avec
 views.application.openGraph=Riviera DEV, c'est 2 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
 views.application.index.title=Accueil
-views.application.index.subtitle=Début mai 2018 à Sophia Antipolis
+views.application.index.subtitle=Les 2, 3 et 4 mai 2018 à Sophia Antipolis
 views.application.index.tickets=Inscrivez-vous
 views.application.index.cfp.join=Prenez la parole à Riviera DEV
 views.application.index.sponsors=Nos Sponsors
@@ -70,7 +70,7 @@ views.application.subscribe.subscribe=Soyez dans les premiers à connaître le p
 views.application.access.title=Infos pratiques
 views.application.access.in-sophia.1=À Sophia Antipolis
 views.application.access.in-sophia.2=Rendez-vous au campus <strong>Skema Business School</strong>, en plein coeur de Sophia Antipolis.
-views.application.access.dates.1=Début mai 2018
+views.application.access.dates.1=Les 2, 3 et 4 mai 2018
 views.application.access.dates.2=Riviera DEV se déroulera en mai lorsque les beaux jours reviendront.
 views.application.access.car.title=Accès en voiture
 views.application.access.car.from.cannes.1=<strong>En provenance de Cannes</strong>&nbsp;: sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis".

@@ -29,7 +29,7 @@ views.main.logo.featuring=with
 views.application.openGraph=Riviera DEV, that's 2 days of conferences and workshops on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
 
 views.application.index.title=Welcome
-views.application.index.subtitle=May 2018 in Sophia Antipolis
+views.application.index.subtitle=May 2-3-4 2018 in Sophia Antipolis
 views.application.index.tickets=Tickets
 views.application.index.cfp.join=Talk at Riviera DEV
 views.application.index.sponsors=Our Sponsors
@@ -70,7 +70,7 @@ views.application.subscribe.subscribe=Subscribe to the newsletter to be notified
 views.application.access.title=Practical information
 views.application.access.in-sophia.1=In Sophia Antipolis
 views.application.access.in-sophia.2=Meet at the <strong>Skema Business School</strong> campus, in the heart of Sophia Antipolis.
-views.application.access.dates.1=May 2018
+views.application.access.dates.1=May 2nd-3rd-4th 2018
 views.application.access.dates.2=Riviera DEV takes place in May when the weather turns back to gorgeous.
 views.application.access.car.title=Coming by car
 views.application.access.car.from.cannes.1=<strong>Coming from Cannes</strong>: on the A8 highway, take the 44th exit "Antibes/Sophia Antipolis".
