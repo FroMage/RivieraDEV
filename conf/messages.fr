@@ -35,15 +35,15 @@ views.application.index.cfp.join=Prenez la parole à Riviera DEV
 views.application.index.sponsors=Nos Sponsors
 views.application.index.sponsors.tagline=Sans eux rien ne serait possible&nbsp;!
 views.application.index.sponsors.join=Devenez sponsor
-views.application.index.intro.1=Riviera DEV, c'est <strong>2 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
+views.application.index.intro.1=Riviera DEV, c'est <strong>3 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
 views.application.index.intro.2=en plein cœur de Sophia Antipolis, <strong>la plus belle technopole d'Europe</strong>.
-views.application.index.intro.3=En 2018, Riviera DEV investit des locaux plus grands et plus confortables, avec une troisième track voire plus selon les inscriptions&nbsp;!
+views.application.index.intro.3=En 2018, Riviera DEV rajoute une journée <strong>Deep Dive</strong> qui s'adresse à un public plus restreint et propose des présentations et ateliers plus longs afin d'étudier plus en profondeur certains sujets.
 views.application.index.points.1=Une conférence qui s’adresse aux développeurs et tous les mordus de technique
-views.application.index.points.2=Java & langages alternatifs, Front-end & UX, Mobile & IoT, Big Data & AI, NoSQL, Containers & Cloud, Performance, Agilité, DevOps ...
+views.application.index.points.2=Langages de programmation, Front-end & UX, Mobile & IoT, Big Data & Machine Learning, Containers & DevOps, Performance, Agilité ...
 views.application.index.points.3=Un moment pour se mettre à la page
 views.application.index.points.4=Des rencontres et des échanges riches avec des gens du métier
 views.application.index.points.5=Une soirée festive pour se retrouver autour de la tireuse à bière, avec un bon concert
-views.application.index.points.6=Grâce à nos sponsors, un tarif plus que correct pour deux jours, incluant déjeuners et soirée
+views.application.index.points.6=Grâce à nos sponsors, un tarif plus que correct incluant déjeuners et soirée
 views.application.index.schedule=Découvrez le programme
 views.application.index.address=Adresse
 views.application.index.access=Accès
@@ -196,7 +196,7 @@ views.application.becomeSponsor.packs.party.available=Limité à 1 partenaire
 views.application.becomeSponsor.contact-us=Pour devenir sponsor de Riviera DEV, contactez-nous par mail à <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
 
 views.application.schedule.title=Programme
-views.application.schedule.intro=Riviera DEV est une conférence sur 2 jours avec au moins 3 tracks sur un large panel de sujets : Java et la JVM (présent et futur), langages alternatifs, technologies Front-end et UX, Mobile et IoT, Big Data et Machine Learning, NoSQL, Containers, VMs et Cloud Computing, Performance, Programmation réactive, Agilité, bonnes pratiques, DevOps, ...
+views.application.schedule.intro=Riviera DEV est une conférence sur 3 jours avec au moins 3 tracks sur un large panel de sujets : langages de programmation, Front-end & UX, Mobile & IoT, Big Data & Machine Learning, Containers & DevOps, Performance, Agilité ...
 views.application.schedule.unavailable=Le programme détaillé n'est pas encore disponible, mais vous pouvez consulter <a href="http://2016.rivieradev.fr/programme" target="_blank">le programme de l'édition 2016</a> et <a href="http://2017.rivieradev.fr/programme" target="_blank">celui de 2017</a>.
 views.application.schedule.unavailable.speakers.available=Le programme détaillé n'est pas encore disponible, mais vous pouvez déjà consulter <a href="http://rivieradev.fr/talks">les sessions</a> et <a href="http://rivieradev.fr/speakers">les orateurs</a>.
 views.application.schedule.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que le programme détaillé est disponible.
