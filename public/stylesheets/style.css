@@ -188,13 +188,19 @@ a:hover, a:active, a:focus {
   background-image: url(../images/backgrounds/polygon-05.jpg);
 }
 .talk-conference {
-  background-image: url(../images/backgrounds/polygon-02.jpg);
+  background-image: url(../images/backgrounds/polygon-05.jpg);
 }
 .talk-RedHat {
   background-image: url(../images/backgrounds/polygon-04.jpg);
 }
 .talk-atelier {
-  background-image: url(../images/backgrounds/polygon-07.jpg);
+  background-image: url(../images/backgrounds/polygon-05.jpg);
+}
+.talk-confInDepth {
+  background-image: url(../images/backgrounds/polygon-06.jpg);
+}
+.talk-workshopInDepth {
+  background-image: url(../images/backgrounds/polygon-06.jpg);
 }
 .talk-title {
   text-align: left;
