@@ -768,6 +768,111 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   display: inline-block;
 }
 
+.statistics {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: stretch;
+  color: #fff;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  .statistics {
+    display: block;
+  }
+}
+.statistics-col {
+  flex: 1 0;
+  padding: 3em;
+}
+@media (max-width: 767px) {
+  .statistics-col {
+    width: 100%;
+  }
+}
+.statistics-col--1 {
+  background-color: #0090CD;
+}
+.statistics-col--2 {
+  background-color: #844990;
+}
+.statistics-col--3 {
+  background-color: #FDB742;
+}
+.statistics-item {
+  position: relative;
+  text-align: center;
+  font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+@media (max-width: 1199px) {
+  .statistics-item {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .statistics-item {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .statistics-item {
+    width: 60%;
+  }
+}
+.statistics-item:not(:last-child) {
+  margin-bottom: 2em;
+}
+.statistics-item span {
+  font-size: 3em;
+  font-weight: 600;
+  display: block;
+}
+.statistics-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 2.5em 2.5em;
+  opacity: 0.2;
+}
+.statistics-icon--days {
+  background-image: url(../images/icons/days.svg);
+}
+.statistics-icon--attendees {
+  background-image: url(../images/icons/success.svg);
+}
+.statistics-icon--tracks {
+  background-image: url(../images/icons/layers.svg);
+}
+.statistics-icon--keynotes {
+  background-image: url(../images/icons/microphone.svg);
+}
+.statistics-icon--conferences {
+  background-image: url(../images/icons/speech.svg);
+}
+.statistics-icon--workshops {
+  background-image: url(../images/icons/people-laptop.svg);
+}
+.statistics-icon--breakfasts {
+  background-image: url(../images/icons/snacks-sign.svg);
+}
+.statistics-icon--buffets {
+  background-image: url(../images/icons/cooking.svg);
+}
+.statistics-icon--party {
+  background-image: url(../images/icons/concert.svg);
+}
+.statistics-text {
+  width: calc(100% - 2.5em);
+  margin-left: 2.5em;
+}
+
 .wrapper {
   position: relative;
   z-index: 90;
