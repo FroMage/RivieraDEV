@@ -819,7 +819,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 @media (max-width: 767px) {
   .statistics-item {
-    width: 60%;
+    width: 50%;
   }
 }
 .statistics-item:not(:last-child) {
