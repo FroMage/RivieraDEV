@@ -155,7 +155,7 @@ views.application.becomeSponsor.packs.silver.logo=Votre <strong>logo en taille n
 views.application.becomeSponsor.packs.silver.booth=<strong>Un stand</strong> dans l'espace lounge de la conférence <em>– nous demandons à tous les exposants à Riviera DEV de le rendre leur stand attractif pour nos amis les geeks</em>
 views.application.becomeSponsor.packs.silver.mailing-list=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
 views.application.becomeSponsor.packs.silver.keynote=Votre marque mentionnée pendant <strong>la keynote d'ouverture</strong>
-views.application.becomeSponsor.packs.silver.price=1 500 €
+views.application.becomeSponsor.packs.silver.price=2 000 €
 views.application.becomeSponsor.packs.silver.available=Limité à 8 partenaires
 
 views.application.becomeSponsor.packs.gold.title=Pack Gold
@@ -165,8 +165,8 @@ views.application.becomeSponsor.packs.gold.logo=Votre <strong>logo en taille lar
 views.application.becomeSponsor.packs.gold.booth=<strong>Un stand</strong> dans l'espace lounge de la conférence <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
 views.application.becomeSponsor.packs.gold.mailing-list=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
 views.application.becomeSponsor.packs.gold.keynote=Votre marque mentionnée pendant <strong>la keynote d'ouverture</strong>
-views.application.becomeSponsor.packs.gold.price=3 000 €
-views.application.becomeSponsor.packs.gold.available=Limité à 4 partenaires
+views.application.becomeSponsor.packs.gold.price=3 500 €
+views.application.becomeSponsor.packs.gold.available=Limité à 5 partenaires
 
 views.application.becomeSponsor.packs.platinum.title=Pack Platinum
 views.application.becomeSponsor.packs.platinum.co-branding=<strong>Association de marques :</strong> votre société associée à Riviera DEV sur tous les médias
@@ -183,7 +183,7 @@ views.application.becomeSponsor.packs.lunches.brand=Votre marque mentionnée ora
 views.application.becomeSponsor.packs.lunches.booth=<strong>Un stand</strong> dans la zone restauration pendant les petits déjeuners et déjeuners <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
 views.application.becomeSponsor.packs.lunches.logo=Votre <strong>logo en taille large</strong> sur le <strong>site web</strong>
 views.application.becomeSponsor.packs.lunches.mailing=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
-views.application.becomeSponsor.packs.lunches.price=2 500 €
+views.application.becomeSponsor.packs.lunches.price=2 000 €
 views.application.becomeSponsor.packs.lunches.available=Limité à 1 partenaire
 
 views.application.becomeSponsor.packs.party.title=Pack Soirée
@@ -191,7 +191,7 @@ views.application.becomeSponsor.packs.party.brand=Votre companie mentionnée sur
 views.application.becomeSponsor.packs.party.booth=<strong>Un stand</strong> dans la zone cocktail pendant la soirée <em>– nous demandons à tous les exposants à Riviera DEV de rendre leur stand attractif pour nos amis les geeks</em>
 views.application.becomeSponsor.packs.party.logo=Votre <strong>logo en taille large</strong> sur le <strong>site web</strong>
 views.application.becomeSponsor.packs.party.mailing=Parrainage exposé au public via notre <strong>mailing-list</strong> et les <strong>réseaux sociaux</strong>
-views.application.becomeSponsor.packs.party.price=3 000 €
+views.application.becomeSponsor.packs.party.price=3 500 €
 views.application.becomeSponsor.packs.party.available=Limité à 1 partenaire
 
 views.application.becomeSponsor.contact-us=Pour devenir sponsor de Riviera DEV, contactez-nous par mail à <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
