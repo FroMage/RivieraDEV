@@ -61,7 +61,7 @@ views.application.speakers.subscribe=Subscribe to the newsletter to be notified 
 
 views.application.speaker.title=Speaker
 
-views.application.judcon.title=JUDCon2018:Riviera
+views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Speakers
 
 views.application.subscribe.title=Tickets
