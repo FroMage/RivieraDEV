@@ -983,10 +983,12 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   margin-bottom: 1.1em;
 }
 .partenaires-contactUs {
-  font-size: 1.5em;
   margin: 2em 0;
   padding: 1em;
   text-align: center;
+}
+.partenaires-contactUs p {
+  font-size: 1.5em;
 }
 
 .partenaire-logo {
@@ -1142,6 +1144,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .sponsorship-available {
   text-align: center;
   font-style: italic;
+  height: 1em;
 }
 .sponsorship-top {
   padding: 2em 2em 0 2em;

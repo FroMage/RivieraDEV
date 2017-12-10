@@ -86,10 +86,13 @@ $sponsor-silver-height: 83px;
     }
 
     &-contactUs{
-        font-size: 1.5em;
         margin: 2em 0;
         padding: 1em;
         text-align: center;
+
+        p{
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -291,6 +294,7 @@ $sponsor-silver-height: 83px;
     &-available{
         text-align: center;
         font-style: italic;
+        height: 1em;
     }
 
     &-top{
