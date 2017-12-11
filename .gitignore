@@ -1,5 +1,6 @@
 .classpath
 .project
+.sass-cache
 bin
 ddl.sql
 tmp
@@ -12,6 +13,7 @@ debian/rivieradev.substvars
 **/.DS_Store
 data/attachments/*
 modules
+node_modules
 
 test-data-images/emmanuel-bernard.jpg
 test-data-images/katia-aresti.png

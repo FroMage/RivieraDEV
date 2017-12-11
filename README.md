@@ -26,6 +26,12 @@ This can only be done by hand for now:
     1. `INSERT INTO user_table  (id, firstname, lastname, password, username) VALUES ((select nextval('hibernate_sequence')), 'FirstName', 'LastName', 'Password', 'UserName');`
 1. You can now log in and change your password using the UI
 
+# How to compile SCSS files into CSS files
+
+1. `npm install -g gulp` # If you haven't installed gulp globally before
+1. `npm install`         # Install project dependencies
+1. `gulp`                # Compile and watch SCSS files
+
 # License
 
 The content of this repository is released under AGPLv3 as provided in
