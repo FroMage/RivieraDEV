@@ -30,6 +30,7 @@ public class Application extends Controller {
 	@Before
 	private static void setup(){
 		renderArgs.put("user", Security.connected());
+		renderArgs.put("promotedPage", getPromotedPage());
 	}
 	
 	public static void fr(String url){
@@ -256,6 +257,17 @@ public class Application extends Controller {
     private static boolean displayNewSpeakers(){
         Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_NEW_SPEAKERS).first();
 		return config != null && config.value.equals("true") ;
+    }
+
+	/**
+	 * Retourne le nom de la page à mettre en avant sur le site.
+	 * 'CFP'      : La page du CFP
+	 * 'TICKETS'  : La page d'achat de tickets
+	 * 'SPONSORS' : La page pour devenir un sponsor
+	 */
+    private static String getPromotedPage(){
+        Configuration config = Configuration.find("key",ConfigurationKey.PROMOTED_PAGE).first();
+		return config != null ? config.value : "";
     }
 
 	private static class SponsorsToDisplay {

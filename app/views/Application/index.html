@@ -9,8 +9,12 @@
     </div>
 
     <div class="registration-buttons js-registration-buttons">
-        <!--<a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>-->
-        <a class="btn btn-primary btn-lg button" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
+        #{if promotedPage == 'CFP'}
+            <a class="btn btn-primary btn-lg button" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
+        #{/if}
+        #{elseif promotedPage == 'TICKETS'}
+            <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
+        #{/elseif}
         <a class="btn btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
 
