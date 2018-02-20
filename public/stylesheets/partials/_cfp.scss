@@ -87,25 +87,10 @@
         padding: 0 2em 1em 2em;
     }
 
-    &-public:before,
-    &-time:before,
-    &-number:before{
-        font: normal normal normal 14px/1 FontAwesome;
-        margin-right: 1em;
-        font-size: 1.5em;
-        display: inline-block;
-        width: 0.7em;
+    &-icon {
+        font-size: 1.2em;
     }
-
-    &-public:before{
-        content: "\f007";
-    }
-
-    &-time:before{
-        content: "\f017";
-    }
-
-    &-number:before{
-        content: "\f145";
+    svg.talk-icon {
+        width: 2em;
     }
 }

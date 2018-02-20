@@ -106,9 +106,11 @@
 
     &-icon {
         color: $color-yellow;
-        font-size: 1.2em;
-        width: 1.2em;
+        font-size: 1.3em;
         text-align: center;
+    }
+    svg.talkDetails-icon {
+        width: 1.3em;
     }
 }
 

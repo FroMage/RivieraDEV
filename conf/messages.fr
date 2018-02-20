@@ -26,6 +26,10 @@ views.main.follow=Suivez-nous sur
 views.main.motto=La conférence du Soleil
 views.main.logo.featuring=avec
 
+views.application.common.company=Entreprise
+views.application.common.twitter=Compte Twitter
+views.application.common.website=Site web
+
 views.application.openGraph=Riviera DEV, c'est 3 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
 views.application.index.title=Accueil
@@ -218,6 +222,9 @@ views.application.talks.title=Sessions
 views.application.talk.title=Session
 views.application.talk.slides=Slides
 views.application.talk.track.allTracks=Plénière
+views.application.talk.room=Salle
+views.application.talk.day=Jour
+views.application.talk.hour=Heure
 
 views.application.cfp.title=Appel aux orateurs
 views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> 15 novembre 2017

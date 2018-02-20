@@ -22,7 +22,7 @@
     #{if _displayFullSchedule}
 
         <div class="talkDetails-track">
-            <i class="fa fa-map-signs talkDetails-icon" aria-hidden="true"></i>
+            <i class="fas fa-map-signs talkDetails-icon" title="&{'views.application.talk.room'}"></i>
             #{if _talk.track?.title}
                 ${_talk.track.title}
             #{/if}
@@ -33,12 +33,12 @@
         
         #{if _talk.slot}
             <div class="talkDetails-slot-day">
-                <i class="fa fa-calendar talkDetails-icon" aria-hidden="true"></i>
+                <i class="far fa-calendar-alt talkDetails-icon" title="&{'views.application.talk.day'}"></i>
                 ${_talk.slot.startDate.format('dd MMM yyyy')}
             </div>
 
             <div class="talkDetails-slot-hour">
-                <i class="fa fa-clock-o talkDetails-icon" aria-hidden="true"></i>
+                <i class="far fa-clock talkDetails-icon" title="&{'views.application.talk.hour'}"></i>
                 ${_talk.slot.startDate.format('HH:mm')} - ${_talk.slot.endDate.format('HH:mm')}
             </div>
         #{/if}
@@ -47,7 +47,7 @@
 
     #{if _talk.slidesUrl}
         <div class="talkDetails-slides">
-            <i class="fa fa-television talkDetails-icon" aria-hidden="true"></i>
+            <i class="fas fa-tv talkDetails-icon"></i>
             <a href="${_talk.slidesUrl}">&{'views.application.talk.slides'}</a>
         </div>
     #{/if}

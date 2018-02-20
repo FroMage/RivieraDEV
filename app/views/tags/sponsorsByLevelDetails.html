@@ -41,13 +41,13 @@
             <div class="col-sm-4 partenaireDetails-links">
                 #{if sponsor.companyURL}
                 <div class="partenaireDetails-link">
-                    <i class="fa fa-globe partenaireDetails-icon" aria-hidden="true"></i> 
+                    <i class="fas fa-globe partenaireDetails-icon" title="&{'views.application.common.website'}"></i> 
                     <a href="${sponsor.companyURL}" title="${sponsor.company}">${sponsor.companyURL}</a>
                 </div>
                 #{/if}
                 #{if sponsor.twitterAccount}
                 <div class="partenaireDetails-link">
-                    <i class="fa fa-twitter partenaireDetails-icon" aria-hidden="true"></i> 
+                    <i class="fab fa-twitter partenaireDetails-icon" title="&{'views.application.common.twitter'}"></i> 
                     <a href="http://twitter.com/${sponsor.twitterAccount}">@${sponsor.twitterAccount}</a>
                 </div>
                 #{/if}

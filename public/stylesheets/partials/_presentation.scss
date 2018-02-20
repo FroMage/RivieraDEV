@@ -13,9 +13,10 @@
 
     &-icon {
         display: block;
-        font-size: 2.5em;
+        font-size: 2.2em;
+        margin-right: auto;
         margin-bottom: 0.5em;
-        @include transition(all 0.2s);
+        margin-left: auto;
         color: $color-yellow;
     }
 

@@ -152,7 +152,7 @@ function talkToString(talk){
 
     // Slot
     markup += "<div class='talkDetails-slot-hour'>"
-            + "    <i class='fa fa-clock-o talkDetails-icon' aria-hidden='true'></i>"
+            + "    <i class='far fa-clock talkDetails-icon'></i>"
             +      formatTime(start) + " - " + formatTime(end) + durationString
             + "</div>";
 

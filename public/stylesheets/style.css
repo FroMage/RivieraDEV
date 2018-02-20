@@ -236,21 +236,11 @@ a:hover, a:active, a:focus {
 .talk-description {
   padding: 0 2em 1em 2em;
 }
-.talk-public:before, .talk-time:before, .talk-number:before {
-  font: normal normal normal 14px/1 FontAwesome;
-  margin-right: 1em;
-  font-size: 1.5em;
-  display: inline-block;
-  width: 0.7em;
+.talk-icon {
+  font-size: 1.2em;
 }
-.talk-public:before {
-  content: "\f007";
-}
-.talk-time:before {
-  content: "\f017";
-}
-.talk-number:before {
-  content: "\f145";
+.talk svg.talk-icon {
+  width: 2em;
 }
 
 .diaporama {
@@ -673,12 +663,10 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 .presentation-icon {
   display: block;
-  font-size: 2.5em;
+  font-size: 2.2em;
+  margin-right: auto;
   margin-bottom: 0.5em;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  margin-left: auto;
   color: #FDB742;
 }
 
@@ -753,8 +741,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   margin-bottom: 0;
 }
 .newsletter-icon {
-  font-size: 3.8em;
-  padding-bottom: 0.1em;
+  font-size: 4em;
   vertical-align: middle;
   margin-right: 0.3em;
   color: #FDB742;
@@ -1052,6 +1039,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 }
 .partenaireDetails-icon {
   color: #FDB742;
+  font-size: 1.3em;
 }
 
 @media (max-width: 767px) {
@@ -1125,13 +1113,11 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   margin: 1em 0;
   position: relative;
 }
-.sponsorship-feature i {
-  font-size: 1.8em;
-  width: 1em;
+.sponsorship-feature svg {
+  font-size: 1.6em;
   text-align: center;
   position: absolute;
   left: 0;
-  top: -0.2em;
 }
 .sponsorship-feature--no {
   color: rgba(51, 51, 51, 0.4);
@@ -1259,10 +1245,10 @@ a.footer-rs-facebook:active {
   color: #3b5998;
 }
 
-a.footer-rs-google:hover,
-a.footer-rs-google:focus,
-a.footer-rs-google:active {
-  color: #d34836;
+a.footer-rs-linkedin:hover,
+a.footer-rs-linkedin:focus,
+a.footer-rs-linkedin:active {
+  color: #0077B5;
 }
 
 a.footer-rs-instagram:hover,
@@ -1387,6 +1373,7 @@ a.footer-rs-instagram:active {
 }
 .personDetails-icon {
   color: #FDB742;
+  font-size: 1.3em;
 }
 .personDetails-link {
   margin-bottom: 0.5em;
@@ -1673,9 +1660,11 @@ th.fullSchedule-time-title {
 }
 .talkDetails-icon {
   color: #FDB742;
-  font-size: 1.2em;
-  width: 1.2em;
+  font-size: 1.3em;
   text-align: center;
+}
+.talkDetails svg.talkDetails-icon {
+  width: 1.3em;
 }
 
 .talkDetails-speaker:hover, .talkDetails-speaker:focus, .talkDetails-speaker:active {

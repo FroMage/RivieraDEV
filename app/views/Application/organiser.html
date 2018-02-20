@@ -31,7 +31,7 @@
 
             #{if orga.company} 
             <div class="personDetails-company personDetails-link">
-                <i class="fa fa-briefcase personDetails-icon" aria-hidden="true"></i>
+                <i class="fas fa-briefcase personDetails-icon" title="&{'views.application.common.company'}"></i>
                 #{if orga.companyURL}
                     <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
                 #{/if}
@@ -43,14 +43,14 @@
 
             #{if orga.twitterAccount.length() > 0} 
             <div class="personDetails-twitter personDetails-link">
-                <i class="fa fa-twitter personDetails-icon" aria-hidden="true"></i>
+                <i class="fab fa-twitter personDetails-icon" title="&{'views.application.common.twitter'}"></i>
                 <a href="https://twitter.com/${orga.twitterAccount}" target="_blank">@${orga.twitterAccount}</a>
             </div>
             #{/if}
 
             #{if orga.blogURL.length() > 0} 
             <div class="personDetails-blog personDetails-link">
-                <i class="fa fa-globe personDetails-icon" aria-hidden="true"></i>
+                <i class="fas fa-globe personDetails-icon" title="&{'views.application.common.website'}"></i>
                 <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
             </div>
             #{/if}

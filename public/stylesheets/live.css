@@ -137,6 +137,7 @@
 }
 .personDetails-icon {
   color: #FDB742;
+  font-size: 1.3em;
 }
 .personDetails-link {
   margin-bottom: 0.5em;
@@ -172,6 +173,9 @@
 }
 .schedule-day2 {
   background-color: rgba(255, 183, 66, 0.8);
+}
+.schedule-day3 {
+  background-color: rgba(140, 70, 162, 0.8);
 }
 .schedule-time {
   font-family: 'Oswald', sans-serif;
@@ -352,7 +356,7 @@ th.fullSchedule-time-title {
   margin-top: 1em;
   margin-bottom: 2em;
 }
-.talkDetails-track, .talkDetails-slot-day, .talkDetails-slot-hour, .talkDetails-live {
+.talkDetails-track, .talkDetails-slot-day, .talkDetails-slot-hour, .talkDetails-slides {
   margin-bottom: 0.5em;
 }
 .talkDetails-speakers {
@@ -384,9 +388,11 @@ th.fullSchedule-time-title {
 }
 .talkDetails-icon {
   color: #FDB742;
-  font-size: 1.2em;
-  width: 1.2em;
+  font-size: 1.3em;
   text-align: center;
+}
+.talkDetails svg.talkDetails-icon {
+  width: 1.3em;
 }
 
 .talkDetails-speaker:hover, .talkDetails-speaker:focus, .talkDetails-speaker:active {
@@ -453,6 +459,6 @@ th.fullSchedule-time-title {
 }
 
 .nothing {
-    margin-top: 1.5em;
-    margin-left: 1em;
+  margin-top: 1.5em;
+  margin-left: 1em;
 }

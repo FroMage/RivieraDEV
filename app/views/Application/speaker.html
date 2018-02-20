@@ -30,7 +30,7 @@
 			<ul class="speaker-talks">
 				#{list items: speaker.talks, as: 'talk'}
 					<li>
-						<i class="fa fa-comment personDetails-icon" aria-hidden="true"></i>
+						<i class="fas fa-comment personDetails-icon"></i>
 						<a href="@{Application.talk(talk.id)}">${talk.title}</a>
 					</li>
 				#{/list}
@@ -46,7 +46,7 @@
 
             #{if speaker.company} 
             <div class="personDetails-company personDetails-link">
-                <i class="fa fa-briefcase personDetails-icon" aria-hidden="true"></i>
+                <i class="fas fa-briefcase personDetails-icon" title="&{'views.application.common.company'}"></i>
 				#{if speaker.companyURL}
 	                <a href="${speaker.companyURL}" target="_blank">${speaker.company}</a>
 				#{/if}
@@ -58,14 +58,14 @@
 
             #{if speaker.twitterAccount} 
             <div class="personDetails-twitter personDetails-link">
-                <i class="fa fa-twitter personDetails-icon" aria-hidden="true"></i>
+                <i class="fab fa-twitter personDetails-icon" title="&{'views.application.common.twitter'}"></i>
                 <a href="https://twitter.com/${speaker.twitterAccount}" target="_blank">@${speaker.twitterAccount}</a>
             </div>
             #{/if}
 
             #{if speaker.blogURL} 
             <div class="personDetails-blog personDetails-link">
-                <i class="fa fa-globe personDetails-icon" aria-hidden="true"></i>
+                <i class="fas fa-globe personDetails-icon" title="&{'views.application.common.website'}"></i>
                 <a href="${speaker.blogURL}" target="_blank">${speaker.blogURL}</a>
             </div>
             #{/if}
