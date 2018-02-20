@@ -28,9 +28,11 @@ This can only be done by hand for now:
 
 # How to compile SCSS files into CSS files
 
-1. `npm install -g gulp` # If you haven't installed gulp globally before
-1. `npm install`         # Install project dependencies
-1. `gulp`                # Compile and watch SCSS files
+1. `sudo apt-get install ruby-full` # Install ruby
+1. `gem install sass compass`       # Install compass
+1. `npm install -g gulp`            # If you haven't installed gulp globally before
+1. `npm install`                    # Install project dependencies
+1. `gulp`                           # Compile and watch SCSS files
 
 # License
 
