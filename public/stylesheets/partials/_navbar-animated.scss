@@ -45,7 +45,7 @@ nav a {
 }
 
 li a.navbar-animated-link {
-    @include transition(height 0.3s);
+    @include transition(height 0.3s, line-height 0.3s);
     height: $navbar-height;
     line-height: $navbar-height;
     padding-top: 0;
