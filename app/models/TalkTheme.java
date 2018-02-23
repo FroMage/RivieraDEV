@@ -44,6 +44,10 @@ public class TalkTheme extends Model implements Comparable<TalkTheme>{
 		name = name.replaceAll(" ","");
 		// Remove &
 		name = name.replaceAll("&","-");
+		// Remove ,
+		name = name.replaceAll(",","-");
+		// Remove /
+		name = name.replaceAll("/","-");
 		return name;
 	}
 
