@@ -145,6 +145,10 @@ a:hover, a:active, a:focus {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+  .page-container--fullWidth {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .data-unavailable {
@@ -168,6 +172,11 @@ a:hover, a:active, a:focus {
   margin: 0 auto;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .cfp-intro {
+    max-width: 90%;
+  }
 }
 .cfp-propose {
   -webkit-align-self: center;
@@ -308,10 +317,10 @@ nav a {
 }
 
 li a.navbar-animated-link {
-  -moz-transition: height 0.3s;
-  -o-transition: height 0.3s;
-  -webkit-transition: height 0.3s;
-  transition: height 0.3s;
+  -moz-transition: height 0.3s, line-height 0.3s;
+  -o-transition: height 0.3s, line-height 0.3s;
+  -webkit-transition: height 0.3s, line-height 0.3s;
+  transition: height 0.3s, line-height 0.3s;
   height: 75px;
   line-height: 75px;
   padding-top: 0;
@@ -974,6 +983,11 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   padding: 1em;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .partenaires-contactUs {
+    padding: 0;
+  }
+}
 .partenaires-contactUs p {
   font-size: 1.5em;
 }
@@ -994,6 +1008,13 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   width: 350px;
   height: 161px;
   line-height: 161px;
+}
+@media (max-width: 767px) {
+  .partenaire-logo-platinum {
+    width: 250px;
+    height: 115px;
+    line-height: 115px;
+  }
 }
 .partenaire-logo-silver {
   width: 180px;
@@ -1458,13 +1479,13 @@ a.footer-rs-instagram:active {
   margin-bottom: 3em;
 }
 .tempSchedule-day {
-  margin-left: -15px;
   padding-left: 15px;
   padding-right: 15px;
 }
 .tempSchedule-slot {
   border-bottom: 1px solid #ddd;
   margin-right: 0;
+  margin-left: 0;
   font-size: 1.25em;
 }
 .tempSchedule-time {
@@ -1701,6 +1722,7 @@ th.fullSchedule-time-title {
 .talksFilter-item {
   transition: all 0.3s;
   margin-left: 0;
+  margin-right: 0;
 }
 
 .talksFilter-options .talksFilter-item {

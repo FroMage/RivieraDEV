@@ -27,7 +27,6 @@
     margin-bottom: 3em;
 
     &-day {
-        margin-left: -15px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -35,6 +34,7 @@
     &-slot {
         border-bottom: 1px solid $color-gray-light;
         margin-right: 0;
+        margin-left: 0;
         font-size: 1.25em;
     }
 

@@ -186,13 +186,13 @@
   margin-bottom: 3em;
 }
 .tempSchedule-day {
-  margin-left: -15px;
   padding-left: 15px;
   padding-right: 15px;
 }
 .tempSchedule-slot {
   border-bottom: 1px solid #ddd;
   margin-right: 0;
+  margin-left: 0;
   font-size: 1.25em;
 }
 .tempSchedule-time {

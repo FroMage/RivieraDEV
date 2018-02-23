@@ -90,7 +90,11 @@ $sponsor-silver-height: 83px;
         padding: 1em;
         text-align: center;
 
-        p{
+        @media (max-width: $screen-xs-max) {
+            padding: 0;
+        }
+
+        p {
             font-size: 1.5em;
         }
     }
@@ -117,6 +121,12 @@ $sponsor-silver-height: 83px;
             width: $sponsor-platinum-width;
             height: $sponsor-platinum-height;
             line-height: $sponsor-platinum-height;
+
+            @media (max-width: $screen-xs-max) {
+                width: $sponsor-gold-width;
+                height: $sponsor-gold-height;
+                line-height: $sponsor-gold-height;
+            }
         }
         &-silver {
             width: $sponsor-silver-width;

@@ -151,6 +151,11 @@ a {
     @media (max-width: $screen-xs-max) {
         margin-top: 1em;
         margin-bottom: 1em;
+
+        &--fullWidth {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 

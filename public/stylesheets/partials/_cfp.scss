@@ -6,6 +6,10 @@
         max-width: 60%;
         margin: 0 auto;
         @include flex-wrap(wrap);
+
+        @media (max-width: $screen-xs-max) {
+            max-width: 90%;
+        }
     }
     &-propose{
         @include align-self(center);
