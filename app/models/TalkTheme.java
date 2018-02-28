@@ -38,16 +38,16 @@ public class TalkTheme extends Model implements Comparable<TalkTheme>{
 
 	public String getUtilityName () {
 		String name = Normalizer.normalize(theme, Normalizer.Form.NFD);
-		// Remove accent
+		// Remove accents
 		name = name.replaceAll("[^\\p{ASCII}]", "");
-		// Remove blank
+		// Remove spaces
 		name = name.replaceAll(" ","");
-		// Remove &
-		name = name.replaceAll("&","-");
-		// Remove ,
-		name = name.replaceAll(",","-");
-		// Remove /
-		name = name.replaceAll("/","-");
+		// Remove special chars
+		name = name.replace('&','-')
+				.replace(',','-')
+				.replace('.','-')
+				.replace('/','-')
+				.replace('\'', '-');
 		return name;
 	}
 
