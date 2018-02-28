@@ -166,6 +166,8 @@ public class Application extends Controller {
     public static void previousSpeakerPhoto(Long id){
     	PreviousSpeaker speaker = PreviousSpeaker.findById(id);
     	notFoundIfNull(speaker);
+    	if(!speaker.photo.exists())
+    		redirect("/public/images/unicorn-horn-lashes.svg");
     	response.contentType = speaker.photo.type();
     	renderBinary(speaker.photo.get());
     }
@@ -173,6 +175,8 @@ public class Application extends Controller {
     public static void speakerPhoto(Long id){
     	Speaker speaker = Speaker.findById(id);
     	notFoundIfNull(speaker);
+    	if(!speaker.photo.exists())
+    		redirect("/public/images/unicorn-horn-lashes.svg");
     	response.contentType = speaker.photo.type();
     	renderBinary(speaker.photo.get());
     }
@@ -187,6 +191,8 @@ public class Application extends Controller {
     public static void orgaPhoto(Long id){
     	Organiser organiser = Organiser.findById(id);
     	notFoundIfNull(organiser);
+    	if(!organiser.photo.exists())
+    		redirect("/public/images/unicorn-horn-lashes.svg");
     	response.contentType = organiser.photo.type();
     	renderBinary(organiser.photo.get());
     }
