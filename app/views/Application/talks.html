@@ -11,7 +11,7 @@
         <a class="btn btn-default" href="@{Talks.blank()}">add</a>
     #{/if}
 
-    #{filterForTalks themes: themes, levels: levels/}
+    #{filterForTalks themes: themes, levels: levels, tracks: tracks, languages: languages/}
 
     <div class="talks js-talksFilter-toFilter">
 
@@ -20,7 +20,11 @@
             #{if talk.isBreak == models.BreakType.NotABreak}
 
                 <div class="row talkDetails talkDetails-all talksFilter-item
-                            js-talksFilter-item js-talksFilter-theme-${talk.theme?.getUtilityName()} js-talksFilter-level-${talk.level?.code}">
+                            js-talksFilter-item 
+                            js-talksFilter-theme-${talk.theme?.theme.slugify()} 
+                            js-talksFilter-level-${talk.level?.code}
+                            js-talksFilter-track-${talk.track?.title.slugify()}
+                            js-talksFilter-language-${talk.language.toString().slugify()}">
                     #{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
                 </div> <!-- ./row -->
 

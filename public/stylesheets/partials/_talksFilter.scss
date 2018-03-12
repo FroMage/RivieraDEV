@@ -26,6 +26,8 @@
 
     &[data-filter-theme='hidden'],
     &[data-filter-level='hidden'],
+    &[data-filter-language='hidden'],
+    &[data-filter-track='hidden'],
     &[data-filter-theme='hidden'][data-filter-level='hidden']{
         opacity: 0.2;
     }
@@ -50,6 +52,8 @@
 .fullSchedule .talksFilter-item {
     &[data-filter-theme='hidden'],
     &[data-filter-level='hidden'],
+    &[data-filter-language='hidden'],
+    &[data-filter-track='hidden'],
     &[data-filter-theme='hidden'][data-filter-level='hidden']{
         opacity: 0.05;
         transition: all 0.3s;
@@ -61,6 +65,8 @@
 .talks .talksFilter-item {
     &[data-filter-theme='hidden'],
     &[data-filter-level='hidden'],
+    &[data-filter-language='hidden'],
+    &[data-filter-track='hidden'],
     &[data-filter-theme='hidden'][data-filter-level='hidden']{
         display: none;
     }

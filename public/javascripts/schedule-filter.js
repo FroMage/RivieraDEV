@@ -1,5 +1,13 @@
 $(function() {
 
+    window.toggleLanguage = function (language){
+        filterSchedule('language',language, toggleLanguageFilterClass)
+    }
+
+    window.toggleTrack = function (track){
+        filterSchedule('track',track, toggleTrackFilterClass)
+    }
+
     window.toggleTheme = function (theme){
 		filterSchedule('theme',theme, toggleThemeFilterClass)
 	}
@@ -48,9 +56,17 @@ $(function() {
 		}
     }
 
+    var toggleLanguageFilterClass = function (elem){
+        toggleFilterClass(elem, 'data-filter-language', 'hidden');
+    }
+
+    var toggleTrackFilterClass = function (elem){
+        toggleFilterClass(elem, 'data-filter-track', 'hidden');
+    }
+
     var toggleThemeFilterClass = function (elem){
-		toggleFilterClass(elem, 'data-filter-theme', 'hidden');
-	}
+        toggleFilterClass(elem, 'data-filter-theme', 'hidden');
+    }
 	
 	var toggleLevelFilterClass = function (elem){
 		toggleFilterClass(elem, 'data-filter-level', 'hidden');

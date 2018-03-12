@@ -9,6 +9,7 @@ import java.util.TreeMap;
 
 import models.Configuration;
 import models.ConfigurationKey;
+import models.Language;
 import models.Level;
 import models.News;
 import models.Organiser;
@@ -88,7 +89,9 @@ public class Application extends Controller {
     	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
+		Collections.sort(tracks);
 		Level[] levels = Level.values();
+		Language[] languages = Language.values();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
     		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
@@ -99,7 +102,7 @@ public class Application extends Controller {
 		boolean displayFullSchedule = displayFullSchedule();
 		boolean displayNewSpeakers = displayNewSpeakers();
 
-    	render(displayFullSchedule, displayNewSpeakers, days, tracks, tracksPerDays, themes, levels);
+    	render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, levels);
     }
 
     public static void scheduleSuperSecret(){
@@ -119,10 +122,13 @@ public class Application extends Controller {
     public static void talks(){
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
+		List<Track> tracks = Track.findAll();
+		Collections.sort(tracks);
     	List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
 		Collections.sort(talks);
 		boolean displayFullSchedule = displayFullSchedule();
-    	render(themes, levels, talks, displayFullSchedule);
+		Language[] languages = Language.values();
+    	render(themes, levels, talks, tracks, languages, displayFullSchedule);
     }
 
     public static void speakers(){

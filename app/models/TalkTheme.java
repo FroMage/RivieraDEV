@@ -36,21 +36,6 @@ public class TalkTheme extends Model implements Comparable<TalkTheme>{
 		return theme.compareTo(other.theme);
 	}
 
-	public String getUtilityName () {
-		String name = Normalizer.normalize(theme, Normalizer.Form.NFD);
-		// Remove accents
-		name = name.replaceAll("[^\\p{ASCII}]", "");
-		// Remove spaces
-		name = name.replaceAll(" ","");
-		// Remove special chars
-		name = name.replace('&','-')
-				.replace(',','-')
-				.replace('.','-')
-				.replace('/','-')
-				.replace('\'', '-');
-		return name;
-	}
-
 	public static List<TalkTheme> findUsedThemes() {
 		return find("SELECT DISTINCT talk.theme FROM Talk talk").fetch();
 	}

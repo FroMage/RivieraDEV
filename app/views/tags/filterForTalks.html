@@ -4,9 +4,9 @@
     <div class="talksFilter-options">
         <div class="js-talksFilter-themes">
             #{list items: _themes, as: 'theme'}
-                <span onclick="toggleTheme('${theme.getUtilityName()}')" 
+                <span onclick="toggleTheme('${theme.theme.slugify()}')" 
                       class="talksFilter-item talk-theme 
-                             js-talksFilter-item js-talksFilter-theme-${theme.getUtilityName()} talk-theme-${theme.color.code}">
+                             js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()} talk-theme-${theme.color.code}">
                              ${theme}
                 </span>
             #{/list}
@@ -17,6 +17,24 @@
                       class="talksFilter-item talk-level 
                              js-talksFilter-item js-talksFilter-level-${level.code}">
                       &{'views.application.schedule.level.' + level.code}
+                </span>
+            #{/list}
+        </div>
+        <div class="js-talksFilter-tracks">
+            #{list items: _tracks, as: 'track'}
+                <span onclick="toggleTrack('${track.title.slugify()}')" 
+                      class="talksFilter-item talk-track 
+                             js-talksFilter-item js-talksFilter-track-${track.title.slugify()}">
+                      ${track.title}
+                </span>
+            #{/list}
+        </div>
+        <div class="js-talksFilter-languages">
+            #{list items: _languages, as: 'language'}
+                <span onclick="toggleLanguage('${language.toString().slugify()}')" 
+                      class="talksFilter-item talk-language 
+                             js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}">
+                      #{language language: language/}
                 </span>
             #{/list}
         </div>
