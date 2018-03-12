@@ -1,4 +1,5 @@
 #{if _language}
-    <img class="talk-language" src="@{'/public/images/flags/'+_language.toString().toLowerCase()+'.svg'}"
-      title="&{'views.application.schedule.language.' + _language}"/>
+    <span aria-label="&{'views.application.schedule.language.' + _language}">
+      ${_language.toString()}
+    </span>
 #{/if}

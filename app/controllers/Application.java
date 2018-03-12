@@ -118,8 +118,9 @@ public class Application extends Controller {
     		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
     		Collections.sort(tracksPerDay);
     		tracksPerDays.put(day, tracksPerDay);
-    	}
-    	render(days, tracks, tracksPerDays, themes, types, levels);
+		}
+		Language[] languages = Language.values();
+    	render(days, tracks, tracksPerDays, themes, types, levels, languages);
     }
 
     public static void talks(){

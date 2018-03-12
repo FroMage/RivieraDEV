@@ -335,8 +335,13 @@ th.fullSchedule-time-title {
 }
 
 .talk-language {
-  width: 1em;
-  vertical-align: baseline;
+  border: 1.5px solid #516279;
+  color: #516279;
+  padding: 0 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 0 0.5em 0.3em;
+  font-size: .9em;
 }
 
 .talk-type {
