@@ -21,10 +21,10 @@
 
                 <div class="row talkDetails talkDetails-all talksFilter-item
                             js-talksFilter-item 
-                            js-talksFilter-theme-${talk.theme?.theme.slugify()} 
+                            js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                             js-talksFilter-level-${talk.level?.code}
-                            js-talksFilter-track-${talk.track?.title.slugify()}
-                            js-talksFilter-language-${talk.language.toString().slugify()}">
+                            js-talksFilter-track-${talk.track?.title?.slugify()}
+                            js-talksFilter-language-${talk.language?.toString()?.slugify()}">
                     #{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
                 </div> <!-- ./row -->
 

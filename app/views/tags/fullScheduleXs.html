@@ -85,10 +85,10 @@
 							#{if talk}
 								#{if !talk.isHiddenInTalksPage}
 									<div class="talksFilter-item 
-									            js-talksFilter-theme-${talk.theme?.theme.slugify()} 
+									            js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                                                 js-talksFilter-level-${talk.level?.code}
-                                                js-talksFilter-track-${talk.track?.title.slugify()}
-                                                js-talksFilter-language-${talk.language.toString().slugify()}">
+                                                js-talksFilter-track-${talk.track?.title?.slugify()}
+                                                js-talksFilter-language-${talk.language?.toString()?.slugify()}">
 										<span class="fullSchedule-track-title">${track.title}</span>
 
 										<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
