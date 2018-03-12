@@ -20,6 +20,7 @@ import models.Sponsor;
 import models.SponsorShip;
 import models.Talk;
 import models.TalkTheme;
+import models.TalkType;
 import models.TemporarySlot;
 import models.Track;
 import play.i18n.Lang;
@@ -109,6 +110,8 @@ public class Application extends Controller {
     	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
     	List<Track> tracks = Track.findAll();
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
+		List<TalkType> types = TalkType.findUsedTypes();
+		Collections.sort(types);
 		Level[] levels = Level.values();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
     	for(Date day : days){
@@ -116,19 +119,19 @@ public class Application extends Controller {
     		Collections.sort(tracksPerDay);
     		tracksPerDays.put(day, tracksPerDay);
     	}
-    	render(days, tracks, tracksPerDays, themes, levels);
+    	render(days, tracks, tracksPerDays, themes, types, levels);
     }
 
     public static void talks(){
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
-		List<Track> tracks = Track.findAll();
-		Collections.sort(tracks);
+		List<TalkType> types = TalkType.findUsedTypes();
+		Collections.sort(types);
     	List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
 		Collections.sort(talks);
 		boolean displayFullSchedule = displayFullSchedule();
 		Language[] languages = Language.values();
-    	render(themes, levels, talks, tracks, languages, displayFullSchedule);
+    	render(themes, levels, talks, types, languages, displayFullSchedule);
     }
 
     public static void speakers(){

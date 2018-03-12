@@ -90,15 +90,20 @@
 					<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
 						#{if talk}
 							#{if !talk.isHiddenInTalksPage}
-								<div class="talksFilter-item 
+								<div class="talksFilter-item
+											js-talksFilter-item 
                                             js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                                             js-talksFilter-level-${talk.level?.code}
-                                            js-talksFilter-track-${talk.track?.title?.slugify()}
+                                            js-talksFilter-type-${talk.type?.toString()?.slugify()}
                                             js-talksFilter-language-${talk.language?.toString()?.slugify()}">
 									<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
 
 									#{if talk.theme}
 										<span class="talk-theme talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+									#{/if}
+
+									#{if talk.type}
+										<span class="talk-type talk-type">${talk.type}</span>
 									#{/if}
 
 									#{if talk.level}

@@ -1,15 +1,16 @@
 
 <div class="col-sm-8">
-    <div class="talkDetails-title">#{language language:_talk.language/}
-        ${_talk.title} 
-        #{if _talk.track}
-            <span class="talk-track"> (${_talk.track.title})</span>
-        #{/if}
+    <div class="talkDetails-title">
+        #{language language:_talk.language/}
+        ${_talk.title}
     </div>
-
 
     #{if _talk.theme}
         <span class="talk-theme talk-theme-${_talk.theme.color.code}">${_talk.theme}</span>
+    #{/if}
+ 
+    #{if _talk.type}
+        <span class="talk-type">${_talk.type}</span>
     #{/if}
 
     #{if _talk.level && _talk.track}

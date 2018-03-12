@@ -11,21 +11,21 @@
                 </span>
             #{/list}
         </div>
+        <div class="js-talksFilter-types">
+            #{list items: _types, as: 'type'}
+                <span onclick="toggleType('${type.toString().slugify()}')" 
+                      class="talksFilter-item talk-type 
+                             js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}">
+                      ${type}
+                </span>
+            #{/list}
+        </div>
         <div class="js-talksFilter-levels">
             #{list items: _levels, as: 'level'}
                 <span onclick="toggleLevel('${level.code}')" 
                       class="talksFilter-item talk-level 
                              js-talksFilter-item js-talksFilter-level-${level.code}">
                       &{'views.application.schedule.level.' + level.code}
-                </span>
-            #{/list}
-        </div>
-        <div class="js-talksFilter-tracks">
-            #{list items: _tracks, as: 'track'}
-                <span onclick="toggleTrack('${track.title.slugify()}')" 
-                      class="talksFilter-item talk-track 
-                             js-talksFilter-item js-talksFilter-track-${track.title.slugify()}">
-                      ${track.title}
                 </span>
             #{/list}
         </div>

@@ -1628,6 +1628,21 @@ th.fullSchedule-time-title {
   margin: 0 0 0.5em 0.3em;
 }
 
+.talk-language {
+  width: 1em;
+  vertical-align: baseline;
+}
+
+.talk-type {
+  font-style: italic;
+  background-color: #516279;
+  color: #fff;
+  padding: 0 0.4em;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 0 0.5em 0.3em;
+}
+
 .talkDetails {
   margin-top: 2em;
 }
@@ -1729,11 +1744,7 @@ th.fullSchedule-time-title {
 .talksFilter-options .talksFilter-item {
   cursor: pointer;
 }
-.talksFilter-options .talksFilter-item[data-filter-theme='hidden'], 
-.talksFilter-options .talksFilter-item[data-filter-level='hidden'], 
-.talksFilter-options .talksFilter-item[data-filter-track='hidden'], 
-.talksFilter-options .talksFilter-item[data-filter-language='hidden'], 
-.talksFilter-options .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+.talksFilter-options .talksFilter-item[data-filter-theme='hidden'], .talksFilter-options .talksFilter-item[data-filter-level='hidden'], .talksFilter-options .talksFilter-item[data-filter-language='hidden'], .talksFilter-options .talksFilter-item[data-filter-type='hidden'], .talksFilter-options .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
   opacity: 0.2;
 }
 
@@ -1746,20 +1757,12 @@ th.fullSchedule-time-title {
     margin-top: 0.5em;
   }
 }
-.fullSchedule .talksFilter-item[data-filter-theme='hidden'], 
-.fullSchedule .talksFilter-item[data-filter-level='hidden'], 
-.fullSchedule .talksFilter-item[data-filter-language='hidden'], 
-.fullSchedule .talksFilter-item[data-filter-track='hidden'], 
-.fullSchedule .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+.fullSchedule .talksFilter-item[data-filter-theme='hidden'], .fullSchedule .talksFilter-item[data-filter-level='hidden'], .fullSchedule .talksFilter-item[data-filter-language='hidden'], .fullSchedule .talksFilter-item[data-filter-type='hidden'], .fullSchedule .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
   opacity: 0.05;
   transition: all 0.3s;
 }
 
-.talks .talksFilter-item[data-filter-theme='hidden'], 
-.talks .talksFilter-item[data-filter-level='hidden'], 
-.talks .talksFilter-item[data-filter-language='hidden'], 
-.talks .talksFilter-item[data-filter-track='hidden'], 
-.talks .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+.talks .talksFilter-item[data-filter-theme='hidden'], .talks .talksFilter-item[data-filter-level='hidden'], .talks .talksFilter-item[data-filter-language='hidden'], .talks .talksFilter-item[data-filter-type='hidden'], .talks .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
   display: none;
 }
 
@@ -1798,22 +1801,4 @@ th.fullSchedule-time-title {
   .judcon-intro-quote:after {
     display: none;
   }
-}
-
-.talk-language {
- width: 1em;
- vertical-align: baseline;
-}
-
-.talk-track {
-	color: black;
-	text-transform: none;
-}
-
-.js-talksFilter-tracks .talk-track {
-    font-weight: bold;
-    background-color: gray;
-    padding: 0 0.4em;
-    border-radius: 4px;
-    display: inline-block;
 }

@@ -84,10 +84,11 @@
 						<td class="js-talksFilter-toFilter">
 							#{if talk}
 								#{if !talk.isHiddenInTalksPage}
-									<div class="talksFilter-item 
+									<div class="talksFilter-item
+									   			js-talksFilter-item
 									            js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                                                 js-talksFilter-level-${talk.level?.code}
-                                                js-talksFilter-track-${talk.track?.title?.slugify()}
+                                                js-talksFilter-type-${talk.type?.toString()?.slugify()}
                                                 js-talksFilter-language-${talk.language?.toString()?.slugify()}">
 										<span class="fullSchedule-track-title">${track.title}</span>
 

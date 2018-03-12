@@ -59,6 +59,9 @@ public class Talk extends Model implements Comparable<Talk> {
 	@ManyToOne
 	public TalkTheme theme;
 
+	@ManyToOne
+	public TalkType type;
+
 	public String slidesUrl;
 	
 	// Permet de cacher ce talk dans la page qui liste les talks.

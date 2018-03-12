@@ -11,7 +11,7 @@
         <a class="btn btn-default" href="@{Talks.blank()}">add</a>
     #{/if}
 
-    #{filterForTalks themes: themes, levels: levels, tracks: tracks, languages: languages/}
+    #{filterForTalks themes: themes, levels: levels, types: types, languages: languages/}
 
     <div class="talks js-talksFilter-toFilter">
 
@@ -23,7 +23,7 @@
                             js-talksFilter-item 
                             js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                             js-talksFilter-level-${talk.level?.code}
-                            js-talksFilter-track-${talk.track?.title?.slugify()}
+                            js-talksFilter-type-${talk.type?.toString()?.slugify()}
                             js-talksFilter-language-${talk.language?.toString()?.slugify()}">
                     #{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
                 </div> <!-- ./row -->

@@ -4,8 +4,8 @@ $(function() {
         filterSchedule('language',language, toggleLanguageFilterClass)
     }
 
-    window.toggleTrack = function (track){
-        filterSchedule('track',track, toggleTrackFilterClass)
+    window.toggleType = function (type){
+        filterSchedule('type',type, toggleTypeFilterClass)
     }
 
     window.toggleTheme = function (theme){
@@ -60,8 +60,8 @@ $(function() {
         toggleFilterClass(elem, 'data-filter-language', 'hidden');
     }
 
-    var toggleTrackFilterClass = function (elem){
-        toggleFilterClass(elem, 'data-filter-track', 'hidden');
+    var toggleTypeFilterClass = function (elem){
+        toggleFilterClass(elem, 'data-filter-type', 'hidden');
     }
 
     var toggleThemeFilterClass = function (elem){

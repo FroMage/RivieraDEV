@@ -45,12 +45,14 @@
  vertical-align: baseline;
 }
 
-.js-talksFilter-tracks .talk-track {
-    font-weight: bold;
-    background-color: $color-gray;
+.talk-type {
+    font-style: italic;
+    background-color: $color-blue-gray;
+    color: $color-white;
     padding: 0 0.4em;
     border-radius: 4px;
     display: inline-block;
+    margin: 0 0 0.5em 0.3em;
 }
 
 .talkDetails {
