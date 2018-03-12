@@ -215,6 +215,8 @@ views.application.schedule.filter=Filtrer
 views.application.schedule.level.beginner=Débutant
 views.application.schedule.level.intermediate=Confirmé
 views.application.schedule.level.advanced=Expert
+views.application.schedule.language.EN=Sujet en anglais
+views.application.schedule.language.FR=Sujet en français
 views.application.schedule.full.talk.unknown=En cours de finalisation
 
 views.application.talks.title=Sessions

@@ -1787,3 +1787,8 @@ th.fullSchedule-time-title {
     display: none;
   }
 }
+
+.talk-language {
+ width: 1em;
+ vertical-align: baseline;
+}

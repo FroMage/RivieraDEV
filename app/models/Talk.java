@@ -48,7 +48,11 @@ public class Talk extends Model implements Comparable<Talk> {
 	@Required
 	@Enumerated(EnumType.STRING)
 	public BreakType isBreak;
-	
+
+	@Required
+	@Enumerated(EnumType.STRING)
+	public Language language;
+
 	@Enumerated(EnumType.STRING)
 	public Level level;
 
