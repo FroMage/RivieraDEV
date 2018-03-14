@@ -1,10 +1,14 @@
 #{if _days != null && _days.size() > 0}
 
-    <div class="row">
+    <div class="row tempSchedule">
+
+        <div class="col-md-8 col-md-offset-2">
+            <p class="tempSchedule-intro">&{'views.application.schedule.unavailable.intro'}</p>
+        </div>
 
     #{list items: _days, as: 'day'}
     
-        <div class="tempSchedule col-md-8 col-md-offset-2">
+        <div class="tempSchedule-bloc col-md-8 col-md-offset-2">
             <h2 class="schedule-day tempSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
             <dl>

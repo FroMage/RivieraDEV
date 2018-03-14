@@ -152,8 +152,12 @@ a:hover, a:active, a:focus {
 }
 
 .data-unavailable {
-  text-align: center;
   font-size: 1.25em;
+}
+@media (min-width: 992px) {
+  .data-unavailable {
+    text-align: center;
+  }
 }
 
 .video {
@@ -1477,6 +1481,13 @@ a.footer-rs-instagram:active {
 }
 
 .tempSchedule {
+  margin-top: 3rem;
+}
+.tempSchedule-intro {
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+.tempSchedule-bloc {
   margin-bottom: 3em;
 }
 .tempSchedule-day {

@@ -24,7 +24,16 @@
 }
 
 .tempSchedule {
-    margin-bottom: 3em;
+    margin-top: $space-lg;
+
+    &-intro {
+        font-size: 1.25em;
+        margin-bottom: 0;
+    }
+
+    &-bloc {
+        margin-bottom: 3em;
+    }
 
     &-day {
         padding-left: 15px;

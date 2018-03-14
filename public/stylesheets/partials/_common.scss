@@ -160,8 +160,11 @@ a {
 }
 
 .data-unavailable {
-    text-align: center;
     font-size: 1.25em;
+
+    @media (min-width: $screen-md-min) {
+        text-align: center;
+    }
 }
 
 .video {

@@ -183,6 +183,13 @@
 }
 
 .tempSchedule {
+  margin-top: 3rem;
+}
+.tempSchedule-intro {
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+.tempSchedule-bloc {
   margin-bottom: 3em;
 }
 .tempSchedule-day {

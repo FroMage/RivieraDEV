@@ -23,22 +23,18 @@
 	#{else}
 		<div class="container page-container">
 
-			<div class="schedule-intro">
-				<p>
-					&{'views.application.schedule.intro'}
-				</p>
+			<div class="data-unavailable">
+				#{if displayNewSpeakers}
+					<p>&{'views.application.schedule.unavailable.speakers.available'}</p>
+				#{/if}
+				#{else}
+					<p>&{'views.application.schedule.unavailable'}</p>
+				#{/else}
 			</div>
+
 			#{temporarySchedule days: days/}
 
 			<div class="data-unavailable">
-				<p>
-					#{if displayNewSpeakers}
-						&{'views.application.schedule.unavailable.speakers.available'}
-					#{/if}
-					#{else}
-						&{'views.application.schedule.unavailable'}
-					#{/else}
-				</p>
 				<p>
 					&{'views.application.schedule.subscribe'}
 				</p>
