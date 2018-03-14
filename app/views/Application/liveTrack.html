@@ -61,8 +61,8 @@
         {
             "title": "${talk.getTitle().jsonEscape()}",
             "description": "${talk.getDescription().jsonEscape()}", 
-            "start": ${talk.slot.startDate.time}, 
-            "end": ${talk.slot.endDate.time},
+            "start": ${talk.slot?.startDate?.time ?: "null"}, 
+            "end": ${talk.slot?.endDate?.time ?: "null"},
             #{if talk.theme}
                 "theme": "${talk.theme}",
                 "themeColor": "${talk.theme.color.code}",
@@ -88,8 +88,8 @@
             {
             "title": "${talk.getTitle().jsonEscape()}",
             "description": "${talk.getDescription().jsonEscape()}", 
-            "start": ${talk.slot.startDate.time}, 
-            "end": ${talk.slot.endDate.time},
+            "start": ${talk.slot?.startDate?.time ?: "null"}, 
+            "end": ${talk.slot?.endDate?.time ?: "null"},
             #{if talk.theme}
                 "theme": "${talk.theme}",
                 "themeColor": "${talk.theme.color.code}",
