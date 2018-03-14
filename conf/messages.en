@@ -209,6 +209,7 @@ views.application.becomeSponsor.download=Sponsoring leaflet
 views.application.schedule.title=Program
 views.application.schedule.unavailable=The detailed program is not available yet, but you can have a look at the <a href="http://2016.rivieradev.fr/programme" target="_blank">2016&nbsp;session</a> as well as the <a href="http://2017.rivieradev.fr/programme" target="_blank">2017&nbsp;session</a> to get an idea&nbsp;:)
 views.application.schedule.unavailable.speakers.available=The detailed program will be available soon, in the meantime you can already have a look at <a href="http://rivieradev.fr/talks">the&nbsp;talks</a> as well as <a href="http://rivieradev.fr/speakers">the&nbsp;speakers</a>.
+views.application.schedule.unavailable.talks=Discover the talks
 views.application.schedule.unavailable.intro=You can see below how the days will be organized:
 views.application.schedule.subscribe=Subscribe to the newsletter to be notified when the detailed program is published.
 views.application.schedule.filter=Filter

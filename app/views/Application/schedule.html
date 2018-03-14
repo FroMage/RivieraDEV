@@ -23,19 +23,22 @@
 	#{else}
 		<div class="container page-container">
 
-			<div class="data-unavailable">
+			<div>
 				#{if displayNewSpeakers}
-					<p>&{'views.application.schedule.unavailable.speakers.available'}</p>
+					<p class="data-unavailable">&{'views.application.schedule.unavailable.speakers.available'}</p>
+					<div class="text-center">
+						<a class="btn btn-primary btn-lg button-x-large button" href="@{Application.talks}">&{'views.application.schedule.unavailable.talks'}</a>
+					</div>
 				#{/if}
 				#{else}
-					<p>&{'views.application.schedule.unavailable'}</p>
+					<p class="data-unavailable">&{'views.application.schedule.unavailable'}</p>
 				#{/else}
 			</div>
 
 			#{temporarySchedule days: days/}
 
-			<div class="data-unavailable">
-				<p>
+			<div>
+				<p class="data-unavailable">
 					&{'views.application.schedule.subscribe'}
 				</p>
 			</div>
