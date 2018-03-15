@@ -65,7 +65,8 @@ $sponsor-silver-height: 83px;
     }
 
     &-title-lunches,
-    &-title-party {
+    &-title-party,
+    &-title-partner {
         color: $color-gray-dark;
     }
 
@@ -128,7 +129,8 @@ $sponsor-silver-height: 83px;
                 line-height: $sponsor-gold-height;
             }
         }
-        &-silver {
+        &-silver,
+        &-partner {
             width: $sponsor-silver-width;
             height: $sponsor-silver-height;
             line-height: $sponsor-silver-height;

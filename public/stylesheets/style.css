@@ -969,7 +969,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 .partenaires-title-gold {
   color: #DD7E00;
 }
-.partenaires-title-lunches, .partenaires-title-party {
+.partenaires-title-lunches, .partenaires-title-party, .partenaires-title-partner {
   color: #777;
 }
 .partenaires-level {
@@ -1020,7 +1020,7 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
     line-height: 115px;
   }
 }
-.partenaire-logo-silver {
+.partenaire-logo-silver, .partenaire-logo-partner {
   width: 180px;
   height: 83px;
   line-height: 83px;

@@ -6,6 +6,7 @@ public enum SponsorShip {
 	Silver			("silver"), 
 	Lunches			("lunches"), 
 	Party			("party"),
+	Partner			("partner"),
 	PreviousYears	("previousYears");
 
 	private final String code;
