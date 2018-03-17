@@ -762,6 +762,16 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .days-item {
+    width: 90%;
+  }
+}
+@media (max-width: 991px) {
+  .days-item--first {
+    margin-bottom: 5rem;
+  }
+}
 
 .location {
   position: relative;

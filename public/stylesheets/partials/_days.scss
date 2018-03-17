@@ -18,5 +18,14 @@
     &-item {
         width: 80%;
         margin: 0 auto;
+
+        @media (max-width: $screen-xs-max) {
+            width: 90%;
+        }
+        @media (max-width: $screen-sm-max) {
+            &--first {
+                margin-bottom: $space-xxl;
+            }
+        }
     }
 }
