@@ -23,7 +23,7 @@
 </div> <!-- /.parallax -->
 
 
-<div class="container presentation">
+<div class="container introduction">
 
     <!-- Teaser vidéo -->
     <!--<div class="video">
@@ -33,70 +33,31 @@
     </div>-->
 
 
-    <h2 class="title home-title presentation-title">&{'views.main.motto'}</h2>
+    <h2 class="title home-title">&{'views.main.motto'}</h2>
 
-    <div class="home-subtitle presentation-introduction">
+    <div class="home-subtitle home-introduction">
         <p>
             &{'views.application.index.intro.1'} &{'views.application.index.intro.2'}
-        <br>
+        </p>
+        <p>
             &{'views.application.index.intro.3'}
         </p>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-4 presentation-item">
-            <i class="fas fa-terminal presentation-icon"></i>
-            <span>&{'views.application.index.points.1'}</span>
-        </div>
-        <div class="col-sm-4 presentation-item">
-            <i class="fas fa-th presentation-icon"></i>
-            <span>&{'views.application.index.points.2'}</span>
-        </div>
-        <div class="col-sm-4 presentation-item">
-            <i class="fas fa-graduation-cap presentation-icon"></i>
-            <span>&{'views.application.index.points.3'}</span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 presentation-item">
-            <i class="fas fa-comments presentation-icon"></i>
-            <span>&{'views.application.index.points.4'}</span>
-        </div>
-        <div class="col-sm-4 presentation-item">
-            <i class="fas fa-star presentation-icon"></i>
-            <span>&{'views.application.index.points.5'}</span>
-        </div>
-        <div class="col-sm-4 presentation-item">
-            <i class="fas fa-euro-sign presentation-icon"></i>
-            <span>&{'views.application.index.points.6'}</span>
-        </div>
+        <p>
+            &{'views.application.index.intro.4'}
+        </p>
     </div>
 
     <!--<div class="text-center">
         <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.schedule()}">&{'views.application.index.schedule'}</a>
     </div>-->
 
-</div> <!-- /.presentation -->
+</div> <!-- /.introduction -->
 
-<div class="statistics">
-    <div class="statistics-col statistics-col--1">
-        <div class="statistics-item">
-            <div class="statistics-icon statistics-icon--days"></div>
-            <div class="statistics-text"><span>3</span> days</div>
-        </div>
+<div class="flexRow">
+    <div class="flexCol--grow1 statistics">
         <div class="statistics-item">
             <div class="statistics-icon statistics-icon--attendees"/></div>
             <div class="statistics-text"><span>500</span> participants</div>
-        </div>
-        <div class="statistics-item">
-            <div class="statistics-icon statistics-icon--tracks"/></div>
-            <div class="statistics-text"><span>3</span> tracks en parallèle</div>
-        </div>
-    </div>
-    <div class="statistics-col statistics-col--2">
-        <div class="statistics-item">
-            <div class="statistics-icon statistics-icon--keynotes"/></div>
-            <div class="statistics-text"><span>5</span> keynotes</div>
         </div>
         <div class="statistics-item">
             <div class="statistics-icon statistics-icon--conferences"/></div>
@@ -107,18 +68,20 @@
             <div class="statistics-text"><span>18</span> workshops</div>
         </div>
     </div>
-    <div class="statistics-col statistics-col--3">
-        <div class="statistics-item">
-            <div class="statistics-icon statistics-icon--breakfasts"/></div>
-            <div class="statistics-text"><span>3</span> petits déjeuners</div>
+    <div class="flexCol--grow3 presentation">
+        <div class="presentation-item">
+            <div class="presentation-icon presentation-icon--goal"/></div>
+            <h3 class="presentation-title">&{'views.application.index.pres.goal.title'}</h3>
+            <p class="presentation-text">
+                    &{'views.application.index.pres.goal.text'}
+            </p>
         </div>
-        <div class="statistics-item">
-            <div class="statistics-icon statistics-icon--buffets"/></div>
-            <div class="statistics-text"><span>3</span> buffets</div>
-        </div>
-        <div class="statistics-item">
-            <div class="statistics-icon statistics-icon--party"/></div>
-            <div class="statistics-text"><span>1</span> soirée avec concert</div>
+        <div class="presentation-item">
+            <div class="presentation-icon presentation-icon--dna"/></div>
+            <h3 class="presentation-title">&{'views.application.index.pres.dna.title'}</h3>
+            <p class="presentation-text">
+                    &{'views.application.index.pres.dna.text'}
+            </p>
         </div>
     </div>
 </div>

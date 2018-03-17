@@ -103,6 +103,27 @@ a:hover, a:active, a:focus {
   color: #00709D;
 }
 
+.flexRow {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+@media (max-width: 767px) {
+  .flexRow {
+    display: block;
+  }
+}
+
+.flexCol--grow1 {
+  flex: 1 0;
+}
+.flexCol--grow2 {
+  flex: 2 0;
+}
+.flexCol--grow3 {
+  flex: 3 0;
+}
+
 .home-title {
   font-size: 2.8em;
   margin-top: 0.5em;
@@ -112,6 +133,10 @@ a:hover, a:active, a:focus {
 .home-subtitle {
   font-size: 1.1em;
   text-align: center;
+}
+.home-introduction {
+  padding-bottom: 1.5em;
+  text-align: left;
 }
 
 .page-title {
@@ -664,23 +689,54 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   }
 }
 .presentation {
-  padding-bottom: 1.5em;
+  background-color: #FDB742;
+  color: #fff;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
-.presentation-introduction {
-  text-align: center;
+@media (max-width: 767px) {
+  .presentation {
+    display: block;
+  }
 }
 .presentation-item {
-  text-align: center;
-  padding: 2em;
-  border: 1px solid transparent;
+  flex-basis: 50%;
+  padding: 4rem 0;
 }
 .presentation-icon {
-  display: block;
-  font-size: 2.2em;
-  margin-right: auto;
-  margin-bottom: 0.5em;
+  width: 100%;
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 6rem 6rem;
+  opacity: 0.2;
+}
+.presentation-icon--goal {
+  background-image: url(../images/icons/mountain.svg);
+}
+.presentation-icon--dna {
+  background-image: url(../images/icons/dna.svg);
+}
+.presentation-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+.presentation-text {
+  width: 70%;
   margin-left: auto;
-  color: #FDB742;
+  margin-right: auto;
+}
+@media (max-width: 991px) {
+  .presentation-text {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .presentation-text {
+    width: 90%;
+  }
 }
 
 .location {
@@ -770,34 +826,13 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
 
 .statistics {
   display: flex;
-  flex-wrap: no-wrap;
+  flex-direction: column;
   align-items: stretch;
   color: #fff;
   margin-left: 0;
   margin-right: 0;
-}
-@media (max-width: 767px) {
-  .statistics {
-    display: block;
-  }
-}
-.statistics-col {
-  flex: 1 0;
-  padding: 3em;
-}
-@media (max-width: 767px) {
-  .statistics-col {
-    width: 100%;
-  }
-}
-.statistics-col--1 {
   background-color: #0090CD;
-}
-.statistics-col--2 {
-  background-color: #844990;
-}
-.statistics-col--3 {
-  background-color: #FDB742;
+  padding: 3rem;
 }
 .statistics-item {
   position: relative;

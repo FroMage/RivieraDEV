@@ -1,33 +1,12 @@
 .statistics {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-direction: column;
     align-items: stretch;
     color: $color-white;
     margin-left: 0;
     margin-right: 0;
-
-    @media (max-width: $screen-xs-max) {
-        display: block;
-    }
-
-    &-col {
-        flex: 1 0;
-        padding: 3em;
-
-        @media (max-width: $screen-xs-max) {
-            width: 100%;
-        }
-
-        &--1 {
-            background-color: $color-blue;
-        }
-        &--2 {
-            background-color: $color-purple;
-        }
-        &--3 {
-            background-color: $color-yellow;
-        }
-    }
+    background-color: $color-blue;
+    padding: $space-lg;
 
     &-item {
         position: relative;
