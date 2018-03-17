@@ -1,0 +1,22 @@
+.days {
+    margin: $space-lg 0;
+
+    &-date {
+        //text-align: center;
+        color: $color-blue;
+        font-size: $font-md;
+        font-weight: 300;
+    }
+    &-title {
+        margin-top: 0;
+        text-align: left;
+    }
+    &-title2 {
+        color: $color-blue;
+        font-weight: 300;
+    }
+    &-item {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

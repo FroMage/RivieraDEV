@@ -103,6 +103,12 @@ a:hover, a:active, a:focus {
   color: #00709D;
 }
 
+.rowShadow {
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 .flexRow {
   display: flex;
   flex-wrap: nowrap;
@@ -287,9 +293,6 @@ a:hover, a:active, a:focus {
 .diaporama-row {
   margin-left: 0;
   margin-right: 0;
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 .diaporama-item {
   margin: 0;
@@ -739,11 +742,29 @@ ul.dropdown-menu > li.active > a:hover, ul.dropdown-menu > li.active > a:focus, 
   }
 }
 
+.days {
+  margin: 3rem 0;
+}
+.days-date {
+  color: #0090CD;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.days-title {
+  margin-top: 0;
+  text-align: left;
+}
+.days-title2 {
+  color: #0090CD;
+  font-weight: 300;
+}
+.days-item {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .location {
   position: relative;
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 .location-header {
   background-color: rgba(255, 255, 255, 0.7);
@@ -1491,9 +1512,6 @@ a.footer-rs-instagram:active {
 }
 .orgas-photo {
   width: 100%;
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .schedule-day {
