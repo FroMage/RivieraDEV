@@ -220,6 +220,7 @@
 
 .fullSchedule {
   width: 100%;
+  table-layout: fixed;
 }
 .fullSchedule-day {
   padding-left: 15px;

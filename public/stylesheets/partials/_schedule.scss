@@ -68,6 +68,7 @@
 
 .fullSchedule {
     width: 100%;
+    table-layout: fixed;
 
     &-day {
         padding-left: 15px;
