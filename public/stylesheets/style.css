@@ -1606,9 +1606,6 @@ a.footer-rs-instagram:active {
 .fullSchedule-col-XStracks {
   width: 90%;
 }
-.fullSchedule-talk-cell {
-  vertical-align: top;
-}
 .fullSchedule-time {
   text-align: center;
   font-size: 1.1em;
@@ -1621,6 +1618,10 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule-track-title {
   color: #777;
+}
+.fullSchedule-talk-cell {
+  vertical-align: top;
+  position: relative;
 }
 .fullSchedule-talk-title {
   display: block;
@@ -1636,6 +1637,18 @@ a.footer-rs-instagram:active {
   color: #777;
   text-decoration-style: dotted;
   font-style: italic;
+}
+.fullSchedule-talk-like {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5em;
+}
+.fullSchedule-talk-like svg {
+  color: #777;
+}
+.fullSchedule-talk-like[data-like="true"] svg {
+  color: #cc0303;
 }
 .fullSchedule-breakfast, .fullSchedule-lunch, .fullSchedule-cofeeBreak, .fullSchedule-party {
   background-color: #fefaf1;

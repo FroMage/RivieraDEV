@@ -130,6 +130,8 @@
 										<br/>
 										<a href="@{Talks.show(talk.id)}">edit</a>
 									#{/if}
+
+									<div class="fullSchedule-talk-like js-talksFilter-like" onclick="likeTalk(this,'${talk.id}')"><i class="far fa-heart"></i></div>
 								</div>
 							#{/if}
 							#{else}
