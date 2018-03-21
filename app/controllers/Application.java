@@ -218,6 +218,20 @@ public class Application extends Controller {
     	render(orga);
 	}
 
+	public static void likeTalk(Long id){
+		Talk talk = Talk.findById(id);
+		if(talk != null){
+			talk.like();
+		}
+	}
+
+	public static void unlikeTalk(Long id){
+		Talk talk = Talk.findById(id);
+		if(talk != null){
+			talk.unlike();
+		}
+	}
+
 	private static SponsorsToDisplay getSponsorsToDisplay() {
 		boolean mustDisplaySponsorsPreviousYears = true;
 

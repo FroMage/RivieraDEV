@@ -24,15 +24,16 @@ $(function() {
 	}
 
 	function _likeIcon($elem){
-		let $icon = $elem.find('svg');
+		let $svg = $elem.find('[data-fa-i2svg]')
+        .toggleClass('far')
+		.toggleClass('fas');
 		$elem.attr('data-like', true);
-		$icon.attr('data-prefix', 'fas');
 	}
 
 	function _unlikeIcon($elem){
-		let $icon = $elem.find('svg');
+		let $svg = $elem.find('[data-fa-i2svg]');
+		$svg.attr('data-prefix', 'far');
 		$elem.attr('data-like', null);
-		$icon.attr('data-prefix', 'far');
 	}
 
 	/**
@@ -44,7 +45,16 @@ $(function() {
 		likes.push(id);
 		_setLikes(likes);
 
-		//TODO : Ajax to add like talk
+		$.ajax({
+			url: '/like-talk/' + id,
+			type: 'POST',
+			success: function(results) {
+				//console.log('Talk liked')
+			},
+			error : function(results) {
+				//console.log('Failed to like talk!')
+			}
+		});
 	}
 
 	/**
@@ -59,7 +69,16 @@ $(function() {
 		}
 		_setLikes(likes);
 
-		//TODO : Ajax to remove like talk
+		$.ajax({
+			url: '/unlike-talk/' + id,
+			type: 'POST',
+			success: function(results) {
+				//console.log('Talk unliked')
+			},
+			error : function(results) {
+				//console.log('Failed to unlike talk!')
+			}
+		});
 	}
 
 	/**

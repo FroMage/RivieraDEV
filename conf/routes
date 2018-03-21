@@ -26,6 +26,8 @@ GET     /becomeSponsor                          Application.becomeSponsor
 GET     /orga                                   Application.organisers
 GET     /live                                   Application.live
 GET     /live/{track}                           Application.liveTrack(track)
+POST    /like-talk/{id}                         Application.likeTalk({id})
+POST    /unlike-talk/{id}                       Application.unlikeTalk({id})
 
 *		/admin									module:crud
 *		/										module:secure

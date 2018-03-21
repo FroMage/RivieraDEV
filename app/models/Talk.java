@@ -63,6 +63,8 @@ public class Talk extends Model implements Comparable<Talk> {
 	public TalkType type;
 
 	public String slidesUrl;
+
+	public Integer nbLikes = 0;
 	
 	// Permet de cacher ce talk dans la page qui liste les talks.
 	// (Ex: 'Keynote des Orga', 'Accueil', etc...)
@@ -141,5 +143,23 @@ public class Talk extends Model implements Comparable<Talk> {
 
 	public static List<Talk> findKeynotes() {
 		return Talk.find("track IS NULL AND isBreak = '" + BreakType.NotABreak + "' AND isHiddenInTalksPage = false").fetch();
+	}
+
+	public void like(){
+		if(this.nbLikes == null){
+			this.nbLikes = 0;
+		}
+		this.nbLikes++;
+		this.save();
+	}
+
+	public void unlike(){
+		if(this.nbLikes == null){
+			this.nbLikes = 0;
+		}
+		else if(this.nbLikes > 0){
+			this.nbLikes--;
+		}
+		this.save();
 	}
 }
