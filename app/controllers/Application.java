@@ -88,9 +88,11 @@ public class Application extends Controller {
     
     public static void schedule(){
     	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
-    	List<Track> tracks = Track.findAll();
-		List<TalkTheme> themes = TalkTheme.findUsedThemes();
+		List<Track> tracks = Track.findAll();
 		Collections.sort(tracks);
+		List<TalkTheme> themes = TalkTheme.findUsedThemes();
+		List<TalkType> types = TalkType.findUsedTypes();
+		Collections.sort(types);
 		Level[] levels = Level.values();
 		Language[] languages = Language.values();
     	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
@@ -103,7 +105,7 @@ public class Application extends Controller {
 		boolean displayFullSchedule = displayFullSchedule();
 		boolean displayNewSpeakers = displayNewSpeakers();
 
-    	render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, levels);
+    	render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, types, levels);
     }
 
     public static void scheduleSuperSecret(){
@@ -218,18 +220,20 @@ public class Application extends Controller {
     	render(orga);
 	}
 
-	public static void likeTalk(Long id){
+	public static Integer likeTalk(Long id){
 		Talk talk = Talk.findById(id);
 		if(talk != null){
 			talk.like();
 		}
+		return talk.nbLikes;
 	}
 
-	public static void unlikeTalk(Long id){
+	public static Integer unlikeTalk(Long id){
 		Talk talk = Talk.findById(id);
 		if(talk != null){
 			talk.unlike();
 		}
+		return talk.nbLikes;
 	}
 
 	private static SponsorsToDisplay getSponsorsToDisplay() {
