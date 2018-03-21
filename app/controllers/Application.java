@@ -225,7 +225,11 @@ public class Application extends Controller {
 		if(talk != null){
 			talk.like();
 		}
-		return talk.nbLikes;
+		if(Security.connected() != null){
+			// Return nb of likes only for connected user (i.e. admin)
+			return talk.nbLikes;
+		}
+		return null;
 	}
 
 	public static Integer unlikeTalk(Long id){
@@ -233,7 +237,11 @@ public class Application extends Controller {
 		if(talk != null){
 			talk.unlike();
 		}
-		return talk.nbLikes;
+		if(Security.connected() != null){
+			// Return nb of likes only for connected user (i.e. admin)
+			return talk.nbLikes;
+		}
+		return null;
 	}
 
 	private static SponsorsToDisplay getSponsorsToDisplay() {

@@ -16,7 +16,7 @@
 			#{list items: tracks, as: 'track'}
 				<th class="fullSchedule-track" scope="col">
 					${track.title}
-					#{if user}
+					#{if _user}
 						<br/>
 						<a href="@{Tracks.show(track.id)}">edit</a>
 					#{/if}
@@ -29,7 +29,7 @@
 			<th class="schedule-time fullSchedule-time" scope="row">
 				<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
 				<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
-				#{if user}
+				#{if _user}
 					<br/>
 					<a href="@{Slots.show(slot.id)}">edit</a>
 				#{/if}
@@ -73,7 +73,7 @@
 						
 						#{/else}
 
-						#{if user}
+						#{if _user}
 							<br/>
 							<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
 						#{/if}
@@ -126,12 +126,18 @@
 										#{/list}
 									</ul>
 
-									#{if user}
+									#{if _user}
 										<br/>
 										<a href="@{Talks.show(talk.id)}">edit</a>
 									#{/if}
 
-									<div class="fullSchedule-talk-like js-talksFilter-like" data-talk="${talk.id}" onclick="likeTalk(this,'${talk.id}')"><i class="far fa-heart"></i></div>
+									
+									<div class="fullSchedule-talk-like js-talksFilter-like" data-talk="${talk.id}" onclick="likeTalk(this,'${talk.id}')">
+										#{if _user}
+											<span class="fullSchedule-talk-nbLikes">${talk.nbLikes}</span>
+										#{/if}
+										<i class="far fa-heart"></i>
+									</div>
 								</div>
 							#{/if}
 							#{else}

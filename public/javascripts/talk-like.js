@@ -12,7 +12,6 @@ $(function() {
 			_likeIcon($elem);
 			_addLike(id);
 		}
-		console.log(id, elem);
 	}
 		
 	// initialiez Liked Talk
@@ -48,11 +47,10 @@ $(function() {
 		$.ajax({
 			url: '/like-talk/' + id,
 			type: 'POST',
-			success: function(results) {
-				//console.log('Talk liked')
+			success: function(result) {
+				$('.js-talksFilter-like[data-talk=' + id + '] span').html(result)
 			},
-			error : function(results) {
-				//console.log('Failed to like talk!')
+			error : function(result) {
 			}
 		});
 	}
@@ -72,11 +70,10 @@ $(function() {
 		$.ajax({
 			url: '/unlike-talk/' + id,
 			type: 'POST',
-			success: function(results) {
-				//console.log('Talk unliked')
+			success: function(result) {
+				$('.js-talksFilter-like[data-talk=' + id + '] span').html(result)
 			},
-			error : function(results) {
-				//console.log('Failed to unlike talk!')
+			error : function(result) {
 			}
 		});
 	}
