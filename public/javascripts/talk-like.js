@@ -83,13 +83,16 @@ $(function() {
 	 * (The information is saved in the local storage of the user)
 	 */
 	function _getLikes(){
-		let likes = JSON.parse(localStorage.getItem('RivieraDEV-2018-Likes'));
-		if(!likes){
-			// Initialize value
-			likes = [];
-			_setLikes(likes);
+		if (window.localStorage) {
+			let likes = JSON.parse(localStorage.getItem('RivieraDEV-2018-Likes'));
+			if(!likes){
+				// Initialize value
+				likes = [];
+				_setLikes(likes);
+			}
+			return likes;
 		}
-		return likes;
+		return [];
 	}
 
 	/**
@@ -97,7 +100,9 @@ $(function() {
 	 * @param {array} likes 
 	 */
 	function _setLikes(likes){
-		localStorage.setItem('RivieraDEV-2018-Likes', JSON.stringify(likes));
+		if (window.localStorage) {
+			localStorage.setItem('RivieraDEV-2018-Likes', JSON.stringify(likes));
+		}
 	}
 
 });
