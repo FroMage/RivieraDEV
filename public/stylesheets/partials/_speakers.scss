@@ -13,6 +13,17 @@
             margin-bottom: 2em;
         }
     }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &-item {
+        align-self: flex-start;
+        flex-basis: $avatar-size-regular;
+    }
 }
 
 .speaker {

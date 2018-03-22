@@ -1502,6 +1502,15 @@ a.footer-rs-instagram:active {
 .speakers-previous-subtitle {
   margin-bottom: 2em;
 }
+.speakers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.speakers-item {
+  align-self: flex-start;
+  flex-basis: 150px;
+}
 
 .speaker-talks {
   list-style-type: none;
