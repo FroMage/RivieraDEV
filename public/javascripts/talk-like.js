@@ -3,18 +3,18 @@ $(function() {
 		let $elem = $(elem);
 		let like = $elem.attr('data-like');
 		if(like) {
-			// User want to no more like this talk
+			// The user doesn't want to like this talk anymore
 			_unlikeIcon($elem);
 			_removeLike(id);
 		}
 		else {
-			// User click on Like
+			// The user likes the talk
 			_likeIcon($elem);
 			_addLike(id);
 		}
 	}
 		
-	// initialiez Liked Talk
+	// Initialize Liked Talks
 	window.initLikedTalks = function () {
 		let likes = _getLikes();
 		for (var i = 0; i < likes.length; i++) {
@@ -23,9 +23,8 @@ $(function() {
 	}
 
 	function _likeIcon($elem){
-		let $svg = $elem.find('[data-fa-i2svg]')
-        .toggleClass('far')
-		.toggleClass('fas');
+		let $svg = $elem.find('[data-fa-i2svg]');
+		$svg.attr('data-prefix', 'fas');
 		$elem.attr('data-like', true);
 	}
 
