@@ -1,8 +1,8 @@
 
 <div class="talksFilter">
-    <div class="talksFilter-title">&{'views.application.schedule.filter'} : </div>
     <div class="talksFilter-options">
         <div class="js-talksFilter-themes">
+            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.theme'}</div>
             #{list items: _themes, as: 'theme'}
                 <span onclick="toggleTheme('${theme.theme.slugify()}')" 
                       class="talksFilter-item talk-theme 
@@ -12,6 +12,7 @@
             #{/list}
         </div>
         <div class="js-talksFilter-types">
+            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.types'}</div>
             #{list items: _types, as: 'type'}
                 <span onclick="toggleType('${type.toString().slugify()}')" 
                       class="talksFilter-item talk-type 
@@ -21,6 +22,7 @@
             #{/list}
         </div>
         <div class="js-talksFilter-levels">
+            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.levels'}</div>
             #{list items: _levels, as: 'level'}
                 <span onclick="toggleLevel('${level.code}')" 
                       class="talksFilter-item talk-level 
@@ -30,6 +32,7 @@
             #{/list}
         </div>
         <div class="js-talksFilter-languages">
+            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.languages'}</div>
             #{list items: _languages, as: 'language'}
                 <span onclick="toggleLanguage('${language.toString().slugify()}')" 
                       class="talksFilter-item talk-language 

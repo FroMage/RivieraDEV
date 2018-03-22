@@ -8,26 +8,50 @@
 
     &-blue {
         background-color: $color-blue;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-blue, 7%)
+        }
     }
 
     &-yellow {
         background-color: $color-yellow;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-yellow, 10%)
+        }
     }
 
     &-green {
         background-color: $color-green;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-green, 10%)
+        }
     }
 
     &-purple {
         background-color: $color-purple;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-purple, 10%)
+        }
     }
 
     &-orange {
         background-color: $color-orange;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-orange, 10%)
+        }
     }
 
     &-red {
         background-color: $color-red;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-red, 8%)
+        }
     }
 }
 
@@ -38,6 +62,10 @@
     border-radius: 4px;
     display: inline-block;
     margin: 0 0 0.5em 0.3em;
+
+    .talksFilter-options &:hover, &:focus {
+        background-color: lighten($color-gray, 10%);
+    }
 }
 
 .talk-language {
@@ -48,6 +76,10 @@
     display: inline-block;
     margin: 0 0 0.5em 0.3em;
     font-size: .9em;
+
+    .talksFilter-options &:hover, &:focus {
+        border-color: lighten($color-blue-gray, 20%);
+    }
 }
 
 .talk-type {
@@ -58,6 +90,10 @@
     border-radius: 4px;
     display: inline-block;
     margin: 0 0 0.5em 0.3em;
+
+    .talksFilter-options &:hover, &:focus {
+        background-color: lighten($color-blue-gray, 12%);
+    }
 }
 
 .talkDetails {
