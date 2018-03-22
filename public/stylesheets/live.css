@@ -233,6 +233,11 @@
 .fullSchedule-col-time {
   width: 10%;
 }
+@media (max-width: 767px) {
+  .fullSchedule-col-time {
+    width: 20%;
+  }
+}
 .fullSchedule-col-2tracks {
   width: 45%;
 }
@@ -318,6 +323,10 @@
 th.fullSchedule-time-title {
   border-top: none;
   border-left: none;
+}
+
+.like-explanation {
+  margin: 3rem auto;
 }
 
 .talk-theme {

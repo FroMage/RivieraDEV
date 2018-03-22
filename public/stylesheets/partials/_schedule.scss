@@ -83,6 +83,10 @@
 
     &-col-time {
         width: 10%;
+
+        @media (max-width: $screen-xs-max) {
+            width: 20%;
+        }
     }
 
     &-col-2tracks {
@@ -200,4 +204,8 @@
 th.fullSchedule-time-title {
     border-top: none;
     border-left: none;
+}
+
+.like-explanation {
+    margin: $space-lg auto;
 }

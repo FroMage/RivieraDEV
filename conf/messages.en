@@ -242,6 +242,7 @@ views.application.schedule.level.advanced=Advanced
 views.application.schedule.language.EN=Talk will be in English
 views.application.schedule.language.FR=Talk will be in French
 views.application.schedule.full.talk.unknown=Being finalized
+views.application.schedule.like.explanation=Click on <i class="far fa-heart"></i> to indicate that you intend to attend this talk/workshop, it will help us to organize the rooms 😉
 
 views.application.talks.title=Talks
 

@@ -242,6 +242,7 @@ views.application.schedule.level.advanced=Expert
 views.application.schedule.language.EN=Sujet en anglais
 views.application.schedule.language.FR=Sujet en français
 views.application.schedule.full.talk.unknown=En cours de finalisation
+views.application.schedule.like.explanation=Cliquez sur <i class="far fa-heart"></i> afin d'indiquer que vous comptez assister à ce talk/atelier, cela nous aidera à organiser les salles 😉
 
 views.application.talks.title=Sessions
 
