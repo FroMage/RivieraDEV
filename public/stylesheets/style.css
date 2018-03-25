@@ -1734,13 +1734,31 @@ th.fullSchedule-time-title {
   background-color: #ff7826;
 }
 .talksFilter-options .talk-theme-orange:hover, .talk-theme-orange:focus {
-  background-color: #ff9859;
+  background-color: #ff9e63;
 }
 .talk-theme-red {
   background-color: #CC0000;
 }
 .talksFilter-options .talk-theme-red:hover, .talk-theme-red:focus {
   background-color: #f50000;
+}
+.talk-theme-pink {
+  background-color: #fd5ea7;
+}
+.talksFilter-options .talk-theme-pink:hover, .talk-theme-pink:focus {
+  background-color: #fe90c3;
+}
+.talk-theme-turquoise {
+  background-color: #00bacd;
+}
+.talksFilter-options .talk-theme-turquoise:hover, .talk-theme-turquoise:focus {
+  background-color: #00dff6;
+}
+.talk-theme-brown {
+  background-color: #9e4a17;
+}
+.talksFilter-options .talk-theme-brown:hover, .talk-theme-brown:focus {
+  background-color: #c25b1c;
 }
 
 .talk-level {

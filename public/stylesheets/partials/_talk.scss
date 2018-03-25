@@ -42,7 +42,7 @@
         background-color: $color-orange;
 
         .talksFilter-options &:hover, &:focus {
-            background-color: lighten($color-orange, 10%)
+            background-color: lighten($color-orange, 12%)
         }
     }
 
@@ -51,6 +51,30 @@
 
         .talksFilter-options &:hover, &:focus {
             background-color: lighten($color-red, 8%)
+        }
+    }
+
+    &-pink {
+        background-color: $color-pink;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-pink, 10%)
+        }
+    }
+
+    &-turquoise {
+        background-color: $color-turquoise;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-turquoise, 8%)
+        }
+    }
+
+    &-brown {
+        background-color: $color-brown;
+
+        .talksFilter-options &:hover, &:focus {
+            background-color: lighten($color-brown, 8%)
         }
     }
 }

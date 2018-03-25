@@ -1,12 +1,16 @@
 package models;
 
 public enum TalkThemeColor {
-	Blue	("blue"), 
-	Yellow  ("yellow"),
-	Purple	("purple"), 
-	Green   ("green"), 
-	Orange  ("orange"),
-	Red		("red");
+	Blue		("blue"), 
+	Yellow		("yellow"),
+	Purple		("purple"), 
+	Green		("green"), 
+	Orange		("orange"),
+	Red			("red"),
+	Pink		("pink"),
+	Turquoise	("turquoise"),
+	Brown		("brown"),
+	Grey		("grey");
 
 	private final String code;
 
