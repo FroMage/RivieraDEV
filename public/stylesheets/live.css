@@ -182,6 +182,9 @@
     display: inline;
   }
 }
+.schedule-dayAll {
+  background-color: #bbb;
+}
 .schedule-day1 {
   background-color: rgba(0, 144, 205, 0.8);
 }

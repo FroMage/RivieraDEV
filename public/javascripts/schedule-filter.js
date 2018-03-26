@@ -84,15 +84,22 @@ $(function() {
 	/**
 	 * Show a day and hidde the other days
 	 */
-	window.showDay = function(elem, id) {
+	window.showDay = function(elem, day) {
 		let $dateButton = $(elem);
 		
-		// Show selected day
-		$('.js-schedule-day[data-day=' + id + ']').removeClass('hidden');
-		$dateButton.removeClass('schedule-day-filter--hidden');
+		if(day == 'all'){
+			// Show All days
+			$('.js-schedule-day[data-day]').removeClass('hidden');
+			$('.js-schedule-filterDay[data-day]').removeClass('schedule-day-filter--hidden');
+		}
+		else {
+			// Show selected day
+			$('.js-schedule-day[data-day=' + day + ']').removeClass('hidden');
+			$dateButton.removeClass('schedule-day-filter--hidden');
 
-		// Hide other days
-		$('.js-schedule-day[data-day]').not('[data-day=' + id + ']').addClass('hidden');
-		$('.js-schedule-filterDay[data-day]').not('[data-day=' + id + ']').addClass('schedule-day-filter--hidden');
+			// Hide other days
+			$('.js-schedule-day[data-day]').not('[data-day=' + day + ']').addClass('hidden');
+			$('.js-schedule-filterDay[data-day]').not('[data-day=' + day + ']').addClass('schedule-day-filter--hidden');
+		}
 	}
 });

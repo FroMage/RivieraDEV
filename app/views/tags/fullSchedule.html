@@ -2,15 +2,16 @@
 	&{'views.application.schedule.like.explanation'}
 </div>
 
+<span class="js-schedule-filterDay schedule-day-filter schedule-day fullSchedule-day schedule-dayAll" data-day='all' onclick="showDay(this, 'all')">&{'views.application.schedule.allDays'}</span>
 #{list items: _days, as: 'day'}
-<span class="js-schedule-filterDay schedule-day-filter ${day_index!=1?'schedule-day-filter--hidden':''} schedule-day fullSchedule-day schedule-day${day_index}" data-day='${day_index}' onclick="showDay(this, '${day_index}')">${day.format('EEEE dd MMMM yyyy')}</span>
+<span class="js-schedule-filterDay schedule-day-filter schedule-day fullSchedule-day schedule-day${day_index}" data-day='${day_index}' onclick="showDay(this, '${day_index}')">${day.format('EEEE dd MMMM yyyy')}</span>
 #{/list}
 
 #{list items: _days, as: 'day'}
 
     %{tracks = _tracksPerDays.get(day);}%
 	
-	<div class="js-schedule-day ${day_index!=1?'hidden':''}" data-day='${day_index}'>
+	<div class="js-schedule-day" data-day='${day_index}'>
 		<h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
 		<table class="fullSchedule">
