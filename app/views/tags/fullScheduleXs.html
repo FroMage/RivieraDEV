@@ -1,119 +1,62 @@
 <div class="like-explanation">
 	&{'views.application.schedule.like.explanation'}
 </div>
-	
+
+#{list items: _days, as: 'day'}
+	<div class="schedule-day-filterItem">
+		<span class="js-schedule-filterDay schedule-day-filter ${day_index!=1?'schedule-day-filter--hidden':''} schedule-day fullSchedule-day schedule-day${day_index}" data-day='${day_index}' onclick="showDay(this, '${day_index}')">${day.format('EEEE dd MMMM yyyy')}</span>
+	</div>
+#{/list}
+
 #{list items: _days, as: 'day'}
 
-    %{tracks = _tracksPerDays.get(day);}%
+	%{tracks = _tracksPerDays.get(day);}%
 	
-	<h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
+	<div class="js-schedule-day ${day_index!=1?'hidden':''}" data-day='${day_index}'>
+		<h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
-	<table class="fullSchedule">
+		<table class="fullSchedule">
 
-		<col class="fullSchedule-col-time">
-		<col class="fullSchedule-col-XStracks">
-		
-		#{list items: models.Slot.findPerDay(day), as: 'slot'}
+			<col class="fullSchedule-col-time">
+			<col class="fullSchedule-col-XStracks">
+			
+			#{list items: models.Slot.findPerDay(day), as: 'slot'}
 
 
-			%{allTracksEvent = slot.allTracksEvent}%
-			#{if allTracksEvent } <!-- One talk for all tracks -->
-			<tr>
-				<th class="schedule-time fullSchedule-time" scope="row">
-					<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-					<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
-					#{if _user}
-						<br/>
-						<a href="@{Slots.show(slot.id)}">edit</a>
-					#{/if}
-				</th>
+				%{allTracksEvent = slot.allTracksEvent}%
+				#{if allTracksEvent } <!-- One talk for all tracks -->
+				<tr>
+					<th class="schedule-time fullSchedule-time" scope="row">
+						<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
+						<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
+						#{if _user}
+							<br/>
+							<a href="@{Slots.show(slot.id)}">edit</a>
+						#{/if}
+					</th>
 
-				<td class="js-talksFilter-toFilter fullSchedule-${allTracksEvent.isBreak.code}">
-					#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-						<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
-					#{/if}
-					#{else}
-						#{if !allTracksEvent.isHiddenInTalksPage}
-							<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
-
-							<!--
-							#{if allTracksEvent.theme}
-								<span class="talk-theme talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
-							#{/if}
-
-							#{if allTracksEvent.level}
-								<span class="talk-level">&{'views.application.schedule.level.' + allTracksEvent.level.code}</span>
-							#{/if}
-							-->
-
-							#{if allTracksEvent.speakers.size() > 0}
-								#{if allTracksEvent.speakers}
-									<ul class="fullSchedule-talk-speakers">
-										#{list items: allTracksEvent.speakers, as: 'speaker'}
-											<li>
-												<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
-													${speaker.firstName} ${speaker.lastName}
-												</a>
-											</li>
-										#{/list}
-									</ul>
-								#{/if}
-							#{/if}
+					<td class="js-talksFilter-toFilter fullSchedule-${allTracksEvent.isBreak.code}">
+						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+							<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
 						#{/if}
 						#{else}
-							<span class="fullSchedule-talk-title">${allTracksEvent.title}</span>
-						#{/else}
-					#{/else}
+							#{if !allTracksEvent.isHiddenInTalksPage}
+								<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
 
-					#{if _user}
-						<br/>
-						<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
-					#{/if}
-				</td>
-			</tr>
-			#{/if}
+								<!--
+								#{if allTracksEvent.theme}
+									<span class="talk-theme talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
+								#{/if}
 
-			#{else}
-				#{list items: tracks, as: 'track'}
-					%{talk = slot.getTalkPerTrack(track);}%
-					<tr>
-						<th class="schedule-time fullSchedule-time" scope="row">
-							<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-							<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
-							#{if _user}
-								<br/>
-								<a href="@{Slots.show(slot.id)}">edit</a>
-							#{/if}
-						</th>
-						<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
-							#{if talk}
-								#{if !talk.isHiddenInTalksPage}
-									<div class="talksFilter-item
-									   			js-talksFilter-item
-									            js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
-                                                js-talksFilter-level-${talk.level?.code}
-                                                js-talksFilter-type-${talk.type?.toString()?.slugify()}
-                                                js-talksFilter-language-${talk.language?.toString()?.slugify()}">
-										<span class="fullSchedule-track-title">${track.title}</span>
+								#{if allTracksEvent.level}
+									<span class="talk-level">&{'views.application.schedule.level.' + allTracksEvent.level.code}</span>
+								#{/if}
+								-->
 
-										<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
-
-										#{if talk.theme}
-											<span class="talk-theme talk-theme-${talk.theme.color.code}">${talk.theme}</span>
-										#{/if}
-
-										#{if talk.level}
-											<span class="talk-level">&{'views.application.schedule.level.' + talk.level.code}</span>
-										#{/if}
-										
-										#{if talk.language}
-											<span class="talk-language" aria-label="&{'views.application.schedule.language.' + talk.language}">
-												${talk.language}
-											</span>
-										#{/if}
-									
+								#{if allTracksEvent.speakers.size() > 0}
+									#{if allTracksEvent.speakers}
 										<ul class="fullSchedule-talk-speakers">
-											#{list items: talk.speakers, as: 'speaker'}
+											#{list items: allTracksEvent.speakers, as: 'speaker'}
 												<li>
 													<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
 														${speaker.firstName} ${speaker.lastName}
@@ -121,43 +64,109 @@
 												</li>
 											#{/list}
 										</ul>
-
-										#{if user}
-											<br/>
-											<a href="@{Talks.show(talk.id)}">edit</a>
-										#{/if}
-
-										<div class="fullSchedule-talk-like js-talksFilter-like" data-talk="${talk.id}" onclick="likeTalk(this,'${talk.id}')">
-											#{if _user}
-												<span class="fullSchedule-talk-nbLikes">${talk.nbLikes}</span>
-											#{/if}
-											<i class="far fa-heart"></i>
-										</div>
-									</div>
+									#{/if}
 								#{/if}
-								#{else}
-									<span class="fullSchedule-talk-title">${talk.title}</span>
-								#{/else}
 							#{/if}
-
 							#{else}
-								<!-- <span class="fullSchedule-talk-unknown">&{'views.application.schedule.full.talk.unknown'}</span> -->
+								<span class="fullSchedule-talk-title">${allTracksEvent.title}</span>
+							#{/else}
+						#{/else}
+
+						#{if _user}
+							<br/>
+							<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
+						#{/if}
+					</td>
+				</tr>
+				#{/if}
+
+				#{else}
+					#{list items: tracks, as: 'track'}
+						%{talk = slot.getTalkPerTrack(track);}%
+						<tr>
+							<th class="schedule-time fullSchedule-time" scope="row">
+								<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
+								<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
 								#{if _user}
 									<br/>
-									<a href="@{Talks.blank()}">add talk</a>
+									<a href="@{Slots.show(slot.id)}">edit</a>
 								#{/if}
-							#{/else}
-						</td>
-					</tr>
-				#{/list}
-			#{/else}
+							</th>
+							<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
+								#{if talk}
+									#{if !talk.isHiddenInTalksPage}
+										<div class="talksFilter-item
+													js-talksFilter-item
+													js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
+													js-talksFilter-level-${talk.level?.code}
+													js-talksFilter-type-${talk.type?.toString()?.slugify()}
+													js-talksFilter-language-${talk.language?.toString()?.slugify()}">
+											<span class="fullSchedule-track-title">${track.title}</span>
+
+											<a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
+
+											#{if talk.theme}
+												<span class="talk-theme talk-theme-${talk.theme.color.code}">${talk.theme}</span>
+											#{/if}
+
+											#{if talk.level}
+												<span class="talk-level">&{'views.application.schedule.level.' + talk.level.code}</span>
+											#{/if}
+											
+											#{if talk.language}
+												<span class="talk-language" aria-label="&{'views.application.schedule.language.' + talk.language}">
+													${talk.language}
+												</span>
+											#{/if}
+										
+											<ul class="fullSchedule-talk-speakers">
+												#{list items: talk.speakers, as: 'speaker'}
+													<li>
+														<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
+															${speaker.firstName} ${speaker.lastName}
+														</a>
+													</li>
+												#{/list}
+											</ul>
+
+											#{if user}
+												<br/>
+												<a href="@{Talks.show(talk.id)}">edit</a>
+											#{/if}
+
+											<div class="fullSchedule-talk-like js-talksFilter-like" data-talk="${talk.id}" onclick="likeTalk(this,'${talk.id}')">
+												#{if _user}
+													<span class="fullSchedule-talk-nbLikes">${talk.nbLikes}</span>
+												#{/if}
+												<i class="far fa-heart"></i>
+											</div>
+										</div>
+									#{/if}
+									#{else}
+										<span class="fullSchedule-talk-title">${talk.title}</span>
+									#{/else}
+								#{/if}
+
+								#{else}
+									<!-- <span class="fullSchedule-talk-unknown">&{'views.application.schedule.full.talk.unknown'}</span> -->
+									#{if _user}
+										<br/>
+										<a href="@{Talks.blank()}">add talk</a>
+									#{/if}
+								#{/else}
+							</td>
+						</tr>
+					#{/list}
+				#{/else}
+			
+			#{/list}
+			#{if _user}
+				<tr>
+					<td><a href="@{Slots.blank()}">add slot</a></td>
+				</tr>
+			#{/if}
+			
+		</table>
 		
-		#{/list}
-		#{if _user}
-			<tr>
-				<td><a href="@{Slots.blank()}">add slot</a></td>
-			</tr>
-		#{/if}
-		
-	</table>
+	</div>
 #{/list}

@@ -168,6 +168,20 @@
   color: #fff;
   line-height: 1.5em;
 }
+.schedule-day-filter {
+  padding: .5rem 1rem;
+  line-height: 3.5rem;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+}
+.schedule-day-filter--hidden {
+  opacity: .6;
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  .schedule-day-filterItem {
+    display: inline;
+  }
+}
 .schedule-day1 {
   background-color: rgba(0, 144, 205, 0.8);
 }
@@ -219,6 +233,7 @@
 }
 
 .fullSchedule {
+  margin: 2rem 0;
   width: 100%;
   table-layout: fixed;
 }

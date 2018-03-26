@@ -4,6 +4,24 @@
         @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
         color: #fff;
         line-height: 1.5em;
+
+        &-filter {
+            padding: .5rem 1rem;
+            line-height: 3.5rem;
+            cursor: pointer;
+            transition: opacity .2s ease-in-out;
+
+            &--hidden {
+                opacity: .6;
+            }
+        }
+
+        @media (max-width: $screen-xs-max) and (orientation: landscape) {
+            &-filterItem {
+                display: inline;
+            }
+        }
+
     }
 
     &-day1 {
@@ -67,6 +85,7 @@
 }
 
 .fullSchedule {
+    margin: 2rem 0;
     width: 100%;
     table-layout: fixed;
 

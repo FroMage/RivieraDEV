@@ -80,4 +80,19 @@ $(function() {
 			elem.removeAttribute(attrName);
 		}
 	}
+
+	/**
+	 * Show a day and hidde the other days
+	 */
+	window.showDay = function(elem, id) {
+		let $dateButton = $(elem);
+		
+		// Show selected day
+		$('.js-schedule-day[data-day=' + id + ']').removeClass('hidden');
+		$dateButton.removeClass('schedule-day-filter--hidden');
+
+		// Hide other days
+		$('.js-schedule-day[data-day]').not('[data-day=' + id + ']').addClass('hidden');
+		$('.js-schedule-filterDay[data-day]').not('[data-day=' + id + ']').addClass('schedule-day-filter--hidden');
+	}
 });
