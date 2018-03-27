@@ -82,6 +82,26 @@ $(function() {
 	}
 
 	/**
+	 * Reset all filters
+	 */
+	window.resetFilters = function () {
+		let filters = ['language', 'type', 'theme', 'level'];
+		for (var i = 0; i < filters.length; i++) {
+			resetFilter(filters[i])
+		}
+	}
+
+	/**
+	 * Reset a filter
+	 * @param {string} filterName 
+	 */
+	window.resetFilter = function (filterName) {
+		if(filterName){
+			$('[data-filter-' + filterName + ']').removeAttr('data-filter-' + filterName);
+		}
+	}
+
+	/**
 	 * Show a day and hidde the other days
 	 */
 	window.showDay = function(elem, day) {

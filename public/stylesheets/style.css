@@ -1896,6 +1896,7 @@ th.fullSchedule-time-title {
   }
 }
 .talksFilter {
+  position: relative;
   margin-top: 20px;
   padding: 10px 15px;
   background-color: #eee;
@@ -1913,6 +1914,24 @@ th.fullSchedule-time-title {
   transition: all 0.3s;
   margin-left: 0;
   margin-right: 0;
+}
+.talksFilter-reset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #d5d5d5;
+  padding: 0 0.4em;
+  margin: .5rem;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 0.5em;
+}
+.talksFilter-reset:hover, .talksFilter-reset:focus {
+  background-color: #bbb;
+}
+.talksFilter-reset--icon {
+  margin-right: .5rem;
 }
 
 .talksFilter-options .talksFilter-item {

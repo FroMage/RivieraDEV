@@ -232,6 +232,7 @@ views.application.schedule.unavailable.talks=Découvrez les sessions
 views.application.schedule.unavailable.intro=Voici comment seront organisées les journées :
 views.application.schedule.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que le programme détaillé est disponible.
 views.application.schedule.filter=Filtrer
+views.application.schedule.filter.reset=Réinitialiser
 views.application.schedule.filter.theme=Thème
 views.application.schedule.filter.types=Format
 views.application.schedule.filter.levels=Niveau

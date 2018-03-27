@@ -1,6 +1,9 @@
 
 <div class="talksFilter">
     <div class="talksFilter-options">
+        <span class="talksFilter-reset" onclick="resetFilters()">
+            <i class="fas fa-undo-alt talksFilter-reset--icon"></i>&{'views.application.schedule.filter.reset'}
+        </span>
         <div class="js-talksFilter-themes">
             <div class="talksFilter-subtitle">&{'views.application.schedule.filter.theme'}</div>
             #{list items: _themes, as: 'theme'}
