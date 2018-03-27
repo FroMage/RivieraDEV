@@ -1,49 +1,50 @@
-
-<div class="talksFilter">
-    <div class="talksFilter-options">
-        <span class="talksFilter-reset" onclick="resetFilters()">
-            <i class="fas fa-undo-alt talksFilter-reset--icon"></i>&{'views.application.schedule.filter.reset'}
-        </span>
-        <div class="js-talksFilter-themes">
-            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.theme'}</div>
-            #{list items: _themes, as: 'theme'}
-                <span onclick="toggleTheme('${theme.theme.slugify()}')" 
-                      class="talksFilter-item talk-theme 
-                             js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()} talk-theme-${theme.color.code}">
-                             ${theme}
-                </span>
-            #{/list}
-        </div>
-        <div class="js-talksFilter-types">
-            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.types'}</div>
-            #{list items: _types, as: 'type'}
-                <span onclick="toggleType('${type.toString().slugify()}')" 
-                      class="talksFilter-item talk-type 
-                             js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}">
-                      ${type}
-                </span>
-            #{/list}
-        </div>
-        <div class="js-talksFilter-levels">
-            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.levels'}</div>
-            #{list items: _levels, as: 'level'}
-                <span onclick="toggleLevel('${level.code}')" 
-                      class="talksFilter-item talk-level 
-                             js-talksFilter-item js-talksFilter-level-${level.code}">
-                      &{'views.application.schedule.level.' + level.code}
-                </span>
-            #{/list}
-        </div>
-        <div class="js-talksFilter-languages">
-            <div class="talksFilter-subtitle">&{'views.application.schedule.filter.languages'}</div>
-            #{list items: _languages, as: 'language'}
-                <span onclick="toggleLanguage('${language.toString().slugify()}')" 
-                      class="talksFilter-item talk-language 
-                             js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}">
-                      #{language language: language/}
-                </span>
-            #{/list}
+<div class="talksFilter-collapse">
+    <a class="talksFilter-buttonCollapse" data-toggle="collapse" href="#collapseFilter"><i class="fas fa-chevron-right"></i>&{'views.application.schedule.filter'}</a>
+    <div id="collapseFilter" class="talksFilter panel-collapse collapse">
+        <div class="talksFilter-options">
+            <span class="talksFilter-reset" onclick="resetFilters()">
+                <i class="fas fa-undo-alt talksFilter-reset--icon"></i>&{'views.application.schedule.filter.reset'}
+            </span>
+            <div class="js-talksFilter-themes">
+                <div class="talksFilter-subtitle">&{'views.application.schedule.filter.theme'}</div>
+                #{list items: _themes, as: 'theme'}
+                    <span onclick="toggleTheme('${theme.theme.slugify()}')" 
+                        class="talksFilter-item talk-theme 
+                                js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()} talk-theme-${theme.color.code}">
+                                ${theme}
+                    </span>
+                #{/list}
+            </div>
+            <div class="js-talksFilter-types">
+                <div class="talksFilter-subtitle">&{'views.application.schedule.filter.types'}</div>
+                #{list items: _types, as: 'type'}
+                    <span onclick="toggleType('${type.toString().slugify()}')" 
+                        class="talksFilter-item talk-type 
+                                js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}">
+                        ${type}
+                    </span>
+                #{/list}
+            </div>
+            <div class="js-talksFilter-levels">
+                <div class="talksFilter-subtitle">&{'views.application.schedule.filter.levels'}</div>
+                #{list items: _levels, as: 'level'}
+                    <span onclick="toggleLevel('${level.code}')" 
+                        class="talksFilter-item talk-level 
+                                js-talksFilter-item js-talksFilter-level-${level.code}">
+                        &{'views.application.schedule.level.' + level.code}
+                    </span>
+                #{/list}
+            </div>
+            <div class="js-talksFilter-languages">
+                <div class="talksFilter-subtitle">&{'views.application.schedule.filter.languages'}</div>
+                #{list items: _languages, as: 'language'}
+                    <span onclick="toggleLanguage('${language.toString().slugify()}')" 
+                        class="talksFilter-item talk-language 
+                                js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}">
+                        #{language language: language/}
+                    </span>
+                #{/list}
+            </div>
         </div>
     </div>
 </div>
-

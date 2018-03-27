@@ -1714,7 +1714,7 @@ th.fullSchedule-time-title {
 }
 
 .like-explanation {
-  margin: 3rem auto;
+  margin: 1rem auto 3rem;
 }
 
 .talk-theme {
@@ -1896,10 +1896,34 @@ th.fullSchedule-time-title {
   }
 }
 .talksFilter {
-  position: relative;
-  margin-top: 20px;
-  padding: 10px 15px;
   background-color: #eee;
+}
+.talksFilter-collapse {
+  position: relative;
+}
+.talksFilter-buttonCollapse {
+  text-transform: uppercase;
+  background-color: #eee;
+  padding: .4rem 1rem;
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+.talksFilter-buttonCollapse:hover, .talksFilter-buttonCollapse:focus, .talksFilter-buttonCollapse:active {
+  text-decoration: none;
+}
+.talksFilter-buttonCollapse:hover svg, .talksFilter-buttonCollapse:focus svg, .talksFilter-buttonCollapse:active svg {
+  margin-left: .2rem;
+  margin-right: .3rem;
+}
+.talksFilter-buttonCollapse svg {
+  margin-right: .5rem;
+  transition: all .2s linear;
+}
+.talksFilter-buttonCollapse[aria-expanded=true] svg {
+  margin-left: 0;
+  margin-right: .5rem;
+  transform: rotate(90deg);
 }
 .talksFilter-title {
   display: inline-block;
@@ -1909,13 +1933,18 @@ th.fullSchedule-time-title {
 }
 .talksFilter-options {
   display: inline-block;
+  padding: 10px 15px;
 }
 .talksFilter-item {
   transition: all 0.3s;
   margin-left: 0;
   margin-right: 0;
 }
+.talksFilter.collapse.in .talksFilter-reset {
+  display: block;
+}
 .talksFilter-reset {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;

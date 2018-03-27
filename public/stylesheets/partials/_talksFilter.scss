@@ -1,8 +1,40 @@
 .talksFilter {
-    position: relative;
-    margin-top: 20px;
-    padding: 10px 15px;
     background-color: $color-gray-ultralight;
+
+    &-collapse {
+        position: relative;
+    }
+
+    &-buttonCollapse {
+        text-transform: uppercase;
+        background-color: $color-gray-ultralight;
+        padding: .4rem 1rem;
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+        }
+
+        &:hover svg, &:focus svg, &:active svg {
+            margin-left: .2rem;
+            margin-right: .3rem;
+        }
+
+        & svg {
+            margin-right: .5rem;
+            transition: all .2s linear;
+        }
+
+        &[aria-expanded=true]{
+            & svg {
+                margin-left: 0;
+                margin-right: .5rem;
+                transform: rotate(90deg);
+            }
+        }
+    }
 
     &-title {
         display: inline-block;
@@ -13,6 +45,7 @@
 
     &-options {
         display: inline-block;
+        padding: 10px 15px;
     }
 
     &-item {
@@ -21,7 +54,12 @@
         margin-right: 0;
     }
 
+    &.collapse.in &-reset{
+        display: block;
+    }
+
     &-reset {
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
