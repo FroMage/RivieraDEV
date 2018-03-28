@@ -29,18 +29,28 @@
 		</div>
 	</div>
 
-	<h2 class="title" style="margin-bottom: 1em;">&{'views.application.judcon.speakers'}</h2>
+	#{if talks}
+	<h2 class="title" style="margin-bottom: 1em;">&{'views.application.talks.title'}</h2>
 
-	#{if user}
-	<div class="row">
-		<div class="text-center">
-			<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
-		</div>
+    <div class="talks js-talksFilter-toFilter">
+
+        #{list items: talks, as: 'talk'}
+
+            #{if talk.isBreak == models.BreakType.NotABreak}
+
+                <div class="row talkDetails talkDetails-all talksFilter-item
+                            js-talksFilter-item 
+                            js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
+                            js-talksFilter-level-${talk.level?.code}
+                            js-talksFilter-type-${talk.type?.toString()?.slugify()}
+                            js-talksFilter-language-${talk.language?.toString()?.slugify()}">
+                    #{talk talk: talk, displayFullSchedule: displayFullSchedule, user: user/}
+                </div> <!-- ./row -->
+
+            #{/if}
+
+        #{/list}
 	</div>
 	#{/if}
-
-	<div class="container speakers">
-		#{speakers speakers: speakers/}
-	</div>
 
 </div>

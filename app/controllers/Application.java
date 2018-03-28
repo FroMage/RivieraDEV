@@ -159,8 +159,12 @@ public class Application extends Controller {
     }
 
     public static void judcon(){
-    	List<Speaker> speakers = Speaker.find("isJUDConSpeaker = true ORDER BY lastName, firstName").fetch();
-    	render(speakers);
+		List<Speaker> speakers = Speaker.find("isJUDConSpeaker = true ORDER BY lastName, firstName").fetch();
+
+    	List<Talk> talks = Talk.find("isJUDCon = true AND isHiddenInTalksPage = false").fetch();
+		Collections.sort(talks);
+
+    	render(speakers, talks);
     }
 
     public static void sponsors() {

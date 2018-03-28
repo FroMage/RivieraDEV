@@ -49,6 +49,8 @@ public class Talk extends Model implements Comparable<Talk> {
 	@Enumerated(EnumType.STRING)
 	public BreakType isBreak;
 
+	public boolean isJUDCon;
+
 	@Required
 	@Enumerated(EnumType.STRING)
 	public Language language;
