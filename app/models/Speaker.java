@@ -38,8 +38,6 @@ public class Speaker extends Model {
 	/** Est-ce que ce speaker mérite d'être sur la page d'accueil ? */
 	public boolean star;
 
-	public boolean isJUDConSpeaker;
-
 	@ManyToMany(mappedBy = "speakers")
 	public List<Talk> talks = new ArrayList<Talk>();
 	

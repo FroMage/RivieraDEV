@@ -19,6 +19,8 @@ public class Track extends Model implements Comparable<Track>{
 	@MaxSize(1)
 	public int position;
 
+	public boolean isJUDCon;
+	
 	@OneToMany(mappedBy = "track")
 	public List<Talk> talks = new ArrayList<Talk>();
 	
