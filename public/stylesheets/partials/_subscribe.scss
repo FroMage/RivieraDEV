@@ -1,0 +1,128 @@
+
+$pass-width-main: 25rem;
+$pass-width-description: 45rem;
+
+$pass-bg-color: #0a7db1;
+
+.pass {
+  margin: 2rem auto;
+  display: flex;
+  width: $pass-width-main + $pass-width-description;
+  
+  @media (max-width: $screen-xs-max) {
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  &-mainContainer {
+    text-align: center;
+    width: $pass-width-main;
+    background-color: $pass-bg-color;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: .7rem;
+    border-right: 2px dashed $color-white;
+    position: relative;
+    
+    @media (max-width: $screen-xs-max) {
+      width:  auto;
+      border-right: none;
+      border-bottom: 2px dashed $color-white;
+    }
+    
+    &::before,
+    &::after {
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      background-color: $color-white;
+      border-radius: 50%;
+      position: absolute;
+      right: -1rem;
+    }
+    
+    &::before {
+      top: -1rem;
+      
+      @media (max-width: $screen-xs-max) {
+        top: auto;
+        bottom: -1rem;
+        left: -1rem;
+      }
+    }
+    &::after {
+      bottom: -1rem;
+    }
+  }
+  
+  &-pass {
+    font-weight: 300;
+    font-size: $font-md;
+  }
+  
+  &-name {
+    font-size: $font-xxl;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $color-yellow;
+  }
+  
+  &-days {
+    font-weight: 300;
+    font-size: $font-xs;
+  }
+  
+  &-price {
+    font-size: $font-xxxl;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-yellow;
+  }
+  
+  &-studentPrice {
+    font-size: $font-xs;
+  }
+  
+  &-descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: $pass-width-description;
+    padding: $space-md;
+    background-color: $pass-bg-color;
+    color: $color-white;
+    border-radius: .7rem;
+    
+    @media (max-width: $screen-xs-max) {
+      width: auto; 
+    }
+  }
+  
+  &-description {
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 $space-md;
+    font-weight: 300;
+    font-size: $font-sm;
+  }
+  
+  &-descriptionItem {
+    margin-left: $font-lg;
+  }
+  
+  &-check {
+      position: absolute;
+      left: 0;
+    height: $font-lg;
+    width: $font-lg;
+  }
+  
+  &-buy {
+    margin: $space-sm 0 0 0;
+    align-self: center;
+  }
+}

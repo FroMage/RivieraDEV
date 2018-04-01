@@ -37,6 +37,7 @@ body {
   border: none;
   border-radius: 0;
   text-decoration: none;
+  color: #0090CD;
   background-color: #fff;
   -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -64,6 +65,7 @@ body {
 .button.btn-primary,
 .button-active.btn-primary {
   background-color: #0090CD;
+  color: #fff;
 }
 .button.btn-primary:hover, .button.btn-primary:active, .button.btn-primary:focus,
 .button-active.btn-primary:hover,
@@ -80,6 +82,10 @@ body {
   cursor: default;
   background-color: #777;
   color: #ddd;
+}
+
+.button-small {
+  width: 12rem;
 }
 
 .button-large {
@@ -2023,4 +2029,116 @@ th.fullSchedule-time-title {
   .judcon-intro-quote:after {
     display: none;
   }
+}
+.pass {
+  margin: 2rem auto;
+  display: flex;
+  width: 70rem;
+}
+@media (max-width: 767px) {
+  .pass {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+.pass-mainContainer {
+  text-align: center;
+  width: 25rem;
+  background-color: #0a7db1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: .7rem;
+  border-right: 2px dashed #fff;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .pass-mainContainer {
+    width: auto;
+    border-right: none;
+    border-bottom: 2px dashed #fff;
+  }
+}
+.pass-mainContainer::before, .pass-mainContainer::after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: -1rem;
+}
+.pass-mainContainer::before {
+  top: -1rem;
+}
+@media (max-width: 767px) {
+  .pass-mainContainer::before {
+    top: auto;
+    bottom: -1rem;
+    left: -1rem;
+  }
+}
+.pass-mainContainer::after {
+  bottom: -1rem;
+}
+.pass-pass {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.pass-name {
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FDB742;
+}
+.pass-days {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+.pass-price {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FDB742;
+}
+.pass-studentPrice {
+  font-size: 1.4rem;
+}
+.pass-descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45rem;
+  padding: 2rem;
+  background-color: #0a7db1;
+  color: #fff;
+  border-radius: .7rem;
+}
+@media (max-width: 767px) {
+  .pass-descriptionContainer {
+    width: auto;
+  }
+}
+.pass-description {
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 2rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.pass-descriptionItem {
+  margin-left: 2rem;
+}
+.pass-check {
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+}
+.pass-buy {
+  margin: 1rem 0 0 0;
+  align-self: center;
 }
