@@ -2033,7 +2033,7 @@ th.fullSchedule-time-title {
 .pass {
   margin: 2rem auto;
   display: flex;
-  width: 70rem;
+  width: 71rem;
 }
 @media (max-width: 767px) {
   .pass {
@@ -2110,7 +2110,7 @@ th.fullSchedule-time-title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 45rem;
+  width: 46rem;
   padding: 2rem;
   background-color: #0a7db1;
   color: #fff;
