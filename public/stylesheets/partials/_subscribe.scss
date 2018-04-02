@@ -1,4 +1,4 @@
-
+$pass-width-illustration: 20rem;
 $pass-width-main: 25rem;
 $pass-width-description: 46rem;
 
@@ -7,11 +7,25 @@ $pass-bg-color: #0a7db1;
 .pass {
   margin: 2rem auto;
   display: flex;
-  width: $pass-width-main + $pass-width-description;
-  
+  width: $pass-width-main + $pass-width-description + $pass-width-illustration + $space-md;
+
+  @media (max-width: $screen-lg-min) {
+    width: $pass-width-main + $pass-width-description;
+  }
+
   @media (max-width: $screen-xs-max) {
     flex-direction: column;
     width: 90%;
+  }
+  
+  &-illustration {
+    width: $pass-width-illustration;
+    height: $pass-width-illustration;
+    margin-left: $space-md;
+
+    @media (max-width: $screen-lg-min) {
+      display: none;
+    }
   }
   
   &-mainContainer {
@@ -67,7 +81,7 @@ $pass-bg-color: #0a7db1;
     font-size: $font-xxl;
     font-weight: 800;
     text-transform: uppercase;
-    color: $color-yellow;
+    color: $color-yellow-light;
   }
   
   &-days {
@@ -79,7 +93,7 @@ $pass-bg-color: #0a7db1;
     font-size: $font-xxxl;
     font-weight: 600;
     text-transform: uppercase;
-    color: $color-yellow;
+    color: $color-yellow-light;
   }
   
   &-studentPrice {

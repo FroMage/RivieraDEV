@@ -2033,12 +2033,27 @@ th.fullSchedule-time-title {
 .pass {
   margin: 2rem auto;
   display: flex;
-  width: 71rem;
+  width: 93rem;
+}
+@media (max-width: 1200px) {
+  .pass {
+    width: 71rem;
+  }
 }
 @media (max-width: 767px) {
   .pass {
     flex-direction: column;
     width: 90%;
+  }
+}
+.pass-illustration {
+  width: 20rem;
+  height: 20rem;
+  margin-left: 2rem;
+}
+@media (max-width: 1200px) {
+  .pass-illustration {
+    display: none;
   }
 }
 .pass-mainContainer {
@@ -2091,7 +2106,7 @@ th.fullSchedule-time-title {
   font-size: 3.2rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #FDB742;
+  color: #fbc02c;
 }
 .pass-days {
   font-weight: 300;
@@ -2101,7 +2116,7 @@ th.fullSchedule-time-title {
   font-size: 4rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #FDB742;
+  color: #fbc02c;
 }
 .pass-studentPrice {
   font-size: 1.4rem;
