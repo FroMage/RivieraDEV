@@ -91,6 +91,7 @@ views.application.subscribe.unavailable=Les inscriptions ne sont pas encore ouve
 views.application.subscribe.subscribe=Soyez dans les premiers à connaître le programme et à acheter votre billet.
 views.application.subscribe.pass.pass=Pass
 views.application.subscribe.pass.buy=Acheter
+views.application.subscribe.pass.saleover=Vente terminée
 views.application.subscribe.pass.deepdive.name=Deep Dive
 views.application.subscribe.pass.deepdive.days=1 jour : 16 mai 2018
 views.application.subscribe.pass.deepdive.price=50€

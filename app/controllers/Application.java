@@ -83,7 +83,9 @@ public class Application extends Controller {
     }
 
     public static void subscribe() {
-        render();
+		String ticketingUrl = getTicketingUrl();
+		boolean ticketingIsOpen = ticketingIsOpen();
+        render(ticketingUrl, ticketingIsOpen);
     }
     
     public static void schedule(){
@@ -316,6 +318,23 @@ public class Application extends Controller {
 		return config != null ? config.value : "";
     }
 
+	/**
+	 * Retourne lUrl de la page où on peut acheter les billets.
+	 */
+    private static String getTicketingUrl(){
+        Configuration config = Configuration.find("key",ConfigurationKey.TICKETING_URL).first();
+		return config != null ? config.value : "";
+	}
+	
+	/**
+	 * Retourne true s'il est possible d'acheter des billets. 
+	 * (utile pour enlever l'accès à la page de vente des billets)
+	 */
+    private static boolean ticketingIsOpen(){
+        Configuration config = Configuration.find("key",ConfigurationKey.TICKETING_OPEN).first();
+		return config != null && config.value.equals("true") ;
+	}
+	
 	private static class SponsorsToDisplay {
 		private Map<SponsorShip, List<Sponsor>> sponsors;
 		private List<Sponsor> sponsorsPreviousYears;

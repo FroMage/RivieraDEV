@@ -91,6 +91,7 @@ views.application.subscribe.unavailable=Registration is not open yet.
 views.application.subscribe.subscribe=Subscribe to the newsletter to be notified when registration opens.
 views.application.subscribe.pass.pass=Pass
 views.application.subscribe.pass.buy=Buy
+views.application.subscribe.pass.saleover=The sale is over
 views.application.subscribe.pass.deepdive.name=Deep Dive
 views.application.subscribe.pass.deepdive.days=1 day : 16th May, 2018
 views.application.subscribe.pass.deepdive.price=50€

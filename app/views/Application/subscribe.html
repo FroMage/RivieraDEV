@@ -64,9 +64,14 @@
 						&{'views.application.subscribe.pass.include.buffet'}
 					</li>
 				</ul>
-				<a class="pass-buy btn button button-small" href="https://www.billetweb.fr/riviera-dev-2018" target="_blank">
-					&{'views.application.subscribe.pass.buy'}
-				</a>
+				#{if ticketingIsOpen}
+					<a class="pass-buy btn button button-small" href="${ticketingUrl}" target="_blank">
+						&{'views.application.subscribe.pass.buy'}
+					</a>
+				#{/if}
+				#{else}
+					<div class="pass-saleover">&{'views.application.subscribe.pass.saleover'}</div>
+				#{/else}
 			</div>
 		</div>
 
@@ -107,9 +112,14 @@
 						&{'views.application.subscribe.pass.include.party'}
 					</li>
 				</ul>
-				<a class="pass-buy btn button button-small" href="https://www.billetweb.fr/riviera-dev-2018" target="_blank">
-					&{'views.application.subscribe.pass.buy'}
-				</a>
+				#{if ticketingIsOpen}
+					<a class="pass-buy btn button button-small" href="${ticketingUrl}" target="_blank">
+						&{'views.application.subscribe.pass.buy'}
+					</a>
+				#{/if}
+				#{else}
+					<div class="pass-saleover">&{'views.application.subscribe.pass.saleover'}</div>
+				#{/else}
 			</div>
 		</div>
 
@@ -158,9 +168,14 @@
 						&{'views.application.subscribe.pass.include.party'}
 					</li>
 				</ul>
-				<a class="pass-buy btn button button-small" href="https://www.billetweb.fr/riviera-dev-2018" target="_blank">
-					&{'views.application.subscribe.pass.buy'}
-				</a>
+				#{if ticketingIsOpen}
+					<a class="pass-buy btn button button-small" href="${ticketingUrl}" target="_blank">
+						&{'views.application.subscribe.pass.buy'}
+					</a>
+				#{/if}
+				#{else}
+					<div class="pass-saleover">&{'views.application.subscribe.pass.saleover'}</div>
+				#{/else}
 			</div>
 		</div>
 	</div>

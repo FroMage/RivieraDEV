@@ -125,4 +125,12 @@ $pass-bg-color: #0a7db1;
     margin: $space-sm 0 0 0;
     align-self: center;
   }
+
+  &-saleover {
+    text-align: center;
+    font-style: italic;
+    font-size: $font-sm;
+    font-weight: 300;
+    margin-top: $space-sm;
+  }
 }
