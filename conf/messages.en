@@ -65,6 +65,7 @@ views.application.index.days.conf.conf.desc=50 minute sessions on a range of dif
 views.application.index.days.conf.notjustcoders.title="We're not just coders" workshops
 views.application.index.days.conf.notjustcoders.desc=The signature of Riviera DEV! These are workshops that do not really relate to development but are mostly driven by developers. They will allow you to have fun during these intense days while discovering new horizons.
 views.application.index.schedule=Discover the program
+views.application.index.schedule.short=Program
 views.application.index.address=Address
 views.application.index.access=How to get there
 views.application.index.get-in-touch=Get in touch!

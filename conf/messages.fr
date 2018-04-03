@@ -65,6 +65,7 @@ views.application.index.days.conf.conf.desc=Conférences de 50 minutes sur diver
 views.application.index.days.conf.notjustcoders.title=Ateliers "On n'est pas que des codeurs"
 views.application.index.days.conf.notjustcoders.desc=La marque de fabrique de Riviera DEV ! Il s'agit d'ateliers qui n'ont pas vraiment de rapport avec le développement mais qui sont pour la plupart animés par des développeurs. Ils vous permettront de vous divertir au cours de ces journées intenses tout en découvrant de nouveaux horizons.
 views.application.index.schedule=Découvrez le programme
+views.application.index.schedule.short=Programme
 views.application.index.address=Adresse
 views.application.index.access=Accès
 views.application.index.get-in-touch=Restez au courant&nbsp;!

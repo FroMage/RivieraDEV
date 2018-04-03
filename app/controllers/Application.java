@@ -46,6 +46,8 @@ public class Application extends Controller {
 	}
 
     public static void index() {
+		String promotedPage2 = getPromotedPage2();
+
 		String googleMapApiKey = getGoogleMapApiKey();
 
     	News latestNews = News.latest();
@@ -61,7 +63,7 @@ public class Application extends Controller {
 
 		boolean displayPreviousSpeakers = !displayNewSpeakers();
 
-		render(googleMapApiKey, displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
+		render(promotedPage2, googleMapApiKey, displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
     }
 
     public static void news() {
@@ -308,7 +310,7 @@ public class Application extends Controller {
     }
 
 	/**
-	 * Retourne le nom de la page à mettre en avant sur le site.
+	 * Retourne la page à mettre en avant sur la home page et dans le menu.
 	 * 'CFP'      : La page du CFP
 	 * 'TICKETS'  : La page d'achat de tickets
 	 * 'SPONSORS' : La page pour devenir un sponsor
@@ -318,6 +320,16 @@ public class Application extends Controller {
 		return config != null ? config.value : "";
     }
 
+	/**
+	 * Retourne la 2ème page à mettre en avant sur la home page.
+	 * 'SPONSORS' : La page pour devenir un sponsor
+	 * 'SCHEDULE' : Le programme
+	 */
+    private static String getPromotedPage2(){
+        Configuration config = Configuration.find("key",ConfigurationKey.PROMOTED_PAGE_2).first();
+		return config != null ? config.value : "";
+	}
+	
 	/**
 	 * Retourne lUrl de la page où on peut acheter les billets.
 	 */

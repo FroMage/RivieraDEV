@@ -15,7 +15,16 @@
         #{elseif promotedPage == 'TICKETS'}
             <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
         #{/elseif}
-        <a class="btn btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+        #{elseif promotedPage == 'SPONSORS'}
+            <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+        #{/elseif}
+
+        #{if promotedPage2 == 'SPONSORS'}
+            <a class="btn btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+        #{/if}
+        #{elseif promotedPage2 == 'SCHEDULE'}
+            <a class="btn btn-lg button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
+        #{/elseif}
     </div>
 
     <div id="js-countdown" class="countdown"></div>
