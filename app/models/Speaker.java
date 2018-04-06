@@ -32,7 +32,9 @@ public class Speaker extends Model {
 	@URL
 	public String blogURL;
 	public String twitterAccount;
-	
+
+	public String email;
+
 	public Blob photo;
 	
 	/** Est-ce que ce speaker mérite d'être sur la page d'accueil ? */
