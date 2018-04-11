@@ -86,17 +86,18 @@
 				#{else}
 					#{list items: tracks, as: 'track'}
 						%{talk = slot.getTalkPerTrack(track);}%
-						<tr>
-							<th class="schedule-time fullSchedule-time" scope="row">
-								<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-								<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
-								#{if _user}
-									<br/>
-									<a href="@{Slots.show(slot.id)}">edit</a>
-								#{/if}
-							</th>
-							<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
-								#{if talk}
+						#{if talk}
+							<tr>
+								<th class="schedule-time fullSchedule-time" scope="row">
+									<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
+									<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
+									#{if _user}
+										<br/>
+										<a href="@{Slots.show(slot.id)}">edit</a>
+									#{/if}
+								</th>
+								<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
+								
 									#{if !talk.isHiddenInTalksPage}
 										<div class="talksFilter-item
 													js-talksFilter-item
@@ -148,17 +149,9 @@
 										<br/>
 										<a href="@{Talks.show(talk.id)}">edit</a>
 									#{/if}
-								#{/if}
-
-								#{else}
-									<!-- <span class="fullSchedule-talk-unknown">&{'views.application.schedule.full.talk.unknown'}</span> -->
-									#{if _user}
-										<br/>
-										<a href="@{Talks.blank()}">add talk</a>
-									#{/if}
-								#{/else}
-							</td>
-						</tr>
+								</td>
+							</tr>
+						#{/if}
 					#{/list}
 				#{/else}
 			
