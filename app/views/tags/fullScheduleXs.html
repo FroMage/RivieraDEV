@@ -132,11 +132,6 @@
 												#{/list}
 											</ul>
 
-											#{if user}
-												<br/>
-												<a href="@{Talks.show(talk.id)}">edit</a>
-											#{/if}
-
 											<div class="fullSchedule-talk-like js-talksFilter-like" data-talk="${talk.id}" onclick="likeTalk(this,'${talk.id}')">
 												#{if _user}
 													<span class="fullSchedule-talk-nbLikes">${talk.nbLikes}</span>
@@ -148,6 +143,11 @@
 									#{else}
 										<span class="fullSchedule-talk-title">${talk.title}</span>
 									#{/else}
+
+									#{if _user}
+										<br/>
+										<a href="@{Talks.show(talk.id)}">edit</a>
+									#{/if}
 								#{/if}
 
 								#{else}

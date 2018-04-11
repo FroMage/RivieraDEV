@@ -82,15 +82,15 @@
 								#{/if}
 							
 							#{/else}
-
-							#{if _user}
-								<br/>
-								<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
-							#{/if}
 						#{/if}
 						#{else}
 							<span class="fullSchedule-talk-title">${allTracksEvent.title}</span>
 						#{/else}
+
+						#{if _user}
+							<br/>
+							<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
+						#{/if}
 					</td>
 				#{/if}
 
