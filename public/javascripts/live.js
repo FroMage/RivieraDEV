@@ -51,11 +51,19 @@ function showTalks(){
             markup +=         talkToString(talk);
             markup +=     "</div>";
             markup += "</div>";
+            if (n == 3 && currentTalks.length > 4) {
+                // If there is more than 4 talks, a row is added because there is max 4 talks per row.
+                markup += "</div>";
+                markup += "<div class='row'>"
+            }
         }
         markup += "</div>";
         markup += "</div>";
-    }else{
-    	markup += "<div class='nothing'><img src='/public/images/Sal1.png' width='200px'/>Oh noes!! We haven’ts gots any talks righter now!! :(</div>";
+    } else {
+        markup += "<div class='nothing row'>";
+        markup +=   "<img src='/public/images/Sal1.png' class='nothing-img col-xs-12'/>";
+        markup +=   "<span>Oh noes!! We haven’ts gots any talks righter now!! :(</span>";
+        markup += "</div>";
     }
 
     markup += "<h2 class='schedule-day fullSchedule-day schedule-day1'>Next</h2>";
@@ -73,11 +81,19 @@ function showTalks(){
             markup +=         talkToString(talk);
             markup +=     "</div>";
             markup += "</div>";
+            if (n == 3 && nextTalks.length > 4) {
+                // If there is more than 4 talks, a row is added because there is max 4 talks per row.
+                markup += "</div>";
+                markup += "<div class='row'>"
+            }
         }
         markup += "</div>";
         markup += "</div>";
     }else{
-    	markup += "<div class='nothing'><img src='/public/images/Sal2.png' width='200px'/>Oh noes!! Its a doner, see youse nexts years!! :)</div>";
+        markup += "<div class='nothing row'>";
+        markup +=   "<img src='/public/images/Sal2.png' class='nothing-img col-xs-12'/>";
+        markup +=   "<span>Oh noes!! Its a doner, see youse nexts years!! :)</span>";
+        markup += "</div>";
     }
 
     t.append(markup);

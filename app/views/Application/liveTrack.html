@@ -6,6 +6,9 @@
 
 <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
 <!-- Bootstrap -->
 <!-- Bootstrap has been customized to modify a variable :
          Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
@@ -56,7 +59,7 @@
         var showTrack = "${track}";
 
         var tracks = {
-        "Keynotes [Amphi 339]": [
+        /*"Keynotes [Amphi 339]": [
         #{list keynotes, as: 'talk'}
         {
             "title": "${talk.getTitle().jsonEscape()}",
@@ -81,7 +84,7 @@
             ]
         }#{if !talk_isLast},#{/if}
         #{/list}
-        ], 
+        ], */
         #{list tracks, as: 'track'}
         "${track.title}": [
         #{list track.talks, as: 'talk'}

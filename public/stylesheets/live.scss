@@ -29,6 +29,10 @@
     margin: 0 0.5em 0 0.5em;
 }
 
+.live-talk {
+    margin-bottom: 1em;
+}
+
 .live-currentTrack {
     @include box-shadow(2px 2px 2px rgba(0,0,0,0.2));
     border-right: 2px solid $color-yellow;
@@ -51,6 +55,11 @@
 
 .nothing {
     margin-top: 1.5em;
-    margin-left: 1em;
+    margin-left: 0;
+
+    &-img {
+        max-width: 200px;
+        padding-left: 0;
+    }
 }
 

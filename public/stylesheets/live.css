@@ -549,6 +549,10 @@ th.fullSchedule-time-title {
   margin: 0 0.5em 0 0.5em;
 }
 
+.live-talk {
+  margin-bottom: 1em;
+}
+
 .live-currentTrack {
   -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -573,5 +577,9 @@ th.fullSchedule-time-title {
 
 .nothing {
   margin-top: 1.5em;
-  margin-left: 1em;
+  margin-left: 0;
+}
+.nothing-img {
+  max-width: 200px;
+  padding-left: 0;
 }
