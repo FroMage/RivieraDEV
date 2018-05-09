@@ -8,6 +8,7 @@ GET     /acces                                  Application.access
 GET     /a-propos                               Application.about
 GET     /about                                  Application.about
 GET     /nouvelles                              Application.news
+GET     /program                                Application.schedule
 GET     /programme                              Application.schedule
 GET     /programme-supersecret                  Application.scheduleSuperSecret
 GET     /schedule                               Application.schedule
