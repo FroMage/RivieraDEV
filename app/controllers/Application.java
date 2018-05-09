@@ -91,7 +91,15 @@ public class Application extends Controller {
     }
     
     public static void schedule(){
-    	List<Date> days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
+		boolean displayFullSchedule = displayFullSchedule();
+		boolean displayNewSpeakers = displayNewSpeakers();
+
+		List<Date> days = null;
+		if (!displayFullSchedule) {
+			days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
+		} else  {
+			days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
+		}
 		List<Track> tracks = Track.findAll();
 		Collections.sort(tracks);
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
@@ -105,9 +113,6 @@ public class Application extends Controller {
     		Collections.sort(tracksPerDay);
     		tracksPerDays.put(day, tracksPerDay);
     	}
-
-		boolean displayFullSchedule = displayFullSchedule();
-		boolean displayNewSpeakers = displayNewSpeakers();
 
     	render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, types, levels);
     }
