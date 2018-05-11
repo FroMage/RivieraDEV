@@ -35,6 +35,10 @@ function showTalks(){
     
     var t = jQuery("#target");
     t.empty();
+    if(currentTalks.length + nextTalks.length > 8)
+    	t.addClass("smaller");
+    else
+    	t.removeClass("smaller");
     
     var markup = "<h2 class='schedule-day fullSchedule-day schedule-day1'>Currently</h2>";
 

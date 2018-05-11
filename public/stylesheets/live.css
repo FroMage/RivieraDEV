@@ -583,3 +583,8 @@ th.fullSchedule-time-title {
   max-width: 200px;
   padding-left: 0;
 }
+@media (min-width: 767px) {
+  .smaller {
+    font-size: small;
+  }
+}
