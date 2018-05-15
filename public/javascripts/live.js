@@ -1,5 +1,5 @@
 
-var now = new Date();//new Date('2018-05-17T10:30:00');
+var now = new Date();
 var nowOffset = 0;
 
 function showTalks(){
@@ -35,11 +35,10 @@ function showTalks(){
     
     var t = jQuery("#target");
     t.empty();
-    if(currentTalks.length > 4 || nextTalks.length > 4) {
+    if(currentTalks.length + nextTalks.length > 8)
     	t.addClass("smaller");
-    } else {
-        t.removeClass("smaller");
-    }
+    else
+    	t.removeClass("smaller");
     
     var markup = "<h2 class='schedule-day fullSchedule-day schedule-day1'>Currently</h2>";
 

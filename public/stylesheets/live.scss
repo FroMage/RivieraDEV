@@ -7,12 +7,6 @@
 @import "partials/schedule";
 @import "partials/talk";
 
-@media (min-width: $screen-xs-max) {
-    .smaller {
-      font-size: x-small;
-    }
-  }
-  
 .live-currentDate {
     background-color: $color-purple-transparent;
     @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
@@ -27,25 +21,8 @@
     font-size: 180%;
 }
 
-.schedule-day1 {
-    font-size: 2.5em;
-
-    @media (min-width: $screen-lg-min) {
-        #target:not(.smaller) & {
-            font-size: 3em;
-        }
-    }
-}
-
 .schedule-day2 {
     margin-top: 0;
-    font-size: 1.8em;
-
-    @media (min-width: $screen-lg-min) {
-        #target:not(.smaller) & {
-            font-size: 2.4em;
-        }
-    }
 }
 
 .talk {
@@ -53,7 +30,7 @@
 }
 
 .live-talk {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 .live-currentTrack {
@@ -63,10 +40,8 @@
     border-left: 2px solid $color-yellow;
 }
 
-@media (min-width: $screen-lg-min) {
-    #target:not(.smaller) .talkDetails-title {
-        font-size: 1.8em;
-    }
+.schedule-day {
+    font-size: 2em;
 }
 
 .talkDetails-speakers {
@@ -86,4 +61,10 @@
         max-width: 200px;
         padding-left: 0;
     }
+}
+
+@media (min-width: 767px) {
+  .smaller {
+    font-size: x-small;
+  }
 }
