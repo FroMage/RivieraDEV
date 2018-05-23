@@ -70,7 +70,11 @@ public class Application extends Controller {
     	List<News> news = News.byDate();
     	render(news);
     }
-    
+
+    public static void photos() {
+    	render();
+    }
+
     public static void about() {
     	organisers();
     }

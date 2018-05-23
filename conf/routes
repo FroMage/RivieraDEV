@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /photos                                 Application.photos
 GET     /acces                                  Application.access
 GET     /a-propos                               Application.about
 GET     /about                                  Application.about

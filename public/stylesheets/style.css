@@ -2164,3 +2164,37 @@ th.fullSchedule-time-title {
   font-weight: 300;
   margin-top: 1rem;
 }
+
+.photo .photo-album img {
+	width: 400px;
+}
+
+.photo .photo-year,
+.photo .photo-title
+ {
+    font-weight: bold;
+    font-size: 16pt;
+    position: absolute;
+    padding: 0em 1em;
+    width: 100%;
+    background: rgba(100, 100, 100, 0.8);
+    color: white;
+}
+
+.photo .photo-year {
+    top: 0em;
+}
+
+.photo .photo-title {
+    bottom: 0em;
+}
+
+.photo {
+	display: inline-block;
+	min-height: 300px;
+	margin: 2em;
+}
+
+.photo .photo-container {
+    position: relative;
+}

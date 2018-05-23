@@ -1,6 +1,7 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+views.main.photos=Photos
 views.main.schedule=Programme
 views.main.speakers=Orateurs
 views.main.talks=Sessions
@@ -77,6 +78,8 @@ views.application.index.speakers.link=Découvrez tous les orateurs
 views.application.index.sponsors=Nos Sponsors
 views.application.index.sponsors.tagline=Sans eux rien ne serait possible&nbsp;!
 views.application.index.sponsors.join=Devenez sponsor
+
+views.application.photos.title=Photos
 
 views.application.speakers.title=Orateurs
 views.application.speakers.unavailable=La liste des orateurs n'est pas encore disponible.

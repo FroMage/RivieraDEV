@@ -124,6 +124,9 @@
                     <li class="${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'active' : ''}">
                         <a class="navbar-animated-link" href="@{Application.organisers}">&{'views.main.team'}</a>
                     </li>
+                    <li class="${request.action == 'Application.photos' ? 'active' : ''}">
+                        <a class="navbar-animated-link" href="@{Application.photos}">&{'views.main.photos'}</a>
+                    </li>
                     <li class="dropdown ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'active' : ''}">
                         <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="${promotedPage == 'SPONSORS'? 'label label-primary':'' }">&{'views.main.sponsors'}</span>
