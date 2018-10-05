@@ -13,7 +13,7 @@ random () {
  echo
 }
 
-APP=rivieradev-2018
+APP=rivieradev-2019
 PLAY_USER=rivieradev
 CLUSTER=
 

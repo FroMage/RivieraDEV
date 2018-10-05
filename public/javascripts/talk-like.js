@@ -83,7 +83,7 @@ $(function() {
 	 */
 	function _getLikes(){
 		if (window.localStorage) {
-			let likes = JSON.parse(localStorage.getItem('RivieraDEV-2018-Likes'));
+			let likes = JSON.parse(localStorage.getItem('RivieraDEV-2019-Likes'));
 			if(!likes){
 				// Initialize value
 				likes = [];
@@ -100,7 +100,7 @@ $(function() {
 	 */
 	function _setLikes(likes){
 		if (window.localStorage) {
-			localStorage.setItem('RivieraDEV-2018-Likes', JSON.stringify(likes));
+			localStorage.setItem('RivieraDEV-2019-Likes', JSON.stringify(likes));
 		}
 	}
 

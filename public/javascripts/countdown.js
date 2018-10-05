@@ -1,7 +1,7 @@
 $(function() {
     // TODO aller chercher ces dates dans la BD plutôt qu'en dur dans le JS
-    var begin = '2018/05/16 08:20:00';
-    var end = '2018/05/18 18:00:00';
+    var begin = '2019/05/15 08:20:00';
+    var end = '2019/05/17 18:00:00';
     var now = new Date();
 
     if (now < new Date(begin)) {
