@@ -18,6 +18,7 @@ views.main.language.fr=Français
 views.main.language.en=English
 views.main.contact=Contact&nbsp;:
 views.main.archives=Archives
+views.main.editions.2018=Édition 2018
 views.main.editions.2017=Édition 2017
 views.main.editions.2016=Édition 2016
 views.main.editions.2015=Édition 2015
