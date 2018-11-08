@@ -33,6 +33,7 @@ public class Application extends Controller {
 	private static void setup(){
 		renderArgs.put("user", Security.connected());
 		renderArgs.put("promotedPage", getPromotedPage());
+		renderArgs.put("displayTalks", displayTalks());
 	}
 	
 	public static void fr(String url){
@@ -139,6 +140,10 @@ public class Application extends Controller {
     }
 
     public static void talks(){
+		if(!displayTalks()) {
+			index();
+		}
+
 		List<TalkTheme> themes = TalkTheme.findUsedThemes();
 		Level[] levels = Level.values();
 		List<TalkType> types = TalkType.findUsedTypes();
@@ -356,6 +361,15 @@ public class Application extends Controller {
 		return config != null && config.value.equals("true") ;
 	}
 	
+	/**
+	 * Retourne true si le menu doit permettre d'afficher la page des talks
+	 * (utile pour enlever l'accès à la page tant qu'on n'a pas encore de talks)
+	 */
+    private static boolean displayTalks(){
+        Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_TALKS).first();
+		return config != null && config.value.equals("true") ;
+    }
+
 	private static class SponsorsToDisplay {
 		private Map<SponsorShip, List<Sponsor>> sponsors;
 		private List<Sponsor> sponsorsPreviousYears;
