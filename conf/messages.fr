@@ -150,12 +150,12 @@ views.application.access.bus.from.antibes.4=La durée du trajet est d'environ 30
 views.application.access.bus.from.sophia.1=À partir des communes de la Communauté d'Agglomération Sophia Antipolis&nbsp;: utiliser
 views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" target="_blank">le réseau Envibus</a>.
 views.application.access.bus.from.elsewhere.1=A partir des autres communes&nbsp;: utiliser
-views.application.access.bus.from.elsewhere.2=le réseau départemental de bus TAM (Transports Alpes-Maritimes)
+views.application.access.bus.from.elsewhere.2=le réseau départemental de bus
 views.application.access.bus.from.elsewhere.3=La ligne 230 relie l'aéroport de Nice à Sophia Antipolis.
 views.application.access.plane.title=Accès en avion
 views.application.access.plane.1=L'Aéroport Nice Côte d'Azur
 views.application.access.plane.2=est situé à 20 km de Sophia Antipolis. Du Terminal 2 de l'aéroport, prendre la navette gratuite pour vous rendre au Terminal 1.
-views.application.access.plane.3=Prendre <a href="https://www.departement06.fr/vous-deplacer-en-bus/lignes-et-horaires-3029.html" target="_blank">le Bus 230</a>&nbsp;:
+views.application.access.plane.3=Prendre <a href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html" target="_blank">le Bus 230</a>&nbsp;:
 views.application.access.plane.4=Nice Sophia Express. Attention&nbsp;: la ligne 230 ne passe pas dans l’Aéroport.
 views.application.access.plane.5=La dépose et prise en charge se fait à l'arrêt "Aéroport/Promenade" (face au Terminal 1).
 views.application.access.plane.6=Le trajet dure 45 minutes environ et coûte 1,50€. Descendre à l'arrêt "SKEMA".
@@ -254,7 +254,7 @@ views.application.becomeSponsor.contact-us=Pour devenir sponsor de Riviera DEV, 
 views.application.becomeSponsor.download=Plaquette de sponsoring
 
 views.application.schedule.title=Programme
-views.application.schedule.unavailable=Le programme n'est pas encore disponible, mais vous pouvez consulter <a href="http://2016.rivieradev.fr/programme" target="_blank">le programme de l'édition 2016</a> et <a href="http://2017.rivieradev.fr/programme" target="_blank">celui de 2017</a> pour avoir une idée&nbsp;:)
+views.application.schedule.unavailable=Le programme n'est pas encore disponible, mais vous pouvez consulter <a href="http://2017.rivieradev.fr/programme" target="_blank">le programme de l'édition 2017</a> et <a href="http://2018.rivieradev.fr/programme" target="_blank">celui de 2018</a> pour avoir une idée&nbsp;:)
 views.application.schedule.unavailable.speakers.available=Le programme heure par heure sera annoncé prochainement, en attendant vous pouvez déjà consulter <a href="http://rivieradev.fr/talks">les&nbsp;sessions</a> et <a href="http://rivieradev.fr/speakers">les&nbsp;orateurs</a>.
 views.application.schedule.unavailable.talks=Découvrez les sessions
 views.application.schedule.unavailable.intro=Voici comment seront organisées les journées :

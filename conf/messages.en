@@ -150,12 +150,12 @@ views.application.access.bus.from.antibes.4=The trip duration is approximately 3
 views.application.access.bus.from.sophia.1=From the Sophia Antipolis municipality: use
 views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" target="_blank">the Envibus network</a>.
 views.application.access.bus.from.elsewhere.1=From other cities : use
-views.application.access.bus.from.elsewhere.2=the regional network of TAM busses (Transports Alpes-Maritimes)
+views.application.access.bus.from.elsewhere.2=the regional network of busses
 views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis.
 views.application.access.plane.title=Coming by plane
 views.application.access.plane.1=The Nice Côte d'Azur airport
 views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free shuttle to get to Terminal 1.
-views.application.access.plane.3=Take <a href="https://www.departement06.fr/vous-deplacer-en-bus/lignes-et-horaires-3029.html" target="_blank">the 230 bus</a>:
+views.application.access.plane.3=Take <a href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html" target="_blank">the 230 bus</a>:
 views.application.access.plane.4=Nice Sophia Express. Beware: the 230 line does not stop in the airport.
 views.application.access.plane.5=The bus stop is at "Aéroport/Promenade" (in front of Terminal 1).
 views.application.access.plane.6=The trip duration is 45 minutes approximately and costs 1.50€. Get out at the "SKEMA" stop.
@@ -254,7 +254,7 @@ views.application.becomeSponsor.contact-us=To become a Riviera DEV sponsor, cont
 views.application.becomeSponsor.download=Sponsoring leaflet
 
 views.application.schedule.title=Program
-views.application.schedule.unavailable=The detailed program is not available yet, but you can have a look at the <a href="http://2016.rivieradev.fr/programme" target="_blank">2016&nbsp;session</a> as well as the <a href="http://2017.rivieradev.fr/programme" target="_blank">2017&nbsp;session</a> to get an idea&nbsp;:)
+views.application.schedule.unavailable=The detailed program is not available yet, but you can have a look at the <a href="http://2017.rivieradev.fr/programme" target="_blank">2017&nbsp;session</a> as well as the <a href="http://2018.rivieradev.fr/programme" target="_blank">2018&nbsp;session</a> to get an idea&nbsp;:)
 views.application.schedule.unavailable.speakers.available=The detailed program will be available soon, in the meantime you can already have a look at <a href="http://rivieradev.fr/talks">the&nbsp;talks</a> as well as <a href="http://rivieradev.fr/speakers">the&nbsp;speakers</a>.
 views.application.schedule.unavailable.talks=Discover the talks
 views.application.schedule.unavailable.intro=You can see below how the days will be organized:
