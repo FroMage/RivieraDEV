@@ -1,0 +1,43 @@
+$photo-height: 300px;
+
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $screen-sm-min) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.photo {
+    position: relative;
+    margin-top: $space-md;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: $photo-height;
+
+    @media (min-width: $screen-sm-min) {
+        margin: $space-md;
+    }
+
+    &-year,
+    &-title {
+        font-weight: bold;
+        font-size: $font-md;
+        position: absolute;
+        padding: 0 $space-sm;
+        width: 100%;
+        background-color: $color-black-light;
+        color: $color-white;
+    }
+
+    &-year {
+        top: 0;
+    }
+
+    &-title {
+        bottom: 0;
+    }
+}

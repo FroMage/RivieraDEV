@@ -1496,6 +1496,45 @@ a.footer-rs-instagram:active {
     margin: 2em 0;
   }
 }
+.photos {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .photos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.photo {
+  position: relative;
+  margin-top: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 300px;
+}
+@media (min-width: 768px) {
+  .photo {
+    margin: 2rem;
+  }
+}
+.photo-year, .photo-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  position: absolute;
+  padding: 0 1rem;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
+.photo-year {
+  top: 0;
+}
+.photo-title {
+  bottom: 0;
+}
+
 .speakers {
   text-align: center;
   padding-bottom: 1.5em;
@@ -2163,38 +2202,4 @@ th.fullSchedule-time-title {
   font-size: 1.6rem;
   font-weight: 300;
   margin-top: 1rem;
-}
-
-.photo .photo-album img {
-	width: 400px;
-}
-
-.photo .photo-year,
-.photo .photo-title
- {
-    font-weight: bold;
-    font-size: 16pt;
-    position: absolute;
-    padding: 0em 1em;
-    width: 100%;
-    background: rgba(100, 100, 100, 0.8);
-    color: white;
-}
-
-.photo .photo-year {
-    top: 0em;
-}
-
-.photo .photo-title {
-    bottom: 0em;
-}
-
-.photo {
-	display: inline-block;
-	min-height: 300px;
-	margin: 2em;
-}
-
-.photo .photo-container {
-    position: relative;
 }
