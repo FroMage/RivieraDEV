@@ -1525,7 +1525,7 @@ a.footer-rs-instagram:active {
   position: absolute;
   padding: 0 1rem;
   width: 100%;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
 }
 .photo-year {
