@@ -284,7 +284,7 @@ views.application.talk.day=Day
 views.application.talk.hour=Hour
 
 views.application.cfp.title=Call for papers
-views.application.cfp.opens=<strong>CFP opens:</strong> November 15, 2018
+views.application.cfp.opens=<strong>CFP opens:</strong> November 19, 2018
 views.application.cfp.closes=<strong>CFP closes:</strong> January 31, 2019
 views.application.cfp.announce=<strong>Program announced</strong> early March
 views.application.cfp.conference.format=Conference talks last one hour including questions.

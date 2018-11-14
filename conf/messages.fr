@@ -284,7 +284,7 @@ views.application.talk.day=Jour
 views.application.talk.hour=Heure
 
 views.application.cfp.title=Appel aux orateurs
-views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> 15 novembre 2018
+views.application.cfp.opens=<strong>Ouverture du CFP&nbsp;:</strong> 19 novembre 2018
 views.application.cfp.closes=<strong>Fermeture du CFP&nbsp;:</strong> 31 janvier 2019
 views.application.cfp.announce=<strong>Annonce du programme&nbsp;:</strong> Début mars 2019
 views.application.cfp.conference.format=Chaque talk doit durer 1 heure questions comprises.
