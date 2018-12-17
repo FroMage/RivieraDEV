@@ -44,7 +44,7 @@ views.application.index.stats.sessions=sessions
 views.application.index.stats.workshops=workshops
 views.application.index.intro.1=Riviera DEV, that's <strong>3 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
 views.application.index.intro.2=in the heart of Sophia Antipolis, <strong>the most beautiful European technopole</strong>.
-views.application.index.intro.3=In 2019, Riviera DEV add the new <strong>Snorkeling</strong> format. TODO
+views.application.index.intro.3=In 2019, Riviera DEV add the new <strong>Snorkeling</strong> format: shorter sessions of 25 minutes for lightning talks on frameworks, tools, etc.
 views.application.index.intro.4=Follow <a href="https://twitter.com/RivieraDEV">@RivieraDEV</a> on Twitter for updates.
 views.application.index.pres.goal.title=Goal
 views.application.index.pres.goal.text=Provide a first class tech conference where developers can learn, hack and network.
@@ -64,7 +64,7 @@ views.application.index.days.conf.keynote.title=Keynotes
 views.application.index.days.conf.keynote.desc=20 minute sessions designed to inspire and provoke thoughts.
 views.application.index.days.conf.conf.title=Conference Sessions
 views.application.index.days.conf.snorkeling.title=Snorkeling Sessions
-views.application.index.days.conf.snorkeling.desc=TODO
+views.application.index.days.conf.snorkeling.desc=Shorter sessions of 25 minutes for lightning talks on frameworks, tools, etc.
 views.application.index.days.conf.conf.desc=50 minute sessions on a range of different technologies, practices and methodologies.
 views.application.index.days.conf.notjustcoders.title="We're not just coders" workshops
 views.application.index.days.conf.notjustcoders.desc=The signature of Riviera DEV! These are workshops that do not really relate to development but are mostly driven by developers. They will allow you to have fun during these intense days while discovering new horizons.

@@ -44,7 +44,7 @@ views.application.index.stats.sessions=conférences
 views.application.index.stats.workshops=ateliers
 views.application.index.intro.1=Riviera DEV, c'est <strong>3 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
 views.application.index.intro.2=en plein cœur de Sophia Antipolis, <strong>la plus belle technopole d'Europe</strong>.
-views.application.index.intro.3=En 2019, Riviera DEV rajoute le format <strong>Snorkeling</strong>. TODO ...
+views.application.index.intro.3=En 2019, Riviera DEV rajoute le format <strong>Snorkeling</strong>. Des sessions de 25 minutes pour présenter rapidement des frameworks, des outils, ...
 views.application.index.intro.4=Suivez <a href="https://twitter.com/RivieraDEV">@RivieraDEV</a> sur Twitter pour connaître l'actualité de la conférence.
 views.application.index.pres.goal.title=Objectif
 views.application.index.pres.goal.text=Offrir une conférence technique de qualité où les développeurs peuvent apprendre, pratiquer et élargir leur réseau professionnel.
@@ -64,7 +64,7 @@ views.application.index.days.conf.keynote.title=Keynotes
 views.application.index.days.conf.keynote.desc=Conférences plénières de 20 minutes conçues pour inspirer et inciter à réfléchir.
 views.application.index.days.conf.conf.title=Conférences
 views.application.index.days.conf.snorkeling.title=Snorkeling
-views.application.index.days.conf.snorkeling.desc=TODO
+views.application.index.days.conf.snorkeling.desc=Des sessions de 25 minutes pour présenter rapidement des frameworks, des outils, ...
 views.application.index.days.conf.conf.desc=Conférences de 50 minutes sur diverses technologies, pratiques et méthodologies.
 views.application.index.days.conf.notjustcoders.title=Ateliers "On n'est pas que des codeurs"
 views.application.index.days.conf.notjustcoders.desc=La marque de fabrique de Riviera DEV ! Il s'agit d'ateliers qui n'ont pas vraiment de rapport avec le développement mais qui sont pour la plupart animés par des développeurs. Ils vous permettront de vous divertir au cours de ces journées intenses tout en découvrant de nouveaux horizons.
