@@ -1,87 +1,153 @@
 <!DOCTYPE html>
 
 <html lang="&{play.i18n.Lang.get()}">
-<head>
-    <title>#{get 'title' /} - Riviera DEV</title>
-    <meta name="description" content="&{'views.application.openGraph'}" />
+    <head>
+        <title>#{get 'title' /} - Riviera DEV</title>
+        <meta name="description" content="&{'views.application.openGraph'}" />
 
-    <link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
-    <!--<link rel="shortcut icon" type="image/x-icon" href="@{'/public/images/favicon.ico'}">-->
+        <link
+            rel="icon"
+            type="image/png"
+            href="@{'/public/images/favicon.png'}"
+        />
+        <!--
+            <link rel="shortcut icon" type="image/x-icon" href="@{'/public/images/favicon.ico'}">
+        -->
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@RivieraDEV" />
-    <meta name="twitter:title" content="Riviera DEV" />
-    <meta name="twitter:description" content="&{'views.application.openGraph'}" />
-    <meta name="twitter:image" content="@@{'/public/images/logo_twitter_cards_2018.jpg'}" />
-    <meta name="twitter:image:alt" content="Riviera DEV" />
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@RivieraDEV" />
+        <meta name="twitter:title" content="Riviera DEV" />
+        <meta
+            name="twitter:description"
+            content="&{'views.application.openGraph'}"
+        />
+        <meta
+            name="twitter:image"
+            content="@@{'/public/images/logo_twitter_cards_2018.jpg'}"
+        />
+        <meta name="twitter:image:alt" content="Riviera DEV" />
 
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Riviera DEV" />
-    <meta property="og:description" content="&{'views.application.openGraph'}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="@@{Application.index}" />
-    <meta property="og:image" content="@@{'/public/images/logo_open_graph_2018.jpg'}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Riviera DEV" />
+        <meta
+            property="og:description"
+            content="&{'views.application.openGraph'}"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="@@{Application.index}" />
+        <meta
+            property="og:image"
+            content="@@{'/public/images/logo_open_graph_2018.jpg'}"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-    <!-- Bootstrap -->
-    <!-- Bootstrap has been customized to modify a variable :
-         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
-         (http://getbootstrap.com/customize/)
-    -->
-    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}" >
-    <link rel="stylesheet" href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}" >
+        <!-- Bootstrap -->
+        <!--
+            Bootstrap has been customized to modify a variable :
+            Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
+            (http://getbootstrap.com/customize/)
+        -->
+        <link
+            rel="stylesheet"
+            href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}"
+        />
+        <link
+            rel="stylesheet"
+            href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}"
+        />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Oswald"
+            rel="stylesheet"
+        />
 
-    <!-- Font awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <!-- Font awesome -->
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+        ></script>
 
-    <!-- Custom -->
-    <link rel="stylesheet" href="@{'/public/stylesheets/style.css'}">
+        <!-- Custom -->
+        <link rel="stylesheet" href="@{'/public/stylesheets/style.css'}" />
 
-    #{get 'moreStyles' /}
-</head>
+        #{get 'moreStyles' /}
+    </head>
 
-<body>
+    <body>
+        <div class="loading"></div>
 
-    <div class="loading"></div>
-
-    <nav class="navbar navbar-default navbar-fixed-top navbar-animated js-navbar-animated">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-animated-logos">
-                    <a class="navbar-brand navbar-animated-brand" href="@{Application.index}">
-                        <span class="navbar-rivieradev navbar-animated-logo">
-                            <img src="@{'/public/images/logo_RD_black.svg'}" alt="RivieraDEV">
-                        </span>
-                        <span id="navbar-RedHat" class="navbar-RedHat navbar-animated-logo" href="@{Application.index}">
-                            <span class="navbar-RedHat--featuring">&{'views.main.logo.featuring'}</span><!-- Do not remove this comment
-                            --><img src="@{'/public/images/logos/judcon.png'}" alt="JUDCon2017:Riviera" class="navbar-RedHat--logo">
-                        </span>
-                    </a>
+        <nav
+            class="navbar navbar-default navbar-fixed-top navbar-animated js-navbar-animated"
+        >
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button
+                        type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-animated-logos">
+                        <a
+                            class="navbar-brand navbar-animated-brand"
+                            href="@{Application.index}"
+                        >
+                            <span
+                                class="navbar-rivieradev navbar-animated-logo"
+                            >
+                                <img
+                                    src="@{'/public/images/logo_RD_black.svg'}"
+                                    alt="RivieraDEV"
+                                />
+                            </span>
+                            <span
+                                id="navbar-RedHat"
+                                class="navbar-RedHat navbar-animated-logo"
+                                href="@{Application.index}"
+                            >
+                                <span class="navbar-RedHat--featuring"
+                                    >&{'views.main.logo.featuring'}</span
+                                ><!-- Do not remove this comment
+                                --><img
+                                    src="@{'/public/images/logos/judcon.png'}"
+                                    alt="JUDCon2017:Riviera"
+                                    class="navbar-RedHat--logo"
+                                />
+                            </span>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li class="dropdown ${(request.action == 'Application.schedule' 
+                <!--
+                    Collect the nav links, forms, and other content for toggling
+                -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="bs-example-navbar-collapse-1"
+                >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li
+                            class="dropdown ${(request.action == 'Application.schedule' 
                                         || request.action == 'Application.speakers'
                                         || request.action == 'Application.speaker'
                                         || request.action == 'Application.talks'
@@ -190,111 +256,155 @@
                     <span class="footer-contact-text">&{'views.main.contact'} info@rivieradev.fr</span>
                     <span class="footer-contact-deco">}</span>
                 </div>
-            </div>
 
-            <div class="col-sm-4">
+                <div class="col-sm-4">
+                    <div class="footer-archives">
+                        <h2 class="footer-title">&{'views.main.archives'}</h2>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="//2018.rivieradev.fr"
+                                    >&{'views.main.editions.2018'}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="//2017.rivieradev.fr"
+                                    >&{'views.main.editions.2017'}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="//2016.rivieradev.fr"
+                                    >&{'views.main.editions.2016'}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="//2015.rivieradev.fr"
+                                    >&{'views.main.editions.2015'}</a
+                                >
+                            </li>
+                            <li>
+                                <a href="//2011.rivieradev.fr"
+                                    >&{'views.main.editions.2011'}</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="footer-archives">
-                    <h2 class="footer-title">&{'views.main.archives'}</h2>
-                    <ul class="footer-menu">
-                        <li><a href="//2018.rivieradev.fr">&{'views.main.editions.2018'}</a></li>
-                        <li><a href="//2017.rivieradev.fr">&{'views.main.editions.2017'}</a></li>
-                        <li><a href="//2016.rivieradev.fr">&{'views.main.editions.2016'}</a></li>
-                        <li><a href="//2015.rivieradev.fr">&{'views.main.editions.2015'}</a></li>
-                        <li><a href="//2011.rivieradev.fr">&{'views.main.editions.2011'}</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-admin">
-                    <h2 class="footer-title">&{'views.main.private'} #{if user}[${user}]#{/if}</h2>
-                    <ul class="footer-menu">
-                        #{if user}
+                    <div class="footer-admin">
+                        <h2 class="footer-title">
+                            &{'views.main.private'} #{if user}[${user}]#{/if}
+                        </h2>
+                        <ul class="footer-menu">
+                            #{if user}
                             <li><a href="@{CRUD.index}">Admin</a></li>
                             <li><a href="@{Secure.logout}">Logout</a></li>
-                        #{/if}
-                        #{else}
+                            #{/if} #{else}
                             <li><a href="@{Secure.login}">Login</a></li>
-                        #{/else}
-                    </ul>
+                            #{/else}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 footer-rs">
+                    <div>&{'views.main.follow'}</div>
+                    <a
+                        class="footer-rs-item footer-rs-twitter"
+                        href="https://twitter.com/rivieradev"
+                    >
+                        <i title="Twitter" class="fab fa-twitter-square"></i>
+                    </a>
+                    <a
+                        class="footer-rs-item footer-rs-facebook"
+                        href="https://www.facebook.com/RivieraDEVConf/"
+                    >
+                        <i title="Facebook" class="fab fa-facebook"></i>
+                    </a>
+                    <a
+                        class="footer-rs-item footer-rs-linkedin"
+                        href="https://www.linkedin.com/company/11054475/"
+                    >
+                        <i title="LinkedIn" class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                        class="footer-rs-item footer-rs-instagram"
+                        href="https://www.instagram.com/rivieradevconf/"
+                    >
+                        <i title="Instagram" class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="col-sm-3 footer-rs">
-                <div>&{'views.main.follow'}</div>
-                <a class="footer-rs-item footer-rs-twitter" href="https://twitter.com/rivieradev">
-                    <i title="Twitter" class="fab fa-twitter-square"></i>
-                </a>
-                <a class="footer-rs-item footer-rs-facebook" href="https://www.facebook.com/RivieraDEVConf/">
-                    <i title="Facebook" class="fab fa-facebook"></i>
-                </a>
-                <a class="footer-rs-item footer-rs-linkedin" href="https://www.linkedin.com/company/11054475/">
-                    <i title="LinkedIn" class="fab fa-linkedin"></i>
-                </a>
-                <a class="footer-rs-item footer-rs-instagram" href="https://www.instagram.com/rivieradevconf/">
-                    <i title="Instagram" class="fab fa-instagram"></i>
-                </a>
-
+            <div class="row">
+                <div class="col-xs-12 footer-copyright">
+                    Copyright &copy; 2011-2019 Riviera JUG / Riviera DEV. All
+                    rights reserved.
+                </div>
             </div>
+        </footer>
 
-        </div>
+        <!-- External libs -->
+        <!--
+            jQuery is still necessary for the countdown, we have to use another lib to get rid of jQuery.
+        -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-        <div class="row">
-            <div class="col-xs-12 footer-copyright">
-                Copyright &copy; 2011-2019 Riviera JUG / Riviera DEV. All rights reserved.
-            </div>
-        </div>
+        <!-- Bootstrap -->
+        <!--
+            Bootstrap has been customized to modify a variable :
+            Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
+            (http://getbootstrap.com/customize/)
+        -->
+        <script src="@{'/public/bootstrap/3.3.7/js/bootstrap.min.js'}"></script>
 
-    </footer>
+        <!-- Countdown -->
+        <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
+        <script type="module">
+            import initCountdown from "@{'/public/javascripts/countdown.js'}";
+            initCountdown({
+                countDownDaysLabel: "&{'tags.countdown.days'}",
+                countDownHoursLabel: "&{'tags.countdown.hours'}",
+                countDownMinutesLabel: "&{'tags.countdown.minutes'}",
+                countDownSecondsLabel: "&{'tags.countdown.seconds'}",
+            });
+        </script>
 
-    <!-- External libs -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Custom JS -->
+        <script src="@{'/public/javascripts/navbar-animated.js'}"></script>
+        <script src="@{'/public/javascripts/map.js'}"></script>
+        <script src="@{'/public/javascripts/schedule-filter.js'}"></script>
+        <script src="@{'/public/javascripts/talk-like.js'}"></script>
 
-    <!-- Bootstrap -->
-    <!-- Bootstrap has been customized to modify a variable :
-         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
-         (http://getbootstrap.com/customize/)
-    -->
-    <script src="@{'/public/bootstrap/3.3.7/js/bootstrap.min.js'}"></script>
+        <!-- Google maps API -->
+        <script
+            async
+            defer
+            src="https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&callback=initMap"
+        ></script>
 
-    <!-- Countdown -->
-    <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
+        #{get 'moreScripts' /}
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-24807954-1']);
+            _gaq.push(['_setDomainName', 'none']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
 
-    <!-- Custom JS -->
-    <script src="@{'/public/javascripts/navbar-animated.js'}"></script>
-    <script src="@{'/public/javascripts/countdown.js'}"></script>
-    <script src="@{'/public/javascripts/map.js'}"></script>
-    <script src="@{'/public/javascripts/schedule-filter.js'}"></script>
-    <script src="@{'/public/javascripts/talk-like.js'}"></script>
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src =
+                    ('https:' == document.location.protocol
+                        ? 'https://ssl'
+                        : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
 
-    <!-- Google maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&callback=initMap"></script>
-
-    #{get 'moreScripts' /}
-    <script type="text/javascript">
-
-        var countDownDaysLabel = "&{'tags.countdown.days'}";
-        var countDownHoursLabel = "&{'tags.countdown.hours'}";
-        var countDownMinutesLabel = "&{'tags.countdown.minutes'}";
-        var countDownSecondsLabel = "&{'tags.countdown.seconds'}";
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-24807954-1']);
-        _gaq.push(['_setDomainName', 'none']);
-        _gaq.push(['_setAllowLinker', true]);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-        $(document).ready(function() {
-            // Animate loader off screen
-            $(".loading").fadeOut("slow");
-            window.onload = initLikedTalks;
-        });
-
-    </script>
-
-</body>
+            $(document).ready(function() {
+                // Animate loader off screen
+                $('.loading').fadeOut('slow');
+                window.onload = initLikedTalks;
+            });
+        </script>
+    </body>
 </html>

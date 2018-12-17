@@ -2,10 +2,10 @@ html {
     height: 100%;
 }
 
-body { 
+body {
     padding-top: $navbar-height;
     padding-bottom: $footer-height;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     position: relative;
     min-height: 100vh;
 }
@@ -18,12 +18,12 @@ body {
 
 .loading {
     position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(../images/Preloader_2.gif) center no-repeat #fff;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/Preloader_2.gif) center no-repeat #fff;
 }
 
 .title {
@@ -32,7 +32,6 @@ body {
     color: $color-blue;
     font-weight: 300;
 }
-
 
 .button,
 .button-active {
@@ -53,7 +52,7 @@ body {
     //border-radius: 3px;
     //border-bottom: 3px solid rgba(0,0,0,0.15);
     transition: background-color 0.2s;
-    
+
     @media (max-width: $screen-xs-max) {
         font-size: 1.3em;
     }
@@ -98,7 +97,6 @@ body {
     width: 18em;
 }
 
-
 @media (max-width: $screen-xs-max) {
     .button-x-large {
         font-size: 1.1em;
@@ -130,7 +128,6 @@ a {
 }
 
 .flexCol {
-
     &--grow1 {
         flex: 1 0;
     }
@@ -161,12 +158,11 @@ a {
     }
 }
 
-
 .page-title {
     &-container {
         font-size: $font-size-title;
         background-position: top;
-        background-image: url("../images/backgrounds/polygon-06s.jpg");
+        background-image: url('../images/backgrounds/polygon-06s.jpg');
         @include box-shadow(inset 0 -6px 6px -6px rgba(0, 0, 0, 0.3));
     }
 

@@ -1,68 +1,45 @@
 .countdown {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  border-radius: 0 0 1rem 1rem;
+  background: linear-gradient(#19b8d5, #1dc9f2);
+  display: grid;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  grid-template-columns: 12rem 12rem;
+  grid-template-rows: 12rem 12rem;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .countdown {
+    grid-template-columns: 12rem 12rem 12rem 12rem;
+    grid-template-rows: 12rem;
+  }
+}
+@media (min-width: 992px) {
+  .countdown {
+    border-radius: 0 1rem 1rem 0;
+    background: linear-gradient(to right, #19b8d5, #1dc9f2);
+    grid-template-columns: 12rem 12rem;
+    grid-template-rows: 12rem 12rem;
+  }
+}
+.countdown__item {
+  background-color: #32cfeb;
   color: #fff;
-  position: absolute;
-  font-size: 4em;
-  width: 11.3em;
-  height: 3em;
-  left: calc(50% - (11.3em / 2));
-  bottom: -1em;
-  padding: 0.5em 0.5em;
-}
-.countdown-parent {
-  position: relative;
-  margin-bottom: 4em;
-  padding-bottom: 6em;
-}
-.countdown-day, .countdown-hour, .countdown-min, .countdown-sec {
-  display: inline-block;
-  width: 2.2em;
-  height: 2.2em;
-  text-align: center;
-  vertical-align: middle;
-  margin-right: 0.5em;
-  padding-top: 0.1em;
-}
-.countdown-day {
-  background-color: rgba(0, 144, 205, 0.8);
-}
-.countdown-hour {
-  background-color: rgba(140, 70, 162, 0.8);
-}
-.countdown-min {
-  background-color: rgba(255, 183, 66, 0.8);
-}
-.countdown-sec {
-  background-color: rgba(115, 173, 5, 0.8);
-}
-.countdown-sec {
-  margin-right: 0;
-}
-.countdown-number, .countdown-desc {
-  display: block;
-  float: left;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
-.countdown-desc {
-  font-size: 0.27em;
-  line-height: 1.8em;
+.countdown__number {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
-.countdown-number {
-  font-family: 'Oswald', sans-serif;
+.countdown__desc {
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
-@media (max-width: 767px) {
-  .countdown,
-  .countdown-bg {
-    font-size: 2em;
-  }
-
-  .countdown-parent {
-    margin-bottom: 3em;
-    padding-bottom: 3em;
-  }
-}
 .personsList {
   text-align: center;
   margin-top: 2em;
@@ -98,16 +75,16 @@
 .personSummary-name {
   text-transform: uppercase;
   font-size: 1.1em;
-  color: #0090cd;
+  color: #19b8d5;
 }
 .personSummary-title {
   font-style: italic;
 }
 
 .personSummary-link:hover .personSummary-photo, .personSummary-link:active .personSummary-photo, .personSummary-link:focus .personSummary-photo {
-  -moz-box-shadow: 0 0 0 5px #0090cd;
-  -webkit-box-shadow: 0 0 0 5px #0090cd;
-  box-shadow: 0 0 0 5px #0090cd;
+  -moz-box-shadow: 0 0 0 5px #19b8d5;
+  -webkit-box-shadow: 0 0 0 5px #19b8d5;
+  box-shadow: 0 0 0 5px #19b8d5;
 }
 
 .personDetails {
@@ -118,14 +95,14 @@
   width: 100%;
   height: 5px;
   margin: 2em 0;
-  background-color: #0090cd;
+  background-color: #19b8d5;
 }
 .personDetails-name-title {
   margin-bottom: 1em;
 }
 .personDetails-name {
   text-transform: uppercase;
-  color: #0090cd;
+  color: #19b8d5;
   font-size: 1.3em;
 }
 .personDetails-title {
@@ -366,10 +343,10 @@ th.fullSchedule-time-title {
   display: inline-block;
 }
 .talk-theme-blue {
-  background-color: #0090cd;
+  background-color: #19b8d5;
 }
 .talksFilter-options .talk-theme-blue:hover, .talk-theme-blue:focus {
-  background-color: #00a9f1;
+  background-color: #2cc9e6;
 }
 .talk-theme-yellow {
   background-color: #fdb742;
@@ -471,14 +448,14 @@ th.fullSchedule-time-title {
   width: 100%;
   height: 5px;
   margin: 2em 0;
-  background-color: #0090cd;
+  background-color: #19b8d5;
 }
 .talkDetails-all:after {
   height: 0;
 }
 .talkDetails-title {
   text-transform: uppercase;
-  color: #0090cd;
+  color: #19b8d5;
   font-size: 1.3em;
 }
 .talkDetails-description {
@@ -513,7 +490,7 @@ th.fullSchedule-time-title {
   vertical-align: middle;
   text-transform: uppercase;
   font-size: 1.1em;
-  color: #0090cd;
+  color: #19b8d5;
 }
 .talkDetails-icon {
   color: #fdb742;
@@ -528,9 +505,9 @@ th.fullSchedule-time-title {
   text-decoration: none;
 }
 .talkDetails-speaker:hover .talkDetails-speaker-photo, .talkDetails-speaker:focus .talkDetails-speaker-photo, .talkDetails-speaker:active .talkDetails-speaker-photo {
-  -moz-box-shadow: 0 0 0 3px #0090cd;
-  -webkit-box-shadow: 0 0 0 3px #0090cd;
-  box-shadow: 0 0 0 3px #0090cd;
+  -moz-box-shadow: 0 0 0 3px #19b8d5;
+  -webkit-box-shadow: 0 0 0 3px #19b8d5;
+  box-shadow: 0 0 0 3px #19b8d5;
 }
 
 @media (max-width: 767px) {
