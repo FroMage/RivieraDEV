@@ -8,7 +8,9 @@ $screen-lg-min: 1200px;
 $navbar-height: 75px;
 $navbar-small-height: 50px;
 
-$color-blue: #0090cd;
+$color-blue-light: #32cfeb;
+$color-blue: #19b8d5;
+$color-blue-medium: #1dc9f2;
 $color-blue-dark: #00709d;
 $color-blue-transparent: rgba(0, 144, 205, 0.8);
 
@@ -57,17 +59,16 @@ $space-lg: 3rem; // 30px
 $space-md: 2rem; // 20px
 $space-sm: 1rem; // 10px
 
+$border-radius-md: 1rem; // 16px
+
 $font-xxxl: 4rem; // 40px
-$font-xxl: 3.2rem; // 32px
+$font-xxl: 3rem; // 30px
 $font-xl: 2.5rem; // 25px
 $font-lg: 2rem; // 20px
 $font-md: 1.8rem; // 18px
 $font-sm: 1.6rem; // 16px
 $font-xs: 1.4rem; // 14px
-
-$countdown-width: 11.3em;
-$countdown-height: 3em;
-$countdown-font-size: 4;
+$font-xxs: 1.2rem; // 12px
 
 $font-size-title: 2.8em;
 $font-size-subtitle: 1.1em;
