@@ -42,10 +42,20 @@ views.application.index.cfp.join.short=Come speak
 views.application.index.stats.attendees=attendees
 views.application.index.stats.sessions=sessions
 views.application.index.stats.workshops=workshops
+views.application.index.intro.subtitle1=The shiny conference
+views.application.index.intro.subtitle2=in the most beautiful European technopole.
+views.application.index.questions.what=What?
+views.application.index.questions.what.answer=3 days of conferences and workshops
+views.application.index.questions.when=When?
+views.application.index.questions.when.answer=May 15-16-17 2019
+views.application.index.questions.where=Where?
+views.application.index.questions.where.answer=Sophia-Antipolis, Skema Business School
+
 views.application.index.intro.1=Riviera DEV, that's <strong>3 days of conferences</strong> and workshops on the <strong>French Riviera</strong>
 views.application.index.intro.2=in the heart of Sophia Antipolis, <strong>the most beautiful European technopole</strong>.
 views.application.index.intro.3=In 2019, Riviera DEV add the new <strong>Snorkeling</strong> format: shorter sessions of 25 minutes for lightning talks on frameworks, tools, etc.
 views.application.index.intro.4=Follow <a href="https://twitter.com/RivieraDEV">@RivieraDEV</a> on Twitter for updates.
+
 views.application.index.pres.goal.title=Goal
 views.application.index.pres.goal.text=Provide a first class tech conference where developers can learn, hack and network.
 views.application.index.pres.dna.title=DNA

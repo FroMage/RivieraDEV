@@ -27,26 +27,51 @@
         #{/elseif}
     </div>
 
-    <!-- See countdown.js -->
-    <div id="js-countdown"></div>
+    <div class="introCountdown">
+    
+        <div class="introCountdown__intro intro">
+          
+          <div class="intro__titles">
+            <div class="intro__title">RivieraDEV</div>
+            <div class="intro__subtitle">
+              <span class="intro__subtitle1">&{'views.application.index.intro.subtitle1'}</span>
+              <span class="intro__subtitle2">&{'views.application.index.intro.subtitle2'}</span>
+            </div>
+          </div> <!-- /intro_titles -->
+    
+          <div class="intro__questions">
+    
+            <div class="intro__question question">
+              <div class="question__icon"><i class="fas fa-male"></i></div>
+              <div class="question__title">&{'views.application.index.questions.what'}</div>
+              <div class="question__answer">
+                &{'views.application.index.questions.what.answer'}
+              </div>
+            </div> <!-- /intro__question -->
+    
+            <div class="intro__question question">
+              <div class="question__icon"><i class="far fa-clock"></i></div>
+              <div class="question__title">&{'views.application.index.questions.when'}</div>
+              <div class="question__answer">
+                &{'views.application.index.questions.when.answer'}
+              </div>
+            </div> <!-- /intro__question -->
+    
+            <div class="intro__question question">
+              <div class="question__icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="question__title">&{'views.application.index.questions.where'}</div>
+              <div class="question__answer">
+                &{'views.application.index.questions.where.answer'}
+              </div>
+            </div> <!-- /intro__question -->
+    
+          </div> <!-- /intro__questions -->
+        </div> <!-- /intro -->
+        
+        <!-- See countdown.js -->
+        <div id="js-countdown"></div>
 
-    <!-- Countdown -->
-    <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
-    <script type="module">
-        import initCountdown from "@{'/public/javascripts/countdown.js'}";
-        initCountdown(
-            {
-                eventStartDate: "${eventStartDate}", 
-                eventEndDate: "${eventEndDate}"
-            },
-            {
-                countDownDaysLabel: "&{'tags.countdown.days'}",
-                countDownHoursLabel: "&{'tags.countdown.hours'}",
-                countDownMinutesLabel: "&{'tags.countdown.minutes'}",
-                countDownSecondsLabel: "&{'tags.countdown.seconds'}",
-            }
-        );
-    </script>
+    </div> <!-- /introCountdown -->
 
 </div> <!-- /.parallax -->
 
@@ -261,3 +286,22 @@
     </div>
 
 </div>
+
+
+<!-- Countdown -->
+<script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
+<script type="module">
+    import initCountdown from "@{'/public/javascripts/countdown.js'}";
+    initCountdown(
+        {
+            eventStartDate: "${eventStartDate}", 
+            eventEndDate: "${eventEndDate}"
+        },
+        {
+            countDownDaysLabel: "&{'tags.countdown.days'}",
+            countDownHoursLabel: "&{'tags.countdown.hours'}",
+            countDownMinutesLabel: "&{'tags.countdown.minutes'}",
+            countDownSecondsLabel: "&{'tags.countdown.seconds'}",
+        }
+    );
+</script>

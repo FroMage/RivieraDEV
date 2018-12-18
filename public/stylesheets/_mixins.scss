@@ -1,0 +1,14 @@
+@mixin notFullWidth() {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+        width: 750px;
+    }
+    @media (min-width: $screen-md-min) {
+        width: 970px;
+    }
+    @media (min-width: $screen-md-min) {
+        width: 1170px;
+    }
+}
