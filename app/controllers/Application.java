@@ -33,55 +33,60 @@ import play.mvc.Controller;
 
 public class Application extends Controller {
 
-	@Before
-	private static void setup(){
-		renderArgs.put("user", Security.connected());
-		renderArgs.put("promotedPage", getPromotedPage());
-		renderArgs.put("displayTalks", displayTalks());
-	}
-	
-	public static void fr(String url){
-		Lang.change("fr");
-		redirect(url);
-	}
+    @Before
+    private static void setup() {
+        renderArgs.put("user", Security.connected());
+        renderArgs.put("promotedPage", getPromotedPage());
+        renderArgs.put("displayTalks", displayTalks());
+    }
 
-	public static void en(String url){
-		Lang.change("en");
-		redirect(url);
-	}
+    public static void fr(String url) {
+        Lang.change("fr");
+        redirect(url);
+    }
+
+    public static void en(String url) {
+        Lang.change("en");
+        redirect(url);
+    }
 
     public static void index() {
-		String promotedPage2 = getPromotedPage2();
+        String promotedPage2 = getPromotedPage2();
 
-		String googleMapApiKey = getGoogleMapApiKey();
+        String eventStartDate = getEventStartDate();
+        String eventEndDate = getEventEndDate();
 
-    	News latestNews = News.latest();
+        String googleMapApiKey = getGoogleMapApiKey();
 
-		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
-		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
-		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
-		List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
-		List<Speaker> speakersStar = Speaker.find("star = true ORDER BY lastName, firstName").fetch();
+        News latestNews = News.latest();
 
-		boolean lunchesAndPartySoldOut = sponsors.get(SponsorShip.Lunches) != null && sponsors.get(SponsorShip.Lunches).size() > 0
-		                              && sponsors.get(SponsorShip.Party) != null && sponsors.get(SponsorShip.Party).size() > 0;
+        SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+        Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+        List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
+        List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
+        List<Speaker> speakersStar = Speaker.find("star = true ORDER BY lastName, firstName").fetch();
 
-		boolean displayPreviousSpeakers = !displayNewSpeakers();
+        boolean lunchesAndPartySoldOut = sponsors.get(SponsorShip.Lunches) != null
+                && sponsors.get(SponsorShip.Lunches).size() > 0 && sponsors.get(SponsorShip.Party) != null
+                && sponsors.get(SponsorShip.Party).size() > 0;
 
-		render(promotedPage2, googleMapApiKey, displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
+        boolean displayPreviousSpeakers = !displayNewSpeakers();
+
+        render(promotedPage2, eventStartDate, eventEndDate, googleMapApiKey, displayPreviousSpeakers, sponsors,
+                lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
     }
 
     public static void news() {
-    	List<News> news = News.byDate();
-    	render(news);
+        List<News> news = News.byDate();
+        render(news);
     }
 
     public static void photos() {
-    	render();
+        render();
     }
 
     public static void about() {
-    	organisers();
+        organisers();
     }
 
     public static void access() {
@@ -89,7 +94,7 @@ public class Application extends Controller {
     }
 
     public static void cfp() {
-    	List<Organiser> orgas = Organiser.cfp();
+        List<Organiser> orgas = Organiser.cfp();
         render(orgas);
     }
 
@@ -122,305 +127,348 @@ public class Application extends Controller {
 
         render(ticketingUrl, ticketingIsOpen, pricePackCurrentStateList);
     }
-    
-    public static void schedule(){
-		boolean displayFullSchedule = displayFullSchedule();
-		boolean displayNewSpeakers = displayNewSpeakers();
 
-		List<Date> days = null;
-		if (!displayFullSchedule) {
-			days = TemporarySlot.find("select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)").fetch();
-		} else  {
-			days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
-		}
-		List<Track> tracks = Track.findAll();
-		Collections.sort(tracks);
-		List<TalkTheme> themes = TalkTheme.findUsedThemes();
-		List<TalkType> types = TalkType.findUsedTypes();
-		Collections.sort(types);
-		Level[] levels = Level.values();
-		Language[] languages = Language.values();
-    	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
-    	for(Date day : days){
-    		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
-    		Collections.sort(tracksPerDay);
-    		tracksPerDays.put(day, tracksPerDay);
-    	}
+    public static void schedule() {
+        boolean displayFullSchedule = displayFullSchedule();
+        boolean displayNewSpeakers = displayNewSpeakers();
 
-    	render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, types, levels);
+        List<Date> days = null;
+        if (!displayFullSchedule) {
+            days = TemporarySlot.find(
+                    "select distinct date_trunc('day', startDate) from TemporarySlot ORDER BY date_trunc('day', startDate)")
+                    .fetch();
+        } else {
+            days = Slot.find(
+                    "select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)")
+                    .fetch();
+        }
+        List<Track> tracks = Track.findAll();
+        Collections.sort(tracks);
+        List<TalkTheme> themes = TalkTheme.findUsedThemes();
+        List<TalkType> types = TalkType.findUsedTypes();
+        Collections.sort(types);
+        Level[] levels = Level.values();
+        Language[] languages = Language.values();
+        Map<Date, List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
+        for (Date day : days) {
+            List<Track> tracksPerDay = Talk.findTracksPerDay(day);
+            Collections.sort(tracksPerDay);
+            tracksPerDays.put(day, tracksPerDay);
+        }
+
+        render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, types, levels);
     }
 
-    public static void scheduleSuperSecret(){
-    	List<Date> days = Slot.find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)").fetch();
-    	List<Track> tracks = Track.findAll();
-		List<TalkTheme> themes = TalkTheme.findUsedThemes();
-		List<TalkType> types = TalkType.findUsedTypes();
-		Collections.sort(types);
-		Level[] levels = Level.values();
-    	Map<Date,List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
-    	for(Date day : days){
-    		List<Track> tracksPerDay = Talk.findTracksPerDay(day);
-    		Collections.sort(tracksPerDay);
-    		tracksPerDays.put(day, tracksPerDay);
-		}
-		Language[] languages = Language.values();
-    	render(days, tracks, tracksPerDays, themes, types, levels, languages);
+    public static void scheduleSuperSecret() {
+        List<Date> days = Slot
+                .find("select distinct date_trunc('day', startDate) from Slot ORDER BY date_trunc('day', startDate)")
+                .fetch();
+        List<Track> tracks = Track.findAll();
+        List<TalkTheme> themes = TalkTheme.findUsedThemes();
+        List<TalkType> types = TalkType.findUsedTypes();
+        Collections.sort(types);
+        Level[] levels = Level.values();
+        Map<Date, List<Track>> tracksPerDays = new HashMap<Date, List<Track>>();
+        for (Date day : days) {
+            List<Track> tracksPerDay = Talk.findTracksPerDay(day);
+            Collections.sort(tracksPerDay);
+            tracksPerDays.put(day, tracksPerDay);
+        }
+        Language[] languages = Language.values();
+        render(days, tracks, tracksPerDays, themes, types, levels, languages);
     }
 
-    public static void talks(){
-		if(!displayTalks()) {
-			index();
-		}
+    public static void talks() {
+        if (!displayTalks()) {
+            index();
+        }
 
-		List<TalkTheme> themes = TalkTheme.findUsedThemes();
-		Level[] levels = Level.values();
-		List<TalkType> types = TalkType.findUsedTypes();
-		Collections.sort(types);
-    	List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
-		Collections.sort(talks);
-		boolean displayFullSchedule = displayFullSchedule();
-		Language[] languages = Language.values();
-    	render(themes, levels, talks, types, languages, displayFullSchedule);
+        List<TalkTheme> themes = TalkTheme.findUsedThemes();
+        Level[] levels = Level.values();
+        List<TalkType> types = TalkType.findUsedTypes();
+        Collections.sort(types);
+        List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
+        Collections.sort(talks);
+        boolean displayFullSchedule = displayFullSchedule();
+        Language[] languages = Language.values();
+        render(themes, levels, talks, types, languages, displayFullSchedule);
     }
 
-    public static void speakers(){
-    	List<Speaker> speakers = Speaker.find("ORDER BY lastName, firstName").fetch();
-		List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
-		boolean displayPreviousSpeakers = !displayNewSpeakers();
+    public static void speakers() {
+        List<Speaker> speakers = Speaker.find("ORDER BY lastName, firstName").fetch();
+        List<Speaker> speakersPreviousYears = PreviousSpeaker.find("ORDER BY lastName, firstName").fetch();
+        boolean displayPreviousSpeakers = !displayNewSpeakers();
 
-    	render(speakers, speakersPreviousYears, displayPreviousSpeakers);
+        render(speakers, speakersPreviousYears, displayPreviousSpeakers);
     }
 
-    public static void speaker(Long id){
-    	Speaker speaker= Speaker.findById(id);
-    	notFoundIfNull(speaker);
-    	render(speaker);
+    public static void speaker(Long id) {
+        Speaker speaker = Speaker.findById(id);
+        notFoundIfNull(speaker);
+        render(speaker);
     }
 
-    public static void talk(Long id){
-    	Talk talk = Talk.findById(id);
-    	notFoundIfNull(talk);
-		boolean displayFullSchedule = displayFullSchedule();
-    	render(talk, displayFullSchedule);
+    public static void talk(Long id) {
+        Talk talk = Talk.findById(id);
+        notFoundIfNull(talk);
+        boolean displayFullSchedule = displayFullSchedule();
+        render(talk, displayFullSchedule);
     }
 
-    public static void judcon(){
-		List<Speaker> speakers = Speaker.find("FROM Speaker speaker JOIN speaker.talks talk WHERE talk.track.isJUDCon = true ORDER BY lastName, firstName").fetch();
+    public static void judcon() {
+        List<Speaker> speakers = Speaker.find(
+                "FROM Speaker speaker JOIN speaker.talks talk WHERE talk.track.isJUDCon = true ORDER BY lastName, firstName")
+                .fetch();
 
-    	List<Talk> talks = Talk.find("track.isJUDCon = true AND isHiddenInTalksPage = false").fetch();
-		Collections.sort(talks);
+        List<Talk> talks = Talk.find("track.isJUDCon = true AND isHiddenInTalksPage = false").fetch();
+        Collections.sort(talks);
 
-    	render(speakers, talks);
+        render(speakers, talks);
     }
 
     public static void sponsors() {
-		SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
-		Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
-		List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
-		
-		render(sponsors, sponsorsPreviousYears);
-    }
-    
-	public static void becomeSponsor() {
-		render();
-	}
+        SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+        Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+        List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
 
-    public static void previousSpeakerPhoto(Long id){
-    	PreviousSpeaker speaker = PreviousSpeaker.findById(id);
-    	notFoundIfNull(speaker);
-    	if(!speaker.photo.exists())
-    		redirect("/public/images/unicorn-horn-lashes.svg");
-    	response.contentType = speaker.photo.type();
-    	renderBinary(speaker.photo.get());
+        render(sponsors, sponsorsPreviousYears);
     }
 
-    public static void speakerPhoto(Long id){
-    	Speaker speaker = Speaker.findById(id);
-    	notFoundIfNull(speaker);
-    	if(!speaker.photo.exists())
-    		redirect("/public/images/unicorn-horn-lashes.svg");
-    	response.contentType = speaker.photo.type();
-    	renderBinary(speaker.photo.get());
+    public static void becomeSponsor() {
+        render();
     }
 
-    public static void sponsorLogo(Long id){
-    	Sponsor sponsor = Sponsor.findById(id);
-    	notFoundIfNull(sponsor);
-    	response.contentType = sponsor.logo.type();
-    	renderBinary(sponsor.logo.get());
+    public static void previousSpeakerPhoto(Long id) {
+        PreviousSpeaker speaker = PreviousSpeaker.findById(id);
+        notFoundIfNull(speaker);
+        if (!speaker.photo.exists())
+            redirect("/public/images/unicorn-horn-lashes.svg");
+        response.contentType = speaker.photo.type();
+        renderBinary(speaker.photo.get());
     }
 
-    public static void orgaPhoto(Long id){
-    	Organiser organiser = Organiser.findById(id);
-    	notFoundIfNull(organiser);
-    	if(!organiser.photo.exists())
-    		redirect("/public/images/unicorn-horn-lashes.svg");
-    	response.contentType = organiser.photo.type();
-    	renderBinary(organiser.photo.get());
+    public static void speakerPhoto(Long id) {
+        Speaker speaker = Speaker.findById(id);
+        notFoundIfNull(speaker);
+        if (!speaker.photo.exists())
+            redirect("/public/images/unicorn-horn-lashes.svg");
+        response.contentType = speaker.photo.type();
+        renderBinary(speaker.photo.get());
     }
 
-	public static void organisers() {
-    	List<Organiser> orgas = Organiser.organisers();
-		render(orgas);
-	}
+    public static void sponsorLogo(Long id) {
+        Sponsor sponsor = Sponsor.findById(id);
+        notFoundIfNull(sponsor);
+        response.contentType = sponsor.logo.type();
+        renderBinary(sponsor.logo.get());
+    }
 
-	public static void organiser(Long id) {
-		Organiser orga = Organiser.findById(id);
-    	notFoundIfNull(orga);
-    	render(orga);
-	}
+    public static void orgaPhoto(Long id) {
+        Organiser organiser = Organiser.findById(id);
+        notFoundIfNull(organiser);
+        if (!organiser.photo.exists())
+            redirect("/public/images/unicorn-horn-lashes.svg");
+        response.contentType = organiser.photo.type();
+        renderBinary(organiser.photo.get());
+    }
 
-	public static Integer likeTalk(Long id){
-		Talk talk = Talk.findById(id);
-		if(talk != null){
-			talk.like();
-		}
-		if(Security.connected() != null){
-			// Return nb of likes only for connected user (i.e. admin)
-			return talk.nbLikes;
-		}
-		return null;
-	}
+    public static void organisers() {
+        List<Organiser> orgas = Organiser.organisers();
+        render(orgas);
+    }
 
-	public static Integer unlikeTalk(Long id){
-		Talk talk = Talk.findById(id);
-		if(talk != null){
-			talk.unlike();
-		}
-		if(Security.connected() != null){
-			// Return nb of likes only for connected user (i.e. admin)
-			return talk.nbLikes;
-		}
-		return null;
-	}
+    public static void organiser(Long id) {
+        Organiser orga = Organiser.findById(id);
+        notFoundIfNull(orga);
+        render(orga);
+    }
 
-	private static SponsorsToDisplay getSponsorsToDisplay() {
-		boolean mustDisplaySponsorsPreviousYears = true;
+    public static Integer likeTalk(Long id) {
+        Talk talk = Talk.findById(id);
+        if (talk != null) {
+            talk.like();
+        }
+        if (Security.connected() != null) {
+            // Return nb of likes only for connected user (i.e. admin)
+            return talk.nbLikes;
+        }
+        return null;
+    }
 
-		Map<SponsorShip, List<Sponsor>> sponsors = new TreeMap<SponsorShip, List<Sponsor>>();
-		for(SponsorShip sponsorShip : SponsorShip.values()) {
-			if (sponsorShip != SponsorShip.PreviousYears) {
-				List<Sponsor> sponsorsBySponsorShip = Sponsor.find("level", sponsorShip).fetch();
-				if (sponsorsBySponsorShip != null && sponsorsBySponsorShip.size() > 0) {
-					mustDisplaySponsorsPreviousYears = false;
-					Collections.sort(sponsorsBySponsorShip);
-					sponsors.put(sponsorShip, sponsorsBySponsorShip);
-				}
-			}
-		}
+    public static Integer unlikeTalk(Long id) {
+        Talk talk = Talk.findById(id);
+        if (talk != null) {
+            talk.unlike();
+        }
+        if (Security.connected() != null) {
+            // Return nb of likes only for connected user (i.e. admin)
+            return talk.nbLikes;
+        }
+        return null;
+    }
 
-		List<Sponsor> sponsorsPreviousYears = null;
-		if (mustDisplaySponsorsPreviousYears) {
-			sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
-			Collections.sort(sponsorsPreviousYears);
-		}
+    private static SponsorsToDisplay getSponsorsToDisplay() {
+        boolean mustDisplaySponsorsPreviousYears = true;
 
-		return new SponsorsToDisplay(sponsors, sponsorsPreviousYears);
-	}
+        Map<SponsorShip, List<Sponsor>> sponsors = new TreeMap<SponsorShip, List<Sponsor>>();
+        for (SponsorShip sponsorShip : SponsorShip.values()) {
+            if (sponsorShip != SponsorShip.PreviousYears) {
+                List<Sponsor> sponsorsBySponsorShip = Sponsor.find("level", sponsorShip).fetch();
+                if (sponsorsBySponsorShip != null && sponsorsBySponsorShip.size() > 0) {
+                    mustDisplaySponsorsPreviousYears = false;
+                    Collections.sort(sponsorsBySponsorShip);
+                    sponsors.put(sponsorShip, sponsorsBySponsorShip);
+                }
+            }
+        }
 
-	/**
+        List<Sponsor> sponsorsPreviousYears = null;
+        if (mustDisplaySponsorsPreviousYears) {
+            sponsorsPreviousYears = Sponsor.find("level", SponsorShip.PreviousYears).fetch();
+            Collections.sort(sponsorsPreviousYears);
+        }
+
+        return new SponsorsToDisplay(sponsors, sponsorsPreviousYears);
+    }
+
+    /**
 	 * Retourne l'API KEY sauvée en BD.
 	 * En local, si la clé n'est pas définie alors la google map fonctionne quand même.
 	 * MAIS en Prod/Staging, il FAUT une API Key sinon la carte ne fonctionne pas c'est certainement une restriction google.
+																			   
 	 * L'API KEY de Prod ne peut pas être utilisée en local, car nous l'avons restreinte pour ne fonctionner qu'avec les domaines *.rivieradev.fr
 	 * et *.rivieradev.com afin de suivre les recommandations de sécurité décrites par Google.
+														
 	 * Pour générer une nouvelle API KEY : https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr 
 	 */
-    private static String getGoogleMapApiKey(){
-        Configuration config = Configuration.find("key",ConfigurationKey.GOOGLE_MAP_API_KEY).first();
-		if(config != null){
-			return config.value;
-		}
-		return "";
+    private static String getGoogleMapApiKey() {
+        Configuration config = Configuration.find("key", ConfigurationKey.GOOGLE_MAP_API_KEY).first();
+        if (config != null) {
+            return config.value;
+        }
+        return "";
     }
 
-	/**
-	 * Retourne true si le programme complet doit être affiché, faux sinon.
-	 */
-    private static boolean displayFullSchedule(){
-        Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_FULL_SCHEDULE).first();
-		return config != null && config.value.equals("true") ;
+    /**
+     * Retourne la date de début de la conférence telle qu'elle est stockée en BD.
+     * Elle devrait être au format ISO. Ex: 2019-05-15T08:20:00
+     * 
+     * @return la date de début de la conférence
+     */
+    private static String getEventStartDate() {
+        Configuration config = Configuration.find("key", ConfigurationKey.EVENT_START_DATE).first();
+        if (config != null) {
+            return config.value;
+        }
+        return "";
     }
 
-	/**
-	 * Retourne true si les speakers de la nouvelle édition doivent être affichés
-	 * (utile avant que le programme définitif ne soit connu)
-	 */
-    private static boolean displayNewSpeakers(){
-        Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_NEW_SPEAKERS).first();
-		return config != null && config.value.equals("true") ;
+    /**
+     * Retourne la date de fin de la conférence telle qu'elle est stockée en BD.
+     * Elle devrait être au format ISO. Ex: 2019-05-15T08:20:00
+     * 
+     * @return la date de fin de la conférence
+     */
+    private static String getEventEndDate() {
+        Configuration config = Configuration.find("key", ConfigurationKey.EVENT_END_DATE).first();
+        if (config != null) {
+            return config.value;
+        }
+        return "";
     }
 
-	/**
+    /**
+     * Retourne true si le programme complet doit être affiché, faux sinon.
+     */
+    private static boolean displayFullSchedule() {
+        Configuration config = Configuration.find("key", ConfigurationKey.DISPLAY_FULL_SCHEDULE).first();
+        return config != null && config.value.equals("true");
+    }
+
+    /**
+     * Retourne true si les speakers de la nouvelle édition doivent être affichés
+     * (utile avant que le programme définitif ne soit connu)
+     */
+    private static boolean displayNewSpeakers() {
+        Configuration config = Configuration.find("key", ConfigurationKey.DISPLAY_NEW_SPEAKERS).first();
+        return config != null && config.value.equals("true");
+    }
+
+    /**
 	 * Retourne la page à mettre en avant sur la home page et dans le menu.
 	 * 'CFP'      : La page du CFP
 	 * 'TICKETS'  : La page d'achat de tickets
 	 * 'SPONSORS' : La page pour devenir un sponsor
 	 */
-    private static String getPromotedPage(){
-        Configuration config = Configuration.find("key",ConfigurationKey.PROMOTED_PAGE).first();
-		return config != null ? config.value : "";
+    private static String getPromotedPage() {
+        Configuration config = Configuration.find("key", ConfigurationKey.PROMOTED_PAGE).first();
+        return config != null ? config.value : "";
     }
 
-	/**
+    /**
 	 * Retourne la 2ème page à mettre en avant sur la home page.
 	 * 'SPONSORS' : La page pour devenir un sponsor
 	 * 'SCHEDULE' : Le programme
 	 */
-    private static String getPromotedPage2(){
-        Configuration config = Configuration.find("key",ConfigurationKey.PROMOTED_PAGE_2).first();
-		return config != null ? config.value : "";
-	}
-	
-	/**
-	 * Retourne lUrl de la page où on peut acheter les billets.
-	 */
-    private static String getTicketingUrl(){
-        Configuration config = Configuration.find("key",ConfigurationKey.TICKETING_URL).first();
-		return config != null ? config.value : "";
-	}
-	
-	/**
+    private static String getPromotedPage2() {
+        Configuration config = Configuration.find("key", ConfigurationKey.PROMOTED_PAGE_2).first();
+        return config != null ? config.value : "";
+    }
+
+    /**
+     * Retourne lUrl de la page où on peut acheter les billets.
+     */
+    private static String getTicketingUrl() {
+        Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_URL).first();
+        return config != null ? config.value : "";
+    }
+
+    /**
 	 * Retourne true s'il est possible d'acheter des billets. 
 	 * (utile pour enlever l'accès à la page de vente des billets)
 	 */
-    private static boolean ticketingIsOpen(){
-        Configuration config = Configuration.find("key",ConfigurationKey.TICKETING_OPEN).first();
-		return config != null && config.value.equals("true") ;
-	}
-	
-	/**
+    private static boolean ticketingIsOpen() {
+        Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_OPEN).first();
+        return config != null && config.value.equals("true");
+    }
+
+    /**
 	 * Retourne true si le menu doit permettre d'afficher la page des talks
 	 * (utile pour enlever l'accès à la page tant qu'on n'a pas encore de talks)
 	 */
-    private static boolean displayTalks(){
-        Configuration config = Configuration.find("key",ConfigurationKey.DISPLAY_TALKS).first();
-		return config != null && config.value.equals("true") ;
+    private static boolean displayTalks() {
+        Configuration config = Configuration.find("key", ConfigurationKey.DISPLAY_TALKS).first();
+        return config != null && config.value.equals("true");
     }
 
-	private static class SponsorsToDisplay {
-		private Map<SponsorShip, List<Sponsor>> sponsors;
-		private List<Sponsor> sponsorsPreviousYears;
+    private static class SponsorsToDisplay {
+        private Map<SponsorShip, List<Sponsor>> sponsors;
+        private List<Sponsor> sponsorsPreviousYears;
 
-		public SponsorsToDisplay(Map<SponsorShip, List<Sponsor>> sponsors, List<Sponsor> sponsorsPreviousYears) {
-			this.sponsors = sponsors;
-			this.sponsorsPreviousYears = sponsorsPreviousYears;
-		}
+        public SponsorsToDisplay(Map<SponsorShip, List<Sponsor>> sponsors, List<Sponsor> sponsorsPreviousYears) {
+            this.sponsors = sponsors;
+            this.sponsorsPreviousYears = sponsorsPreviousYears;
+        }
 
-		public Map<SponsorShip, List<Sponsor>> getSponsors() { return this.sponsors; }
-		public List<Sponsor> getSponsorsPreviousYears() { return this.sponsorsPreviousYears; }
-	}
+        public Map<SponsorShip, List<Sponsor>> getSponsors() {
+            return this.sponsors;
+        }
 
-	public static void live(){
-    	List<Track> tracks = Track.findAll();
-		Collections.sort(tracks);
-		render(tracks);
-	}
-	
-	public static void liveTrack(String track){
-    	List<Track> tracks = Track.findAll();
-		Collections.sort(tracks);
-    	List<Talk> keynotes = Talk.findKeynotes();
-		render(tracks, track, keynotes);
-	}
+        public List<Sponsor> getSponsorsPreviousYears() {
+            return this.sponsorsPreviousYears;
+        }
+    }
+
+    public static void live() {
+        List<Track> tracks = Track.findAll();
+        Collections.sort(tracks);
+        render(tracks);
+    }
+
+    public static void liveTrack(String track) {
+        List<Track> tracks = Track.findAll();
+        Collections.sort(tracks);
+        List<Talk> keynotes = Talk.findKeynotes();
+        render(tracks, track, keynotes);
+    }
 }

@@ -83,6 +83,11 @@
         <!-- Custom -->
         <link rel="stylesheet" href="@{'/public/stylesheets/style.css'}" />
 
+        <!--
+            jQuery is still necessary for the countdown, we have to use another lib to get rid of jQuery.
+        -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
         #{get 'moreStyles' /}
     </head>
 
@@ -342,10 +347,6 @@
         </footer>
 
         <!-- External libs -->
-        <!--
-            jQuery is still necessary for the countdown, we have to use another lib to get rid of jQuery.
-        -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
         <!-- Bootstrap -->
         <!--
@@ -354,18 +355,6 @@
             (http://getbootstrap.com/customize/)
         -->
         <script src="@{'/public/bootstrap/3.3.7/js/bootstrap.min.js'}"></script>
-
-        <!-- Countdown -->
-        <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
-        <script type="module">
-            import initCountdown from "@{'/public/javascripts/countdown.js'}";
-            initCountdown({
-                countDownDaysLabel: "&{'tags.countdown.days'}",
-                countDownHoursLabel: "&{'tags.countdown.hours'}",
-                countDownMinutesLabel: "&{'tags.countdown.minutes'}",
-                countDownSecondsLabel: "&{'tags.countdown.seconds'}",
-            });
-        </script>
 
         <!-- Custom JS -->
         <script src="@{'/public/javascripts/navbar-animated.js'}"></script>

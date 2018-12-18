@@ -1,11 +1,11 @@
 const beforeConf = (
+    eventStartDate,
     {
         countDownDaysLabel,
         countDownHoursLabel,
         countDownMinutesLabel,
         countDownSecondsLabel,
-    },
-    begin
+    }
 ) => {
     const format = `<div class="countdown">
         <div class="countdown__item countdown__day">
@@ -27,7 +27,7 @@ const beforeConf = (
     </div>`;
 
     $('#js-countdown')
-        .countdown(begin, function(event) {
+        .countdown(new Date(eventStartDate), function(event) {
             $(this).html(event.strftime(format));
         })
         .on('finish.countdown', function(event) {
@@ -60,28 +60,29 @@ const updateControlsAfterCountdown = () => {
         .removeClass('label-primary');
 };
 
-const initCountdown = ({
-    countDownDaysLabel,
-    countDownHoursLabel,
-    countDownMinutesLabel,
-    countDownSecondsLabel,
-}) => {
-    // TODO aller chercher ces dates dans la BD plutôt qu'en dur dans le JS
-    const begin = '2019/05/15 08:20:00';
-    const end = '2019/05/17 18:00:00';
+const initCountdown = (
+    { eventStartDate, eventEndDate },
+    {
+        countDownDaysLabel,
+        countDownHoursLabel,
+        countDownMinutesLabel,
+        countDownSecondsLabel,
+    }
+) => {
+    if (!eventStartDate || !eventEndDate) {
+        return;
+    }
+
     const now = new Date();
 
-    if (now < new Date(begin)) {
-        beforeConf(
-            {
-                countDownDaysLabel,
-                countDownHoursLabel,
-                countDownMinutesLabel,
-                countDownSecondsLabel,
-            },
-            begin
-        );
-    } else if (now < new Date(end)) {
+    if (now < new Date(eventStartDate)) {
+        beforeConf(eventStartDate, {
+            countDownDaysLabel,
+            countDownHoursLabel,
+            countDownMinutesLabel,
+            countDownSecondsLabel,
+        });
+    } else if (now < new Date(eventEndDate)) {
         whileConf();
     } else {
         afterConf();

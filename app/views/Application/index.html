@@ -30,6 +30,24 @@
     <!-- See countdown.js -->
     <div id="js-countdown"></div>
 
+    <!-- Countdown -->
+    <script src="@{'/public/javascripts/libs/jquery.countdown.min.js'}"></script>
+    <script type="module">
+        import initCountdown from "@{'/public/javascripts/countdown.js'}";
+        initCountdown(
+            {
+                eventStartDate: "${eventStartDate}", 
+                eventEndDate: "${eventEndDate}"
+            },
+            {
+                countDownDaysLabel: "&{'tags.countdown.days'}",
+                countDownHoursLabel: "&{'tags.countdown.hours'}",
+                countDownMinutesLabel: "&{'tags.countdown.minutes'}",
+                countDownSecondsLabel: "&{'tags.countdown.seconds'}",
+            }
+        );
+    </script>
+
 </div> <!-- /.parallax -->
 
 
