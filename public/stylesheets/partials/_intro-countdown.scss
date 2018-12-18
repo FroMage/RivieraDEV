@@ -1,0 +1,122 @@
+$counter-item-size: 12rem;
+
+.introCountdown {
+    @include notFullWidth;
+
+    display: grid;
+
+    @media (min-width: $screen-md-min) {
+        grid-template-columns: auto auto;
+    }
+}
+
+.intro {
+    background-color: $color-grey-ultralight;
+    border-radius: $border-radius-md $border-radius-md 0 0;
+    padding: $space-xl;
+    display: grid;
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+        text-align: left;
+    }
+
+    @media (min-width: $screen-md-min) {
+        border-radius: $border-radius-md 0 0 $border-radius-md;
+    }
+
+    &__title {
+        font-size: $font-xl;
+    }
+
+    &__subtitle {
+        font-size: $font-lg;
+        font-weight: 300;
+        margin: $space-md 0 $space-lg 0;
+    }
+    &__subtitle1 {
+        display: block;
+    }
+
+    &__questions {
+        display: grid;
+
+        @media (min-width: $screen-sm-min) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+.question {
+    display: grid;
+    grid-template-areas:
+        'icon title'
+        'answer answer';
+    grid-template-columns: $icon-size-md auto;
+    grid-template-rows: 1fr 1fr;
+    column-gap: $space-sm;
+    row-gap: $space-sm;
+
+    &__icon {
+        grid-area: icon;
+        color: $color-orange;
+        font-size: $icon-size-md;
+        text-align: center;
+        align-self: center;
+    }
+
+    &__title {
+        grid-area: title;
+        align-self: center;
+        font-size: $font-sm;
+    }
+
+    &__answer {
+        grid-area: answer;
+        font-size: $font-xxs;
+        font-weight: 300;
+    }
+}
+
+.countdown {
+    padding: $space-lg;
+    border-radius: 0 0 $border-radius-md $border-radius-md;
+    background: linear-gradient($color-blue, $color-blue-medium);
+    display: grid;
+    column-gap: $space-lg;
+    row-gap: $space-lg;
+    grid-template-columns: $counter-item-size $counter-item-size;
+    grid-template-rows: $counter-item-size $counter-item-size;
+    justify-content: center;
+
+    @media (min-width: $screen-sm-min) {
+        grid-template-columns: $counter-item-size $counter-item-size $counter-item-size $counter-item-size;
+        grid-template-rows: $counter-item-size;
+    }
+
+    @media (min-width: $screen-md-min) {
+        border-radius: 0 $border-radius-md $border-radius-md 0;
+        background: linear-gradient(to right, $color-blue, $color-blue-medium);
+        grid-template-columns: $counter-item-size $counter-item-size;
+        grid-template-rows: $counter-item-size $counter-item-size;
+    }
+
+    &__item {
+        background-color: $color-blue-light;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__number {
+        font-size: $font-xxl;
+        margin-bottom: $space-sm;
+    }
+
+    &__desc {
+        text-transform: uppercase;
+        font-size: $font-xxs;
+    }
+}
