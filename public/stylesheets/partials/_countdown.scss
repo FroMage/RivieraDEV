@@ -1,44 +1,88 @@
-$counter-item-size: 12rem;
+// Used only in live.scss
+
+$countdown-width: 11.3em;
+$countdown-height: 3em;
+$countdown-font-size: 4;
 
 .countdown {
-    padding: $space-lg;
-    border-radius: 0 0 $border-radius-md $border-radius-md;
-    background: linear-gradient($color-blue, $color-blue-medium);
-    display: grid;
-    column-gap: $space-lg;
-    row-gap: $space-lg;
-    grid-template-columns: $counter-item-size $counter-item-size;
-    grid-template-rows: $counter-item-size $counter-item-size;
-    justify-content: center;
+    @include text-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    color: #fff;
+    position: absolute;
+    font-size: #{$countdown-font-size}em;
+    width: $countdown-width;
+    height: $countdown-height;
+    //right: 2em;
+    // Centers countdown horizontally
+    left: calc(50% - (#{$countdown-width} / 2));
+    bottom: -1em;
+    padding: 0.5em 0.5em;
+    //background-color: rgba(35, 35, 35, 0.9);
 
-    @media (min-width: $screen-sm-min) {
-        grid-template-columns: $counter-item-size $counter-item-size $counter-item-size $counter-item-size;
-        grid-template-rows: $counter-item-size;
+    &-parent {
+        position: relative;
+        margin-bottom: ($countdown-height / 3) * $countdown-font-size;
+        padding-bottom: ($countdown-height / 2) * $countdown-font-size;
     }
 
-    @media (min-width: $screen-md-min) {
-        border-radius: 0 $border-radius-md $border-radius-md 0;
-        background: linear-gradient(to right, $color-blue, $color-blue-medium);
-        grid-template-columns: $counter-item-size $counter-item-size;
-        grid-template-rows: $counter-item-size $counter-item-size;
+    &-day,
+    &-hour,
+    &-min,
+    &-sec {
+        display: inline-block;
+        width: 2.2em;
+        height: 2.2em;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 0.5em;
+        padding-top: 0.1em;
     }
 
-    &__item {
-        background-color: $color-blue-light;
-        color: $color-white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    &-day {
+        background-color: $color-blue-transparent;
+    }
+
+    &-hour {
+        background-color: $color-purple-transparent;
+    }
+
+    &-min {
+        background-color: $color-yellow-transparent;
+    }
+
+    &-sec {
+        background-color: $color-green-transparent;
+    }
+
+    &-sec {
+        margin-right: 0;
+    }
+
+    &-number,
+    &-desc {
+        display: block;
+        float: left;
+        width: 100%;
         text-align: center;
     }
 
-    &__number {
-        font-size: $font-xxl;
-        margin-bottom: $space-sm;
+    &-desc {
+        font-size: 0.27em;
+        line-height: 1.8em;
     }
 
-    &__desc {
-        text-transform: uppercase;
-        font-size: $font-xxs;
+    &-number {
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .countdown,
+    .countdown-bg {
+        font-size: 2em;
+    }
+
+    .countdown-parent {
+        margin-bottom: 3em;
+        padding-bottom: 3em;
     }
 }
