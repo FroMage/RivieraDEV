@@ -40,6 +40,7 @@ $counter-item-size: 12rem;
 
     &__questions {
         display: grid;
+        row-gap: $space-sm;
 
         @media (min-width: $screen-sm-min) {
             grid-template-columns: 1fr 1fr 1fr;
@@ -48,32 +49,42 @@ $counter-item-size: 12rem;
 }
 
 .question {
-    display: grid;
-    grid-template-areas:
-        'icon title'
-        'answer answer';
-    grid-template-columns: $icon-size-md auto;
-    grid-template-rows: 1fr 1fr;
-    column-gap: $space-sm;
-    row-gap: $space-sm;
-
-    &__icon {
-        grid-area: icon;
-        color: $color-orange;
-        font-size: $icon-size-md;
-        text-align: center;
-        align-self: center;
-    }
-
     &__title {
         grid-area: title;
         align-self: center;
         font-size: $font-sm;
+        margin-bottom: $space-sm;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            margin-right: $space-sm;
+            width: $icon-size-lg;
+            height: $icon-size-lg;
+            fill: $color-orange;
+            background-repeat: no-repeat;
+            background-position: center;
+            vertical-align: middle;
+
+            @media (min-width: $screen-sm-min) {
+                width: $icon-size-md;
+                height: $icon-size-md;
+            }
+        }
+
+        &--what::before {
+            background-image: url(../images/icons/what.svg);
+        }
+        &--when::before {
+            background-image: url(../images/icons/when.svg);
+        }
+        &--where::before {
+            background-image: url(../images/icons/where.svg);
+        }
     }
 
     &__answer {
-        grid-area: answer;
-        font-size: $font-xxs;
+        font-size: $font-xs;
         font-weight: 300;
     }
 }
