@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.88 28.192">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fdba1d;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fdba1d;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_4" data-name="Groupe 4" transform="translate(-976.48 -546.5)">
+    <g id="Groupe_3" data-name="Groupe 3" transform="translate(977 547)">
+      <path id="Tracé_25" data-name="Tracé 25" class="cls-1" d="M9.963,0A9.55,9.55,0,0,1,18.7,5.417a9.385,9.385,0,0,1-.6,9.944c-2.5,3.771-5.079,7.5-7.624,11.242a1.44,1.44,0,0,1-.531.521c-.368.164-.634-.061-.838-.388q-2.836-4.4-5.682-8.789c-.613-.94-1.247-1.87-1.829-2.831a9.465,9.465,0,0,1-.368-9.873A9.574,9.574,0,0,1,9.963,0ZM9.738,25.346c.133-.184.225-.307.317-.429,2.3-3.373,4.62-6.745,6.888-10.138a8.187,8.187,0,0,0,.347-9.249,8.156,8.156,0,0,0-8.268-4.17A8.527,8.527,0,0,0,2.676,14.441c1.247,2.034,2.586,4.006,3.873,6.01C7.6,22.055,8.655,23.67,9.738,25.346Z" transform="translate(-0.009)"/>
+    </g>
+    <g id="Ellipse_1" data-name="Ellipse 1" class="cls-2" transform="translate(981.407 551.407)">
+      <circle class="cls-3" cx="5.509" cy="5.509" r="5.509"/>
+      <circle class="cls-4" cx="5.509" cy="5.509" r="4.509"/>
+    </g>
+  </g>
+</svg>
