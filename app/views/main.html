@@ -94,140 +94,53 @@
     <body>
         <div class="loading"></div>
 
-        <nav
-            class="navbar navbar-default navbar-fixed-top navbar-animated js-navbar-animated"
-        >
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button
-                        type="button"
-                        class="navbar-toggle collapsed"
-                        data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1"
-                        aria-expanded="false"
-                    >
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="navbar-animated-logos">
-                        <a
-                            class="navbar-brand navbar-animated-brand"
-                            href="@{Application.index}"
-                        >
-                            <span
-                                class="navbar-rivieradev navbar-animated-logo"
-                            >
-                                <img
-                                    src="@{'/public/images/logo_RD_black.svg'}"
-                                    alt="RivieraDEV"
-                                />
-                            </span>
-                            <span
-                                id="navbar-RedHat"
-                                class="navbar-RedHat navbar-animated-logo"
-                                href="@{Application.index}"
-                            >
-                                <span class="navbar-RedHat--featuring"
-                                    >&{'views.main.logo.featuring'}</span
-                                ><!-- Do not remove this comment
-                                --><img
-                                    src="@{'/public/images/logos/judcon.png'}"
-                                    alt="JUDCon2017:Riviera"
-                                    class="navbar-RedHat--logo"
-                                />
-                            </span>
-                        </a>
-                    </div>
-                </div>
+        <nav class="menu js-navbar-animated">
+            <a
+                href="@{Application.index}"
+                class="menu__item menu__item--current"
+                >HOME</a
+            >
 
-                <!--
-                    Collect the nav links, forms, and other content for toggling
-                -->
-                <div
-                    class="collapse navbar-collapse"
-                    id="bs-example-navbar-collapse-1"
-                >
-                    <ul class="nav navbar-nav navbar-right">
-                        <li
-                            class="dropdown ${(request.action == 'Application.schedule' 
-                                        || request.action == 'Application.speakers'
-                                        || request.action == 'Application.speaker'
-                                        || request.action == 'Application.talks'
-                                        || request.action == 'Application.talk') 
-                                        ? 'active' : ''}">
-                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            &{'views.main.schedule'}
-                            <i class="fa fa-angle-down dropdown-caret" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="${request.action == 'Application.schedule' ? 'active' : ''}">
-                                <a href="@{Application.schedule}">&{'views.main.schedule'}</a>
-                            </li>
-                            <li class="${(request.action == 'Application.speakers' || request.action == 'Application.speaker') ? 'active' : ''}">
-                                <a href="@{Application.speakers}">&{'views.main.speakers'}</a>
-                            </li>
-                            #{if displayTalks}
-                            <li class="${(request.action == 'Application.talks' || request.action == 'Application.talk') ? 'active' : ''}">
-                                <a href="@{Application.talks}">&{'views.main.talks'}</a>
-                            </li>
-                            #{/if}
-                            <li class="${(request.action == 'Application.judcon') ? 'active' : ''}">
-                                <a href="@{Application.judcon}">&{'views.main.judcon'}</a>
-                            </li>
-                            
-                        </ul>
-                    </li>
+            <a
+                href="@{Application.cfp}"
+                class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
+                >&{'views.main.cfp'}</a
+            >
 
-                    <li class="${request.action == 'Application.cfp' ? 'active' : ''}">
-                        <a class="navbar-animated-link js-navbar-link-primary" href="@{Application.cfp}">
-                            <span class="${promotedPage == 'CFP'? 'label label-primary':'' }">&{'views.main.cfp'}</span>
-                        </a>
-                    </li>
-                    <li class="${request.action == 'Application.subscribe' ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.subscribe}">
-                            <span class="${promotedPage == 'TICKETS'? 'label label-primary':'' }">&{'views.main.tickets'}</span>
-                        </a>
-                    </li>
-                    <li class="${request.action == 'Application.access' ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.access}">&{'views.main.access'}</a>
-                    </li>
-                    <li class="${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.organisers}">&{'views.main.team'}</a>
-                    </li>
-                    <li class="${request.action == 'Application.photos' ? 'active' : ''}">
-                        <a class="navbar-animated-link" href="@{Application.photos}">&{'views.main.photos'}</a>
-                    </li>
-                    <li class="dropdown ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'active' : ''}">
-                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <span class="${promotedPage == 'SPONSORS'? 'label label-primary':'' }">&{'views.main.sponsors'}</span>
-                            <i class="fa fa-angle-down dropdown-caret" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="${request.action == 'Application.sponsors' ? 'active' : ''}">
-                                <a href="@{Application.sponsors}">&{'views.main.sponsors.list'}</a>
-                            </li>
-                            <li class="${request.action == 'Application.becomeSponsor' ? 'active' : ''}">
-                                <a href="@{Application.becomeSponsor}">&{'views.main.sponsors.join'}</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle navbar-animated-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            &{'views.main.language'}
-                            <i class="fa fa-angle-down dropdown-caret" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="@{Application.fr(request.url)}">&{'views.main.language.fr'}</a></li>
-                            <li><a href="@{Application.en(request.url)}">&{'views.main.language.en'}</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+            <a
+                href="@{Application.subscribe}"
+                class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
+                >&{'views.main.tickets'}</a
+            >
+
+            <a
+                href="@{Application.organisers}"
+                class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}"
+                >&{'views.main.team'}</a
+            >
+
+            <a
+                href="@{Application.sponsors}"
+                class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
+                >&{'views.main.sponsors'}</a
+            >
+            <a
+                href="@{Application.access}"
+                class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
+                >&{'views.main.access'}</a
+            >
+            <a
+                href="@{Application.en(request.url)}"
+                class="menu__item menu__langue menu__langue--selected"
+                >&{'views.main.language.en'}</a
+            >
+            <span class="menu__langueSeparator">/</span>
+            <a
+                href="@{Application.fr(request.url)}"
+                class="menu__item menu__langue"
+                >&{'views.main.language.fr'}</a
+            >
+        </nav>
 
 <!--
 <li><a href="@{Application.about}">La conférence</a></li>
