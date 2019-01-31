@@ -1,302 +1,61 @@
-nav a {
-    text-decoration: none;
+.menu {
+    $border_size: 0.15rem;
+
+    padding: 0.5rem 0.5em $border_size 0.5rem;
+    z-index: 1;
+    font-family: $font_family;
+    font-size: $font-xs;
+    position: fixed;
+    right: 0;
+    left: 0;
+    text-align: right;
+    height: 3rem;
+
+    &__item {
+        display: inline-block;
+        padding: 1rem;
+        margin-left: 1rem;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+            border-bottom: solid $border_size $color-blue;
+        }
+
+        &--current {
+            border-bottom: solid $border_size $color_yellow;
+        }
+    }
+
+    &__langue {
+        color: white;
+        text-decoration: none;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:last-child {
+            margin-left: 0;
+        }
+
+        &--selected,
+        &--selected:hover {
+            color: $color_yellow;
+        }
+    }
+
+    &__langueSeparator {
+        color: white;
+    }
 }
 
 .navbar-animated {
-    min-height: $navbar-small-height;
-    height: $navbar-height;
-    line-height: $navbar-height;
-    background: #fff;
-
-    @include transition(all 0.3s);
-
-    & .container-fluid{
-        background-color: $color-white;
+    transition: all 0.5s;
+    &-small {
+        background-color: white;
+        color: black;
     }
-
-    &-logos {
-        margin-left: 0.5em;
-    }
-
-    &-brand {
-        padding: 0;
-        height: auto;
-        @include display-flex;
-        @include flex-direction(row);
-        @include justify-content(flex-start);
-        @include flex-wrap(wrap);
-    }
-
-    &-logo {
-        @include transition(all 0.3s);
-        padding: 0;
-        margin: 0;
-        
-        img {
-            height: 100%;
-        }
-    }
-
-}
-
-// Complicated selectors to override those of Bootstrap
-.nav>li>a {
-    padding: 10px 10px;
-}
-
-li a.navbar-animated-link {
-    @include transition(height 0.3s, line-height 0.3s);
-    height: $navbar-height;
-    line-height: $navbar-height;
-    padding-top: 0;
-    padding-bottom: 0;
-
-    &:hover,
-    &:focus,
-    &:active {
-        border-bottom: 4px solid $color-blue;
-    }
-}
-
-.navbar-default .navbar-nav > li a.navbar-animated-link {
-    color: $color-gray-dark;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $color-black-light;
-    }
-}
-
-.navbar-default .navbar-nav > li.active a.navbar-animated-link {
-    background-image: none;
-    background-color: $color-white;
-    border-bottom: 4px solid $color-yellow;
-    @include box-shadow(none);
-
-    &:hover,
-    &:focus,
-    &:active {
-        border-color: $color-blue;
-    }
-}
-
-li.open a.navbar-animated-link {
-    border-bottom: 4px solid $color-blue;
-}
-
-
-
-.navbar-default .navbar-nav > li.open > a.navbar-animated-link {
-    &:hover,
-    &:focus,
-    &:active {
-        background-image: none;
-        background-color: $color-white;
-    }
-}
-
-.dropdown-caret {
-    font-size: 1.2em;
-    padding-left: 0.2em;
-}
-
-ul.dropdown-menu {
-    padding: 0;
-    border: none;
-    @include border-radius(0);
-}
-
-
-ul.dropdown-menu > li > a {
-    color: $color-gray-dark;
-    padding: 0.8em 1em;
-    border-left: 4px solid $color-white;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-image: none;
-        background-color: $color-white;
-        border-color: $color-blue;
-        color: $color-black-light;
-    }
-}
-
-ul.dropdown-menu > li.active > a {
-    background-color: $color-white;
-    border-color: $color-yellow;
-    background-image: none;
-    color: $color-gray-dark;
-    
-    &:hover,
-    &:focus,
-    &:active {
-        background-image: none;
-        background-color: $color-white;
-        border-color: $color-blue;
-        color: $color-black-light;
-    }
-}
-
-.navbar-animated-small{
-    height: $navbar-small-height;
-    line-height: $navbar-small-height;
-
-    .navbar-rivieradev {
-        height: $navbar-small-height;
-        line-height: $navbar-small-height;
-    }
-
-    li a.navbar-animated-link{
-        height: $navbar-small-height;
-        line-height: $navbar-small-height;
-    }
-
-    & .navbar-RedHat{
-        font-size: 0.65em;
-    }
-}
-
-.navbar .label-primary {
-    font-size: 100%;
-    padding: 0.6em 1em 0.7em 1em;
-    background-color: $color-yellow;
-}
-
-.navbar{
-    &-rivieradev {
-        margin-right: 0.3em;
-        height: $navbar-height;
-        line-height: $navbar-height;
-    }
-    &-RedHat{
-        @include display-flex();
-        & img.navbar-RedHat--logo{
-            display: inline-block;
-            @include align-self(flex-end);
-            height: 2em;
-            margin-right: 0.5em;
-            margin-bottom: 0.05em;
-        }
-        &--featuring{
-            display: inline-block;
-            height: 1em;
-            line-height: 1em;
-            @include align-self(flex-end);
-            margin-bottom: 0.45em;
-        }
-    }
-}
-// To override bootstrap selector
-#navbar-RedHat{
-    margin-left: 0;
-    align-self: flex-end;
-}
-
-
-.navbar-fixed-top .navbar-collapse {
-    max-height: 100vh;
-    background-color: $color-white;
-
-    &.in {
-        @include box-shadow(0 3px 3px rgba(0,0,0,0.2));
-    }
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: transparent;
-
-        .icon-bar {
-            background-color: $color-blue;
-        }
-    }
-
-}
-
-// ----- Only on mobile ---------------------------------------------------------------------------
-
-@media (max-width: $screen-md-min) {
-
-    body{
-        padding-top: 0;
-    }
-
-    .navbar-fixed-top {
-        position: inherit;
-        margin-bottom: 0;
-
-        // Override bootstrap design
-        background-image: none;
-        background-color: $color-white;
-    }
-
-    .navbar-animated{
-        height: $navbar-small-height;
-        line-height: $navbar-small-height;
-
-        &-brand {
-            // Viewport width - burger menu width - some padding and margin
-            width: calc(100vw - 80px);
-        }
-
-    }
-
-    .navbar-rivieradev {
-        height: $navbar-small-height;
-        line-height: $navbar-small-height;
-    }
-
-    // Complicated selectors to override those of Bootstrap :-(
-
-    li a.navbar-animated-link{
-        height: $navbar-small-height;
-        line-height: $navbar-small-height;
-        border-left: 4px solid $color-white;
-
-        &:hover,
-        &:focus,
-        &:active {
-            border-bottom: none;
-            border-color: $color-blue;
-        }
-    }
-
-    .navbar-default .navbar-nav > li.open > a.navbar-animated-link {
-        &:hover,
-        &:focus,
-        &:active {
-            background-image: none;
-            background-color: $color-white;
-        }
-    }
-
-    .navbar .navbar-nav .open .dropdown-menu > .active > a,
-    .navbar-default .navbar-nav > li.active a.navbar-animated-link {
-        background-image: none;
-        background-color: $color-white;
-        border-bottom: none;
-        border-left: 4px solid $color-yellow;
-        color: $color-black-light;
-
-        &:hover,
-        &:focus,
-        &:active {
-            background-image: none;
-            background-color: $color-white;
-            border-color: $color-blue;
-            color: $color-black-light;
-        }
-    }
-
-    #navbar-RedHat{
-        font-size: 0.6em;
-        margin-left: 0;
-    }
-
 }
