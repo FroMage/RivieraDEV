@@ -129,15 +129,16 @@
                 class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
                 >&{'views.main.access'}</a
             >
+
             <a
                 href="@{Application.en(request.url)}"
-                class="menu__item menu__langue menu__langue--selected"
+                class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}"
                 >&{'views.main.language.en'}</a
             >
             <span class="menu__langueSeparator">/</span>
             <a
                 href="@{Application.fr(request.url)}"
-                class="menu__item menu__langue"
+                class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}"
                 >&{'views.main.language.fr'}</a
             >
         </nav>
