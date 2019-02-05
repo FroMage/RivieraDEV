@@ -1,19 +1,35 @@
 .parallax {
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     &-home {
-        background-image: url('../images/header_parallax_4_flou.jpg');
+        position: relative;
+        background-image: url('../images/photos/2018.jpg');
         //filter: blur(20px);
 
-        &-location{
+
+        /*&__gradiant {
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(80, 80, 80, 0.36) 0%,
+                #333333 100%
+            );
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }*/
+
+        &-location {
             background-image: url('../images/location_parallax.jpg');
             height: 250px;
         }
 
-        &-partenaires{
+        &-partenaires {
             background-image: url('../images/sponsors_parallax_2.jpg');
             height: 250px;
         }
@@ -24,34 +40,35 @@
         font-size: $font-size-title;
     }
 
-    &-title {
+    &--welcome {
+        font-family: $font_family;
         text-align: center;
         padding-top: 7em;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
-        &-title {
+        &__logo {
+            width: 35vw;
+        }
+
+        &__info {
             color: white;
-            margin-top: 0;
-            font-size: 3.5em;
-            font-weight: 600;
+            font-size: $font-xl;
+            margin-bottom: 3rem;
             text-transform: uppercase;
         }
 
-        &-subtitle {
-            color: white;
-            font-size: 2em;
-            font-weight: inherit;
-        }
+        &__icon {
+            font-size: $font-xl;
+            color: $color_yellow;
+            margin: 0 0.5rem;
+        } 
     }
 }
 
-
 @media (max-width: $screen-xs-max) {
-
     .parallax {
         &-title {
             padding-top: 1.5em;
         }
     }
-
 }

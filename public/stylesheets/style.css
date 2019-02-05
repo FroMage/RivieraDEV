@@ -318,18 +318,19 @@ a:hover, a:active, a:focus {
   left: 0;
   text-align: right;
   height: 3rem;
+  color: white;
 }
 .menu__item {
   display: inline-block;
   padding: 1rem;
   margin-left: 1rem;
-  color: white;
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
 }
 .menu__item:hover {
-  color: white;
+  color: inherit;
   text-decoration: none;
   border-bottom: solid 0.15rem #19b8d5;
 }
@@ -337,7 +338,7 @@ a:hover, a:active, a:focus {
   border-bottom: solid 0.15rem #fdb742;
 }
 .menu__langue {
-  color: white;
+  color: inherit;
   text-decoration: none;
   padding-left: 0;
   padding-right: 0;
@@ -349,7 +350,7 @@ a:hover, a:active, a:focus {
   color: #fdb742;
 }
 .menu__langueSeparator {
-  color: white;
+  color: inherit;
 }
 
 .navbar-animated {
@@ -358,16 +359,31 @@ a:hover, a:active, a:focus {
 .navbar-animated-small {
   background-color: white;
   color: black;
+  height: 4.5rem;
 }
 
 .parallax {
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .parallax-home {
-  background-image: url("../images/header_parallax_4_flou.jpg");
+  position: relative;
+  background-image: url("../images/photos/2018.jpg");
+  /*&__gradiant {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(80, 80, 80, 0.36) 0%,
+          #333333 100%
+      );
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  }*/
 }
 .parallax-home-location {
   background-image: url("../images/location_parallax.jpg");
@@ -381,22 +397,25 @@ a:hover, a:active, a:focus {
   height: auto;
   font-size: 2.8em;
 }
-.parallax-title {
+.parallax--welcome {
+  font-family: Roboto, Noto, sans-serif;
   text-align: center;
   padding-top: 7em;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
-.parallax-title-title {
+.parallax--welcome__logo {
+  width: 35vw;
+}
+.parallax--welcome__info {
   color: white;
-  margin-top: 0;
-  font-size: 3.5em;
-  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
 }
-.parallax-title-subtitle {
-  color: white;
-  font-size: 2em;
-  font-weight: inherit;
+.parallax--welcome__icon {
+  font-size: 2.5rem;
+  color: #fdb742;
+  margin: 0 0.5rem;
 }
 
 @media (max-width: 767px) {
