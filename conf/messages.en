@@ -35,7 +35,8 @@ views.application.common.website=Website
 views.application.openGraph=Riviera DEV, that’s 3 days of conferences and workshops on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
 
 views.application.index.title=Welcome
-views.application.index.subtitle=May 15-16-17 2019 in Sophia Antipolis
+views.application.index.date=May 15-16-17 2019
+views.application.index.place=Sophia Antipolis
 views.application.index.tickets=Tickets
 views.application.index.cfp.join=Talk at Riviera DEV
 views.application.index.cfp.join.short=Come speak
