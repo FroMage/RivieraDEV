@@ -366,9 +366,9 @@ a:hover, a:active, a:focus {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 10% 0 20%;
 }
 .parallax-home {
-  position: relative;
   background-image: url("../images/photos/2018.jpg");
   /*&__gradiant {
       content: '';
@@ -400,8 +400,6 @@ a:hover, a:active, a:focus {
 .parallax--welcome {
   font-family: Roboto, Noto, sans-serif;
   text-align: center;
-  padding-top: 7em;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .parallax--welcome__logo {
   width: 35vw;
@@ -413,9 +411,11 @@ a:hover, a:active, a:focus {
   text-transform: uppercase;
 }
 .parallax--welcome__icon {
-  font-size: 2.5rem;
+  width: 2.5rem;
+  vertical-align: baseline;
   color: #fdb742;
   margin: 0 0.5rem;
+  width: 1.8rem;
 }
 
 @media (max-width: 767px) {
@@ -423,13 +423,40 @@ a:hover, a:active, a:focus {
     padding-top: 1.5em;
   }
 }
-.registration-buttons {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  text-align: center;
-}
 .registration-partenaire {
   margin-top: 1em;
+}
+.registration--buttons {
+  display: flex;
+  width: 35vw;
+  margin: 0 auto;
+}
+.registration__button {
+  flex: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fdb742;
+  padding: 1.2rem 2rem;
+  border: 0.1rem solid #fdb742;
+  border-radius: 3rem;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.registration__button:hover {
+  color: white;
+  text-decoration: none;
+  border-color: #19b8d5;
+  background-color: #19b8d5;
+}
+.registration__button:first-child, .registration__button:last-child {
+  margin-right: 2rem;
+}
+.registration__button--promoted {
+  color: white;
+  background-color: #fdb742;
 }
 
 @media (max-width: 767px) {
@@ -444,6 +471,8 @@ a:hover, a:active, a:focus {
 .introCountdown {
   width: 100%;
   margin: 0 auto;
+  /* To be displayed partially on Welcome picture */
+  margin-top: -10%;
   display: grid;
 }
 @media (min-width: 768px) {
