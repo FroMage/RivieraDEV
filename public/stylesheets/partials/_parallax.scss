@@ -5,23 +5,8 @@
     padding: 10% 0 20%;
 
     &-home {
-        background-image: url('../images/photos/2018.jpg');
-        //filter: blur(20px);
-
-        /*&__gradiant {
-            content: '';
-            display: block;
-            position: absolute;
-            background-image: linear-gradient(
-                to bottom,
-                rgba(80, 80, 80, 0.36) 0%,
-                #333333 100%
-            );
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }*/
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+            url(../images/photos/2018.jpg);
 
         &-location {
             background-image: url('../images/location_parallax.jpg');
