@@ -1,21 +1,51 @@
 .registration {
-    &-buttons {
-        margin-top: 3em;
-        margin-bottom: 3em;
-        text-align: center;
-    }
-
-    &-partenaire{
+    &-partenaire {
         margin-top: 1em;
     }
 
+    &--buttons {
+        display: flex;
+        width: 35vw;
+        margin: 0 auto;
+    }
+
+    &__button {
+        flex: 1;
+        white-space: nowrap;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+
+        font-size: $font-md;
+        color: $color_yellow;
+        padding: 1.2rem 2rem;
+        border: 0.1rem solid $color_yellow;
+        border-radius: 3rem;
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+            border-color: $color-blue;
+            background-color: $color-blue;
+        }
+
+        &:first-child,
+        &:last-child {
+            margin-right: 2rem;
+        }
+
+        &--promoted {
+            color: white;
+            background-color: $color_yellow;
+        }
+    }
 }
 
-
 @media (max-width: $screen-xs-max) {
-
-    .registration{
-
+    .registration {
         &-buttons {
             margin-top: 1em;
             margin-bottom: 1em;
@@ -24,6 +54,5 @@
         &-button {
             margin: 0.2em;
         }
-
     }
 }

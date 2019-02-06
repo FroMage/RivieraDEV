@@ -7,80 +7,79 @@
     </div>
 
     <div class="parallax--welcome">
-        <img class="title parallax--welcome__logo" src="@{'/public/images/logos/logo_RD_full_white.svg'}" alt="RivieraDEV">
-        <div class="title parallax--welcome__info">
+        <img class="parallax--welcome__logo" src="@{'/public/images/logos/logo_RD_full_white.svg'}" alt="RivieraDEV">
+        <div class="parallax--welcome__info">
             <span>&{'views.application.index.date'}</span>
-            <i class="parallax--welcome__icon fas fa-map-marker-alt"></i>
+            <img class="parallax--welcome__icon" src="@{'/public/images/icons/where.svg'}" alt="">
             <span>&{'views.application.index.place'}</span>
         </div>
     </div>
 
-    <div class="registration-buttons js-registration-buttons">
+    <div class="registration--buttons js-registration-buttons">
         #{if promotedPage == 'CFP'}
-            <a class="btn btn-primary btn-lg button" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
+            <a class="registration__button registration__button--promoted" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
         #{/if}
         #{elseif promotedPage == 'TICKETS'}
-            <a class="btn btn-primary btn-lg button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
+            <a class="registration__button registration__button--promoted" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
         #{/elseif}
         #{elseif promotedPage == 'SPONSORS'}
-            <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+            <a class="registration__button registration__button--promoted" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
         #{/elseif}
 
         #{if promotedPage2 == 'SPONSORS'}
-            <a class="btn btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+            <a class="registration__button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
         #{/if}
         #{elseif promotedPage2 == 'SCHEDULE'}
-            <a class="btn btn-lg button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
+            <a class="registration__button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
         #{/elseif}
     </div>
 
-    <div class="introCountdown">
-    
-        <div class="introCountdown__intro intro">
-          
-          <div class="intro__titles">
-            <div class="intro__title">RivieraDEV</div>
-            <div class="intro__subtitle">
-              <span class="intro__subtitle1">&{'views.application.index.intro.subtitle1'}</span>
-              <span class="intro__subtitle2">&{'views.application.index.intro.subtitle2'}</span>
-            </div>
-          </div> <!-- /intro_titles -->
-    
-          <div class="intro__questions">
-    
-            <div class="intro__question question">
-              <div class="question__title question__title--what">&{'views.application.index.questions.what'}</div>
-              <div class="question__answer">
-                &{'views.application.index.questions.what.answer'}
-              </div>
-            </div> <!-- /intro__question -->
-    
-            <div class="intro__question question">
-              <div class="question__title question__title--when">&{'views.application.index.questions.when'}</div>
-              <div class="question__answer">
-                &{'views.application.index.questions.when.answer'}
-              </div>
-            </div> <!-- /intro__question -->
-    
-            <div class="intro__question question">
-              <div class="question__title question__title--where">&{'views.application.index.questions.where'}</div>
-              <div class="question__answer">
-                &{'views.application.index.questions.where.answer'}
-              </div>
-            </div> <!-- /intro__question -->
-    
-          </div> <!-- /intro__questions -->
-        </div> <!-- /intro -->
-        
-        <!-- See countdown.js -->
-        <div id="js-countdown"></div>
-
-    </div> <!-- /introCountdown -->
-
 </div> <!-- /.parallax -->
 
+<div class="container introduction"></div>
 
-<div class="container introduction">
+<div class="introCountdown">
+    
+    <div class="introCountdown__intro intro">
+      
+      <div class="intro__titles">
+        <div class="intro__title">RivieraDEV</div>
+        <div class="intro__subtitle">
+          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle1'}</span>
+          <span class="intro__subtitle2">&{'views.application.index.intro.subtitle2'}</span>
+        </div>
+      </div> <!-- /intro_titles -->
+
+      <div class="intro__questions">
+
+        <div class="intro__question question">
+          <div class="question__title question__title--what">&{'views.application.index.questions.what'}</div>
+          <div class="question__answer">
+            &{'views.application.index.questions.what.answer'}
+          </div>
+        </div> <!-- /intro__question -->
+
+        <div class="intro__question question">
+          <div class="question__title question__title--when">&{'views.application.index.questions.when'}</div>
+          <div class="question__answer">
+            &{'views.application.index.questions.when.answer'}
+          </div>
+        </div> <!-- /intro__question -->
+
+        <div class="intro__question question">
+          <div class="question__title question__title--where">&{'views.application.index.questions.where'}</div>
+          <div class="question__answer">
+            &{'views.application.index.questions.where.answer'}
+          </div>
+        </div> <!-- /intro__question -->
+
+      </div> <!-- /intro__questions -->
+    </div> <!-- /intro -->
+    
+    <!-- See countdown.js -->
+    <div id="js-countdown"></div>
+
+</div> <!-- /introCountdown -->
 
     <!-- Teaser vidéo -->
     <!--<div class="video">
