@@ -90,6 +90,29 @@ $pass-bg-color: #0a7db1;
     font-size: $font-xs;
   }
 
+  &__prices {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &__maxPrice {
+    margin-right: $space-md;
+    font-size: $font-lg;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $color-yellow-light;
+      height: 2px;
+      width: 120%;
+      top: 50%;
+      left: -10%;
+      transform: rotate(150deg);
+    }
+  }
+
   &__price {
     font-size: $font-xxxl;
     font-weight: 600;

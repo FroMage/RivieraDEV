@@ -98,16 +98,16 @@
 .personSummary-name {
   text-transform: uppercase;
   font-size: 1.1em;
-  color: #0090CD;
+  color: #0090cd;
 }
 .personSummary-title {
   font-style: italic;
 }
 
 .personSummary-link:hover .personSummary-photo, .personSummary-link:active .personSummary-photo, .personSummary-link:focus .personSummary-photo {
-  -moz-box-shadow: 0 0 0 5px #0090CD;
-  -webkit-box-shadow: 0 0 0 5px #0090CD;
-  box-shadow: 0 0 0 5px #0090CD;
+  -moz-box-shadow: 0 0 0 5px #0090cd;
+  -webkit-box-shadow: 0 0 0 5px #0090cd;
+  box-shadow: 0 0 0 5px #0090cd;
 }
 
 .personDetails {
@@ -118,14 +118,14 @@
   width: 100%;
   height: 5px;
   margin: 2em 0;
-  background-color: #0090CD;
+  background-color: #0090cd;
 }
 .personDetails-name-title {
   margin-bottom: 1em;
 }
 .personDetails-name {
   text-transform: uppercase;
-  color: #0090CD;
+  color: #0090cd;
   font-size: 1.3em;
 }
 .personDetails-title {
@@ -136,7 +136,7 @@
   height: auto;
 }
 .personDetails-icon {
-  color: #FDB742;
+  color: #fdb742;
   font-size: 1.3em;
 }
 .personDetails-link {
@@ -289,7 +289,7 @@
   display: block;
   margin-bottom: 0.5em;
   font-weight: 600;
-  color: #00709D;
+  color: #00709d;
 }
 .fullSchedule-talk-speakers {
   list-style-type: none;
@@ -355,19 +355,19 @@ th.fullSchedule-time-title {
   display: inline-block;
 }
 .talk-theme-blue {
-  background-color: #0090CD;
+  background-color: #0090cd;
 }
 .talksFilter-options .talk-theme-blue:hover, .talk-theme-blue:focus {
   background-color: #00a9f1;
 }
 .talk-theme-yellow {
-  background-color: #FDB742;
+  background-color: #fdb742;
 }
 .talksFilter-options .talk-theme-yellow:hover, .talk-theme-yellow:focus {
   background-color: #feca74;
 }
 .talk-theme-green {
-  background-color: #7BA218;
+  background-color: #7ba218;
 }
 .talksFilter-options .talk-theme-green:hover, .talk-theme-green:focus {
   background-color: #9dce1f;
@@ -385,7 +385,7 @@ th.fullSchedule-time-title {
   background-color: #ff9e63;
 }
 .talk-theme-red {
-  background-color: #CC0000;
+  background-color: #cc0000;
 }
 .talksFilter-options .talk-theme-red:hover, .talk-theme-red:focus {
   background-color: #f50000;
@@ -455,14 +455,14 @@ th.fullSchedule-time-title {
   width: 100%;
   height: 5px;
   margin: 2em 0;
-  background-color: #0090CD;
+  background-color: #0090cd;
 }
 .talkDetails-all:after {
   height: 0;
 }
 .talkDetails-title {
   text-transform: uppercase;
-  color: #0090CD;
+  color: #0090cd;
   font-size: 1.3em;
 }
 .talkDetails-description {
@@ -497,10 +497,10 @@ th.fullSchedule-time-title {
   vertical-align: middle;
   text-transform: uppercase;
   font-size: 1.1em;
-  color: #0090CD;
+  color: #0090cd;
 }
 .talkDetails-icon {
-  color: #FDB742;
+  color: #fdb742;
   font-size: 1.3em;
   text-align: center;
 }
@@ -512,9 +512,9 @@ th.fullSchedule-time-title {
   text-decoration: none;
 }
 .talkDetails-speaker:hover .talkDetails-speaker-photo, .talkDetails-speaker:focus .talkDetails-speaker-photo, .talkDetails-speaker:active .talkDetails-speaker-photo {
-  -moz-box-shadow: 0 0 0 3px #0090CD;
-  -webkit-box-shadow: 0 0 0 3px #0090CD;
-  box-shadow: 0 0 0 3px #0090CD;
+  -moz-box-shadow: 0 0 0 3px #0090cd;
+  -webkit-box-shadow: 0 0 0 3px #0090cd;
+  box-shadow: 0 0 0 3px #0090cd;
 }
 
 @media (max-width: 767px) {
@@ -557,9 +557,9 @@ th.fullSchedule-time-title {
   -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  border-right: 2px solid #FDB742;
-  border-bottom: 2px solid #FDB742;
-  border-left: 2px solid #FDB742;
+  border-right: 2px solid #fdb742;
+  border-bottom: 2px solid #fdb742;
+  border-left: 2px solid #fdb742;
 }
 
 .schedule-day {

@@ -44,8 +44,15 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
             &{'views.application.subscribe.pass.' + pricePack.type.code +
             '.days'}
           </div>
-          <div class="pass__price">
-            ${pricePack.currentPrice}€
+          <div class="pass__prices">
+            #{if pricePack.maxPrice != null }
+            <div class="pass__maxPrice">
+              ${pricePack.maxPrice}€
+            </div>
+            #{/if}
+            <div class="pass__price">
+              ${pricePack.currentPrice}€
+            </div>
           </div>
           <div class="pass__studentPrice">
             &{'views.application.subscribe.pass.student',
