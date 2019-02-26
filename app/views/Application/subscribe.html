@@ -1,15 +1,14 @@
-#{extends 'main.html' /}
-#{set title:play.i18n.Messages.get('views.application.subscribe.title') /}
+#{extends 'main.html' /} #{set
+title:play.i18n.Messages.get('views.application.subscribe.title') /}
 
 <div class="page-title-container">
-	<h1 class="title page-title">
-		<span>&{'views.application.subscribe.title'}</span>
-	</h1>
+  <h1 class="title page-title">
+    <span>&{'views.application.subscribe.title'}</span>
+  </h1>
 </div>
 
 <div class="container page-container page-container--fullWidth">
-
-	<!--
+  <!--
 	<div class="data-unavailable">
 		<p>
             &{'views.application.subscribe.unavailable'}
@@ -21,7 +20,7 @@
 	
 	# { newsletter / }
 -->
-	<!--
+  <!--
  <a title="Vente de billets en ligne" href="https://www.billetweb.fr/shop.php?event=riviera-dev-2019"  
   class="shop_frame"  target="_blank"  
   data-src="https://www.billetweb.fr/shop.php?event=riviera-dev-2019"  data-max-width="100%"  
@@ -29,166 +28,108 @@
  <script type="text/javascript" src="https://www.billetweb.fr/js/export.js"></script>
 -->
 
-	<div class="passes">
-
-		<div class="pass">
-			<div class="pass-mainContainer">
-				<div class="pass-main">
-					<div class="pass-pass">&{'views.application.subscribe.pass.pass'}</div>
-					<div class="pass-name">
-						&{'views.application.subscribe.pass.deepdive.name'}
-					</div>
-					<div class="pass-days">
-						&{'views.application.subscribe.pass.deepdive.days'}
-					</div>
-					<div class="pass-price">
-						&{'views.application.subscribe.pass.deepdive.price'}
-					</div>
-					<div class="pass-studentPrice">
-						&{'views.application.subscribe.pass.deepdive.student'}
-					</div>
-				</div>
-			</div>
-			<div class="pass-descriptionContainer">
-				<ul class="pass-description">
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.deepdive.conferences'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.deepdive.workshops'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.buffet'}
-					</li>
-				</ul>
-				#{if ticketingIsOpen}
-					<a class="pass-buy btn button button-small" href="${ticketingUrl}" target="_blank">
-						&{'views.application.subscribe.pass.buy'}
-					</a>
-				#{/if}
-				#{else}
-					<div class="pass-saleover">&{'views.application.subscribe.pass.salenotyet'}</div>
-				#{/else}
-			</div>
-			<img class="pass-illustration" src="@{'/public/images/mascotte/Ray_Investigate.png'}" alt="">
-		</div>
-
-		<div class="pass">
-			<div class="pass-mainContainer">
-				<div class="pass-main">
-					<div class="pass-pass">&{'views.application.subscribe.pass.pass'}</div>
-					<div class="pass-name">
-						&{'views.application.subscribe.pass.conference.name'}
-					</div>
-					<div class="pass-days">
-						&{'views.application.subscribe.pass.conference.days'}
-					</div>
-					<div class="pass-price">
-						&{'views.application.subscribe.pass.conference.price'}
-					</div>
-					<div class="pass-studentPrice">
-						&{'views.application.subscribe.pass.conference.student'}
-					</div>
-				</div>
-			</div>
-			<div class="pass-descriptionContainer">
-				<ul class="pass-description">
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.conference.conferences'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.conference.snorkeling'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.conference.notjustcoders'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.buffets'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.party'}
-					</li>
-				</ul>
-				#{if ticketingIsOpen}
-					<a class="pass-buy btn button button-small" href="${ticketingUrl}" target="_blank">
-						&{'views.application.subscribe.pass.buy'}
-					</a>
-				#{/if}
-				#{else}
-					<div class="pass-saleover">&{'views.application.subscribe.pass.salenotyet'}</div>
-				#{/else}
-			</div>
-			<img class="pass-illustration" src="@{'/public/images/mascotte/Ray_IT.png'}" alt="">
-		</div>
-
-		<div class="pass">
-			<div class="pass-mainContainer">
-				<div class="pass-main">
-					<div class="pass-pass">&{'views.application.subscribe.pass.pass'}</div>
-					<div class="pass-name">
-						&{'views.application.subscribe.pass.combi.name'}
-					</div>
-					<div class="pass-days">
-						&{'views.application.subscribe.pass.combi.days'}
-					</div>
-					<div class="pass-price">
-						&{'views.application.subscribe.pass.combi.price'}
-					</div>
-					<div class="pass-studentPrice">
-						&{'views.application.subscribe.pass.combi.student'}
-					</div>
-				</div>
-			</div>
-			<div class="pass-descriptionContainer">
-				<ul class="pass-description">
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.deepdive.conferences'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.deepdive.workshops'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.conference.conferences'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.conference.snorkeling'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.conference.notjustcoders'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.buffets'}
-					</li>
-					<li class="pass-descriptionItem">
-						<i class="fas fa-check pass-check"></i>
-						&{'views.application.subscribe.pass.include.party'}
-					</li>
-				</ul>
-				#{if ticketingIsOpen}
-					<a class="pass-buy btn button button-small" href="${ticketingUrl}" target="_blank">
-						&{'views.application.subscribe.pass.buy'}
-					</a>
-				#{/if}
-				#{else}
-					<div class="pass-saleover">&{'views.application.subscribe.pass.salenotyet'}</div>
-				#{/else}
-			</div>
-			<img class="pass-illustration" src="@{'/public/images/mascotte/Ray_Cool.png'}" alt="">
-		</div>
-	</div>
-
+  <div class="passes">
+    #{list items: pricePackCurrentStateList, as: 'pricePack'}
+    <div class="pass">
+      <div class="pass-mainContainer">
+        <div class="pass-main">
+          <div class="pass-pass">
+            &{'views.application.subscribe.pass.pass'}
+          </div>
+          <div class="pass-name">
+            &{'views.application.subscribe.pass.' + pricePack.type.code +
+            '.name'}
+          </div>
+          <div class="pass-days">
+            &{'views.application.subscribe.pass.' + pricePack.type.code +
+            '.days'}
+          </div>
+          <div class="pass-price">
+            ${pricePack.currentPrice}€
+          </div>
+          <div class="pass-studentPrice">
+            &{'views.application.subscribe.pass.student',
+            pricePack.studentPrice}
+          </div>
+        </div>
+      </div>
+      <div class="pass-descriptionContainer">
+        <ul class="pass-description">
+          #{if pricePack.type.code == 'deepdive' || pricePack.type.code ==
+          'combi'}
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.deepdive.conferences'}
+          </li>
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.deepdive.workshops'}
+          </li>
+          #{/if} #{if pricePack.type.code == 'conference' || pricePack.type.code
+          == 'combi'}
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.conference.conferences'}
+          </li>
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.conference.snorkeling'}
+          </li>
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.conference.notjustcoders'}
+          </li>
+          #{/if} #{if pricePack.type.code == 'deepdive'}
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.buffet'}
+          </li>
+          #{/if} #{if pricePack.type.code == 'conference' || pricePack.type.code
+          == 'combi'}
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.buffets'}
+          </li>
+          <li class="pass-descriptionItem">
+            <i class="fas fa-check pass-check"></i>
+            &{'views.application.subscribe.pass.include.party'}
+          </li>
+          #{/if}
+        </ul>
+        #{if ticketingIsOpen}
+        <a
+          class="pass-buy btn button button-small"
+          href="${ticketingUrl}"
+          target="_blank"
+        >
+          &{'views.application.subscribe.pass.buy'}
+        </a>
+        #{/if} #{else}
+        <div class="pass-saleover">
+          &{'views.application.subscribe.pass.salenotyet'}
+        </div>
+        #{/else}
+      </div>
+      #{if pricePack.type.code == 'deepdive'}
+      <img
+        class="pass-illustration"
+        src="@{'/public/images/mascotte/Ray_Investigate.png'}"
+        alt=""
+      />
+      #{/if} #{if pricePack.type.code == 'conference'}
+      <img
+        class="pass-illustration"
+        src="@{'/public/images/mascotte/Ray_IT.png'}"
+        alt=""
+      />
+      #{/if} #{if pricePack.type.code == 'combi'}
+      <img
+        class="pass-illustration"
+        src="@{'/public/images/mascotte/Ray_Cool.png'}"
+        alt=""
+      />
+      #{/if}
+    </div>
+    #{/list}
+  </div>
 </div>

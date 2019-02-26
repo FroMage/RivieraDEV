@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -14,6 +15,9 @@ import models.Level;
 import models.News;
 import models.Organiser;
 import models.PreviousSpeaker;
+import models.PricePack;
+import models.PricePackCurrentState;
+import models.PricePackDate;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
@@ -92,7 +96,31 @@ public class Application extends Controller {
     public static void subscribe() {
 		String ticketingUrl = getTicketingUrl();
 		boolean ticketingIsOpen = ticketingIsOpen();
-        render(ticketingUrl, ticketingIsOpen);
+
+		List<PricePack> pricePacks = PricePack.findAll();
+		List<PricePackDate> pricePackDatesList = PricePackDate.findAll();
+		PricePackDate pricePackDates = null;
+		if(pricePackDatesList != null && pricePackDatesList.size() >= 1) {
+			pricePackDates = pricePackDatesList.get(0);
+		}
+		List<PricePackCurrentState> pricePackCurrentStateList = new ArrayList<PricePackCurrentState>();
+		Date now = new Date();
+		for (PricePack pricePack : pricePacks) {
+			Integer currentPrice = null;
+			Integer maxPrice = null;
+			if(now.before(pricePackDates.blindBirdEndDate)) {
+				currentPrice = pricePack.blindBirdPrice;
+				maxPrice = pricePack.regularPrice;
+			} else if (now.before(pricePackDates.earlyBirdEndDate)) {
+				currentPrice = pricePack.earlyBirdPrice;
+				maxPrice = pricePack.regularPrice;
+			} else {
+				currentPrice = pricePack.regularPrice;
+			}
+			pricePackCurrentStateList.add(new PricePackCurrentState(pricePack.type, currentPrice, maxPrice, pricePack.studentPrice));
+		}
+
+        render(ticketingUrl, ticketingIsOpen, pricePackCurrentStateList);
     }
     
     public static void schedule(){
