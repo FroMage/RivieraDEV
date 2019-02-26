@@ -31,100 +31,100 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
   <div class="passes">
     #{list items: pricePackCurrentStateList, as: 'pricePack'}
     <div class="pass">
-      <div class="pass-mainContainer">
-        <div class="pass-main">
-          <div class="pass-pass">
+      <div class="pass__mainContainer">
+        <div class="pass__main">
+          <div class="pass__pass">
             &{'views.application.subscribe.pass.pass'}
           </div>
-          <div class="pass-name">
+          <div class="pass__name">
             &{'views.application.subscribe.pass.' + pricePack.type.code +
             '.name'}
           </div>
-          <div class="pass-days">
+          <div class="pass__days">
             &{'views.application.subscribe.pass.' + pricePack.type.code +
             '.days'}
           </div>
-          <div class="pass-price">
+          <div class="pass__price">
             ${pricePack.currentPrice}€
           </div>
-          <div class="pass-studentPrice">
+          <div class="pass__studentPrice">
             &{'views.application.subscribe.pass.student',
             pricePack.studentPrice}
           </div>
         </div>
       </div>
-      <div class="pass-descriptionContainer">
-        <ul class="pass-description">
+      <div class="pass__descriptionContainer">
+        <ul class="pass__description">
           #{if pricePack.type.code == 'deepdive' || pricePack.type.code ==
           'combi'}
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.deepdive.conferences'}
           </li>
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.deepdive.workshops'}
           </li>
           #{/if} #{if pricePack.type.code == 'conference' || pricePack.type.code
           == 'combi'}
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.conference.conferences'}
           </li>
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.conference.snorkeling'}
           </li>
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.conference.notjustcoders'}
           </li>
           #{/if} #{if pricePack.type.code == 'deepdive'}
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.buffet'}
           </li>
           #{/if} #{if pricePack.type.code == 'conference' || pricePack.type.code
           == 'combi'}
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.buffets'}
           </li>
-          <li class="pass-descriptionItem">
-            <i class="fas fa-check pass-check"></i>
+          <li class="pass__descriptionItem">
+            <i class="fas fa-check pass__check"></i>
             &{'views.application.subscribe.pass.include.party'}
           </li>
           #{/if}
         </ul>
         #{if ticketingIsOpen}
         <a
-          class="pass-buy btn button button-small"
+          class="pass__buy btn button button-small"
           href="${ticketingUrl}"
           target="_blank"
         >
           &{'views.application.subscribe.pass.buy'}
         </a>
         #{/if} #{else}
-        <div class="pass-saleover">
+        <div class="pass__saleover">
           &{'views.application.subscribe.pass.salenotyet'}
         </div>
         #{/else}
       </div>
       #{if pricePack.type.code == 'deepdive'}
       <img
-        class="pass-illustration"
+        class="pass__illustration"
         src="@{'/public/images/mascotte/Ray_Investigate.png'}"
         alt=""
       />
       #{/if} #{if pricePack.type.code == 'conference'}
       <img
-        class="pass-illustration"
+        class="pass__illustration"
         src="@{'/public/images/mascotte/Ray_IT.png'}"
         alt=""
       />
       #{/if} #{if pricePack.type.code == 'combi'}
       <img
-        class="pass-illustration"
+        class="pass__illustration"
         src="@{'/public/images/mascotte/Ray_Cool.png'}"
         alt=""
       />

@@ -2088,17 +2088,17 @@ th.fullSchedule-time-title {
     width: 90%;
   }
 }
-.pass-illustration {
+.pass__illustration {
   width: 20rem;
   height: 20rem;
   margin-left: 2rem;
 }
 @media (max-width: 1200px) {
-  .pass-illustration {
+  .pass__illustration {
     display: none;
   }
 }
-.pass-mainContainer {
+.pass__mainContainer {
   text-align: center;
   width: 25rem;
   background-color: #0a7db1;
@@ -2107,19 +2107,19 @@ th.fullSchedule-time-title {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   border-right: 2px dashed #fff;
   position: relative;
 }
 @media (max-width: 767px) {
-  .pass-mainContainer {
+  .pass__mainContainer {
     width: auto;
     border-right: none;
     border-bottom: 2px dashed #fff;
   }
 }
-.pass-mainContainer::before, .pass-mainContainer::after {
-  content: '';
+.pass__mainContainer::before, .pass__mainContainer::after {
+  content: "";
   width: 2rem;
   height: 2rem;
   background-color: #fff;
@@ -2127,43 +2127,43 @@ th.fullSchedule-time-title {
   position: absolute;
   right: -1rem;
 }
-.pass-mainContainer::before {
+.pass__mainContainer::before {
   top: -1rem;
 }
 @media (max-width: 767px) {
-  .pass-mainContainer::before {
+  .pass__mainContainer::before {
     top: auto;
     bottom: -1rem;
     left: -1rem;
   }
 }
-.pass-mainContainer::after {
+.pass__mainContainer::after {
   bottom: -1rem;
 }
-.pass-pass {
+.pass__pass {
   font-weight: 300;
   font-size: 1.8rem;
 }
-.pass-name {
+.pass__name {
   font-size: 3.2rem;
   font-weight: 800;
   text-transform: uppercase;
   color: #fbc02c;
 }
-.pass-days {
+.pass__days {
   font-weight: 300;
   font-size: 1.4rem;
 }
-.pass-price {
+.pass__price {
   font-size: 4rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #fbc02c;
 }
-.pass-studentPrice {
+.pass__studentPrice {
   font-size: 1.4rem;
 }
-.pass-descriptionContainer {
+.pass__descriptionContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2171,14 +2171,14 @@ th.fullSchedule-time-title {
   padding: 2rem;
   background-color: #0a7db1;
   color: #fff;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
 }
 @media (max-width: 767px) {
-  .pass-descriptionContainer {
+  .pass__descriptionContainer {
     width: auto;
   }
 }
-.pass-description {
+.pass__description {
   position: relative;
   list-style-type: none;
   padding-left: 0;
@@ -2186,20 +2186,20 @@ th.fullSchedule-time-title {
   font-weight: 300;
   font-size: 1.6rem;
 }
-.pass-descriptionItem {
+.pass__descriptionItem {
   margin-left: 2rem;
 }
-.pass-check {
+.pass__check {
   position: absolute;
   left: 0;
   height: 2rem;
   width: 2rem;
 }
-.pass-buy {
+.pass__buy {
   margin: 1rem 0 0 0;
   align-self: center;
 }
-.pass-saleover {
+.pass__saleover {
   text-align: center;
   font-style: italic;
   font-size: 1.6rem;
