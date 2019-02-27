@@ -1,7 +1,7 @@
 #{extends 'main.html' /}
 #{set title:play.i18n.Messages.get('views.application.index.title') /}
 
-<div class="parallax parallax-home countdown-parent">
+<div class="parallax parallax-home">
 
     <div class="parallax-home__gradiant">
     </div>
@@ -43,12 +43,12 @@
     <div class="introCountdown__intro intro">
       
       <div class="intro__titles">
-        <div class="intro__title">RivieraDEV</div>
+        <h2 class="home__title">RivieraDEV</h2>
         <div class="intro__subtitle">
           <span class="intro__subtitle1">&{'views.application.index.intro.subtitle1'}</span>
           <span class="intro__subtitle2">&{'views.application.index.intro.subtitle2'}</span>
         </div>
-      </div> <!-- /intro_titles -->
+      </div> <!-- /intro__titles -->
 
       <div class="intro__questions">
 
@@ -142,35 +142,45 @@
     </div>
 </div>
 
-<div class="row days">
-    <div class="col-md-6">
-        <div class="days-item days-item--first">
-            <div class="days-date">&{'views.application.index.days.deepdive.date'}</div>
-            <h2 class="title home-title days-title">&{'views.application.index.days.deepdive.title'}</h2>
-            <p>&{'views.application.index.days.deepdive.desc'}</p>
-            <h3 class="days-title2">&{'views.application.index.days.deepdive.conf.title'}</h3>
+<div class="days">
+    <h2 class="home__title">&{'views.application.index.days.title'}</h2>
+
+    <div class="days__container">
+
+        <div class="days__intro days__intro--1">
+            <img class="days__illustration" src="@{'/public/images/mascotte/Ray_Investigate.png'}" alt="">
+            <div class="days__titleDate">
+                <h3 class="days__title">&{'views.application.index.days.deepdive.title'}</h3><!-- Do not remove this comment 
+                --><div class="days__date">&{'views.application.index.days.deepdive.date'}</div>
+            </div>
+            <div class="days__desc">&{'views.application.index.days.deepdive.desc'}</div>
+        </div>
+        <div class="days__content days__content--1">
+            <h3 class="days__subtitle">&{'views.application.index.days.deepdive.conf.title'}</h3>
             <p>&{'views.application.index.days.deepdive.conf.desc'}</p>
-            <h3 class="days-title2">&{'views.application.index.days.deepdive.workshop.title'}</h3>
+            <h3 class="days__subtitle">&{'views.application.index.days.deepdive.workshop.title'}</h3>
             <p>&{'views.application.index.days.deepdive.workshop.desc'}</p>
         </div>
-    </div>
 
-    <div class="col-md-6">
-        <div class="days-item">
-            <div class="days-date">&{'views.application.index.days.conf.date'}</div>
-            <h2 class="title home-title days-title">&{'views.application.index.days.conf.title'}</h2>
-            <p>&{'views.application.index.days.conf.desc'}</p>
-            <h3 class="days-title2">&{'views.application.index.days.conf.keynote.title'}</h3>
+        <div class="days__intro days__intro--2">
+            <img class="days__illustration" src="@{'/public/images/mascotte/Ray_IT.png'}" alt="">
+            <div class="days__titleDate">
+                <h3 class="days__title">&{'views.application.index.days.conf.title'}</h3>
+                <div class="days__date">&{'views.application.index.days.conf.date'}</div>
+            </div>
+            <div class="days__desc">&{'views.application.index.days.conf.desc'}</div>
+        </div>
+        <div class="days__content days__content--2">
+            <h3 class="days__subtitle">&{'views.application.index.days.conf.keynote.title'}</h3>
             <p>&{'views.application.index.days.conf.keynote.desc'}</p>
-            <h3 class="days-title2">&{'views.application.index.days.conf.conf.title'}</h3>
+            <h3 class="days__subtitle">&{'views.application.index.days.conf.conf.title'}</h3>
             <p>&{'views.application.index.days.conf.conf.desc'}</p>
-            <h3 class="days-title2">&{'views.application.index.days.conf.snorkeling.title'}</h3>
-            <p>&{'views.application.index.days.conf.snorkeling.desc'}</p>
-            <h3 class="days-title2">&{'views.application.index.days.conf.notjustcoders.title'}</h3>
+            <h3 class="days__subtitle">&{'views.application.index.days.conf.notjustcoders.title'}</h3>
             <p>&{'views.application.index.days.conf.notjustcoders.desc'}</p>
         </div>
-    </div>
-</div>
+    
+    </div> <!-- /.days__container -->
+</div> <!-- /.days -->
 
 <div class="diaporama">
     <div class="row diaporama-row rowShadow">
