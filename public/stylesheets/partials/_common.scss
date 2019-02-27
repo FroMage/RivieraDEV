@@ -139,8 +139,9 @@ a {
 }
 
 .home {
-    &-title {
-        font-size: $font-size-title;
+    &__title {
+        font-size: $font-xxl;
+        font-weight: bold;
         margin-top: 0.5em;
         padding-top: 0;
         margin-bottom: 0.5em;

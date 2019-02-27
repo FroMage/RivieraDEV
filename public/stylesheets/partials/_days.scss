@@ -1,31 +1,151 @@
-.days {
-    margin: $space-lg 0;
+$days-illustration-size-md: 18rem;
+$days-illustration-size-sm: 10rem;
 
-    &-date {
-        //text-align: center;
+.days {
+    @include notFullWidth;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'intro1'
+            'content1'
+            'intro2'
+            'content2';
+        margin-left: $space-sm;
+        margin-right: $space-sm;
+        margin-bottom: $space-xxl;
+
+        @media (min-width: $screen-md-min) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                'intro1 intro2'
+                'content1 content2';
+            grid-column-gap: $space-md;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__intro {
+        border: 1px solid $color-gray-light;
+        padding: $space-md;
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'illustration titleDate'
+            'description description';
+        grid-column-gap: $space-md;
+        grid-row-gap: $space-md;
+        align-content: start;
+        border-color: $color-gray-light;
+        border-style: solid;
+        border-width: 1px 1px 0 1px;
+        border-radius: $border-radius-md $border-radius-md 0 0;
+        box-shadow: $shadow;
+
+        @media (min-width: $screen-sm-min) {
+            padding: $space-lg;
+            grid-template-areas:
+                'illustration titleDate'
+                'illustration description';
+        }
+
+        &--1 {
+            grid-area: intro1;
+        }
+
+        &--2 {
+            grid-area: intro2;
+        }
+    }
+
+    &__illustration {
+        grid-area: illustration;
+        width: $days-illustration-size-sm;
+        height: $days-illustration-size-sm;
+        align-self: top;
+
+        @media (min-width: $screen-sm-min) {
+            width: $days-illustration-size-md;
+            height: $days-illustration-size-md;
+        }
+    }
+
+    &__titleDate {
+        grid-area: titleDate;
+    }
+
+    &__title {
+        display: inline;
+        margin-top: 0;
         color: $color-blue;
+        font-weight: bold;
+        font-size: $font-lg;
+    }
+
+    &__date {
+        display: block;
         font-size: $font-md;
         font-weight: 300;
-    }
-    &-title {
-        margin-top: 0;
-        text-align: left;
-    }
-    &-title2 {
-        color: $color-blue;
-        font-weight: 300;
-    }
-    &-item {
-        width: 80%;
-        margin: 0 auto;
 
-        @media (max-width: $screen-xs-max) {
-            width: 90%;
-        }
-        @media (max-width: $screen-sm-max) {
-            &--first {
-                margin-bottom: $space-xxl;
+        @media (min-width: $screen-sm-min) {
+            display: inline;
+            &:before {
+                content: '|';
+                font-weight: normal;
+                margin: $space-xxs;
             }
+        }
+    }
+
+    &__desc {
+        grid-area: description;
+        font-size: $font-md;
+    }
+
+    &__content {
+        background: linear-gradient($color-blue, $color-blue-medium);
+        color: $color-white;
+        padding: $space-md;
+        font-size: $font-md;
+        border-color: $color-gray-light;
+        border-style: solid;
+        border-width: 0 1px 1px 1px;
+        border-radius: 0 0 $border-radius-md $border-radius-md;
+        box-shadow: $shadow;
+
+        @media (min-width: $screen-sm-min) {
+            padding: $space-lg;
+        }
+
+        &--1 {
+            grid-area: content1;
+            margin-bottom: $space-sm;
+
+            @media (min-width: $screen-sm-min) {
+                margin-bottom: $space-md;
+            }
+
+            @media (min-width: $screen-md-min) {
+                margin-bottom: 0;
+            }
+        }
+
+        &--2 {
+            grid-area: content2;
+        }
+    }
+
+    &__subtitle {
+        font-size: $font-md;
+        font-weight: bold;
+
+        &:first-child {
+            margin-top: 0;
         }
     }
 }
