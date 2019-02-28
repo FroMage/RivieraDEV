@@ -52,11 +52,6 @@ views.application.index.questions.when.answer=Les 15, 16 et 17 mai 2019
 views.application.index.questions.where=Où ?
 views.application.index.questions.where.answer=Sophia-Antipolis, Skema Business School
 
-views.application.index.intro.1=Riviera DEV, c'est <strong>3 jours de conférences</strong> et d'ateliers sur la <strong>Côte d'Azur</strong>
-views.application.index.intro.2=en plein cœur de Sophia Antipolis, <strong>la plus belle technopole d'Europe</strong>.
-views.application.index.intro.3=En 2019, Riviera DEV rajoute le format <strong>Snorkeling</strong>. Des sessions de 25 minutes pour présenter rapidement des frameworks, des outils, ...
-views.application.index.intro.4=Suivez <a href="https://twitter.com/RivieraDEV">@RivieraDEV</a> sur Twitter pour connaître l'actualité de la conférence.
-
 views.application.index.pres.goal.title=Objectif
 views.application.index.pres.goal.text=Offrir une conférence technique de qualité où les développeurs peuvent apprendre, pratiquer et élargir leur réseau professionnel.
 views.application.index.pres.dna.title=ADN
