@@ -8,14 +8,16 @@ $counter-item-size: 12rem;
 
     display: grid;
 
-    @media (min-width: $screen-md-min) {
-        grid-template-columns: auto auto;
+    &--withCountdown {
+        @media (min-width: $screen-md-min) {
+            grid-template-columns: auto auto;
+        }
     }
 }
 
 .intro {
     background-color: $color-grey-ultralight;
-    border-radius: $border-radius-md $border-radius-md 0 0;
+    border-radius: $border-radius-md;
     padding: $space-xl;
     display: grid;
     text-align: center;
@@ -24,8 +26,12 @@ $counter-item-size: 12rem;
         text-align: left;
     }
 
-    @media (min-width: $screen-md-min) {
-        border-radius: $border-radius-md 0 0 $border-radius-md;
+    &--withCountdown {
+        border-radius: $border-radius-md $border-radius-md 0 0;
+
+        @media (min-width: $screen-md-min) {
+            border-radius: $border-radius-md 0 0 $border-radius-md;
+        }
     }
 
     &__subtitle {

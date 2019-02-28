@@ -38,9 +38,9 @@
 
 <div class="container introduction"></div>
 
-<div class="introCountdown">
+<div class="introCountdown #{if displayCountdown} introCountdown--withCountdown #{/if}">
     
-    <div class="introCountdown__intro intro">
+    <div class="introCountdown__intro intro #{if displayCountdown} intro--withCountdown #{/if}">
       
       <div class="intro__titles">
         <h2 class="home__title">RivieraDEV</h2>
@@ -307,8 +307,8 @@
     import initCountdown from "@{'/public/javascripts/countdown.js'}";
     initCountdown(
         {
-            eventStartDate: "${eventStartDate}", 
-            eventEndDate: "${eventEndDate}"
+            eventStartDate: "${eventStartDateStr}", 
+            eventEndDate: "${eventEndDateStr}"
         },
         {
             countDownDaysLabel: "&{'tags.countdown.days'}",
