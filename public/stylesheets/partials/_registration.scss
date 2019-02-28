@@ -11,35 +11,10 @@
 
     &__button {
         flex: 1;
-        white-space: nowrap;
-
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-
-        font-size: $font-md;
-        color: $color_yellow;
-        padding: 1.2rem 2rem;
-        border: 0.1rem solid $color_yellow;
-        border-radius: 3rem;
-        background-color: transparent;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-            color: white;
-            text-decoration: none;
-            border-color: $color-blue;
-            background-color: $color-blue;
-        }
 
         &:first-child,
         &:last-child {
             margin-right: 2rem;
-        }
-
-        &--promoted {
-            color: white;
-            background-color: $color_yellow;
         }
     }
 }

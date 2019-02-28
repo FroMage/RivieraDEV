@@ -28,7 +28,7 @@
         }
 
         &--current {
-            border-bottom: solid $border_size $color_yellow;
+            border-bottom: solid $border_size $color-yellow;
         }
     }
 
@@ -44,7 +44,7 @@
 
         &--selected,
         &--selected:hover {
-            color: $color_yellow;
+            color: $color-yellow;
         }
     }
 
