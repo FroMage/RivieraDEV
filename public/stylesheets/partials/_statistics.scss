@@ -1,68 +1,56 @@
 .statistics {
+    @include notFullWidth;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    color: $color-white;
-    margin-left: 0;
-    margin-right: 0;
-    background-color: $color-blue;
-    padding: $space-lg;
+    justify-content: center;
+    padding: $space-xxl 0;
 
-    &-item {
-        position: relative;
+    @media (min-width: $screen-sm-min) {
+        flex-direction: row;
+    }
+
+    &__item {
+        flex: 1;
         text-align: center;
-        font-weight: 300;
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
-
-        @media (max-width: $screen-md-max) {
-            width: 60%;
-        }
-
-        @media (max-width: $screen-sm-max) {
-            width: 80%;
-        }
-
-        @media (max-width: $screen-xs-max) {
-            width: 50%;
-        }
 
         &:not(:last-child) {
-            margin-bottom: 2em;
-        }
+            margin-bottom: $space-xxl;
 
-        span {
-            font-size: 3em;
-            font-weight: 600;
-            display: block;
+            @media (min-width: $screen-sm-min) {
+                margin-bottom: 0;
+            }
         }
     }
 
-    &-icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    &__icon {
+        display: block;
         background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 2.5em 2.5em;
-        opacity: 0.2;
+        background-position: center;
+        height: $icon-size-xl;
+        width: 100%;
+        margin-bottom: $space-md;
 
-        &--days { background-image: url(../images/icons/days.svg); }
-        &--attendees { background-image: url(../images/icons/success.svg); }
-        &--tracks { background-image: url(../images/icons/layers.svg); }
-        &--keynotes { background-image: url(../images/icons/microphone.svg); }
-        &--conferences { background-image: url(../images/icons/speech.svg); }
-        &--workshops { background-image: url(../images/icons/people-laptop.svg); }
-        &--breakfasts { background-image: url(../images/icons/snacks-sign.svg); }
-        &--buffets { background-image: url(../images/icons/cooking.svg); }
-        &--party { background-image: url(../images/icons/concert.svg); }
+        &--attendees {
+            background-image: url(../images/icons/attendees.svg);
+        }
+        &--conferences {
+            background-image: url(../images/icons/sessions.svg);
+        }
+        &--workshops {
+            background-image: url(../images/icons/workshops.svg);
+        }
     }
 
-    &-text {
-        width: calc(100% - 2.5em);
-        margin-left: 2.5em;
+    &__text {
+        font-size: $font-xl;
+    }
+
+    &__number {
+        font-size: $font-xxxl;
+        font-weight: bold;
+        display: block;
+        color: $color-yellow;
+        line-height: 1;
     }
 }
