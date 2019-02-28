@@ -17,20 +17,20 @@
 
     <div class="registration--buttons js-registration-buttons">
         #{if promotedPage == 'CFP'}
-            <a class="registration__button registration__button--promoted" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
+            <a class="button button--primary registration__button" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
         #{/if}
         #{elseif promotedPage == 'TICKETS'}
-            <a class="registration__button registration__button--promoted" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
+            <a class="button button--primary registration__button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
         #{/elseif}
         #{elseif promotedPage == 'SPONSORS'}
-            <a class="registration__button registration__button--promoted" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+            <a class="button button--primary registration__button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
         #{/elseif}
 
         #{if promotedPage2 == 'SPONSORS'}
-            <a class="registration__button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+            <a class="button registration__button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
         #{/if}
         #{elseif promotedPage2 == 'SCHEDULE'}
-            <a class="registration__button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
+            <a class="button registration__button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
         #{/elseif}
     </div>
 

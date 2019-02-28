@@ -12,7 +12,7 @@ $color-blue-dark: #00709d;
 $color-blue-transparent: rgba(0, 144, 205, 0.8);
 
 $color-yellow: #fdb742;
-$color-yellow-transparent: rgba(255, 183, 66, 0.8);
+$color-yellow-transparent: rgba(#fdb742, 0.8);
 $color-yellow-light: #fbc02c;
 $color-yellow-ultralight: #fefaf1;
 
@@ -84,9 +84,7 @@ $footer-height: 15em;
 
 $font_family: Roboto, Noto, sans-serif;
 
-$font_size_L: 22px;
-$font_size_M: 18px;
-$font_size_D: 16px; // TODO Mettre en REM
-$font_size_S: 14px;
-
 $shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+
+$border-sm: 1px;
+$border-md: 2px;
