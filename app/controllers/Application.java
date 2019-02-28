@@ -1,6 +1,9 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -27,9 +30,12 @@ import models.TalkTheme;
 import models.TalkType;
 import models.TemporarySlot;
 import models.Track;
+
 import play.i18n.Lang;
 import play.mvc.Before;
 import play.mvc.Controller;
+
+import util.StringUtils;
 
 public class Application extends Controller {
 
@@ -53,8 +59,21 @@ public class Application extends Controller {
     public static void index() {
         String promotedPage2 = getPromotedPage2();
 
-        String eventStartDate = getEventStartDate();
-        String eventEndDate = getEventEndDate();
+        String eventStartDateStr = getEventStartDate();
+        String eventEndDateStr = getEventEndDate();
+        boolean displayCountdown = false;
+        if(StringUtils.isNotBlank(eventStartDateStr) && StringUtils.isNotBlank(eventEndDateStr)) {
+            SimpleDateFormat isoDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            Date now = new Date();
+            try {
+                Date eventStartDate = isoDateFormat.parse(eventStartDateStr);
+                Date eventEndDate = isoDateFormat.parse(eventEndDateStr); // Just test that the format is correct
+                displayCountdown = now.before(eventStartDate);
+            } catch (ParseException e) {
+                e.printStackTrace();
+                // Do nothing more, displayCountdown is already set to false
+            }
+        }
 
         String googleMapApiKey = getGoogleMapApiKey();
 
@@ -72,7 +91,7 @@ public class Application extends Controller {
 
         boolean displayPreviousSpeakers = !displayNewSpeakers();
 
-        render(promotedPage2, eventStartDate, eventEndDate, googleMapApiKey, displayPreviousSpeakers, sponsors,
+        render(promotedPage2, displayCountdown, eventStartDateStr, eventEndDateStr, googleMapApiKey, displayPreviousSpeakers, sponsors,
                 lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
     }
 

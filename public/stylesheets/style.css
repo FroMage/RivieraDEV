@@ -417,14 +417,14 @@ a:hover, a:active, a:focus {
   }
 }
 @media (min-width: 992px) {
-  .introCountdown {
+  .introCountdown--withCountdown {
     grid-template-columns: auto auto;
   }
 }
 
 .intro {
   background-color: #f8f7f7;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1rem;
   padding: 4rem;
   display: grid;
   text-align: center;
@@ -434,8 +434,11 @@ a:hover, a:active, a:focus {
     text-align: left;
   }
 }
+.intro--withCountdown {
+  border-radius: 1rem 1rem 0 0;
+}
 @media (min-width: 992px) {
-  .intro {
+  .intro--withCountdown {
     border-radius: 1rem 0 0 1rem;
   }
 }
