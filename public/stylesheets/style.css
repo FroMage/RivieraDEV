@@ -38,6 +38,7 @@ body {
   font-size: 1.8rem;
   color: #fdb742;
   padding: 1.2rem 2rem;
+  border: none;
   box-shadow: 0 0 0px 1px #fdb742;
   border-radius: 3rem;
   background-color: transparent;
