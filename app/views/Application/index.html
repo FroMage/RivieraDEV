@@ -104,7 +104,7 @@
     </div>
 
     <!--<div class="text-center">
-        <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.schedule()}">&{'views.application.index.schedule'}</a>
+        <a class="button button--primary" href="@{Application.schedule()}">&{'views.application.index.schedule'}</a>
     </div>-->
 
 </div> <!-- /.introduction -->
@@ -200,7 +200,7 @@
     <h2 class="title home-title speakers-title">&{'views.application.index.speakers'}</h2>
 	#{speakers speakers: speakersStar/}
 
-    <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
+    <a class="button button--primary" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
 </div>
 #{/if}
 
@@ -212,7 +212,7 @@
 
     <p class="home-subtitle">&{'views.application.index.speakers.baseline'}</p>
 
-    <a class="btn btn-primary btn-lg button button-x-large" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
+    <a class="button button--primary" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
 </div>
 #{/elseif}
 
@@ -236,7 +236,7 @@
         <span class="location-address-line">France</span>
 
         <div class="location-details">
-            <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
+            <a class="button button--primary location-details-btn" href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
         </div>
     </div>
     <div id="location-map" class="location-map"></div>
@@ -249,7 +249,7 @@
         <span class="location-address-line">France</span>
 
         <div class="location-details">
-            <a class="btn btn-primary location-details-btn button " href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
+            <a class="button button--primary location-details-btn" href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
         </div>
     </div>
 </div> <!-- /.location -->
@@ -295,7 +295,7 @@
 	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
 
     <div class="registration-buttons registration-partenaire">
-        <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
+        <a class="button button-primary" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
 
 </div>
