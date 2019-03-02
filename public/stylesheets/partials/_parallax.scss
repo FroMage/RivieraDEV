@@ -5,7 +5,10 @@
     padding: 10% 0 20%;
 
     &-home {
-        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
             url(../images/photos/2018.jpg);
 
         &-location {
