@@ -17,17 +17,20 @@ $counter-item-size: 12rem;
 
 .intro {
     background-color: $color-grey-ultralight;
-    border-radius: $border-radius-md;
-    padding: $space-xl;
+    padding: $space-md;
     display: grid;
     text-align: center;
 
     @media (min-width: $screen-sm-min) {
+        padding: $space-xl;
+        border-radius: $border-radius-md;
         text-align: left;
     }
 
     &--withCountdown {
-        border-radius: $border-radius-md $border-radius-md 0 0;
+        @media (min-width: $screen-sm-min) {
+            border-radius: $border-radius-md $border-radius-md 0 0;
+        }
 
         @media (min-width: $screen-md-min) {
             border-radius: $border-radius-md 0 0 $border-radius-md;
@@ -35,9 +38,14 @@ $counter-item-size: 12rem;
     }
 
     &__subtitle {
-        font-size: $font-lg;
+        font-size: $font-sm;
         font-weight: 300;
-        margin: $space-md 0 $space-lg 0;
+        margin: $space-sm 0 $space-md 0;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-lg;
+            margin: $space-md 0 $space-lg 0;
+        }
     }
     &__subtitle1 {
         display: block;
@@ -95,7 +103,6 @@ $counter-item-size: 12rem;
 
 .countdown {
     padding: $space-lg;
-    border-radius: 0 0 $border-radius-md $border-radius-md;
     background: linear-gradient($color-blue, $color-blue-medium);
     display: grid;
     column-gap: $space-lg;
@@ -107,6 +114,7 @@ $counter-item-size: 12rem;
     @media (min-width: $screen-sm-min) {
         grid-template-columns: $counter-item-size $counter-item-size $counter-item-size $counter-item-size;
         grid-template-rows: $counter-item-size;
+        border-radius: 0 0 $border-radius-md $border-radius-md;
     }
 
     @media (min-width: $screen-md-min) {

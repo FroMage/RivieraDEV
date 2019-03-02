@@ -4,6 +4,14 @@ $days-illustration-size-sm: 10rem;
 .days {
     @include notFullWidth;
 
+    &__mainTitle {
+        margin: $space-md;
+
+        @media (min-width: $screen-sm-min) {
+            margin: $space-lg;
+        }
+    }
+
     &__container {
         display: grid;
         grid-template-columns: 1fr;
@@ -77,6 +85,11 @@ $days-illustration-size-sm: 10rem;
 
     &__titleDate {
         grid-area: titleDate;
+        align-self: center;
+
+        @media (min-width: $screen-sm-min) {
+            align-self: flex-start;
+        }
     }
 
     &__title {
@@ -84,7 +97,11 @@ $days-illustration-size-sm: 10rem;
         margin-top: 0;
         color: $color-blue;
         font-weight: bold;
-        font-size: $font-lg;
+        font-size: $font-md;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-lg;
+        }
     }
 
     &__date {

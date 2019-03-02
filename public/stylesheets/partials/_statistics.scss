@@ -43,14 +43,22 @@
     }
 
     &__text {
-        font-size: $font-xl;
+        font-size: $font-lg;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-xl;
+        }
     }
 
     &__number {
-        font-size: $font-xxxl;
+        font-size: $font-xxl;
         font-weight: bold;
         display: block;
         color: $color-yellow;
         line-height: 1;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-xxxl;
+        }
     }
 }
