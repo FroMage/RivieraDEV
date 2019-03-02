@@ -27,8 +27,21 @@
         padding: $space-md;
 
         @media (min-width: $screen-sm-min) {
-            padding: $space-xxxl $space-xl $space-xxxl $space-xxxl;
             font-size: $font-lg;
+            padding-top: $space-xxxl;
+            padding-right: $space-xl;
+            padding-bottom: $space-xxxl;
+
+            // Technic to have the same left alignement even in full width
+            padding-left: calc((100% * 1.5 - #{$not-full-width-sm}) / 2);
+        }
+
+        @media (min-width: $screen-md-min) {
+            padding-left: calc((100% * 1.5 - #{$not-full-width-md}) / 2);
+        }
+
+        @media (min-width: $screen-lg-min) {
+            padding-left: calc((100% * 1.5 - #{$not-full-width-lg}) / 2);
         }
     }
 
