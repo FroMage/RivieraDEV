@@ -89,7 +89,6 @@ $days-illustration-size-sm: 10rem;
 
     &__date {
         display: block;
-        font-size: $font-md;
         font-weight: 300;
 
         @media (min-width: $screen-sm-min) {
@@ -104,14 +103,12 @@ $days-illustration-size-sm: 10rem;
 
     &__desc {
         grid-area: description;
-        font-size: $font-md;
     }
 
     &__content {
         background: linear-gradient($color-blue, $color-blue-medium);
         color: $color-white;
         padding: $space-md;
-        font-size: $font-md;
         border-color: $color-gray-light;
         border-style: solid;
         border-width: 0 1px 1px 1px;
@@ -141,7 +138,6 @@ $days-illustration-size-sm: 10rem;
     }
 
     &__subtitle {
-        font-size: $font-md;
         font-weight: bold;
 
         &:first-child {
