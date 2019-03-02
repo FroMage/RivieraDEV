@@ -1,47 +1,41 @@
 .speakers {
-    text-align: center;
-    padding-bottom: 1.5em;
+    @include notFullWidth;
 
-    &-previous {
-        &-title{
-            font-size: 1.5em;
-            margin-top: 2em;
-            margin-bottom: 1.1em;
-        }
+    &__title {
+        margin: $space-md $content-space-xs;
 
-        &-subtitle {
-            margin-bottom: 2em;
+        @media (min-width: $screen-sm-min) {
+            margin: $space-lg $content-space-sm;
         }
     }
 
-    &-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $space-md;
+        justify-items: center;
+
+        @media (min-width: $screen-sm-min) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 
-    &-item {
-        align-self: flex-start;
-        flex-basis: $avatar-size-regular;
+    &__buttonContainer {
+        text-align: center;
     }
 }
 
 .speaker {
-
     &-talks {
         list-style-type: none;
         padding-left: 0;
         margin-top: 2em;
     }
-
 }
-
 
 // Only on xs devices (smartphones)
 @media (max-width: $screen-xs-max) {
-
     .speaker-talks {
         margin-bottom: 2em;
     }
-
 }
