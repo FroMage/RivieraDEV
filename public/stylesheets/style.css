@@ -1604,25 +1604,45 @@ a.footer-rs-instagram:active {
 }
 
 .speakers {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .speakers {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .speakers {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .speakers {
+    width: 1170px;
+  }
+}
+.speakers__title {
+  margin: 2rem 2rem;
+}
+@media (min-width: 768px) {
+  .speakers__title {
+    margin: 3rem 4rem;
+  }
+}
+.speakers__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .speakers__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.speakers__buttonContainer {
   text-align: center;
-  padding-bottom: 1.5em;
-}
-.speakers-previous-title {
-  font-size: 1.5em;
-  margin-top: 2em;
-  margin-bottom: 1.1em;
-}
-.speakers-previous-subtitle {
-  margin-bottom: 2em;
-}
-.speakers-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.speakers-item {
-  align-self: flex-start;
-  flex-basis: 150px;
 }
 
 .speaker-talks {
