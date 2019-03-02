@@ -110,8 +110,21 @@
     </div>
 </div>
 
+<div class="aboutUs">
+    <div class="aboutUs__item aboutUs__aboutUs">
+            <h2 class="home__title aboutUs__title">&{'views.application.index.aboutUs.title'}</h2>
+            <p>&{'views.application.index.aboutUs.dna'}</p>
+            <p>&{'views.application.index.aboutUs.goal'}</p>
+            <div class="aboutUs__buttonContainer">
+                <a class="button aboutUs__button" href="@{Application.photos()}">&{'views.application.index.aboutUs.seePhotos'}</a>
+            </div>
+    </div>
+    <div class="aboutUs__item aboutUs__photo2"></div>
+    <div class="aboutUs__item aboutUs__photo3"></div>
+</div> <!-- ./aboutUs -->
+
 <div class="days">
-    <h2 class="home__title">&{'views.application.index.days.title'}</h2>
+    <h2 class="days__mainTitle home__title">&{'views.application.index.days.title'}</h2>
 
     <div class="days__container">
 
@@ -149,19 +162,6 @@
     
     </div> <!-- /.days__container -->
 </div> <!-- /.days -->
-
-<div class="diaporama">
-    <div class="row diaporama-row rowShadow">
-        <img src="public/images/illustrations/home_groupe.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/RivieraDEV2016-3.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/home_socca.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/RivieraDEV2015-34.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/RivieraDEV2015-42.jpg" class="col-md-3 hidden-sm col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/RivieraDEV2016-99.jpg" class="col-md-3 hidden-sm col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/RivieraDEV2015-88.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
-        <img src="public/images/illustrations/home_keynote.jpg" class="col-md-3 col-sm-4 col-xs-6 diaporama-item"/>
-    </div>
-</div> <!-- ./diaporama -->
 
 #{if !displayPreviousSpeakers && speakersStar != null && speakersStar.size() > 0}
 <div class="container speakers">

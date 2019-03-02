@@ -6,10 +6,16 @@ html {
 body {
   padding-bottom: 15em;
   font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.6rem;
   position: relative;
   min-height: 100vh;
   margin: 0;
   color: #474747;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -38,7 +44,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #fdb742;
   padding: 1.2rem 2rem;
   border: none;
@@ -46,6 +52,11 @@ body {
   border-radius: 3rem;
   background-color: transparent;
   transition: all 0.2s ease-in-out;
+}
+@media (min-width: 768px) {
+  .button {
+    font-size: 1.8rem;
+  }
 }
 .button:hover {
   color: #fdb742;
@@ -99,11 +110,15 @@ a:hover, a:active, a:focus {
 }
 
 .home__title {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-top: 0.5em;
-  padding-top: 0;
-  margin-bottom: 0.5em;
+  margin: 0.8rem 0;
+}
+@media (min-width: 768px) {
+  .home__title {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
 }
 .home-subtitle {
   font-size: 1.1em;
@@ -272,6 +287,65 @@ a:hover, a:active, a:focus {
   max-width: 100%;
 }
 
+.aboutUs {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .aboutUs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'photo1 photo2' 'photo1 photo3';
+    grid-gap: 1px;
+  }
+}
+.aboutUs__item {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutUs__aboutUs {
+  grid-area: photo1;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/about_us_1.jpg);
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .aboutUs__aboutUs {
+    padding: 10rem 4rem 10rem 10rem;
+    font-size: 2rem;
+  }
+}
+.aboutUs__title {
+  margin: 2rem 0;
+}
+.aboutUs__buttonContainer {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .aboutUs__buttonContainer {
+    text-align: left;
+  }
+}
+.aboutUs__button {
+  display: inline-block;
+  margin-top: 2rem;
+}
+.aboutUs__photo2, .aboutUs__photo3 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .aboutUs__photo2, .aboutUs__photo3 {
+    display: block;
+  }
+}
+.aboutUs__photo2 {
+  grid-area: photo2;
+  background-image: url(../images/illustrations/about_us_2.jpg);
+}
+.aboutUs__photo3 {
+  grid-area: photo3;
+  background-image: url(../images/illustrations/about_us_3.jpg);
+}
+
 .menu {
   padding: 0.5rem 0.5em 0.15rem 0.5rem;
   z-index: 1;
@@ -333,7 +407,7 @@ a:hover, a:active, a:focus {
   padding: 10% 0 20%;
 }
 .parallax-home {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos/2018.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos/2018.jpg);
 }
 .parallax-home-location {
   background-image: url("../images/location_parallax.jpg");
@@ -427,18 +501,21 @@ a:hover, a:active, a:focus {
 
 .intro {
   background-color: #f8f7f7;
-  border-radius: 1rem;
-  padding: 4rem;
+  padding: 2rem;
   display: grid;
   text-align: center;
 }
 @media (min-width: 768px) {
   .intro {
+    padding: 4rem;
+    border-radius: 1rem;
     text-align: left;
   }
 }
-.intro--withCountdown {
-  border-radius: 1rem 1rem 0 0;
+@media (min-width: 768px) {
+  .intro--withCountdown {
+    border-radius: 1rem 1rem 0 0;
+  }
 }
 @media (min-width: 992px) {
   .intro--withCountdown {
@@ -446,9 +523,15 @@ a:hover, a:active, a:focus {
   }
 }
 .intro__subtitle {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
-  margin: 2rem 0 3rem 0;
+  margin: 1rem 0 2rem 0;
+}
+@media (min-width: 768px) {
+  .intro__subtitle {
+    font-size: 2rem;
+    margin: 2rem 0 3rem 0;
+  }
 }
 .intro__subtitle1 {
   display: block;
@@ -501,7 +584,6 @@ a:hover, a:active, a:focus {
 
 .countdown {
   padding: 3rem;
-  border-radius: 0 0 1rem 1rem;
   background: linear-gradient(#19b8d5, #1dc9f2);
   display: grid;
   column-gap: 3rem;
@@ -514,6 +596,7 @@ a:hover, a:active, a:focus {
   .countdown {
     grid-template-columns: 12rem 12rem 12rem 12rem;
     grid-template-rows: 12rem;
+    border-radius: 0 0 1rem 1rem;
   }
 }
 @media (min-width: 992px) {
@@ -611,6 +694,14 @@ a:hover, a:active, a:focus {
     width: 1170px;
   }
 }
+.days__mainTitle {
+  margin: 2rem;
+}
+@media (min-width: 768px) {
+  .days__mainTitle {
+    margin: 3rem;
+  }
+}
 .days__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -672,17 +763,27 @@ a:hover, a:active, a:focus {
 }
 .days__titleDate {
   grid-area: titleDate;
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .days__titleDate {
+    align-self: flex-start;
+  }
 }
 .days__title {
   display: inline;
   margin-top: 0;
   color: #19b8d5;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  .days__title {
+    font-size: 2rem;
+  }
 }
 .days__date {
   display: block;
-  font-size: 1.8rem;
   font-weight: 300;
 }
 @media (min-width: 768px) {
@@ -697,13 +798,11 @@ a:hover, a:active, a:focus {
 }
 .days__desc {
   grid-area: description;
-  font-size: 1.8rem;
 }
 .days__content {
   background: linear-gradient(#19b8d5, #1dc9f2);
   color: #fff;
   padding: 2rem;
-  font-size: 1.8rem;
   border-color: #ddd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
@@ -733,7 +832,6 @@ a:hover, a:active, a:focus {
   grid-area: content2;
 }
 .days__subtitle {
-  font-size: 1.8rem;
   font-weight: bold;
 }
 .days__subtitle:first-child {
@@ -881,14 +979,24 @@ a:hover, a:active, a:focus {
   background-image: url(../images/icons/workshops.svg);
 }
 .statistics__text {
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .statistics__text {
+    font-size: 2.5rem;
+  }
 }
 .statistics__number {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   display: block;
   color: #fdb742;
   line-height: 1;
+}
+@media (min-width: 768px) {
+  .statistics__number {
+    font-size: 4rem;
+  }
 }
 
 .wrapper {

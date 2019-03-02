@@ -1,0 +1,69 @@
+.aboutUs {
+    color: $color-white;
+
+    @media (min-width: $screen-sm-min) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            'photo1 photo2'
+            'photo1 photo3';
+        grid-gap: $border-sm;
+    }
+
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__aboutUs {
+        grid-area: photo1;
+        background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(../images/illustrations/about_us_1.jpg);
+        padding: $space-md;
+
+        @media (min-width: $screen-sm-min) {
+            padding: $space-xxxl $space-xl $space-xxxl $space-xxxl;
+            font-size: $font-lg;
+        }
+    }
+
+    &__title {
+        margin: $space-md 0;
+    }
+
+    &__buttonContainer {
+        text-align: center;
+
+        @media (min-width: $screen-sm-min) {
+            text-align: left;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        margin-top: $space-md;
+    }
+
+    &__photo2,
+    &__photo3 {
+        display: none;
+
+        @media (min-width: $screen-sm-min) {
+            display: block;
+        }
+    }
+
+    &__photo2 {
+        grid-area: photo2;
+        background-image: url(../images/illustrations/about_us_2.jpg);
+    }
+    &__photo3 {
+        grid-area: photo3;
+        background-image: url(../images/illustrations/about_us_3.jpg);
+    }
+}
