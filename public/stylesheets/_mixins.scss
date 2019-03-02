@@ -3,12 +3,12 @@
     margin: 0 auto;
 
     @media (min-width: $screen-sm-min) {
-        width: 750px;
+        width: $not-full-width-sm;
     }
     @media (min-width: $screen-md-min) {
-        width: 970px;
+        width: $not-full-width-md;
     }
-    @media (min-width: $screen-md-min) {
-        width: 1170px;
+    @media (min-width: $screen-lg-min) {
+        width: $not-full-width-lg;
     }
 }
