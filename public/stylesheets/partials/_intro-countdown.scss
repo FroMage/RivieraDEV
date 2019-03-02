@@ -17,12 +17,12 @@ $counter-item-size: 12rem;
 
 .intro {
     background-color: $color-grey-ultralight;
-    padding: $space-md;
+    padding: $content-space-xs;
     display: grid;
     text-align: center;
 
     @media (min-width: $screen-sm-min) {
-        padding: $space-xl;
+        padding: $content-space-sm;
         border-radius: $border-radius-md;
         text-align: left;
     }
@@ -102,16 +102,17 @@ $counter-item-size: 12rem;
 }
 
 .countdown {
-    padding: $space-lg;
+    padding: $content-space-xs;
     background: linear-gradient($color-blue, $color-blue-medium);
     display: grid;
-    column-gap: $space-lg;
-    row-gap: $space-lg;
+    column-gap: $content-space-xs;
+    row-gap: $content-space-xs;
     grid-template-columns: $counter-item-size $counter-item-size;
     grid-template-rows: $counter-item-size $counter-item-size;
     justify-content: center;
 
     @media (min-width: $screen-sm-min) {
+        padding: $content-space-sm;
         grid-template-columns: $counter-item-size $counter-item-size $counter-item-size $counter-item-size;
         grid-template-rows: $counter-item-size;
         border-radius: 0 0 $border-radius-md $border-radius-md;

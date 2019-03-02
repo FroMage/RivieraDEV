@@ -5,10 +5,10 @@ $days-illustration-size-sm: 10rem;
     @include notFullWidth;
 
     &__mainTitle {
-        margin: $space-md;
+        margin: $space-md $content-space-xs;
 
         @media (min-width: $screen-sm-min) {
-            margin: $space-lg;
+            margin: $space-lg $content-space-sm;
         }
     }
 

@@ -66,7 +66,14 @@ $space-sm: 1rem; // 10px
 $space-xs: 0.8rem; // 8px
 $space-xxs: 0.6rem; // 6px
 
+$content-space-xs: $space-md;
+$content-space-sm: $space-xl;
+
+$border-sm: 1px;
+$border-md: 2px;
 $border-radius-md: 1rem; // 16px
+
+$font_family: Roboto, Noto, sans-serif;
 
 $font-xxxl: 4rem; // 40px
 $font-xxl: 3rem; // 30px
@@ -88,9 +95,4 @@ $avatar-size-regular: 150px;
 
 $footer-height: 15em;
 
-$font_family: Roboto, Noto, sans-serif;
-
 $shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-
-$border-sm: 1px;
-$border-md: 2px;
