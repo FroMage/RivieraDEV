@@ -310,8 +310,21 @@ a:hover, a:active, a:focus {
 }
 @media (min-width: 768px) {
   .aboutUs__aboutUs {
-    padding: 10rem 4rem 10rem 10rem;
     font-size: 2rem;
+    padding-top: 10rem;
+    padding-right: 5rem;
+    padding-bottom: 10rem;
+    padding-left: calc( ((100% * 1.5 - 750px) / 2) + 4rem );
+  }
+}
+@media (min-width: 992px) {
+  .aboutUs__aboutUs {
+    padding-left: calc( ((100% * 1.5 - 970px) / 2) + 4rem );
+  }
+}
+@media (min-width: 1200px) {
+  .aboutUs__aboutUs {
+    padding-left: calc( ((100% * 1.5 - 1170px) / 2) + 4rem );
   }
 }
 .aboutUs__title {
@@ -488,7 +501,7 @@ a:hover, a:active, a:focus {
     width: 970px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .introCountdown {
     width: 1170px;
   }
@@ -583,17 +596,18 @@ a:hover, a:active, a:focus {
 }
 
 .countdown {
-  padding: 3rem;
+  padding: 2rem;
   background: linear-gradient(#19b8d5, #1dc9f2);
   display: grid;
-  column-gap: 3rem;
-  row-gap: 3rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
   grid-template-columns: 12rem 12rem;
   grid-template-rows: 12rem 12rem;
   justify-content: center;
 }
 @media (min-width: 768px) {
   .countdown {
+    padding: 4rem;
     grid-template-columns: 12rem 12rem 12rem 12rem;
     grid-template-rows: 12rem;
     border-radius: 0 0 1rem 1rem;
@@ -689,17 +703,17 @@ a:hover, a:active, a:focus {
     width: 970px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .days {
     width: 1170px;
   }
 }
 .days__mainTitle {
-  margin: 2rem;
+  margin: 2rem 2rem;
 }
 @media (min-width: 768px) {
   .days__mainTitle {
-    margin: 3rem;
+    margin: 3rem 4rem;
   }
 }
 .days__container {
@@ -939,7 +953,7 @@ a:hover, a:active, a:focus {
     width: 970px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .statistics {
     width: 1170px;
   }
