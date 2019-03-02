@@ -52,10 +52,10 @@ views.application.index.questions.when.answer=May 15-16-17 2019
 views.application.index.questions.where=Where?
 views.application.index.questions.where.answer=Sophia-Antipolis, Skema Business School
 
-views.application.index.pres.goal.title=Goal
-views.application.index.pres.goal.text=Provide a first class tech conference where developers can learn, hack and network.
-views.application.index.pres.dna.title=DNA
-views.application.index.pres.dna.text=Riviera DEV is a conference by developers, for developers. It is a fun and relax event offered at an affordable price so that every developer can enjoy the experience.
+views.application.index.aboutUs.title=Goal
+views.application.index.aboutUs.goal=Provide a first class tech conference where developers can learn, hack and network.
+views.application.index.aboutUs.dna=Riviera DEV is a conference by developers, for developers. It is a fun and relax event offered at an affordable price so that every developer can enjoy the experience.
+views.application.index.aboutUs.seePhotos=See all photos
 
 views.application.index.days.title=On the agenda
 views.application.index.days.deepdive.date=15th May, 2019
