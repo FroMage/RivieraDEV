@@ -1,16 +1,23 @@
-.personsList {
-    text-align: center;
-    margin-top: 2em;
+.persons {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $space-md;
+        justify-items: center;
+
+        @media (min-width: $screen-sm-min) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 }
 
 .personSummary {
     display: inline-block;
-    text-align:center;
+    text-align: center;
     text-decoration: none;
     margin: 0 30px 30px;
-    color: $color-black-light;
 
-    &-link {
+    &__link {
         text-decoration: none;
 
         &:hover,
@@ -20,7 +27,7 @@
         }
     }
 
-    &-photo {
+    &__photo {
         display: inline-block;
         width: $avatar-size-regular;
         height: $avatar-size-regular;
@@ -29,32 +36,30 @@
         @include transition(all 0.5s ease);
     }
 
-    &-desc {
-        margin-top: 0.5em;
+    &__desc {
+        margin-top: $space-sm;
     }
 
-    &-name {
+    &__name {
         text-transform: uppercase;
-        font-size: 1.1em;
-        color: $color-blue;
+        font-weight: bold;
     }
 
-    &-title {
-        font-style: italic;
+    &__title,
+    &__year {
+        font-size: $font-sm;
     }
 }
 
-.personSummary-link {
+.personSummary__link {
     &:hover,
     &:active,
     &:focus {
-
-        .personSummary-photo {
+        .personSummary__photo {
             @include box-shadow(0 0 0 5px $color-blue);
         }
     }
 }
-
 
 .personDetails {
     margin-top: 2em;
@@ -95,13 +100,10 @@
     &-link {
         margin-bottom: 0.5em;
     }
-
 }
-
 
 // Only on xs devices (smartphones)
 @media (max-width: $screen-xs-max) {
-    
     .personDetails {
         margin-top: 0;
 
@@ -112,7 +114,7 @@
 
         &-photo {
             text-align: center;
-            
+
             &-img {
                 max-width: 200px;
             }
@@ -126,5 +128,4 @@
             margin: 2em 0;
         }
     }
-
 }

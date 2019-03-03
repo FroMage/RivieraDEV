@@ -161,4 +161,9 @@ $days-illustration-size-sm: 10rem;
             margin-top: 0;
         }
     }
+
+    &__buttonContainer {
+        text-align: center;
+        margin: $space-md $space-md $space-xxl $space-md;
+    }
 }

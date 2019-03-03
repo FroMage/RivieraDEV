@@ -1,27 +1,26 @@
 .speakers {
-    @include notFullWidth;
+    background-color: $color-grey-ultralight;
+    padding: $space-xl 0;
 
-    &__title {
-        margin: $space-md $content-space-xs;
-
-        @media (min-width: $screen-sm-min) {
-            margin: $space-lg $content-space-sm;
-        }
+    @media (min-width: $screen-sm-min) {
+        padding: $space-xxl 0;
     }
 
-    &__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: $space-md;
-        justify-items: center;
+    &__container {
+        @include notFullWidth;
+    }
+
+    &__title {
+        margin: 0 $content-space-xs $space-md $content-space-xs;
 
         @media (min-width: $screen-sm-min) {
-            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 $content-space-sm $space-lg $content-space-sm;
         }
     }
 
     &__buttonContainer {
         text-align: center;
+        margin: $space-md;
     }
 }
 

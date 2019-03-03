@@ -851,6 +851,10 @@ a:hover, a:active, a:focus {
 .days__subtitle:first-child {
   margin-top: 0;
 }
+.days__buttonContainer {
+  text-align: center;
+  margin: 2rem 2rem 5rem 2rem;
+}
 
 .location {
   position: relative;
@@ -1464,9 +1468,16 @@ a.footer-rs-instagram:active {
   margin-top: 2em;
 }
 
-.personsList {
-  text-align: center;
-  margin-top: 2em;
+.persons__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .persons__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .personSummary {
@@ -1474,15 +1485,14 @@ a.footer-rs-instagram:active {
   text-align: center;
   text-decoration: none;
   margin: 0 30px 30px;
-  color: #474747;
 }
-.personSummary-link {
+.personSummary__link {
   text-decoration: none;
 }
-.personSummary-link:hover, .personSummary-link:active, .personSummary-link:focus {
+.personSummary__link:hover, .personSummary__link:active, .personSummary__link:focus {
   text-decoration: none;
 }
-.personSummary-photo {
+.personSummary__photo {
   display: inline-block;
   width: 150px;
   height: 150px;
@@ -1493,19 +1503,18 @@ a.footer-rs-instagram:active {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.personSummary-desc {
-  margin-top: 0.5em;
+.personSummary__desc {
+  margin-top: 1rem;
 }
-.personSummary-name {
+.personSummary__name {
   text-transform: uppercase;
-  font-size: 1.1em;
-  color: #19b8d5;
+  font-weight: bold;
 }
-.personSummary-title {
-  font-style: italic;
+.personSummary__title, .personSummary__year {
+  font-size: 1.6rem;
 }
 
-.personSummary-link:hover .personSummary-photo, .personSummary-link:active .personSummary-photo, .personSummary-link:focus .personSummary-photo {
+.personSummary__link:hover .personSummary__photo, .personSummary__link:active .personSummary__photo, .personSummary__link:focus .personSummary__photo {
   -moz-box-shadow: 0 0 0 5px #19b8d5;
   -webkit-box-shadow: 0 0 0 5px #19b8d5;
   box-shadow: 0 0 0 5px #19b8d5;
@@ -1604,45 +1613,44 @@ a.footer-rs-instagram:active {
 }
 
 .speakers {
+  background-color: #f8f7f7;
+  padding: 4rem 0;
+}
+@media (min-width: 768px) {
+  .speakers {
+    padding: 5rem 0;
+  }
+}
+.speakers__container {
   width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .speakers {
+  .speakers__container {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .speakers {
+  .speakers__container {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .speakers {
+  .speakers__container {
     width: 1170px;
   }
 }
 .speakers__title {
-  margin: 2rem 2rem;
+  margin: 0 2rem 2rem 2rem;
 }
 @media (min-width: 768px) {
   .speakers__title {
-    margin: 3rem 4rem;
-  }
-}
-.speakers__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  justify-items: center;
-}
-@media (min-width: 768px) {
-  .speakers__list {
-    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 4rem 3rem 4rem;
   }
 }
 .speakers__buttonContainer {
   text-align: center;
+  margin: 2rem;
 }
 
 .speaker-talks {

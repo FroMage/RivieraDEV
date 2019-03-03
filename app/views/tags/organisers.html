@@ -1,13 +1,13 @@
 #{if _orgas != null && _orgas.size() > 0}
-    <div class="personsList">
+    <div class="persons__list">
         #{list items: _orgas, as: 'orga'}
-            <a href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}" class="personSummary-link">
+            <a class="personSummary__link" href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}">
                 <figure class="personSummary">
-                    <div class="personSummary-photo" style="background-image: url('@{Application.orgaPhoto(orga.id)}')">
+                    <div class="personSummary__photo" style="background-image: url('@{Application.orgaPhoto(orga.id)}')">
                     </div>
-                    <figcaption class="personSummary-desc">
-                        <div class="personSummary-name">${orga}</div>
-                        <div class="personSummary-title">${orga.title}</div>
+                    <figcaption class="personSummary__desc">
+                        <div class="personSummary__name">${orga}</div>
+                        <div class="personSummary__title">${orga.title}</div>
                     </figcaption>
                 </figure>
             </a>
