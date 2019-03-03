@@ -1,63 +1,56 @@
 .location {
     position: relative;
 
-    &-header{
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-
-    &-subtitle {
-        text-align: center;
-        margin-bottom: 0;
-        padding-bottom: 1.5em;;
-    }
-
-    &-map{
+    &__map {
         width: 100%;
-        height: 400px;
+        height: 700px;
     }
 
-    &-adress-container {
+    &__card {
         position: absolute;
-        top: 0;
-        left: 0;
-        @include display-flex;
-        @include flex-direction(column);
-        @include justify-content(center);
+        background-color: $color-white;
+        border: $border-sm solid $color-gray-light;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow;
+        max-width: 50rem;
+        top: $space-xxl;
+        left: $space-xxl;
     }
 
-    &-address {
+    &__cardHeader {
+        padding: 20rem $space-xl $space-lg $space-xl;
+        background-image: url(../images/illustrations/location.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: $border-radius-md $border-radius-md 0 0;
+        color: $color-white;
+        font-size: $font-xxl;
+    }
 
-        padding: 2em;
+    &__cardContent {
+        padding: $space-xl;
+    }
 
-        &-sm{
-            position: absolute;
-            top: 4em;
-            right: 4em;
-            width: 25em;
-            background-color: #fff;
-            @include box-shadow(0 3px 6px rgba(0,0,0,0.23), 0 3px 6px rgba(0,0,0,0.16));
-        }
+    &__intro {
+        margin-bottom: $space-xl;
+    }
 
-        &-xs{
-            width: 100%;
-        }
+    &__addressLine {
+        display: block;
+    }
 
-        &-title {
-            margin-top: 0;
-        }
+    &__buttonContainer {
+        text-align: center;
+    }
 
-        &-title-map{
+    &__mapMarker {
+        &__addressTitle {
             font-weight: bold;
         }
 
-        &-line {
+        &__addressLine {
             display: block;
         }
     }
-
-    &-details {
-        margin-top: 2em;
-        text-align: center;
-    }
-
 }
