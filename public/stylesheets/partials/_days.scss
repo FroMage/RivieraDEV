@@ -38,7 +38,7 @@ $days-illustration-size-sm: 10rem;
     }
 
     &__intro {
-        border: 1px solid $color-gray-light;
+        border: $border-sm solid $color-gray-light;
         padding: $space-md;
         flex: 1;
         display: grid;
