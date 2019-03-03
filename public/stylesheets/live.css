@@ -79,13 +79,25 @@
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  margin: 0 30px 30px;
+  margin: 3rem;
 }
 .personSummary__link {
   text-decoration: none;
+  color: inherit;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: transparent;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .personSummary__link:hover, .personSummary__link:active, .personSummary__link:focus {
   text-decoration: none;
+  color: inherit;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border-color: #ddd;
 }
 .personSummary__photo {
   display: inline-block;
@@ -93,10 +105,6 @@
   height: 150px;
   border-radius: 150px;
   background-size: cover;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 .personSummary__desc {
   margin-top: 1rem;
@@ -107,12 +115,6 @@
 }
 .personSummary__title, .personSummary__year {
   font-size: 1.6rem;
-}
-
-.personSummary__link:hover .personSummary__photo, .personSummary__link:active .personSummary__photo, .personSummary__link:focus .personSummary__photo {
-  -moz-box-shadow: 0 0 0 5px #19b8d5;
-  -webkit-box-shadow: 0 0 0 5px #19b8d5;
-  box-shadow: 0 0 0 5px #19b8d5;
 }
 
 .personDetails {

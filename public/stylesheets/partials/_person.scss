@@ -15,15 +15,24 @@
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    margin: 0 30px 30px;
+    margin: $space-lg;
 
     &__link {
         text-decoration: none;
+        color: inherit;
+        border-width: $border-sm;
+        border-style: solid;
+        border-radius: $border-radius-xs;
+        border-color: transparent;
+        @include transition(all 0.2s ease);
 
         &:hover,
         &:active,
         &:focus {
             text-decoration: none;
+            color: inherit;
+            box-shadow: $shadow;
+            border-color: $color-gray-light;
         }
     }
 
@@ -33,7 +42,6 @@
         height: $avatar-size-regular;
         border-radius: $avatar-size-regular;
         background-size: cover;
-        @include transition(all 0.5s ease);
     }
 
     &__desc {
@@ -48,16 +56,6 @@
     &__title,
     &__year {
         font-size: $font-sm;
-    }
-}
-
-.personSummary__link {
-    &:hover,
-    &:active,
-    &:focus {
-        .personSummary__photo {
-            @include box-shadow(0 0 0 5px $color-blue);
-        }
     }
 }
 

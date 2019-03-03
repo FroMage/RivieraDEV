@@ -51,7 +51,7 @@ $days-illustration-size-sm: 10rem;
         align-content: start;
         border-color: $color-gray-light;
         border-style: solid;
-        border-width: 1px 1px 0 1px;
+        border-width: $border-sm $border-sm 0 $border-sm;
         border-radius: $border-radius-md $border-radius-md 0 0;
         box-shadow: $shadow;
 
