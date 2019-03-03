@@ -174,7 +174,9 @@
         <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
         #{speakers speakers: speakersStar/}
 
-        <a class="button" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
+        <div class="speakers__buttonContainer">
+            <a class="button" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
+        </div>
     </div>
 </div>
 #{/if}
@@ -184,6 +186,7 @@
     <div class="speakers__container">
         <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
         #{previousSpeakers speakers: speakersPreviousYears/}
+        
         <div class="speakers__buttonContainer">
             <a class="button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
         </div>

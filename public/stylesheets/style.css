@@ -521,18 +521,18 @@ a:hover, a:active, a:focus {
 @media (min-width: 768px) {
   .intro {
     padding: 4rem;
-    border-radius: 1rem;
+    border-radius: 16px;
     text-align: left;
   }
 }
 @media (min-width: 768px) {
   .intro--withCountdown {
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 16px 16px 0 0;
   }
 }
 @media (min-width: 992px) {
   .intro--withCountdown {
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 16px 0 0 16px;
   }
 }
 .intro__subtitle {
@@ -610,12 +610,12 @@ a:hover, a:active, a:focus {
     padding: 4rem;
     grid-template-columns: 12rem 12rem 12rem 12rem;
     grid-template-rows: 12rem;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 16px 16px;
   }
 }
 @media (min-width: 992px) {
   .countdown {
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 16px 16px 0;
     background: linear-gradient(to right, #19b8d5, #1dc9f2);
     grid-template-columns: 12rem 12rem;
     grid-template-rows: 12rem 12rem;
@@ -748,7 +748,7 @@ a:hover, a:active, a:focus {
   border-color: #ddd;
   border-style: solid;
   border-width: 1px 1px 0 1px;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 16px 16px 0 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 768px) {
@@ -820,7 +820,7 @@ a:hover, a:active, a:focus {
   border-color: #ddd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 16px 16px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 768px) {
@@ -1484,13 +1484,25 @@ a.footer-rs-instagram:active {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  margin: 0 30px 30px;
+  margin: 3rem;
 }
 .personSummary__link {
   text-decoration: none;
+  color: inherit;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: transparent;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .personSummary__link:hover, .personSummary__link:active, .personSummary__link:focus {
   text-decoration: none;
+  color: inherit;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border-color: #ddd;
 }
 .personSummary__photo {
   display: inline-block;
@@ -1498,10 +1510,6 @@ a.footer-rs-instagram:active {
   height: 150px;
   border-radius: 150px;
   background-size: cover;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 .personSummary__desc {
   margin-top: 1rem;
@@ -1512,12 +1520,6 @@ a.footer-rs-instagram:active {
 }
 .personSummary__title, .personSummary__year {
   font-size: 1.6rem;
-}
-
-.personSummary__link:hover .personSummary__photo, .personSummary__link:active .personSummary__photo, .personSummary__link:focus .personSummary__photo {
-  -moz-box-shadow: 0 0 0 5px #19b8d5;
-  -webkit-box-shadow: 0 0 0 5px #19b8d5;
-  box-shadow: 0 0 0 5px #19b8d5;
 }
 
 .personDetails {
