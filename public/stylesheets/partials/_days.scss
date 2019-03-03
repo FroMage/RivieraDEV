@@ -3,6 +3,7 @@ $days-illustration-size-sm: 10rem;
 
 .days {
     @include notFullWidth;
+    padding-bottom: $space-xxl;
 
     &__mainTitle {
         margin: $space-md $content-space-xs;
@@ -164,6 +165,5 @@ $days-illustration-size-sm: 10rem;
 
     &__buttonContainer {
         text-align: center;
-        margin: $space-md $space-md $space-xxl $space-md;
     }
 }
