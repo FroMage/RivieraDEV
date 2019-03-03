@@ -194,40 +194,29 @@
 </div>
 #{/elseif}
 
-<!--
-<div class="parallax parallax-home-location">
-</div>
--->
-<div class="location rowShadow">
-    <!--
-    <div class="location-header">
-        <h2 class="title home-title location-title container">C'est par là que ça se passe </h2>
-        <p class="home-subtitle location-subtitle container">Rejoignez-nous en plein cœur de Sophia-Antipolis.</p>
-    </div>
-    -->
-    <div class="location-address location-address-xs visible-xs">
-        <h3 class="title location-address-title">&{'views.application.index.address'}</h3>
-        <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
-        <span class="location-address-line">Sophia Antipolis</span>
-        <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
-        <span class="location-address-line">06902 Valbonne</span>
-        <span class="location-address-line">France</span>
 
-        <div class="location-details">
-            <a class="button button--primary location-details-btn" href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
+<div class="location">
+    <div id="location-map" class="location__map"></div>
+    <div class="location__card">
+        <div class="location__cardHeader">
+            SKEMA Business School
         </div>
-    </div>
-    <div id="location-map" class="location-map"></div>
-    <div class="location-address location-address-sm hidden-xs">
-        <h3 class="title location-address-title">&{'views.application.index.address'}</h3>
-        <span class="location-address-line">SKEMA Business School - Sophia Antipolis</span>
-        <span class="location-address-line">Sophia Antipolis</span>
-        <span class="location-address-line">60 Rue Fedor Dostoïevski</span>
-        <span class="location-address-line">06902 Valbonne</span>
-        <span class="location-address-line">France</span>
-
-        <div class="location-details">
-            <a class="button button--primary location-details-btn" href="@{Application.access}" role="button">&{'views.application.index.access'}</a>
+        <div class="location__cardContent">
+            <div class="location__intro">
+                &{'views.application.index.location.intro'}
+            </div>
+            <div class="location__address">
+                <span class="location__addressLine">SKEMA Business School - Sophia Antipolis</span>
+                <span class="location__addressLine">Sophia Antipolis</span>
+                <span class="location__addressLine">60 Rue Fedor Dostoïevski</span>
+                <span class="location__addressLine">06902 Valbonne</span>
+                <span class="location__addressLine">France</span>
+            </div>
+            <div class="location__buttonContainer">
+                <a class="button button--primary location__button" href="@{Application.access}" role="button">
+                    &{'views.application.index.location.access'}
+                </a>
+            </div>
         </div>
     </div>
 </div> <!-- /.location -->
