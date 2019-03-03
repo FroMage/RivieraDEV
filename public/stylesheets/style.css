@@ -82,33 +82,6 @@ a:hover, a:active, a:focus {
   color: #00709d;
 }
 
-.rowShadow {
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.flexRow {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: stretch;
-}
-@media (max-width: 767px) {
-  .flexRow {
-    display: block;
-  }
-}
-
-.flexCol--grow1 {
-  flex: 1 0;
-}
-.flexCol--grow2 {
-  flex: 2 0;
-}
-.flexCol--grow3 {
-  flex: 3 0;
-}
-
 .home__title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -123,10 +96,6 @@ a:hover, a:active, a:focus {
 .home-subtitle {
   font-size: 1.1em;
   text-align: center;
-}
-.home-introduction {
-  padding-bottom: 1.5em;
-  text-align: left;
 }
 
 .page-title {
