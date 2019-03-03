@@ -1,16 +1,14 @@
-<div class="speakers__list">
-	#{list items: _speakers, as: 'speaker'}
-		<div class="speakers__item">
-			<a class="personSummary-link" href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
-				<figure class="personSummary">
-					<div class="personSummary-photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
-					</div>
-					<figcaption class="personSummary-desc">
-						<div class="personSummary-name">${speaker}</div>
-						<div class="personSummary-title">${speaker.company}</div>
-					</figcaption>
-				</figure>
-			</a>
-		</div>
-	#{/list}
+<div class="persons__list">
+    #{list items: _speakers, as: 'speaker'}
+        <a class="personSummary__link" href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
+            <figure class="personSummary">
+                <div class="personSummary__photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
+                </div>
+                <figcaption class="personSummary__desc">
+                    <div class="personSummary__name">${speaker}</div>
+                    <div class="personSummary__title">${speaker.company}</div>
+                </figcaption>
+             </figure>
+        </a>
+    #{/list}
 </div>

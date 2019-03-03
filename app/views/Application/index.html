@@ -161,23 +161,32 @@
         </div>
     
     </div> <!-- /.days__container -->
+
+    <div class="days__buttonContainer">
+        <a class="button" href="@{Application.schedule()}">&{'views.application.index.schedule'}</a>
+    </div>
+
 </div> <!-- /.days -->
 
 #{if !displayPreviousSpeakers && speakersStar != null && speakersStar.size() > 0}
 <div class="speakers">
-    <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
-	#{speakers speakers: speakersStar/}
+    <div class="speakers__container">
+        <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
+        #{speakers speakers: speakersStar/}
 
-    <a class="button button--primary" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
+        <a class="button" href="@{Application.speakers()}">&{'views.application.index.speakers.link'}</a>
+    </div>
 </div>
 #{/if}
 
 #{elseif speakersPreviousYears != null && speakersPreviousYears.size() > 0}
 <div class="speakers">
-    <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
-	#{previousSpeakers speakers: speakersPreviousYears/}
-    <div class="speakers__buttonContainer">
-        <a class="button button--primary speakers__button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
+    <div class="speakers__container">
+        <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
+        #{previousSpeakers speakers: speakersPreviousYears/}
+        <div class="speakers__buttonContainer">
+            <a class="button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
+        </div>
     </div>
 </div>
 #{/elseif}
