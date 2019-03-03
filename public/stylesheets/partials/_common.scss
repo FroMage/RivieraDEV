@@ -90,32 +90,6 @@ a {
     }
 }
 
-.rowShadow {
-    @include box-shadow(0 0 6px rgba(0, 0, 0, 0.3));
-}
-
-.flexRow {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-
-    @media (max-width: $screen-xs-max) {
-        display: block;
-    }
-}
-
-.flexCol {
-    &--grow1 {
-        flex: 1 0;
-    }
-    &--grow2 {
-        flex: 2 0;
-    }
-    &--grow3 {
-        flex: 3 0;
-    }
-}
-
 .home {
     &__title {
         font-size: $font-md;
@@ -131,11 +105,6 @@ a {
     &-subtitle {
         font-size: $font-size-subtitle;
         text-align: center;
-    }
-
-    &-introduction {
-        padding-bottom: 1.5em;
-        text-align: left;
     }
 }
 
