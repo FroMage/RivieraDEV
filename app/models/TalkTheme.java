@@ -26,6 +26,9 @@ public class TalkTheme extends Model implements Comparable<TalkTheme>{
 	@OneToMany(mappedBy = "theme")
 	public List<Talk> talks = new ArrayList<Talk>();
 	
+	// the cfp app id, if imported
+	public String importId;
+	
 	@Override
 	public String toString(){
 		return theme;

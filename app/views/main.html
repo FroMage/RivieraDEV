@@ -165,6 +165,13 @@
 <li class="${request.action == 'Application.talks' ? 'active' : ''}"><a href="@{Application.talks}">Sessions</a></li>
 -->
 
+    #{if flash.message || flash.message2}
+        <div class="alert alert-success">
+            #{if flash.message}<li>${flash.message}</li>#{/if}
+            #{if flash.message2}<li>${flash.message2}</li>#{/if}
+        </div>
+    #{/if}
+
     <!-- <div class="container"> -->
         #{doLayout /}
     <!-- </div> -->

@@ -66,6 +66,9 @@ public class Talk extends Model implements Comparable<Talk> {
 
 	public Integer nbLikes = 0;
 	
+	// the cfp app id, if imported
+    public String importId;
+
 	// Permet de cacher ce talk dans la page qui liste les talks.
 	// (Ex: 'Keynote des Orga', 'Accueil', etc...)
 	public boolean isHiddenInTalksPage;

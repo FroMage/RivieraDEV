@@ -14,7 +14,10 @@
 		<div id="crudHeader">
 			<h1><a href="@{CRUD.index()}">&{'crud.title'}</a></h1>
 		</div>
-		<a href="@{Application.index()}">Back to RivieraDEV</a>
+		<ul>
+    		<li><a href="@{Application.index()}">Back to RivieraDEV</a></li>
+            <li><a href="@{Admin.uploadProgramForm()}">Import program</a></li>
+        </ul>
 		
 		#{if request.actionMethod != 'index'}
 			<div id="crudBreadcrumb">

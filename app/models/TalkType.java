@@ -26,6 +26,9 @@ public class TalkType extends Model implements Comparable<TalkType>{
 	@OneToMany(mappedBy = "type")
 	public List<Talk> talks = new ArrayList<Talk>();
 	
+	// the cfp app id, if imported
+    public String importId;
+
 	@Override
 	public String toString(){
         if (Lang.get().equals("en")) { // English

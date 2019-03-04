@@ -37,11 +37,16 @@ public class Speaker extends Model {
 
 	public Blob photo;
 	
+	// the cfp app id, if imported
+    public String importId;
+
 	/** Est-ce que ce speaker mérite d'être sur la page d'accueil ? */
 	public boolean star;
 
 	@ManyToMany(mappedBy = "speakers")
 	public List<Talk> talks = new ArrayList<Talk>();
+    
+	public String phone;
 	
 	@Override
 	public String toString() {
