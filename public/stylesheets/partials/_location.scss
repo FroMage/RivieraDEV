@@ -6,15 +6,25 @@
         height: 700px;
     }
 
-    &__card {
+    &__cardContainer {
         position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: flex-start;
+        padding-left: $space-xxl;
+    }
+
+    &__card {
         background-color: $color-white;
         border: $border-sm solid $color-gray-light;
         border-radius: $border-radius-md;
         box-shadow: $shadow;
         max-width: 50rem;
-        top: $space-xxl;
-        left: $space-xxl;
     }
 
     &__cardHeader {
