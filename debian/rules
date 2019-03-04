@@ -7,7 +7,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-NAME=rivieradev-2019
+NAME=rivieradev-test
 
 DEB_PATH=debian/$(NAME)
 INSTALL_PATH=/usr/share/$(NAME)

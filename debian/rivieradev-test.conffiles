@@ -1,0 +1,4 @@
+etc/rivieradev-test/routes
+etc/rivieradev-test/log4j-prod.properties
+etc/rivieradev-test/application.conf
+etc/rivieradev-test/dependencies.yml
