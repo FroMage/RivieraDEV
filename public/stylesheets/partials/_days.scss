@@ -2,7 +2,6 @@ $days-illustration-size-md: 18rem;
 $days-illustration-size-sm: 10rem;
 
 .days {
-    @include notFullWidth;
     padding-bottom: $space-xxl;
 
     &__mainTitle {

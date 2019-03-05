@@ -18,22 +18,6 @@
     margin: $space-lg;
 
     &__link {
-        text-decoration: none;
-        color: inherit;
-        border-width: $border-sm;
-        border-style: solid;
-        border-radius: $border-radius-xs;
-        border-color: transparent;
-        @include transition(all 0.2s ease);
-
-        &:hover,
-        &:active,
-        &:focus {
-            text-decoration: none;
-            color: inherit;
-            box-shadow: $shadow;
-            border-color: $color-gray-light;
-        }
     }
 
     &__photo {
