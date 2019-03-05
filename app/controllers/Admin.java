@@ -1,6 +1,8 @@
 package controllers;
 
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,6 +14,8 @@ import java.net.HttpURLConnection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import javax.imageio.ImageIO;
 import javax.imageio.stream.FileImageOutputStream;
@@ -35,6 +39,8 @@ import models.TalkThemeColor;
 import models.TalkType;
 import play.Logger;
 import play.db.jpa.Blob;
+import play.db.jpa.JPABase;
+import play.libs.IO;
 import play.libs.WS;
 import play.libs.WS.HttpResponse;
 import play.mvc.Controller;
@@ -242,5 +248,36 @@ public class Admin extends Controller {
         uploadProgramForm();
     }
     
-
+    public static void speakerPhotosZip() throws IOException {
+        List<Speaker> speakers = Speaker.findAll();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream(4096);
+        Map<String,Integer> dupeCount = new HashMap<>();
+        try(ZipOutputStream zos = new ZipOutputStream(baos)){
+            for (Speaker speaker : speakers) {
+                if(!speaker.photo.exists())
+                    continue;
+                String type = speaker.photo.type();
+                int slash = type.lastIndexOf('/');
+                String ext = slash != -1 ? type.substring(slash+1) : type;
+                String name = speaker.firstName+"-"+speaker.lastName;
+                name = JavaExtensions.noAccents(name);
+                Integer count = dupeCount.get(name);
+                if(count != null) {
+                    count++;
+                    name += "-"+count;
+                    dupeCount.put(name, count);
+                } else {
+                    dupeCount.put(name, 1);
+                }
+                zos.putNextEntry(new ZipEntry(name+"."+ext));
+                File file = speaker.photo.getFile();
+                try(InputStream fis = new FileInputStream(file)){
+                    IO.copy(fis, zos);
+                }
+            }
+        }
+        byte[] bytes = baos.toByteArray();
+        renderBinary(new ByteArrayInputStream(bytes), "speaker-photos.zip", bytes.length, "application/zip", false);
+    }
+    
 }
