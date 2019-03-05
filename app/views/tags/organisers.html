@@ -1,7 +1,7 @@
 #{if _orgas != null && _orgas.size() > 0}
     <div class="persons__list">
         #{list items: _orgas, as: 'orga'}
-            <a class="personSummary__link" href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}">
+            <a class="personSummary__link cardLink" href="@{Application.organiser(orga.id)}" title="${orga.firstName} ${orga.lastName}">
                 <figure class="personSummary">
                     <div class="personSummary__photo" style="background-image: url('@{Application.orgaPhoto(orga.id)}')">
                     </div>

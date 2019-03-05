@@ -1,31 +1,17 @@
 
 #{if _sponsors != null && _sponsors.size() > 0}
-
-#{if _lunchesAndPartySoldOut}
-    #{if _level == "lunches"}
-    <div class="col-sm-5 col-sm-offset-1">
-    #{/if}
-    #{elseif _level == "party"}
-    <div class="col-sm-5">
-    #{/elseif}
-    #{else}
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-    #{/else}
-#{/if}
-#{else}
-<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-#{/else}
-
-    <div class="partenaires-level">
-        <div class="partenaires-title partenaires-title-${_level}"><h3 class="partenaires-title-text">&{'views.application.sponsors.level.' + _level}</h3></div>
-        <div class="partenaires-list">
+    <div class="partenaires__level">
+        <h3 class="partenaires__levelTitle partenaires__levelTitle--${_level}">
+            &{'views.application.sponsors.level.' + _level}
+        </h3>
+        <div class="partenaires__list">
             #{list items: _sponsors, as: 'sponsor'}
-                <a class="partenaire-logo partenaire-logo-${_level}" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}">
-                    <img class="partenaire-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
+                <a class="partenaire__link cardLink" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}">
+                    <div class="partenaire__logo partenaire__logo--${_level}">
+                        <img class="partenaire__logoImg" src="@{Application.sponsorLogo(sponsor.id)}" />
+                    </div>
                 </a>
             #{/list}
         </div>
     </div>
-
-</div> <!-- /.col -->
 #{/if}

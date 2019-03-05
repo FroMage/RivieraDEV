@@ -1,8 +1,6 @@
 $counter-item-size: 12rem;
 
 .introCountdown {
-    @include notFullWidth;
-
     /* To be displayed partially on Welcome picture */
     margin-top: -10%;
 

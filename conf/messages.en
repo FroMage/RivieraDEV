@@ -85,7 +85,6 @@ views.application.index.follow=Follow Riviera DEV 2019: sale date, new speakers,
 views.application.index.speakers=Our speakers
 views.application.index.speakers.link=Discover all the speakers
 views.application.index.sponsors=Our Sponsors
-views.application.index.sponsors.tagline=Without them, none of this would be possible!
 views.application.index.sponsors.join=Become sponsor
 
 views.application.photos.title=Photos

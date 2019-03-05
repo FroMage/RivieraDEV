@@ -1,6 +1,6 @@
 <div class="persons__list">
     #{list items: _speakers, as: 'speaker'}
-        <a class="personSummary__link" href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
+        <a class="personSummary__link cardLink" href="@{Application.speaker(speaker.id)}" title="${speaker.firstName} ${speaker.lastName}">
             <figure class="personSummary">
                 <div class="personSummary__photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
                 </div>

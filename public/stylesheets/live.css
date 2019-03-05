@@ -81,24 +81,6 @@
   text-decoration: none;
   margin: 3rem;
 }
-.personSummary__link {
-  text-decoration: none;
-  color: inherit;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 4px;
-  border-color: transparent;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.personSummary__link:hover, .personSummary__link:active, .personSummary__link:focus {
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  border-color: #ddd;
-}
 .personSummary__photo {
   display: inline-block;
   width: 150px;

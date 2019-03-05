@@ -36,7 +36,7 @@
 
 </div> <!-- /.parallax -->
 
-<div class="introCountdown #{if displayCountdown} introCountdown--withCountdown #{/if}">
+<div class="introCountdown #{if displayCountdown} introCountdown--withCountdown #{/if} notFullWidth">
     
     <div class="introCountdown__intro intro #{if displayCountdown} intro--withCountdown #{/if}">
       
@@ -86,7 +86,7 @@
         </div>
     </div>-->
 
-<div class="statistics">
+<div class="statistics notFullWidth">
     <div class="statistics__item">
         <span class="statistics__icon statistics__icon--attendees"></span>
         <div class="statistics__text">
@@ -123,7 +123,7 @@
     <div class="aboutUs__item aboutUs__photo3"></div>
 </div> <!-- ./aboutUs -->
 
-<div class="days">
+<div class="days notFullWidth">
     <h2 class="days__mainTitle home__title">&{'views.application.index.days.title'}</h2>
 
     <div class="days__container">
@@ -170,7 +170,7 @@
 
 #{if !displayPreviousSpeakers && speakersStar != null && speakersStar.size() > 0}
 <div class="speakers">
-    <div class="speakers__container">
+    <div class="speakers__container notFullWidth">
         <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
         #{speakers speakers: speakersStar/}
 
@@ -183,7 +183,7 @@
 
 #{elseif speakersPreviousYears != null && speakersPreviousYears.size() > 0}
 <div class="speakers">
-    <div class="speakers__container">
+    <div class="speakers__container notFullWidth">
         <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
         #{previousSpeakers speakers: speakersPreviousYears/}
         
@@ -214,7 +214,7 @@
                     <span class="location__addressLine">France</span>
                 </div>
                 <div class="location__buttonContainer">
-                    <a class="button button--primary location__button" href="@{Application.access}" role="button">
+                    <a class="button location__button" href="@{Application.access}" role="button">
                         &{'views.application.index.location.access'}
                     </a>
                 </div>
@@ -240,34 +240,26 @@
 #{/if}
 
 
-<!--
-<div class="parallax parallax-home-partenaires">
-</div>
--->
+<div class="partenaires">
+    <div class="partenaires__container notFullWidth">
+        <h2 class="home__title partenaires__title">
+            &{'views.application.index.sponsors'}
+        </h2>
 
-<div class="partenaires container text-center">
-    <div class="partenaires-header">
-        <h2 class="title home-title partenaires-header-title container">&{'views.application.index.sponsors'}</h2>
-        <p class="home-subtitle partenaires-header-subtitle container">&{'views.application.index.sponsors.tagline'}</p>
-    </div>
-
-    
-    #{if sponsors != null && !sponsors.isEmpty()}
-        <div class="row">
+        #{if sponsors != null && !sponsors.isEmpty()}
             #{list sponsors.keySet(), as: 'sponsorShip'}
                 #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), level: sponsorShip.code, lunchesAndPartySoldOut: lunchesAndPartySoldOut/}
             #{/list}
+        #{/if}
+
+        #{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
+
+        <div class="partenaires__buttonContainer">
+            <a class="button" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
         </div>
-    #{/if}
 
-
-	#{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
-
-    <div class="registration-buttons registration-partenaire">
-        <a class="button button-primary" href="@{Application.becomeSponsor()}">&{'views.application.index.sponsors.join'}</a>
     </div>
-
-</div>
+</div> <!-- /.partenaires -->
 
 
 <!-- Countdown -->
