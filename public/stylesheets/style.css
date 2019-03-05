@@ -830,27 +830,49 @@ a:hover, a:active, a:focus {
   position: relative;
 }
 .location__map {
-  width: 100%;
-  height: 700px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .location__map {
+    width: 100%;
+    height: 700px;
+    display: block;
+  }
 }
 .location__cardContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  justify-items: flex-start;
-  padding-left: 5rem;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .location__cardContainer {
+    margin: 5rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .location__cardContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    justify-items: flex-start;
+    margin: 0;
+    padding-left: 5rem;
+  }
 }
 .location__card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 16px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  max-width: 50rem;
+  background-color: #f8f7f7;
+}
+@media (min-width: 768px) {
+  .location__card {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    max-width: 50rem;
+  }
 }
 .location__cardHeader {
   padding: 20rem 4rem 3rem 4rem;
@@ -858,15 +880,36 @@ a:hover, a:active, a:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 16px 16px 0 0;
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  .location__cardHeader {
+    border-radius: 16px 16px 0 0;
+    font-size: 3rem;
+  }
 }
 .location__cardContent {
   padding: 4rem;
 }
+.location__intro, .location__address {
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 4rem 4rem;
+  padding-left: 6rem;
+}
+@media (min-width: 768px) {
+  .location__intro, .location__address {
+    background-size: 2rem 2rem;
+    padding-left: 4rem;
+  }
+}
 .location__intro {
   margin-bottom: 4rem;
+  background-image: url(../images/icons/love.svg);
+}
+.location__address {
+  background-image: url(../images/icons/where.svg);
 }
 .location__addressLine {
   display: block;

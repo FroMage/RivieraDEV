@@ -2,29 +2,47 @@
     position: relative;
 
     &__map {
-        width: 100%;
-        height: 700px;
+        display: none;
+
+        @media (min-width: $screen-md-min) {
+            width: 100%;
+            height: 700px;
+            display: block;
+        }
     }
 
     &__cardContainer {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        justify-items: flex-start;
-        padding-left: $space-xxl;
+        justify-items: center;
+
+        @media (min-width: $screen-sm-min) {
+            margin: $space-xxl 0;
+        }
+
+        @media (min-width: $screen-md-min) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            flex-direction: column;
+            justify-items: flex-start;
+            margin: 0;
+            padding-left: $space-xxl;
+        }
     }
 
     &__card {
-        background-color: $color-white;
-        border: $border-sm solid $color-gray-light;
-        border-radius: $border-radius-md;
-        box-shadow: $shadow;
-        max-width: 50rem;
+        background-color: $color-grey-ultralight;
+
+        @media (min-width: $screen-sm-min) {
+            border: $border-sm solid $color-gray-light;
+            border-radius: $border-radius-md;
+            box-shadow: $shadow;
+            max-width: 50rem;
+        }
     }
 
     &__cardHeader {
@@ -33,17 +51,39 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: $border-radius-md $border-radius-md 0 0;
         color: $color-white;
-        font-size: $font-xxl;
+        font-size: $font-md;
+
+        @media (min-width: $screen-sm-min) {
+            border-radius: $border-radius-md $border-radius-md 0 0;
+            font-size: $font-xxl;
+        }
     }
 
     &__cardContent {
         padding: $space-xl;
     }
 
+    &__intro,
+    &__address {
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: $icon-size-xl $icon-size-xl;
+        padding-left: $icon-size-xl + $space-md;
+
+        @media (min-width: $screen-sm-min) {
+            background-size: $icon-size-md $icon-size-md;
+            padding-left: $icon-size-md + $space-md;
+        }
+    }
+
     &__intro {
         margin-bottom: $space-xl;
+        background-image: url(../images/icons/love.svg);
+    }
+
+    &__address {
+        background-image: url(../images/icons/where.svg);
     }
 
     &__addressLine {
