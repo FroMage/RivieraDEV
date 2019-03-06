@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    padding-bottom: $footer-height;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: $font-sm;
     position: relative;
@@ -14,12 +13,6 @@ body {
 
     @media (min-width: $screen-sm-min) {
         font-size: $font-md;
-    }
-}
-
-@media (max-width: $screen-xs-max) {
-    body {
-        padding-bottom: 0;
     }
 }
 
