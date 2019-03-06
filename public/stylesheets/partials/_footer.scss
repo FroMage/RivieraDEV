@@ -1,150 +1,131 @@
+$footer-logo-height-xs: 5rem;
+
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: $footer-height;
-    padding-top: 1.5em;
-    background-color: #333;
-    color: #ddd;
+    background: linear-gradient($color-blue, $color-blue-medium);
+    color: $color-white;
+    padding: $space-md;
 
     a {
-        color: #ddd;
-        transition: all 0.1s;
+        color: $color-white;
+        text-decoration: none;
 
         &:hover,
         &:focus,
         &:active {
-            color: #fff;
+            text-decoration: underline;
         }
     }
 
-    &-infos {
-        padding-left: 2em;
+    &__logoImg {
+        height: $footer-logo-height-xs;
     }
 
-    &-logo {
-        font-size: 1.8em;
-
-        & img {
-            height: 75px;
-        }
+    &__title {
+        text-transform: uppercase;
+        font-size: $font-md;
+        margin: $space-xl 0 $space-lg 0;
     }
 
-    &-contact {
-        margin-top: 1.5em;
-
-        &-deco {
-            color: $color-yellow;
-            font-size: 2em;
-            vertical-align: middle;
-        }
-
-        &-text {
-            vertical-align: sub; // little hack to align text with {}
-        }
-        
-    }
-
-    &-title {
-        font-size: 1.2em;
-        margin-top: 0;
-        margin-bottom: 0.2em
-    }
-
-    &-menu {
+    &__list {
         list-style-type: none;
-        padding-left: 1em;
-        font-size: 0.9em;
+        padding-left: 0;
+        display: grid;
+        grid-gap: $space-md;
+        grid-auto-flow: column;
     }
 
-    &-archives {
-        margin-top: 0.5em;
+    &__listItem {
+        font-size: $font-sm;
     }
 
-    &-admin {
-        margin-top: 1em;
+    &__adminList {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
-    &-rs {
-        margin-top: 0.5em;
+    &__archivesList {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 
-        &-item {
-            font-size: 2em;
+    &__follow {
+        border-top: $border-md solid $color-white;
+        margin: $space-xl -#{$space-md} 0 -#{$space-md};
+        padding: 0 $space-md;
+    }
 
-            &:hover,
-            &:focus,
-            &:active {
-                text-decoration: none;
-            }
+    &__followList {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__contactTitle {
+        margin: 0;
+        padding-right: $space-sm;
+        font-size: $font-sm;
+    }
+
+    &__contactMail {
+        padding-left: $space-sm;
+    }
+
+    &__contactTitle,
+    &__contactMail {
+        border-bottom: $border-md solid $color-white;
+        padding-bottom: $space-sm;
+    }
+
+    &__rs {
+        font-size: 2em;
+        display: inline-block;
+        text-align: center;
+        width: 1.5em;
+        height: 1.5em;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
         }
 
-    }
-
-    &-copyright {
-        text-align: right;
-        font-size: 0.8em;
-    }
-}
-
-a.footer-rs-item {
-    display: inline-block;
-    text-align: center;
-    width: 1.5em;
-    height: 1.5em;
-    transition: all 0.3s;
-}
-
-a.footer-rs-twitter:hover,
-a.footer-rs-twitter:focus,
-a.footer-rs-twitter:active {
-    color: #1da1f2;
-}
-
-a.footer-rs-facebook:hover,
-a.footer-rs-facebook:focus,
-a.footer-rs-facebook:active {
-    color: #3b5998;
-}
-
-a.footer-rs-linkedin:hover,
-a.footer-rs-linkedin:focus,
-a.footer-rs-linkedin:active {
-    color: #0077B5;
-}
-
-a.footer-rs-instagram:hover,
-a.footer-rs-instagram:focus,
-a.footer-rs-instagram:active {
-    color: #E62F65;
-}
-
-@media (max-width: $screen-xs-max) {
-
-    .footer {
-        position: static;
-        height: auto;
-
-        &-contact {
-            margin-top: 1em;
+        &--twitter:hover,
+        &--twitter:focus,
+        &--twitter:active {
+            color: #1da1f2;
         }
 
-        &-infos,
-        &-menu,
-        &-rs {
-            padding-left: 1em;
-            padding-right: 1em;
+        &--facebook:hover,
+        &--facebook:focus,
+        &--facebook:active {
+            color: #3b5998;
         }
 
-        &-menu,
-        &-rs {
-            margin-top: 2em;
+        &--linkedin:hover,
+        &--linkedin:focus,
+        &--linkedin:active {
+            color: #0077b5;
         }
 
-        &-copyright {
-            text-align: center;
-            margin-top: 1em;
-            margin-bottom: 0.5em;
+        &--instagram:hover,
+        &--instagram:focus,
+        &--instagram:active {
+            color: #e62f65;
         }
     }
 
+    &__copyright {
+        margin-top: $space-xxl;
+        margin-bottom: $space-md;
+        font-size: $font-sm;
+        text-align: center;
+    }
 }
