@@ -1,0 +1,12 @@
+<svg id="facebook-logo-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_349" data-name="Groupe 349">
+    <path id="Tracé_290" data-name="Tracé 290" class="cls-1" d="M25,0A25,25,0,1,0,50,25,25.028,25.028,0,0,0,25,0Zm6.217,25.88H27.15v14.5H21.123V25.88H18.258V20.756h2.865V17.442c0-2.374,1.128-6.082,6.082-6.082l4.466.017v4.974H28.43a1.227,1.227,0,0,0-1.278,1.4v3.011h4.592Z"/>
+  </g>
+</svg>
