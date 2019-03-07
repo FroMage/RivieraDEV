@@ -1,9 +1,24 @@
 $footer-logo-height-xs: 5rem;
+$footer-logo-height-sm: 7rem;
 
 .footer {
     background: linear-gradient($color-blue, $color-blue-medium);
     color: $color-white;
     padding: $space-md;
+
+    @media (min-width: $screen-sm-min) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'followContact followContact'
+            'archives admin'
+            'logo copyright';
+        padding: $space-xl $space-xxl;
+    }
+
+    @media (min-width: $screen-md-min) {
+        padding: $space-xl $space-xxxl;
+    }
 
     a {
         color: $color-white;
@@ -16,14 +31,29 @@ $footer-logo-height-xs: 5rem;
         }
     }
 
+    &__logo {
+        @media (min-width: $screen-sm-min) {
+            grid-area: logo;
+            padding-top: $space-xl;
+        }
+    }
+
     &__logoImg {
         height: $footer-logo-height-xs;
+
+        @media (min-width: $screen-sm-min) {
+            height: $footer-logo-height-sm;
+        }
     }
 
     &__title {
         text-transform: uppercase;
         font-size: $font-md;
         margin: $space-xl 0 $space-lg 0;
+
+        @media (min-width: $screen-sm-min) {
+            margin: 0;
+        }
     }
 
     &__list {
@@ -32,10 +62,22 @@ $footer-logo-height-xs: 5rem;
         display: grid;
         grid-gap: $space-md;
         grid-auto-flow: column;
+
+        @media (min-width: $screen-sm-min) {
+            grid-gap: $space-sm;
+        }
     }
 
     &__listItem {
         font-size: $font-sm;
+    }
+
+    &__admin {
+        @media (min-width: $screen-sm-min) {
+            grid-area: admin;
+            border-bottom: $border-sm solid $color-white;
+            padding: $space-xl 0;
+        }
     }
 
     &__adminList {
@@ -43,15 +85,52 @@ $footer-logo-height-xs: 5rem;
         grid-template-rows: 1fr 1fr;
     }
 
+    &__archives {
+        @media (min-width: $screen-sm-min) {
+            grid-area: archives;
+            border-bottom: $border-sm solid $color-white;
+            padding: $space-xl 0;
+        }
+    }
+
+    &__archivesListContainer {
+        @media (min-width: $screen-sm-min) {
+            display: flex;
+        }
+    }
+
     &__archivesList {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+
+        @media (min-width: $screen-sm-min) {
+            grid-column-gap: $space-xl;
+        }
+    }
+
+    &__followContact {
+        @media (min-width: $screen-sm-min) {
+            grid-area: followContact;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: $border-sm solid $color-white;
+            padding-bottom: $space-xl;
+        }
     }
 
     &__follow {
         border-top: $border-md solid $color-white;
         margin: $space-xl -#{$space-md} 0 -#{$space-md};
         padding: 0 $space-md;
+
+        @media (min-width: $screen-sm-min) {
+            border-top: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
     }
 
     &__followList {
@@ -59,16 +138,39 @@ $footer-logo-height-xs: 5rem;
         padding-left: 0;
         display: flex;
         justify-content: center;
+
+        @media (min-width: $screen-sm-min) {
+            margin: 0 $space-lg;
+        }
     }
 
     &__rs {
         margin: 0 $space-sm;
+        display: inline-block;
+        text-align: center;
+        width: $icon-size-xxl;
+        height: $icon-size-xxl;
+
+        @media (min-width: $screen-sm-min) {
+            width: $icon-size-xl;
+            height: $icon-size-xl;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
     }
 
     &__contact {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+
+        @media (min-width: $screen-sm-min) {
+            margin-left: $space-lg;
+        }
     }
 
     &__contactTitle {
@@ -85,44 +187,9 @@ $footer-logo-height-xs: 5rem;
     &__contactMail {
         border-bottom: $border-md solid $color-white;
         padding-bottom: $space-sm;
-    }
 
-    &__rs {
-        font-size: 2em;
-        display: inline-block;
-        text-align: center;
-        width: 1.5em;
-        height: 1.5em;
-        transition: all 0.3s;
-
-        &:hover,
-        &:focus,
-        &:active {
-            text-decoration: none;
-        }
-
-        &--twitter:hover,
-        &--twitter:focus,
-        &--twitter:active {
-            color: #1da1f2;
-        }
-
-        &--facebook:hover,
-        &--facebook:focus,
-        &--facebook:active {
-            color: #3b5998;
-        }
-
-        &--linkedin:hover,
-        &--linkedin:focus,
-        &--linkedin:active {
-            color: #0077b5;
-        }
-
-        &--instagram:hover,
-        &--instagram:focus,
-        &--instagram:active {
-            color: #e62f65;
+        @media (min-width: $screen-sm-min) {
+            border-width: $border-sm;
         }
     }
 
@@ -131,5 +198,13 @@ $footer-logo-height-xs: 5rem;
         margin-bottom: $space-md;
         font-size: $font-sm;
         text-align: center;
+
+        @media (min-width: $screen-sm-min) {
+            grid-area: copyright;
+            padding-top: $space-xl;
+            margin: 0;
+            align-self: flex-end;
+            text-align: left;
+        }
     }
 }
