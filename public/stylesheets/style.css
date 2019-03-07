@@ -1363,6 +1363,9 @@ a:hover, a:active, a:focus {
   display: flex;
   justify-content: center;
 }
+.footer__rs {
+  margin: 0 1rem;
+}
 .footer__contact {
   display: flex;
   justify-content: center;

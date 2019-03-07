@@ -61,6 +61,10 @@ $footer-logo-height-xs: 5rem;
         justify-content: center;
     }
 
+    &__rs {
+        margin: 0 $space-sm;
+    }
+
     &__contact {
         display: flex;
         justify-content: center;
