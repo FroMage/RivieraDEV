@@ -1,63 +1,193 @@
-.menu {
-    $border_size: 0.15rem;
+.burgerMenu {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    padding-left: 2rem;
 
-    padding: 0.5rem 0.5em $border_size 0.5rem;
     z-index: 1;
-    font-family: $font_family;
-    font-size: $font-xs;
-    position: fixed;
-    right: 0;
-    left: 0;
-    text-align: right;
-    height: 3rem;
-    color: white;
 
-    &__item {
-        display: inline-block;
-        padding: 1rem;
-        margin-left: 1rem;
-        color: inherit;
-        text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    & input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
         cursor: pointer;
-        text-transform: uppercase;
 
-        &:hover {
-            color: inherit;
-            text-decoration: none;
-            border-bottom: solid $border_size $color-blue;
-        }
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
 
-        &--current {
-            border-bottom: solid $border_size $color-yellow;
-        }
+        -webkit-touch-callout: none;
     }
 
-    &__langue {
-        color: inherit;
-        text-decoration: none;
-        padding-left: 0;
-        padding-right: 0;
+    /*
+        * Just a quick hamburger
+        */
+    & span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
 
-        &:last-child {
-            margin-left: 0;
-        }
+        background: #ffffff;
+        border-radius: 3px;
 
-        &--selected,
-        &--selected:hover {
-            color: $color-yellow;
-        }
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
     }
 
-    &__langueSeparator {
-        color: inherit;
+    & span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    & span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+        * Transform all the slices of hamburger
+        * into a crossmark.
+        */
+    & input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+        * But let's hide the middle one.
+        */
+    & input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+        * Ohyeah and the last one should go the other direction
+        */
+    & input:checked ~ span:nth-last-child(2) {
+        opacity: 1;
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+        * And let's fade it in from the left
+        */
+    & input:checked ~ ul {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+
+    /*
+        * Make this absolute positioned
+        * at the top left of the screen
+        */
+    &__items {
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 0;
+        padding: 50px;
+        padding-top: 125px;
+        left: 0;
+
+        background: #ededed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        & li {
+            padding: 10px 0;
+            font-size: 22px;
+        }
     }
 }
 
-.navbar-animated {
-    transition: all 0.5s;
-    &-small {
-        background-color: white;
-        color: black;
-        height: 4.5rem;
+.menu {
+    display: none;
+}
+
+@media (min-width: $screen-sm-min) {
+    .burgerMenu {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        $border_size: 0.15rem;
+
+        padding: 0.5rem 0.5em $border_size 0.5rem;
+        z-index: 1;
+        font-family: $font_family;
+        font-size: $font-xs;
+        position: fixed;
+        right: 0;
+        left: 0;
+        text-align: right;
+        height: 3rem;
+        color: white;
+
+        &__item {
+            display: inline-block;
+            padding: 1rem;
+            margin-left: 1rem;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+                border-bottom: solid $border_size $color-blue;
+            }
+
+            &--current {
+                border-bottom: solid $border_size $color-yellow;
+            }
+        }
+
+        &__langue {
+            color: inherit;
+            text-decoration: none;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:last-child {
+                margin-left: 0;
+            }
+
+            &--selected,
+            &--selected:hover {
+                color: $color-yellow;
+            }
+        }
+
+        &__langueSeparator {
+            color: inherit;
+        }
+    }
+
+    .navbar-animated {
+        transition: all 0.5s;
+        &-small {
+            background-color: white;
+            color: black;
+            height: 4.5rem;
+        }
     }
 }
