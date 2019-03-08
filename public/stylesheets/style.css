@@ -365,8 +365,10 @@ a:hover, a:active, a:focus {
 .burgerMenu {
   display: block;
   position: absolute;
-  top: 2rem;
+  padding-top: 2rem;
   padding-left: 2rem;
+  top: 0;
+  left: 0;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -443,10 +445,10 @@ a:hover, a:active, a:focus {
 .burgerMenu__items {
   position: absolute;
   width: 300px;
-  margin: -100px 0 0 0;
-  padding: 50px;
-  padding-top: 125px;
+  margin: -5rem 0 0 0;
+  padding: 5rem;
   left: 0;
+  min-height: 100vh;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
