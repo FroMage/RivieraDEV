@@ -573,30 +573,33 @@ a:hover, a:active, a:focus {
     padding-top: 1.5em;
   }
 }
-.registration-partenaire {
-  margin-top: 1em;
+.registration {
+  text-align: center;
 }
-.registration--buttons {
-  display: flex;
-  width: 35vw;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .registration {
+    margin-top: 5rem;
+  }
+}
+.registration__container {
+  display: inline-block;
+}
+.registration__buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 3rem;
+}
+@media (min-width: 768px) {
+  .registration__buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 .registration__button {
   flex: 1;
 }
-.registration__button:first-child, .registration__button:last-child {
-  margin-right: 2rem;
-}
 
-@media (max-width: 767px) {
-  .registration-buttons {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  .registration-button {
-    margin: 0.2em;
-  }
-}
 .introCountdown {
   /* To be displayed partially on Welcome picture */
   margin-top: -10%;
