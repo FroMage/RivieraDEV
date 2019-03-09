@@ -251,9 +251,11 @@
         </h2>
 
         #{if sponsors != null && !sponsors.isEmpty()}
-            #{list sponsors.keySet(), as: 'sponsorShip'}
-                #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), level: sponsorShip.code, lunchesAndPartySoldOut: lunchesAndPartySoldOut/}
-            #{/list}
+            <div class="partenaires__levels">
+                #{list sponsors.keySet(), as: 'sponsorShip'}
+                    #{sponsorsByLevel sponsors: sponsors.get(sponsorShip), level: sponsorShip.code, lunchesAndPartySoldOut: lunchesAndPartySoldOut/}
+                #{/list}
+            </div>
         #{/if}
 
         #{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}

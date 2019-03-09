@@ -1,22 +1,43 @@
 .talksFilter {
-  background-color: $color-gray-ultralight;
+    background-color: $color-grey-ultralight;
 
   &-collapse {
     position: relative;
   }
 
-  &-buttonCollapse {
-    text-transform: uppercase;
-    background-color: $color-gray-ultralight;
-    padding: 0.4rem 1rem;
-    display: block;
-    margin-top: 20px;
-    text-decoration: none;
+    &-buttonCollapse {
+        text-transform: uppercase;
+        background-color: $color-grey-ultralight;
+        padding: 0.4rem 1rem;
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
 
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+
+        &:hover svg,
+        &:focus svg,
+        &:active svg {
+            margin-left: 0.2rem;
+            margin-right: 0.3rem;
+        }
+
+        & svg {
+            margin-right: 0.5rem;
+            transition: all 0.2s linear;
+        }
+
+        &[aria-expanded='true'] {
+            & svg {
+                margin-left: 0;
+                margin-right: 0.5rem;
+                transform: rotate(90deg);
+            }
+        }
     }
 
     &:hover svg,
@@ -38,94 +59,78 @@
         transform: rotate(90deg);
       }
     }
-  }
 
-  &-title {
-    display: inline-block;
-    vertical-align: top;
-    font-weight: bold;
-    margin-right: 0.5em;
-  }
-
-  &-options {
-    display: inline-block;
-    padding: 10px 15px;
-  }
-
-  &-item {
-    transition: all 0.3s;
-  }
-
-  &.collapse.in &-reset {
-    display: block;
-  }
-
-  &-reset {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    background-color: lighten($color-gray, 10%);
-    padding: 0 0.4em;
-    margin: 0.5rem;
-    border-radius: 4px;
-    color: white;
-    margin-bottom: 0.5em;
-
-    &:hover,
-    &:focus {
-      background-color: $color-gray;
+    &.collapse.in &-reset {
+        display: block;
     }
 
-    &--icon {
-      margin-right: 0.5rem;
+    &-reset {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        background-color: lighten($color-gray, 10%);
+        padding: 0 0.4em;
+        margin: 0.5rem;
+        border-radius: 4px;
+        color: white;
+        margin-bottom: 0.5em;
+
+        &:hover,
+        &:focus {
+            background-color: $color-gray;
+        }
+
+        &--icon {
+            margin-right: 0.5rem;
+        }
     }
   }
 }
 
 .talksFilter-options .talksFilter-item {
-  cursor: pointer;
+    cursor: pointer;
 
-  &[data-filter-theme="hidden"],
-  &[data-filter-level="hidden"],
-  &[data-filter-language="hidden"],
-  &[data-filter-type="hidden"],
-  &[data-filter-theme="hidden"][data-filter-level="hidden"] {
-    opacity: 0.2;
-  }
+    &[data-filter-theme='hidden'],
+    &[data-filter-level='hidden'],
+    &[data-filter-language='hidden'],
+    &[data-filter-type='hidden'],
+    &[data-filter-theme='hidden'][data-filter-level='hidden'] {
+        opacity: 0.2;
+    }
 }
 
 // Only on xs devices (smartphones)
 @media (max-width: $screen-xs-max) {
-  .talksFilter-options .talksFilter-item {
-    padding: 0.5em;
-  }
+    .talksFilter-options .talksFilter-item {
+        padding: 0.5em;
+    }
 
-  .talksFilter-levels {
-    margin-top: 0.5em;
-  }
+    .talksFilter-levels {
+        margin-top: 0.5em;
+    }
 }
 
 // Hide items on the schedule page
 .fullSchedule .talksFilter-item {
-  &[data-filter-theme="hidden"],
-  &[data-filter-level="hidden"],
-  &[data-filter-language="hidden"],
-  &[data-filter-type="hidden"],
-  &[data-filter-theme="hidden"][data-filter-level="hidden"] {
-    opacity: 0.05;
-    transition: all 0.3s;
-  }
+    &[data-filter-theme='hidden'],
+    &[data-filter-level='hidden'],
+    &[data-filter-language='hidden'],
+    &[data-filter-type='hidden'],
+    &[data-filter-theme='hidden'][data-filter-level='hidden'] {
+        opacity: 0.05;
+        transition: all 0.3s;
+    }
 }
 
 // Hide items on the talks page
 .talks .talksFilter-item {
-  &[data-filter-theme="hidden"],
-  &[data-filter-level="hidden"],
-  &[data-filter-language="hidden"],
-  &[data-filter-type="hidden"],
-  &[data-filter-theme="hidden"][data-filter-level="hidden"] {
-    display: none;
-  }
+    &[data-filter-theme='hidden'],
+    &[data-filter-level='hidden'],
+    &[data-filter-language='hidden'],
+    &[data-filter-type='hidden'],
+    &[data-filter-theme='hidden'][data-filter-level='hidden'] {
+        display: none;
+    }
 }
