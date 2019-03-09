@@ -1,33 +1,27 @@
 .registration {
-    &-partenaire {
-        margin-top: 1em;
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+        margin-top: $space-xxl;
     }
 
-    &--buttons {
-        display: flex;
-        width: 35vw;
-        margin: 0 auto;
+    &__container {
+        display: inline-block;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: $space-lg;
+
+        @media (min-width: $screen-sm-min) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
     }
 
     &__button {
         flex: 1;
-
-        &:first-child,
-        &:last-child {
-            margin-right: 2rem;
-        }
-    }
-}
-
-@media (max-width: $screen-xs-max) {
-    .registration {
-        &-buttons {
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-
-        &-button {
-            margin: 0.2em;
-        }
     }
 }
