@@ -32,12 +32,12 @@
         */
     & span {
         display: block;
-        width: 33px;
-        height: 4px;
+        width: 2rem;
+        height: 0.3rem;
         margin-bottom: 5px;
         position: relative;
 
-        background: #ffffff;
+        background: $color-white;
         border-radius: 3px;
 
         z-index: 1;
@@ -62,8 +62,8 @@
         */
     & input:checked ~ span {
         opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: #232323;
+        transform: rotate(45deg);
+        background: $color-white;
     }
 
     /*
@@ -79,13 +79,13 @@
         */
     & input:checked ~ span:nth-last-child(2) {
         opacity: 1;
-        transform: rotate(-45deg) translate(0, -1px);
+        transform: rotate(-45deg) translate(0.4rem, -0.3rem);
     }
 
     /*
         * And let's fade it in from the left
         */
-    & input:checked ~ ul {
+    & input:checked ~ &__items {
         transform: scale(1, 1);
         opacity: 1;
     }
@@ -98,11 +98,10 @@
         position: absolute;
         width: 300px;
         margin: -5rem 0 0 0;
-        padding: 5rem;
         left: 0;
         min-height: 100vh;
 
-        background: #ededed;
+        background: $color-white;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         /* to stop flickering of text in safari */
@@ -115,6 +114,17 @@
         & li {
             padding: 10px 0;
             font-size: 22px;
+        }
+    }
+
+    &__welcome {
+        background-color: $color-blue;
+        padding: 5rem 0 2.5rem;
+        text-align: center;
+        color: $color-white;
+
+        &--logo {
+            width: 55vw;
         }
     }
 }

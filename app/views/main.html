@@ -95,57 +95,66 @@
                 <span></span>
                 <span></span>
 
-                <ul class="burgerMenu__items">
-                    <li>
-                        <a
-                            href="@{Application.index}"
-                            class="menu__item menu__item--current"
-                            >HOME</a
+                <div class="burgerMenu__items">
+                    <div class="burgerMenu__welcome">
+                        <img class="burgerMenu__welcome--logo" src="@{'/public/images/logos/logo_RD_full_white.svg'}" alt="RivieraDEV">
+                        <div class="burgerMenu__welcome--info">
+                            <p>&{'views.application.index.date'}</p>
+                            <p>&{'views.application.index.place'}</p>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a
+                                href="@{Application.index}"
+                                class="menu__item menu__item--current"
+                                >HOME</a
+                            >
+                        </li>
+
+                        <li><a
+                            href="@{Application.cfp}"
+                            class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
+                            >&{'views.main.cfp'}</a
+                        ></li>
+
+                        <li><a
+                            href="@{Application.subscribe}"
+                            class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
+                            >&{'views.main.tickets'}</a
+                        ></li>
+
+                        <li><a
+                            href="@{Application.organisers}"
+                            class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}"
+                            >&{'views.main.team'}</a
+                        ></li>
+
+                        <li><a
+                            href="@{Application.sponsors}"
+                            class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
+                            >&{'views.main.sponsors'}</a
+                        ></li>
+
+                        <li><a
+                            href="@{Application.access}"
+                            class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
+                            >&{'views.main.access'}</a
+                        ></li>
+
+                        <li><a
+                            href="@{Application.en(request.url)}"
+                            class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}"
+                            >&{'views.main.language.en'}</a
                         >
-                    </li>
-
-                    <li><a
-                        href="@{Application.cfp}"
-                        class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
-                        >&{'views.main.cfp'}</a
-                    ></li>
-
-                    <li><a
-                        href="@{Application.subscribe}"
-                        class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
-                        >&{'views.main.tickets'}</a
-                    ></li>
-
-                    <li><a
-                        href="@{Application.organisers}"
-                        class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}"
-                        >&{'views.main.team'}</a
-                    ></li>
-
-                    <li><a
-                        href="@{Application.sponsors}"
-                        class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
-                        >&{'views.main.sponsors'}</a
-                    ></li>
-
-                    <li><a
-                        href="@{Application.access}"
-                        class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
-                        >&{'views.main.access'}</a
-                    ></li>
-
-                    <li><a
-                        href="@{Application.en(request.url)}"
-                        class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}"
-                        >&{'views.main.language.en'}</a
-                    >
-                    <span class="menu__langueSeparator">/</span>
-                    <a
-                        href="@{Application.fr(request.url)}"
-                        class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}"
-                        >&{'views.main.language.fr'}</a
-                    ></li>
-                </ul>
+                        <span class="menu__langueSeparator">/</span>
+                        <a
+                            href="@{Application.fr(request.url)}"
+                            class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}"
+                            >&{'views.main.language.fr'}</a
+                        ></li>
+                    </ul>
             </div>
         </nav>
 
