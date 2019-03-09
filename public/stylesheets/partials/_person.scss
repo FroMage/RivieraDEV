@@ -1,3 +1,6 @@
+$avatar-size-xs: 100px;
+$avatar-size-sm: 150px;
+
 .persons {
     &__list {
         display: grid;
@@ -22,10 +25,16 @@
 
     &__photo {
         display: inline-block;
-        width: $avatar-size-regular;
-        height: $avatar-size-regular;
-        border-radius: $avatar-size-regular;
+        width: $avatar-size-xs;
+        height: $avatar-size-xs;
+        border-radius: $avatar-size-xs;
         background-size: cover;
+
+        @media (min-width: $screen-sm-min) {
+            width: $avatar-size-sm;
+            height: $avatar-size-sm;
+            border-radius: $avatar-size-sm;
+        }
     }
 
     &__desc {
