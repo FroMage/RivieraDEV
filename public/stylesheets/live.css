@@ -1,596 +1,632 @@
 .countdown {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  position: absolute;
-  font-size: 4em;
-  width: 11.3em;
-  height: 3em;
-  left: calc(50% - (11.3em / 2));
-  bottom: -1em;
-  padding: 0.5em 0.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: absolute;
+    font-size: 4em;
+    width: 11.3em;
+    height: 3em;
+    left: calc(50% - (11.3em / 2));
+    bottom: -1em;
+    padding: 0.5em 0.5em;
 }
 .countdown-parent {
-  position: relative;
-  margin-bottom: 4em;
-  padding-bottom: 6em;
+    position: relative;
+    margin-bottom: 4em;
+    padding-bottom: 6em;
 }
-.countdown-day, .countdown-hour, .countdown-min, .countdown-sec {
-  display: inline-block;
-  width: 2.2em;
-  height: 2.2em;
-  text-align: center;
-  vertical-align: middle;
-  margin-right: 0.5em;
-  padding-top: 0.1em;
+.countdown-day,
+.countdown-hour,
+.countdown-min,
+.countdown-sec {
+    display: inline-block;
+    width: 2.2em;
+    height: 2.2em;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    padding-top: 0.1em;
 }
 .countdown-day {
-  background-color: rgba(0, 144, 205, 0.8);
+    background-color: rgba(0, 144, 205, 0.8);
 }
 .countdown-hour {
-  background-color: rgba(140, 70, 162, 0.8);
+    background-color: rgba(140, 70, 162, 0.8);
 }
 .countdown-min {
-  background-color: rgba(253, 183, 66, 0.8);
+    background-color: rgba(253, 183, 66, 0.8);
 }
 .countdown-sec {
-  background-color: rgba(115, 173, 5, 0.8);
+    background-color: rgba(115, 173, 5, 0.8);
 }
 .countdown-sec {
-  margin-right: 0;
+    margin-right: 0;
 }
-.countdown-number, .countdown-desc {
-  display: block;
-  float: left;
-  width: 100%;
-  text-align: center;
+.countdown-number,
+.countdown-desc {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
 }
 .countdown-desc {
-  font-size: 0.27em;
-  line-height: 1.8em;
+    font-size: 0.27em;
+    line-height: 1.8em;
 }
 .countdown-number {
-  font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 @media (max-width: 767px) {
-  .countdown,
-  .countdown-bg {
-    font-size: 2em;
-  }
+    .countdown,
+    .countdown-bg {
+        font-size: 2em;
+    }
 
-  .countdown-parent {
-    margin-bottom: 3em;
-    padding-bottom: 3em;
-  }
+    .countdown-parent {
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+    }
 }
 .persons__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    justify-items: center;
 }
 @media (min-width: 768px) {
-  .persons__list {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+    .persons__list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .personSummary {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  margin: 3rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 3rem;
 }
 .personSummary__photo {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  background-size: cover;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-size: cover;
 }
 .personSummary__desc {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 .personSummary__name {
-  text-transform: uppercase;
-  font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.personSummary__title, .personSummary__year {
-  font-size: 1.6rem;
+.personSummary__title,
+.personSummary__year {
+    font-size: 1.6rem;
 }
 
 .personDetails {
-  margin-top: 2em;
+    margin-top: 2em;
 }
-.personDetails:before, .personDetails:after {
-  display: block;
-  width: 100%;
-  height: 5px;
-  margin: 2em 0;
-  background-color: #19b8d5;
+.personDetails:before,
+.personDetails:after {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 2em 0;
+    background-color: #19b8d5;
 }
 .personDetails-name-title {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 .personDetails-name {
-  text-transform: uppercase;
-  color: #19b8d5;
-  font-size: 1.3em;
+    text-transform: uppercase;
+    color: #19b8d5;
+    font-size: 1.3em;
 }
 .personDetails-title {
-  font-style: italic;
+    font-style: italic;
 }
 .personDetails-photo-img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 .personDetails-icon {
-  color: #fdb742;
-  font-size: 1.3em;
+    color: #fdb742;
+    font-size: 1.3em;
 }
 .personDetails-link {
-  margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 @media (max-width: 767px) {
-  .personDetails {
-    margin-top: 0;
-  }
-  .personDetails:before, .personDetails:after {
-    height: 0;
-  }
-  .personDetails-photo {
-    text-align: center;
-  }
-  .personDetails-photo-img {
-    max-width: 200px;
-  }
-  .personDetails-name-title {
-    text-align: center;
-  }
-  .personDetails-biography {
-    margin: 2em 0;
-  }
+    .personDetails {
+        margin-top: 0;
+    }
+    .personDetails:before,
+    .personDetails:after {
+        height: 0;
+    }
+    .personDetails-photo {
+        text-align: center;
+    }
+    .personDetails-photo-img {
+        max-width: 200px;
+    }
+    .personDetails-name-title {
+        text-align: center;
+    }
+    .personDetails-biography {
+        margin: 2em 0;
+    }
 }
 .schedule-day {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  line-height: 1.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    line-height: 1.5em;
 }
 .schedule-day-filter {
-  padding: 0.5rem 1rem;
-  line-height: 3.5rem;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
+    padding: 0.5rem 1rem;
+    line-height: 3.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
 }
 .schedule-day-filter--hidden {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 @media (max-width: 767px) and (orientation: landscape) {
-  .schedule-day-filterItem {
-    display: inline;
-  }
+    .schedule-day-filterItem {
+        display: inline;
+    }
 }
 .schedule-dayAll {
-  background-color: #bbb;
+    background-color: #bbb;
 }
 .schedule-day1 {
-  background-color: rgba(0, 144, 205, 0.8);
+    background-color: rgba(0, 144, 205, 0.8);
 }
 .schedule-day2 {
-  background-color: rgba(253, 183, 66, 0.8);
+    background-color: rgba(253, 183, 66, 0.8);
 }
 .schedule-day3 {
-  background-color: rgba(140, 70, 162, 0.8);
+    background-color: rgba(140, 70, 162, 0.8);
 }
 .schedule-time {
-  font-family: "Oswald", sans-serif;
-  font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
 }
 
 .tempSchedule {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 .tempSchedule-intro {
-  font-size: 1.25em;
-  margin-bottom: 0;
+    font-size: 1.25em;
+    margin-bottom: 0;
 }
 .tempSchedule-bloc {
-  margin-bottom: 3em;
+    margin-bottom: 3em;
 }
 .tempSchedule-day {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .tempSchedule-slot {
-  border-bottom: 1px solid #ddd;
-  margin-right: 0;
-  margin-left: 0;
-  font-size: 1.25em;
+    border-bottom: 1px solid #ddd;
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 1.25em;
 }
 .tempSchedule-time {
-  padding-right: 0;
-  line-height: 2em;
+    padding-right: 0;
+    line-height: 2em;
 }
 .tempSchedule-title {
-  line-height: 2em;
+    line-height: 2em;
 }
 
 .fullSchedule-container {
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding-left: 1em;
-  padding-right: 1em;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .fullSchedule {
-  margin: 2rem 0;
-  width: 100%;
-  table-layout: fixed;
+    margin: 2rem 0;
+    width: 100%;
+    table-layout: fixed;
 }
 .fullSchedule-day {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.fullSchedule th, .fullSchedule td {
-  border: 3px solid #eee;
+.fullSchedule th,
+.fullSchedule td {
+    border: 3px solid #eee;
 }
 .fullSchedule th {
-  padding: 0.5em;
+    padding: 0.5em;
 }
 .fullSchedule-col-time {
-  width: 10%;
+    width: 10%;
 }
 @media (max-width: 767px) {
-  .fullSchedule-col-time {
-    width: 20%;
-  }
+    .fullSchedule-col-time {
+        width: 20%;
+    }
 }
 .fullSchedule-col-2tracks {
-  width: 45%;
+    width: 45%;
 }
 .fullSchedule-col-3tracks {
-  width: 30%;
+    width: 30%;
 }
 .fullSchedule-col-4tracks {
-  width: 22.5%;
+    width: 22.5%;
 }
 .fullSchedule-col-XStracks {
-  width: 90%;
+    width: 90%;
 }
 .fullSchedule-time {
-  vertical-align: top;
-  text-align: center;
-  font-size: 1.1em;
+    vertical-align: top;
+    text-align: center;
+    font-size: 1.1em;
 }
-.fullSchedule-time-begin, .fullSchedule-time-end {
-  display: block;
+.fullSchedule-time-begin,
+.fullSchedule-time-end {
+    display: block;
 }
 .fullSchedule-track {
-  text-align: center;
+    text-align: center;
 }
 .fullSchedule-track-title {
-  color: #777;
+    color: #777;
 }
 .fullSchedule-talk-cell {
-  vertical-align: top;
+    vertical-align: top;
 }
 .fullSchedule-talk-item {
-  position: relative;
-  padding-bottom: 1.2rem;
-  padding: 0.5em;
+    position: relative;
+    padding-bottom: 1.2rem;
+    padding: 0.5em;
 }
 .fullSchedule-talk-item:nth-child(2) {
-  border-top: 3px solid #eee;
+    border-top: 3px solid #eee;
 }
 .fullSchedule-talk-title {
-  display: block;
-  margin-bottom: 0.5em;
-  font-weight: 600;
-  color: #00709d;
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    color: #00709d;
 }
 .fullSchedule-talk-speakers {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 .fullSchedule-talk-speaker {
-  color: #777;
-  text-decoration-style: dotted;
-  font-style: italic;
+    color: #777;
+    text-decoration-style: dotted;
+    font-style: italic;
 }
 .fullSchedule-talk-like {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0.5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.5em;
 }
 .fullSchedule-talk-like svg {
-  color: #777;
+    color: #777;
 }
-.fullSchedule-talk-like[data-like="true"] svg {
-  color: #cc0303;
+.fullSchedule-talk-like[data-like='true'] svg {
+    color: #cc0303;
 }
-.fullSchedule-breakfast, .fullSchedule-lunch, .fullSchedule-cofeeBreak, .fullSchedule-party {
-  background-color: #fefaf1;
-  font-style: italic;
+.fullSchedule-breakfast,
+.fullSchedule-lunch,
+.fullSchedule-cofeeBreak,
+.fullSchedule-party {
+    background-color: #fefaf1;
+    font-style: italic;
 }
-.fullSchedule-breakfast-title, .fullSchedule-lunch-title, .fullSchedule-cofeeBreak-title, .fullSchedule-party-title {
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-left: 2.5em;
-  margin-left: 0.5em;
-  font-weight: normal;
-  margin-bottom: 0;
-  color: inherit;
-  line-height: 2em;
+.fullSchedule-breakfast-title,
+.fullSchedule-lunch-title,
+.fullSchedule-cofeeBreak-title,
+.fullSchedule-party-title {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 2.5em;
+    margin-left: 0.5em;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: inherit;
+    line-height: 2em;
 }
 .fullSchedule-breakfast-title {
-  background-image: url("../images/icons/croissant_2.svg");
+    background-image: url('../images/icons/croissant_2.svg');
 }
 .fullSchedule-cofeeBreak-title {
-  background-image: url("../images/icons/hot-drink.svg");
+    background-image: url('../images/icons/hot-drink.svg');
 }
 .fullSchedule-lunch-title {
-  background-image: url("../images/icons/cutlery.svg");
+    background-image: url('../images/icons/cutlery.svg');
 }
 .fullSchedule-party-title {
-  background-image: url("../images/icons/pint.svg");
+    background-image: url('../images/icons/pint.svg');
 }
 
 th.fullSchedule-time-title {
-  border-top: none;
-  border-left: none;
+    border-top: none;
+    border-left: none;
 }
 
 .like-explanation {
-  margin: 1rem auto 3rem;
+    margin: 1rem auto 3rem;
 }
 
 .talk-theme {
-  padding: 0 0.4em;
-  border-radius: 4px;
-  color: white;
-  margin-bottom: 0.5em;
-  display: inline-block;
+    padding: 0 0.4em;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 0.5em;
+    display: inline-block;
 }
 .talk-theme-blue {
-  background-color: #19b8d5;
+    background-color: #19b8d5;
 }
-.talksFilter-options .talk-theme-blue:hover, .talk-theme-blue:focus {
-  background-color: #2cc9e6;
+.talksFilter-options .talk-theme-blue:hover,
+.talk-theme-blue:focus {
+    background-color: #2cc9e6;
 }
 .talk-theme-yellow {
-  background-color: #fdb742;
+    background-color: #fdb742;
 }
-.talksFilter-options .talk-theme-yellow:hover, .talk-theme-yellow:focus {
-  background-color: #feca74;
+.talksFilter-options .talk-theme-yellow:hover,
+.talk-theme-yellow:focus {
+    background-color: #feca74;
 }
 .talk-theme-green {
-  background-color: #7ba218;
+    background-color: #7ba218;
 }
-.talksFilter-options .talk-theme-green:hover, .talk-theme-green:focus {
-  background-color: #9dce1f;
+.talksFilter-options .talk-theme-green:hover,
+.talk-theme-green:focus {
+    background-color: #9dce1f;
 }
 .talk-theme-purple {
-  background-color: #844990;
+    background-color: #844990;
 }
-.talksFilter-options .talk-theme-purple:hover, .talk-theme-purple:focus {
-  background-color: #a05eae;
+.talksFilter-options .talk-theme-purple:hover,
+.talk-theme-purple:focus {
+    background-color: #a05eae;
 }
 .talk-theme-orange {
-  background-color: #ff7826;
+    background-color: #ff7826;
 }
-.talksFilter-options .talk-theme-orange:hover, .talk-theme-orange:focus {
-  background-color: #ff9e63;
+.talksFilter-options .talk-theme-orange:hover,
+.talk-theme-orange:focus {
+    background-color: #ff9e63;
 }
 .talk-theme-red {
-  background-color: #cc0000;
+    background-color: #cc0000;
 }
-.talksFilter-options .talk-theme-red:hover, .talk-theme-red:focus {
-  background-color: #f50000;
+.talksFilter-options .talk-theme-red:hover,
+.talk-theme-red:focus {
+    background-color: #f50000;
 }
 .talk-theme-pink {
-  background-color: #fd5ea7;
+    background-color: #fd5ea7;
 }
-.talksFilter-options .talk-theme-pink:hover, .talk-theme-pink:focus {
-  background-color: #fe90c3;
+.talksFilter-options .talk-theme-pink:hover,
+.talk-theme-pink:focus {
+    background-color: #fe90c3;
 }
 .talk-theme-turquoise {
-  background-color: #00bacd;
+    background-color: #00bacd;
 }
-.talksFilter-options .talk-theme-turquoise:hover, .talk-theme-turquoise:focus {
-  background-color: #00dff6;
+.talksFilter-options .talk-theme-turquoise:hover,
+.talk-theme-turquoise:focus {
+    background-color: #00dff6;
 }
 .talk-theme-brown {
-  background-color: #9e4a17;
+    background-color: #9e4a17;
 }
-.talksFilter-options .talk-theme-brown:hover, .talk-theme-brown:focus {
-  background-color: #c25b1c;
+.talksFilter-options .talk-theme-brown:hover,
+.talk-theme-brown:focus {
+    background-color: #c25b1c;
 }
 
 .talk-slot {
-  display: block;
-  margin-bottom: 0.5em;
+    display: block;
+    margin-bottom: 0.5em;
 }
 
 .talk-level {
-  font-style: italic;
-  background-color: #bbb;
-  padding: 0 0.4em;
-  border-radius: 4px;
-  display: inline-block;
-  margin: 0 0 0.5em 0.3em;
+    font-style: italic;
+    background-color: #bbb;
+    padding: 0 0.4em;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 0 0.5em 0.3em;
 }
-.talksFilter-options .talk-level:hover, .talk-level:focus {
-  background-color: #d5d5d5;
+.talksFilter-options .talk-level:hover,
+.talk-level:focus {
+    background-color: #d5d5d5;
 }
 
 .talk-language {
-  border: 1.5px solid #516279;
-  color: #516279;
-  padding: 0 0.4em;
-  border-radius: 4px;
-  display: inline-block;
-  margin: 0 0 0.5em 0.3em;
-  font-size: 0.9em;
+    border: 1.5px solid #516279;
+    color: #516279;
+    padding: 0 0.4em;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 0 0.5em 0.3em;
+    font-size: 0.9em;
 }
-.talksFilter-options .talk-language:hover, .talk-language:focus {
-  border-color: #8495ac;
+.talksFilter-options .talk-language:hover,
+.talk-language:focus {
+    border-color: #8495ac;
 }
 
 .talk-type {
-  font-style: italic;
-  background-color: #516279;
-  color: #fff;
-  padding: 0 0.4em;
-  border-radius: 4px;
-  display: inline-block;
-  margin: 0 0 0.5em 0.3em;
+    font-style: italic;
+    background-color: #516279;
+    color: #fff;
+    padding: 0 0.4em;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 0 0.5em 0.3em;
 }
-.talksFilter-options .talk-type:hover, .talk-type:focus {
-  background-color: #6b809c;
+.talksFilter-options .talk-type:hover,
+.talk-type:focus {
+    background-color: #6b809c;
 }
 
 .talkDetails {
-  margin-top: 2em;
+    margin-top: 2em;
 }
-.talkDetails:before, .talkDetails:after {
-  display: block;
-  width: 100%;
-  height: 5px;
-  margin: 2em 0;
-  background-color: #19b8d5;
+.talkDetails:before,
+.talkDetails:after {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 2em 0;
+    background-color: #19b8d5;
 }
 .talkDetails-all:after {
-  height: 0;
+    height: 0;
 }
 .talkDetails-title {
-  text-transform: uppercase;
-  color: #19b8d5;
-  font-size: 1.3em;
+    text-transform: uppercase;
+    color: #19b8d5;
+    font-size: 1.3em;
 }
 .talkDetails-description {
-  margin-top: 1em;
-  margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
-.talkDetails-track, .talkDetails-slot-day, .talkDetails-slot-hour, .talkDetails-slides {
-  margin-bottom: 0.5em;
+.talkDetails-track,
+.talkDetails-slot-day,
+.talkDetails-slot-hour,
+.talkDetails-slides {
+    margin-bottom: 0.5em;
 }
 .talkDetails-speakers {
-  margin-top: 2em;
-  margin-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 .talkDetails-speaker {
-  margin-bottom: 1em;
-  display: block;
-  text-decoration: none;
+    margin-bottom: 1em;
+    display: block;
+    text-decoration: none;
 }
 .talkDetails-speaker-photo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-size: cover;
-  transition: all 0.5s ease;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-size: cover;
+    transition: all 0.5s ease;
 }
 .talkDetails-speaker-name {
-  display: inline-block;
-  vertical-align: middle;
-  text-transform: uppercase;
-  font-size: 1.1em;
-  color: #19b8d5;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #19b8d5;
 }
 .talkDetails-icon {
-  color: #fdb742;
-  font-size: 1.3em;
-  text-align: center;
+    color: #fdb742;
+    font-size: 1.3em;
+    text-align: center;
 }
 .talkDetails svg.talkDetails-icon {
-  width: 1.3em;
+    width: 1.3em;
 }
 
-.talkDetails-speaker:hover, .talkDetails-speaker:focus, .talkDetails-speaker:active {
-  text-decoration: none;
+.talkDetails-speaker:hover,
+.talkDetails-speaker:focus,
+.talkDetails-speaker:active {
+    text-decoration: none;
 }
-.talkDetails-speaker:hover .talkDetails-speaker-photo, .talkDetails-speaker:focus .talkDetails-speaker-photo, .talkDetails-speaker:active .talkDetails-speaker-photo {
-  -moz-box-shadow: 0 0 0 3px #19b8d5;
-  -webkit-box-shadow: 0 0 0 3px #19b8d5;
-  box-shadow: 0 0 0 3px #19b8d5;
+.talkDetails-speaker:hover .talkDetails-speaker-photo,
+.talkDetails-speaker:focus .talkDetails-speaker-photo,
+.talkDetails-speaker:active .talkDetails-speaker-photo {
+    -moz-box-shadow: 0 0 0 3px #19b8d5;
+    -webkit-box-shadow: 0 0 0 3px #19b8d5;
+    box-shadow: 0 0 0 3px #19b8d5;
 }
 
 @media (max-width: 767px) {
-  .talkDetails-onlyOne {
-    margin-top: 0;
-  }
-  .talkDetails-onlyOne:before, .talkDetails-onlyOne:after {
-    height: 0;
-  }
+    .talkDetails-onlyOne {
+        margin-top: 0;
+    }
+    .talkDetails-onlyOne:before,
+    .talkDetails-onlyOne:after {
+        height: 0;
+    }
 }
 .live-currentDate {
-  background-color: rgba(140, 70, 162, 0.8);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  padding: 0.5em;
-  font-family: 'Oswald', sans-serif;
-  font-weight: normal;
-  font-size: 180%;
+    background-color: rgba(140, 70, 162, 0.8);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    padding: 0.5em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 180%;
 }
 
 .schedule-day2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .talk {
-  margin: 0 0.5em 0 0.5em;
+    margin: 0 0.5em 0 0.5em;
 }
 
 .live-talk {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .live-currentTrack {
-  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  border-right: 2px solid #fdb742;
-  border-bottom: 2px solid #fdb742;
-  border-left: 2px solid #fdb742;
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-right: 2px solid #fdb742;
+    border-bottom: 2px solid #fdb742;
+    border-left: 2px solid #fdb742;
 }
 
 .schedule-day {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 .talkDetails-speakers {
-  margin-top: 0;
-  margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .talkDetails-speaker-name {
-  padding-left: 0.3em;
+    padding-left: 0.3em;
 }
 
 .nothing {
-  margin-top: 1.5em;
-  margin-left: 0;
+    margin-top: 1.5em;
+    margin-left: 0;
 }
 .nothing-img {
-  max-width: 200px;
-  padding-left: 0;
+    max-width: 200px;
+    padding-left: 0;
 }
 
 @media (min-width: 767px) {
-  .smaller {
-    font-size: x-small;
-  }
+    .smaller {
+        font-size: x-small;
+    }
 }

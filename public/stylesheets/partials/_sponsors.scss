@@ -8,7 +8,6 @@ $sponsor-silver-width: 180px;
 $sponsor-silver-height: 83px;
 
 .partenaires {
-    background-color: $color-grey-ultralight;
     padding: $space-xl 0;
 
     @media (min-width: $screen-sm-min) {
@@ -27,37 +26,37 @@ $sponsor-silver-height: 83px;
     }
 
     &__level {
-        margin-bottom: $space-sm;
+        margin: 0 $space-sm $space-sm $space-sm;
+        padding-bottom: $space-lg;
+
+        &:not(:last-child) {
+            border-bottom: $border-sm solid $color-gray-light;
+        }
+
+        @media (min-width: $screen-sm-min) {
+            padding-bottom: $space-xl;
+            margin-bottom: $space-xxl;
+        }
     }
 
     &__levelTitle {
         margin: 0 $content-space-xs $space-md $content-space-xs;
         text-align: center;
+        font-size: $font-xl;
+        font-weight: 300;
 
         @media (min-width: $screen-sm-min) {
             margin: 0 $content-space-sm $space-sm $content-space-sm;
-            text-align: left;
+            font-size: $font-xxl;
         }
-        font-size: $font-xl;
-        font-weight: 300;
     }
 
     &__list {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-
-        @media (min-width: $screen-sm-min) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: $space-md;
-            justify-items: center;
-        }
-
-        @media (min-width: $screen-md-min) {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+        flex-wrap: wrap;
     }
 
     &__buttonContainer {

@@ -1,78 +1,78 @@
 .schedule {
-  &-day {
-    @include text-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
-    color: #fff;
-    line-height: 1.5em;
+    &-day {
+        @include text-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        color: #fff;
+        line-height: 1.5em;
 
-    &-filter {
-      padding: 0.5rem 1rem;
-      line-height: 3.5rem;
-      cursor: pointer;
-      transition: opacity 0.2s ease-in-out;
+        &-filter {
+            padding: 0.5rem 1rem;
+            line-height: 3.5rem;
+            cursor: pointer;
+            transition: opacity 0.2s ease-in-out;
 
-      &--hidden {
-        opacity: 0.6;
-      }
+            &--hidden {
+                opacity: 0.6;
+            }
+        }
+
+        @media (max-width: $screen-xs-max) and (orientation: landscape) {
+            &-filterItem {
+                display: inline;
+            }
+        }
     }
 
-    @media (max-width: $screen-xs-max) and (orientation: landscape) {
-      &-filterItem {
-        display: inline;
-      }
+    &-dayAll {
+        background-color: $color-gray;
     }
-  }
+    &-day1 {
+        background-color: $color-blue-transparent;
+    }
+    &-day2 {
+        background-color: $color-yellow-transparent;
+    }
+    &-day3 {
+        background-color: $color-purple-transparent;
+    }
 
-  &-dayAll {
-    background-color: $color-gray;
-  }
-  &-day1 {
-    background-color: $color-blue-transparent;
-  }
-  &-day2 {
-    background-color: $color-yellow-transparent;
-  }
-  &-day3 {
-    background-color: $color-purple-transparent;
-  }
-
-  &-time {
-    font-family: "Oswald", sans-serif;
-    font-weight: normal;
-  }
+    &-time {
+        font-family: 'Oswald', sans-serif;
+        font-weight: normal;
+    }
 }
 
 .tempSchedule {
-  margin-top: $space-lg;
+    margin-top: $space-lg;
 
-  &-intro {
-    font-size: 1.25em;
-    margin-bottom: 0;
-  }
+    &-intro {
+        font-size: 1.25em;
+        margin-bottom: 0;
+    }
 
-  &-bloc {
-    margin-bottom: 3em;
-  }
+    &-bloc {
+        margin-bottom: 3em;
+    }
 
-  &-day {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+    &-day {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-  &-slot {
-    border-bottom: 1px solid $color-gray-light;
-    margin-right: 0;
-    margin-left: 0;
-    font-size: 1.25em;
-  }
+    &-slot {
+        border-bottom: 1px solid $color-gray-light;
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 1.25em;
+    }
 
-  &-time {
-    padding-right: 0;
-    line-height: 2em;
-  }
+    &-time {
+        padding-right: 0;
+        line-height: 2em;
+    }
 
-  &-title {
-    line-height: 2em;
-  }
+    &-title {
+        line-height: 2em;
+    }
 }
 
 .fullSchedule-container {
@@ -88,15 +88,16 @@
   width: 100%;
   table-layout: fixed;
 
-  &-day {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+    &-day {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-  & th,
-  & td {
-    border: 3px solid $color-gray-ultralight;
-  }
+    & th,
+    & td {
+        border: 3px solid $color-grey-ultralight;
+        padding: 0.5em;
+    }
 
   & th {
     padding: 0.5em;
@@ -118,18 +119,66 @@
     width: 30%;
   }
 
-  &-col-4tracks {
-    width: 22.5%;
-  }
+    &-col-XStracks {
+        width: 90%;
+    }
+
+    &-time {
+        text-align: center;
+        font-size: 1.1em;
+
+        &-begin,
+        &-end {
+            display: block;
+        }
+    }
 
   &-col-XStracks {
     width: 90%;
   }
 
-  &-time {
-    vertical-align: top;
-    text-align: center;
-    font-size: 1.1em;
+    &-track-title {
+        color: $color-gray-dark;
+    }
+
+    &-talk {
+        &-cell {
+            vertical-align: top;
+            position: relative;
+        }
+        &-title {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            color: $color-blue-dark;
+        }
+
+        &-speakers {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        &-speaker {
+            color: $color-gray-dark;
+            text-decoration-style: dotted;
+            font-style: italic;
+        }
+
+        &-like {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0.5em;
+
+            & svg {
+                color: #777;
+            }
+
+            &[data-like='true'] svg {
+                color: #cc0303;
+            }
+        }
+    }
 
     &-begin,
     &-end {
@@ -154,81 +203,13 @@
       padding-bottom: 1.2rem;
       padding: 0.5em;
 
-      &:nth-child(2) {
-        border-top: 3px solid $color-gray-ultralight;
-      }
-    }
-    &-title {
-      display: block;
-      margin-bottom: 0.5em;
-      font-weight: 600;
-      color: $color-blue-dark;
+    &-lunch-title {
+        background-image: url('../images/icons/cutlery.svg');
     }
 
-    &-speakers {
-      list-style-type: none;
-      padding-left: 0;
+    &-party-title {
+        background-image: url('../images/icons/pint.svg');
     }
-
-    &-speaker {
-      color: $color-gray-dark;
-      text-decoration-style: dotted;
-      font-style: italic;
-    }
-
-    &-like {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin: 0.5em;
-
-      & svg {
-        color: #777;
-      }
-
-      &[data-like="true"] svg {
-        color: #cc0303;
-      }
-    }
-  }
-
-  &-breakfast,
-  &-lunch,
-  &-cofeeBreak,
-  &-party {
-    background-color: $color-yellow-ultralight;
-    font-style: italic;
-  }
-
-  &-breakfast-title,
-  &-lunch-title,
-  &-cofeeBreak-title,
-  &-party-title {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 2.5em;
-    margin-left: 0.5em;
-    font-weight: normal;
-    margin-bottom: 0;
-    color: inherit;
-    line-height: 2em;
-  }
-
-  &-breakfast-title {
-    background-image: url("../images/icons/croissant_2.svg");
-  }
-
-  &-cofeeBreak-title {
-    background-image: url("../images/icons/hot-drink.svg");
-  }
-
-  &-lunch-title {
-    background-image: url("../images/icons/cutlery.svg");
-  }
-
-  &-party-title {
-    background-image: url("../images/icons/pint.svg");
-  }
 }
 
 th.fullSchedule-time-title {
