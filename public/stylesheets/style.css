@@ -1583,12 +1583,24 @@ a:focus {
         margin: 0 3rem;
     }
 }
+.footer a.footer__rs {
+    color: #19b8d5;
+}
+.footer a.footer__rs:hover,
+.footer a.footer__rs:focus,
+.footer a.footer__rs:active {
+    color: #fff;
+}
 .footer__rs {
     margin: 0 1rem;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 6rem;
     height: 6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
 }
 @media (min-width: 768px) {
     .footer__rs {
@@ -1600,6 +1612,26 @@ a:focus {
 .footer__rs:focus,
 .footer__rs:active {
     text-decoration: none;
+}
+.footer__rs--twitter:hover,
+.footer__rs--twitter:focus,
+.footer__rs--twitter:active {
+    background-color: #1da1f2;
+}
+.footer__rs--facebook:hover,
+.footer__rs--facebook:focus,
+.footer__rs--facebook:active {
+    background-color: #3b5998;
+}
+.footer__rs--linkedin:hover,
+.footer__rs--linkedin:focus,
+.footer__rs--linkedin:active {
+    background-color: #0077b5;
+}
+.footer__rs--instagram:hover,
+.footer__rs--instagram:focus,
+.footer__rs--instagram:active {
+    background-color: #e62f65;
 }
 .footer__contact {
     display: flex;
