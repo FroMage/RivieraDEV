@@ -136,38 +136,17 @@ a {
     }
 }
 
-.page-title {
-    &-container {
-        font-size: $font-size-title;
-        background-position: top;
-        background-image: url('../images/backgrounds/polygon-06s.jpg');
-        @include box-shadow(inset 0 -6px 6px -6px rgba(0, 0, 0, 0.3));
+.page {
+    &__header {
+        color: $color-white;
+        padding: $space-xxxl;
+        background-size: cover;
+        background-position: center;
     }
 
-    color: $color-white;
-    height: $font-size-title + 0.5em;
-    margin: 0;
-    padding: 0 1em;
-    font-size: 1em;
-
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(center);
-}
-
-.page-container {
-    margin-top: 3em;
-    margin-bottom: 3em;
-
-    // Only on xs devices (smartphones)
-    @media (max-width: $screen-xs-max) {
-        margin-top: 1em;
-        margin-bottom: 1em;
-
-        &--fullWidth {
-            padding-left: 0;
-            padding-right: 0;
-        }
+    &__subtitle {
+        font-size: $font-lg;
+        font-weight: normal;
     }
 }
 

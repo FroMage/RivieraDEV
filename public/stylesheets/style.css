@@ -136,41 +136,15 @@ a:focus {
     text-align: center;
 }
 
-.page-title {
+.page__header {
     color: #fff;
-    height: 3.3em;
-    margin: 0;
-    padding: 0 1em;
-    font-size: 1em;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
+    padding: 10rem;
+    background-size: cover;
+    background-position: center;
 }
-.page-title-container {
-    font-size: 2.8em;
-    background-position: top;
-    background-image: url('../images/backgrounds/polygon-06s.jpg');
-    -moz-box-shadow: inset 0 -6px 6px -6px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0 -6px 6px -6px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 -6px 6px -6px rgba(0, 0, 0, 0.3);
-}
-
-.page-container {
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-@media (max-width: 767px) {
-    .page-container {
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-    .page-container--fullWidth {
-        padding-left: 0;
-        padding-right: 0;
-    }
+.page__subtitle {
+    font-size: 2rem;
+    font-weight: normal;
 }
 
 .data-unavailable {
@@ -317,7 +291,7 @@ a:focus {
             rgba(0, 0, 0, 0.75),
             rgba(0, 0, 0, 0.35)
         ),
-        url(../images/illustrations/about_us_1.jpg);
+        url('../images/illustrations/about_us_1.jpg');
     padding: 2rem;
 }
 @media (min-width: 768px) {
@@ -2464,158 +2438,11 @@ th.fullSchedule-time-title {
         display: none;
     }
 }
-.pass {
-    margin: 2rem auto;
-    display: flex;
-    width: 93rem;
-}
-@media (max-width: 1200px) {
-    .pass {
-        width: 71rem;
-    }
-}
-@media (max-width: 767px) {
-    .pass {
-        flex-direction: column;
-        width: 90%;
-    }
-}
-.pass__illustration {
-    width: 20rem;
-    height: 20rem;
-    margin-left: 2rem;
-}
-@media (max-width: 1200px) {
-    .pass__illustration {
-        display: none;
-    }
-}
-.pass__mainContainer {
-    text-align: center;
-    width: 25rem;
-    background-color: #0a7db1;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: 0.7rem;
-    border-right: 2px dashed #fff;
-    position: relative;
-}
-@media (max-width: 767px) {
-    .pass__mainContainer {
-        width: auto;
-        border-right: none;
-        border-bottom: 2px dashed #fff;
-    }
-}
-.pass__mainContainer::before,
-.pass__mainContainer::after {
-    content: '';
-    width: 2rem;
-    height: 2rem;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    right: -1rem;
-}
-.pass__mainContainer::before {
-    top: -1rem;
-}
-@media (max-width: 767px) {
-    .pass__mainContainer::before {
-        top: auto;
-        bottom: -1rem;
-        left: -1rem;
-    }
-}
-.pass__mainContainer::after {
-    bottom: -1rem;
-}
-.pass__pass {
-    font-weight: 300;
-    font-size: 1.8rem;
-}
-.pass__name {
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #fbc02c;
-}
-.pass__days {
-    font-weight: 300;
-    font-size: 1.4rem;
-}
-.pass__prices {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}
-.pass__maxPrice {
-    margin-right: 2rem;
-    font-size: 2rem;
-    position: relative;
-}
-.pass__maxPrice:after {
-    content: '';
-    position: absolute;
-    background-color: #fbc02c;
-    height: 2px;
-    width: 120%;
-    top: 50%;
-    left: -10%;
-    transform: rotate(150deg);
-}
-.pass__price {
-    font-size: 4rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fbc02c;
-}
-.pass__studentPrice {
-    font-size: 1.4rem;
-}
-.pass__descriptionContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 46rem;
-    padding: 2rem;
-    background-color: #0a7db1;
-    color: #fff;
-    border-radius: 0.7rem;
-}
-@media (max-width: 767px) {
-    .pass__descriptionContainer {
-        width: auto;
-    }
-}
-.pass__description {
-    position: relative;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0 2rem;
-    font-weight: 300;
-    font-size: 1.6rem;
-}
-.pass__descriptionItem {
-    margin-left: 2rem;
-}
-.pass__check {
-    position: absolute;
-    left: 0;
-    height: 2rem;
-    width: 2rem;
-}
-.pass__buy {
-    margin: 1rem 0 0 0;
-    align-self: center;
-}
-.pass__saleover {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin-top: 1rem;
+.subscribe__header {
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url('../images/illustrations/tickets.jpg');
 }

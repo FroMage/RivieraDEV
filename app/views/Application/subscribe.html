@@ -1,32 +1,16 @@
 #{extends 'main.html' /} #{set
 title:play.i18n.Messages.get('views.application.subscribe.title') /}
 
-<div class="page-title-container">
-  <h1 class="title page-title">
-    <span>&{'views.application.subscribe.title'}</span>
-  </h1>
+<div class="page__header subscribe__header">
+    <h1 class="page__title">
+        &{'views.application.subscribe.title'}
+    </h1>
+    <div class="page__subtitle">
+        &{'views.application.subscribe.subtitle'}
+    </div>
 </div>
 
-<div class="container page-container page-container--fullWidth">
-  <!--
-	<div class="data-unavailable">
-		<p>
-            &{'views.application.subscribe.unavailable'}
-		</p>
-		<p>
-            &{'views.application.subscribe.subscribe'}
-		</p>
-	</div>
-	
-	# { newsletter / }
--->
-  <!--
- <a title="Vente de billets en ligne" href="https://www.billetweb.fr/shop.php?event=riviera-dev-2019"  
-  class="shop_frame"  target="_blank"  
-  data-src="https://www.billetweb.fr/shop.php?event=riviera-dev-2019"  data-max-width="100%"  
-  data-initial-height="600"  data-id="riviera-dev-2019"  data-resize="1">Vente de billets en ligne</a>
- <script type="text/javascript" src="https://www.billetweb.fr/js/export.js"></script>
--->
+<div class="page__container">
 
   <div class="passes">
     #{list items: pricePackCurrentStateList, as: 'pricePack'}
