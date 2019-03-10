@@ -441,7 +441,6 @@ a:focus {
     opacity: 1;
     transform: rotate(45deg);
     background: #fff;
-    overflow: hidden;
 }
 .burgerMenu input:checked ~ .burgerMenu__slice:nth-last-child(3) {
     opacity: 0;
