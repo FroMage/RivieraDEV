@@ -99,8 +99,7 @@ views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Orateurs
 
 views.application.subscribe.title=Billetterie
-views.application.subscribe.unavailable=Les inscriptions ne sont pas encore ouvertes.
-views.application.subscribe.subscribe=Soyez dans les premiers à connaître le programme et à acheter votre billet.
+views.application.subscribe.subtitle=Pass Deep Dive, Pass Conférence ou Pass Combi, à vous de choisir !
 views.application.subscribe.pass.pass=Pass
 views.application.subscribe.pass.buy=Acheter
 views.application.subscribe.pass.saleover=Vente terminée

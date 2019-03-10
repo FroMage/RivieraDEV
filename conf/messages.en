@@ -99,8 +99,7 @@ views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Speakers
 
 views.application.subscribe.title=Tickets
-views.application.subscribe.unavailable=Registration is not open yet.
-views.application.subscribe.subscribe=Subscribe to the newsletter to be notified when registration opens.
+views.application.subscribe.subtitle=Deep Dive pass, Conference pass or Combi pass, you choose!
 views.application.subscribe.pass.pass=Pass
 views.application.subscribe.pass.buy=Buy
 views.application.subscribe.pass.saleover=The sale is over

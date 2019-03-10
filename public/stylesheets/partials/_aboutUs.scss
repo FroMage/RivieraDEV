@@ -18,12 +18,9 @@
 
     &__aboutUs {
         grid-area: photo1;
-        background-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(../images/illustrations/about_us_1.jpg);
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/about_us_1.jpg'
+        );
         padding: $space-md;
 
         @media (min-width: $screen-sm-min) {
