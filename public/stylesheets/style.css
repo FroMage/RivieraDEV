@@ -109,6 +109,10 @@ body {
     background-color: #f09703;
     box-shadow: 0 0 0 2px #f09703;
 }
+.button--white {
+    color: #fff;
+    box-shadow: 0 0 0px 1px #fff;
+}
 
 a {
     color: #19b8d5;
@@ -145,6 +149,13 @@ a:focus {
 .page__subtitle {
     font-size: 2rem;
     font-weight: normal;
+}
+.page__container {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+.page__title {
+    font-size: 4rem;
 }
 
 .data-unavailable {
@@ -2454,4 +2465,116 @@ th.fullSchedule-time-title {
             rgba(0, 0, 0, 0.35)
         ),
         url('../images/illustrations/tickets.jpg');
+}
+
+@media (min-width: 768px) {
+    .passes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'deepdiveMain conferenceMain combiMain' 'deepdiveDesc conferenceDesc combiDesc';
+        grid-column-gap: 3rem;
+    }
+}
+
+.pass__mainContainer {
+    padding: 4rem;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.pass__mainContainer--deepdive {
+    grid-area: deepdiveMain;
+    background-color: #fdba1d;
+}
+.pass__mainContainer--conference {
+    grid-area: conferenceMain;
+    background-color: #fdaf1d;
+}
+.pass__mainContainer--combi {
+    grid-area: combiMain;
+    background-color: #eb8815;
+}
+.pass__name {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+.pass__pass--deepdive {
+    color: #d99f16;
+}
+.pass__pass--conference {
+    color: #c68d24;
+}
+.pass__pass--combi {
+    color: #c67517;
+}
+.pass__days {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.pass__price {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+.pass__maxPrice {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-decoration: line-through;
+}
+.pass__studentPrice {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.pass__buy {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.pass__descriptionContainer {
+    align-self: flex-start;
+    padding: 4rem;
+    border: 1px solid #ddd;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.pass__descriptionContainer--deepdive {
+    grid-area: deepdiveDesc;
+}
+.pass__descriptionContainer--deepdive .pass__descriptionItem:before {
+    background-color: #fdba1d;
+}
+.pass__descriptionContainer--conference {
+    grid-area: conferenceDesc;
+}
+.pass__descriptionContainer--conference .pass__descriptionItem:before {
+    background-color: #fdaf1d;
+}
+.pass__descriptionContainer--combi {
+    grid-area: combiDesc;
+}
+.pass__descriptionContainer--combi .pass__descriptionItem:before {
+    background-color: #eb8815;
+}
+.pass__description {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.pass__descriptionItem {
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.pass__descriptionItem:before {
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+    flex-shrink: 0;
+    margin-top: 0.8rem;
+    margin-right: 0.8rem;
 }

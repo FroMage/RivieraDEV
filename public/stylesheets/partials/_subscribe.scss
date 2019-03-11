@@ -5,3 +5,154 @@
         );
     }
 }
+
+.passes {
+    @media (min-width: $screen-sm-min) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'deepdiveMain conferenceMain combiMain'
+            'deepdiveDesc conferenceDesc combiDesc';
+        grid-column-gap: $space-lg;
+    }
+}
+
+$color-deepDive: #fdba1d;
+$color-conference: #fdaf1d;
+$color-combi: #eb8815;
+$color-deepDive-label: #d99f16;
+$color-conference-label: #c68d24;
+$color-combi-label: #c67517;
+
+$font-main-price: 6rem; //60px
+
+$bullet-size: 0.6rem; // 6px
+
+.pass {
+    &__mainContainer {
+        padding: $space-xl;
+        border-radius: $border-radius-md $border-radius-md 0 0;
+        box-shadow: $shadow;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+
+        &--deepdive {
+            grid-area: deepdiveMain;
+            background-color: $color-deepDive;
+        }
+
+        &--conference {
+            grid-area: conferenceMain;
+            background-color: $color-conference;
+        }
+
+        &--combi {
+            grid-area: combiMain;
+            background-color: $color-combi;
+        }
+    }
+
+    &__name {
+        font-size: $font-xxl;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: $space-xl;
+    }
+
+    &__pass {
+        &--deepdive {
+            color: $color-deepDive-label;
+        }
+
+        &--conference {
+            color: $color-conference-label;
+        }
+
+        &--combi {
+            color: $color-combi-label;
+        }
+    }
+
+    &__days {
+        font-size: $font-lg;
+        margin-bottom: $space-md;
+    }
+
+    &__price {
+        font-size: $font-main-price;
+        margin-bottom: $space-md;
+    }
+
+    &__maxPrice {
+        font-size: $font-xxl;
+        margin-bottom: $space-md;
+        text-decoration: line-through;
+    }
+
+    &__studentPrice {
+        font-size: $font-lg;
+        margin-bottom: $space-md;
+    }
+
+    &__buy {
+        padding-left: $space-xl;
+        padding-right: $space-xl;
+    }
+
+    &__descriptionContainer {
+        align-self: flex-start;
+        padding: $space-xl;
+        border: $border-sm solid $color-gray-light;
+        border-radius: 0 0 $border-radius-md $border-radius-md;
+        box-shadow: $shadow;
+
+        &--deepdive {
+            grid-area: deepdiveDesc;
+
+            .pass__descriptionItem:before {
+                background-color: $color-deepDive;
+            }
+        }
+
+        &--conference {
+            grid-area: conferenceDesc;
+
+            .pass__descriptionItem:before {
+                background-color: $color-conference;
+            }
+        }
+
+        &--combi {
+            grid-area: combiDesc;
+
+            .pass__descriptionItem:before {
+                background-color: $color-combi;
+            }
+        }
+    }
+
+    &__description {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__descriptionItem {
+        margin-bottom: $space-xs;
+        display: flex;
+        justify-content: flex-start;
+
+        &:before {
+            content: '';
+            width: $bullet-size;
+            height: $bullet-size;
+            border-radius: $bullet-size / 2;
+            flex-shrink: 0;
+            margin-top: $space-xs;
+            margin-right: $space-xs;
+        }
+    }
+}
