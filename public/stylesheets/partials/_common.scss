@@ -166,12 +166,19 @@ a {
     }
 
     &__container {
-        margin-top: $space-xxl;
+        margin-top: $space-xl;
         margin-bottom: $space-xl;
     }
 
     &__title {
-        font-size: $font-xxxl;
+        font-size: $font-md;
+        font-weight: bold;
+        margin: $space-md $content-space-xs;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-xxl;
+            margin: $space-lg $content-space-sm;
+        }
     }
 }
 
