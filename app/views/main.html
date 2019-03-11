@@ -80,13 +80,13 @@
         <div class="loading"></div>
 
         <!-- Mobile Menu -->
-        <nav role="navigation">
+        <nav role="navigation" class="js-burgerMenu">
             <div class="burgerMenu">
                 <!--
                 A fake / hidden checkbox is used as click reciever,
                 so you can use the :checked selector on it.
                 -->
-                <input type="checkbox" />
+                <input type="checkbox" class="js-burgerMenu-input"/>
 
                 <!--
                 Some spans to act as a hamburger.
@@ -125,16 +125,19 @@
                         >&{'views.main.sponsors'}</a>
 
                     <a href="@{Application.access}"
-                        class="burgerMenu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
+                        class="burgerMenu__item ${request.action == 'Application.access' ? 'burgerMenu__item--current' : ''}"
                         >&{'views.main.access'}</a>
 
-                    <a href="@{Application.en(request.url)}"
-                        class="burgerMenu__item burgerMenu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}"
-                        >&{'views.main.language.en'}</a>
-                    <span class="menu__langueSeparator">/</span>
-                    <a href="@{Application.fr(request.url)}"
-                        class="burgerMenu__item burgerMenu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}"
-                        >&{'views.main.language.fr'}</a>
+                    <div class="burgerMenu__item">
+                        <a href="@{Application.en(request.url)}"
+                            class="burgerMenu__langue #{if play.i18n.Lang.get() == 'en'}burgerMenu__langue--selected#{/if}"
+                            >&{'views.main.language.en'}</a>
+                        <span class="burgerMenu__langueSeparator">/</span>
+                        <a href="@{Application.fr(request.url)}"
+                            class="burgerMenu__langue #{if play.i18n.Lang.get() == 'fr'}burgerMenu__langue--selected#{/if}"
+                            >&{'views.main.language.fr'}</a>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -333,6 +336,7 @@
                 // Animate loader off screen
                 $('.loading').fadeOut('slow');
                 window.onload = initLikedTalks;
+                window.initBurgerMenu();
             });
         </script>
     </body>

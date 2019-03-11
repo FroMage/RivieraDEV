@@ -378,6 +378,9 @@ a:focus {
       * at the top left of the screen
       */
 }
+.burgerMenu--open {
+    overflow: hidden;
+}
 .burgerMenu input {
     display: block;
     width: 3rem;
@@ -430,11 +433,10 @@ a:focus {
 }
 .burgerMenu__content {
     position: absolute;
-    min-height: 100vh;
-    width: 300px;
+    min-height: 85%;
+    width: 85vw;
     margin: -4.3rem 0 0 0;
     left: 0;
-    min-height: 100vh;
     background: #fff;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -451,22 +453,29 @@ a:focus {
     display: block;
     padding: 1.5rem 3rem;
     font-size: 1.8rem;
-    list-style: none;
-    font-weight: bold;
     text-decoration: none;
     color: #474747;
 }
 .burgerMenu__item--current {
     background-color: #f8f7f7;
 }
-.burgerMenu__item.burgerMenu__langue {
+.burgerMenu__langue {
     display: inline;
+    color: inherit;
+    text-decoration: none;
 }
-.burgerMenu__item.burgerMenu__langue:first-child {
+.burgerMenu__langue:first-child {
     padding-right: 0.5rem;
 }
-.burgerMenu__item.burgerMenu__langue:last-child {
+.burgerMenu__langue:last-child {
     padding-left: 0.5rem;
+}
+.burgerMenu__langue--selected {
+    color: #fdb742;
+}
+.burgerMenu__langueSeparator {
+    display: inline;
+    color: inherit;
 }
 .burgerMenu__welcome {
     background-color: #19b8d5;
