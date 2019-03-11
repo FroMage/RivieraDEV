@@ -151,11 +151,19 @@ a:focus {
     font-weight: normal;
 }
 .page__container {
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
 }
 .page__title {
-    font-size: 4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 2rem 2rem;
+}
+@media (min-width: 768px) {
+    .page__title {
+        font-size: 3rem;
+        margin: 3rem 4rem;
+    }
 }
 
 .data-unavailable {
@@ -2484,7 +2492,7 @@ th.fullSchedule-time-title {
         url('../images/illustrations/tickets.jpg');
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .passes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -2502,6 +2510,14 @@ th.fullSchedule-time-title {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@media (min-width: 992px) {
+    .pass__mainContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .pass__mainContainer--deepdive {
     grid-area: deepdiveMain;
@@ -2557,6 +2573,15 @@ th.fullSchedule-time-title {
     border: 1px solid #ddd;
     border-radius: 0 0 16px 16px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+}
+@media (min-width: 992px) {
+    .pass__descriptionContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .pass__descriptionContainer--deepdive {
     grid-area: deepdiveDesc;
