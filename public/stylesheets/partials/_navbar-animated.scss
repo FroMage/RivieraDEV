@@ -1,3 +1,20 @@
+body .burgerMenu:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+body.burgerMenu--open .burgerMenu:before {
+    right: 0;
+    opacity: 0.5;
+}
+
 .burgerMenu {
     display: block;
     position: absolute;
@@ -101,7 +118,7 @@
         */
     &__content {
         position: absolute;
-        min-height: 85%;
+        min-height: 100vh;
         width: 85vw;
         margin: -4.3rem 0 0 0;
         left: 0;
