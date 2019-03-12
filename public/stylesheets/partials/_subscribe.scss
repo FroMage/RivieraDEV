@@ -112,7 +112,7 @@ $bullet-size: 0.6rem; // 6px
 
     &__descriptionContainer {
         align-self: flex-start;
-        padding: $space-xl;
+        padding: $space-xl $space-xl $space-lg $space-xl;
         border: $border-sm solid $color-gray-light;
         border-radius: 0 0 $border-radius-md $border-radius-md;
         box-shadow: $shadow;
@@ -170,5 +170,12 @@ $bullet-size: 0.6rem; // 6px
             margin-top: $space-xs;
             margin-right: $space-xs;
         }
+    }
+
+    &__remainingDays {
+        text-align: center;
+        color: $color-gray;
+        font-size: $font-xs;
+        margin-top: $space-lg;
     }
 }

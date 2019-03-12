@@ -21,6 +21,7 @@ import models.PreviousSpeaker;
 import models.PricePack;
 import models.PricePackCurrentState;
 import models.PricePackDate;
+import models.PricePackPeriod;
 import models.Slot;
 import models.Speaker;
 import models.Sponsor;
@@ -35,6 +36,7 @@ import play.i18n.Lang;
 import play.mvc.Before;
 import play.mvc.Controller;
 
+import util.DateUtils;
 import util.StringUtils;
 
 public class Application extends Controller {
@@ -132,16 +134,26 @@ public class Application extends Controller {
 		for (PricePack pricePack : pricePacks) {
 			Integer currentPrice = null;
 			Integer maxPrice = null;
+            PricePackPeriod currentPeriod = null;
+            Long remainingDays = null;
 			if(now.before(pricePackDates.blindBirdEndDate)) {
+                currentPeriod = PricePackPeriod.BLIND_BIRD;
 				currentPrice = pricePack.blindBirdPrice;
 				maxPrice = pricePack.regularPrice;
+                remainingDays = DateUtils.getDaysBetweenDates(now, pricePackDates.blindBirdEndDate);
 			} else if (now.before(pricePackDates.earlyBirdEndDate)) {
+                currentPeriod = PricePackPeriod.EARLY_BIRD;
 				currentPrice = pricePack.earlyBirdPrice;
 				maxPrice = pricePack.regularPrice;
+                remainingDays = DateUtils.getDaysBetweenDates(now, pricePackDates.earlyBirdEndDate);
 			} else {
+                currentPeriod = PricePackPeriod.REGULAR;
 				currentPrice = pricePack.regularPrice;
+                if (now.before(pricePackDates.regularEndDate)) {
+                    remainingDays = DateUtils.getDaysBetweenDates(now, pricePackDates.regularEndDate);
+                }
 			}
-			pricePackCurrentStateList.add(new PricePackCurrentState(pricePack.type, currentPrice, maxPrice, pricePack.studentPrice));
+			pricePackCurrentStateList.add(new PricePackCurrentState(pricePack.type, currentPrice, maxPrice, pricePack.studentPrice, currentPeriod, remainingDays));
 		}
 
         render(ticketingUrl, ticketingIsOpen, pricePackCurrentStateList);

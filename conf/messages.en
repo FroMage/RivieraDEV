@@ -120,6 +120,10 @@ views.application.subscribe.pass.include.conference.notjustcoders="We're not jus
 views.application.subscribe.pass.include.buffet=Breakfast and buffet
 views.application.subscribe.pass.include.buffets=Breakfasts and buffets
 views.application.subscribe.pass.include.party=Evening social event with buffet and concert
+views.application.subscribe.pass.period.blindBird=Blind bird
+views.application.subscribe.pass.period.earlyBird=Early bird
+views.application.subscribe.pass.period.regular=Regular
+views.application.subscribe.pass.remainingDays=&{%s}: %d remaining days
 
 views.application.access.title=Access
 views.application.access.in-sophia.1=In Sophia Antipolis
