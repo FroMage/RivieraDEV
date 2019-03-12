@@ -80,7 +80,7 @@ body {
     // Use box-shadow instead of border because
     // we don't want the size of the button to change on hover
     // (1px normal, 2px hover)
-    box-shadow: 0 0 0px 1px $color-yellow;
+    box-shadow: 0 0 0 $border-sm $color-yellow;
     border-radius: 3rem;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -89,10 +89,12 @@ body {
         font-size: $font-md;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
         color: $color-yellow;
         text-decoration: none;
-        box-shadow: 0 0 0 2px $color-yellow;
+        box-shadow: 0 0 0 $border-md $color-yellow;
         background-color: rgba($color-yellow, 0.2);
     }
 
@@ -100,16 +102,26 @@ body {
         color: $color-white;
         background-color: $color-yellow;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             color: $color-white;
             background-color: darken($color-yellow, 15%);
-            box-shadow: 0 0 0 2px darken($color-yellow, 15%);
+            box-shadow: 0 0 0 $border-md darken($color-yellow, 15%);
         }
     }
 
     &--white {
         color: $color-white;
-        box-shadow: 0 0 0px 1px $color-white;
+        box-shadow: 0 0 0 $border-sm $color-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: white;
+            background-color: rgba($color-black, 0.05);
+            box-shadow: 0 0 0 $border-md $color-white;
+        }
     }
 }
 

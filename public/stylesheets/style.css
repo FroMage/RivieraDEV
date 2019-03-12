@@ -84,7 +84,7 @@ body {
     color: #fdb742;
     padding: 1.2rem 2rem;
     border: none;
-    box-shadow: 0 0 0px 1px #fdb742;
+    box-shadow: 0 0 0 1px #fdb742;
     border-radius: 3rem;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -94,7 +94,9 @@ body {
         font-size: 1.8rem;
     }
 }
-.button:hover {
+.button:hover,
+.button:focus,
+.button:active {
     color: #fdb742;
     text-decoration: none;
     box-shadow: 0 0 0 2px #fdb742;
@@ -104,14 +106,23 @@ body {
     color: #fff;
     background-color: #fdb742;
 }
-.button--primary:hover {
+.button--primary:hover,
+.button--primary:focus,
+.button--primary:active {
     color: #fff;
     background-color: #f09703;
     box-shadow: 0 0 0 2px #f09703;
 }
 .button--white {
     color: #fff;
-    box-shadow: 0 0 0px 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+}
+.button--white:hover,
+.button--white:focus,
+.button--white:active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 2px #fff;
 }
 
 a {
@@ -2567,6 +2578,21 @@ th.fullSchedule-time-title {
 .pass__buy {
     padding-left: 4rem;
     padding-right: 4rem;
+}
+.pass__buy--deepdive:hover,
+.pass__buy--deepdive:focus,
+.pass__buy--deepdive:active {
+    background-color: rgba(217, 159, 22, 0.3);
+}
+.pass__buy--conference:hover,
+.pass__buy--conference:focus,
+.pass__buy--conference:active {
+    background-color: rgba(198, 141, 36, 0.3);
+}
+.pass__buy--combi:hover,
+.pass__buy--combi:focus,
+.pass__buy--combi:active {
+    background-color: rgba(198, 117, 23, 0.3);
 }
 .pass__descriptionContainer {
     align-self: flex-start;
