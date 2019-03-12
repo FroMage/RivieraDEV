@@ -108,6 +108,30 @@ $bullet-size: 0.6rem; // 6px
     &__buy {
         padding-left: $space-xl;
         padding-right: $space-xl;
+
+        &--deepdive {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba($color-deepDive-label, 0.3);
+            }
+        }
+
+        &--conference {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba($color-conference-label, 0.3);
+            }
+        }
+
+        &--combi {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba($color-combi-label, 0.3);
+            }
+        }
     }
 
     &__descriptionContainer {

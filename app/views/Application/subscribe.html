@@ -47,7 +47,7 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
                     </div>
                     
                     #{if ticketingIsOpen}
-                        <a class="pass__buy button button--white"
+                        <a class="button button--white pass__buy pass__buy--${pricePack.type.code}"
                             href="${ticketingUrl}"
                             target="_blank"
                         >
