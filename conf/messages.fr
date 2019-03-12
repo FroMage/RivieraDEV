@@ -120,6 +120,10 @@ views.application.subscribe.pass.include.conference.notjustcoders=Ateliers "On n
 views.application.subscribe.pass.include.buffet=Petit-déjeuner et buffet
 views.application.subscribe.pass.include.buffets=Petits-déjeuners et buffets
 views.application.subscribe.pass.include.party=Soirée networking du jeudi avec buffet et concert
+views.application.subscribe.pass.period.blindBird=Blind bird
+views.application.subscribe.pass.period.earlyBird=Early bird
+views.application.subscribe.pass.period.regular=Normal
+views.application.subscribe.pass.remainingDays=&{%s} : %d jours restants
 
 views.application.access.title=Accès
 views.application.access.in-sophia.1=À Sophia Antipolis

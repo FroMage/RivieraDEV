@@ -186,7 +186,7 @@
     }
 }
 .schedule-dayAll {
-    background-color: #bbb;
+    background-color: #9a9a93;
 }
 .schedule-day1 {
     background-color: rgba(0, 144, 205, 0.8);
@@ -447,7 +447,7 @@ th.fullSchedule-time-title {
 
 .talk-level {
     font-style: italic;
-    background-color: #bbb;
+    background-color: #9a9a93;
     padding: 0 0.4em;
     border-radius: 4px;
     display: inline-block;
@@ -455,7 +455,7 @@ th.fullSchedule-time-title {
 }
 .talksFilter-options .talk-level:hover,
 .talk-level:focus {
-    background-color: #d5d5d5;
+    background-color: #b3b3ad;
 }
 
 .talk-language {

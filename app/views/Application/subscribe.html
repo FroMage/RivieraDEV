@@ -95,6 +95,11 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
                             &{'views.application.subscribe.pass.include.party'}
                         </li>
                     #{/if}
+                    #{if pricePack.maxPrice != null && pricePack.remainingDays != null}
+                        <div class="pass__remainingDays">
+                            * &{'views.application.subscribe.pass.remainingDays', 'views.application.subscribe.pass.period.' + pricePack.currentPeriod.code, pricePack.remainingDays}
+                        </div>
+                    #{/if}
                 </ul>
             </div>
         #{/list}

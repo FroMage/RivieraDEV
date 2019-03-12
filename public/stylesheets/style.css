@@ -1948,7 +1948,7 @@ body.burgerMenu--open .burgerMenu:before {
     }
 }
 .schedule-dayAll {
-    background-color: #bbb;
+    background-color: #9a9a93;
 }
 .schedule-day1 {
     background-color: rgba(0, 144, 205, 0.8);
@@ -2209,7 +2209,7 @@ th.fullSchedule-time-title {
 
 .talk-level {
     font-style: italic;
-    background-color: #bbb;
+    background-color: #9a9a93;
     padding: 0 0.4em;
     border-radius: 4px;
     display: inline-block;
@@ -2217,7 +2217,7 @@ th.fullSchedule-time-title {
 }
 .talksFilter-options .talk-level:hover,
 .talk-level:focus {
-    background-color: #d5d5d5;
+    background-color: #b3b3ad;
 }
 
 .talk-language {
@@ -2391,7 +2391,7 @@ th.fullSchedule-time-title {
     top: 0;
     right: 0;
     cursor: pointer;
-    background-color: #d5d5d5;
+    background-color: #b3b3ad;
     padding: 0 0.4em;
     margin: 0.5rem;
     border-radius: 4px;
@@ -2400,7 +2400,7 @@ th.fullSchedule-time-title {
 }
 .talksFilter-reset:hover,
 .talksFilter-reset:focus {
-    background-color: #bbb;
+    background-color: #9a9a93;
 }
 .talksFilter-reset--icon {
     margin-right: 0.5rem;
@@ -2570,7 +2570,7 @@ th.fullSchedule-time-title {
 }
 .pass__descriptionContainer {
     align-self: flex-start;
-    padding: 4rem;
+    padding: 4rem 4rem 3rem 4rem;
     border: 1px solid #ddd;
     border-radius: 0 0 16px 16px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -2620,4 +2620,10 @@ th.fullSchedule-time-title {
     flex-shrink: 0;
     margin-top: 0.8rem;
     margin-right: 0.8rem;
+}
+.pass__remainingDays {
+    text-align: center;
+    color: #9a9a93;
+    font-size: 1.4rem;
+    margin-top: 3rem;
 }
