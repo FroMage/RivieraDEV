@@ -100,6 +100,7 @@ views.application.judcon.speakers=Orateurs
 
 views.application.subscribe.title=Billetterie
 views.application.subscribe.subtitle=Pass Deep Dive, Pass Conférence ou Pass Combi, à vous de choisir !
+views.application.subscribe.titlePage=Choisissez votre pass
 views.application.subscribe.pass.pass=Pass
 views.application.subscribe.pass.buy=Acheter
 views.application.subscribe.pass.saleover=Vente terminée
