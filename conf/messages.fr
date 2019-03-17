@@ -35,7 +35,7 @@ views.application.common.website=Site web
 views.application.openGraph=Riviera DEV, c'est 3 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
 views.application.index.title=Accueil
-views.application.index.date=MLes 15, 16 et 17 mai 2019
+views.application.index.date=Les 15, 16 et 17 mai 2019
 views.application.index.place=Sophia Antipolis
 views.application.index.tickets=Inscrivez-vous
 views.application.index.cfp.join=Prenez la parole à Riviera DEV

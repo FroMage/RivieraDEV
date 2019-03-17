@@ -615,49 +615,65 @@ body.burgerMenu--open .burgerMenu:before {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10% 0 20%;
-}
-.parallax-home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url(../images/photos/2018.jpg);
 }
-.parallax-home-location {
-    background-image: url('../images/location_parallax.jpg');
-    height: 250px;
-}
-.parallax-home-partenaires {
-    background-image: url('../images/sponsors_parallax_2.jpg');
-    height: 250px;
-}
-.parallax-page {
-    height: auto;
-    font-size: 2.8em;
-}
-.parallax--welcome {
+.parallax__content {
     font-family: Roboto, Noto, sans-serif;
     text-align: center;
 }
-.parallax--welcome__logo {
-    width: 35vw;
+.parallax__logosContainer {
+    display: inline-block;
 }
-.parallax--welcome__info {
+.parallax__logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+.parallax__logo--rdev {
+    width: 45vw;
+}
+@media (min-width: 768px) {
+    .parallax__logo--rdev {
+        width: 35vw;
+    }
+}
+.parallax__logo--judcon {
+    width: 20vw;
+}
+@media (min-width: 768px) {
+    .parallax__logo--judcon {
+        width: 10vw;
+    }
+}
+.parallax__info {
     color: white;
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.parallax--welcome__icon {
+@media (min-width: 768px) {
+    .parallax__info {
+        flex-direction: row;
+    }
+}
+.parallax__icon {
     width: 2.5rem;
     vertical-align: baseline;
     color: #fdb742;
-    margin: 0 0.5rem;
+    margin: 0 0.6rem 0 0;
     width: 1.8rem;
 }
-
-@media (max-width: 767px) {
-    .parallax-title {
-        padding-top: 1.5em;
+@media (min-width: 768px) {
+    .parallax__icon {
+        margin: 0 1rem;
     }
 }
+
 .registration {
     text-align: center;
 }

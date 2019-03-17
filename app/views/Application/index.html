@@ -3,15 +3,20 @@
 
 <div class="parallax parallax-home">
 
-    <div class="parallax-home__gradiant">
-    </div>
-
-    <div class="parallax--welcome">
-        <img class="parallax--welcome__logo" src="@{'/public/images/logos/logo_RD_full_white.svg'}" alt="RivieraDEV">
-        <div class="parallax--welcome__info">
+    <div class="parallax__content">
+        <div class="parallax__logosContainer">
+            <div class="parallax__logos">
+                <img class="parallax__logo--rdev" src="@{'/public/images/logos/logo_RD_full_white.svg'}" alt="RivieraDEV">
+                <img class="parallax__logo--judcon" src="@{'/public/images/logos/JUDCon_riviera_logo_white.svg'}" alt="JUDCon">
+            </div>
+        </div>
+        
+        <div class="parallax__info">
             <span>&{'views.application.index.date'}</span>
-            <img class="parallax--welcome__icon" src="@{'/public/images/icons/where.svg'}" alt="">
-            <span>&{'views.application.index.place'}</span>
+            <div>
+                <img class="parallax__icon" src="@{'/public/images/icons/where.svg'}" alt="">
+                <span>&{'views.application.index.place'}</span>
+            </div>
         </div>
     </div>
 
