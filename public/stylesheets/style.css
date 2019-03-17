@@ -2457,6 +2457,26 @@ th.fullSchedule-time-title {
     display: none;
 }
 
+.judcon {
+    display: flex;
+    margin-top: 5rem;
+}
+.judcon__aside {
+    display: flex;
+    flex-direction: column;
+}
+.judcon__logo {
+    text-align: center;
+}
+.judcon__logoImg {
+    width: 100px;
+}
+@media (min-width: 768px) {
+    .judcon__logoImg {
+        width: 150px;
+    }
+}
+
 .judcon-intro {
     font-size: 1.1em;
     line-height: 1.5;
