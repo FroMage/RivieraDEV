@@ -1,64 +1,38 @@
 $logo-size-xs: 100px;
 $logo-size-sm: 150px;
 
+$quote-size: 3rem;
+
 .judcon {
     display: flex;
     margin-top: $space-xxl;
 
-    &__aside {
+    &__person {
+        margin-top: 0;
+    }
+
+    &__quoteContainer {
         display: flex;
-        flex-direction: column;
-    }
 
-    &__logo {
-        text-align: center;
-    }
-
-    &__logoImg {
-        width: $logo-size-xs;
-
-        @media (min-width: $screen-sm-min) {
-            width: $logo-size-sm;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: $quote-size;
+            height: $quote-size;
+            background-repeat: no-repeat;
+            background-size: contain;
+            flex-shrink: 0;
         }
-    }
-}
-
-.judcon-intro {
-    font-size: 1.1em;
-    line-height: 1.5;
-    font-style: italic;
-    margin-top: 2em;
-    margin-bottom: 3em;
-
-    &-quote:before,
-    &-quote:after {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        opacity: 0.6;
-    }
-    &-quote:before {
-        background-image: url('../images/icons/quote_left.svg');
-        margin: -30px auto 0 -30px;
-    }
-    &-quote:after {
-        background-image: url('../images/icons/quote_right.svg');
-        margin: -30px -30px 0 auto;
-    }
-
-    &-signature {
-        text-align: right;
-        font-size: 1.1em;
-        font-style: normal;
-    }
-}
-
-@media (max-width: $screen-xs-max) {
-    .judcon-intro-quote:before,
-    .judcon-intro-quote:after {
-        display: none;
+        &:before {
+            background-image: url('../images/icons/quote_left.svg');
+            align-self: flex-start;
+            margin-right: $space-sm;
+        }
+        &:after {
+            background-image: url('../images/icons/quote_right.svg');
+            align-self: flex-end;
+            margin-left: $space-sm;
+        }
     }
 }
