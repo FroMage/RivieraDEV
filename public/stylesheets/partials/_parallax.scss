@@ -3,59 +3,63 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10% 0 20%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url(../images/photos/2018.jpg);
 
-    &-home {
-        background-image: linear-gradient(
-                rgba(0, 0, 0, 0.45),
-                rgba(0, 0, 0, 0.45)
-            ),
-            url(../images/photos/2018.jpg);
-
-        &-location {
-            background-image: url('../images/location_parallax.jpg');
-            height: 250px;
-        }
-
-        &-partenaires {
-            background-image: url('../images/sponsors_parallax_2.jpg');
-            height: 250px;
-        }
-    }
-
-    &-page {
-        height: auto;
-        font-size: $font-size-title;
-    }
-
-    &--welcome {
+    &__content {
         font-family: $font_family;
         text-align: center;
+    }
 
-        &__logo {
+    &__logosContainer {
+        display: inline-block;
+    }
+
+    &__logos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: $space-md;
+    }
+
+    &__logo--rdev {
+        width: 45vw;
+
+        @media (min-width: $screen-sm-min) {
             width: 35vw;
         }
+    }
+    &__logo--judcon {
+        width: 20vw;
 
-        &__info {
-            color: white;
-            font-size: $font-xl;
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-        }
-
-        &__icon {
-            width: $font-xl;
-            vertical-align: baseline;
-            color: $color-yellow;
-            margin: 0 0.5rem;
-            width: 1.8rem;
+        @media (min-width: $screen-sm-min) {
+            width: 10vw;
         }
     }
-}
 
-@media (max-width: $screen-xs-max) {
-    .parallax {
-        &-title {
-            padding-top: 1.5em;
+    &__info {
+        color: white;
+        font-size: $font-xl;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (min-width: $screen-sm-min) {
+            flex-direction: row;
+        }
+    }
+
+    &__icon {
+        width: $font-xl;
+        vertical-align: baseline;
+        color: $color-yellow;
+        margin: 0 $space-xxs 0 0;
+        width: $icon-size-sm;
+
+        @media (min-width: $screen-sm-min) {
+            margin: 0 $space-sm;
         }
     }
 }
