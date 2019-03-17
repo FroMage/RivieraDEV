@@ -104,38 +104,38 @@
                         </div>
                     </div>
 
-                    <a href="@{Application.index}"
-                        class="burgerMenu__item ${request.action == 'Application.index' ? 'burgerMenu__item--current' : ''}"
-                        >Home</a>
+                    <a href="@{Application.index}" class="burgerMenu__item ${request.action == 'Application.index' ? 'burgerMenu__item--current' : ''}">
+                        &{'views.main.home'}
+                    </a>
 
-                    <a href="@{Application.cfp}"
-                        class="burgerMenu__item ${request.action == 'Application.cfp' ? 'burgerMenu__item--current' : ''}"
-                        >&{'views.main.cfp'}</a>
+                    <a href="@{Application.cfp}" class="burgerMenu__item ${request.action == 'Application.cfp' ? 'burgerMenu__item--current' : ''}">
+                        &{'views.main.cfp'}
+                    </a>
 
-                    <a href="@{Application.subscribe}"
-                        class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
-                        >&{'views.main.tickets'}</a>
+                    <a href="@{Application.subscribe}" class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}">
+                        &{'views.main.tickets'}
+                    </a>
 
-                    <a href="@{Application.organisers}"
-                        class="burgerMenu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'burgerMenu__item--current' : ''}"
-                        >&{'views.main.team'}</a>
+                    <a href="@{Application.organisers}" class="burgerMenu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'burgerMenu__item--current' : ''}">
+                        &{'views.main.team'}
+                    </a>
 
-                    <a href="@{Application.sponsors}"
-                        class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}"
-                        >&{'views.main.sponsors'}</a>
+                    <a href="@{Application.sponsors}" class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}">
+                        &{'views.main.sponsors'}
+                    </a>
 
-                    <a href="@{Application.access}"
-                        class="burgerMenu__item ${request.action == 'Application.access' ? 'burgerMenu__item--current' : ''}"
-                        >&{'views.main.access'}</a>
+                    <a href="@{Application.access}" class="burgerMenu__item ${request.action == 'Application.access' ? 'burgerMenu__item--current' : ''}">
+                        &{'views.main.access'}
+                    </a>
 
                     <div class="burgerMenu__item">
-                        <a href="@{Application.en(request.url)}"
-                            class="burgerMenu__langue #{if play.i18n.Lang.get() == 'en'}burgerMenu__langue--selected#{/if}"
-                            >&{'views.main.language.en'}</a>
+                        <a href="@{Application.en(request.url)}" class="burgerMenu__langue #{if play.i18n.Lang.get() == 'en'}burgerMenu__langue--selected#{/if}">
+                            &{'views.main.language.en'}
+                        </a>
                         <span class="burgerMenu__langueSeparator">/</span>
-                        <a href="@{Application.fr(request.url)}"
-                            class="burgerMenu__langue #{if play.i18n.Lang.get() == 'fr'}burgerMenu__langue--selected#{/if}"
-                            >&{'views.main.language.fr'}</a>
+                        <a href="@{Application.fr(request.url)}" class="burgerMenu__langue #{if play.i18n.Lang.get() == 'fr'}burgerMenu__langue--selected#{/if}">
+                            &{'views.main.language.fr'}
+                        </a>
                     </div>
                 </div>
             </div>
@@ -143,52 +143,36 @@
 
         <!-- Desktop Menu -->
         <nav class="menu js-navbar-animated">
-            <a
-                href="@{Application.index}"
-                class="menu__item menu__item--current"
-                >HOME</a
-            >
+            <a href="@{Application.index}" class="menu__item ${request.action == 'Application.index' ? 'menu__item--current' : ''}">
+                &{'views.main.home'}
+            </a>
 
-            <a
-                href="@{Application.cfp}"
-                class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
-                >&{'views.main.cfp'}</a
-            >
+            <a href="@{Application.cfp}" class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}">
+                &{'views.main.cfp'}
+            </a>
 
-            <a
-                href="@{Application.subscribe}"
-                class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
-                >&{'views.main.tickets'}</a
-            >
+            <a href="@{Application.subscribe}" class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}">
+                &{'views.main.tickets'}
+            </a>
 
-            <a
-                href="@{Application.organisers}"
-                class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}"
-                >&{'views.main.team'}</a
-            >
+            <a href="@{Application.organisers}" class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}">
+                &{'views.main.team'}
+            </a>
 
-            <a
-                href="@{Application.sponsors}"
-                class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
-                >&{'views.main.sponsors'}</a
-            >
-            <a
-                href="@{Application.access}"
-                class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
-                >&{'views.main.access'}</a
-            >
+            <a href="@{Application.sponsors}" class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}">
+                &{'views.main.sponsors'}
+            </a>
+            <a href="@{Application.access}" class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}">
+                &{'views.main.access'}
+            </a>
 
-            <a
-                href="@{Application.en(request.url)}"
-                class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}"
-                >&{'views.main.language.en'}</a
-            >
+            <a href="@{Application.en(request.url)}" class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}">
+                &{'views.main.language.en'}
+            </a>
             <span class="menu__langueSeparator">/</span>
-            <a
-                href="@{Application.fr(request.url)}"
-                class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}"
-                >&{'views.main.language.fr'}</a
-            >
+            <a href="@{Application.fr(request.url)}" class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}">
+                &{'views.main.language.fr'}
+            </a>
         </nav>
 
         <!--
