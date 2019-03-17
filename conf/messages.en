@@ -168,11 +168,11 @@ views.application.access.plane.5=The bus stop is at "Aéroport/Promenade" (in fr
 views.application.access.plane.6=The trip duration is 45 minutes approximately and costs 1.50€. Get out at the "SKEMA" stop.
 views.application.access.plane.7=From Sophia Antipolis, this bus stops at the airport, but only if you notify the driver.
 
-views.application.orgas.title=Organisers
-views.application.orgas.text.1=Riviera DEV is a conference organised <strong>by developers for developers</strong>.
-views.application.orgas.text.2=It started in 2009 (under a different name) by the <strong><a href="http://rivierajug.org/" target="_blank">Riviera JUG</a></strong>.
-views.application.orgas.text.3=Every organiser is <strong>an unpaid geek</strong> who works their backs off to craft a formidable conference.
-views.application.orgas.contact=You can contact them by email at <strong><a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a></strong>.
+views.application.orgas.title=About us
+views.application.orgas.text.1=Riviera DEV is a conference organised by developers for developers.
+views.application.orgas.text.2=It started in 2009 (under a different name) by the <a href="http://rivierajug.org/" target="_blank">Riviera JUG</a>.
+views.application.orgas.text.3=Every organiser is an unpaid geek who works their backs off to craft a formidable conference.
+views.application.orgas.contact=Contact us
 
 views.application.orga.title=Organiser
 

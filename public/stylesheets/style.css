@@ -157,9 +157,25 @@ a:focus {
 
 .page__header {
     color: #fff;
-    padding: 10rem;
+    padding: 5rem;
     background-size: cover;
     background-position: center;
+}
+@media (min-width: 768px) {
+    .page__header {
+        padding: 10rem;
+    }
+}
+.page__mainTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.8rem 0;
+}
+@media (min-width: 768px) {
+    .page__mainTitle {
+        font-size: 4rem;
+        margin: 2rem 0;
+    }
 }
 .page__subtitle {
     font-size: 2rem;
@@ -1954,6 +1970,24 @@ body.burgerMenu--open .burgerMenu:before {
     .speaker-talks {
         margin-bottom: 2em;
     }
+}
+.orgas__header {
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url('../images/illustrations/team.jpg');
+    background-position: top 35% right 0;
+}
+.orgas__mainSubtitle p {
+    margin: 0;
+}
+.orgas__mainSubtitle a {
+    color: #fff;
+}
+.orgas__button {
+    margin-top: 4rem;
 }
 .orgas-rivierajug {
     width: auto;

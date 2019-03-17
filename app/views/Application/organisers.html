@@ -1,33 +1,18 @@
 #{extends 'main.html' /}
 #{set title:play.i18n.Messages.get('views.application.orgas.title') /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.orgas.title'}</span></h1>
+<div class="page__header orgas__header">
+		<h1 class="page__mainTitle">&{'views.application.orgas.title'}</h1>
+		<div class="page__mainSubtitle orgas__mainSubtitle">
+				<p>&{'views.application.orgas.text.1'}</p>
+				<p>&{'views.application.orgas.text.2'}</p>
+				<p>&{'views.application.orgas.text.3'}</p>
+		</div>
+		<a class="button orgas__button" href="mailto:info@rivieradev.fr">&{'views.application.orgas.contact'}</a>
 </div>
 
-<div class="container page-container">
-	
-	<div class="row">
-		<div class="col-sm-10">
-			<p>
-			    &{'views.application.orgas.text.1'}
-                &{'views.application.orgas.text.2'}
-			</p>
-			<p>
-                &{'views.application.orgas.text.3'}
-			</p>
-			<p class="orgas-contact">
-                &{'views.application.orgas.contact'}
-			</p>
-		</div>
-		<div class="col-sm-2 text-center">
-			<img class="orgas-rivierajug" src="@{'/public/images/rivierajug-header.png'}">
-		</div>
-	</div>
+<div class="page__container notFullWidth">
 
-	#{organisers orgas: orgas/}
-	
+		#{organisers orgas: orgas/}
+
 </div>
-
-<img class="orgas-photo" src="@{'/public/images/illustrations/organisateurs.jpg'}">
-
