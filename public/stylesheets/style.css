@@ -53,6 +53,10 @@ body {
     }
 }
 
+.grey {
+    background-color: #f8f7f7;
+}
+
 .cardLink {
     text-decoration: none;
     color: inherit;
@@ -873,14 +877,14 @@ body.burgerMenu--open .burgerMenu:before {
     padding-bottom: 5rem;
 }
 .days__mainTitle {
-    margin: 2rem 2rem;
+    padding: 2rem 2rem;
 }
 @media (min-width: 768px) {
     .days__mainTitle {
-        margin: 3rem 4rem;
+        padding: 3rem 4rem;
     }
 }
-.days__container {
+.days__contents {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -890,7 +894,7 @@ body.burgerMenu--open .burgerMenu:before {
     margin-bottom: 5rem;
 }
 @media (min-width: 992px) {
-    .days__container {
+    .days__contents {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'intro1 intro2' 'content1 content2';
         grid-column-gap: 2rem;
@@ -914,6 +918,7 @@ body.burgerMenu--open .burgerMenu:before {
     border-width: 1px 1px 0 1px;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
 @media (min-width: 768px) {
     .days__intro {
@@ -1898,7 +1903,6 @@ body.burgerMenu--open .burgerMenu:before {
 }
 
 .speakers {
-    background-color: #f8f7f7;
     padding: 4rem 0;
 }
 @media (min-width: 768px) {

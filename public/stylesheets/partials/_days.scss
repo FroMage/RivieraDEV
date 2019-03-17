@@ -5,14 +5,14 @@ $days-illustration-size-sm: 10rem;
     padding-bottom: $space-xxl;
 
     &__mainTitle {
-        margin: $space-md $content-space-xs;
+        padding: $space-md $content-space-xs;
 
         @media (min-width: $screen-sm-min) {
-            margin: $space-lg $content-space-sm;
+            padding: $space-lg $content-space-sm;
         }
     }
 
-    &__container {
+    &__contents {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -54,6 +54,7 @@ $days-illustration-size-sm: 10rem;
         border-width: $border-sm $border-sm 0 $border-sm;
         border-radius: $border-radius-md $border-radius-md 0 0;
         box-shadow: $shadow;
+        background-color: $color-white;
 
         @media (min-width: $screen-sm-min) {
             padding: $space-lg;
