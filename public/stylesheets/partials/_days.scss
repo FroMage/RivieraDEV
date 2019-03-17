@@ -96,12 +96,18 @@ $days-illustration-size-sm: 10rem;
     &__title {
         display: inline;
         margin-top: 0;
-        color: $color-blue;
         font-weight: bold;
         font-size: $font-md;
 
         @media (min-width: $screen-sm-min) {
             font-size: $font-lg;
+        }
+
+        &--1 {
+            color: $color-blue;
+        }
+        &--2 {
+            color: $color-turquoise;
         }
     }
 
@@ -124,7 +130,6 @@ $days-illustration-size-sm: 10rem;
     }
 
     &__content {
-        background: linear-gradient($color-blue, $color-blue-medium);
         color: $color-white;
         padding: $space-md;
         border-color: $color-gray-light;
@@ -139,6 +144,7 @@ $days-illustration-size-sm: 10rem;
 
         &--1 {
             grid-area: content1;
+            background: linear-gradient($color-blue, $color-blue-medium);
             margin-bottom: $space-sm;
 
             @media (min-width: $screen-sm-min) {
@@ -152,6 +158,10 @@ $days-illustration-size-sm: 10rem;
 
         &--2 {
             grid-area: content2;
+            background: linear-gradient(
+                $color-turquoise-light,
+                $color-turquoise-dark
+            );
         }
     }
 
