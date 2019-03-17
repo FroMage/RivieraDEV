@@ -1,4 +1,23 @@
 .orgas {
+    &__header {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/team.jpg'
+        );
+        background-position: top 35% right 0;
+    }
+
+    &__mainSubtitle {
+        p {
+            margin: 0;
+        }
+        a {
+            color: $color-white;
+        }
+    }
+
+    &__button {
+        margin-top: $space-xl;
+    }
 
     &-rivierajug {
         width: auto;
@@ -11,5 +30,4 @@
     &-photo {
         width: 100%;
     }
-
 }
