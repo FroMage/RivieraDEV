@@ -2479,33 +2479,46 @@ th.fullSchedule-time-title {
 
 .judcon {
     display: flex;
+    flex-direction: column;
     margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+    .judcon {
+        flex-direction: row;
+    }
 }
 .judcon__person {
     margin-top: 0;
 }
 .judcon__quoteContainer {
-    display: flex;
+    margin: 0 2rem;
 }
-.judcon__quoteContainer:before,
-.judcon__quoteContainer:after {
-    content: '';
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    flex-shrink: 0;
-}
-.judcon__quoteContainer:before {
-    background-image: url('../images/icons/quote_left.svg');
-    align-self: flex-start;
-    margin-right: 1rem;
-}
-.judcon__quoteContainer:after {
-    background-image: url('../images/icons/quote_right.svg');
-    align-self: flex-end;
-    margin-left: 1rem;
+@media (min-width: 768px) {
+    .judcon__quoteContainer {
+        margin: 0;
+        display: flex;
+    }
+    .judcon__quoteContainer:before,
+    .judcon__quoteContainer:after {
+        content: '';
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex-shrink: 0;
+    }
+    .judcon__quoteContainer:before {
+        background-image: url('../images/icons/quote_left.svg');
+        align-self: flex-start;
+        margin-right: 1rem;
+    }
+    .judcon__quoteContainer:after {
+        background-image: url('../images/icons/quote_right.svg');
+        align-self: flex-end;
+        margin-left: 1rem;
+    }
 }
 
 .subscribe__header {
