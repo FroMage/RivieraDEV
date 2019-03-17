@@ -6,6 +6,7 @@ views.main.schedule=Program
 views.main.speakers=Speakers
 views.main.talks=Talks
 views.main.judcon=JUDCon
+views.main.home=Home
 views.main.cfp=CFP
 views.main.tickets=Tickets
 views.main.access=Access
