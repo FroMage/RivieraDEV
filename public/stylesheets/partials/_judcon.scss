@@ -5,34 +5,45 @@ $quote-size: 3rem;
 
 .judcon {
     display: flex;
+    flex-direction: column;
     margin-top: $space-xxl;
+    margin-bottom: $space-xxl;
+
+    @media (min-width: $screen-sm-min) {
+        flex-direction: row;
+    }
 
     &__person {
         margin-top: 0;
     }
 
     &__quoteContainer {
-        display: flex;
+        margin: 0 $space-md;
 
-        &:before,
-        &:after {
-            content: '';
-            display: block;
-            width: $quote-size;
-            height: $quote-size;
-            background-repeat: no-repeat;
-            background-size: contain;
-            flex-shrink: 0;
-        }
-        &:before {
-            background-image: url('../images/icons/quote_left.svg');
-            align-self: flex-start;
-            margin-right: $space-sm;
-        }
-        &:after {
-            background-image: url('../images/icons/quote_right.svg');
-            align-self: flex-end;
-            margin-left: $space-sm;
+        @media (min-width: $screen-sm-min) {
+            margin: 0;
+            display: flex;
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: $quote-size;
+                height: $quote-size;
+                background-repeat: no-repeat;
+                background-size: contain;
+                flex-shrink: 0;
+            }
+            &:before {
+                background-image: url('../images/icons/quote_left.svg');
+                align-self: flex-start;
+                margin-right: $space-sm;
+            }
+            &:after {
+                background-image: url('../images/icons/quote_right.svg');
+                align-self: flex-end;
+                margin-left: $space-sm;
+            }
         }
     }
 }
