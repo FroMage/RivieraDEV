@@ -972,7 +972,6 @@ body.burgerMenu--open .burgerMenu:before {
 .days__title {
     display: inline;
     margin-top: 0;
-    color: #19b8d5;
     font-weight: bold;
     font-size: 1.8rem;
 }
@@ -980,6 +979,12 @@ body.burgerMenu--open .burgerMenu:before {
     .days__title {
         font-size: 2rem;
     }
+}
+.days__title--1 {
+    color: #19b8d5;
+}
+.days__title--2 {
+    color: #00c2a7;
 }
 .days__date {
     display: block;
@@ -999,7 +1004,6 @@ body.burgerMenu--open .burgerMenu:before {
     grid-area: description;
 }
 .days__content {
-    background: linear-gradient(#19b8d5, #1dc9f2);
     color: #fff;
     padding: 2rem;
     border-color: #ddd;
@@ -1015,6 +1019,7 @@ body.burgerMenu--open .burgerMenu:before {
 }
 .days__content--1 {
     grid-area: content1;
+    background: linear-gradient(#19b8d5, #1dc9f2);
     margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -1029,6 +1034,7 @@ body.burgerMenu--open .burgerMenu:before {
 }
 .days__content--2 {
     grid-area: content2;
+    background: linear-gradient(#00ceb6, #03b18f);
 }
 .days__subtitle {
     font-weight: bold;
