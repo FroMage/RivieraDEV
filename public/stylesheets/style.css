@@ -2481,59 +2481,33 @@ th.fullSchedule-time-title {
     display: flex;
     margin-top: 5rem;
 }
-.judcon__aside {
+.judcon__person {
+    margin-top: 0;
+}
+.judcon__quoteContainer {
     display: flex;
-    flex-direction: column;
 }
-.judcon__logo {
-    text-align: center;
-}
-.judcon__logoImg {
-    width: 100px;
-}
-@media (min-width: 768px) {
-    .judcon__logoImg {
-        width: 150px;
-    }
-}
-
-.judcon-intro {
-    font-size: 1.1em;
-    line-height: 1.5;
-    font-style: italic;
-    margin-top: 2em;
-    margin-bottom: 3em;
-}
-.judcon-intro-quote:before,
-.judcon-intro-quote:after {
+.judcon__quoteContainer:before,
+.judcon__quoteContainer:after {
     content: '';
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     background-repeat: no-repeat;
     background-size: contain;
-    opacity: 0.6;
+    flex-shrink: 0;
 }
-.judcon-intro-quote:before {
+.judcon__quoteContainer:before {
     background-image: url('../images/icons/quote_left.svg');
-    margin: -30px auto 0 -30px;
+    align-self: flex-start;
+    margin-right: 1rem;
 }
-.judcon-intro-quote:after {
+.judcon__quoteContainer:after {
     background-image: url('../images/icons/quote_right.svg');
-    margin: -30px -30px 0 auto;
-}
-.judcon-intro-signature {
-    text-align: right;
-    font-size: 1.1em;
-    font-style: normal;
+    align-self: flex-end;
+    margin-left: 1rem;
 }
 
-@media (max-width: 767px) {
-    .judcon-intro-quote:before,
-    .judcon-intro-quote:after {
-        display: none;
-    }
-}
 .subscribe__header {
     background-image: linear-gradient(
             to right,
