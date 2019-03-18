@@ -1,42 +1,55 @@
-.newsletter {
-    padding-top: 0.5em;
-    margin-bottom: 2em;
+$newsletter-space-sm: $space-xxl;
 
-    &-form {
-        margin-top: 2em;
+$title-font-sm: $font-xxl;
+$title-top-sm: $space-sm;
+$title-bottom-sm: $space-md;
+
+$input-width: 35rem;
+$input-height: 4rem;
+
+//$background-width: 680px;
+$background-width: 600px;
+//$background-height: 218px;
+$background-height: 192px;
+
+.newsletter {
+    padding: $newsletter-space-sm 0;
+    text-align: center;
+
+    &__title {
+        font-size: $title-font-sm;
+        margin-top: $title-top-sm;
+        margin-bottom: $title-bottom-sm;
+    }
+
+    &__emailContainer {
+        display: inline-block;
+        background-image: url(../images/icons/newsletter-paper-plane.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: $background-width;
+        padding-right: calc(#{$background-width} - #{$input-width});
+        margin-right: calc(-#{$background-width} + #{$input-width});
+        padding-top: calc(#{$background-height} - #{$input-height});
+        margin-top: calc(
+            -#{$title-bottom-sm} - #{$title-font-sm} - #{$newsletter-space-sm}
+        );
+    }
+
+    &__email {
+        background-color: transparent;
+        font-size: $font-md;
+        border: none;
+        height: $input-height;
+        width: $input-width;
         text-align: center;
 
-        &-group {
-            margin-bottom: 0;
+        &::placeholder {
+            color: $color-gray;
         }
     }
 
-    &-icon {
-        // Awkward numbers to align the icon with the rest of the form
-        font-size: 4em;
-        vertical-align: middle;
-
-        margin-right: 0.3em;
-        color: $color-yellow;
+    &__button {
+        margin-top: $space-lg;
     }
-
-}
-
-// To override Bootstrap's selector
-.newsletter-form .newsletter-mail {
-    height: 3em;
-    width: 22em;
-    max-width: 95%;
-    border-radius: 0;
-    display: inline-block;
-}
-
-
-// ----- Only on mobile ---------------------------------------------------------------------------
-
-
-@media (max-width: $screen-xs-max) {
-
-
-
 }

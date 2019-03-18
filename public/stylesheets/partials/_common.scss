@@ -110,8 +110,8 @@ body {
         &:focus,
         &:active {
             color: $color-white;
-            background-color: darken($color-yellow, 15%);
-            box-shadow: 0 0 0 $border-md darken($color-yellow, 15%);
+            background-color: darken($color-yellow, 10%);
+            box-shadow: 0 0 0 $border-md darken($color-yellow, 10%);
         }
     }
 
@@ -137,6 +137,18 @@ a {
     &:focus {
         color: $color-blue-dark;
     }
+}
+
+//Accessibility
+.sr-only {
+    position: absolute;
+    left: -1000rem;
+    top: auto;
+    width: 0.1rem;
+    height: 0.1rem;
+    overflow: hidden;
+    color: $color-black;
+    background-color: $color-white;
 }
 
 .home {

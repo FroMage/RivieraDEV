@@ -81,7 +81,6 @@ views.application.index.schedule.short=Programme
 views.application.index.location.intro=Located on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
 views.application.index.location.access=Accès
 views.application.index.get-in-touch=Restez au courant&nbsp;!
-views.application.index.follow=Suivez l'actualité de Riviera DEV 2019&nbsp;: ouverture des inscriptions, nouveaux orateurs, nouvelles conférences…
 views.application.index.speakers=Nos orateurs
 views.application.index.speakers.link=Découvrez tous les orateurs
 views.application.index.sponsors=Nos Sponsors
@@ -359,7 +358,7 @@ views.application.cfp.motivation.2=Venez également profiter du <strong>dîner o
 views.application.cfp.motivation.3=repas sur la plage.
 
 tags.sponsorsPreviousYears.title=Ils nous ont fait confiance les années précédentes
-tags.newsletter.placeholder=Adresse email
+tags.newsletter.placeholder=Votre adresse email
 tags.newsletter.subscribe=Recevez la newsletter
 tags.countdown.days=Jours
 tags.countdown.hours=Heures
