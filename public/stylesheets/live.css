@@ -138,7 +138,7 @@
     height: auto;
 }
 .personDetails-icon {
-    color: #fdb742;
+    color: #fdba1d;
     font-size: 1.3em;
 }
 .personDetails-link {
@@ -384,11 +384,11 @@ th.fullSchedule-time-title {
     background-color: #2cc9e6;
 }
 .talk-theme-yellow {
-    background-color: #fdb742;
+    background-color: #fdba1d;
 }
 .talksFilter-options .talk-theme-yellow:hover,
 .talk-theme-yellow:focus {
-    background-color: #feca74;
+    background-color: #fdc950;
 }
 .talk-theme-green {
     background-color: #7ba218;
@@ -543,7 +543,7 @@ th.fullSchedule-time-title {
     color: #19b8d5;
 }
 .talkDetails-icon {
-    color: #fdb742;
+    color: #fdba1d;
     font-size: 1.3em;
     text-align: center;
 }
@@ -605,9 +605,9 @@ th.fullSchedule-time-title {
     -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    border-right: 2px solid #fdb742;
-    border-bottom: 2px solid #fdb742;
-    border-left: 2px solid #fdb742;
+    border-right: 2px solid #fdba1d;
+    border-bottom: 2px solid #fdba1d;
+    border-left: 2px solid #fdba1d;
 }
 
 .schedule-day {

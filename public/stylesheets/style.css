@@ -85,10 +85,10 @@ body {
     text-transform: uppercase;
     text-align: center;
     font-size: 1.6rem;
-    color: #fdb742;
+    color: #fdba1d;
     padding: 1.2rem 2rem;
     border: none;
-    box-shadow: 0 0 0 1px #fdb742;
+    box-shadow: 0 0 0 1px #fdba1d;
     border-radius: 3rem;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -101,21 +101,21 @@ body {
 .button:hover,
 .button:focus,
 .button:active {
-    color: #fdb742;
+    color: #fdba1d;
     text-decoration: none;
-    box-shadow: 0 0 0 2px #fdb742;
-    background-color: rgba(253, 183, 66, 0.2);
+    box-shadow: 0 0 0 2px #fdba1d;
+    background-color: rgba(253, 186, 29, 0.2);
 }
 .button--primary {
     color: #fff;
-    background-color: #fdb742;
+    background-color: #fdba1d;
 }
 .button--primary:hover,
 .button--primary:focus,
 .button--primary:active {
     color: #fff;
-    background-color: #f09703;
-    box-shadow: 0 0 0 2px #f09703;
+    background-color: #e5a102;
+    box-shadow: 0 0 0 2px #e5a102;
 }
 .button--white {
     color: #fff;
@@ -137,6 +137,17 @@ a:hover,
 a:active,
 a:focus {
     color: #00709d;
+}
+
+.sr-only {
+    position: absolute;
+    left: -1000rem;
+    top: auto;
+    width: 0.1rem;
+    height: 0.1rem;
+    overflow: hidden;
+    color: #000;
+    background-color: #fff;
 }
 
 .home__title {
@@ -538,7 +549,7 @@ body.burgerMenu--open .burgerMenu:before {
     padding-left: 0.5rem;
 }
 .burgerMenu__langue--selected {
-    color: #fdb742;
+    color: #fdba1d;
 }
 .burgerMenu__langueSeparator {
     display: inline;
@@ -597,7 +608,7 @@ body.burgerMenu--open .burgerMenu:before {
         border-bottom: solid 0.15rem #19b8d5;
     }
     .menu__item--current {
-        border-bottom: solid 0.15rem #fdb742;
+        border-bottom: solid 0.15rem #fdba1d;
     }
     .menu__langue {
         color: inherit;
@@ -610,7 +621,7 @@ body.burgerMenu--open .burgerMenu:before {
     }
     .menu__langue--selected,
     .menu__langue--selected:hover {
-        color: #fdb742;
+        color: #fdba1d;
     }
     .menu__langueSeparator {
         display: inline;
@@ -680,7 +691,7 @@ body.burgerMenu--open .burgerMenu:before {
 .parallax__icon {
     width: 2.5rem;
     vertical-align: baseline;
-    color: #fdb742;
+    color: #fdba1d;
     margin: 0 0.6rem 0 0;
     width: 1.8rem;
 }
@@ -855,7 +866,7 @@ body.burgerMenu--open .burgerMenu:before {
 }
 
 .presentation {
-    background-color: #fdb742;
+    background-color: #fdba1d;
     color: #fff;
     display: flex;
     align-items: stretch;
@@ -1163,29 +1174,38 @@ body.burgerMenu--open .burgerMenu:before {
 }
 
 .newsletter {
-    padding-top: 0.5em;
-    margin-bottom: 2em;
-}
-.newsletter-form {
-    margin-top: 2em;
+    padding: 5rem 0;
     text-align: center;
 }
-.newsletter-form-group {
-    margin-bottom: 0;
+.newsletter__title {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
-.newsletter-icon {
-    font-size: 4em;
-    vertical-align: middle;
-    margin-right: 0.3em;
-    color: #fdb742;
-}
-
-.newsletter-form .newsletter-mail {
-    height: 3em;
-    width: 22em;
-    max-width: 95%;
-    border-radius: 0;
+.newsletter__emailContainer {
     display: inline-block;
+    background-image: url(../images/icons/newsletter-paper-plane.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 600px;
+    padding-right: calc(600px - 35rem);
+    margin-right: calc(-600px + 35rem);
+    padding-top: calc(192px - 4rem);
+    margin-top: calc(-2rem - 3rem - 5rem);
+}
+.newsletter__email {
+    background-color: transparent;
+    font-size: 1.8rem;
+    border: none;
+    height: 4rem;
+    width: 35rem;
+    text-align: center;
+}
+.newsletter__email::placeholder {
+    color: #9a9a93;
+}
+.newsletter__button {
+    margin-top: 3rem;
 }
 
 .statistics {
@@ -1241,7 +1261,7 @@ body.burgerMenu--open .burgerMenu:before {
     font-size: 3rem;
     font-weight: bold;
     display: block;
-    color: #fdb742;
+    color: #fdba1d;
     line-height: 1;
 }
 @media (min-width: 768px) {
@@ -1431,7 +1451,7 @@ body.burgerMenu--open .burgerMenu:before {
     margin-bottom: 0.5em;
 }
 .partenaireDetails-icon {
-    color: #fdb742;
+    color: #fdba1d;
     font-size: 1.3em;
 }
 
@@ -1794,7 +1814,7 @@ body.burgerMenu--open .burgerMenu:before {
     border: 0;
 }
 .access-icon {
-    color: #fdb742;
+    color: #fdba1d;
 }
 .access-title {
     text-align: left;
@@ -1872,7 +1892,7 @@ body.burgerMenu--open .burgerMenu:before {
     height: auto;
 }
 .personDetails-icon {
-    color: #fdb742;
+    color: #fdba1d;
     font-size: 1.3em;
 }
 .personDetails-link {
@@ -2217,11 +2237,11 @@ th.fullSchedule-time-title {
     background-color: #2cc9e6;
 }
 .talk-theme-yellow {
-    background-color: #fdb742;
+    background-color: #fdba1d;
 }
 .talksFilter-options .talk-theme-yellow:hover,
 .talk-theme-yellow:focus {
-    background-color: #feca74;
+    background-color: #fdc950;
 }
 .talk-theme-green {
     background-color: #7ba218;
@@ -2376,7 +2396,7 @@ th.fullSchedule-time-title {
     color: #19b8d5;
 }
 .talkDetails-icon {
-    color: #fdb742;
+    color: #fdba1d;
     font-size: 1.3em;
     text-align: center;
 }

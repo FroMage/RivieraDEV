@@ -82,7 +82,6 @@ views.application.index.schedule.short=Program
 views.application.index.location.intro=Sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe. 
 views.application.index.location.access=How to get there
 views.application.index.get-in-touch=Get in touch!
-views.application.index.follow=Follow Riviera DEV 2019: sale date, new speakers, new talks…
 views.application.index.speakers=Our speakers
 views.application.index.speakers.link=Discover all the speakers
 views.application.index.sponsors=Our Sponsors
@@ -360,7 +359,7 @@ views.application.cfp.motivation.2=Don't miss the <strong>speaker dinner</strong
 views.application.cfp.motivation.3=dinner on the beach.
 
 tags.sponsorsPreviousYears.title=They trusted us the previous years
-tags.newsletter.placeholder=Email address
+tags.newsletter.placeholder=Your email address
 tags.newsletter.subscribe=Subscribe to the newsletter
 tags.countdown.days=Days
 tags.countdown.hours=Hours
