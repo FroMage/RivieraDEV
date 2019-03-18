@@ -96,8 +96,9 @@
 
 				#{else}
 					#{list items: tracks, as: 'track'}
-						%{talk = slot.getTalkPerTrack(track);}%
-						<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
+                        %{talk = slot.getTalkPerTrack(track);}%
+                        #{if talk == null || talk.nbSlots == null || talk.nbSlots > 0 }
+						<td class="js-talksFilter-toFilter fullSchedule-talk-cell" #{if talk && talk.nbSlots > 1}rowspan="${talk.nbSlots}"#{/if}>
 							#{if talk}
 								#{if !talk.isHiddenInTalksPage}
 									<div class="talksFilter-item
@@ -162,7 +163,8 @@
 									<a href="@{Talks.blank()}">add talk</a>
 								#{/if}
 							#{/else}
-						</td>
+                        </td>
+                        #{/if}
 					#{/list}
 				#{/else}
 			</tr>

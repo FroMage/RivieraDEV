@@ -24,145 +24,137 @@ import play.i18n.Lang;
 @Entity
 public class Talk extends Model implements Comparable<Talk> {
 
-	@ManyToOne
-	public Slot slot;
+    @ManyToOne
+    public Slot slot;
 
-	// At least one title must be filled
-	public String titleEN;
-	public String titleFR;
-	
-	// At least one description must be filled
-	@Type(type="org.hibernate.type.StringClobType")
-	@Lob
-	@MaxSize(10000)
-	public String descriptionEN;
+    // At least one title must be filled
+    public String titleEN;
+    public String titleFR;
 
-	@Type(type="org.hibernate.type.StringClobType")
-	@Lob
-	@MaxSize(10000)
-	public String descriptionFR; 
-	
-	@ManyToOne
-	public Track track;
-	
-	@Required
-	@Enumerated(EnumType.STRING)
-	public BreakType isBreak;
+    // At least one description must be filled
+    @Type(type = "org.hibernate.type.StringClobType")
+    @Lob
+    @MaxSize(10000)
+    public String descriptionEN;
 
-	@Required
-	@Enumerated(EnumType.STRING)
-	public Language language;
+    @Type(type = "org.hibernate.type.StringClobType")
+    @Lob
+    @MaxSize(10000)
+    public String descriptionFR;
 
-	@Enumerated(EnumType.STRING)
-	public Level level;
+    @ManyToOne
+    public Track track;
 
-	@ManyToOne
-	public TalkTheme theme;
+    @Required
+    @Enumerated(EnumType.STRING)
+    public BreakType isBreak;
 
-	@ManyToOne
-	public TalkType type;
+    @Required
+    @Enumerated(EnumType.STRING)
+    public Language language;
 
-	public String slidesUrl;
+    @Enumerated(EnumType.STRING)
+    public Level level;
 
-	public Integer nbLikes = 0;
-	
-	// the cfp app id, if imported
+    @ManyToOne
+    public TalkTheme theme;
+
+    @ManyToOne
+    public TalkType type;
+
+    public String slidesUrl;
+
+    public Integer nbLikes = 0;
+
+    // the cfp app id, if imported
     public String importId;
 
-	// Permet de cacher ce talk dans la page qui liste les talks.
-	// (Ex: 'Keynote des Orga', 'Accueil', etc...)
-	public boolean isHiddenInTalksPage;
+    // Permet de cacher ce talk dans la page qui liste les talks.
+    // (Ex: 'Keynote des Orga', 'Accueil', etc...)
+    public boolean isHiddenInTalksPage;
 
-    @JoinTable(
-            name="talk_speaker",
-            joinColumns=@JoinColumn(name="talk_id"),
-            inverseJoinColumns=@JoinColumn(name="speakers_id")
-        )
-	@ManyToMany
-	public List<Speaker> speakers = new ArrayList<Speaker>();
-	
+    // Permet d'avoir un talk sur plusieurs slots dans le programme
+    // Si > 0 alors plusieurs slot sont utilisés
+    // Si <= 0 alors permet de supprimer un slot du tableau
+    public Integer nbSlots = 1;
 
-	public String getTitle() {
-		String displayedTitle = "";
+    @JoinTable(name = "talk_speaker", joinColumns = @JoinColumn(name = "talk_id"), inverseJoinColumns = @JoinColumn(name = "speakers_id"))
+    @ManyToMany
+    public List<Speaker> speakers = new ArrayList<Speaker>();
 
-		if (Lang.get().equals("en")) { // English
-			if (titleEN != null && titleEN.length() > 0) {
-				displayedTitle = titleEN;
-			} 
-			else if (titleFR != null && titleFR.length() > 0) {
-				displayedTitle = titleFR;
-			}
-		}
-		else { // French
-			if (titleFR != null && titleFR.length() > 0) {
-				displayedTitle = titleFR;
-			}
-			else if (titleEN != null && titleEN.length() > 0) {
-				displayedTitle = titleEN;
-			} 
-		}
-		return displayedTitle;
-	}
+    public String getTitle() {
+        String displayedTitle = "";
 
-	public String getDescription() {
-		String displayedDescription = "";
+        if (Lang.get().equals("en")) { // English
+            if (titleEN != null && titleEN.length() > 0) {
+                displayedTitle = titleEN;
+            } else if (titleFR != null && titleFR.length() > 0) {
+                displayedTitle = titleFR;
+            }
+        } else { // French
+            if (titleFR != null && titleFR.length() > 0) {
+                displayedTitle = titleFR;
+            } else if (titleEN != null && titleEN.length() > 0) {
+                displayedTitle = titleEN;
+            }
+        }
+        return displayedTitle;
+    }
 
-		if (Lang.get().equals("en")) { // English
-			if (descriptionEN != null && descriptionEN.length() > 0) {
-				displayedDescription = descriptionEN;
-			} 
-			else if (descriptionFR != null && descriptionFR.length() > 0) {
-				displayedDescription = descriptionFR;
-			}
-		}
-		else { // French
-			if (descriptionFR != null && descriptionFR.length() > 0) {
-				displayedDescription = descriptionFR;
-			}
-			else if (descriptionEN != null && descriptionEN.length() > 0) {
-				displayedDescription = descriptionEN;
-			} 
-		}
-		return displayedDescription;
-	}
+    public String getDescription() {
+        String displayedDescription = "";
 
+        if (Lang.get().equals("en")) { // English
+            if (descriptionEN != null && descriptionEN.length() > 0) {
+                displayedDescription = descriptionEN;
+            } else if (descriptionFR != null && descriptionFR.length() > 0) {
+                displayedDescription = descriptionFR;
+            }
+        } else { // French
+            if (descriptionFR != null && descriptionFR.length() > 0) {
+                displayedDescription = descriptionFR;
+            } else if (descriptionEN != null && descriptionEN.length() > 0) {
+                displayedDescription = descriptionEN;
+            }
+        }
+        return displayedDescription;
+    }
 
-	@Override
-	public String toString() {
-		return (slot != null ? slot : "no slot") 
-		        + " "
-		        + (track != null ? track : "All tracks")
-				+ ": " + getTitle() 
-				+ (speakers.size() > 0 ? " (" + StringUtils.join(speakers, ", ") + ")" : "");
-	}
+    @Override
+    public String toString() {
+        return (slot != null ? slot : "no slot") + " " + (track != null ? track : "All tracks") + ": " + getTitle()
+                + (speakers.size() > 0 ? " (" + StringUtils.join(speakers, ", ") + ")" : "");
+    }
 
-	public static List<Track> findTracksPerDay(Date day) {
-		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?", day).fetch();
-	}
+    public static List<Track> findTracksPerDay(Date day) {
+        return find(
+                "SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?",
+                day).fetch();
+    }
 
-	public int compareTo(Talk other){
-		return this.getTitle().compareTo(other.getTitle());
-	}
+    public int compareTo(Talk other) {
+        return this.getTitle().compareTo(other.getTitle());
+    }
 
-	public static List<Talk> findKeynotes() {
-		return Talk.find("track IS NULL AND isBreak = '" + BreakType.NotABreak + "' AND isHiddenInTalksPage = false").fetch();
-	}
+    public static List<Talk> findKeynotes() {
+        return Talk.find("track IS NULL AND isBreak = '" + BreakType.NotABreak + "' AND isHiddenInTalksPage = false")
+                .fetch();
+    }
 
-	public void like(){
-		if(this.nbLikes == null){
-			this.nbLikes = 0;
-		}
-		this.nbLikes++;
-		this.save();
-	}
+    public void like() {
+        if (this.nbLikes == null) {
+            this.nbLikes = 0;
+        }
+        this.nbLikes++;
+        this.save();
+    }
 
-	public void unlike(){
-		if(this.nbLikes == null){
-			this.nbLikes = 0;
-		}
-		else if(this.nbLikes > 0){
-			this.nbLikes--;
-		}
-		this.save();
-	}
+    public void unlike() {
+        if (this.nbLikes == null) {
+            this.nbLikes = 0;
+        } else if (this.nbLikes > 0) {
+            this.nbLikes--;
+        }
+        this.save();
+    }
 }
