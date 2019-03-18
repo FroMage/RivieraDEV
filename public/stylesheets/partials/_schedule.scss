@@ -142,20 +142,21 @@
   }
 
   &-talk {
-    &-cellTD {
+    &-table-cell {
       vertical-align: top;
     }
 
     &-cell {
-      position: relative;
       display: flex;
       flex-direction: column;
     }
-    &-itemT {
+    &-item {
       flex-grow: 1;
+      position: relative;
+      padding-bottom: 1.2rem;
 
-      &:first {
-        border-bottom: 1px solid $color-gray-light;
+      &:nth-child(2) {
+        border-top: 3px solid $color-gray-ultralight;
       }
     }
     &-title {

@@ -1587,13 +1587,13 @@ a.footer-rs-instagram:active {
   line-height: 1.5em;
 }
 .schedule-day-filter {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   line-height: 3.5rem;
   cursor: pointer;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .schedule-day-filter--hidden {
-  opacity: .6;
+  opacity: 0.6;
 }
 @media (max-width: 767px) and (orientation: landscape) {
   .schedule-day-filterItem {
@@ -1613,7 +1613,7 @@ a.footer-rs-instagram:active {
   background-color: rgba(140, 70, 162, 0.8);
 }
 .schedule-time {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: normal;
 }
 
@@ -1699,9 +1699,20 @@ a.footer-rs-instagram:active {
 .fullSchedule-track-title {
   color: #777;
 }
-.fullSchedule-talk-cell {
+.fullSchedule-talk-table-cell {
   vertical-align: top;
+}
+.fullSchedule-talk-cell {
+  display: flex;
+  flex-direction: column;
+}
+.fullSchedule-talk-item {
+  flex-grow: 1;
   position: relative;
+  padding-bottom: 1.2rem;
+}
+.fullSchedule-talk-item:nth-child(2) {
+  border-top: 3px solid #eee;
 }
 .fullSchedule-talk-title {
   display: block;

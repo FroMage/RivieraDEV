@@ -53,6 +53,11 @@ public class Slot extends Model {
         return slots;
     }
 
+    /**
+     * Permet de récupéer pour un jour, tous les slots avec des slots 'multi-slots'.
+     * (Exemple : un slot de 50 min contient 2 slots de 25 min, seul le slot de 50
+     * sera retourné)
+     */
     public static List<Slot> findMultiPerDay(Date day) {
         List<Slot> slots = find("date_trunc('day', startDate) = ? ORDER BY startDate, endDate", day).fetch();
         Map<Date, Slot> multiSlots = new HashMap();
@@ -67,7 +72,6 @@ public class Slot extends Model {
                 multiSlots.put(slot.startDate, slot);
             }
         }
-        // En cas de slots déjà contenu dans 1 slots, ne renvoyer que le plus grand ?
         List<Slot> result = new ArrayList(multiSlots.values());
 
         // Sorting
@@ -85,6 +89,9 @@ public class Slot extends Model {
         return result;
     }
 
+    /**
+     * Retourne le talk du Slot pour la track
+     */
     public Talk getTalkPerTrack(Track track) {
         for (Talk talk : talks) {
             if (talk.track == track) {
@@ -94,6 +101,10 @@ public class Slot extends Model {
         return null;
     }
 
+    /**
+     * Retourne tous les talks pour le Slot pour la track. (Exemple : 2 talks de 25
+     * mins dans un slot de 50 mins)
+     */
     public List<Talk> getTalksPerTrack(Track track) {
         // Récupérer tous les talks pour la track qui contient dans ce Slot et les slots
         // contenus
