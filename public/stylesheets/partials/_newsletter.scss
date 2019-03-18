@@ -13,40 +13,62 @@ $background-width: 600px;
 $background-height: 192px;
 
 .newsletter {
+    border-top: $border-sm solid $color-gray-light;
     padding: $newsletter-space-sm 0;
     text-align: center;
 
+    @media (min-width: $screen-md-min) {
+        border-top: none;
+    }
+
     &__title {
-        font-size: $title-font-sm;
-        margin-top: $title-top-sm;
-        margin-bottom: $title-bottom-sm;
+        margin: 0 $content-space-xs $space-md $content-space-xs;
+        text-align: left;
+
+        @media (min-width: $screen-sm-min) {
+            text-align: center;
+        }
+
+        @media (min-width: $screen-md-min) {
+            font-size: $title-font-sm;
+            margin: $title-top-sm $content-space-sm $title-bottom-sm
+                $content-space-sm;
+        }
     }
 
     &__emailContainer {
-        display: inline-block;
-        background-image: url(../images/icons/newsletter-paper-plane.svg);
-        background-repeat: no-repeat;
-        background-position: bottom right;
-        background-size: $background-width;
-        padding-right: calc(#{$background-width} - #{$input-width});
-        margin-right: calc(-#{$background-width} + #{$input-width});
-        padding-top: calc(#{$background-height} - #{$input-height});
-        margin-top: calc(
-            -#{$title-bottom-sm} - #{$title-font-sm} - #{$newsletter-space-sm}
-        );
+        @media (min-width: $screen-md-min) {
+            display: inline-block;
+            background-image: url(../images/icons/newsletter-paper-plane.svg);
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-size: $background-width;
+            padding-right: calc(#{$background-width} - #{$input-width});
+            margin-right: calc(-#{$background-width} + #{$input-width});
+            padding-top: calc(#{$background-height} - #{$input-height});
+            margin-top: calc(
+                -#{$title-bottom-sm} - #{$title-font-sm} - #{$newsletter-space-sm}
+            );
+        }
     }
 
     &__email {
-        background-color: transparent;
         font-size: $font-md;
-        border: none;
         height: $input-height;
         width: $input-width;
-        text-align: center;
+
+        @media (min-width: $screen-md-min) {
+            background-color: transparent;
+            border: none;
+        }
 
         &::placeholder {
             color: $color-gray;
         }
+    }
+
+    &__buttonContainer {
+        text-align: center;
     }
 
     &__button {
