@@ -1,233 +1,240 @@
 .schedule {
+  &-day {
+    @include text-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    color: #fff;
+    line-height: 1.5em;
 
-    &-day {
-        @include text-shadow(2px 2px 2px rgba(0,0,0,0.2));
-        color: #fff;
-        line-height: 1.5em;
+    &-filter {
+      padding: 0.5rem 1rem;
+      line-height: 3.5rem;
+      cursor: pointer;
+      transition: opacity 0.2s ease-in-out;
 
-        &-filter {
-            padding: .5rem 1rem;
-            line-height: 3.5rem;
-            cursor: pointer;
-            transition: opacity .2s ease-in-out;
-
-            &--hidden {
-                opacity: .6;
-            }
-        }
-
-        @media (max-width: $screen-xs-max) and (orientation: landscape) {
-            &-filterItem {
-                display: inline;
-            }
-        }
-
+      &--hidden {
+        opacity: 0.6;
+      }
     }
 
-    &-dayAll {
-        background-color: $color-gray;
+    @media (max-width: $screen-xs-max) and (orientation: landscape) {
+      &-filterItem {
+        display: inline;
+      }
     }
-    &-day1 {
-        background-color: $color-blue-transparent;
-    }
-    &-day2 {
-        background-color: $color-yellow-transparent;
-    }
-    &-day3 {
-        background-color: $color-purple-transparent;
-    }
-    
+  }
 
-    &-time {
-        font-family: 'Oswald', sans-serif;
-        font-weight: normal;
-    }
+  &-dayAll {
+    background-color: $color-gray;
+  }
+  &-day1 {
+    background-color: $color-blue-transparent;
+  }
+  &-day2 {
+    background-color: $color-yellow-transparent;
+  }
+  &-day3 {
+    background-color: $color-purple-transparent;
+  }
+
+  &-time {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+  }
 }
 
 .tempSchedule {
-    margin-top: $space-lg;
+  margin-top: $space-lg;
 
-    &-intro {
-        font-size: 1.25em;
-        margin-bottom: 0;
-    }
+  &-intro {
+    font-size: 1.25em;
+    margin-bottom: 0;
+  }
 
-    &-bloc {
-        margin-bottom: 3em;
-    }
+  &-bloc {
+    margin-bottom: 3em;
+  }
 
-    &-day {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+  &-day {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-    &-slot {
-        border-bottom: 1px solid $color-gray-light;
-        margin-right: 0;
-        margin-left: 0;
-        font-size: 1.25em;
-    }
+  &-slot {
+    border-bottom: 1px solid $color-gray-light;
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 1.25em;
+  }
 
-    &-time {
-        padding-right: 0;
-        line-height: 2em;
-    }
+  &-time {
+    padding-right: 0;
+    line-height: 2em;
+  }
 
-    &-title {
-        line-height: 2em;
-    }
-
+  &-title {
+    line-height: 2em;
+  }
 }
 
 .fullSchedule-container {
-    width: 100%;
-    max-width: 1170px; // page-container width in xl
-    margin: 0 auto;
-    padding-left: 1em;
-    padding-right: 1em;
+  width: 100%;
+  max-width: 1170px; // page-container width in xl
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .fullSchedule {
-    margin: 2rem 0;
-    width: 100%;
-    table-layout: fixed;
+  margin: 2rem 0;
+  width: 100%;
+  table-layout: fixed;
 
-    &-day {
-        padding-left: 15px;
-        padding-right: 15px; 
+  &-day {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  & th,
+  & td {
+    border: 3px solid $color-gray-ultralight;
+    padding: 0.5em;
+  }
+
+  &-col-time {
+    width: 10%;
+
+    @media (max-width: $screen-xs-max) {
+      width: 20%;
+    }
+  }
+
+  &-col-2tracks {
+    width: 45%;
+  }
+
+  &-col-3tracks {
+    width: 30%;
+  }
+
+  &-col-4tracks {
+    width: 22.5%;
+  }
+
+  &-col-XStracks {
+    width: 90%;
+  }
+
+  &-time {
+    text-align: center;
+    font-size: 1.1em;
+
+    &-begin,
+    &-end {
+      display: block;
+    }
+  }
+
+  &-track {
+    text-align: center;
+  }
+
+  &-track-title {
+    color: $color-gray-dark;
+  }
+
+  &-talk {
+    &-cellTD {
+      vertical-align: top;
     }
 
-    & th,
-    & td {
-        border: 3px solid $color-gray-ultralight;
-        padding: 0.5em;
+    &-cell {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    &-itemT {
+      flex-grow: 1;
+
+      &:first {
+        border-bottom: 1px solid $color-gray-light;
+      }
+    }
+    &-title {
+      display: block;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+      color: $color-blue-dark;
     }
 
-    &-col-time {
-        width: 10%;
-
-        @media (max-width: $screen-xs-max) {
-            width: 20%;
-        }
+    &-speakers {
+      list-style-type: none;
+      padding-left: 0;
     }
 
-    &-col-2tracks {
-        width: 45%;
+    &-speaker {
+      color: $color-gray-dark;
+      text-decoration-style: dotted;
+      font-style: italic;
     }
 
-    &-col-3tracks {
-        width: 30%;
+    &-like {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0.5em;
+
+      & svg {
+        color: #777;
+      }
+
+      &[data-like="true"] svg {
+        color: #cc0303;
+      }
     }
+  }
 
-    &-col-4tracks {
-        width: 22.5%;
-    }
+  &-breakfast,
+  &-lunch,
+  &-cofeeBreak,
+  &-party {
+    background-color: $color-yellow-ultralight;
+    font-style: italic;
+  }
 
-    &-col-XStracks {
-        width: 90%;
-    }
-    
-    &-time {
-        text-align: center;
-        font-size: 1.1em;
+  &-breakfast-title,
+  &-lunch-title,
+  &-cofeeBreak-title,
+  &-party-title {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 2.5em;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: inherit;
+    line-height: 2em;
+  }
 
-        &-begin,
-        &-end {
-            display: block;
-        }
-    }
+  &-breakfast-title {
+    background-image: url("../images/icons/croissant_2.svg");
+  }
 
-    &-track {
-        text-align: center;
-    }
+  &-cofeeBreak-title {
+    background-image: url("../images/icons/hot-drink.svg");
+  }
 
-    &-track-title {
-        color: $color-gray-dark;
-    }
+  &-lunch-title {
+    background-image: url("../images/icons/cutlery.svg");
+  }
 
-    &-talk {
-        &-cell {
-            vertical-align: top;
-            position: relative;
-        }
-        &-title {
-            display: block;
-            margin-bottom: 0.5em;
-            font-weight: 600;
-            color: $color-blue-dark;
-        }
-
-        &-speakers {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        &-speaker {
-            color: $color-gray-dark;
-            text-decoration-style: dotted;
-            font-style: italic;
-        }
-
-        &-like {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 0.5em;
-
-            & svg{
-                color: #777
-            }
-            
-            &[data-like="true"] svg{
-                color: #cc0303
-            }
-        }
-    }
-
-    &-breakfast,
-    &-lunch,
-    &-cofeeBreak,
-    &-party {
-        background-color: $color-yellow-ultralight;
-        font-style: italic;
-    }
-
-    &-breakfast-title,
-    &-lunch-title,
-    &-cofeeBreak-title,
-    &-party-title {
-        background-repeat: no-repeat;
-        background-position: left center;
-        padding-left: 2.5em;
-        font-weight: normal;
-        margin-bottom: 0;
-        color: inherit;
-        line-height: 2em;
-    }
-
-    &-breakfast-title {
-        background-image: url('../images/icons/croissant_2.svg');
-    }
-
-    &-cofeeBreak-title {
-        background-image: url('../images/icons/hot-drink.svg');
-    }
-
-    &-lunch-title {
-        background-image: url('../images/icons/cutlery.svg');
-    }
-    
-    &-party-title {
-        background-image: url('../images/icons/pint.svg');
-    }
-
+  &-party-title {
+    background-image: url("../images/icons/pint.svg");
+  }
 }
 
 th.fullSchedule-time-title {
-    border-top: none;
-    border-left: none;
+  border-top: none;
+  border-left: none;
 }
 
 .like-explanation {
-    margin: $space-sm auto $space-lg;
+  margin: $space-sm auto $space-lg;
 }
