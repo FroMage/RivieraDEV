@@ -19,11 +19,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-bottom: $space-md;
+        margin-bottom: $space-lg;
     }
 
     &__logo--rdev {
         width: 45vw;
+        margin-bottom: $space-sm;
 
         @media (min-width: $screen-sm-min) {
             width: 35vw;
