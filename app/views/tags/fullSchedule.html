@@ -98,12 +98,11 @@
 					#{list items: tracks, as: 'track'}
                         %{talks = slot.getTalksPerTrack(track);}%
 						<td class="fullSchedule-talk-table-cell">
-                            <div class="fullSchedule-talk-cell">
+                            <div class="js-talksFilter-toFilter fullSchedule-talk-cell">
                             #{list items: talks, as: 'talk'}
                                 #{if talk}
                                     #{if !talk.isHiddenInTalksPage}
-                                        <div class="js-talksFilter-toFilter
-                                                    fullSchedule-talk-item
+                                        <div class="fullSchedule-talk-item
                                                     talksFilter-item
                                                     js-talksFilter-item 
                                                     js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
