@@ -656,10 +656,11 @@ body.burgerMenu--open .burgerMenu:before {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .parallax__logo--rdev {
     width: 45vw;
+    margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
     .parallax__logo--rdev {
