@@ -47,7 +47,7 @@
 
 				%{allTracksEvent = slot.allTracksEvent}%
 				#{if allTracksEvent } <!-- One talk for all tracks -->
-					<td colspan="${tracks.size()}" class="js-talksFilter-toFilter fullSchedule-${allTracksEvent.isBreak.code}">
+					<td colspan="${tracks.size()}" class="fullSchedule-${allTracksEvent.isBreak.code}">
 						#{if !allTracksEvent.isHiddenInTalksPage}
 
 							#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
@@ -84,7 +84,7 @@
 							#{/else}
 						#{/if}
 						#{else}
-							<span class="fullSchedule-talk-title">${allTracksEvent.title}</span>
+							<span class="fullSchedule-talk-title  fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
 						#{/else}
 
 						#{if _user}
@@ -97,8 +97,7 @@
                 #{else}
 					#{list items: tracks, as: 'track'}
                         %{talks = slot.getTalksPerTrack(track);}%
-						<td class="fullSchedule-talk-table-cell">
-                            <div class="js-talksFilter-toFilter fullSchedule-talk-cell">
+						<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
                             #{list items: talks, as: 'talk'}
                                 #{if talk}
                                     #{if !talk.isHiddenInTalksPage}
@@ -154,7 +153,7 @@
                                         </div>
                                     #{/if}
                                     #{else}
-                                        <span class="fullSchedule-talk-title">${talk.title}</span>
+                                        <span class="fullSchedule-talk-item fullSchedule-talk-title">${talk.title}</span>
                                     #{/else}
                                 #{/if}
 
@@ -166,7 +165,6 @@
                                     #{/if}
                                 #{/else}
                             #{/list}
-                        </div>
 						</td>
 					#{/list}
 				#{/else}

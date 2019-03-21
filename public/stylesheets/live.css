@@ -246,6 +246,8 @@
 }
 .fullSchedule th, .fullSchedule td {
   border: 3px solid #eee;
+}
+.fullSchedule th {
   padding: 0.5em;
 }
 .fullSchedule-col-time {
@@ -281,17 +283,13 @@
 .fullSchedule-track-title {
   color: #777;
 }
-.fullSchedule-talk-table-cell {
+.fullSchedule-talk-cell {
   vertical-align: top;
 }
-.fullSchedule-talk-cell {
-  display: flex;
-  flex-direction: column;
-}
 .fullSchedule-talk-item {
-  flex-grow: 1;
   position: relative;
   padding-bottom: 1.2rem;
+  padding: 0.5em;
 }
 .fullSchedule-talk-item:nth-child(2) {
   border-top: 3px solid #eee;
@@ -331,6 +329,7 @@
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 2.5em;
+  margin-left: 0.5em;
   font-weight: normal;
   margin-bottom: 0;
   color: inherit;

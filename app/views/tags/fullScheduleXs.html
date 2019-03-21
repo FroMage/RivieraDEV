@@ -38,13 +38,13 @@
 						#{/if}
 					</th>
 
-					<td class="js-talksFilter-toFilter fullSchedule-${allTracksEvent.isBreak.code}">
+					<td class="fullSchedule-${allTracksEvent.isBreak.code}">
 						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
 							<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
 						#{/if}
 						#{else}
 							#{if !allTracksEvent.isHiddenInTalksPage}
-								<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
+								<a class="fullSchedule-talk-item fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
 
 								<!--
 								#{if allTracksEvent.theme}
@@ -99,7 +99,8 @@
 								<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
 								
 									#{if !talk.isHiddenInTalksPage}
-										<div class="talksFilter-item
+                                        <div class="fullSchedule-talk-item
+                                                    talksFilter-item
 													js-talksFilter-item
 													js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
 													js-talksFilter-level-${talk.level?.code}
@@ -142,7 +143,7 @@
 										</div>
 									#{/if}
 									#{else}
-										<span class="fullSchedule-talk-title">${talk.title}</span>
+										<span class="fullSchedule-talk-item fullSchedule-talk-title">${talk.title}</span>
 									#{/else}
 
 									#{if _user}

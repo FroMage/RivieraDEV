@@ -96,6 +96,9 @@
   & th,
   & td {
     border: 3px solid $color-gray-ultralight;
+  }
+
+  & th {
     padding: 0.5em;
   }
 
@@ -142,18 +145,13 @@
   }
 
   &-talk {
-    &-table-cell {
+    &-cell {
       vertical-align: top;
     }
-
-    &-cell {
-      display: flex;
-      flex-direction: column;
-    }
     &-item {
-      flex-grow: 1;
       position: relative;
       padding-bottom: 1.2rem;
+      padding: 0.5em;
 
       &:nth-child(2) {
         border-top: 3px solid $color-gray-ultralight;
@@ -208,6 +206,7 @@
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 2.5em;
+    margin-left: 0.5em;
     font-weight: normal;
     margin-bottom: 0;
     color: inherit;
