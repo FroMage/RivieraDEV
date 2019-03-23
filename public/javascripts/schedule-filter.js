@@ -1,4 +1,51 @@
+/**
+ * It is possible to have simultaneously 1 conference and 2 snorkelings.
+ * In this case, we wants the 2 snorkelings to have the same height, which half of the height of the conference.
+ * It's impossible to do it in CSS because we use tables.
+ * That's why we do it in JS.
+ */
+const resizeTalks = function() {
+  const rows = document.getElementsByTagName("tr");
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    const cells = row.getElementsByClassName("fullSchedule-talk-cell");
+
+    // First iteration to find the max height for each "row" of talks
+    const maxHeightPerIndex = new Map();
+    for (let j = 0; j < cells.length; j++) {
+      const cell = cells[j];
+      const talks = cell.getElementsByClassName("fullSchedule-talk-item");
+      if (talks.length > 1) {
+        for (let k = 0; k < talks.length; k++) {
+          const currentMaxHeight = maxHeightPerIndex.get(k)
+            ? maxHeightPerIndex.get(k)
+            : talks[k].offsetHeight;
+          maxHeightPerIndex.set(
+            k,
+            Math.max(currentMaxHeight, talks[k].offsetHeight)
+          );
+        }
+      }
+    }
+
+    // Second iteration to apply the max height to all talks
+    if (maxHeightPerIndex.size > 0) {
+      for (let j = 0; j < cells.length; j++) {
+        const cell = cells[j];
+        const talks = cell.getElementsByClassName("fullSchedule-talk-item");
+        if (talks.length > 1) {
+          for (let k = 0; k < talks.length; k++) {
+            talks[k].style.minHeight = `${maxHeightPerIndex.get(k)}px`;
+          }
+        }
+      }
+    }
+  }
+};
+
 $(function() {
+  resizeTalks();
+
   window.toggleLanguage = function(language) {
     filterSchedule("language", language, toggleLanguageFilterClass);
   };
