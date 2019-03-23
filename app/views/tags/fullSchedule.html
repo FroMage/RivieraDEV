@@ -38,7 +38,7 @@
 			<tr>
 				<th class="schedule-time fullSchedule-time" scope="row">
 					<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-					<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
+					<!--<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>-->
 					#{if _user}
 						<br/>
 						<a href="@{Slots.show(slot.id)}">edit</a>
@@ -109,7 +109,7 @@
                                                     js-talksFilter-type-${talk.type?.toString()?.slugify()}
                                                     js-talksFilter-language-${talk.language?.toString()?.slugify()}">
                                             <a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
-                                            <span>${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}</span>
+                                            <span class="talk-slot">${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}</span>
                                             #{if talk.theme}
                                                 <span class="talk-theme talk-theme-${talk.theme.color.code}">${talk.theme}</span>
                                             #{/if}

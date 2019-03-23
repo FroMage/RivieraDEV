@@ -1689,6 +1689,7 @@ a.footer-rs-instagram:active {
   width: 90%;
 }
 .fullSchedule-time {
+  vertical-align: top;
   text-align: center;
   font-size: 1.1em;
 }
@@ -1837,6 +1838,11 @@ th.fullSchedule-time-title {
   background-color: #c25b1c;
 }
 
+.talk-slot {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
 .talk-level {
   font-style: italic;
   background-color: #bbb;
@@ -1856,7 +1862,7 @@ th.fullSchedule-time-title {
   border-radius: 4px;
   display: inline-block;
   margin: 0 0 0.5em 0.3em;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .talksFilter-options .talk-language:hover, .talk-language:focus {
   border-color: #8495ac;
