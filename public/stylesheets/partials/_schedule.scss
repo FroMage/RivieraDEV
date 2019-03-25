@@ -76,17 +76,17 @@
 }
 
 .fullSchedule-container {
-  width: 100%;
-  max-width: 1170px; // page-container width in xl
-  margin: 0 auto;
-  padding-left: 1em;
-  padding-right: 1em;
+    width: 100%;
+    max-width: 1170px; // page-container width in xl
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .fullSchedule {
-  margin: 2rem 0;
-  width: 100%;
-  table-layout: fixed;
+    margin: 2rem 0;
+    width: 100%;
+    table-layout: fixed;
 
     &-day {
         padding-left: 15px;
@@ -99,25 +99,25 @@
         padding: 0.5em;
     }
 
-  & th {
-    padding: 0.5em;
-  }
+    &-col-time {
+        width: 10%;
 
-  &-col-time {
-    width: 10%;
-
-    @media (max-width: $screen-xs-max) {
-      width: 20%;
+        @media (max-width: $screen-xs-max) {
+            width: 20%;
+        }
     }
-  }
 
-  &-col-2tracks {
-    width: 45%;
-  }
+    &-col-2tracks {
+        width: 45%;
+    }
 
-  &-col-3tracks {
-    width: 30%;
-  }
+    &-col-3tracks {
+        width: 30%;
+    }
+
+    &-col-4tracks {
+        width: 22.5%;
+    }
 
     &-col-XStracks {
         width: 90%;
@@ -133,9 +133,9 @@
         }
     }
 
-  &-col-XStracks {
-    width: 90%;
-  }
+    &-track {
+        text-align: center;
+    }
 
     &-track-title {
         color: $color-gray-dark;
@@ -180,28 +180,34 @@
         }
     }
 
-    &-begin,
-    &-end {
-      display: block;
+    &-breakfast,
+    &-lunch,
+    &-cofeeBreak,
+    &-party {
+        background-color: $color-yellow-ultralight;
+        font-style: italic;
     }
-  }
 
-  &-track {
-    text-align: center;
-  }
-
-  &-track-title {
-    color: $color-gray-dark;
-  }
-
-  &-talk {
-    &-cell {
-      vertical-align: top;
+    &-breakfast-title,
+    &-lunch-title,
+    &-cofeeBreak-title,
+    &-party-title {
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 2.5em;
+        font-weight: normal;
+        margin-bottom: 0;
+        color: inherit;
+        line-height: 2em;
     }
-    &-item {
-      position: relative;
-      padding-bottom: 1.2rem;
-      padding: 0.5em;
+
+    &-breakfast-title {
+        background-image: url('../images/icons/croissant_2.svg');
+    }
+
+    &-cofeeBreak-title {
+        background-image: url('../images/icons/hot-drink.svg');
+    }
 
     &-lunch-title {
         background-image: url('../images/icons/cutlery.svg');
@@ -213,10 +219,10 @@
 }
 
 th.fullSchedule-time-title {
-  border-top: none;
-  border-left: none;
+    border-top: none;
+    border-left: none;
 }
 
 .like-explanation {
-  margin: $space-sm auto $space-lg;
+    margin: $space-sm auto $space-lg;
 }
