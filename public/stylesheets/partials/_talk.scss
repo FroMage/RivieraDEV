@@ -7,31 +7,29 @@ $color-theme-brown: #9e4a17;
 $color-theme-turquoise: #00bacd;
 
 .talk-theme {
-  padding: 0 0.4em;
-  border-radius: 4px;
-  color: white;
-  margin-bottom: 0.5em;
-  display: inline-block;
+    padding: 0 0.4em;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 0.5em;
+    display: inline-block;
 
-  &-blue {
-    background-color: $color-blue;
+    &-blue {
+        background-color: $color-blue;
 
         .talksFilter-options &:hover,
         &:focus {
             background-color: lighten($color-blue, 7%);
         }
     }
-  }
 
-  &-yellow {
-    background-color: $color-yellow;
+    &-yellow {
+        background-color: $color-yellow;
 
         .talksFilter-options &:hover,
         &:focus {
             background-color: lighten($color-yellow, 10%);
         }
     }
-  }
 
     &-green {
         background-color: $color-theme-green;
@@ -41,7 +39,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-green, 10%);
         }
     }
-  }
 
     &-purple {
         background-color: $color-theme-purple;
@@ -51,7 +48,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-purple, 10%);
         }
     }
-  }
 
     &-orange {
         background-color: $color-theme-orange;
@@ -61,7 +57,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-orange, 12%);
         }
     }
-  }
 
     &-red {
         background-color: $color-theme-red;
@@ -71,7 +66,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-red, 8%);
         }
     }
-  }
 
     &-pink {
         background-color: $color-theme-pink;
@@ -81,7 +75,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-pink, 10%);
         }
     }
-  }
 
     &-turquoise {
         background-color: $color-theme-turquoise;
@@ -91,7 +84,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-turquoise, 8%);
         }
     }
-  }
 
     &-brown {
         background-color: $color-theme-brown;
@@ -101,12 +93,6 @@ $color-theme-turquoise: #00bacd;
             background-color: lighten($color-theme-brown, 8%);
         }
     }
-  }
-}
-
-.talk-slot {
-  display: block;
-  margin-bottom: 0.5em;
 }
 
 .talk-level {
@@ -216,43 +202,14 @@ $color-theme-turquoise: #00bacd;
         }
     }
 
-  &-speakers {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
-
-  &-speaker {
-    margin-bottom: 1em;
-    display: block;
-    text-decoration: none;
-
-    &-photo {
-      display: inline-block;
-      vertical-align: middle;
-      width: 50px;
-      height: 50px;
-      @include border-radius(50%);
-      background-size: cover;
-      transition: all 0.5s ease;
+    &-icon {
+        color: $color-yellow;
+        font-size: 1.3em;
+        text-align: center;
     }
-
-    &-name {
-      display: inline-block;
-      vertical-align: middle;
-      text-transform: uppercase;
-      font-size: 1.1em;
-      color: $color-blue;
+    svg.talkDetails-icon {
+        width: 1.3em;
     }
-  }
-
-  &-icon {
-    color: $color-yellow;
-    font-size: 1.3em;
-    text-align: center;
-  }
-  svg.talkDetails-icon {
-    width: 1.3em;
-  }
 }
 
 .talkDetails-speaker {
@@ -265,7 +222,6 @@ $color-theme-turquoise: #00bacd;
             @include box-shadow(0 0 0 3px $color-blue);
         }
     }
-  }
 }
 
 // Only on xs devices (smartphones)
