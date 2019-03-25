@@ -169,13 +169,13 @@
   line-height: 1.5em;
 }
 .schedule-day-filter {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   line-height: 3.5rem;
   cursor: pointer;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .schedule-day-filter--hidden {
-  opacity: .6;
+  opacity: 0.6;
 }
 @media (max-width: 767px) and (orientation: landscape) {
   .schedule-day-filterItem {
@@ -195,7 +195,7 @@
   background-color: rgba(140, 70, 162, 0.8);
 }
 .schedule-time {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: normal;
 }
 
@@ -246,6 +246,8 @@
 }
 .fullSchedule th, .fullSchedule td {
   border: 3px solid #eee;
+}
+.fullSchedule th {
   padding: 0.5em;
 }
 .fullSchedule-col-time {
@@ -269,6 +271,7 @@
   width: 90%;
 }
 .fullSchedule-time {
+  vertical-align: top;
   text-align: center;
   font-size: 1.1em;
 }
@@ -283,7 +286,14 @@
 }
 .fullSchedule-talk-cell {
   vertical-align: top;
+}
+.fullSchedule-talk-item {
   position: relative;
+  padding-bottom: 1.2rem;
+  padding: 0.5em;
+}
+.fullSchedule-talk-item:nth-child(2) {
+  border-top: 3px solid #eee;
 }
 .fullSchedule-talk-title {
   display: block;
@@ -320,6 +330,7 @@
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 2.5em;
+  margin-left: 0.5em;
   font-weight: normal;
   margin-bottom: 0;
   color: inherit;
@@ -409,6 +420,11 @@ th.fullSchedule-time-title {
   background-color: #c25b1c;
 }
 
+.talk-slot {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
 .talk-level {
   font-style: italic;
   background-color: #bbb;
@@ -428,7 +444,7 @@ th.fullSchedule-time-title {
   border-radius: 4px;
   display: inline-block;
   margin: 0 0 0.5em 0.3em;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .talksFilter-options .talk-language:hover, .talk-language:focus {
   border-color: #8495ac;

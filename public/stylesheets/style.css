@@ -1587,13 +1587,13 @@ a.footer-rs-instagram:active {
   line-height: 1.5em;
 }
 .schedule-day-filter {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   line-height: 3.5rem;
   cursor: pointer;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 .schedule-day-filter--hidden {
-  opacity: .6;
+  opacity: 0.6;
 }
 @media (max-width: 767px) and (orientation: landscape) {
   .schedule-day-filterItem {
@@ -1613,7 +1613,7 @@ a.footer-rs-instagram:active {
   background-color: rgba(140, 70, 162, 0.8);
 }
 .schedule-time {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: normal;
 }
 
@@ -1664,6 +1664,8 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule th, .fullSchedule td {
   border: 3px solid #eee;
+}
+.fullSchedule th {
   padding: 0.5em;
 }
 .fullSchedule-col-time {
@@ -1687,6 +1689,7 @@ a.footer-rs-instagram:active {
   width: 90%;
 }
 .fullSchedule-time {
+  vertical-align: top;
   text-align: center;
   font-size: 1.1em;
 }
@@ -1701,7 +1704,14 @@ a.footer-rs-instagram:active {
 }
 .fullSchedule-talk-cell {
   vertical-align: top;
+}
+.fullSchedule-talk-item {
   position: relative;
+  padding-bottom: 1.2rem;
+  padding: 0.5em;
+}
+.fullSchedule-talk-item:nth-child(2) {
+  border-top: 3px solid #eee;
 }
 .fullSchedule-talk-title {
   display: block;
@@ -1738,6 +1748,7 @@ a.footer-rs-instagram:active {
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 2.5em;
+  margin-left: 0.5em;
   font-weight: normal;
   margin-bottom: 0;
   color: inherit;
@@ -1827,6 +1838,11 @@ th.fullSchedule-time-title {
   background-color: #c25b1c;
 }
 
+.talk-slot {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
 .talk-level {
   font-style: italic;
   background-color: #bbb;
@@ -1846,7 +1862,7 @@ th.fullSchedule-time-title {
   border-radius: 4px;
   display: inline-block;
   margin: 0 0 0.5em 0.3em;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .talksFilter-options .talk-language:hover, .talk-language:focus {
   border-color: #8495ac;
@@ -1952,7 +1968,7 @@ th.fullSchedule-time-title {
 .talksFilter-buttonCollapse {
   text-transform: uppercase;
   background-color: #eee;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   display: block;
   margin-top: 20px;
   text-decoration: none;
@@ -1961,16 +1977,16 @@ th.fullSchedule-time-title {
   text-decoration: none;
 }
 .talksFilter-buttonCollapse:hover svg, .talksFilter-buttonCollapse:focus svg, .talksFilter-buttonCollapse:active svg {
-  margin-left: .2rem;
-  margin-right: .3rem;
+  margin-left: 0.2rem;
+  margin-right: 0.3rem;
 }
 .talksFilter-buttonCollapse svg {
-  margin-right: .5rem;
-  transition: all .2s linear;
+  margin-right: 0.5rem;
+  transition: all 0.2s linear;
 }
-.talksFilter-buttonCollapse[aria-expanded=true] svg {
+.talksFilter-buttonCollapse[aria-expanded="true"] svg {
   margin-left: 0;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   transform: rotate(90deg);
 }
 .talksFilter-title {
@@ -1985,8 +2001,6 @@ th.fullSchedule-time-title {
 }
 .talksFilter-item {
   transition: all 0.3s;
-  margin-left: 0;
-  margin-right: 0;
 }
 .talksFilter.collapse.in .talksFilter-reset {
   display: block;
@@ -1999,7 +2013,7 @@ th.fullSchedule-time-title {
   cursor: pointer;
   background-color: #d5d5d5;
   padding: 0 0.4em;
-  margin: .5rem;
+  margin: 0.5rem;
   border-radius: 4px;
   color: white;
   margin-bottom: 0.5em;
@@ -2008,13 +2022,13 @@ th.fullSchedule-time-title {
   background-color: #bbb;
 }
 .talksFilter-reset--icon {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .talksFilter-options .talksFilter-item {
   cursor: pointer;
 }
-.talksFilter-options .talksFilter-item[data-filter-theme='hidden'], .talksFilter-options .talksFilter-item[data-filter-level='hidden'], .talksFilter-options .talksFilter-item[data-filter-language='hidden'], .talksFilter-options .talksFilter-item[data-filter-type='hidden'], .talksFilter-options .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+.talksFilter-options .talksFilter-item[data-filter-theme="hidden"], .talksFilter-options .talksFilter-item[data-filter-level="hidden"], .talksFilter-options .talksFilter-item[data-filter-language="hidden"], .talksFilter-options .talksFilter-item[data-filter-type="hidden"], .talksFilter-options .talksFilter-item[data-filter-theme="hidden"][data-filter-level="hidden"] {
   opacity: 0.2;
 }
 
@@ -2027,12 +2041,12 @@ th.fullSchedule-time-title {
     margin-top: 0.5em;
   }
 }
-.fullSchedule .talksFilter-item[data-filter-theme='hidden'], .fullSchedule .talksFilter-item[data-filter-level='hidden'], .fullSchedule .talksFilter-item[data-filter-language='hidden'], .fullSchedule .talksFilter-item[data-filter-type='hidden'], .fullSchedule .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+.fullSchedule .talksFilter-item[data-filter-theme="hidden"], .fullSchedule .talksFilter-item[data-filter-level="hidden"], .fullSchedule .talksFilter-item[data-filter-language="hidden"], .fullSchedule .talksFilter-item[data-filter-type="hidden"], .fullSchedule .talksFilter-item[data-filter-theme="hidden"][data-filter-level="hidden"] {
   opacity: 0.05;
   transition: all 0.3s;
 }
 
-.talks .talksFilter-item[data-filter-theme='hidden'], .talks .talksFilter-item[data-filter-level='hidden'], .talks .talksFilter-item[data-filter-language='hidden'], .talks .talksFilter-item[data-filter-type='hidden'], .talks .talksFilter-item[data-filter-theme='hidden'][data-filter-level='hidden'] {
+.talks .talksFilter-item[data-filter-theme="hidden"], .talks .talksFilter-item[data-filter-level="hidden"], .talks .talksFilter-item[data-filter-language="hidden"], .talks .talksFilter-item[data-filter-type="hidden"], .talks .talksFilter-item[data-filter-theme="hidden"][data-filter-level="hidden"] {
   display: none;
 }
 
