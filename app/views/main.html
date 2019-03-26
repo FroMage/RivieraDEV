@@ -116,10 +116,24 @@
                     </a>
 
                     <a
+                        href="@{Application.subscribe}"
+                        class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
+                    >
+                        &{'views.main.tickets'}
+                    </a>
+
+                    <a
                         href="@{Application.schedule}"
                         class="burgerMenu__item ${request.action == 'Application.schedule' ? 'menu__item--current' : ''}"
                     >
                         &{'views.main.schedule'}
+                    </a>
+
+                    <a
+                        href="@{Application.speakers}"
+                        class="burgerMenu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
+                    >
+                        &{'views.main.speakers'}
                     </a>
 
                     <a
@@ -130,10 +144,10 @@
                     </a>
 
                     <a
-                        href="@{Application.subscribe}"
-                        class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
+                        href="@{Application.sponsors}"
+                        class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}"
                     >
-                        &{'views.main.tickets'}
+                        &{'views.main.sponsors'}
                     </a>
 
                     <a
@@ -141,13 +155,6 @@
                         class="burgerMenu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'burgerMenu__item--current' : ''}"
                     >
                         &{'views.main.team'}
-                    </a>
-
-                    <a
-                        href="@{Application.sponsors}"
-                        class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}"
-                    >
-                        &{'views.main.sponsors'}
                     </a>
 
                     <a
@@ -213,10 +220,24 @@
                 </a>
 
                 <a
+                    href="@{Application.subscribe}"
+                    class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.tickets'}
+                </a>
+
+                <a
                     href="@{Application.schedule}"
                     class="menu__item ${request.action == 'Application.schedule' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.schedule'}
+                </a>
+
+                <a
+                    href="@{Application.speakers}"
+                    class="menu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.speakers'}
                 </a>
 
                 <a
@@ -227,10 +248,10 @@
                 </a>
 
                 <a
-                    href="@{Application.subscribe}"
-                    class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
+                    href="@{Application.sponsors}"
+                    class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
                 >
-                    &{'views.main.tickets'}
+                    &{'views.main.sponsors'}
                 </a>
 
                 <a
@@ -240,12 +261,6 @@
                     &{'views.main.team'}
                 </a>
 
-                <a
-                    href="@{Application.sponsors}"
-                    class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
-                >
-                    &{'views.main.sponsors'}
-                </a>
                 <a
                     href="@{Application.access}"
                     class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"

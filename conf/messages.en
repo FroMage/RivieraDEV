@@ -10,7 +10,7 @@ views.main.home=Home
 views.main.cfp=CFP
 views.main.tickets=Tickets
 views.main.access=Access
-views.main.team=Organisers
+views.main.team=Team
 views.main.sponsors=Sponsors
 views.main.sponsors.list=Our sponsors
 views.main.sponsors.join=Become sponsor
@@ -90,6 +90,7 @@ views.application.index.sponsors.join=Become sponsor
 views.application.photos.title=Photos
 
 views.application.speakers.title=Speakers
+views.application.speakers.subtitle=Discover all our amazing speakers !
 views.application.speakers.unavailable=The speaker list is not available yet.
 views.application.speakers.subscribe=Subscribe to the newsletter to be notified when the speaker list is published.
 

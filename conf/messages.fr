@@ -9,7 +9,7 @@ views.main.home=Accueil
 views.main.cfp=CFP
 views.main.tickets=Billetterie
 views.main.access=Accès
-views.main.team=Organisateurs
+views.main.team=L'équipe
 views.main.sponsors=Sponsors
 views.main.sponsors.list=Nos sponsors
 views.main.sponsors.join=Devenir sponsor
@@ -89,6 +89,8 @@ views.application.index.sponsors.join=Devenez sponsor
 views.application.photos.title=Photos
 
 views.application.speakers.title=Orateurs
+views.application.speakers.subtitle=Découvrez tous nos super orateurs !
+views.application.index.speakers.link=Découvrez tous les orateurs
 views.application.speakers.unavailable=La liste des orateurs n'est pas encore disponible.
 views.application.speakers.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que les orateurs sont connus.
 

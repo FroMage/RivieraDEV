@@ -1,37 +1,21 @@
 .speakers {
-    padding: $space-xl 0;
-
-    @media (min-width: $screen-sm-min) {
-        padding: $space-xxl 0;
+    &__header {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/speakers-mini.jpg'
+        );
+        background-position: top;
     }
 
-    &__container {
-    }
-
-    &__title {
-        margin: 0 $content-space-xs $space-md $content-space-xs;
-
-        @media (min-width: $screen-sm-min) {
-            margin: 0 $content-space-sm $space-lg $content-space-sm;
+    &__mainSubtitle {
+        p {
+            margin: 0;
+        }
+        a {
+            color: $color-white;
         }
     }
 
-    &__buttonContainer {
-        text-align: center;
-    }
-}
-
-.speaker {
-    &-talks {
-        list-style-type: none;
-        padding-left: 0;
-        margin-top: 2em;
-    }
-}
-
-// Only on xs devices (smartphones)
-@media (max-width: $screen-xs-max) {
-    .speaker-talks {
-        margin-bottom: 2em;
+    &-photo {
+        width: 100%;
     }
 }

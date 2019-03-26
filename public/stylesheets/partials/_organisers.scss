@@ -1,7 +1,7 @@
 .orgas {
     &__header {
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/team.jpg'
+            '../images/illustrations/team-mini.jpg'
         );
         background-position: top 35% right 0;
     }
