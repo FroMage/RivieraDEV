@@ -557,14 +557,14 @@ body.burgerMenu--open .burgerMenu:before {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .burgerMenu {
     display: none;
   }
 
   .menu {
     display: block;
-    padding: 0.5rem 0.5em 0.15rem 0.5rem;
+    padding: 1rem 2%;
     z-index: 1;
     font-family: Roboto, Noto, sans-serif;
     font-size: 1.4rem;
@@ -575,6 +575,12 @@ body.burgerMenu--open .burgerMenu:before {
     height: 3rem;
     color: white;
   }
+  .menu__logo {
+    float: left;
+  }
+  .menu__items {
+    padding-top: 0.5rem;
+  }
   .menu__item {
     display: inline-block;
     padding: 1rem;
@@ -583,13 +589,15 @@ body.burgerMenu--open .burgerMenu:before {
     text-decoration: none;
     cursor: pointer;
     text-transform: uppercase;
+    font-size: 1.2rem;
   }
   .menu__item:hover {
-    color: inherit;
+    color: #19b8d5;
     text-decoration: none;
     border-bottom: solid 0.15rem #19b8d5;
   }
   .menu__item--current {
+    color: #fdba1d;
     border-bottom: solid 0.15rem #fdba1d;
   }
   .menu__langue {
@@ -616,6 +624,63 @@ body.burgerMenu--open .burgerMenu:before {
     background-color: white;
     color: black;
     height: 4.5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  }
+  .navbar-animated-small .navbar-animated-brand {
+    opacity: 1;
+  }
+  .navbar-animated-small .navbar-rivieradev {
+    height: 4.5rem;
+    line-height: 4.5rem;
+  }
+  .navbar-animated-logos {
+    margin-left: 0.5em;
+  }
+  .navbar-animated-brand {
+    opacity: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .navbar-animated-logo {
+    transition: all 0.3s;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar-animated-logo img {
+    height: 100%;
+  }
+
+  .navbar-brand, .navbar-brand:hover, .navbar-brand:visited {
+    color: #777;
+    text-decoration: none;
+  }
+  .navbar-rivieradev {
+    margin-right: 0.3em;
+    height: 0rem;
+    line-height: 0rem;
+  }
+  .navbar-RedHat {
+    font-size: 0.65em;
+    display: flex;
+  }
+  .navbar-RedHat img.navbar-RedHat--logo {
+    display: inline-block;
+    align-self: flex-end;
+    height: 2em;
+    margin-right: 0.5em;
+    margin-bottom: 0.25em;
+  }
+  .navbar-RedHat--featuring {
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    align-self: flex-end;
+    margin-bottom: 0.45em;
+    text-decoration: none;
   }
 }
 .parallax {

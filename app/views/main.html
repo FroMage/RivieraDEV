@@ -86,7 +86,7 @@
                 A fake / hidden checkbox is used as click reciever,
                 so you can use the :checked selector on it.
                 -->
-                <input type="checkbox" class="js-burgerMenu-input"/>
+                <input type="checkbox" class="js-burgerMenu-input" />
 
                 <!--
                 Some spans to act as a hamburger.
@@ -97,43 +97,78 @@
 
                 <div class="burgerMenu__content">
                     <div class="burgerMenu__welcome">
-                        <img class="burgerMenu__welcome--logo" src="@{'/public/images/logos/logo_RD_full_white.svg'}" alt="RivieraDEV">
+                        <img
+                            class="burgerMenu__welcome--logo"
+                            src="@{'/public/images/logos/logo_RD_full_white.svg'}"
+                            alt="RivieraDEV"
+                        />
                         <div class="burgerMenu__welcome--info">
                             <p>&{'views.application.index.date'}</p>
                             <p>&{'views.application.index.place'}</p>
                         </div>
                     </div>
 
-                    <a href="@{Application.index}" class="burgerMenu__item ${request.action == 'Application.index' ? 'burgerMenu__item--current' : ''}">
+                    <a
+                        href="@{Application.index}"
+                        class="burgerMenu__item ${request.action == 'Application.index' ? 'burgerMenu__item--current' : ''}"
+                    >
                         &{'views.main.home'}
                     </a>
 
-                    <a href="@{Application.cfp}" class="burgerMenu__item ${request.action == 'Application.cfp' ? 'burgerMenu__item--current' : ''}">
+                    <a
+                        href="@{Application.schedule}"
+                        class="burgerMenu__item ${request.action == 'Application.schedule' ? 'menu__item--current' : ''}"
+                    >
+                        &{'views.main.schedule'}
+                    </a>
+
+                    <a
+                        href="@{Application.cfp}"
+                        class="burgerMenu__item ${request.action == 'Application.cfp' ? 'burgerMenu__item--current' : ''}"
+                    >
                         &{'views.main.cfp'}
                     </a>
 
-                    <a href="@{Application.subscribe}" class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}">
+                    <a
+                        href="@{Application.subscribe}"
+                        class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
+                    >
                         &{'views.main.tickets'}
                     </a>
 
-                    <a href="@{Application.organisers}" class="burgerMenu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'burgerMenu__item--current' : ''}">
+                    <a
+                        href="@{Application.organisers}"
+                        class="burgerMenu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'burgerMenu__item--current' : ''}"
+                    >
                         &{'views.main.team'}
                     </a>
 
-                    <a href="@{Application.sponsors}" class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}">
+                    <a
+                        href="@{Application.sponsors}"
+                        class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}"
+                    >
                         &{'views.main.sponsors'}
                     </a>
 
-                    <a href="@{Application.access}" class="burgerMenu__item ${request.action == 'Application.access' ? 'burgerMenu__item--current' : ''}">
+                    <a
+                        href="@{Application.access}"
+                        class="burgerMenu__item ${request.action == 'Application.access' ? 'burgerMenu__item--current' : ''}"
+                    >
                         &{'views.main.access'}
                     </a>
 
                     <div class="burgerMenu__item">
-                        <a href="@{Application.en(request.url)}" class="burgerMenu__langue #{if play.i18n.Lang.get() == 'en'}burgerMenu__langue--selected#{/if}">
+                        <a
+                            href="@{Application.en(request.url)}"
+                            class="burgerMenu__langue #{if play.i18n.Lang.get() == 'en'}burgerMenu__langue--selected#{/if}"
+                        >
                             &{'views.main.language.en'}
                         </a>
                         <span class="burgerMenu__langueSeparator">/</span>
-                        <a href="@{Application.fr(request.url)}" class="burgerMenu__langue #{if play.i18n.Lang.get() == 'fr'}burgerMenu__langue--selected#{/if}">
+                        <a
+                            href="@{Application.fr(request.url)}"
+                            class="burgerMenu__langue #{if play.i18n.Lang.get() == 'fr'}burgerMenu__langue--selected#{/if}"
+                        >
                             &{'views.main.language.fr'}
                         </a>
                     </div>
@@ -143,40 +178,95 @@
 
         <!-- Desktop Menu -->
         <nav class="menu js-navbar-animated">
-            <a href="@{Application.index}" class="menu__item ${request.action == 'Application.index' ? 'menu__item--current' : ''}">
-                &{'views.main.home'}
-            </a>
+            <div class="menu__logo">
+                <a
+                    class="navbar-brand navbar-animated-brand"
+                    href="@{Application.index}"
+                >
+                    <span class="navbar-rivieradev navbar-animated-logo">
+                        <img
+                            src="/public/images/logo_RD_black.svg"
+                            alt="RivieraDEV"
+                        />
+                    </span>
+                    <span
+                        id="navbar-RedHat"
+                        class="navbar-RedHat navbar-animated-logo"
+                        href="/"
+                    >
+                        <span class="navbar-RedHat--featuring">with</span
+                        ><!-- Do not remove this comment
+                        --><img
+                            src="/public/images/logos/judcon.png"
+                            alt="JUDCon2017:Riviera"
+                            class="navbar-RedHat--logo"
+                        />
+                    </span>
+                </a>
+            </div>
+            <div class="menu__items">
+                <a
+                    href="@{Application.index}"
+                    class="menu__item ${request.action == 'Application.index' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.home'}
+                </a>
 
-            <a href="@{Application.schedule}" class="menu__item ${request.action == 'Application.schedule' ? 'menu__item--current' : ''}">
-                &{'views.main.schedule'}
-            </a>
+                <a
+                    href="@{Application.schedule}"
+                    class="menu__item ${request.action == 'Application.schedule' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.schedule'}
+                </a>
 
-            <a href="@{Application.cfp}" class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}">
-                &{'views.main.cfp'}
-            </a>
+                <a
+                    href="@{Application.cfp}"
+                    class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.cfp'}
+                </a>
 
-            <a href="@{Application.subscribe}" class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}">
-                &{'views.main.tickets'}
-            </a>
+                <a
+                    href="@{Application.subscribe}"
+                    class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.tickets'}
+                </a>
 
-            <a href="@{Application.organisers}" class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}">
-                &{'views.main.team'}
-            </a>
+                <a
+                    href="@{Application.organisers}"
+                    class="menu__item ${(request.action == 'Application.organisers' || request.action == 'Application.organiser') ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.team'}
+                </a>
 
-            <a href="@{Application.sponsors}" class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}">
-                &{'views.main.sponsors'}
-            </a>
-            <a href="@{Application.access}" class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}">
-                &{'views.main.access'}
-            </a>
+                <a
+                    href="@{Application.sponsors}"
+                    class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.sponsors'}
+                </a>
+                <a
+                    href="@{Application.access}"
+                    class="menu__item ${request.action == 'Application.access' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.access'}
+                </a>
 
-            <a href="@{Application.en(request.url)}" class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}">
-                &{'views.main.language.en'}
-            </a>
-            <span class="menu__langueSeparator">/</span>
-            <a href="@{Application.fr(request.url)}" class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}">
-                &{'views.main.language.fr'}
-            </a>
+                <a
+                    href="@{Application.en(request.url)}"
+                    class="menu__item menu__langue #{if play.i18n.Lang.get() == 'en'}menu__langue--selected#{/if}"
+                >
+                    &{'views.main.language.en'}
+                </a>
+                <span class="menu__langueSeparator">/</span>
+                <a
+                    href="@{Application.fr(request.url)}"
+                    class="menu__item menu__langue #{if play.i18n.Lang.get() == 'fr'}menu__langue--selected#{/if}"
+                >
+                    &{'views.main.language.fr'}
+                </a>
+            </div>
         </nav>
 
         <!--
@@ -233,51 +323,100 @@
                 <h2 class="footer__title">&{'views.main.archives'}</h2>
                 <div class="footer__archivesListContainer">
                     <ul class="footer__list footer__archivesList">
-                        <li class="footer__listItem"><a href="//2018.rivieradev.fr">&{'views.main.editions.2018'}</a></li>
-                        <li class="footer__listItem"><a href="//2017.rivieradev.fr">&{'views.main.editions.2017'}</a></li>
-                        <li class="footer__listItem"><a href="//2016.rivieradev.fr">&{'views.main.editions.2016'}</a></li>
-                        <li class="footer__listItem"><a href="//2015.rivieradev.fr">&{'views.main.editions.2015'}</a></li>
-                        <li class="footer__listItem"><a href="//2011.rivieradev.fr">&{'views.main.editions.2011'}</a></li>
+                        <li class="footer__listItem">
+                            <a href="//2018.rivieradev.fr"
+                                >&{'views.main.editions.2018'}</a
+                            >
+                        </li>
+                        <li class="footer__listItem">
+                            <a href="//2017.rivieradev.fr"
+                                >&{'views.main.editions.2017'}</a
+                            >
+                        </li>
+                        <li class="footer__listItem">
+                            <a href="//2016.rivieradev.fr"
+                                >&{'views.main.editions.2016'}</a
+                            >
+                        </li>
+                        <li class="footer__listItem">
+                            <a href="//2015.rivieradev.fr"
+                                >&{'views.main.editions.2015'}</a
+                            >
+                        </li>
+                        <li class="footer__listItem">
+                            <a href="//2011.rivieradev.fr"
+                                >&{'views.main.editions.2011'}</a
+                            >
+                        </li>
                     </ul>
                 </div>
-            </div> <!-- /.footer__archives -->
+            </div>
+            <!-- /.footer__archives -->
 
             <div class="footer__followContact">
                 <div class="footer__follow">
                     <h2 class="footer__title">&{'views.main.follow'}</h2>
                     <ul class="footer__followList">
                         <li>
-                            <a class="footer__rs footer__rs--twitter"
-                                href="https://twitter.com/rivieradev">
-                                <i class="fab fa-twitter" alt="Twitter" class="footer__rsImg" ></i>
+                            <a
+                                class="footer__rs footer__rs--twitter"
+                                href="https://twitter.com/rivieradev"
+                            >
+                                <i
+                                    class="fab fa-twitter"
+                                    alt="Twitter"
+                                    class="footer__rsImg"
+                                ></i>
                             </a>
                         </li>
                         <li>
-                            <a class="footer__rs footer__rs--facebook"
-                                href="https://www.facebook.com/RivieraDEVConf/">
-                                <i class="fab fa-facebook-f" alt="Facebook" class="footer__rsImg"></i>
+                            <a
+                                class="footer__rs footer__rs--facebook"
+                                href="https://www.facebook.com/RivieraDEVConf/"
+                            >
+                                <i
+                                    class="fab fa-facebook-f"
+                                    alt="Facebook"
+                                    class="footer__rsImg"
+                                ></i>
                             </a>
                         </li>
                         <li>
-                            <a class="footer__rs footer__rs--linkedin"
-                                href="https://www.linkedin.com/company/11054475/">
-                                <i class="fab fa-linkedin-in" alt="LinkedIn" class="footer__rsImg"></i>
+                            <a
+                                class="footer__rs footer__rs--linkedin"
+                                href="https://www.linkedin.com/company/11054475/"
+                            >
+                                <i
+                                    class="fab fa-linkedin-in"
+                                    alt="LinkedIn"
+                                    class="footer__rsImg"
+                                ></i>
                             </a>
                         </li>
                         <li>
-                            <a class="footer__rs footer__rs--instagram"
-                                href="https://www.instagram.com/rivieradevconf/">
-                                <i class="fab fa-instagram" alt="Instagram" class="footer__rsImg"></i>
+                            <a
+                                class="footer__rs footer__rs--instagram"
+                                href="https://www.instagram.com/rivieradevconf/"
+                            >
+                                <i
+                                    class="fab fa-instagram"
+                                    alt="Instagram"
+                                    class="footer__rsImg"
+                                ></i>
                             </a>
                         </li>
                     </ul>
-                </div> <!-- /.footer__follow -->
+                </div>
+                <!-- /.footer__follow -->
 
                 <div class="footer__contact">
-                    <h2 class="footer__title footer__contactTitle">&{'views.main.contact'}</h2>
+                    <h2 class="footer__title footer__contactTitle">
+                        &{'views.main.contact'}
+                    </h2>
                     <span class="footer__contactMail">info@rivieradev.fr</span>
                 </div>
-            </div> <!-- /.footer__followContact -->
+            </div>
+            <!-- /.footer__followContact -->
 
             <div class="footer__copyright">
                 Copyright &copy; 2011-2019 Riviera JUG / Riviera DEV. All rights
