@@ -1,43 +1,25 @@
 .schedule {
-    &-day {
-        @include text-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
-        color: #fff;
-        line-height: 1.5em;
+    &__header {
+        // TODO use another image
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/tickets.jpg'
+        );
+        background-position: 0 30%;
+    }
 
-        &-filter {
-            padding: 0.5rem 1rem;
-            line-height: 3.5rem;
-            cursor: pointer;
-            transition: opacity 0.2s ease-in-out;
+    &--desktop {
+        display: none;
 
-            &--hidden {
-                opacity: 0.6;
-            }
-        }
-
-        @media (max-width: $screen-xs-max) and (orientation: landscape) {
-            &-filterItem {
-                display: inline;
-            }
+        @media (min-width: $screen-sm-min) {
+            display: block;
         }
     }
+    &--mobile {
+        display: block;
 
-    &-dayAll {
-        background-color: $color-gray;
-    }
-    &-day1 {
-        background-color: $color-blue-transparent;
-    }
-    &-day2 {
-        background-color: $color-yellow-transparent;
-    }
-    &-day3 {
-        background-color: $color-purple-transparent;
-    }
-
-    &-time {
-        font-family: 'Oswald', sans-serif;
-        font-weight: normal;
+        @media (min-width: $screen-sm-min) {
+            display: none;
+        }
     }
 }
 
@@ -75,66 +57,61 @@
     }
 }
 
-.fullSchedule-container {
-    width: 100%;
-    max-width: 1170px; // page-container width in xl
-    margin: 0 auto;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
 .fullSchedule {
-    margin: 2rem 0;
     width: 100%;
     table-layout: fixed;
+    border-spacing: $space-sm;
+    margin: -#{$space-sm};
 
-    &-day {
-        padding-left: 15px;
-        padding-right: 15px;
+    &__admin {
+        font-size: $font-xxs;
+        font-weight: normal;
     }
 
-    & th,
-    & td {
-        border: 3px solid $color-grey-ultralight;
-        padding: 0.5em;
-    }
-
-    &-col-time {
-        width: 10%;
-
-        @media (max-width: $screen-xs-max) {
+    &__col {
+        &--time {
             width: 20%;
+            @media (min-width: $screen-sm-min) {
+                width: 10%;
+            }
+        }
+        &--2tracks {
+            width: 45%;
+        }
+        &--3tracks {
+            width: 30%;
+        }
+        &--4tracks {
+            width: 22.5%;
+        }
+        &--5tracks {
+            width: 18%;
+        }
+        &--5tracks {
+            width: 15%;
+        }
+        &--7tracks {
+            width: 12.8%;
+        }
+        &--xs {
+            width: 90%;
         }
     }
 
-    &-col-2tracks {
-        width: 45%;
-    }
-
-    &-col-3tracks {
-        width: 30%;
-    }
-
-    &-col-4tracks {
-        width: 22.5%;
-    }
-
-    &-col-XStracks {
-        width: 90%;
-    }
-
-    &-time {
+    &__track {
         text-align: center;
-        font-size: 1.1em;
-
-        &-begin,
-        &-end {
-            display: block;
-        }
     }
 
-    &-track {
+    &__time {
+        background-color: $color-grey-ultralight;
+        border: $border-sm solid $color-gray-light;
+        border-radius: $border-radius-sm;
         text-align: center;
+        font-size: $font-xxl;
+        font-weight: initial;
+        color: $color-gray;
+        vertical-align: top;
+        padding: $space-md $space-xs;
     }
 
     &-track-title {

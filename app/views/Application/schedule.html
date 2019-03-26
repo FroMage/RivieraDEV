@@ -1,23 +1,33 @@
 #{extends 'main.html' /}
 #{set title:play.i18n.Messages.get('views.application.schedule.title') /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.schedule.title'}</span></h1>
+<div class="page__header schedule__header">
+		<h1 class="page__mainTitle">
+				&{'views.application.schedule.title'}
+		</h1>
+		<div class="page__mainSubtitle">
+				&{'views.application.schedule.subtitle'}
+		</div>
 </div>
 
+<div class="page__container notFullWidth">
+
+		<h2 class="page__title">
+				&{'views.application.schedule.titlePage'}
+		</h2>
+
 	#{if displayFullSchedule }
-		<div class="fullSchedule-container">
 
 			#{filterForTalks themes: themes, levels: levels, types: types, languages: languages/}
 
-			<div class="hidden-xs">
-				#{fullSchedule user: user, days: days, tracksPerDays: tracksPerDays/}
+			<div class="schedule--desktop">
+					#{fullSchedule user: user, days: days, tracksPerDays: tracksPerDays/}
 			</div>
 
-			<div class="visible-xs">
-				#{fullScheduleXs user: user, days: days, tracksPerDays: tracksPerDays/}
+			<div class="schedule--mobile">
+					#{fullScheduleXs user: user, days: days, tracksPerDays: tracksPerDays/}
 			</div>
-		</div>
+
 	#{/if}
 	#{else}
 		<div class="container page-container">
@@ -45,3 +55,4 @@
 			#{newsletter /}
 		</div>
 	#{/else}
+</div>

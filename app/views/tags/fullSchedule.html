@@ -16,15 +16,16 @@
 
 		<table class="fullSchedule">
 
-			<col class="fullSchedule-col-time">
+			<col class="fullSchedule__col--time">
 			#{list items: tracks, as: 'track'}
-				<col class="fullSchedule-col-${tracks.size()}tracks">
+				<col class="fullSchedule__col--${tracks.size()}tracks">
 			#{/list}
 			
+			<!--
 			<tr>
-				<th class="fullSchedule-time fullSchedule-time-title"></th>
+				<th></th>
 				#{list items: tracks, as: 'track'}
-					<th class="fullSchedule-track" scope="col">
+					<th class="fullSchedule__track" scope="col">
 						${track.title}
 						#{if _user}
 							<br/>
@@ -33,15 +34,14 @@
 					</th>
 				#{/list}
 			</tr>
+			-->
 
 			#{list items: models.Slot.findMultiPerDay(day), as: 'slot'}
 			<tr>
-				<th class="schedule-time fullSchedule-time" scope="row">
-					<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-					<!--<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>-->
+				<th class="fullSchedule__time" scope="row">
+					<span>${slot.startDate.format('HH:mm')}</span>
 					#{if _user}
-						<br/>
-						<a href="@{Slots.show(slot.id)}">edit</a>
+						<a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
 					#{/if}
 				</th>
 
