@@ -126,7 +126,10 @@ views.application.subscribe.pass.period.earlyBird=Early bird
 views.application.subscribe.pass.period.regular=Normal
 views.application.subscribe.pass.remainingDays=&{%s} : %d jours restants
 
-views.application.access.title=Accès
+views.application.access.title=Comment venir
+views.application.access.text.1=Riviera DEV est situé sur la côte d'azur,
+views.application.access.text.2=en plein coeur de Sophia-Antipolis, la plus belle technopole d'Europe.
+views.application.access.text.3=Découvrez comment nous rejoindre !
 views.application.access.in-sophia.1=À Sophia Antipolis
 views.application.access.in-sophia.2=Rendez-vous au campus <strong>Skema Business School</strong>, en plein coeur de Sophia Antipolis.
 views.application.access.dates.1=Les 15, 16 et 17 mai 2019

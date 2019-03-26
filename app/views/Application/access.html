@@ -1,140 +1,152 @@
-#{extends 'main.html' /}
-#{set title:play.i18n.Messages.get('views.application.access.title') /}
+#{extends 'main.html' /} #{set
+title:play.i18n.Messages.get('views.application.access.title') /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.access.title'}</span></h1>
+<div class="page__header speakers__header">
+    <h1 class="page__mainTitle">&{'views.application.access.title'}</h1>
+    <div class="page__mainSubtitle speakers__mainSubtitle">
+        <p>&{'views.application.access.text.1'}</p>
+        <p>&{'views.application.access.text.2'}</p>
+        <p>&{'views.application.access.text.3'}</p>
+    </div>
+    <a class="button orgas__button" href="mailto:info@rivieradev.fr"
+        >&{'views.application.orgas.contact'}</a
+    >
+</div>
+
+<div class="page__container notFullWidth">
+    <h2>
+        <i class="fas fa-map-marker-alt"></i>
+        &{'views.application.access.in-sophia.1'}
+    </h2>
 </div>
 
 <div class="container">
+    <!--<h2 class="title">Les 2 jours de conférence Riviera DEV</h2>-->
 
-	<!--<h2 class="title">Les 2 jours de conférence Riviera DEV</h2>-->
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-md-offset-1">
+            <h2>
+                <i class="fas fa-map-marker-alt"></i>
+                &{'views.application.access.in-sophia.1'}
+            </h2>
+            <p>
+                &{'views.application.access.in-sophia.2'}
+            </p>
+            <p>
+                SKEMA Business School - Sophia Antipolis
+                <br />
+                60 Rue Fedor Dostoïevski
+                <br />
+                06902 Valbonne
+                <br />
+                France
+            </p>
+        </div>
 
-	<div class="row">
-		<div class="col-sm-6 col-md-5 col-md-offset-1">
-			<h2>
-				<i class="fas fa-map-marker-alt"></i>
-				&{'views.application.access.in-sophia.1'}
-			</h2>
-			<p>
-			    &{'views.application.access.in-sophia.2'}
-			</p>
-			<p>
-				SKEMA Business School - Sophia Antipolis
-				<br/>
-				60 Rue Fedor Dostoïevski
-				<br/>
-				06902 Valbonne
-        			<br/>
-				France
-			</p>
-		</div>
+        <div class="col-sm-6 col-md-5">
+            <h2>
+                <i class="far fa-calendar-alt"></i>
+                &{'views.application.access.dates.1'}
+            </h2>
+            <p>
+                &{'views.application.access.dates.2'}
+            </p>
+        </div>
+    </div>
 
-		<div class="col-sm-6 col-md-5">
-			<h2>
-				<i class="far fa-calendar-alt"></i>
-				&{'views.application.access.dates.1'}
-			</h2>
-			<p>
-				&{'views.application.access.dates.2'}
-			</p>
-		</div>
-	</div>
-
-	<div class="access-map">
-		<iframe class="access-map--iFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11554.747094587965!2d7.056227!3d43.613063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c504f1214a80db0!2sSKEMA+Business+School+-+Sophia+Antipolis!5e0!3m2!1sfr!2sfr!4v1478209468272" frameborder="0" allowfullscreen></iframe>
-	</div>
-
-</div> <!-- /.container -->
-
-<div class="diaporama">
-	<div class="row diaporama-row">
-		<img src="@{'/public/images/illustrations/Skema-3.jpg'}" class="col-sm-3 col-xs-6 diaporama-item"/>
-		<img src="@{'/public/images/illustrations/Skema-7bis.jpg'}" class="col-sm-3 col-xs-6 diaporama-item"/>
-		<img src="@{'/public/images/illustrations/Skema-9bis.jpg'}" class="col-xs-6 visible-xs diaporama-item"/>
-		<img src="@{'/public/images/illustrations/Skema-1.jpg'}" class="col-sm-3 col-xs-6 diaporama-item"/>
-		<img src="@{'/public/images/illustrations/Skema-9bis.jpg'}" class="col-sm-3 hidden-xs diaporama-item"/>
-	</div>
+    <div class="access-map">
+        <iframe
+            class="access-map--iFrame"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11554.747094587965!2d7.056227!3d43.613063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c504f1214a80db0!2sSKEMA+Business+School+-+Sophia+Antipolis!5e0!3m2!1sfr!2sfr!4v1478209468272"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+    </div>
 </div>
+<!-- /.container -->
 
 <div class="container access">
-
-	<h2 class="title access-title">
-		<i class="fas fa-car access-icon"></i>
+    <h2 class="title access-title">
+        <i class="fas fa-car access-icon"></i>
         &{'views.application.access.car.title'}
-	</h2>
+    </h2>
 
-	<p>
+    <p>
         &{'views.application.access.car.from.cannes.1'}
         &{'views.application.access.car.from.cannes.2'}
-	</p>
-	<p>
+    </p>
+    <p>
         &{'views.application.access.car.from.nice.1'}
         &{'views.application.access.car.from.nice.2'}
         &{'views.application.access.car.from.nice.3'}
         &{'views.application.access.car.from.nice.4'}
         &{'views.application.access.car.from.nice.5'}
-	</p>
-	<p>
+    </p>
+    <p>
         &{'views.application.access.car.skema.1'}
         &{'views.application.access.car.skema.2'}
-	</p>
+    </p>
 
-	<h2 class="title access-title">
-		<i class="fas fa-train access-icon"></i>
+    <h2 class="title access-title">
+        <i class="fas fa-train access-icon"></i>
         &{'views.application.access.train.title'}
-	</h2>
+    </h2>
 
-	<p>
+    <p>
         &{'views.application.access.train.station.to.1'}
         &{'views.application.access.train.station.to.2'}
         &{'views.application.access.train.station.to.3'}
         &{'views.application.access.train.station.to.4'}
-	</p>
-	<p>
+    </p>
+    <p>
         &{'views.application.access.train.station.from.1'}
         &{'views.application.access.train.station.from.2'}
         &{'views.application.access.train.station.from.3'}
         &{'views.application.access.train.station.from.4'}
-	</p>
+    </p>
 
-	<h2 class="title access-title">
-		<i class="fas fa-bus access-icon"></i>
+    <h2 class="title access-title">
+        <i class="fas fa-bus access-icon"></i>
         &{'views.application.access.bus.title'}
-	</h2>
+    </h2>
 
-	<p>
+    <p>
         &{'views.application.access.bus.from.antibes.1'}
         &{'views.application.access.bus.from.antibes.2'}
         &{'views.application.access.bus.from.antibes.3'}
         &{'views.application.access.bus.from.antibes.4'}
-	</p>
-	<p>
+    </p>
+    <p>
         &{'views.application.access.bus.from.sophia.1'}
         &{'views.application.access.bus.from.sophia.2'}
-	</p>
-	<p>
+    </p>
+    <p>
         &{'views.application.access.bus.from.elsewhere.1'}
-		<a href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html" target="_blank">
-            &{'views.application.access.bus.from.elsewhere.2'}
-		</a>.
-        &{'views.application.access.bus.from.elsewhere.3'}
-	</p>
+        <a
+            href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html"
+            target="_blank"
+        >
+            &{'views.application.access.bus.from.elsewhere.2'} </a
+        >. &{'views.application.access.bus.from.elsewhere.3'}
+    </p>
 
-	<h2 class="title access-title">
-		<i class="fas fa-plane access-icon"></i>
+    <h2 class="title access-title">
+        <i class="fas fa-plane access-icon"></i>
         &{'views.application.access.plane.title'}
-	</h2>
+    </h2>
 
-	<p>
-		<a href="http://www.nice.aeroport.fr/" target="_blank">&{'views.application.access.plane.1'}</a>
-		&{'views.application.access.plane.2'}
-	</p>
-	<p>
+    <p>
+        <a href="http://www.nice.aeroport.fr/" target="_blank"
+            >&{'views.application.access.plane.1'}</a
+        >
+        &{'views.application.access.plane.2'}
+    </p>
+    <p>
         &{'views.application.access.plane.3'}
         &{'views.application.access.plane.4'}
         &{'views.application.access.plane.5'}
         &{'views.application.access.plane.6'}
         &{'views.application.access.plane.7'}
-	</p>
-
-</div> <!-- /.container -->
+    </p>
+</div>
+<!-- /.container -->
