@@ -63,18 +63,19 @@
                 #{else}
 					#{list items: tracks, as: 'track'}
                         %{talks = slot.getTalksPerTrack(track);}%
-						<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
+						<td class="js-talksFilter-toFilter js-fullSchedule-talk-cell fullSchedule__talk__cell">
                             #{list items: talks, as: 'talk'}
                                 #{if talk}
                                     #{if !talk.isHiddenInTalksPage}
-                                        <div class="fullSchedule-talk-item
-                                                    talksFilter-item
+                                        <div class="fullSchedule__talk__item
+													talksFilter-item
+													js-fullSchedule-talk-item
                                                     js-talksFilter-item 
                                                     js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                                                     js-talksFilter-level-${talk.level?.code}
                                                     js-talksFilter-type-${talk.type?.toString()?.slugify()}
                                                     js-talksFilter-language-${talk.language?.toString()?.slugify()}">
-                                            <a class="fullSchedule-talk-title" href="@{Application.talk(talk.id)}">${talk.title}</a>
+                                            <a class="fullSchedule__talk__title" href="@{Application.talk(talk.id)}">${talk.title}</a>
                                             <span class="talk-slot">${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}</span>
                                             #{if talk.theme}
                                                 <span class="talk-theme talk-theme-${talk.theme.color.code}">${talk.theme}</span>
@@ -118,8 +119,10 @@
                                             </div>
                                         </div>
                                     #{/if}
-                                    #{else}
-                                        <span class="fullSchedule-talk-item fullSchedule-talk-title">${talk.title}</span>
+									#{else}
+										<div class="fullSchedule__talk__item js-fullSchedule-talk-item">
+											<span class="fullSchedule__talk__title">${talk.title}</span>
+										</div>
                                     #{/else}
                                 #{/if}
 

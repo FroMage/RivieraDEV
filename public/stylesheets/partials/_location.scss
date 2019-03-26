@@ -40,7 +40,7 @@
         @media (min-width: $screen-sm-min) {
             border: $border-sm solid $color-gray-light;
             border-radius: $border-radius-md;
-            box-shadow: $shadow;
+            box-shadow: $shadow-md;
             max-width: 50rem;
         }
     }

@@ -118,16 +118,22 @@
         color: $color-gray-dark;
     }
 
-    &-talk {
-        &-cell {
+    &__talk {
+        &__cell {
             vertical-align: top;
             position: relative;
         }
-        &-title {
+
+        &__item {
+            border: $border-sm solid $color-gray-light;
+            border-radius: $border-radius-sm;
+            padding: $space-sm;
+            box-shadow: $shadow-sm;
+        }
+
+        &__title {
             display: block;
-            margin-bottom: 0.5em;
-            font-weight: 600;
-            color: $color-blue-dark;
+            font-size: $font-sm;
         }
 
         &-speakers {

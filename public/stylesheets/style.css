@@ -2148,35 +2148,39 @@ body.burgerMenu--open .burgerMenu:before {
 .fullSchedule-track-title {
   color: #777;
 }
-.fullSchedule-talk-cell {
+.fullSchedule__talk__cell {
   vertical-align: top;
   position: relative;
 }
-.fullSchedule-talk-title {
-  display: block;
-  margin-bottom: 0.5em;
-  font-weight: 600;
-  color: #00709d;
+.fullSchedule__talk__item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-.fullSchedule-talk-speakers {
+.fullSchedule__talk__title {
+  display: block;
+  font-size: 1.6rem;
+}
+.fullSchedule__talk-speakers {
   list-style-type: none;
   padding-left: 0;
 }
-.fullSchedule-talk-speaker {
+.fullSchedule__talk-speaker {
   color: #777;
   text-decoration-style: dotted;
   font-style: italic;
 }
-.fullSchedule-talk-like {
+.fullSchedule__talk-like {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 0.5em;
 }
-.fullSchedule-talk-like svg {
+.fullSchedule__talk-like svg {
   color: #777;
 }
-.fullSchedule-talk-like[data-like='true'] svg {
+.fullSchedule__talk-like[data-like='true'] svg {
   color: #cc0303;
 }
 .fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
