@@ -198,7 +198,7 @@ body.burgerMenu--open .burgerMenu:before {
     display: none;
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-md-min) {
     .burgerMenu {
         display: none;
     }
@@ -207,7 +207,7 @@ body.burgerMenu--open .burgerMenu:before {
         display: block;
         $border_size: 0.15rem;
 
-        padding: 0.5rem 0.5em $border_size 0.5rem;
+        padding: 1rem 2%;
         z-index: 1;
         font-family: $font_family;
         font-size: $font-xs;
@@ -218,6 +218,14 @@ body.burgerMenu--open .burgerMenu:before {
         height: 3rem;
         color: white;
 
+        &__logo {
+            float: left;
+        }
+
+        &__items {
+            padding-top: 0.5rem;
+        }
+
         &__item {
             display: inline-block;
             padding: 1rem;
@@ -226,14 +234,16 @@ body.burgerMenu--open .burgerMenu:before {
             text-decoration: none;
             cursor: pointer;
             text-transform: uppercase;
+            font-size: $font-xxs;
 
             &:hover {
-                color: inherit;
+                color: $color-blue;
                 text-decoration: none;
                 border-bottom: solid $border_size $color-blue;
             }
 
             &--current {
+                color: $color-yellow;
                 border-bottom: solid $border_size $color-yellow;
             }
         }
@@ -261,11 +271,83 @@ body.burgerMenu--open .burgerMenu:before {
     }
 
     .navbar-animated {
+        $navbar-small-height: 4.5rem;
         transition: all 0.5s;
+
         &-small {
             background-color: white;
             color: black;
-            height: 4.5rem;
+            height: $navbar-small-height;
+            box-shadow: 0 3px 6px $color-black-transparent3;
+
+            .navbar-animated-brand {
+                opacity: 1;
+            }
+
+            .navbar-rivieradev {
+                height: $navbar-small-height;
+                line-height: $navbar-small-height;
+            }
+        }
+
+        &-logos {
+            margin-left: 0.5em;
+        }
+
+        &-brand {
+            opacity: 0;
+            padding: 0;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        &-logo {
+            transition: all 0.3s;
+            padding: 0;
+            margin: 0;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .navbar {
+        $navbar-height: 0rem;
+
+        &-brand,
+        &-brand:hover,
+        &-brand:visited {
+            color: $color-gray-dark;
+            text-decoration: none;
+        }
+
+        &-rivieradev {
+            margin-right: 0.3em;
+            height: $navbar-height;
+            line-height: $navbar-height;
+        }
+        &-RedHat {
+            font-size: 0.65em;
+            display: flex;
+            & img.navbar-RedHat--logo {
+                display: inline-block;
+                align-self: flex-end;
+                height: 2em;
+                margin-right: 0.5em;
+                margin-bottom: 0.25em;
+            }
+            &--featuring {
+                display: inline-block;
+                height: 1em;
+                line-height: 1em;
+                align-self: flex-end;
+                margin-bottom: 0.45em;
+                text-decoration: none;
+            }
         }
     }
 }
