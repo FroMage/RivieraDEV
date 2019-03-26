@@ -147,6 +147,10 @@
                 &{'views.main.home'}
             </a>
 
+            <a href="@{Application.schedule}" class="menu__item ${request.action == 'Application.schedule' ? 'menu__item--current' : ''}">
+                &{'views.main.schedule'}
+            </a>
+
             <a href="@{Application.cfp}" class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}">
                 &{'views.main.cfp'}
             </a>
