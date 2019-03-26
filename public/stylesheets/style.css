@@ -2006,39 +2006,22 @@ body.burgerMenu--open .burgerMenu:before {
   bottom: 0;
 }
 
-.speakers {
-  padding: 4rem 0;
+.speakers__header {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/speakers-mini.jpg");
+  background-position: top;
 }
-@media (min-width: 768px) {
-  .speakers {
-    padding: 5rem 0;
-  }
+.speakers__mainSubtitle p {
+  margin: 0;
 }
-.speakers__title {
-  margin: 0 2rem 2rem 2rem;
+.speakers__mainSubtitle a {
+  color: #fff;
 }
-@media (min-width: 768px) {
-  .speakers__title {
-    margin: 0 4rem 3rem 4rem;
-  }
-}
-.speakers__buttonContainer {
-  text-align: center;
+.speakers-photo {
+  width: 100%;
 }
 
-.speaker-talks {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 2em;
-}
-
-@media (max-width: 767px) {
-  .speaker-talks {
-    margin-bottom: 2em;
-  }
-}
 .orgas__header {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/team.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/team-mini.jpg");
   background-position: top 35% right 0;
 }
 .orgas__mainSubtitle p {

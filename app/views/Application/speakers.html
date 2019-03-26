@@ -1,50 +1,17 @@
-#{extends 'main.html' /}
-#{set title:play.i18n.Messages.get('views.application.speakers.title') /}
+#{extends 'main.html' /} #{set
+title:play.i18n.Messages.get('views.application.speakers.title') /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.speakers.title'}</span></h1>
+<div class="page__header speakers__header">
+    <h1 class="page__mainTitle">&{'views.application.speakers.title'}</h1>
+    <div class="page__mainSubtitle speakers__mainSubtitle">
+        <p>&{'views.application.speakers.subtitle'}</p>
+    </div>
 </div>
 
-<div class="container page-container">
-
-	#{if user}
-	<div class="row">
-		<div class="text-center">
-			<a class="btn btn-default" href="@{Speakers.blank()}">Ajouter un orateur</a>
-		</div>
-	</div>
-	#{/if}
-
-	#{if displayPreviousSpeakers}
-	<div class="row">
-		<div class="col-xs-12 data-unavailable">
-			<p>
-				&{'views.application.speakers.unavailable'}
-			</p>
-			<p>
-				&{'views.application.speakers.subscribe'}
-			</p>
-		</div>
-	</div>
-
-	<div class="row">
-		#{newsletter /}
-	</div>
-  
-	#{if speakersPreviousYears != null && speakersPreviousYears.size() > 0}
-		<div class="row text-center">
-			<p class="speakers-previous-title">&{'views.application.index.speakers.tagline'}</p>
-
-			#{previousSpeakers speakers: speakersPreviousYears/}
-		</div>
-	#{/if}
-
-	#{/if}
-
-	#{else}
-	<div class="container speakers">
-		#{speakers speakers: speakers/}
-	</div>
-	#{/else}
-
+<div class="page__container notFullWidth">
+    #{if user}
+    <div>
+        <a href="@{Speakers.blank()}">Ajouter un orateur</a>
+    </div>
+    #{/if} #{speakers speakers: speakers/}
 </div>
