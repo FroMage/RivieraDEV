@@ -47,49 +47,16 @@
 
 				%{allTracksEvent = slot.allTracksEvent}%
 				#{if allTracksEvent } <!-- One talk for all tracks -->
-					<td colspan="${tracks.size()}" class="fullSchedule-${allTracksEvent.isBreak.code}">
-						#{if !allTracksEvent.isHiddenInTalksPage}
-
-							#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-								<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
-							#{/if}
-
-							#{else}
-								<a class="fullSchedule-talk-title" href="@{Application.talk(allTracksEvent.id)}">${allTracksEvent.title}</a>
-
-								<!--
-								#{if allTracksEvent.theme}
-									<span class="talk-theme talk-theme-${allTracksEvent.theme.color.code}">${allTracksEvent.theme}</span>
-								#{/if}
-
-								#{if allTracksEvent.level}
-									<span class="talk-level">&{'views.application.schedule.level.' + allTracksEvent.level.code}</span>
-								#{/if}
-								-->
-
-								#{if allTracksEvent.speakers.size() > 0}
-									#{if allTracksEvent.speakers}
-										<ul class="fullSchedule-talk-speakers">
-											#{list items: allTracksEvent.speakers, as: 'speaker'}
-												<li>
-													<a class="fullSchedule-talk-speaker" href="@{Application.speaker(speaker.id)}">
-														${speaker.firstName} ${speaker.lastName}
-													</a>
-												</li>
-											#{/list}
-										</ul>
-									#{/if}
-								#{/if}
-							
-							#{/else}
+					<td colspan="${tracks.size()}" class="fullSchedule__${allTracksEvent.isBreak.code}">
+						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+							<span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
 						#{/if}
-						#{else}
-							<span class="fullSchedule-talk-title  fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
-						#{/else}
 
+						#{else}
+							<!-- If it's not a break, it should have a track assigned -->
+						#{/else}
 						#{if _user}
-							<br/>
-							<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
+							<a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
 						#{/if}
 					</td>
 				#{/if}
