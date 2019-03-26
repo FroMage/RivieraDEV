@@ -166,8 +166,12 @@
         font-size: $font-xl;
         font-weight: bold;
         border-radius: $border-radius-sm;
-        padding: $space-xxxl $space-xs;
+        padding: $space-xl $space-xs;
         background-size: cover;
+
+        @media (min-width: $screen-sm-min) {
+            padding: $space-xxxl $space-xs;
+        }
     }
 
     &__breakfast {
