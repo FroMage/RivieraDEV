@@ -33,7 +33,7 @@ $bullet-size: 0.6rem; // 6px
     &__mainContainer {
         padding: $space-xl;
         border-radius: $border-radius-md $border-radius-md 0 0;
-        box-shadow: $shadow;
+        box-shadow: $shadow-md;
         color: $color-white;
         display: flex;
         flex-direction: column;
@@ -139,7 +139,7 @@ $bullet-size: 0.6rem; // 6px
         padding: $space-xl $space-xl $space-lg $space-xl;
         border: $border-sm solid $color-gray-light;
         border-radius: 0 0 $border-radius-md $border-radius-md;
-        box-shadow: $shadow;
+        box-shadow: $shadow-md;
         margin-left: $space-sm;
         margin-right: $space-sm;
         margin-bottom: $space-xxl;
