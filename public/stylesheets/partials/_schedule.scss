@@ -157,41 +157,61 @@
         }
     }
 
-    &-breakfast,
-    &-lunch,
-    &-cofeeBreak,
-    &-party {
-        background-color: $color-yellow-ultralight;
-        font-style: italic;
+    &__breakfast,
+    &__lunch,
+    &__cofeeBreak,
+    &__party {
+        text-align: center;
+        color: $color-white;
+        font-size: $font-xl;
+        font-weight: bold;
+        border-radius: $border-radius-sm;
+        padding: $space-xxxl $space-xs;
+        background-size: cover;
     }
 
-    &-breakfast-title,
-    &-lunch-title,
-    &-cofeeBreak-title,
-    &-party-title {
-        background-repeat: no-repeat;
-        background-position: left center;
-        padding-left: 2.5em;
-        font-weight: normal;
-        margin-bottom: 0;
-        color: inherit;
-        line-height: 2em;
+    &__breakfast {
+        /* @include backgroundImageWithDarkGradient(
+            '../images/illustrations/registration.jpg'
+        );
+        background-position: 0 45%; */
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/croissants.jpg'
+        );
+        background-position: 0 45%;
     }
 
-    &-breakfast-title {
-        background-image: url('../images/icons/croissant_2.svg');
+    &__lunch {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/lunch.jpg'
+        );
+        background-position: 0 75%;
     }
 
-    &-cofeeBreak-title {
-        background-image: url('../images/icons/hot-drink.svg');
+    &__cofeeBreak {
+        /*@include backgroundImageWithDarkGradient(
+            '../images/illustrations/cofee_break.jpg'
+        );
+        background-position: 0 80%;*/
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/cofee_break_2.jpg'
+        );
+        background-position: 0 30%;
     }
 
-    &-lunch-title {
-        background-image: url('../images/icons/cutlery.svg');
-    }
-
-    &-party-title {
-        background-image: url('../images/icons/pint.svg');
+    &__party {
+        /* @include backgroundImageWithDarkGradient(
+            '../images/illustrations/beers.jpg'
+        );
+        background-position: bottom 0 left 0;*/
+        /* @include backgroundImageWithDarkGradient(
+            '../images/illustrations/piano.jpg'
+        );
+        background-position: 0 75%; */
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/guitars.jpg'
+        );
+        background-position: 0 75%;
     }
 }
 

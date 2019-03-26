@@ -295,30 +295,46 @@
 .fullSchedule-talk-like[data-like='true'] svg {
   color: #cc0303;
 }
-.fullSchedule-breakfast, .fullSchedule-lunch, .fullSchedule-cofeeBreak, .fullSchedule-party {
-  background-color: #fefaf1;
-  font-style: italic;
+.fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10rem 0.8rem;
+  background-size: cover;
 }
-.fullSchedule-breakfast-title, .fullSchedule-lunch-title, .fullSchedule-cofeeBreak-title, .fullSchedule-party-title {
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-left: 2.5em;
-  font-weight: normal;
-  margin-bottom: 0;
-  color: inherit;
-  line-height: 2em;
+.fullSchedule__breakfast {
+  /* @include backgroundImageWithDarkGradient(
+      '../images/illustrations/registration.jpg'
+  );
+  background-position: 0 45%; */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/croissants.jpg");
+  background-position: 0 45%;
 }
-.fullSchedule-breakfast-title {
-  background-image: url("../images/icons/croissant_2.svg");
+.fullSchedule__lunch {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/lunch.jpg");
+  background-position: 0 75%;
 }
-.fullSchedule-cofeeBreak-title {
-  background-image: url("../images/icons/hot-drink.svg");
+.fullSchedule__cofeeBreak {
+  /*@include backgroundImageWithDarkGradient(
+      '../images/illustrations/cofee_break.jpg'
+  );
+  background-position: 0 80%;*/
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/cofee_break_2.jpg");
+  background-position: 0 30%;
 }
-.fullSchedule-lunch-title {
-  background-image: url("../images/icons/cutlery.svg");
-}
-.fullSchedule-party-title {
-  background-image: url("../images/icons/pint.svg");
+.fullSchedule__party {
+  /* @include backgroundImageWithDarkGradient(
+      '../images/illustrations/beers.jpg'
+  );
+  background-position: bottom 0 left 0;*/
+  /* @include backgroundImageWithDarkGradient(
+      '../images/illustrations/piano.jpg'
+  );
+  background-position: 0 75%; */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/guitars.jpg");
+  background-position: 0 75%;
 }
 
 th.fullSchedule-time-title {
