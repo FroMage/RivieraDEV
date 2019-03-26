@@ -2202,8 +2202,13 @@ body.burgerMenu--open .burgerMenu:before {
   font-size: 2.5rem;
   font-weight: bold;
   border-radius: 10px;
-  padding: 10rem 0.8rem;
+  padding: 4rem 0.8rem;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
+    padding: 10rem 0.8rem;
+  }
 }
 .fullSchedule__breakfast {
   /* @include backgroundImageWithDarkGradient(

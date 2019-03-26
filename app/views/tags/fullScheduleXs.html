@@ -29,18 +29,16 @@
 				%{allTracksEvent = slot.allTracksEvent}%
 				#{if allTracksEvent } <!-- One talk for all tracks -->
 				<tr>
-					<th class="schedule-time fullSchedule-time" scope="row">
-						<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-						<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
+					<th class="fullSchedule__time" scope="row">
+						<span>${slot.startDate.format('HH:mm')}</span>
 						#{if _user}
-							<br/>
-							<a href="@{Slots.show(slot.id)}">edit</a>
+							<a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
 						#{/if}
 					</th>
 
-					<td class="fullSchedule-${allTracksEvent.isBreak.code}">
+					<td class="fullSchedule__${allTracksEvent.isBreak.code}">
 						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-							<span class="fullSchedule-talk-title fullSchedule-${allTracksEvent.isBreak.code}-title">${allTracksEvent.title}</span>
+							<span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
 						#{/if}
 						#{else}
 							#{if !allTracksEvent.isHiddenInTalksPage}
@@ -76,8 +74,7 @@
 						#{/else}
 
 						#{if _user}
-							<br/>
-							<a href="@{Talks.show(allTracksEvent.id)}">edit</a>
+							<a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
 						#{/if}
 					</td>
 				</tr>
@@ -88,19 +85,17 @@
 						%{talk = slot.getTalkPerTrack(track);}%
 						#{if talk}
 							<tr>
-								<th class="schedule-time fullSchedule-time" scope="row">
-									<span class="fullSchedule-time-begin">${slot.startDate.format('HH:mm')}</span>
-									<span class="fullSchedule-time-end">${slot.endDate.format('HH:mm')}</span>
+								<th class="fullSchedule__time" scope="row">
+									<span>${slot.startDate.format('HH:mm')}</span>
 									#{if _user}
-										<br/>
-										<a href="@{Slots.show(slot.id)}">edit</a>
+										<a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
 									#{/if}
 								</th>
 								<td class="js-talksFilter-toFilter fullSchedule-talk-cell">
 								
 									#{if !talk.isHiddenInTalksPage}
-                                        <div class="fullSchedule-talk-item
-                                                    talksFilter-item
+							<div class="fullSchedule-talk-item
+													talksFilter-item
 													js-talksFilter-item
 													js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
 													js-talksFilter-level-${talk.level?.code}
