@@ -1,0 +1,16 @@
+<svg id="baseline-airplanemode_active-24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.641 70.641">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #969695;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Tracé_2501" data-name="Tracé 2501" class="cls-1" d="M10.18,9" transform="translate(19.783 17.49)"/>
+  <path id="Tracé_2502" data-name="Tracé 2502" class="cls-1" d="M68.436,49.094V42.366L40.463,25.547V7.046a5.249,5.249,0,0,0-10.49,0v18.5L2,42.366v6.728l27.973-8.41v18.5L22.98,64.231v5.046l12.238-3.364,12.238,3.364V64.231l-6.993-5.046v-18.5Z" transform="translate(-0.318 -0.318)"/>
+  <path id="Tracé_2503" data-name="Tracé 2503" class="cls-2" d="M0,0H70.641V70.641H0Z"/>
+</svg>

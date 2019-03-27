@@ -20,20 +20,40 @@
     }
 
     &__chapter {
-        display: flex;
+        margin: 0 3rem;
+        @media (min-width: $screen-sm-min) {
+            margin: 0;
+        }
 
-        &--desc {
-            margin-left: 1em;
+        h3 {
+            margin: 0;
+        }
 
-            h3 {
-                margin: 0;
-            }
+        p {
+            font-size: $font-sm;
+            line-height: $font-lg;
+        }
+
+        a {
+            color: $color-yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        &--text {
+            margin-top: 0;
         }
     }
 
     &__title {
-        font-weight: normal;
         text-align: left;
+        line-height: 4rem;
+        margin: 3rem;
+
+        @media (min-width: $screen-sm-min) {
+            margin-left: 0;
+            line-height: 6rem;
+        }
     }
 
     &__icon {
@@ -56,5 +76,63 @@
             height: 450px;
             border: 0;
         }
+    }
+
+    &__where,
+    &__how {
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: $icon-size-xl $icon-size-xl;
+        padding-left: $icon-size-xl + $space-sm;
+
+        @media (min-width: $screen-sm-min) {
+            $icon-size: 5rem;
+            background-size: $icon-size $icon-size;
+            padding-left: $icon-size + $space-md;
+        }
+    }
+
+    &__car,
+    &__plane,
+    &__bus,
+    &__train {
+        margin-top: 3rem;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: $icon-size-xl $icon-size-xl;
+        padding-top: $icon-size-xl + $space-sm;
+
+        @media (min-width: $screen-sm-min) {
+            margin-top: 0;
+            background-position: left 1rem;
+            background-size: $icon-size-xxl $icon-size-xxl;
+            padding-top: 0;
+            padding-left: $icon-size-xxl + $space-md;
+        }
+    }
+
+    &__where {
+        margin-bottom: $space-xl;
+        background-image: url(../images/icons/where-2.svg);
+    }
+
+    &__how {
+        background-image: url(../images/icons/how-to-get-here.svg);
+    }
+
+    &__car {
+        background-image: url(../images/icons/car.svg);
+    }
+
+    &__plane {
+        background-image: url(../images/icons/plane.svg);
+    }
+
+    &__bus {
+        background-image: url(../images/icons/bus.svg);
+    }
+
+    &__train {
+        background-image: url(../images/icons/train.svg);
     }
 }
