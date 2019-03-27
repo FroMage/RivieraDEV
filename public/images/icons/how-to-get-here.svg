@@ -1,0 +1,15 @@
+<svg id="baseline-directions-24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.255 56.255">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #19a9d5;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="Tracé_2510" data-name="Tracé 2510" class="cls-1" d="M48.19,23.779l-21.1-21.1a2.334,2.334,0,0,0-3.3,0l-21.1,21.1a2.334,2.334,0,0,0,0,3.3l21.1,21.1a2.334,2.334,0,0,0,3.3,0l21.1-21.1a2.334,2.334,0,0,0,0-3.3ZM30.118,31.3v-5.86H20.742v7.032H16.054V23.1A2.351,2.351,0,0,1,18.4,20.755h11.72V14.9l8.2,8.2Z" transform="translate(2.698 2.685)"/>
+  <path id="Tracé_2511" data-name="Tracé 2511" class="cls-2" d="M0,0H56.255V56.255H0Z"/>
+</svg>
