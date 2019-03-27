@@ -130,11 +130,13 @@ views.application.access.title=How to come
 views.application.access.text.1=Riviera DEV is located on the French Riviera,
 views.application.access.text.2=in the heart of Sophia-Antipolis, the most beautiful European technopole.
 views.application.access.text.3=Discover how to join us !
+views.application.access.where=Where is the event ?
+views.application.access.how=How to get there ?
 views.application.access.in-sophia.1=In Sophia Antipolis
 views.application.access.in-sophia.2=Meet at the <strong>Skema Business School</strong> campus, in the heart of Sophia Antipolis.
 views.application.access.dates.1=May 15th-16th-17th 2019
 views.application.access.dates.2=Riviera DEV takes place in May when the weather turns back to gorgeous.
-views.application.access.car.title=Coming by car
+views.application.access.car.title=By car
 views.application.access.car.from.cannes.1=<strong>Coming from Cannes</strong>: on the A8 highway, take the 44th exit "Antibes/Sophia Antipolis".
 views.application.access.car.from.cannes.2=After the toll, turn right "direction Sophia Antipolis" (D35).
 views.application.access.car.from.nice.1=<strong>Coming from Nice</strong>: on the A8 highway take the 44th exit "Antibes/Sophia Antipolis".
@@ -144,7 +146,7 @@ views.application.access.car.from.nice.4=Go straight (approximately 1.4 km), you
 views.application.access.car.from.nice.5=Go straight then turn right on "accès 3 les lucioles". You are on the Albert Einstein road.
 views.application.access.car.skema.1=Take the first right (rue Ludwig Van Beethoven) and the first right again (rue Dostoïevski).
 views.application.access.car.skema.2=The entrance to SKEMA Business School campus is at N°60 on your right.
-views.application.access.train.title=Coming by train
+views.application.access.train.title=By train
 views.application.access.train.station.to.1=The nearest train station to Sophia Antipolis is that of <strong>Antibes</strong>.
 views.application.access.train.station.to.2=Depending on your departing train station, check the timetables:
 views.application.access.train.station.to.3=for long-distance lines on the <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a> website,
@@ -153,7 +155,7 @@ views.application.access.train.station.from.1=Once in the Antibes train station,
 views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">Envibus 100 Express but</a> - Price: 1€.
 views.application.access.train.station.from.3=To reach the bus stop, get out of the station and take the suspended walkway above the tracks.
 views.application.access.train.station.from.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
-views.application.access.bus.title=Coming by bus
+views.application.access.bus.title=By bus
 views.application.access.bus.from.antibes.1=From the Antibes train station: you can take
 views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">the Envibus 100 Express bus</a>
 views.application.access.bus.from.antibes.3=- Price: 1€.
@@ -163,7 +165,7 @@ views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" targ
 views.application.access.bus.from.elsewhere.1=From other cities : use
 views.application.access.bus.from.elsewhere.2=the regional network of busses
 views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis.
-views.application.access.plane.title=Coming by plane
+views.application.access.plane.title=By plane
 views.application.access.plane.1=The Nice Côte d'Azur airport
 views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free shuttle to get to Terminal 1.
 views.application.access.plane.3=Take <a href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html" target="_blank">the 230 bus</a>:
