@@ -130,11 +130,13 @@ views.application.access.title=Comment venir
 views.application.access.text.1=Riviera DEV est situé sur la côte d'azur,
 views.application.access.text.2=en plein coeur de Sophia-Antipolis, la plus belle technopole d'Europe.
 views.application.access.text.3=Découvrez comment nous rejoindre !
+views.application.access.where=Où est l'événement ?
+views.application.access.how=Comment venir ?
 views.application.access.in-sophia.1=À Sophia Antipolis
 views.application.access.in-sophia.2=Rendez-vous au campus <strong>Skema Business School</strong>, en plein coeur de Sophia Antipolis.
 views.application.access.dates.1=Les 15, 16 et 17 mai 2019
 views.application.access.dates.2=Riviera DEV se déroulera en mai lorsque les beaux jours reviendront.
-views.application.access.car.title=Accès en voiture
+views.application.access.car.title=En voiture
 views.application.access.car.from.cannes.1=<strong>En provenance de Cannes</strong>&nbsp;: sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis".
 views.application.access.car.from.cannes.2=Après le péage prendre à droite "direction Sophia Antipolis" (D35).
 views.application.access.car.from.nice.1=<strong>En provenance de Nice</strong>&nbsp;: sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis".
@@ -144,7 +146,7 @@ views.application.access.car.from.nice.4=Continuez tout droit (environ 1,4 km), 
 views.application.access.car.from.nice.5=Continuez tout droit puis prendre sur votre droite "accès 3 les lucioles". Vous êtes dans la rue Albert Einstein.
 views.application.access.car.skema.1=Prendre ensuite la première à droite (rue Ludwig Van Beethoven) et encore la premiere à droite (rue Dostoïevski).
 views.application.access.car.skema.2=L'entrée du campus SKEMA Business School se situe au N°60 sur votre droite.
-views.application.access.train.title=Accès en train
+views.application.access.train.title=En train
 views.application.access.train.station.to.1=La gare SNCF la plus proche de Sophia Antipolis est celle d'<strong>Antibes</strong>.
 views.application.access.train.station.to.2=Selon votre gare de départ, consultez les horaires&nbsp;:
 views.application.access.train.station.to.3=pour les grandes lignes sur le site de la <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a>
@@ -153,7 +155,7 @@ views.application.access.train.station.from.1=Arrivé à la Gare d'Antibes, pren
 views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">bus Envibus 100 Express</a> - Prix&nbsp;: 1€.
 views.application.access.train.station.from.3=Pour joindre l'arrêt, sortir de la gare et prendre la passerelle piétonne au-dessus des voies.
 views.application.access.train.station.from.4=La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA.
-views.application.access.bus.title=Accès en bus
+views.application.access.bus.title=En bus
 views.application.access.bus.from.antibes.1=À partir de la gare d'Antibes&nbsp;: vous pouvez prendre
 views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">le bus Envibus 100 Express</a>
 views.application.access.bus.from.antibes.3=- Prix&nbsp;: 1€.
@@ -163,7 +165,7 @@ views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" targ
 views.application.access.bus.from.elsewhere.1=A partir des autres communes&nbsp;: utiliser
 views.application.access.bus.from.elsewhere.2=le réseau départemental de bus
 views.application.access.bus.from.elsewhere.3=La ligne 230 relie l'aéroport de Nice à Sophia Antipolis.
-views.application.access.plane.title=Accès en avion
+views.application.access.plane.title=En avion
 views.application.access.plane.1=L'Aéroport Nice Côte d'Azur
 views.application.access.plane.2=est situé à 20 km de Sophia Antipolis. Du Terminal 2 de l'aéroport, prendre la navette gratuite pour vous rendre au Terminal 1.
 views.application.access.plane.3=Prendre <a href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html" target="_blank">le Bus 230</a>&nbsp;:

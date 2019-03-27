@@ -1850,25 +1850,49 @@ body.burgerMenu--open .burgerMenu:before {
   }
 }
 
-.access {
-  margin-bottom: 2em;
+.access__header {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/access-mini.jpg");
+  background-position: center;
 }
-.access-map {
+.access__mainSubtitle p {
+  margin: 0;
+}
+.access__mainSubtitle a {
+  color: #fff;
+}
+.access__button {
+  margin-top: 4rem;
+}
+.access__chapter {
+  display: flex;
+}
+.access__chapter--desc {
+  margin-left: 1em;
+}
+.access__chapter--desc h3 {
+  margin: 0;
+}
+.access__title {
+  font-weight: normal;
+  text-align: left;
+}
+.access__icon {
+  color: #19b8d5;
+  width: 1em;
+  height: 1em;
+}
+.access-photo {
+  width: 100%;
+}
+.access__map {
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.access-map--iFrame {
+.access__map--iFrame {
   width: 100%;
   height: 450px;
   border: 0;
-}
-.access-icon {
-  color: #fdba1d;
-}
-.access-title {
-  text-align: left;
-  margin-top: 2em;
 }
 
 .persons__list {
