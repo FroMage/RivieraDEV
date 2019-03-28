@@ -2095,10 +2095,10 @@ body.burgerMenu--open .burgerMenu:before {
   vertical-align: bottom;
 }
 .personDetails__talk:before {
-  content: '┬½';
+  content: '«';
 }
 .personDetails__talk:after {
-  content: '┬╗';
+  content: '»';
 }
 
 .photos {
