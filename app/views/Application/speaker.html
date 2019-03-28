@@ -1,76 +1,54 @@
-#{extends 'main.html' /}
-#{set title: speaker.toString() + ' - ' + play.i18n.Messages.get('views.application.speaker.title')  /}
+#{extends 'main.html' /} #{set title: speaker.toString() + ' - ' +
+play.i18n.Messages.get('views.application.speaker.title') /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.speaker.title'}</span></h1>
+<div class="page__header speakers__header">
+    <h1 class="page__mainTitle">&{'views.application.speaker.title'}</h1>
 </div>
 
-<div class="container page-container">
-
-    #{if user}
-        <a href="@{Speakers.blank()}" class="btn btn-default">add</a>
-    #{/if}
-
-
-    <div class="row personDetails">
-                
-        <div class="col-sm-2 personDetails-photo">
-            <img class="personDetails-photo-img" src="@{Application.speakerPhoto(speaker.id)}" alt="${speaker}"/>
+<div class="page__container notFullWidth">
+    <div class="personDetails">
+        <div class="personDetails__header">
+            <figure class="personSummary personDetails__header--content">
+                <div
+                    class="personSummary__photo personDetails__header--photo"
+                    style="background-image: url('@{Application.speakerPhoto(speaker.id)}')"
+                ></div>
+                <figcaption class="personDetails__desc">
+                    <div class="personDetails__name">${speaker}</div>
+                    <div class="personDetails__title">${speaker.company}</div>
+                    <div class="personDetails__network">
+                        #{if speaker.twitterAccount}
+                        <div class="personDetails__twitter">
+                            <a
+                                href="https://twitter.com/${speaker.twitterAccount}"
+                                target="_blank"
+                                >@${speaker.twitterAccount}</a
+                            >
+                        </div>
+                        #{/if} #{if speaker.blogURL}
+                        <div class="personDetails__blog">
+                            <a href="${speaker.blogURL}" target="_blank"
+                                >${speaker.blogURL}</a
+                            >
+                        </div>
+                        #{/if}
+                    </div>
+                </figcaption>
+            </figure>
         </div>
-
-        <div class="col-sm-6 personDetails-desc">
-            <div class="personDetails-name-title">
-                <div class="personDetails-name">${speaker.firstName} ${speaker.lastName}</div>
-                #{if speaker.title} 
-                <div class="personDetails-title">${speaker.title}</div>
-                #{/if}
+        <div class="personDetails__body">
+            ${speaker.biography?.md()}
+            <div class="personDetails__talks">
+                #{list items: speaker.talks, as: 'talk'}
+                <div class="personDetails__micro">
+                    <a
+                        class="personDetails__talk"
+                        href="@{Application.talk(talk.id)}"
+                        >${talk.title}</a
+                    >
+                </div>
+                #{/list}
             </div>
-            <div class="personDetails-biography">${speaker.biography?.md()}</div>
-
-			<ul class="speaker-talks">
-				#{list items: speaker.talks, as: 'talk'}
-					<li>
-						<i class="fas fa-comment personDetails-icon"></i>
-						<a href="@{Application.talk(talk.id)}">${talk.title}</a>
-					</li>
-				#{/list}
-			</ul>
-
-            #{if user}
-                <a href="@{Speakers.show(speaker.id)}" class="btn btn-default">edit</a>
-            #{/if}
-
         </div>
-
-        <div class="col-sm-4 personDetails-links">
-
-            #{if speaker.company} 
-            <div class="personDetails-company personDetails-link">
-                <i class="fas fa-briefcase personDetails-icon" title="&{'views.application.common.company'}"></i>
-				#{if speaker.companyURL}
-	                <a href="${speaker.companyURL}" target="_blank">${speaker.company}</a>
-				#{/if}
-				#{else}
-					${speaker.company}
-				#{/else}
-            </div>
-            #{/if}
-
-            #{if speaker.twitterAccount} 
-            <div class="personDetails-twitter personDetails-link">
-                <i class="fab fa-twitter personDetails-icon" title="&{'views.application.common.twitter'}"></i>
-                <a href="https://twitter.com/${speaker.twitterAccount}" target="_blank">@${speaker.twitterAccount}</a>
-            </div>
-            #{/if}
-
-            #{if speaker.blogURL} 
-            <div class="personDetails-blog personDetails-link">
-                <i class="fas fa-globe personDetails-icon" title="&{'views.application.common.website'}"></i>
-                <a href="${speaker.blogURL}" target="_blank">${speaker.blogURL}</a>
-            </div>
-            #{/if}
-        </div>
-
-        <div class="clearfix"></div>
-    </div> <!-- /.row -->
+    </div>
 </div>
