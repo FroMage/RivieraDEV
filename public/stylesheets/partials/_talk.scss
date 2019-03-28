@@ -140,98 +140,39 @@ $color-theme-turquoise: #00bacd;
 }
 
 .talkDetails {
-    margin-top: 2em;
+    $borderRadius: 0.5rem;
 
-    &:before,
-    &:after {
-        display: block;
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+        width: 70%;
+    }
+
+    &__header {
+        border-radius: $borderRadius $borderRadius 0 0;
+        color: $color-white;
+        margin: 0 auto;
         width: 100%;
-        height: 5px;
-        margin: 2em 0;
-        background-color: $color-blue;
-    }
-
-    &-all:after {
-        height: 0;
-    }
-
-    &-title {
-        text-transform: uppercase;
-        color: $color-blue;
-        font-size: 1.3em;
-    }
-
-    &-description {
-        margin-top: 1em;
-        margin-bottom: 2em;
-    }
-
-    &-track,
-    &-slot-day,
-    &-slot-hour,
-    &-slides {
-        margin-bottom: 0.5em;
-    }
-
-    &-speakers {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-
-    &-speaker {
-        margin-bottom: 1em;
-        display: block;
-        text-decoration: none;
-
-        &-photo {
-            display: inline-block;
-            vertical-align: middle;
-            width: 50px;
-            height: 50px;
-            @include border-radius(50%);
-            background-size: cover;
-            transition: all 0.5s ease;
-        }
-
-        &-name {
-            display: inline-block;
-            vertical-align: middle;
-            text-transform: uppercase;
-            font-size: 1.1em;
-            color: $color-blue;
-        }
-    }
-
-    &-icon {
-        color: $color-yellow;
-        font-size: 1.3em;
         text-align: center;
+        background-color: $color-yellow;
     }
-    svg.talkDetails-icon {
-        width: 1.3em;
+
+    &__body {
+        padding: 2% 10%;
+        border-radius: 0 0 $borderRadius $borderRadius;
+        background-color: $color-gray-ultralight;
+        font-size: $font-xs;
+        line-height: 1.4em;
     }
-}
 
-.talkDetails-speaker {
-    &:hover,
-    &:focus,
-    &:active {
-        text-decoration: none;
-
-        .talkDetails-speaker-photo {
-            @include box-shadow(0 0 0 3px $color-blue);
-        }
-    }
-}
-
-// Only on xs devices (smartphones)
-@media (max-width: $screen-xs-max) {
-    .talkDetails-onlyOne {
-        margin-top: 0;
-
-        &:before,
-        &:after {
-            height: 0;
+    &__metadata {
+        text-align: center;
+        &--item {
+            padding: 0.3em 1.5em;
+            border-radius: 2em;
+            background-color: $color-gray-light;
+            border: $color-gray solid 1px;
+            margin: 0 1%;
         }
     }
 }

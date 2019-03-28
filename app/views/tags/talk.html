@@ -1,79 +1,32 @@
-
-<div class="col-sm-8">
-    <div class="talkDetails-title">
-        ${_talk.title}
-    </div>
-
-    #{if _talk.theme}
-        <span class="talk-theme talk-theme-${_talk.theme.color.code}">${_talk.theme}</span>
-    #{/if}
- 
-    #{if _talk.type}
-        <span class="talk-type">${_talk.type}</span>
-    #{/if}
-
-    #{if _talk.level && _talk.track}
-        <span class="talk-level">&{'views.application.schedule.level.' + _talk.level.code}</span>
-    #{/if}
-
-    #{if _talk.language}
-        <span class="talk-language">#{language language:_talk.language/}</span>
-    #{/if}
-
-    <div class="talkDetails-description">${_talk.getDescription()?.md()}</div>
-
-    #{if _user}
-	    <a href="@{Talks.show(_talk.id)}" class="btn btn-default">edit</a>
-    #{/if}
-</div> <!-- /.col -->
-
-<div class="col-sm-4">
-
-    #{if _displayFullSchedule}
-
-        <div class="talkDetails-track">
-            <i class="fas fa-map-signs talkDetails-icon" title="&{'views.application.talk.room'}"></i>
-            #{if _talk.track?.title}
-                ${_talk.track.title}
-            #{/if}
-            #{else}
-                &{'views.application.talk.track.allTracks'}
-            #{/else}
-        </div>
-        
-        #{if _talk.slot}
-            <div class="talkDetails-slot-day">
-                <i class="far fa-calendar-alt talkDetails-icon" title="&{'views.application.talk.day'}"></i>
-                ${_talk.slot.startDate.format('dd MMM yyyy')}
-            </div>
-
-            <div class="talkDetails-slot-hour">
-                <i class="far fa-clock talkDetails-icon" title="&{'views.application.talk.hour'}"></i>
-                ${_talk.slot.startDate.format('HH:mm')} - ${_talk.slot.endDate.format('HH:mm')}
-            </div>
-        #{/if}
-
-    #{/if}
-
-    #{if _talk.slidesUrl}
-        <div class="talkDetails-slides">
-            <i class="fas fa-tv talkDetails-icon"></i>
-            <a href="${_talk.slidesUrl}">&{'views.application.talk.slides'}</a>
-        </div>
-    #{/if}
-
-    #{if _talk.speakers}
-        <div class="talkDetails-speakers">
+<div class="talkDetails">
+    <div class="talkDetails__header">
+        <div class="talkDetails__title">${_talk.title}</div>
+        #{if _talk.speakers}
+        <div class="talkDetails__speakers">
             #{list items: _talk.speakers, as: 'speaker'}
-                <a class="talkDetails-speaker" href="@{Application.speaker(speaker.id)}">
-                    <div class="talkDetails-speaker-photo" style="background-image: url('@{Application.speakerPhoto(speaker.id)}')">
-                    </div>
-                    <div class="talkDetails-speaker-name">
-                        ${speaker}
-                    </div>
-                </a>
+            <div class="talkDetails__speaker">
+                ${speaker}
+            </div>
             #{/list}
         </div>
-    #{/if}
-
-</div> <!-- /.col -->
+        #{/if}
+    </div>
+    <div class="talkDetails__body">
+        ${_talk.getDescription()?.md()}
+        <div class="talkDetails__metadata">
+            #{if _talk.theme}
+            <span class="talkDetails__metadata--item">${_talk.theme}</span>
+            #{/if} #{if _talk.type}
+            <span class="talkDetails__metadata--item">${_talk.type}</span>
+            #{/if} #{if _talk.level}
+            <span class="talkDetails__metadata--item"
+                >&{'views.application.schedule.level.' + _talk.level.code}</span
+            >
+            #{/if} #{if _talk.language}
+            <span class="talkDetails__metadata--item"
+                >#{language language:_talk.language/}</span
+            >
+            #{/if}
+        </div>
+    </div>
+</div>
