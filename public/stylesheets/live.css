@@ -194,10 +194,10 @@
   vertical-align: bottom;
 }
 .personDetails__talk:before {
-  content: '«';
+  content: '┬½';
 }
 .personDetails__talk:after {
-  content: '»';
+  content: '┬╗';
 }
 
 .schedule__header {
