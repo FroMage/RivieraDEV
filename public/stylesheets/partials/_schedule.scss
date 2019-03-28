@@ -93,7 +93,7 @@
         &--7tracks {
             width: 12.8%;
         }
-        &--xs {
+    &--xs {
             width: 90%;
         }
     }
@@ -103,7 +103,7 @@
     }
 
     &__time {
-        background-color: $color-grey-ultralight;
+        background-color: $color-gray-ultralight;
         border: $border-sm solid $color-gray-light;
         border-radius: $border-radius-sm;
         text-align: center;

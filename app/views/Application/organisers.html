@@ -1,18 +1,18 @@
-#{extends 'main.html' /}
-#{set title:play.i18n.Messages.get('views.application.orgas.title') /}
+#{extends 'main.html' /} #{set
+title:play.i18n.Messages.get('views.application.orgas.title') /}
 
 <div class="page__header orgas__header">
-		<h1 class="page__mainTitle">&{'views.application.orgas.title'}</h1>
-		<div class="page__mainSubtitle orgas__mainSubtitle">
-				<p>&{'views.application.orgas.text.1'}</p>
-				<p>&{'views.application.orgas.text.2'}</p>
-				<p>&{'views.application.orgas.text.3'}</p>
-		</div>
-		<a class="button orgas__button" href="mailto:info@rivieradev.fr">&{'views.application.orgas.contact'}</a>
+    <h1 class="page__mainTitle">&{'views.application.orgas.title'}</h1>
+    <div class="page__mainSubtitle orgas__mainSubtitle">
+        <p>&{'views.application.orgas.text.1'}</p>
+        <p>&{'views.application.orgas.text.2'}</p>
+        <p>&{'views.application.orgas.text.3'}</p>
+    </div>
+    <a class="button orgas__button" href="mailto:info@rivieradev.fr"
+        >&{'views.application.orgas.contact'}</a
+    >
 </div>
 
 <div class="page__container notFullWidth">
-
-		#{organisers orgas: orgas/}
-
+    #{organisers orgas: orgas/}
 </div>
