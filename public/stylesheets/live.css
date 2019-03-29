@@ -195,10 +195,10 @@
   vertical-align: bottom;
 }
 .personDetails__talk:before {
-  content: '«';
+  content: '┬½';
 }
 .personDetails__talk:after {
-  content: '»';
+  content: '┬╗';
 }
 
 .schedule__header {
@@ -294,7 +294,6 @@
 }
 .fullSchedule__time {
   background-color: #f8f7f7;
-  border: 1px solid #ddd;
   border-radius: 10px;
   text-align: center;
   font-size: 3rem;
@@ -356,10 +355,6 @@
   }
 }
 .fullSchedule__breakfast {
-  /* @include backgroundImageWithDarkGradient(
-      '../images/illustrations/registration.jpg'
-  );
-  background-position: 0 45%; */
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/croissants.jpg");
   background-position: 0 45%;
 }
@@ -368,22 +363,10 @@
   background-position: 0 75%;
 }
 .fullSchedule__cofeeBreak {
-  /*@include backgroundImageWithDarkGradient(
-      '../images/illustrations/cofee_break.jpg'
-  );
-  background-position: 0 80%;*/
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/cofee_break_2.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/cofee_break.jpg");
   background-position: 0 30%;
 }
 .fullSchedule__party {
-  /* @include backgroundImageWithDarkGradient(
-      '../images/illustrations/beers.jpg'
-  );
-  background-position: bottom 0 left 0;*/
-  /* @include backgroundImageWithDarkGradient(
-      '../images/illustrations/piano.jpg'
-  );
-  background-position: 0 75%; */
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/guitars.jpg");
   background-position: 0 75%;
 }
@@ -526,10 +509,10 @@ th.fullSchedule-time-title {
   font-size: 1.5em;
 }
 .talkDetails__title:before {
-  content: '«';
+  content: '┬½';
 }
 .talkDetails__title:after {
-  content: '»';
+  content: '┬╗';
 }
 .talkDetails__micro {
   display: flex;
