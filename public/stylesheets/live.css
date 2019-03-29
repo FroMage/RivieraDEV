@@ -204,10 +204,24 @@
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/tickets.jpg");
   background-position: 0 30%;
 }
+.schedule__container {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .schedule__container {
+    width: 95%;
+  }
+}
+@media (min-width: 1200px) {
+  .schedule__container {
+    width: 90%;
+  }
+}
 .schedule--desktop {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .schedule--desktop {
     display: block;
   }
@@ -215,7 +229,7 @@
 .schedule--mobile {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .schedule--mobile {
     display: none;
   }
@@ -315,6 +329,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-decoration: none;
+  word-break: break-word;
 }
 .fullSchedule__talk__item--link:hover, .fullSchedule__talk__item--link:focus, .fullSchedule__talk__item--link:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
