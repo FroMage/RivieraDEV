@@ -512,8 +512,7 @@ th.fullSchedule-time-title {
   border-radius: 0.5rem 0.5rem 0 0;
   color: #fff;
   margin: 0 auto;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 5%;
   text-align: center;
   background-color: #fdba1d;
   font-weight: 300;
@@ -534,15 +533,21 @@ th.fullSchedule-time-title {
 }
 .talkDetails__micro {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .talkDetails__micro {
+    align-items: flex-start;
+  }
 }
 .talkDetails__micro:before {
   content: '';
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  vertical-align: middle;
   background-image: url(../images/icons/microphone-white.svg);
-  vertical-align: text-bottom;
+  background-repeat: no-repeat;
 }
 .talkDetails__speakers {
   margin-left: 1rem;
@@ -560,6 +565,7 @@ th.fullSchedule-time-title {
 .talkDetails__metadata {
   font-size: 1.2rem;
   margin: 1.5em;
+  line-height: 2.5em;
   text-align: center;
 }
 .talkDetails__metadata--item {
@@ -568,6 +574,12 @@ th.fullSchedule-time-title {
   background-color: #ddd;
   border: #9a9a93 solid 1px;
   margin: 0 1%;
+}
+.talkDetails__metadata--item:first-child {
+  margin-left: 0;
+}
+.talkDetails__metadata--item:last-child {
+  margin-right: 0;
 }
 
 .live-currentDate {
