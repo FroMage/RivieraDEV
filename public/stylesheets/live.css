@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .countdown {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -195,10 +194,10 @@
   vertical-align: bottom;
 }
 .personDetails__talk:before {
-  content: '┬½';
+  content: '\00ab';
 }
 .personDetails__talk:after {
-  content: '┬╗';
+  content: '\00bb';
 }
 
 .schedule__header {
@@ -620,10 +619,10 @@ th.fullSchedule-time-title {
   font-size: 1.5em;
 }
 .talkDetails__title:before {
-  content: '┬½';
+  content: '\00ab';
 }
 .talkDetails__title:after {
-  content: '┬╗';
+  content: '\00bb';
 }
 .talkDetails__micro {
   display: flex;
