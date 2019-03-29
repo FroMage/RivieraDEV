@@ -2653,9 +2653,54 @@ th.fullSchedule-time-title {
   margin-right: 0;
 }
 
-.talksFilter {
-  background-color: #f8f7f7;
+.talksFilter input[type='checkbox'] {
+  display: none;
 }
+.talksFilter label {
+  display: flex;
+}
+.talksFilter label .talksFilter__item--text {
+  cursor: pointer;
+}
+.talksFilter label:before {
+  content: '';
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: #ddd 1px solid;
+  border-radius: 15%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.talksFilter input[type='checkbox']:checked + label:before {
+  background-color: #fdba1d;
+}
+.talksFilter:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.talksFilter__filter {
+  float: left;
+  width: 33%;
+}
+.talksFilter__title {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+.talksFilter__item {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.talksFilter__buttons {
+  text-align: center;
+}
+.talksFilter__buttons:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .talksFilter-collapse {
   position: relative;
 }
