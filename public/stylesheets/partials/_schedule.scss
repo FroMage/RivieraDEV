@@ -1,3 +1,5 @@
+$avatar-size: 30px;
+
 .schedule {
     &__header {
         // TODO use another image
@@ -124,33 +126,120 @@
         }
 
         &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             border: $border-sm solid $color-gray-light;
             border-radius: $border-radius-sm;
-            padding: $space-sm;
             box-shadow: $shadow-sm;
+            text-decoration: none;
+        }
+
+        &__part1,
+        &__part2 {
+            padding: $space-sm;
         }
 
         &__title {
             display: block;
             font-size: $font-sm;
+            font-weight: bold;
+            color: $color-black-light;
         }
 
-        &-speakers {
+        &__slotTrack {
+            margin-top: $space-md;
+            font-size: $font-xs;
+            color: $color-gray;
+        }
+
+        &__slot,
+        &__track {
+            margin-top: $space-xs;
+        }
+
+        &__infos {
+            margin-top: $space-md;
+            font-size: $font-xxs;
+            color: $color-gray;
+        }
+
+        &__part2 {
+            position: relative;
+            border-radius: 0 0 $border-radius-sm $border-radius-sm;
+            color: $color-white;
+
+            &--blue {
+                background-color: $color-theme-blue;
+            }
+            &--yellow {
+                background-color: $color-theme-yellow;
+            }
+            &--purple {
+                background-color: $color-theme-purple;
+            }
+            &--green {
+                background-color: $color-theme-green;
+            }
+            &--orange {
+                background-color: $color-theme-orange;
+            }
+            &--red {
+                background-color: $color-theme-red;
+            }
+            &--pink {
+                background-color: $color-theme-pink;
+            }
+            &--turquoise {
+                background-color: $color-theme-turquoise;
+            }
+            &--brown {
+                background-color: $color-theme-brown;
+            }
+            &--grey,
+            &--none {
+                background-color: $color-theme-grey;
+            }
+        }
+
+        &__theme,
+        &__type,
+        &__level,
+        &__language {
+            margin-top: $space-xxs;
+        }
+
+        &__speakers {
             list-style-type: none;
             padding-left: 0;
+            margin: 0;
         }
 
-        &-speaker {
-            color: $color-gray-dark;
-            text-decoration-style: dotted;
-            font-style: italic;
+        &__speaker:not(:first-child) {
+            margin-top: $space-xs;
         }
 
-        &-like {
+        &__speakerPhoto {
+            vertical-align: middle;
+            display: inline-block;
+            width: $avatar-size;
+            min-width: $avatar-size;
+            height: $avatar-size;
+            height: $avatar-size;
+            border-radius: $avatar-size;
+            background-size: cover;
+        }
+
+        &__speakerName {
+            vertical-align: middle;
+            font-size: $font-xs;
+            font-weight: bold;
+        }
+
+        &__like {
             position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 0.5em;
+            top: $space-sm;
+            right: $space-sm;
 
             & svg {
                 color: #777;
@@ -159,6 +248,10 @@
             &[data-like='true'] svg {
                 color: #cc0303;
             }
+        }
+
+        &__nbLikes {
+            font-size: $font-xxs;
         }
     }
 

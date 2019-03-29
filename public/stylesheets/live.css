@@ -310,35 +310,110 @@
   position: relative;
 }
 .fullSchedule__talk__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.fullSchedule__talk__part1, .fullSchedule__talk__part2 {
+  padding: 1rem;
 }
 .fullSchedule__talk__title {
   display: block;
   font-size: 1.6rem;
+  font-weight: bold;
+  color: #474747;
 }
-.fullSchedule__talk-speakers {
+.fullSchedule__talk__slotTrack {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #9a9a93;
+}
+.fullSchedule__talk__slot, .fullSchedule__talk__track {
+  margin-top: 0.8rem;
+}
+.fullSchedule__talk__infos {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #9a9a93;
+}
+.fullSchedule__talk__part2 {
+  position: relative;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+}
+.fullSchedule__talk__part2--blue {
+  background-color: #4b78cb;
+}
+.fullSchedule__talk__part2--yellow {
+  background-color: #fdba1d;
+}
+.fullSchedule__talk__part2--purple {
+  background-color: #bf3fa7;
+}
+.fullSchedule__talk__part2--green {
+  background-color: #4bac76;
+}
+.fullSchedule__talk__part2--orange {
+  background-color: #f6922e;
+}
+.fullSchedule__talk__part2--red {
+  background-color: #f34e66;
+}
+.fullSchedule__talk__part2--pink {
+  background-color: #e3248b;
+}
+.fullSchedule__talk__part2--turquoise {
+  background-color: #33bab5;
+}
+.fullSchedule__talk__part2--brown {
+  background-color: #dca242;
+}
+.fullSchedule__talk__part2--grey, .fullSchedule__talk__part2--none {
+  background-color: #c1c1c1;
+}
+.fullSchedule__talk__theme, .fullSchedule__talk__type, .fullSchedule__talk__level, .fullSchedule__talk__language {
+  margin-top: 0.6rem;
+}
+.fullSchedule__talk__speakers {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
-.fullSchedule__talk-speaker {
-  color: #777;
-  text-decoration-style: dotted;
-  font-style: italic;
+.fullSchedule__talk__speaker:not(:first-child) {
+  margin-top: 0.8rem;
 }
-.fullSchedule__talk-like {
+.fullSchedule__talk__speakerPhoto {
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-size: cover;
+}
+.fullSchedule__talk__speakerName {
+  vertical-align: middle;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.fullSchedule__talk__like {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0.5em;
+  top: 1rem;
+  right: 1rem;
 }
-.fullSchedule__talk-like svg {
+.fullSchedule__talk__like svg {
   color: #777;
 }
-.fullSchedule__talk-like[data-like='true'] svg {
+.fullSchedule__talk__like[data-like='true'] svg {
   color: #cc0303;
+}
+.fullSchedule__talk__nbLikes {
+  font-size: 1.2rem;
 }
 .fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
   text-align: center;
@@ -400,46 +475,46 @@ th.fullSchedule-time-title {
   background-color: #fdc950;
 }
 .talk-theme-green {
-  background-color: #7ba218;
+  background-color: #4bac76;
 }
 .talksFilter-options .talk-theme-green:hover, .talk-theme-green:focus {
-  background-color: #9dce1f;
+  background-color: #6bbf90;
 }
 .talk-theme-purple {
-  background-color: #844990;
+  background-color: #bf3fa7;
 }
 .talksFilter-options .talk-theme-purple:hover, .talk-theme-purple:focus {
-  background-color: #a05eae;
+  background-color: #cc65b9;
 }
 .talk-theme-orange {
-  background-color: #ff7826;
+  background-color: #f6922e;
 }
 .talksFilter-options .talk-theme-orange:hover, .talk-theme-orange:focus {
-  background-color: #ff9e63;
+  background-color: #f9b169;
 }
 .talk-theme-red {
-  background-color: #cc0000;
+  background-color: #f34e66;
 }
 .talksFilter-options .talk-theme-red:hover, .talk-theme-red:focus {
-  background-color: #f50000;
+  background-color: #f67487;
 }
 .talk-theme-pink {
-  background-color: #fd5ea7;
+  background-color: #e3248b;
 }
 .talksFilter-options .talk-theme-pink:hover, .talk-theme-pink:focus {
-  background-color: #fe90c3;
+  background-color: #e951a3;
 }
 .talk-theme-turquoise {
-  background-color: #00bacd;
+  background-color: #33bab5;
 }
 .talksFilter-options .talk-theme-turquoise:hover, .talk-theme-turquoise:focus {
-  background-color: #00dff6;
+  background-color: #49cdc8;
 }
 .talk-theme-brown {
-  background-color: #9e4a17;
+  background-color: #dca242;
 }
 .talksFilter-options .talk-theme-brown:hover, .talk-theme-brown:focus {
-  background-color: #c25b1c;
+  background-color: #e2b364;
 }
 
 .talk-level {
