@@ -1,6 +1,8 @@
 <div class="talkDetails">
     <div class="talkDetails__header">
-        <div class="talkDetails__title">${_talk.title}</div>
+        <div class="talkDetails__micro">
+            <div class="talkDetails__title">${_talk.title}</div>
+        </div>
         #{if _talk.speakers}
         <div class="talkDetails__speakers">
             #{list items: _talk.speakers, as: 'speaker'}
@@ -24,7 +26,7 @@
             >
             #{/if} #{if _talk.language}
             <span class="talkDetails__metadata--item"
-                >#{language language:_talk.language/}</span
+                >&{'views.application.talk.' + _talk.language}</span
             >
             #{/if}
         </div>

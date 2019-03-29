@@ -64,9 +64,10 @@ $avatar-size-sm: 150px;
     }
 
     &__header {
+        margin: 0 auto;
+        padding: 2rem 0;
         border-radius: $borderRadius $borderRadius 0 0;
         color: $color-white;
-        margin: 0 auto;
         width: 100%;
         text-align: center;
         background-color: $color-yellow;

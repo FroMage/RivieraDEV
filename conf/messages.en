@@ -297,6 +297,8 @@ views.application.talk.track.allTracks=Plenary
 views.application.talk.room=Room
 views.application.talk.day=Day
 views.application.talk.hour=Hour
+views.application.talk.EN=English
+views.application.talk.FR=French
 
 views.application.cfp.title=Call for papers
 views.application.cfp.opens=<strong>CFP opens:</strong> November 19, 2018
