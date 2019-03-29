@@ -377,6 +377,21 @@
 }
 .fullSchedule__talk__theme, .fullSchedule__talk__type, .fullSchedule__talk__level, .fullSchedule__talk__language {
   margin-top: 0.6rem;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 2rem;
+}
+.fullSchedule__talk__theme {
+  background-image: url(../images/icons/talk-theme.svg);
+}
+.fullSchedule__talk__type {
+  background-image: url(../images/icons/talk-type.svg);
+}
+.fullSchedule__talk__level {
+  background-image: url(../images/icons/talk-level.svg);
+}
+.fullSchedule__talk__language {
+  background-image: url(../images/icons/talk-lang.svg);
 }
 .fullSchedule__talk__speakers {
   list-style-type: none;
