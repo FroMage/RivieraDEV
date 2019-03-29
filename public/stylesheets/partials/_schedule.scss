@@ -9,17 +9,29 @@ $avatar-size: 30px;
         background-position: 0 30%;
     }
 
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: $screen-md-min) {
+            width: 95%;
+        }
+        @media (min-width: $screen-lg-min) {
+            width: 90%;
+        }
+    }
+
     &--desktop {
         display: none;
 
-        @media (min-width: $screen-sm-min) {
+        @media (min-width: $screen-md-min) {
             display: block;
         }
     }
     &--mobile {
         display: block;
 
-        @media (min-width: $screen-sm-min) {
+        @media (min-width: $screen-md-min) {
             display: none;
         }
     }
@@ -132,6 +144,7 @@ $avatar-size: 30px;
             border-radius: $border-radius-sm;
             box-shadow: $shadow-sm;
             text-decoration: none;
+            word-break: break-word;
 
             &--link {
                 &:hover,
