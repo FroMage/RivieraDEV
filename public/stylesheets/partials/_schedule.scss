@@ -93,7 +93,7 @@
         &--7tracks {
             width: 12.8%;
         }
-    &--xs {
+        &--xs {
             width: 90%;
         }
     }
@@ -104,7 +104,6 @@
 
     &__time {
         background-color: $color-gray-ultralight;
-        border: $border-sm solid $color-gray-light;
         border-radius: $border-radius-sm;
         text-align: center;
         font-size: $font-xxl;
@@ -181,10 +180,6 @@
     }
 
     &__breakfast {
-        /* @include backgroundImageWithDarkGradient(
-            '../images/illustrations/registration.jpg'
-        );
-        background-position: 0 45%; */
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/croissants.jpg'
         );
@@ -199,25 +194,13 @@
     }
 
     &__cofeeBreak {
-        /*@include backgroundImageWithDarkGradient(
-            '../images/illustrations/cofee_break.jpg'
-        );
-        background-position: 0 80%;*/
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/cofee_break_2.jpg'
+            '../images/illustrations/cofee_break.jpg'
         );
         background-position: 0 30%;
     }
 
     &__party {
-        /* @include backgroundImageWithDarkGradient(
-            '../images/illustrations/beers.jpg'
-        );
-        background-position: bottom 0 left 0;*/
-        /* @include backgroundImageWithDarkGradient(
-            '../images/illustrations/piano.jpg'
-        );
-        background-position: 0 75%; */
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/guitars.jpg'
         );
