@@ -207,6 +207,22 @@ $avatar-size: 30px;
         &__level,
         &__language {
             margin-top: $space-xxs;
+            background-repeat: no-repeat;
+            background-position: top left;
+            padding-left: $space-md;
+        }
+
+        &__theme {
+            background-image: url(../images/icons/talk-theme.svg);
+        }
+        &__type {
+            background-image: url(../images/icons/talk-type.svg);
+        }
+        &__level {
+            background-image: url(../images/icons/talk-level.svg);
+        }
+        &__language {
+            background-image: url(../images/icons/talk-lang.svg);
         }
 
         &__speakers {
