@@ -320,7 +320,7 @@
 .fullSchedule__talk__item--link:hover, .fullSchedule__talk__item--link:focus, .fullSchedule__talk__item--link:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
 }
-.fullSchedule__talk__part1, .fullSchedule__talk__part2 {
+.fullSchedule__talk__part, .fullSchedule__talk__part1, .fullSchedule__talk__part2 {
   padding: 1rem;
 }
 .fullSchedule__talk__part1 {
