@@ -149,12 +149,56 @@ $color-theme-turquoise: #00bacd;
     }
 
     &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: $borderRadius $borderRadius 0 0;
         color: $color-white;
         margin: 0 auto;
+        padding: 2rem 0;
         width: 100%;
         text-align: center;
         background-color: $color-yellow;
+        font-weight: 300;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        &:before,
+        &:after {
+            margin: 0 0.2em;
+            font-size: 1.5em;
+        }
+
+        &:before {
+            content: '«';
+        }
+
+        &:after {
+            content: '»';
+        }
+    }
+
+    &__micro {
+        display: flex;
+    }
+
+    &__micro:before {
+        content: '';
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        background-image: url(../images/icons/microphone-white.svg);
+        vertical-align: text-bottom;
+    }
+
+    &__speakers {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        text-align: left;
+        border-left: $color-white 1px solid;
     }
 
     &__body {
@@ -166,6 +210,8 @@ $color-theme-turquoise: #00bacd;
     }
 
     &__metadata {
+        font-size: $font-xxs;
+        margin: 1.5em;
         text-align: center;
         &--item {
             padding: 0.3em 1.5em;
