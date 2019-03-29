@@ -158,11 +158,11 @@ $avatar-size-sm: 150px;
         }
 
         &:before {
-            content: '«';
+            content: '\00ab';
         }
 
         &:after {
-            content: '»';
+            content: '\00bb';
         }
     }
 }
