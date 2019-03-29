@@ -2290,13 +2290,21 @@ body.burgerMenu--open .burgerMenu:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
+.fullSchedule__talk__item--link:hover, .fullSchedule__talk__item--link:focus, .fullSchedule__talk__item--link:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
 .fullSchedule__talk__part1, .fullSchedule__talk__part2 {
   padding: 1rem;
+}
+.fullSchedule__talk__part1 {
+  flex: 1;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #ddd;
+  border-bottom: none;
 }
 .fullSchedule__talk__title {
   display: block;
@@ -2321,36 +2329,49 @@ body.burgerMenu--open .burgerMenu:before {
   position: relative;
   border-radius: 0 0 10px 10px;
   color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
 }
 .fullSchedule__talk__part2--blue {
   background-color: #4b78cb;
+  border-color: #4b78cb;
 }
 .fullSchedule__talk__part2--yellow {
   background-color: #fdba1d;
+  border-color: #fdba1d;
 }
 .fullSchedule__talk__part2--purple {
   background-color: #bf3fa7;
+  border-color: #bf3fa7;
 }
 .fullSchedule__talk__part2--green {
   background-color: #4bac76;
+  border-color: #4bac76;
 }
 .fullSchedule__talk__part2--orange {
   background-color: #f6922e;
+  border-color: #f6922e;
 }
 .fullSchedule__talk__part2--red {
   background-color: #f34e66;
+  border-color: #f34e66;
 }
 .fullSchedule__talk__part2--pink {
   background-color: #e3248b;
+  border-color: #e3248b;
 }
 .fullSchedule__talk__part2--turquoise {
   background-color: #33bab5;
+  border-color: #33bab5;
 }
 .fullSchedule__talk__part2--brown {
   background-color: #dca242;
+  border-color: #dca242;
 }
 .fullSchedule__talk__part2--grey, .fullSchedule__talk__part2--none {
   background-color: #c1c1c1;
+  border-color: #c1c1c1;
 }
 .fullSchedule__talk__theme, .fullSchedule__talk__type, .fullSchedule__talk__level, .fullSchedule__talk__language {
   margin-top: 0.6rem;
@@ -2373,7 +2394,7 @@ body.burgerMenu--open .burgerMenu:before {
 .fullSchedule__talk__speakers {
   list-style-type: none;
   padding-left: 0;
-  margin: 0;
+  margin: 0 3rem 0 0;
 }
 .fullSchedule__talk__speaker:not(:first-child) {
   margin-top: 0.8rem;

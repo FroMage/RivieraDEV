@@ -69,13 +69,14 @@
                                     #{if !talk.isHiddenInTalksPage}
 										<a href="@{Application.talk(talk.id)}"
 											class="fullSchedule__talk__item
-													talksFilter-item
-													js-fullSchedule-talk-item
-                                                    js-talksFilter-item 
-                                                    js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
-                                                    js-talksFilter-level-${talk.level?.code}
-                                                    js-talksFilter-type-${talk.type?.toString()?.slugify()}
-													js-talksFilter-language-${talk.language?.toString()?.slugify()}">
+												fullSchedule__talk__item--link
+												talksFilter-item
+												js-fullSchedule-talk-item
+                                                js-talksFilter-item 
+                                                js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
+                                                js-talksFilter-level-${talk.level?.code}
+                                                js-talksFilter-type-${talk.type?.toString()?.slugify()}
+												js-talksFilter-language-${talk.language?.toString()?.slugify()}">
 
 											<div class="fullSchedule__talk__part1">
 												<div class="fullSchedule__talk__title">${talk.title}</div>
