@@ -155,8 +155,7 @@ $color-theme-turquoise: #00bacd;
         border-radius: $borderRadius $borderRadius 0 0;
         color: $color-white;
         margin: 0 auto;
-        padding: 2rem 0;
-        width: 100%;
+        padding: 5%;
         text-align: center;
         background-color: $color-yellow;
         font-weight: 300;
@@ -182,6 +181,11 @@ $color-theme-turquoise: #00bacd;
 
     &__micro {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: $screen-sm-min) {
+            align-items: flex-start;
+        }
     }
 
     &__micro:before {
@@ -189,9 +193,8 @@ $color-theme-turquoise: #00bacd;
         display: inline-block;
         width: 1.5em;
         height: 1.5em;
-        vertical-align: middle;
         background-image: url(../images/icons/microphone-white.svg);
-        vertical-align: text-bottom;
+        background-repeat: no-repeat;
     }
 
     &__speakers {
@@ -212,6 +215,7 @@ $color-theme-turquoise: #00bacd;
     &__metadata {
         font-size: $font-xxs;
         margin: 1.5em;
+        line-height: 2.5em;
         text-align: center;
         &--item {
             padding: 0.3em 1.5em;
@@ -219,6 +223,14 @@ $color-theme-turquoise: #00bacd;
             background-color: $color-gray-light;
             border: $color-gray solid 1px;
             margin: 0 1%;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }
