@@ -2010,6 +2010,7 @@ body.burgerMenu--open .burgerMenu:before {
 }
 
 .personDetails {
+  position: relative;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -2099,6 +2100,12 @@ body.burgerMenu--open .burgerMenu:before {
 }
 .personDetails__talk:after {
   content: '\00bb';
+}
+.personDetails__admin {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .photos {
