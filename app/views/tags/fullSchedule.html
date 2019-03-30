@@ -60,7 +60,7 @@
                 #{else}
                     #{list items: tracks, as: 'track'}
                         %{talks = slot.getTalksPerTrack(track);}%
-                        <td class="js-talksFilter-toFilter fullSchedule__talk__cell">
+                        <td class="js-talksFilter-toFilter js-fullSchedule-talk-cell fullSchedule__talk__cell">
                             #{list items: talks, as: 'talk'}
                                 #{if talk}
                                     #{if !talk.isHiddenInTalksPage}
@@ -91,11 +91,9 @@
                                                     #{if talk.theme}
                                                         <div class="fullSchedule__talk__theme">${talk.theme}</div>
                                                     #{/if}
-
                                                     #{if talk.type}
                                                         <div class="fullSchedule__talk__type">${talk.type}</div>
                                                     #{/if}
-
                                                     #{if talk.level}
                                                         <div class="fullSchedule__talk__level">&{'views.application.schedule.level.' + talk.level.code}</div>
                                                     #{/if}
