@@ -48,7 +48,7 @@
                         #{if talk}
                             <tr>
                                 <td class="js-talksFilter-toFilter fullSchedule__talk__cell">
-                                    #{talkItem talk: talk/}    
+                                    #{talkItem talk: talk, user: _user/}    
                                 </td>
                             </tr>
                         #{/if}
@@ -56,11 +56,6 @@
                 #{/else}
             
             #{/list}
-            #{if _user}
-                <tr>
-                    <td><a href="@{Slots.blank()}">add slot</a></td>
-                </tr>
-            #{/if}
             
         </table>
         

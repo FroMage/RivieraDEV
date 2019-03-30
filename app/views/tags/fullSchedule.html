@@ -62,19 +62,13 @@
                         %{talks = slot.getTalksPerTrack(track);}%
                         <td class="js-talksFilter-toFilter js-fullSchedule-talk-cell fullSchedule__talk__cell">
                             #{list items: talks, as: 'talk'}
-                                #{talkItem talk: talk/}
+                                #{talkItem talk: talk, user: _user/}
                             #{/list}
                         </td>
                     #{/list}
                 #{/else}
             </tr>
             #{/list}
-            #{if user}
-                <tr>
-                    <td><a href="@{Slots.blank()}">add slot</a></td>
-                </tr>
-            #{/if}
-            
         </table>
 
     </div>

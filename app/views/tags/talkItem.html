@@ -70,6 +70,10 @@
     #{else}
         <div class="fullSchedule__talk__item js-fullSchedule-talk-item fullSchedule__talk__part">
             <span class="fullSchedule__talk__title">${talk.title}</span>
+            
+            #{if _user}
+                <a class="talkDetails__admin" href="@{Talks.show(_talk.id)}">edit</a>
+            #{/if}
         </div>
     #{/else}
 #{/if}
