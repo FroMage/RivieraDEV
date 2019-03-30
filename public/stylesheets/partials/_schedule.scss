@@ -75,7 +75,10 @@ $avatar-size: 30px;
     width: 100%;
     table-layout: fixed;
     border-spacing: $space-sm;
-    margin: -#{$space-sm};
+
+    @media (min-width: $screen-md-min) {
+        margin: -#{$space-sm};
+    }
 
     &__admin {
         font-size: $font-xxs;
