@@ -1,6 +1,3 @@
-<div class="like-explanation">
-	&{'views.application.schedule.like.explanation'}
-</div>
 
 <span class="js-schedule-filterDay schedule-day-filter schedule-day fullSchedule-day schedule-dayAll" data-day='all' onclick="showDay(this, 'all')">&{'views.application.schedule.allDays'}</span>
 #{list items: _days, as: 'day'}
@@ -10,134 +7,134 @@
 #{list items: _days, as: 'day'}
 
     %{tracks = _tracksPerDays.get(day);}%
-	
-	<div class="js-schedule-day" data-day='${day_index}'>
-		<h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
+    
+    <div class="js-schedule-day" data-day='${day_index}'>
+        <h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
 
-		<table class="fullSchedule">
+        <table class="fullSchedule">
 
-			<col class="fullSchedule__col--time">
-			#{list items: tracks, as: 'track'}
-				<col class="fullSchedule__col--${tracks.size()}tracks">
-			#{/list}
-			
-			<!--
-			<tr>
-				<th></th>
-				#{list items: tracks, as: 'track'}
-					<th class="fullSchedule__track" scope="col">
-						${track.title}
-						#{if _user}
-							<br/>
-							<a href="@{Tracks.show(track.id)}">edit</a>
-						#{/if}
-					</th>
-				#{/list}
-			</tr>
-			-->
+            <col class="fullSchedule__col--time">
+            #{list items: tracks, as: 'track'}
+                <col class="fullSchedule__col--${tracks.size()}tracks">
+            #{/list}
+            
+            <!--
+            <tr>
+                <th></th>
+                #{list items: tracks, as: 'track'}
+                    <th class="fullSchedule__track" scope="col">
+                        ${track.title}
+                        #{if _user}
+                            <br/>
+                            <a href="@{Tracks.show(track.id)}">edit</a>
+                        #{/if}
+                    </th>
+                #{/list}
+            </tr>
+            -->
 
-			#{list items: models.Slot.findMultiPerDay(day), as: 'slot'}
-			<tr>
-				<th class="fullSchedule__time" scope="row">
-					<span>${slot.startDate.format('HH:mm')}</span>
-					#{if _user}
-						<a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
-					#{/if}
-				</th>
+            #{list items: models.Slot.findMultiPerDay(day), as: 'slot'}
+            <tr>
+                <th class="fullSchedule__time" scope="row">
+                    <span>${slot.startDate.format('HH:mm')}</span>
+                    #{if _user}
+                        <a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
+                    #{/if}
+                </th>
 
-				%{allTracksEvent = slot.allTracksEvent}%
-				#{if allTracksEvent } <!-- One talk for all tracks -->
-					<td colspan="${tracks.size()}" class="fullSchedule__${allTracksEvent.isBreak.code}">
-						#{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-							<span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
-						#{/if}
-						#{else}
-							<!-- If it's not a break, it should have a track assigned -->
-						#{/else}
-						#{if _user}
-							<a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
-						#{/if}
-					</td>
-				#{/if}
+                %{allTracksEvent = slot.allTracksEvent}%
+                #{if allTracksEvent } <!-- One talk for all tracks -->
+                    <td colspan="${tracks.size()}" class="fullSchedule__${allTracksEvent.isBreak.code}">
+                        #{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+                            <span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
+                        #{/if}
+                        #{else}
+                            <!-- If it's not a break, it should have a track assigned -->
+                        #{/else}
+                        #{if _user}
+                            <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
+                        #{/if}
+                    </td>
+                #{/if}
 
                 #{else}
-					#{list items: tracks, as: 'track'}
+                    #{list items: tracks, as: 'track'}
                         %{talks = slot.getTalksPerTrack(track);}%
-						<td class="js-talksFilter-toFilter js-fullSchedule-talk-cell fullSchedule__talk__cell">
+                        <td class="js-talksFilter-toFilter fullSchedule__talk__cell">
                             #{list items: talks, as: 'talk'}
                                 #{if talk}
                                     #{if !talk.isHiddenInTalksPage}
-										<a href="@{Application.talk(talk.id)}"
-											class="fullSchedule__talk__item
-												fullSchedule__talk__item--link
-												talksFilter-item
-												js-fullSchedule-talk-item
+                                        <a href="@{Application.talk(talk.id)}"
+                                            class="fullSchedule__talk__item
+                                                fullSchedule__talk__item--link
+                                                talksFilter-item
+                                                js-fullSchedule-talk-item
                                                 js-talksFilter-item 
                                                 js-talksFilter-theme-${talk.theme?.theme?.slugify()} 
                                                 js-talksFilter-level-${talk.level?.code}
                                                 js-talksFilter-type-${talk.type?.toString()?.slugify()}
-												js-talksFilter-language-${talk.language?.toString()?.slugify()}">
+                                                js-talksFilter-language-${talk.language?.toString()?.slugify()}">
 
-											<div class="fullSchedule__talk__part1">
-												<div class="fullSchedule__talk__title">${talk.title}</div>
+                                            <div class="fullSchedule__talk__part1">
+                                                <div class="fullSchedule__talk__title">${talk.title}</div>
 
-												<div class="fullSchedule__talk__slotTrack">
-													<div class="fullSchedule__talk__slot">
-														${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
-													</div>
-													<div class="fullSchedule__talk__track">
-														${talk.track.title}
-													</div>
-												</div>
+                                                <div class="fullSchedule__talk__slotTrack">
+                                                    <div class="fullSchedule__talk__slot">
+                                                        ${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+                                                    </div>
+                                                    <div class="fullSchedule__talk__track">
+                                                        ${talk.track.title}
+                                                    </div>
+                                                </div>
 
-												<div class="fullSchedule__talk__infos">
-													#{if talk.theme}
-														<div class="fullSchedule__talk__theme">${talk.theme}</div>
-													#{/if}
+                                                <div class="fullSchedule__talk__infos">
+                                                    #{if talk.theme}
+                                                        <div class="fullSchedule__talk__theme">${talk.theme}</div>
+                                                    #{/if}
 
-													#{if talk.type}
-														<div class="fullSchedule__talk__type">${talk.type}</div>
-													#{/if}
+                                                    #{if talk.type}
+                                                        <div class="fullSchedule__talk__type">${talk.type}</div>
+                                                    #{/if}
 
-													#{if talk.level}
-														<div class="fullSchedule__talk__level">&{'views.application.schedule.level.' + talk.level.code}</div>
-													#{/if}
-													#{if talk.language}
-														<div class="fullSchedule__talk__language" aria-label="&{'views.application.schedule.language.' + talk.language}">
-															${talk.language}
-														</div>
-													#{/if}
-												</div>
-											</div>
-											
-											<div class="fullSchedule__talk__part2 fullSchedule__talk__part2--${talk.theme ? talk.theme.color.code : 'none'}">
-												<ul class="fullSchedule__talk__speakers">
-													#{list items: talk.speakers, as: 'speaker'}
-														<li class="fullSchedule__talk__speaker">
-															<div
-																class="fullSchedule__talk__speakerPhoto"
-																style="background-image: url('@{Application.speakerPhoto(speaker.id)}')"
-															></div>
-															<span class="fullSchedule__talk__speakerName" href="@{Application.speaker(speaker.id)}">
-																${speaker.firstName} ${speaker.lastName}
-															</span>
-														</li>
-													#{/list}
-												</ul>
-												
-												<div class="fullSchedule__talk__like js-talksFilter-like" data-talk="${talk.id}" onclick="event.preventDefault(); likeTalk(this,'${talk.id}')">
-													#{if _user}
-														<span class="fullSchedule__talk__nbLikes">${talk.nbLikes}</span>
-													#{/if}
-													<i class="far fa-heart"></i>
-												</div>
-											</div>
+                                                    #{if talk.level}
+                                                        <div class="fullSchedule__talk__level">&{'views.application.schedule.level.' + talk.level.code}</div>
+                                                    #{/if}
+                                                    #{if talk.language}
+                                                        <div class="fullSchedule__talk__language" aria-label="&{'views.application.schedule.language.' + talk.language}">
+                                                            ${talk.language}
+                                                        </div>
+                                                    #{/if}
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="fullSchedule__talk__part2 fullSchedule__talk__part2--${talk.theme ? talk.theme.color.code : 'none'}">
+                                                <ul class="fullSchedule__talk__speakers">
+                                                    #{list items: talk.speakers, as: 'speaker'}
+                                                        <li class="fullSchedule__talk__speaker">
+                                                            <div
+                                                                class="fullSchedule__talk__speakerPhoto"
+                                                                style="background-image: url('@{Application.speakerPhoto(speaker.id)}')"
+                                                            ></div>
+                                                            <span class="fullSchedule__talk__speakerName" href="@{Application.speaker(speaker.id)}">
+                                                                ${speaker.firstName} ${speaker.lastName}
+                                                            </span>
+                                                        </li>
+                                                    #{/list}
+                                                </ul>
+                                                
+                                                <div class="fullSchedule__talk__like js-talksFilter-like" data-talk="${talk.id}" onclick="event.preventDefault(); likeTalk(this,'${talk.id}')">
+                                                    #{if _user}
+                                                        <span class="fullSchedule__talk__nbLikes">${talk.nbLikes}</span>
+                                                    #{/if}
+                                                    <i class="far fa-heart"></i>
+                                                </div>
+                                            </div>
                                         </a>
                                     #{/if}
-									#{else}
-										<div class="fullSchedule__talk__item js-fullSchedule-talk-item fullSchedule__talk__part">
-											<span class="fullSchedule__talk__title">${talk.title}</span>
-										</div>
+                                    #{else}
+                                        <div class="fullSchedule__talk__item js-fullSchedule-talk-item fullSchedule__talk__part">
+                                            <span class="fullSchedule__talk__title">${talk.title}</span>
+                                        </div>
                                     #{/else}
                                 #{/if}
 
@@ -149,18 +146,18 @@
                                     #{/if}
                                 #{/else}
                             #{/list}
-						</td>
-					#{/list}
-				#{/else}
-			</tr>
-			#{/list}
-			#{if user}
-				<tr>
-					<td><a href="@{Slots.blank()}">add slot</a></td>
-				</tr>
-			#{/if}
-			
-		</table>
+                        </td>
+                    #{/list}
+                #{/else}
+            </tr>
+            #{/list}
+            #{if user}
+                <tr>
+                    <td><a href="@{Slots.blank()}">add slot</a></td>
+                </tr>
+            #{/if}
+            
+        </table>
 
-	</div>
+    </div>
 #{/list}
