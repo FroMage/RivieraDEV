@@ -2587,6 +2587,7 @@ th.fullSchedule-time-title {
 }
 
 .talkDetails {
+  position: relative;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -2669,6 +2670,12 @@ th.fullSchedule-time-title {
 }
 .talkDetails__metadata--item:last-child {
   margin-right: 0;
+}
+.talkDetails__admin {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .talksFilter input[type='checkbox'] {
