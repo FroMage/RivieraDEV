@@ -5,6 +5,7 @@
 
     & label {
         display: flex;
+        position: relative;
 
         & .talksFilter__item--text {
             cursor: pointer;
@@ -45,6 +46,19 @@
     &__item {
         margin: 1rem 0;
         font-size: $font-xxs;
+
+        &--text:before {
+            content: '';
+            display: block;
+            border-bottom: $color-white 1px solid;
+            border-left: $color-white 1px solid;
+            width: 0.7rem;
+            height: 0.3rem;
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 0.3rem;
+            top: 0.35rem;
+        }
     }
 
     &__buttons {
