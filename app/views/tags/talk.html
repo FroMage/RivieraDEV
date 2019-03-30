@@ -31,4 +31,7 @@
             #{/if}
         </div>
     </div>
+    #{if _user}
+        <a class="talkDetails__admin" href="@{Talks.show(_talk.id)}">edit</a>
+    #{/if}
 </div>

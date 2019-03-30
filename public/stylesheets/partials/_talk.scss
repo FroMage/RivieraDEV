@@ -132,6 +132,7 @@
 }
 
 .talkDetails {
+    position: relative;
     $borderRadius: 0.5rem;
 
     margin: 0 auto;
@@ -224,5 +225,12 @@
                 margin-right: 0;
             }
         }
+    }
+
+    &__admin {
+        font-size: $font-xs;
+        position: absolute;
+        bottom: $space-sm;
+        right: $space-sm;
     }
 }
