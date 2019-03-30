@@ -2690,6 +2690,7 @@ th.fullSchedule-time-title {
 }
 .talksFilter label {
   display: flex;
+  position: relative;
 }
 .talksFilter label .talksFilter__item--text {
   cursor: pointer;
@@ -2723,6 +2724,18 @@ th.fullSchedule-time-title {
 .talksFilter__item {
   margin: 1rem 0;
   font-size: 1.2rem;
+}
+.talksFilter__item--text:before {
+  content: '';
+  display: block;
+  border-bottom: #fff 1px solid;
+  border-left: #fff 1px solid;
+  width: 0.7rem;
+  height: 0.3rem;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 0.3rem;
+  top: 0.35rem;
 }
 .talksFilter__buttons {
   text-align: center;
