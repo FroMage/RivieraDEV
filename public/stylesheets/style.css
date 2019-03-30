@@ -2244,7 +2244,11 @@ body.burgerMenu--open .burgerMenu:before {
   width: 100%;
   table-layout: fixed;
   border-spacing: 1rem;
-  margin: -1rem;
+}
+@media (min-width: 992px) {
+  .fullSchedule {
+    margin: -1rem;
+  }
 }
 .fullSchedule__admin {
   font-size: 1.2rem;
