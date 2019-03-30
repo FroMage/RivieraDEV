@@ -55,6 +55,7 @@ $avatar-size-sm: 150px;
 }
 
 .personDetails {
+    position: relative;
     $borderRadius: 0.5rem;
 
     margin: 0 auto;
@@ -164,5 +165,12 @@ $avatar-size-sm: 150px;
         &:after {
             content: '\00bb';
         }
+    }
+
+    &__admin {
+        font-size: $font-xs;
+        position: absolute;
+        bottom: $space-sm;
+        right: $space-sm;
     }
 }

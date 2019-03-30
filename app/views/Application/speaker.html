@@ -50,5 +50,8 @@ play.i18n.Messages.get('views.application.speaker.title') /}
                 #{/list}
             </div>
         </div>
+        #{if user}
+            <a class="personDetails__admin" href="@{Speakers.show(speaker.id)}">edit</a>
+        #{/if}
     </div>
 </div>
