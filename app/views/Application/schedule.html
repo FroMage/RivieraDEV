@@ -20,7 +20,7 @@
 
         <div class="schedule__days">
             #{list items: days, as: 'day'}
-            <h2 class="schedule__day schedule__day--selected fullSchedule-day schedule-day${day_index}" onclick="scheduleSwiper.slideTo(${day_index - 1})">${day.format('EEEE dd MMMM yyyy')}</h2>
+            <h2 class="schedule__day fullSchedule-day js-schedule-day${day_index} schedule-day${day_index}" onclick="scheduleSwiper.slideTo(${day_index - 1})">${day.format('EEEE dd MMMM yyyy')}</h2>
             #{/list}
         </div>
 
@@ -80,4 +80,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <script>
 let scheduleSwiper = new Swiper ('.swiper-container');
+let updateDateSelected = () => {
+    // Revove 'selected' class on previous tab
+    let previousTab = document.getElementsByClassName('js-schedule-day' + (scheduleSwiper.previousIndex + 1));
+    if(previousTab && previousTab.length === 1){
+        previousTab[0].classList.remove('schedule__day--selected');
+    }
+    // Add 'selected' class on new active tab
+    let newTab = document.getElementsByClassName('js-schedule-day' + (scheduleSwiper.activeIndex + 1));
+    if(newTab && newTab.length === 1){
+        newTab[0].classList.add('schedule__day--selected');
+    }
+};
+scheduleSwiper.on('slideChange', updateDateSelected);
+// Init first select tab
+updateDateSelected();
 </script>
