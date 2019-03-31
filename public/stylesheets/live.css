@@ -218,8 +218,12 @@
 }
 .schedule__days {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .schedule__days {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .schedule__day {
   flex: 1;
