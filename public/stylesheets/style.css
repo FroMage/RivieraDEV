@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 1.6rem;
   position: relative;
   min-height: 100vh;
@@ -567,7 +567,6 @@ body.burgerMenu--open .burgerMenu:before {
     display: block;
     padding: 1rem 2%;
     z-index: 10;
-    font-family: Roboto, Noto, sans-serif;
     font-size: 1.4rem;
     position: fixed;
     right: 0;
@@ -692,7 +691,6 @@ body.burgerMenu--open .burgerMenu:before {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/photos/2018.jpg);
 }
 .parallax__content {
-  font-family: Roboto, Noto, sans-serif;
   text-align: center;
 }
 .parallax__logosContainer {
