@@ -21,8 +21,12 @@
   "homepage": "https://github.com/FroMage/RivieraDEV#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.11.0"
+    "gulp-wait": "0.0.2",
+    "merge-stream": "^1.0.1",
+    "node-sass": "^4.11.0",
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {}
 }
