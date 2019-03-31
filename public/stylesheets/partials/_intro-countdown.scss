@@ -36,8 +36,7 @@ $counter-item-size: 12rem;
     }
 
     &__subtitle {
-        font-size: $font-sm;
-        font-weight: 300;
+        font-size: $font-md;
         margin: $space-sm 0 $space-md 0;
 
         @media (min-width: $screen-sm-min) {
