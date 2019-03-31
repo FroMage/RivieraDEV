@@ -130,6 +130,111 @@ $sponsor-silver-height: 83px;
 }
 
 .partenaireDetails {
+    &__headerPage {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/sponsor-mini.jpg'
+        );
+        background-position: center;
+    }
+
+    position: relative;
+    $borderRadius: 0.5rem;
+
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm-min) {
+        width: 70%;
+    }
+
+    &__header {
+        margin: 0 auto;
+        padding: 2rem 0;
+        border-radius: $borderRadius $borderRadius 0 0;
+        color: $color-white;
+        width: 100%;
+        text-align: center;
+        background-color: $color-yellow;
+
+        &--content {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__name {
+        font-size: $font-xxl;
+        margin: $space-xxs;
+    }
+
+    &__network {
+        font-size: $font-xs;
+        line-height: 2em;
+        font-weight: 300;
+        & a {
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+
+    &__twitter,
+    &__website {
+        display: inline-block;
+    }
+
+    &__twitter {
+        margin-left: $space-md;
+    }
+
+    &__twitter:before,
+    &__website:before {
+        content: '';
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+    }
+
+    &__twitter:before {
+        background-image: url(../images/icons/twitter-logo-button.svg);
+    }
+
+    &__website:before {
+        background-image: url(../images/icons/link.svg);
+    }
+
+    &__logo {
+        display: block;
+        max-width: 70%;
+        max-height: 20rem;
+        text-align: center;
+        margin: $space-md auto;
+    }
+
+    &__body {
+        padding: 2% 10%;
+        border-radius: 0 0 $borderRadius $borderRadius;
+        background-color: $color-gray-ultralight;
+        font-size: $font-xs;
+        line-height: 1.4em;
+    }
+
+    &__desc {
+        text-align: left;
+        margin: $space-md 0;
+    }
+
+    &__admin {
+        font-size: $font-xs;
+        position: absolute;
+        bottom: $space-sm;
+        right: $space-sm;
+    }
+}
+
+/* OLD CSS */
+.partenaireDetails {
     margin-top: 2em;
     margin-bottom: 4em;
 

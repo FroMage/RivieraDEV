@@ -6,7 +6,7 @@
         </h3>
         <div class="partenaires__list">
             #{list items: _sponsors, as: 'sponsor'}
-                <a class="partenaire__link cardLink" href="@{Application.sponsors()}#${sponsor.company.slugify()}" title="${sponsor.company}">
+                <a class="partenaire__link cardLink" href="@{Application.sponsor(sponsor.id)}" title="${sponsor.company}">
                     <div class="partenaire__logo partenaire__logo--${_level}">
                         <img class="partenaire__logoImg" src="@{Application.sponsorLogo(sponsor.id)}" />
                     </div>

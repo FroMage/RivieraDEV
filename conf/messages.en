@@ -182,6 +182,7 @@ views.application.orgas.contact=Contact us
 
 views.application.orga.title=Organiser
 
+views.application.sponsor.title=Sponsor
 views.application.sponsors.title=Our sponsors
 views.application.sponsors.thanks=Sponsors help us organise Riviera DEV. Without them, none of this would be possible! Thanks!
 views.application.sponsors.join=Become sponsor
