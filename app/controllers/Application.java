@@ -64,7 +64,7 @@ public class Application extends Controller {
         String eventStartDateStr = getEventStartDate();
         String eventEndDateStr = getEventEndDate();
         boolean displayCountdown = false;
-        if(StringUtils.isNotBlank(eventStartDateStr) && StringUtils.isNotBlank(eventEndDateStr)) {
+        if (StringUtils.isNotBlank(eventStartDateStr) && StringUtils.isNotBlank(eventEndDateStr)) {
             SimpleDateFormat isoDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
             Date now = new Date();
             try {
@@ -93,8 +93,9 @@ public class Application extends Controller {
 
         boolean displayPreviousSpeakers = !displayNewSpeakers();
 
-        render(promotedPage2, displayCountdown, eventStartDateStr, eventEndDateStr, googleMapApiKey, displayPreviousSpeakers, sponsors,
-                lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears, speakersStar, latestNews);
+        render(promotedPage2, displayCountdown, eventStartDateStr, eventEndDateStr, googleMapApiKey,
+                displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears,
+                speakersStar, latestNews);
     }
 
     public static void news() {
@@ -120,41 +121,42 @@ public class Application extends Controller {
     }
 
     public static void subscribe() {
-		String ticketingUrl = getTicketingUrl();
-		boolean ticketingIsOpen = ticketingIsOpen();
+        String ticketingUrl = getTicketingUrl();
+        boolean ticketingIsOpen = ticketingIsOpen();
 
-		List<PricePack> pricePacks = PricePack.findAll();
-		List<PricePackDate> pricePackDatesList = PricePackDate.findAll();
-		PricePackDate pricePackDates = null;
-		if(pricePackDatesList != null && pricePackDatesList.size() >= 1) {
-			pricePackDates = pricePackDatesList.get(0);
-		}
-		List<PricePackCurrentState> pricePackCurrentStateList = new ArrayList<PricePackCurrentState>();
-		Date now = new Date();
-		for (PricePack pricePack : pricePacks) {
-			Integer currentPrice = null;
-			Integer maxPrice = null;
+        List<PricePack> pricePacks = PricePack.findAll();
+        List<PricePackDate> pricePackDatesList = PricePackDate.findAll();
+        PricePackDate pricePackDates = null;
+        if (pricePackDatesList != null && pricePackDatesList.size() >= 1) {
+            pricePackDates = pricePackDatesList.get(0);
+        }
+        List<PricePackCurrentState> pricePackCurrentStateList = new ArrayList<PricePackCurrentState>();
+        Date now = new Date();
+        for (PricePack pricePack : pricePacks) {
+            Integer currentPrice = null;
+            Integer maxPrice = null;
             PricePackPeriod currentPeriod = null;
             Long remainingDays = null;
-			if(now.before(pricePackDates.blindBirdEndDate)) {
+            if (now.before(pricePackDates.blindBirdEndDate)) {
                 currentPeriod = PricePackPeriod.BLIND_BIRD;
-				currentPrice = pricePack.blindBirdPrice;
-				maxPrice = pricePack.regularPrice;
+                currentPrice = pricePack.blindBirdPrice;
+                maxPrice = pricePack.regularPrice;
                 remainingDays = DateUtils.getDaysBetweenDates(now, pricePackDates.blindBirdEndDate);
-			} else if (now.before(pricePackDates.earlyBirdEndDate)) {
+            } else if (now.before(pricePackDates.earlyBirdEndDate)) {
                 currentPeriod = PricePackPeriod.EARLY_BIRD;
-				currentPrice = pricePack.earlyBirdPrice;
-				maxPrice = pricePack.regularPrice;
+                currentPrice = pricePack.earlyBirdPrice;
+                maxPrice = pricePack.regularPrice;
                 remainingDays = DateUtils.getDaysBetweenDates(now, pricePackDates.earlyBirdEndDate);
-			} else {
+            } else {
                 currentPeriod = PricePackPeriod.REGULAR;
-				currentPrice = pricePack.regularPrice;
+                currentPrice = pricePack.regularPrice;
                 if (now.before(pricePackDates.regularEndDate)) {
                     remainingDays = DateUtils.getDaysBetweenDates(now, pricePackDates.regularEndDate);
                 }
-			}
-			pricePackCurrentStateList.add(new PricePackCurrentState(pricePack.type, currentPrice, maxPrice, pricePack.studentPrice, currentPeriod, remainingDays));
-		}
+            }
+            pricePackCurrentStateList.add(new PricePackCurrentState(pricePack.type, currentPrice, maxPrice,
+                    pricePack.studentPrice, currentPeriod, remainingDays));
+        }
 
         render(ticketingUrl, ticketingIsOpen, pricePackCurrentStateList);
     }
@@ -237,6 +239,12 @@ public class Application extends Controller {
         Speaker speaker = Speaker.findById(id);
         notFoundIfNull(speaker);
         render(speaker);
+    }
+
+    public static void sponsor(Long id) {
+        Sponsor sponsor = Sponsor.findById(id);
+        notFoundIfNull(sponsor);
+        render(sponsor);
     }
 
     public static void talk(Long id) {
@@ -363,15 +371,19 @@ public class Application extends Controller {
     }
 
     /**
-	 * Retourne l'API KEY sauvée en BD.
-	 * En local, si la clé n'est pas définie alors la google map fonctionne quand même.
-	 * MAIS en Prod/Staging, il FAUT une API Key sinon la carte ne fonctionne pas c'est certainement une restriction google.
-																			   
-	 * L'API KEY de Prod ne peut pas être utilisée en local, car nous l'avons restreinte pour ne fonctionner qu'avec les domaines *.rivieradev.fr
-	 * et *.rivieradev.com afin de suivre les recommandations de sécurité décrites par Google.
-														
-	 * Pour générer une nouvelle API KEY : https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr 
-	 */
+     * Retourne l'API KEY sauvée en BD. En local, si la clé n'est pas définie alors
+     * la google map fonctionne quand même. MAIS en Prod/Staging, il FAUT une API
+     * Key sinon la carte ne fonctionne pas c'est certainement une restriction
+     * google.
+     * 
+     * L'API KEY de Prod ne peut pas être utilisée en local, car nous l'avons
+     * restreinte pour ne fonctionner qu'avec les domaines *.rivieradev.fr et
+     * *.rivieradev.com afin de suivre les recommandations de sécurité décrites par
+     * Google.
+     * 
+     * Pour générer une nouvelle API KEY :
+     * https://developers.google.com/maps/documentation/javascript/get-api-key?hl=Fr
+     */
     private static String getGoogleMapApiKey() {
         Configuration config = Configuration.find("key", ConfigurationKey.GOOGLE_MAP_API_KEY).first();
         if (config != null) {
@@ -426,21 +438,19 @@ public class Application extends Controller {
     }
 
     /**
-	 * Retourne la page à mettre en avant sur la home page et dans le menu.
-	 * 'CFP'      : La page du CFP
-	 * 'TICKETS'  : La page d'achat de tickets
-	 * 'SPONSORS' : La page pour devenir un sponsor
-	 */
+     * Retourne la page à mettre en avant sur la home page et dans le menu. 'CFP' :
+     * La page du CFP 'TICKETS' : La page d'achat de tickets 'SPONSORS' : La page
+     * pour devenir un sponsor
+     */
     private static String getPromotedPage() {
         Configuration config = Configuration.find("key", ConfigurationKey.PROMOTED_PAGE).first();
         return config != null ? config.value : "";
     }
 
     /**
-	 * Retourne la 2ème page à mettre en avant sur la home page.
-	 * 'SPONSORS' : La page pour devenir un sponsor
-	 * 'SCHEDULE' : Le programme
-	 */
+     * Retourne la 2ème page à mettre en avant sur la home page. 'SPONSORS' : La
+     * page pour devenir un sponsor 'SCHEDULE' : Le programme
+     */
     private static String getPromotedPage2() {
         Configuration config = Configuration.find("key", ConfigurationKey.PROMOTED_PAGE_2).first();
         return config != null ? config.value : "";
@@ -455,18 +465,18 @@ public class Application extends Controller {
     }
 
     /**
-	 * Retourne true s'il est possible d'acheter des billets. 
-	 * (utile pour enlever l'accès à la page de vente des billets)
-	 */
+     * Retourne true s'il est possible d'acheter des billets. (utile pour enlever
+     * l'accès à la page de vente des billets)
+     */
     private static boolean ticketingIsOpen() {
         Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_OPEN).first();
         return config != null && config.value.equals("true");
     }
 
     /**
-	 * Retourne true si le menu doit permettre d'afficher la page des talks
-	 * (utile pour enlever l'accès à la page tant qu'on n'a pas encore de talks)
-	 */
+     * Retourne true si le menu doit permettre d'afficher la page des talks (utile
+     * pour enlever l'accès à la page tant qu'on n'a pas encore de talks)
+     */
     private static boolean displayTalks() {
         Configuration config = Configuration.find("key", ConfigurationKey.DISPLAY_TALKS).first();
         return config != null && config.value.equals("true");

@@ -1299,6 +1299,92 @@ body.burgerMenu--open .burgerMenu:before {
   transition: all 0.2s; }
 
 .partenaireDetails {
+  position: relative;
+  margin: 0 auto;
+}
+.partenaireDetails__headerPage {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/sponsor-mini.jpg");
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .partenaireDetails {
+    width: 70%;
+  }
+}
+.partenaireDetails__header {
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  background-color: #fdba1d;
+}
+.partenaireDetails__header--content {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.partenaireDetails__name {
+  font-size: 3rem;
+  margin: 0.6rem;
+}
+.partenaireDetails__network {
+  font-size: 1.4rem;
+  line-height: 2em;
+  font-weight: 300;
+}
+.partenaireDetails__network a {
+  color: #fff;
+  text-decoration: none;
+}
+.partenaireDetails__twitter, .partenaireDetails__website {
+  display: inline-block;
+}
+.partenaireDetails__twitter {
+  margin-left: 2rem;
+}
+.partenaireDetails__twitter:before, .partenaireDetails__website:before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+.partenaireDetails__twitter:before {
+  background-image: url(../images/icons/twitter-logo-button.svg);
+}
+.partenaireDetails__website:before {
+  background-image: url(../images/icons/link.svg);
+}
+.partenaireDetails__logo {
+  display: block;
+  max-width: 70%;
+  max-height: 20rem;
+  text-align: center;
+  margin: 2rem auto;
+}
+.partenaireDetails__body {
+  padding: 2% 10%;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #f8f7f7;
+  font-size: 1.4rem;
+  line-height: 1.4em;
+}
+.partenaireDetails__desc {
+  text-align: left;
+  margin: 2rem 0;
+}
+.partenaireDetails__admin {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* OLD CSS */
+.partenaireDetails {
   margin-top: 2em;
   margin-bottom: 4em; }
   .partenaireDetails-logo {

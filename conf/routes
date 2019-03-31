@@ -24,7 +24,8 @@ GET     /talks                                  Application.talks
 GET     /session/{id}                           Application.talk(id)
 GET     /inscriptions                           Application.subscribe
 GET     /subscribe                              Application.subscribe
-GET     /sponsors                               Application.sponsors
+GET     /sponsor/{id}                           Application.sponsor({id})
+GET     /sponsors                               Application.index
 GET     /becomeSponsor                          Application.becomeSponsor
 GET     /orga                                   Application.organisers
 GET     /live                                   Application.live

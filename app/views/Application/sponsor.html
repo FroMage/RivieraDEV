@@ -1,0 +1,43 @@
+#{extends 'main.html' /} #{set title: sponsor.company.toString() + ' - ' +
+play.i18n.Messages.get('views.application.sponsor.title') /}
+
+<div class="page__header partenaireDetails__headerPage">
+    <h1 class="page__mainTitle">&{'views.application.sponsor.title'}</h1>
+</div>
+
+<div class="page__container notFullWidth">
+        <div class="partenaireDetails">
+            <div class="partenaireDetails__header">
+                <h2 class="partenaireDetails__name">${sponsor.company}</h2>
+                <div class="partenaireDetails__network">
+                    #{if sponsor.companyURL}
+                        <div class="partenaireDetails__website">
+                            <a href="${sponsor.companyURL}" target="_blank">${sponsor.companyURL}</a>
+                        </div>
+                    #{/if}
+                    #{if sponsor.twitterAccount}
+                        <div class="partenaireDetails__twitter">
+                        <a
+                            href="https://twitter.com/${sponsor.twitterAccount}"
+                            target="_blank"
+                            >@${sponsor.twitterAccount}</a>
+                        </div>
+                    #{/if}
+                </div>
+            </div>
+            <div class="partenaireDetails__body">
+                <img class="partenaireDetails__logo" src="@{Application.sponsorLogo(sponsor.id)}" alt=""/>
+                <div class="partenaireDetails__desc">
+                    #{if play.i18n.Lang.get() == "en" && sponsor.aboutEN}
+                        ${sponsor.aboutEN?.md()}
+                    #{/if}
+                    #{else}
+                        ${sponsor.about?.md()}
+                    #{/else}
+                </div>
+            </div>
+            #{if user}
+                <a class="partenaireDetails__admin" href="@{Sponsors.show(sponsor.id)}">edit</a>
+            #{/if}
+        </div>
+    </div>
