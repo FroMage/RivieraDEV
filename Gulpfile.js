@@ -1,18 +1,21 @@
-let gulp = require('gulp');
-let compass = require('gulp-compass');
+'use strict';
 
 const SCSS_DIR = './public/stylesheets';
 
-// Compile SASS to CSS by Compass
-gulp.task('compass', function() {
- gulp.src(SCSS_DIR)
-   .pipe(compass({
-     css: SCSS_DIR,
-     sass: SCSS_DIR
-   }));
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+sass.compiler = require('node-sass');
+
+gulp.task('sass', function() {
+    return gulp
+        .src(SCSS_DIR + '/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css'));
 });
 
-//Watch task
-gulp.task('default',function() {
-    gulp.watch(SCSS_DIR + '/**/*.scss',['compass']);
+gulp.task('sass:watch', function() {
+    gulp.watch(SCSS_DIR + '/**/*.scss', ['sass']);
 });
+
+gulp.task('default', ['sass:watch']);

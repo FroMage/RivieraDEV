@@ -1,48 +1,48 @@
-.cfp{
-    &-intro{
-        @include display-flex();
-        @include flex-direction(row);
-        @include justify-content(space-between);
+.cfp {
+    &-intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         max-width: 60%;
         margin: 0 auto;
-        @include flex-wrap(wrap);
+        flex-wrap: wrap;
 
         @media (max-width: $screen-xs-max) {
             max-width: 90%;
         }
     }
-    &-propose{
-        @include align-self(center);
-        &--button{
+    &-propose {
+        align-self: center;
+        &--button {
             margin: 1em 0;
         }
     }
-    &-title{
+    &-title {
         margin-top: 2em;
     }
 }
 
-.talk{
+.talk {
     padding: 1em;
     margin-top: 2em;
 
-    &-keynote{
+    &-keynote {
         background-image: url(../images/backgrounds/polygon-05.jpg);
     }
 
-    &-conference{
+    &-conference {
         background-image: url(../images/backgrounds/polygon-05.jpg);
     }
 
-    &-RedHat{
+    &-RedHat {
         background-image: url(../images/backgrounds/polygon-04.jpg);
     }
 
-    &-snorkeling{
+    &-snorkeling {
         background-image: url(../images/backgrounds/polygon-05.jpg);
     }
 
-    &-atelier{
+    &-atelier {
         background-image: url(../images/backgrounds/polygon-05.jpg);
     }
 
@@ -54,7 +54,7 @@
         background-image: url(../images/backgrounds/polygon-06.jpg);
     }
 
-    &-title{
+    &-title {
         text-align: left;
         color: inherit;
         margin-top: 0;
@@ -63,35 +63,35 @@
         padding-left: 1em;
     }
 
-    &-item{
+    &-item {
         background-color: white;
     }
 
-    &-items{
+    &-items {
         padding: 0 2em 1em 2em;
         line-height: 2em;
         font-size: 1.1em;
     }
 
-    &-photos{
+    &-photos {
         padding: 0;
         text-align: center;
 
-        &--RedHat{
+        &--RedHat {
             padding: 2em 0;
         }
     }
 
-    &-photo{
+    &-photo {
         max-width: 100%;
         max-height: 100%;
         padding: 1em;
-        &--RedHat{
-            width: 100%
+        &--RedHat {
+            width: 100%;
         }
     }
 
-    &-description{
+    &-description {
         padding: 0 2em 1em 2em;
     }
 
