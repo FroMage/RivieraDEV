@@ -175,9 +175,9 @@ $sponsor-silver-height: 83px;
 
 .sponsorship {
     background-color: $color-white;
-    @include display-flex();
-    @include flex-direction(column);
-    @include justify-content(space-between);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &-title {
         text-align: center;
@@ -303,7 +303,7 @@ $sponsor-silver-height: 83px;
     .sponsorship {
         height: 100%;
         &-levels {
-            @include display-flex();
+            display: flex;
         }
         &-level {
             margin-bottom: 0;

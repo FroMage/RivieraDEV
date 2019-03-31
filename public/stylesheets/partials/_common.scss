@@ -58,7 +58,7 @@ body {
     border-style: solid;
     border-radius: $border-radius-xs;
     border-color: transparent;
-    @include transition(all 0.2s ease);
+    transition: all 0.2s ease;
 
     &:hover,
     &:active,

@@ -64,9 +64,6 @@ body {
   border-style: solid;
   border-radius: 4px;
   border-color: transparent;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .cardLink:hover, .cardLink:active, .cardLink:focus {
@@ -215,15 +212,11 @@ a:hover, a:active, a:focus {
 }
 
 .cfp-intro {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
   flex-direction: row;
-  -webkit-justify-content: space-between;
   justify-content: space-between;
   max-width: 60%;
   margin: 0 auto;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
@@ -232,7 +225,6 @@ a:hover, a:active, a:focus {
   }
 }
 .cfp-propose {
-  -webkit-align-self: center;
   align-self: center;
 }
 .cfp-propose--button {
@@ -1358,9 +1350,6 @@ body.burgerMenu--open .burgerMenu:before {
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: relative;
   padding: 7px 0;
@@ -1369,12 +1358,10 @@ body.burgerMenu--open .burgerMenu:before {
   width: 184px;
   background-color: #19b8d5;
   color: #fff;
-  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 .ribbon:before, .ribbon:after {
-  content: "";
+  content: '';
   border-top: 4px solid #00709d;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
@@ -1531,11 +1518,8 @@ body.burgerMenu--open .burgerMenu:before {
 }
 .sponsorship {
   background-color: #fff;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 .sponsorship-title {
@@ -1632,7 +1616,6 @@ body.burgerMenu--open .burgerMenu:before {
     height: 100%;
   }
   .sponsorship-levels {
-    display: -webkit-flex;
     display: flex;
   }
   .sponsorship-level {
