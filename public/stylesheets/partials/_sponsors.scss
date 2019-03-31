@@ -21,7 +21,7 @@ $sponsor-silver-height: 83px;
         margin: 0 $content-space-xs $space-md $content-space-xs;
 
         @media (min-width: $screen-sm-min) {
-            margin: 0 $content-space-sm $space-lg $content-space-sm;
+            margin: 0 $content-space-sm $space-lg 0;
         }
     }
 
@@ -47,7 +47,7 @@ $sponsor-silver-height: 83px;
 
         @media (min-width: $screen-sm-min) {
             margin: 0 $content-space-sm $space-sm $content-space-sm;
-            font-size: $font-xxl;
+            font-size: $font-xxxl;
         }
     }
 

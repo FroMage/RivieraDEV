@@ -39,7 +39,7 @@
 
     &__info {
         color: white;
-        font-size: $font-xl;
+        font-size: $font-lg;
         font-weight: $light;
         margin-bottom: 3rem;
         text-transform: uppercase;
@@ -49,6 +49,7 @@
 
         @media (min-width: $screen-sm-min) {
             flex-direction: row;
+            font-size: $font-xl;
         }
     }
 

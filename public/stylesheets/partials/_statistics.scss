@@ -43,6 +43,7 @@
 
     &__text {
         font-size: $font-lg;
+        font-weight: $semi-bold;
 
         @media (min-width: $screen-sm-min) {
             font-size: $font-xl;

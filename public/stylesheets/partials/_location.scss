@@ -53,6 +53,7 @@
         background-size: cover;
         color: $color-white;
         font-size: $font-md;
+        font-weight: $semi-bold;
 
         @media (min-width: $screen-sm-min) {
             border-radius: $border-radius-md $border-radius-md 0 0;
@@ -61,15 +62,19 @@
     }
 
     &__cardContent {
-        padding: $space-xl;
+        padding: $space-lg;
+
+        @media (min-width: $screen-sm-min) {
+            padding: $space-xl;
+        }
     }
 
     &__intro,
     &__address {
         background-repeat: no-repeat;
         background-position: left top;
-        background-size: $icon-size-xl $icon-size-xl;
-        padding-left: $icon-size-xl + $space-md;
+        background-size: $icon-size-lg $icon-size-lg;
+        padding-left: $icon-size-lg + $space-sm;
 
         @media (min-width: $screen-sm-min) {
             background-size: $icon-size-md $icon-size-md;
@@ -92,6 +97,7 @@
 
     &__buttonContainer {
         text-align: center;
+        margin-top: $space-md;
     }
 
     &__mapMarker {
