@@ -43,6 +43,36 @@ $avatar-size: 30px;
         }
     }
 
+    &__legend {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: $font-xxs;
+        margin: $space-sm;
+
+        @media (min-width: $screen-md-min) {
+            margin: $space-sm 0;
+        }
+
+        &--item {
+            display: flex;
+            justify-content: center;
+            margin: 0.3em 0;
+        }
+
+        &--bullet {
+            width: 1em;
+            min-width: 1em;
+            height: 1em;
+            min-height: 1em;
+            display: inline-block;
+            border-radius: 100%;
+        }
+
+        &--text {
+            margin: 0 $space-sm 0 0.3em;
+        }
+    }
+
     &--desktop {
         display: none;
 
@@ -389,5 +419,9 @@ th.fullSchedule-time-title {
 }
 
 .like-explanation {
-    margin: $space-sm auto $space-lg;
+    font-size: $font-xxs;
+    margin: $space-sm;
+    @media (min-width: $screen-md-min) {
+        margin: $space-sm 0;
+    }
 }
