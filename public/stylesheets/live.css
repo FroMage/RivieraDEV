@@ -48,9 +48,6 @@
   font-size: 0.27em;
   line-height: 1.8em;
 }
-.countdown-number {
-  font-family: 'Oswald', sans-serif;
-}
 
 @media (max-width: 767px) {
   .countdown,
@@ -749,7 +746,6 @@ th.fullSchedule-time-title {
   top: 0.5em;
   right: 0.5em;
   padding: 0.5em;
-  font-family: 'Oswald', sans-serif;
   font-weight: normal;
   font-size: 180%;
 }
