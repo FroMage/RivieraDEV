@@ -38,8 +38,8 @@ body.burgerMenu--open .burgerMenu:before {
         width: 3rem;
         height: 3rem;
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: $space-sm;
+        left: $space-sm;
 
         cursor: pointer;
 
@@ -143,6 +143,7 @@ body.burgerMenu--open .burgerMenu:before {
         display: block;
         padding: 1.5rem 3rem;
         font-size: $font-md;
+        font-weight: $semi-bold;
         text-decoration: none;
         color: $color-black-light;
 
@@ -205,9 +206,8 @@ body.burgerMenu--open .burgerMenu:before {
 
     .menu {
         display: block;
-        $border_size: 0.15rem;
 
-        padding: 1rem 2%;
+        padding: $space-sm 2%;
         z-index: 10;
         font-size: $font-xs;
         position: fixed;
@@ -227,23 +227,24 @@ body.burgerMenu--open .burgerMenu:before {
 
         &__item {
             display: inline-block;
-            padding: 1rem;
-            margin-left: 1rem;
+            padding: $space-sm;
+            margin-left: $space-sm;
             color: inherit;
             text-decoration: none;
             cursor: pointer;
             text-transform: uppercase;
-            font-size: $font-xxs;
+            font-size: $font-xs;
+            font-weight: $bold;
 
             &:hover {
                 color: $color-blue;
                 text-decoration: none;
-                border-bottom: solid $border_size $color-blue;
+                border-bottom: $border-md solid $color-blue;
             }
 
             &--current {
                 color: $color-yellow;
-                border-bottom: solid $border_size $color-yellow;
+                border-bottom: $border-md solid $color-yellow;
             }
         }
 
