@@ -2213,6 +2213,33 @@ body.burgerMenu--open .burgerMenu:before {
   padding-bottom: 1rem;
   border-bottom: #fdba1d 0.4rem solid;
 }
+.schedule__legend {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+@media (min-width: 992px) {
+  .schedule__legend {
+    margin: 1rem 0;
+  }
+}
+.schedule__legend--item {
+  display: flex;
+  justify-content: center;
+  margin: 0.3em 0;
+}
+.schedule__legend--bullet {
+  width: 1em;
+  min-width: 1em;
+  height: 1em;
+  min-height: 1em;
+  display: inline-block;
+  border-radius: 100%;
+}
+.schedule__legend--text {
+  margin: 0 1rem 0 0.3em;
+}
 .schedule--desktop {
   display: none;
 }
@@ -2501,7 +2528,13 @@ th.fullSchedule-time-title {
 }
 
 .like-explanation {
-  margin: 1rem auto 3rem;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+@media (min-width: 992px) {
+  .like-explanation {
+    margin: 1rem 0;
+  }
 }
 
 .talk-theme {

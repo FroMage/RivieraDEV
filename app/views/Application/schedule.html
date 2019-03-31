@@ -26,6 +26,15 @@
 
         #{filterForTalks themes: themes, levels: levels, types: types, languages: languages/}
 
+        <div class="schedule__legend">
+            #{list items: themes, as: 'theme'}
+                <div class="schedule__legend--item">
+                    <span class="schedule__legend--bullet fullSchedule__talk__part2--${theme.color.code}"></span>
+                    <span class="schedule__legend--text">${theme}</span>
+                </div>
+            #{/list}
+        </div>
+
         <div class="like-explanation">
             &{'views.application.schedule.like.explanation'}
         </div>
