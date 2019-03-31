@@ -83,6 +83,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 1.6rem;
+  font-weight: 600;
   color: #fdba1d;
   padding: 1.2rem 2rem;
   border: none;
@@ -142,12 +143,12 @@ a:hover, a:active, a:focus {
 
 .home__title {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0.8rem 0;
 }
 @media (min-width: 768px) {
   .home__title {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 1rem 0;
   }
 }
@@ -724,6 +725,7 @@ body.burgerMenu--open .burgerMenu:before {
 .parallax__info {
   color: white;
   font-size: 2.5rem;
+  font-weight: 300;
   margin-bottom: 3rem;
   text-transform: uppercase;
   display: flex;
@@ -810,8 +812,7 @@ body.burgerMenu--open .burgerMenu:before {
   }
 }
 .intro__subtitle {
-  font-size: 1.6rem;
-  font-weight: 300;
+  font-size: 1.8rem;
   margin: 1rem 0 2rem 0;
 }
 @media (min-width: 768px) {
