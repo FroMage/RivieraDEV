@@ -2088,18 +2088,9 @@ body.burgerMenu--open .burgerMenu:before {
 .personDetails__talk:hover {
   color: #fdba1d;
 }
-.personDetails__talk:before, .personDetails__talk:after {
-  margin: 0 0.2em;
-  display: inline-block;
+.personDetails__talk--quote {
   color: #fdba1d;
-  font-size: 1.5em;
-  vertical-align: bottom;
-}
-.personDetails__talk:before {
-  content: '\00ab';
-}
-.personDetails__talk:after {
-  content: '\00bb';
+  margin: 0 0.2em;
 }
 .personDetails__admin {
   font-size: 1.4rem;
@@ -2629,20 +2620,6 @@ th.fullSchedule-time-title {
   text-align: center;
   background-color: #fdba1d;
   font-weight: 300;
-}
-.talkDetails__title {
-  display: flex;
-  align-items: center;
-}
-.talkDetails__title:before, .talkDetails__title:after {
-  margin: 0 0.2em;
-  font-size: 1.5em;
-}
-.talkDetails__title:before {
-  content: '\00ab';
-}
-.talkDetails__title:after {
-  content: '\00bb';
 }
 .talkDetails__micro {
   display: flex;

@@ -154,24 +154,6 @@
         font-weight: 300;
     }
 
-    &__title {
-        display: flex;
-        align-items: center;
-        &:before,
-        &:after {
-            margin: 0 0.2em;
-            font-size: 1.5em;
-        }
-
-        &:before {
-            content: '\00ab';
-        }
-
-        &:after {
-            content: '\00bb';
-        }
-    }
-
     &__micro {
         display: flex;
         justify-content: center;

@@ -41,11 +41,8 @@ play.i18n.Messages.get('views.application.speaker.title') /}
             <div class="personDetails__talks">
                 #{list items: speaker.talks, as: 'talk'}
                 <div class="personDetails__micro">
-                    <a
-                        class="personDetails__talk"
-                        href="@{Application.talk(talk.id)}"
-                        >${talk.title}</a
-                    >
+                    <a  class="personDetails__talk"
+                        href="@{Application.talk(talk.id)}"><span class="personDetails__talk--quote">&laquo;</span>${talk.title}<span class="personDetails__talk--quote">&raquo;</span></a>
                 </div>
                 #{/list}
             </div>
