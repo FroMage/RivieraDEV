@@ -160,6 +160,11 @@ $(function() {
         for (var i = 0; i < filters.length; i++) {
             resetFilter(filters[i]);
         }
+
+        // Reset Filters Panel
+        document.querySelectorAll('.js-talksFilters input').forEach(elem => {
+            elem.checked = false;
+        });
     };
 
     /**
@@ -175,29 +180,10 @@ $(function() {
     };
 
     /**
-     * Show a day and hidde the other days
+     * Show/Hide filters pannel
      */
-    window.showDay = function(elem, day) {
-        let $dateButton = $(elem);
-
-        if (day == 'all') {
-            // Show All days
-            $('.js-schedule-day[data-day]').removeClass('hidden');
-            $('.js-schedule-filterDay[data-day]').removeClass(
-                'schedule-day-filter--hidden'
-            );
-        } else {
-            // Show selected day
-            $('.js-schedule-day[data-day=' + day + ']').removeClass('hidden');
-            $dateButton.removeClass('schedule-day-filter--hidden');
-
-            // Hide other days
-            $('.js-schedule-day[data-day]')
-                .not('[data-day=' + day + ']')
-                .addClass('hidden');
-            $('.js-schedule-filterDay[data-day]')
-                .not('[data-day=' + day + ']')
-                .addClass('schedule-day-filter--hidden');
-        }
+    window.toggleFiltersPannel = () => {
+        let filterDiv = document.getElementsByClassName('js-talksFilters');
+        filterDiv[0].classList.toggle('talksFilter__filters--hide');
     };
 });

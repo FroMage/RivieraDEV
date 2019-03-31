@@ -225,6 +225,22 @@
     width: 90%;
   }
 }
+.schedule__days {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.schedule__day {
+  flex: 1;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+.schedule__day--selected {
+  padding-bottom: 1rem;
+  border-bottom: #fdba1d 0.4rem solid;
+}
 .schedule--desktop {
   display: none;
 }

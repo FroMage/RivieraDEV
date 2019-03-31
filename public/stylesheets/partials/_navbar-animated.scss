@@ -208,7 +208,7 @@ body.burgerMenu--open .burgerMenu:before {
         $border_size: 0.15rem;
 
         padding: 1rem 2%;
-        z-index: 1;
+        z-index: 10;
         font-family: $font_family;
         font-size: $font-xs;
         position: fixed;
