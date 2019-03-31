@@ -1,8 +1,8 @@
 $newsletter-space-sm: $space-xxl;
 
-$title-font-sm: $font-xxl;
-$title-top-sm: $space-sm;
-$title-bottom-sm: $space-md;
+$title-font-md: $font-xxxl;
+$title-top-md: $space-sm;
+$title-bottom-md: $space-md;
 
 $input-width: 35rem;
 $input-height: 4rem;
@@ -30,8 +30,8 @@ $background-height: 192px;
         }
 
         @media (min-width: $screen-md-min) {
-            font-size: $title-font-sm;
-            margin: $title-top-sm $content-space-sm $title-bottom-sm
+            font-size: $title-font-md;
+            margin: $title-top-md $content-space-sm $title-bottom-md
                 $content-space-sm;
         }
     }
@@ -47,7 +47,7 @@ $background-height: 192px;
             margin-right: calc(-#{$background-width} + #{$input-width});
             padding-top: calc(#{$background-height} - #{$input-height});
             margin-top: calc(
-                -#{$title-bottom-sm} - #{$title-font-sm} - #{$newsletter-space-sm}
+                -#{$title-bottom-md} - #{$title-font-md} - #{$newsletter-space-sm}
             );
         }
     }

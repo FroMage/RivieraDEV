@@ -40,7 +40,7 @@ $counter-item-size: 12rem;
         margin: $space-sm 0 $space-md 0;
 
         @media (min-width: $screen-sm-min) {
-            font-size: $font-lg;
+            font-size: $font-xl;
             margin: $space-md 0 $space-lg 0;
         }
     }
@@ -50,10 +50,11 @@ $counter-item-size: 12rem;
 
     &__questions {
         display: grid;
-        row-gap: $space-sm;
+        row-gap: $space-md;
 
         @media (min-width: $screen-sm-min) {
             grid-template-columns: 1fr 1fr 1fr;
+            row-gap: $space-sm;
         }
     }
 }
@@ -62,7 +63,8 @@ $counter-item-size: 12rem;
     &__title {
         grid-area: title;
         align-self: center;
-        font-size: $font-sm;
+        font-size: $font-lg;
+        font-weight: $bold;
         margin-bottom: $space-sm;
 
         &::before {
@@ -76,8 +78,8 @@ $counter-item-size: 12rem;
             vertical-align: middle;
 
             @media (min-width: $screen-sm-min) {
-                width: $icon-size-md;
-                height: $icon-size-md;
+                width: $icon-size-lg;
+                height: $icon-size-lg;
             }
         }
 
@@ -93,8 +95,12 @@ $counter-item-size: 12rem;
     }
 
     &__answer {
-        font-size: $font-xs;
+        font-size: $font-sm;
         font-weight: 300;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-md;
+        }
     }
 }
 
@@ -132,12 +138,13 @@ $counter-item-size: 12rem;
     }
 
     &__number {
-        font-size: $font-xxl;
+        font-size: $font-xxxl;
+        font-weight: $bold;
         margin-bottom: $space-sm;
     }
 
     &__desc {
         text-transform: uppercase;
-        font-size: $font-xxs;
+        font-size: $font-xs;
     }
 }
