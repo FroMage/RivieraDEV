@@ -2744,6 +2744,10 @@ th.fullSchedule-time-title {
   display: block;
   clear: both;
 }
+.talksFilter__filters {
+  overflow: hidden;
+  transition: height 0.5s;
+}
 .talksFilter__filter {
   margin: 0 0 2rem 2rem;
 }
@@ -2753,9 +2757,6 @@ th.fullSchedule-time-title {
     float: left;
     width: 33%;
   }
-}
-.talksFilter__filters--hide {
-  display: none;
 }
 .talksFilter__title {
   font-size: 1.4rem;
@@ -2784,9 +2785,11 @@ th.fullSchedule-time-title {
 }
 .talksFilter__button--filter {
   text-align: right;
+  margin-right: 1rem;
 }
 .talksFilter__button--cancel {
   text-align: center;
+  margin-bottom: 0.6rem;
 }
 .talksFilter__button--cancel:before {
   content: '';

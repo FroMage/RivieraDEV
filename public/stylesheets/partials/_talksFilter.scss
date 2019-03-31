@@ -19,7 +19,7 @@
         height: 1.2em;
         border: $color-gray-light 1px solid;
         border-radius: 15%;
-        margin-right: 1rem;
+        margin-right: $space-sm;
         cursor: pointer;
     }
 
@@ -33,19 +33,18 @@
         clear: both;
     }
 
+    &__filters {
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
     &__filter {
-        margin: 0 0 2rem 2rem;
+        margin: 0 0 $space-md $space-md;
 
         @media (min-width: $screen-md-min) {
             margin: 0;
             float: left;
             width: 33%;
-        }
-    }
-
-    &__filters {
-        &--hide {
-            display: none;
         }
     }
 
@@ -57,7 +56,7 @@
     &__item {
         margin: 1em 0;
         @media (min-width: $screen-md-min) {
-            margin: 1rem 0;
+            margin: $space-sm 0;
             font-size: $font-xxs;
         }
 
@@ -78,10 +77,12 @@
     &__button {
         &--filter {
             text-align: right;
+            margin-right: $space-sm;
         }
 
         &--cancel {
             text-align: center;
+            margin-bottom: $space-xxs;
 
             &:before {
                 content: '';
