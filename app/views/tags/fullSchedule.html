@@ -1,75 +1,61 @@
+%{tracks = _tracksPerDays.get(_day);}%
 
-<span class="js-schedule-filterDay schedule-day-filter schedule-day fullSchedule-day schedule-dayAll" data-day='all' onclick="showDay(this, 'all')">&{'views.application.schedule.allDays'}</span>
-#{list items: _days, as: 'day'}
-<span class="js-schedule-filterDay schedule-day-filter schedule-day fullSchedule-day schedule-day${day_index}" data-day='${day_index}' onclick="showDay(this, '${day_index}')">${day.format('EEEE dd MMMM yyyy')}</span>
-#{/list}
+<table class="fullSchedule">
 
-#{list items: _days, as: 'day'}
-
-    %{tracks = _tracksPerDays.get(day);}%
+    <col class="fullSchedule__col--time">
+    #{list items: tracks, as: 'track'}
+        <col class="fullSchedule__col--${tracks.size()}tracks">
+    #{/list}
     
-    <div class="js-schedule-day" data-day='${day_index}'>
-        <h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
-
-        <table class="fullSchedule">
-
-            <col class="fullSchedule__col--time">
-            #{list items: tracks, as: 'track'}
-                <col class="fullSchedule__col--${tracks.size()}tracks">
-            #{/list}
-            
-            <!--
-            <tr>
-                <th></th>
-                #{list items: tracks, as: 'track'}
-                    <th class="fullSchedule__track" scope="col">
-                        ${track.title}
-                        #{if _user}
-                            <br/>
-                            <a href="@{Tracks.show(track.id)}">edit</a>
-                        #{/if}
-                    </th>
-                #{/list}
-            </tr>
-            -->
-
-            #{list items: models.Slot.findMultiPerDay(day), as: 'slot'}
-            <tr>
-                <th class="fullSchedule__time" scope="row">
-                    <span>${slot.startDate.format('HH:mm')}</span>
-                    #{if _user}
-                        <a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
-                    #{/if}
-                </th>
-
-                %{allTracksEvent = slot.allTracksEvent}%
-                #{if allTracksEvent } <!-- One talk for all tracks -->
-                    <td colspan="${tracks.size()}" class="fullSchedule__${allTracksEvent.isBreak.code}">
-                        #{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-                            <span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
-                        #{/if}
-                        #{else}
-                            <!-- If it's not a break, it should have a track assigned -->
-                        #{/else}
-                        #{if _user}
-                            <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
-                        #{/if}
-                    </td>
+    <!--
+    <tr>
+        <th></th>
+        #{list items: tracks, as: 'track'}
+            <th class="fullSchedule__track" scope="col">
+                ${track.title}
+                #{if _user}
+                    <br/>
+                    <a href="@{Tracks.show(track.id)}">edit</a>
                 #{/if}
+            </th>
+        #{/list}
+    </tr>
+    -->
 
+    #{list items: models.Slot.findMultiPerDay(_day), as: 'slot'}
+    <tr>
+        <th class="fullSchedule__time" scope="row">
+            <span>${slot.startDate.format('HH:mm')}</span>
+            #{if _user}
+                <a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
+            #{/if}
+        </th>
+
+        %{allTracksEvent = slot.allTracksEvent}%
+        #{if allTracksEvent } <!-- One talk for all tracks -->
+            <td colspan="${tracks.size()}" class="fullSchedule__${allTracksEvent.isBreak.code}">
+                #{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+                    <span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
+                #{/if}
                 #{else}
-                    #{list items: tracks, as: 'track'}
-                        %{talks = slot.getTalksPerTrack(track);}%
-                        <td class="js-talksFilter-toFilter js-fullSchedule-talk-cell fullSchedule__talk__cell">
-                            #{list items: talks, as: 'talk'}
-                                #{talkItem talk: talk, user: _user/}
-                            #{/list}
-                        </td>
-                    #{/list}
+                    <!-- If it's not a break, it should have a track assigned -->
                 #{/else}
-            </tr>
-            #{/list}
-        </table>
+                #{if _user}
+                    <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
+                #{/if}
+            </td>
+        #{/if}
 
-    </div>
-#{/list}
+        #{else}
+            #{list items: tracks, as: 'track'}
+                %{talks = slot.getTalksPerTrack(track);}%
+                <td class="js-talksFilter-toFilter js-fullSchedule-talk-cell fullSchedule__talk__cell">
+                    #{list items: talks, as: 'talk'}
+                        #{talkItem talk: talk, user: _user/}
+                    #{/list}
+                </td>
+            #{/list}
+        #{/else}
+    </tr>
+    #{/list}
+</table>

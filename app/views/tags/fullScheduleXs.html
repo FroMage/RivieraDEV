@@ -1,63 +1,45 @@
-<div class="schedule-day-filterItem">
-    <span class="js-schedule-filterDay schedule-day-filter schedule-day fullSchedule-day schedule-dayAll" data-day='all' onclick="showDay(this, 'all')">&{'views.application.schedule.allDays'}</span>
-</div>
-#{list items: _days, as: 'day'}
-    <div class="schedule-day-filterItem">
-        <span class="js-schedule-filterDay schedule-day-filter schedule-day-filter--hidden schedule-day fullSchedule-day schedule-day${day_index}" data-day='${day_index}' onclick="showDay(this, '${day_index}')">${day.format('EEEE dd MMMM yyyy')}</span>
-    </div>
-#{/list}
-
-#{list items: _days, as: 'day'}
-
-    %{tracks = _tracksPerDays.get(day);}%
+%{tracks = _tracksPerDays.get(_day);}%
+<table class="fullSchedule">
     
-    <div class="js-schedule-day" data-day='${day_index}'>
-        <h2 class="schedule-day fullSchedule-day schedule-day${day_index}">${day.format('EEEE dd MMMM yyyy')}</h2>
+    #{list items: models.Slot.findPerDay(_day), as: 'slot'}
+        <tr>
+            <td class="fullSchedule__time">
+                <span>${slot.startDate.format('HH:mm')}</span>
+                #{if _user}
+                    <a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
+                #{/if}
+            </td>
+        </tr>
 
-        <table class="fullSchedule">
-            
-            #{list items: models.Slot.findPerDay(day), as: 'slot'}
-                <tr>
-                    <td class="fullSchedule__time">
-                        <span>${slot.startDate.format('HH:mm')}</span>
-                        #{if _user}
-                            <a class="fullSchedule__admin" href="@{Slots.show(slot.id)}">edit</a>
-                        #{/if}
-                    </td>
-                </tr>
-
-                %{allTracksEvent = slot.allTracksEvent}%
-                #{if allTracksEvent } <!-- One talk for all tracks -->
+        %{allTracksEvent = slot.allTracksEvent}%
+        #{if allTracksEvent } <!-- One talk for all tracks -->
+            <tr>
+                <td class="fullSchedule__${allTracksEvent.isBreak.code}">
+                    #{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+                        <span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
+                    #{/if}
+                    #{else}
+                        <!-- If it's not a break, it should have a track assigned -->
+                    #{/else}
+                    #{if _user}
+                        <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
+                    #{/if}
+                </td>
+            </tr>
+        #{/if}
+        #{else}
+            #{list items: tracks, as: 'track'}
+                %{talk = slot.getTalkPerTrack(track);}%
+                #{if talk}
                     <tr>
-                        <td class="fullSchedule__${allTracksEvent.isBreak.code}">
-                            #{if allTracksEvent.isBreak != models.BreakType.NotABreak}
-                                <span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
-                            #{/if}
-                            #{else}
-                                <!-- If it's not a break, it should have a track assigned -->
-                            #{/else}
-                            #{if _user}
-                                <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
-                            #{/if}
+                        <td class="js-talksFilter-toFilter fullSchedule__talk__cell">
+                            #{talkItem talk: talk, user: _user/}    
                         </td>
                     </tr>
                 #{/if}
-                #{else}
-                    #{list items: tracks, as: 'track'}
-                        %{talk = slot.getTalkPerTrack(track);}%
-                        #{if talk}
-                            <tr>
-                                <td class="js-talksFilter-toFilter fullSchedule__talk__cell">
-                                    #{talkItem talk: talk, user: _user/}    
-                                </td>
-                            </tr>
-                        #{/if}
-                    #{/list}
-                #{/else}
-            
             #{/list}
-            
-        </table>
-        
-    </div>
-#{/list}
+        #{/else}
+    
+    #{/list}
+    
+</table>

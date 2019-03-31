@@ -38,6 +38,12 @@
         width: 33%;
     }
 
+    &__filters {
+        &--hide {
+            display: none;
+        }
+    }
+
     &__title {
         font-size: $font-xs;
         margin: 0.5rem 0;
@@ -61,13 +67,19 @@
         }
     }
 
-    &__buttons {
-        text-align: center;
+    &__button {
+        &--filter {
+            text-align: right;
+        }
 
-        &:before {
-            content: '';
-            display: block;
-            clear: both;
+        &--cancel {
+            text-align: center;
+
+            &:before {
+                content: '';
+                display: block;
+                clear: both;
+            }
         }
     }
 }

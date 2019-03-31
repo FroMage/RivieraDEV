@@ -566,7 +566,7 @@ body.burgerMenu--open .burgerMenu:before {
   .menu {
     display: block;
     padding: 1rem 2%;
-    z-index: 1;
+    z-index: 10;
     font-family: Roboto, Noto, sans-serif;
     font-size: 1.4rem;
     position: fixed;
@@ -2202,6 +2202,22 @@ body.burgerMenu--open .burgerMenu:before {
     width: 90%;
   }
 }
+.schedule__days {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.schedule__day {
+  flex: 1;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+.schedule__day--selected {
+  padding-bottom: 1rem;
+  border-bottom: #fdba1d 0.4rem solid;
+}
 .schedule--desktop {
   display: none;
 }
@@ -2717,6 +2733,9 @@ th.fullSchedule-time-title {
   float: left;
   width: 33%;
 }
+.talksFilter__filters--hide {
+  display: none;
+}
 .talksFilter__title {
   font-size: 1.4rem;
   margin: 0.5rem 0;
@@ -2737,10 +2756,13 @@ th.fullSchedule-time-title {
   left: 0.3rem;
   top: 0.35rem;
 }
-.talksFilter__buttons {
+.talksFilter__button--filter {
+  text-align: right;
+}
+.talksFilter__button--cancel {
   text-align: center;
 }
-.talksFilter__buttons:before {
+.talksFilter__button--cancel:before {
   content: '';
   display: block;
   clear: both;

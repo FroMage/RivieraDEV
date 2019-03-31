@@ -1,178 +1,101 @@
 <div class="talksFilter">
-    <div class="talksFilter__filter">
-        <h3 class="talksFilter__title">
-            &{'views.application.schedule.filter.theme'}
-        </h3>
-        <div class="talksFilter__items">
-            #{list items: _themes, as:'theme'}
-            <div class="talksFilter__item">
-                <input
-                    id="${theme.theme.slugify()}"
-                    type="checkbox"
-                    name="${theme.theme.slugify()}"
-                    value="${theme.theme.slugify()}"
-                />
-                <label for="${theme.theme.slugify()}"
-                    ><span
-                        class="talksFilter__item--text"
-                        onclick="toggleTheme('${theme.theme.slugify()}')"
-                        >${theme}</span
-                    ></label
-                >
-            </div>
-            #{/list}
-        </div>
+    <div class="talksFilter__button talksFilter__button--filter">
+        <input class="button" type="button" onclick="toggleFiltersPannel()" value="&{'views.application.schedule.filter'}">
     </div>
-    <div class="talksFilter__filter">
-        <h3 class="talksFilter__title">
-            &{'views.application.schedule.filter.types'}
-        </h3>
-        <div class="talksFilter__items">
-            #{list items: _types, as: 'type'}
-            <div class="talksFilter__item">
-                <input
-                    id="${type.toString().slugify()}"
-                    type="checkbox"
-                    name="${type.toString().slugify()}"
-                    value="${type.toString().slugify()}"
-                /><label for="${type.toString().slugify()}"
-                    ><span
-                        class="talksFilter__item--text"
-                        onclick="toggleType('${type.toString().slugify()}')"
-                        >${type}</span
-                    ></label
-                >
-            </div>
-            #{/list}
-        </div>
-    </div>
-    <div class="talksFilter__filter">
-        <h3 class="talksFilter__title">
-            &{'views.application.schedule.filter.levels'}
-        </h3>
-        <div class="talksFilter__items">
-            #{list items: _levels, as: 'level'}
-            <div class="talksFilter__item">
-                <input
-                    id="${level.code}"
-                    type="checkbox"
-                    name="${level.code}"
-                    value="${level.code}"
-                /><label for="${level.code}"
-                    ><span
-                        class="talksFilter__item--text"
-                        onclick="toggleLevel('${level.code}')"
-                        >&{'views.application.schedule.level.' +
-                        level.code}</span
-                    ></label
-                >
-            </div>
-            #{/list}
-        </div>
-    </div>
-    <div class="talksFilter__filter">
-        <h3 class="talksFilter__title">
-            &{'views.application.schedule.filter.languages'}
-        </h3>
-        <div class="talksFilter__items">
-            #{list items: _languages, as: 'language'}
-            <div class="talksFilter__item">
-                <input
-                    id="language-${language.toString().slugify()}"
-                    type="checkbox"
-                    name="${language.toString().slugify()}"
-                    value="${language.toString().slugify()}"
-                /><label for="language-${language.toString().slugify()}"
-                    ><span
-                        class="talksFilter__item--text"
-                        onclick="toggleLanguage('${language.toString().slugify()}')"
-                        >#{language language: language/}</span
-                    ></label
-                >
-            </div>
-            #{/list}
-        </div>
-    </div>
-    <div class="talksFilter__buttons">
-        <a class="button" href="mailto:info@rivieradev.fr"
-            >&{'views.application.schedule.filter.cancel'}</a
-        >
-        <a class="button button--primary" href="mailto:info@rivieradev.fr"
-            >&{'views.application.schedule.filter.apply'}</a
-        >
-    </div>
-</div>
-
-<div class="talksFilter-collapse">
-    <a
-        class="talksFilter-buttonCollapse"
-        data-toggle="collapse"
-        href="#collapseFilter"
-        ><i class="fas fa-chevron-right"></i
-        >&{'views.application.schedule.filter'}</a
-    >
-    <div id="collapseFilter" class="talksFilter panel-collapse collapse">
-        <div class="talksFilter-options">
-            <span class="talksFilter-reset" onclick="resetFilters()">
-                <i class="fas fa-undo-alt talksFilter-reset--icon"></i
-                >&{'views.application.schedule.filter.reset'}
-            </span>
-            <div class="js-talksFilter-themes">
-                <div class="talksFilter-subtitle">
-                    &{'views.application.schedule.filter.theme'}
+    <div class="talksFilter__filters--hide js-talksFilters">
+        <div class="talksFilter__filter">
+            <h3 class="talksFilter__title">
+                &{'views.application.schedule.filter.theme'}
+            </h3>
+            <div class="talksFilter__items js-talksFilter-themes">
+                #{list items: _themes, as:'theme'}
+                <div class="talksFilter__item">
+                    <input
+                        id="${theme.theme.slugify()}"
+                        type="checkbox"
+                        name="${theme.theme.slugify()}"
+                        value="${theme.theme.slugify()}"
+                    /><label for="${theme.theme.slugify()}">
+                        <span
+                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()}"
+                            onclick="toggleTheme('${theme.theme.slugify()}')"
+                            >${theme}</span>
+                        </label>
                 </div>
-                #{list items: _themes, as: 'theme'}
-                <span
-                    onclick="toggleTheme('${theme.theme.slugify()}')"
-                    class="talksFilter-item talk-theme 
-                                    js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()} talk-theme-${theme.color.code}"
-                >
-                    ${theme}
-                </span>
                 #{/list}
             </div>
-            <div class="js-talksFilter-types">
-                <div class="talksFilter-subtitle">
-                    &{'views.application.schedule.filter.types'}
-                </div>
+        </div>
+        <div class="talksFilter__filter">
+            <h3 class="talksFilter__title">
+                &{'views.application.schedule.filter.types'}
+            </h3>
+            <div class="talksFilter__items js-talksFilter-types">
                 #{list items: _types, as: 'type'}
-                <span
-                    onclick="toggleType('${type.toString().slugify()}')"
-                    class="talksFilter-item talk-type 
-                                    js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}"
-                >
-                    ${type}
-                </span>
+                <div class="talksFilter__item">
+                    <input
+                        id="${type.toString().slugify()}"
+                        type="checkbox"
+                        name="${type.toString().slugify()}"
+                        value="${type.toString().slugify()}"
+                    /><label for="${type.toString().slugify()}">
+                        <span
+                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}"
+                            onclick="toggleType('${type.toString().slugify()}')"
+                            >${type}</span>
+                        </label>
+                </div>
                 #{/list}
             </div>
-            <div class="js-talksFilter-levels">
-                <div class="talksFilter-subtitle">
-                    &{'views.application.schedule.filter.levels'}
-                </div>
+        </div>
+        <div class="talksFilter__filter">
+            <h3 class="talksFilter__title">
+                &{'views.application.schedule.filter.levels'}
+            </h3>
+            <div class="talksFilter__items js-talksFilter-levels">
                 #{list items: _levels, as: 'level'}
-                <span
-                    onclick="toggleLevel('${level.code}')"
-                    class="talksFilter-item talk-level 
-                                    js-talksFilter-item js-talksFilter-level-${level.code}"
-                >
-                    &{'views.application.schedule.level.' + level.code}
-                </span>
-                #{/list}
-            </div>
-            <div class="js-talksFilter-languages">
-                <div class="talksFilter-subtitle">
-                    &{'views.application.schedule.filter.languages'}
+                <div class="talksFilter__item">
+                    <input
+                        id="${level.code}"
+                        type="checkbox"
+                        name="${level.code}"
+                        value="${level.code}"
+                    /><label for="${level.code}"
+                        ><span
+                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-level-${level.code}"
+                            onclick="toggleLevel('${level.code}')"
+                            >&{'views.application.schedule.level.' +
+                            level.code}</span
+                        ></label
+                    >
                 </div>
-                #{list items: _languages, as: 'language'}
-                <span
-                    onclick="toggleLanguage('${language.toString().slugify()}')"
-                    class="talksFilter-item talk-language 
-                                    js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}"
-                >
-                    #{language language: language/}
-                </span>
                 #{/list}
             </div>
+        </div>
+        <div class="talksFilter__filter">
+            <h3 class="talksFilter__title">
+                &{'views.application.schedule.filter.languages'}
+            </h3>
+            <div class="talksFilter__items js-talksFilter-languages">
+                #{list items: _languages, as: 'language'}
+                <div class="talksFilter__item">
+                    <input
+                        id="language-${language.toString().slugify()}"
+                        type="checkbox"
+                        name="${language.toString().slugify()}"
+                        value="${language.toString().slugify()}"
+                    /><label for="language-${language.toString().slugify()}"
+                        ><span
+                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}"
+                            onclick="toggleLanguage('${language.toString().slugify()}')"
+                            >#{language language: language/}</span
+                        ></label
+                    >
+                </div>
+                #{/list}
+            </div>
+        </div>
+        <div class="talksFilter__button talksFilter__button--cancel">
+            <input class="button" type="button" onclick="resetFilters()" value="&{'views.application.schedule.filter.reset'}">
         </div>
     </div>
 </div>
