@@ -23,16 +23,14 @@ This can only be done by hand for now:
 1. Open a `psql` console to your database:
     1. `psql -h localhost -U rivieradev`
 1. Add your user (as admin)
-    1. `INSERT INTO user_table  (id, firstname, lastname, password, username) VALUES ((select nextval('hibernate_sequence')), 'FirstName', 'LastName', 'Password', 'UserName');`
+    1. `INSERT INTO user_table (id, firstname, lastname, password, username) VALUES ((select nextval('hibernate_sequence')), 'FirstName', 'LastName', 'Password', 'UserName');`
 1. You can now log in and change your password using the UI
 
 # How to compile SCSS files into CSS files
 
-1. `sudo apt-get install ruby-full` # Install ruby
-1. `gem install sass compass`       # Install compass
-1. `npm install -g gulp`            # If you haven't installed gulp globally before
-1. `npm install`                    # Install project dependencies
-1. `gulp`                           # Compile and watch SCSS files
+1. `npm install -g gulp` # If you haven't installed gulp globally before
+1. `npm install` # Install project dependencies
+1. `gulp` # Compile and watch SCSS files
 
 # License
 
@@ -56,6 +54,3 @@ Compliance with the source code requirements of section 13 of AGPLv3
 is satisfied by storing your modified version in a public revision
 control repository and prominently providing your users with notice of
 the location of this repository.
-
-
-
