@@ -1,21 +1,45 @@
 'use strict';
 
-const SCSS_DIR = './public/stylesheets';
+const STYLE_DIR = './public/stylesheets';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const merge = require('merge-stream');
+const runSequence = require('run-sequence');
+const wait = require('gulp-wait');
 
 sass.compiler = require('node-sass');
 
 gulp.task('sass', function() {
     return gulp
-        .src(SCSS_DIR + '/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .src(STYLE_DIR + '/**/*.scss')
+        .pipe(wait(200))
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest(STYLE_DIR));
+});
+
+gulp.task('autoprefixer', function() {
+    const files = ['style.css', 'live.css'];
+    let tasks = files.map(file => {
+        return gulp
+            .src(`${STYLE_DIR}/${file}`)
+            .pipe(
+                autoprefixer({
+                    browsers: ['last 2 versions'],
+                    cascade: false,
+                })
+            )
+            .pipe(gulp.dest(STYLE_DIR));
+    });
+
+    return merge(tasks);
 });
 
 gulp.task('sass:watch', function() {
-    gulp.watch(SCSS_DIR + '/**/*.scss', ['sass']);
+    gulp.watch(STYLE_DIR + '/**/*.scss', () => {
+        runSequence('sass', 'autoprefixer');
+    });
 });
 
 gulp.task('default', ['sass:watch']);
