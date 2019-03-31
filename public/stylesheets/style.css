@@ -514,6 +514,7 @@ body.burgerMenu--open .burgerMenu:before {
   display: block;
   padding: 1.5rem 3rem;
   font-size: 1.8rem;
+  font-weight: 600;
   text-decoration: none;
   color: #474747;
 }
@@ -589,16 +590,17 @@ body.burgerMenu--open .burgerMenu:before {
     text-decoration: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
   }
   .menu__item:hover {
     color: #19b8d5;
     text-decoration: none;
-    border-bottom: solid 0.15rem #19b8d5;
+    border-bottom: 2px solid #19b8d5;
   }
   .menu__item--current {
     color: #fdba1d;
-    border-bottom: solid 0.15rem #fdba1d;
+    border-bottom: 2px solid #fdba1d;
   }
   .menu__langue {
     color: inherit;
