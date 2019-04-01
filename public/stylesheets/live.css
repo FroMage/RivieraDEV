@@ -78,7 +78,7 @@
     margin-top: 1rem; }
   .personSummary__name {
     text-transform: uppercase;
-    font-weight: bold; }
+    font-weight: 700; }
   .personSummary__title, .personSummary__year {
     font-size: 1.6rem; }
 
@@ -112,13 +112,17 @@
   .personDetails__desc {
     text-align: left; }
   .personDetails__name {
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    font-size: 2.5rem; }
   .personDetails__title {
+    font-size: 2rem;
     font-weight: 300; }
   .personDetails__network {
     font-size: 1.4rem;
     line-height: 2em;
-    font-weight: 300; }
+    font-weight: 300;
+    margin-top: 1rem;
+    font-weight: 600; }
     .personDetails__network a {
       color: #fff;
       text-decoration: none; }
@@ -126,13 +130,13 @@
     padding: 2% 10%;
     border-radius: 0 0 0.5rem 0.5rem;
     background-color: #f8f7f7;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.4em; }
   .personDetails__twitter:before, .personDetails__blog:before, .personDetails__micro:before {
     content: '';
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 3rem;
+    height: 3rem;
     vertical-align: middle; }
   .personDetails__twitter:before {
     background-image: url(../images/icons/twitter-logo-button.svg); }
@@ -144,7 +148,8 @@
   .personDetails__talk {
     line-height: 2em;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: inherit;
     -webkit-transition: color 0.3s;
     transition: color 0.3s; }

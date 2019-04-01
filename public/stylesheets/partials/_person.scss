@@ -45,7 +45,7 @@ $avatar-size-sm: 150px;
 
     &__name {
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: $bold;
     }
 
     &__title,
@@ -91,16 +91,21 @@ $avatar-size-sm: 150px;
 
     &__name {
         line-height: 1.5em;
+        font-size: $font-xl;
     }
 
     &__title {
-        font-weight: 300;
+        font-size: $font-lg;
+        font-weight: $light;
     }
 
     &__network {
         font-size: $font-xs;
         line-height: 2em;
-        font-weight: 300;
+        font-weight: $light;
+        margin-top: $space-sm;
+        font-weight: $semi-bold;
+
         & a {
             color: $color-white;
             text-decoration: none;
@@ -111,7 +116,7 @@ $avatar-size-sm: 150px;
         padding: 2% 10%;
         border-radius: 0 0 $borderRadius $borderRadius;
         background-color: $color-gray-ultralight;
-        font-size: $font-xs;
+        font-size: $font-sm;
         line-height: 1.4em;
     }
 
@@ -120,8 +125,8 @@ $avatar-size-sm: 150px;
     &__micro:before {
         content: '';
         display: inline-block;
-        width: 1.5em;
-        height: 1.5em;
+        width: $icon-size-lg;
+        height: $icon-size-lg;
         vertical-align: middle;
     }
 
@@ -141,7 +146,8 @@ $avatar-size-sm: 150px;
     &__talk {
         line-height: 2em;
         text-decoration: none;
-        font-size: $font-sm;
+        font-size: $font-md;
+        font-weight: $semi-bold;
         color: inherit;
         transition: color 0.3s;
 
