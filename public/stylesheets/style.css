@@ -2163,7 +2163,7 @@ body.burgerMenu--open .burgerMenu:before {
   .fullSchedule__talk__title {
     display: block;
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: 600;
     color: #474747; }
   .fullSchedule__talk__slotTrack {
     margin-top: 2rem;
@@ -2243,7 +2243,7 @@ body.burgerMenu--open .burgerMenu:before {
   .fullSchedule__talk__speakerName {
     vertical-align: middle;
     font-size: 1.4rem;
-    font-weight: bold; }
+    font-weight: 600; }
   .fullSchedule__talk__like {
     position: absolute;
     top: 1rem;

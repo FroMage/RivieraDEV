@@ -257,7 +257,7 @@ $avatar-size: 30px;
         &__title {
             display: block;
             font-size: $font-sm;
-            font-weight: bold;
+            font-weight: $semi-bold;
             color: $color-black-light;
         }
 
@@ -376,7 +376,7 @@ $avatar-size: 30px;
         &__speakerName {
             vertical-align: middle;
             font-size: $font-xs;
-            font-weight: bold;
+            font-weight: $semi-bold;
         }
 
         &__like {
