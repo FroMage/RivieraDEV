@@ -13,7 +13,12 @@ $avatar-size: 30px;
         width: 100%;
         margin: 0 auto;
 
+        @media (min-width: $screen-sm-min) {
+            margin-top: $space-md;
+        }
+
         @media (min-width: $screen-md-min) {
+            margin-top: $space-xl;
             width: 95%;
         }
         @media (min-width: $screen-lg-min) {
@@ -23,40 +28,57 @@ $avatar-size: 30px;
 
     &__days {
         display: flex;
+        font-size: $font-xs;
+        font-weight: $semi-bold;
+        margin: 0 $space-sm;
 
         @media (min-width: $screen-md-min) {
             width: 80%;
             margin: 0 auto;
+            font-size: $font-sm;
         }
     }
 
     &__day {
         flex: 1;
         text-align: center;
-        font-size: $font-sm;
-        font-weight: normal;
         cursor: pointer;
 
         &--selected {
             padding-bottom: 1rem;
             border-bottom: $color-yellow 0.4rem solid;
         }
+
+        &--desktop {
+            display: none;
+
+            @media (min-width: $screen-md-min) {
+                display: block;
+            }
+        }
+        &--mobile {
+            display: block;
+
+            @media (min-width: $screen-md-min) {
+                display: none;
+            }
+        }
     }
 
     &__legend {
         display: flex;
         flex-wrap: wrap;
-        font-size: $font-xxs;
+        font-size: $font-xs;
         margin: $space-sm;
 
-        @media (min-width: $screen-md-min) {
-            margin: $space-sm 0;
+        @media (min-width: $screen-lg-min) {
+            margin: $space-sm $space-xxxl;
         }
 
         &--item {
             display: flex;
             justify-content: center;
-            margin: 0.3em 0;
+            margin: $space-xxs $space-xs $space-xxs 0;
         }
 
         &--bullet {
@@ -70,6 +92,15 @@ $avatar-size: 30px;
 
         &--text {
             margin: 0 $space-sm 0 0.3em;
+        }
+    }
+
+    &__likeExplanation {
+        font-size: $font-sm;
+        margin: $space-md $space-sm;
+
+        @media (min-width: $screen-lg-min) {
+            margin: $space-md $space-xxxl $space-lg $space-xxxl;
         }
     }
 
@@ -416,12 +447,4 @@ $avatar-size: 30px;
 th.fullSchedule-time-title {
     border-top: none;
     border-left: none;
-}
-
-.like-explanation {
-    font-size: $font-xxs;
-    margin: $space-sm;
-    @media (min-width: $screen-md-min) {
-        margin: $space-sm 0;
-    }
 }

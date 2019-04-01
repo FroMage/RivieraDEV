@@ -12,15 +12,14 @@
 
 <div class="page__container schedule__container">
 
-		<h2 class="page__title">
-				&{'views.application.schedule.titlePage'}
-		</h2>
-
 	#{if displayFullSchedule }
 
         <div class="schedule__days">
             #{list items: days, as: 'day'}
-            <h2 class="schedule__day fullSchedule-day js-schedule-day${day_index} schedule-day${day_index}" onclick="scheduleSwiper.slideTo(${day_index - 1})">${day.format('EEEE dd MMMM yyyy')}</h2>
+                <h2 class="schedule__day fullSchedule-day js-schedule-day${day_index} schedule-day${day_index}" onclick="scheduleSwiper.slideTo(${day_index - 1})">
+                    <span class="schedule__day--desktop">${day.format('EEEE dd MMMM yyyy')}</span>
+                    <span class="schedule__day--mobile">${day.format('EEEE dd').replace(' ', '<br>').raw()}</span>
+                </h2>
             #{/list}
         </div>
 
@@ -35,7 +34,7 @@
             #{/list}
         </div>
 
-        <div class="like-explanation">
+        <div class="schedule__likeExplanation">
             &{'views.application.schedule.like.explanation'}
         </div>
 
