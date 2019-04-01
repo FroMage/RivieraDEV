@@ -4,9 +4,9 @@ $avatar-size: 30px;
     &__header {
         // TODO use another image
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/tickets.jpg'
+            '../images/illustrations/program.jpg'
         );
-        background-position: 0 30%;
+        background-position: 0 75%;
     }
 
     &__container {
