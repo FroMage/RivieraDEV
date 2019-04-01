@@ -157,9 +157,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media (min-width: $screen-sm-min) {
-            align-items: flex-start;
-        }
     }
 
     &__micro:before {
@@ -172,10 +169,22 @@
     }
 
     &__speakers {
-        margin-left: 1rem;
-        padding-left: 1rem;
+        margin-left: $space-sm;
+        padding-left: $space-sm;
         text-align: left;
         border-left: $color-white 1px solid;
+    }
+
+    &__speaker {
+        &--link {
+            text-decoration: none;
+            color: $color-white;
+            transition: text-decoration 0.3s;
+            &:hover {
+                color: $color-white;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__body {

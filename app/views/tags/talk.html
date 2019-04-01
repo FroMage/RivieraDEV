@@ -7,7 +7,8 @@
         <div class="talkDetails__speakers">
             #{list items: _talk.speakers, as: 'speaker'}
             <div class="talkDetails__speaker">
-                ${speaker}
+                <a  class="talkDetails__speaker--link"
+                    href="@{Application.speaker(speaker.id)}">${speaker}</a>
             </div>
             #{/list}
         </div>
@@ -26,8 +27,7 @@
             >
             #{/if} #{if _talk.language}
             <span class="talkDetails__metadata--item"
-                >&{'views.application.talk.' + _talk.language}</span
-            >
+                >&{'views.application.talk.' + _talk.language}</span>
             #{/if}
         </div>
     </div>
