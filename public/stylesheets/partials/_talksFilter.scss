@@ -1,4 +1,8 @@
 .talksFilter {
+    @media (min-width: $screen-lg-min) {
+        margin: 0 $space-xxxl;
+    }
+
     & input[type='checkbox'] {
         display: none;
     }
@@ -49,15 +53,19 @@
     }
 
     &__title {
-        font-size: $font-xs;
-        margin: 0.5rem 0;
+        margin: $space-xs 0;
+        font-size: $font-md;
+    }
+
+    &__items {
+        font-size: $font-sm;
+        font-weight: $light;
     }
 
     &__item {
         margin: 1em 0;
         @media (min-width: $screen-md-min) {
             margin: $space-sm 0;
-            font-size: $font-xxs;
         }
 
         &--text:before {

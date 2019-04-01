@@ -1974,8 +1974,12 @@ body.burgerMenu--open .burgerMenu:before {
 .schedule__container {
   width: 100%;
   margin: 0 auto; }
+  @media (min-width: 768px) {
+    .schedule__container {
+      margin-top: 2rem; } }
   @media (min-width: 992px) {
     .schedule__container {
+      margin-top: 4rem;
       width: 95%; } }
   @media (min-width: 1200px) {
     .schedule__container {
@@ -1984,23 +1988,35 @@ body.burgerMenu--open .burgerMenu:before {
 .schedule__days {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 1rem; }
   @media (min-width: 992px) {
     .schedule__days {
       width: 80%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      font-size: 1.6rem; } }
 
 .schedule__day {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   text-align: center;
-  font-size: 1.6rem;
-  font-weight: normal;
   cursor: pointer; }
   .schedule__day--selected {
     padding-bottom: 1rem;
     border-bottom: #fdba1d 0.4rem solid; }
+  .schedule__day--desktop {
+    display: none; }
+    @media (min-width: 992px) {
+      .schedule__day--desktop {
+        display: block; } }
+  .schedule__day--mobile {
+    display: block; }
+    @media (min-width: 992px) {
+      .schedule__day--mobile {
+        display: none; } }
 
 .schedule__legend {
   display: -webkit-box;
@@ -2008,11 +2024,11 @@ body.burgerMenu--open .burgerMenu:before {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 1rem; }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     .schedule__legend {
-      margin: 1rem 0; } }
+      margin: 1rem 10rem; } }
   .schedule__legend--item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2020,7 +2036,7 @@ body.burgerMenu--open .burgerMenu:before {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 0.3em 0; }
+    margin: 0.6rem 0.8rem 0.6rem 0; }
   .schedule__legend--bullet {
     width: 1em;
     min-width: 1em;
@@ -2030,6 +2046,13 @@ body.burgerMenu--open .burgerMenu:before {
     border-radius: 100%; }
   .schedule__legend--text {
     margin: 0 1rem 0 0.3em; }
+
+.schedule__likeExplanation {
+  font-size: 1.6rem;
+  margin: 2rem 1rem; }
+  @media (min-width: 1200px) {
+    .schedule__likeExplanation {
+      margin: 2rem 10rem 3rem 10rem; } }
 
 .schedule--desktop {
   display: none; }
@@ -2263,13 +2286,6 @@ th.fullSchedule-time-title {
   border-top: none;
   border-left: none; }
 
-.like-explanation {
-  font-size: 1.2rem;
-  margin: 1rem; }
-  @media (min-width: 992px) {
-    .like-explanation {
-      margin: 1rem 0; } }
-
 .talk-theme {
   padding: 0 0.4em;
   border-radius: 4px;
@@ -2427,6 +2443,10 @@ th.fullSchedule-time-title {
     bottom: 1rem;
     right: 1rem; }
 
+@media (min-width: 1200px) {
+  .talksFilter {
+    margin: 0 10rem; } }
+
 .talksFilter input[type='checkbox'] {
   display: none; }
 
@@ -2470,15 +2490,18 @@ th.fullSchedule-time-title {
       width: 33%; } }
 
 .talksFilter__title {
-  font-size: 1.4rem;
-  margin: 0.5rem 0; }
+  margin: 0.8rem 0;
+  font-size: 1.8rem; }
+
+.talksFilter__items {
+  font-size: 1.6rem;
+  font-weight: 300; }
 
 .talksFilter__item {
   margin: 1em 0; }
   @media (min-width: 992px) {
     .talksFilter__item {
-      margin: 1rem 0;
-      font-size: 1.2rem; } }
+      margin: 1rem 0; } }
   .talksFilter__item--text:before {
     content: '';
     display: block;
