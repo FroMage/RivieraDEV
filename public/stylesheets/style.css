@@ -2634,6 +2634,22 @@ th.fullSchedule-time-title {
     grid-template-areas: 'deepdiveMain conferenceMain combiMain' 'deepdiveDesc conferenceDesc combiDesc';
     grid-column-gap: 3rem; } }
 
+@media (min-width: 992px) {
+  .training {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'trainingMain trainingChapter trainingChapter' 'trainingDesc trainingChapter trainingChapter';
+    grid-column-gap: 3rem; } }
+
+.training__description {
+  grid-area: trainingChapter;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  @media (min-width: 992px) {
+    .training__description {
+      margin-left: 0;
+      margin-right: 0; } }
+
 .pass__mainContainer {
   padding: 4rem;
   border-radius: 16px 16px 0 0;
@@ -2666,6 +2682,9 @@ th.fullSchedule-time-title {
   .pass__mainContainer--combi {
     grid-area: combiMain;
     background-color: #eb8815; }
+  .pass__mainContainer--training {
+    grid-area: trainingMain;
+    background-color: #eb8815; }
 
 .pass__name {
   font-size: 3rem;
@@ -2679,7 +2698,7 @@ th.fullSchedule-time-title {
 .pass__pass--conference {
   color: #c68d24; }
 
-.pass__pass--combi {
+.pass__pass--combi, .pass__pass--training {
   color: #c67517; }
 
 .pass__days {
@@ -2706,7 +2725,7 @@ th.fullSchedule-time-title {
     background-color: rgba(217, 159, 22, 0.3); }
   .pass__buy--conference:hover, .pass__buy--conference:focus, .pass__buy--conference:active {
     background-color: rgba(198, 141, 36, 0.3); }
-  .pass__buy--combi:hover, .pass__buy--combi:focus, .pass__buy--combi:active {
+  .pass__buy--training:hover, .pass__buy--training:focus, .pass__buy--training:active, .pass__buy--combi:hover, .pass__buy--combi:focus, .pass__buy--combi:active {
     background-color: rgba(198, 117, 23, 0.3); }
 
 .pass__descriptionContainer {
@@ -2735,6 +2754,10 @@ th.fullSchedule-time-title {
   .pass__descriptionContainer--combi {
     grid-area: combiDesc; }
     .pass__descriptionContainer--combi .pass__descriptionItem:before {
+      background-color: #eb8815; }
+  .pass__descriptionContainer--training {
+    grid-area: trainingDesc; }
+    .pass__descriptionContainer--training .pass__descriptionItem:before {
       background-color: #eb8815; }
 
 .pass__description {

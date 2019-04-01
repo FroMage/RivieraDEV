@@ -18,6 +18,28 @@
     }
 }
 
+.training {
+    @media (min-width: $screen-md-min) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'trainingMain trainingChapter trainingChapter'
+            'trainingDesc trainingChapter trainingChapter';
+        grid-column-gap: $space-lg;
+    }
+
+    &__description {
+        grid-area: trainingChapter;
+        margin-left: $space-sm;
+        margin-right: $space-sm;
+
+        @media (min-width: $screen-md-min) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
 $color-deepDive: #fdba1d;
 $color-conference: #fdaf1d;
 $color-combi: #eb8815;
@@ -61,6 +83,11 @@ $bullet-size: 0.6rem; // 6px
             grid-area: combiMain;
             background-color: $color-combi;
         }
+
+        &--training {
+            grid-area: trainingMain;
+            background-color: $color-combi;
+        }
     }
 
     &__name {
@@ -79,7 +106,8 @@ $bullet-size: 0.6rem; // 6px
             color: $color-conference-label;
         }
 
-        &--combi {
+        &--combi,
+        &--training {
             color: $color-combi-label;
         }
     }
@@ -125,6 +153,7 @@ $bullet-size: 0.6rem; // 6px
             }
         }
 
+        &--training,
         &--combi {
             &:hover,
             &:focus,
@@ -167,6 +196,14 @@ $bullet-size: 0.6rem; // 6px
 
         &--combi {
             grid-area: combiDesc;
+
+            .pass__descriptionItem:before {
+                background-color: $color-combi;
+            }
+        }
+
+        &--training {
+            grid-area: trainingDesc;
 
             .pass__descriptionItem:before {
                 background-color: $color-combi;
