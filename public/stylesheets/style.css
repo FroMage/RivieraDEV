@@ -1967,9 +1967,9 @@ body.burgerMenu--open .burgerMenu:before {
   width: 100%; }
 
 .schedule__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/tickets.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/tickets.jpg");
-  background-position: 0 30%; }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/program.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/program.jpg");
+  background-position: 0 75%; }
 
 .schedule__container {
   width: 100%;
