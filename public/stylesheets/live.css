@@ -564,8 +564,7 @@ th.fullSchedule-time-title {
     margin: 0 auto;
     padding: 5%;
     text-align: center;
-    background-color: #fdba1d;
-    font-weight: 300; }
+    background-color: #fdba1d; }
   .talkDetails__micro {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -597,10 +596,11 @@ th.fullSchedule-time-title {
     padding: 2% 10%;
     border-radius: 0 0 0.5rem 0.5rem;
     background-color: #f8f7f7;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.4em; }
   .talkDetails__metadata {
     font-size: 1.2rem;
+    font-weight: 600;
     margin: 1.5em;
     line-height: 2.5em;
     text-align: center; }

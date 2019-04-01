@@ -151,7 +151,6 @@
         padding: 5%;
         text-align: center;
         background-color: $color-yellow;
-        font-weight: 300;
     }
 
     &__micro {
@@ -183,12 +182,13 @@
         padding: 2% 10%;
         border-radius: 0 0 $borderRadius $borderRadius;
         background-color: $color-gray-ultralight;
-        font-size: $font-xs;
+        font-size: $font-sm;
         line-height: 1.4em;
     }
 
     &__metadata {
         font-size: $font-xxs;
+        font-weight: $semi-bold;
         margin: 1.5em;
         line-height: 2.5em;
         text-align: center;
