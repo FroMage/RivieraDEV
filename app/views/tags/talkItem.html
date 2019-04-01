@@ -60,9 +60,9 @@
                 
                 <div class="fullSchedule__talk__like">
                     #{if _user}
-                        <span class="fullSchedule__talk__nbLikes">${talk.nbLikes}</span>
+                        <span class="fullSchedule__talk__nbLikes js-talksFilter-like" data-talk="${talk.id}">${talk.nbLikes}</span>
                     #{/if}
-                    <span class="fullSchedule__talk__likeHeart js-talksFilter-like" data-talk="${talk.id}" onclick="event.preventDefault(); likeTalk(this,'${talk.id}')"></span>
+                    <span class="fullSchedule__talk__likeHeart js-talksFilter-like-icon" data-talk="${talk.id}" onclick="event.preventDefault(); likeTalk(this,'${talk.id}')"></span>
                 </div>
             </div>
         </a>
