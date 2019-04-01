@@ -4,7 +4,7 @@ $avatar-size: 30px;
     &__header {
         // TODO use another image
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/program.jpg'
+            '../images/illustrations/program-mini.jpg'
         );
         background-position: 0 75%;
     }
@@ -425,28 +425,28 @@ $avatar-size: 30px;
 
     &__breakfast {
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/croissants.jpg'
+            '../images/illustrations/croissants-mini.jpg'
         );
         background-position: 0 45%;
     }
 
     &__lunch {
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/lunch.jpg'
+            '../images/illustrations/lunch-mini.jpg'
         );
         background-position: 0 75%;
     }
 
     &__cofeeBreak {
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/cofee_break.jpg'
+            '../images/illustrations/cofee_break-mini.jpg'
         );
         background-position: 0 30%;
     }
 
     &__party {
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/guitars.jpg'
+            '../images/illustrations/guitars-mini.jpg'
         );
         background-position: 0 75%;
     }
