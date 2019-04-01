@@ -444,14 +444,22 @@
     font-weight: 600; }
   .fullSchedule__talk__like {
     position: absolute;
-    top: 1rem;
-    right: 1rem; }
-    .fullSchedule__talk__like svg {
-      color: #777; }
-    .fullSchedule__talk__like[data-like='true'] svg {
-      color: #cc0303; }
+    top: 0;
+    right: 0; }
   .fullSchedule__talk__nbLikes {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    vertical-align: middle; }
+  .fullSchedule__talk__likeHeart {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/icons/heart.svg); }
+    .fullSchedule__talk__likeHeart[data-like='true'] {
+      background-image: url(../images/icons/heart-selected.svg); }
   .fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
     text-align: center;
     color: #fff;

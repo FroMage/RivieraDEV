@@ -381,20 +381,28 @@ $avatar-size: 30px;
 
         &__like {
             position: absolute;
-            top: $space-sm;
-            right: $space-sm;
-
-            & svg {
-                color: #777;
-            }
-
-            &[data-like='true'] svg {
-                color: #cc0303;
-            }
+            top: 0;
+            right: 0;
         }
 
         &__nbLikes {
             font-size: $font-xxs;
+            vertical-align: middle;
+        }
+
+        &__likeHeart {
+            display: inline-block;
+            width: $icon-size-lg;
+            height: $icon-size-lg;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url(../images/icons/heart.svg);
+
+            &[data-like='true'] {
+                background-image: url(../images/icons/heart-selected.svg);
+            }
         }
     }
 

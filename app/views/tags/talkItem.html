@@ -58,11 +58,11 @@
                     #{/list}
                 </ul>
                 
-                <div class="fullSchedule__talk__like js-talksFilter-like" data-talk="${talk.id}" onclick="event.preventDefault(); likeTalk(this,'${talk.id}')">
+                <div class="fullSchedule__talk__like">
                     #{if _user}
                         <span class="fullSchedule__talk__nbLikes">${talk.nbLikes}</span>
                     #{/if}
-                    <i class="far fa-heart"></i>
+                    <span class="fullSchedule__talk__likeHeart js-talksFilter-like" data-talk="${talk.id}" onclick="event.preventDefault(); likeTalk(this,'${talk.id}')"></span>
                 </div>
             </div>
         </a>
