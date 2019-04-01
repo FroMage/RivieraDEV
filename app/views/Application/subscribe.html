@@ -13,7 +13,7 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
 <div class="page__container notFullWidth">
 
     <h2 class="page__title">
-        &{'views.application.subscribe.titlePage'}
+        &{'views.application.subscribe.title.pack'}
     </h2>
 
     <div class="passes">
@@ -104,4 +104,75 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
             </div>
         #{/list}
     </div> <!-- /.passes -->
+
+    <h2 class="page__title">
+        &{'views.application.subscribe.title.training'}
+    </h2>
+    <div class="training">
+        <div class="pass__mainContainer pass__mainContainer--training">
+            <div class="pass__main">
+                <h3 class="pass__name">
+                    <span class="pass__pass pass__pass--training">
+                        &{'views.application.subscribe.pass.pass'}
+                    </span>
+                    &{'views.application.subscribe.pass.training.name'}
+                </h3>
+                <div class="pass__days">
+                    &{'views.application.subscribe.pass.combi.days'}
+                </div>
+            </div>
+            <div class="pass__prices">
+                <div class="pass__price">
+                    200 €
+                </div>
+                
+                #{if ticketingIsOpen}
+                    <a class="button button--white pass__buy pass__buy--training"
+                        href="https://www.softeaminstitute.fr/developpement-logiciel/formation-riviera-dev-2019/"
+                        target="_blank">
+                        &{'views.application.subscribe.pass.training.button'}
+                    </a>
+                #{/if}
+                #{else}
+                    <div class="pass__saleover">
+                        &{'views.application.subscribe.pass.salenotyet'}
+                    </div>
+                #{/else}
+            </div>
+        </div>
+        <div class="pass__descriptionContainer pass__descriptionContainer--training">
+            <ul class="pass__description">
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.deepdive.conferences'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.deepdive.workshops'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.conference.conferences'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.conference.snorkeling'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.conference.notjustcoders'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.buffet'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.buffets'}
+                </li>
+                <li class="pass__descriptionItem">
+                    &{'views.application.subscribe.pass.include.party'}
+                </li>
+            </ul>
+        </div>
+        <div class="training__description">
+            <p>&{'views.application.subscribe.pass.training.text1'}</p>
+            <p>&{'views.application.subscribe.pass.training.text2'}</p>
+            <p>&{'views.application.subscribe.pass.training.text3'}</p>
+        </div>
+    </div>
+
 </div>
