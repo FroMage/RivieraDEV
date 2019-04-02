@@ -1966,6 +1966,9 @@ body.burgerMenu--open .burgerMenu:before {
 .orgas-photo {
   width: 100%; }
 
+.schedule__swiper {
+  margin-bottom: 2rem; }
+
 .schedule__header {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/program-mini.jpg");
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/program-mini.jpg");
