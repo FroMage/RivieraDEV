@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .circle {
+        fill: #fff;
+      }
+
+      .logo {
+        fill: #fdba1d;
+      }
+    </style>
+  </defs>
+  <g id="linkedin_1_" data-name="linkedin (1)" transform="translate(0 0.001)">
+    <circle id="Ellipse_14" data-name="Ellipse 14" class="circle" cx="25" cy="25" r="25" transform="translate(0 -0.001)"/>
+    <g id="Groupe_351" data-name="Groupe 351" transform="translate(12.169 10.766)">
+      <path id="Tracé_295" data-name="Tracé 295" class="logo" d="M54.748,40.185V50.42H48.814V40.871c0-2.4-.857-4.035-3.005-4.035a3.246,3.246,0,0,0-3.044,2.17,4.061,4.061,0,0,0-.2,1.446V50.42H36.634s.08-16.173,0-17.847h5.935V35.1c-.012.02-.029.039-.039.058h.039V35.1a5.892,5.892,0,0,1,5.348-2.948c3.9,0,6.831,2.551,6.831,8.032ZM30.426,23.969a3.092,3.092,0,1,0-.078,6.168h.039a3.094,3.094,0,1,0,.039-6.168ZM27.421,50.42h5.932V32.572H27.421Z" transform="translate(-27.068 -23.969)"/>
+    </g>
+  </g>
+</svg>

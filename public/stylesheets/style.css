@@ -1337,20 +1337,22 @@ body.burgerMenu--open .burgerMenu:before {
     .partenaireDetails__network a {
       color: #fff;
       text-decoration: none; }
-  .partenaireDetails__twitter, .partenaireDetails__website {
+  .partenaireDetails__website, .partenaireDetails__linkedin, .partenaireDetails__twitter {
     display: inline-block; }
-  .partenaireDetails__twitter {
+  .partenaireDetails__website:nth-of-type(2), .partenaireDetails__linkedin, .partenaireDetails__twitter {
     margin-left: 2rem; }
-  .partenaireDetails__twitter:before, .partenaireDetails__website:before {
+  .partenaireDetails__website:before, .partenaireDetails__linkedin:before, .partenaireDetails__twitter:before {
     content: '';
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle; }
-  .partenaireDetails__twitter:before {
-    background-image: url(../images/icons/twitter-logo-button.svg); }
   .partenaireDetails__website:before {
     background-image: url(../images/icons/link.svg); }
+  .partenaireDetails__linkedin:before {
+    background-image: url(../images/icons/linkedin.svg); }
+  .partenaireDetails__twitter:before {
+    background-image: url(../images/icons/twitter-logo-button.svg); }
   .partenaireDetails__logo {
     display: block;
     max-width: 70%;
