@@ -274,7 +274,10 @@ public class Application extends Controller {
     }
 
     public static void becomeSponsor() {
-        render();
+        // Until becomeSponsor.html has a new design
+        redirect("https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E");
+
+        // render();
     }
 
     public static void previousSpeakerPhoto(Long id) {
