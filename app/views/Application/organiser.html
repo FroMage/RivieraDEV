@@ -1,61 +1,43 @@
 #{extends 'main.html' /}
 #{set title: orga.toString() + ' - ' + play.i18n.Messages.get('views.application.orga.title')  /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.orga.title'}</span></h1>
+<div class="page__header orgas__header">
+    <h1 class="page__mainTitle">&{'views.application.orga.title'}</h1>
 </div>
 
-#{if user}
-	<a href="@{Organisers.blank()}" class="btn btn-default">add</a>
-	<a href="@{Organisers.show(orga.id)}" class="btn btn-default">edit</a>
-#{/if}
-
-<div class="container page-container">
-    <div class="row personDetails">
-                
-        <div class="col-sm-2 personDetails-photo">
-            <img class="personDetails-photo-img" src="@{Application.orgaPhoto(orga.id)}" alt="${orga}"/>
+<div class="page__container notFullWidth">
+    <div class="personDetails">
+        <div class="personDetails__header">
+            <figure class="personSummary personDetails__header--content">
+                <div
+                    class="personSummary__photo personDetails__header--photo"
+                    style="background-image: url('@{Application.orgaPhoto(orga.id)}')"
+                ></div>
+                <figcaption class="personDetails__desc">
+                    <div class="personDetails__name">${orga}</div>
+                    <div class="personDetails__title">${orga.company}</div>
+                    <div class="personDetails__network">
+                        #{if orga.twitterAccount}
+                        <div class="personDetails__twitter">
+                            <a
+                                href="https://twitter.com/${orga.twitterAccount}"
+                                target="_blank">@${orga.twitterAccount}</a>
+                        </div>
+                        #{/if}
+                        #{if orga.blogURL}
+                        <div class="personDetails__blog">
+                            <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
+                        </div>
+                        #{/if}
+                    </div>
+                </figcaption>
+            </figure>
         </div>
-
-        <div class="col-sm-6 personDetails-desc">
-            <div class="personDetails-name-title">
-                <div class="personDetails-name">${orga.firstName} ${orga.lastName}</div>
-                #{if orga.title} 
-                <div class="personDetails-title">${orga.title}</div>
-                #{/if}
-            </div>
-            <div class="personDetails-biography">${orga.biography?.md()}</div>
+        <div class="personDetails__body">
+            ${orga.biography?.md()}
         </div>
-
-        <div class="col-sm-4 personDetails-links">
-
-            #{if orga.company} 
-            <div class="personDetails-company personDetails-link">
-                <i class="fas fa-briefcase personDetails-icon" title="&{'views.application.common.company'}"></i>
-                #{if orga.companyURL}
-                    <a href="${orga.companyURL}" target="_blank">${orga.company}</a>
-                #{/if}
-				#{else}
-					${orga.company}
-				#{/else}
-            </div>
-            #{/if}
-
-            #{if orga.twitterAccount.length() > 0} 
-            <div class="personDetails-twitter personDetails-link">
-                <i class="fab fa-twitter personDetails-icon" title="&{'views.application.common.twitter'}"></i>
-                <a href="https://twitter.com/${orga.twitterAccount}" target="_blank">@${orga.twitterAccount}</a>
-            </div>
-            #{/if}
-
-            #{if orga.blogURL.length() > 0} 
-            <div class="personDetails-blog personDetails-link">
-                <i class="fas fa-globe personDetails-icon" title="&{'views.application.common.website'}"></i>
-                <a href="${orga.blogURL}" target="_blank">${orga.blogURL}</a>
-            </div>
-            #{/if}
-        </div>
-
-        <div class="clearfix"></div>
-    </div> <!-- /.row -->
+        #{if user}
+            <a class="personDetails__admin" href="@{Organisers.show(orga.id)}">edit</a>
+        #{/if}
+    </div>
 </div>
