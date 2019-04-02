@@ -37,7 +37,10 @@ public class Sponsor extends Model implements Comparable<Sponsor> {
 	public String aboutEN;
 	@URL
 	public String companyURL;
+	@URL
+	public String otherURL;
 	public String twitterAccount;
+	public String linkedInAccount;
 
 	@Enumerated(EnumType.STRING)
 	public SponsorShip level;

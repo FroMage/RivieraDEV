@@ -15,6 +15,16 @@ play.i18n.Messages.get('views.application.sponsor.title') /}
                             <a href="${sponsor.companyURL}" target="_blank">${sponsor.companyURL}</a>
                         </div>
                     #{/if}
+                    #{if sponsor.otherURL}
+                        <div class="partenaireDetails__website">
+                            <a href="${sponsor.otherURL}" target="_blank">${sponsor.otherURL}</a>
+                        </div>
+                    #{/if}
+                    #{if sponsor.linkedInAccount}
+                        <div class="partenaireDetails__linkedin">
+                            <a href="https://www.linkedin.com/company/${sponsor.linkedInAccount}" target="_blank">${sponsor.linkedInAccount}</a>
+                        </div>
+                    #{/if}
                     #{if sponsor.twitterAccount}
                         <div class="partenaireDetails__twitter">
                         <a

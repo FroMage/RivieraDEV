@@ -178,17 +178,21 @@ $sponsor-silver-height: 83px;
         }
     }
 
-    &__twitter,
-    &__website {
+    &__website,
+    &__linkedin,
+    &__twitter {
         display: inline-block;
     }
 
+    &__website:nth-of-type(2), // In case of 2 website urls
+    &__linkedin,
     &__twitter {
         margin-left: $space-md;
     }
 
-    &__twitter:before,
-    &__website:before {
+    &__website:before,
+    &__linkedin:before,
+    &__twitter:before {
         content: '';
         display: inline-block;
         width: 1.5em;
@@ -196,12 +200,16 @@ $sponsor-silver-height: 83px;
         vertical-align: middle;
     }
 
-    &__twitter:before {
-        background-image: url(../images/icons/twitter-logo-button.svg);
-    }
-
     &__website:before {
         background-image: url(../images/icons/link.svg);
+    }
+
+    &__linkedin:before {
+        background-image: url(../images/icons/linkedin.svg);
+    }
+
+    &__twitter:before {
+        background-image: url(../images/icons/twitter-logo-button.svg);
     }
 
     &__logo {
