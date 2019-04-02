@@ -4,11 +4,14 @@
 
 # Home page
 GET     /                                       Application.index
-GET     /photos                                 Application.photos
-GET     /acces                                  Application.access
+# GET     /photos                                 Application.photos
+GET     /photos                                 Application.index
+GET     /acces                                  Application.access # Typo :/
+GET     /access                                 Application.access
 GET     /a-propos                               Application.about
 GET     /about                                  Application.about
-GET     /nouvelles                              Application.news
+# GET     /nouvelles                              Application.news
+GET     /nouvelles                              Application.index
 GET     /program                                Application.schedule
 GET     /programme                              Application.schedule
 GET     /programme-supersecret                  Application.scheduleSuperSecret
@@ -16,11 +19,15 @@ GET     /schedule                               Application.schedule
 GET     /orateurs                               Application.speakers
 GET     /speakers                               Application.speakers
 GET     /orateur/{id}                           Application.speaker(id)
-#GET    /judcon                                 Application.judcon
+GET     /speaker/{id}                           Application.speaker(id)
+# GET     /judcon                                 Application.judcon
 GET     /judcon                                 Application.index
-GET     /cfp                                    Application.cfp
-GET     /sessions                               Application.talks
-GET     /talks                                  Application.talks
+# GET     /cfp                                    Application.cfp
+GET     /cfp                                    Application.index 
+# GET     /sessions                               Application.talks
+GET     /sessions                               Application.index
+# GET     /talks                                  Application.talks
+GET     /talks                                  Application.index
 GET     /session/{id}                           Application.talk(id)
 GET     /inscriptions                           Application.subscribe
 GET     /subscribe                              Application.subscribe
