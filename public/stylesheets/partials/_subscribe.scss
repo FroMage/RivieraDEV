@@ -1,7 +1,7 @@
 .subscribe {
     &__header {
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/tickets.jpg'
+            '../images/illustrations/tickets-mini.jpg'
         );
         background-position: 0 30%;
     }
