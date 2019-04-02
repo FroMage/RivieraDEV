@@ -19,7 +19,7 @@
     &__aboutUs {
         grid-area: photo1;
         @include backgroundImageWithDarkGradient(
-            '../images/illustrations/about_us_1.jpg'
+            '../images/illustrations/about_us_1-mini.jpg'
         );
         padding: $space-md;
 
@@ -76,10 +76,10 @@
 
     &__photo2 {
         grid-area: photo2;
-        background-image: url(../images/illustrations/about_us_2.jpg);
+        background-image: url(../images/illustrations/about_us_2-mini.jpg);
     }
     &__photo3 {
         grid-area: photo3;
-        background-image: url(../images/illustrations/about_us_3.jpg);
+        background-image: url(../images/illustrations/about_us_3-mini.jpg);
     }
 }

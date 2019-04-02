@@ -281,8 +281,8 @@ a {
     background-size: cover; }
   .aboutUs__aboutUs {
     grid-area: photo1;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/about_us_1.jpg");
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/about_us_1.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/about_us_1-mini.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/about_us_1-mini.jpg");
     padding: 2rem; }
     @media (min-width: 768px) {
       .aboutUs__aboutUs {
@@ -314,10 +314,10 @@ a {
         display: block; } }
   .aboutUs__photo2 {
     grid-area: photo2;
-    background-image: url(../images/illustrations/about_us_2.jpg); }
+    background-image: url(../images/illustrations/about_us_2-mini.jpg); }
   .aboutUs__photo3 {
     grid-area: photo3;
-    background-image: url(../images/illustrations/about_us_3.jpg); }
+    background-image: url(../images/illustrations/about_us_3-mini.jpg); }
 
 body .burgerMenu:before {
   content: '';
@@ -1021,7 +1021,7 @@ body.burgerMenu--open .burgerMenu:before {
         max-width: 50rem; } }
   .location__cardHeader {
     padding: 20rem 4rem 3rem 4rem;
-    background-image: url(../images/illustrations/location.jpg);
+    background-image: url(../images/illustrations/location-mini.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
