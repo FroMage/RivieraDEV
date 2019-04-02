@@ -281,7 +281,7 @@ public class Application extends Controller {
         PreviousSpeaker speaker = PreviousSpeaker.findById(id);
         notFoundIfNull(speaker);
         if (!speaker.photo.exists())
-            redirect("/public/images/mascotte/Sunny_Cool.jpg");
+            redirect("/public/images/mascotte/Ray_Cool.jpg");
         response.contentType = speaker.photo.type();
         renderBinary(speaker.photo.get());
     }
@@ -290,7 +290,7 @@ public class Application extends Controller {
         Speaker speaker = Speaker.findById(id);
         notFoundIfNull(speaker);
         if (!speaker.photo.exists())
-            redirect("/public/images/mascotte/Sunny_Cool.jpg");
+            redirect("/public/images/mascotte/Ray_Cool.jpg");
         response.contentType = speaker.photo.type();
         renderBinary(speaker.photo.get());
     }
@@ -306,7 +306,7 @@ public class Application extends Controller {
         Organiser organiser = Organiser.findById(id);
         notFoundIfNull(organiser);
         if (!organiser.photo.exists())
-            redirect("/public/images/unicorn-horn-lashes.svg");
+            redirect("/public/images/mascotte/Ray_Badass.jpg");
         response.contentType = organiser.photo.type();
         renderBinary(organiser.photo.get());
     }
