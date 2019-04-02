@@ -87,7 +87,9 @@
 <!-- External Lib : SwiperJS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <script>
-let scheduleSwiper = new Swiper ('.swiper-container');
+let scheduleSwiper = new Swiper ('.swiper-container',{
+    autoHeight: true
+});
 let updateDateSelected = () => {
     // Revove 'selected' class on previous tab
     let previousTab = document.getElementsByClassName('js-schedule-day' + (scheduleSwiper.previousIndex + 1));
