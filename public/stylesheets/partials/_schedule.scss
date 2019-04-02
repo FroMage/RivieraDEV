@@ -1,6 +1,10 @@
 $avatar-size: 30px;
 
 .schedule {
+    &__swiper {
+        margin-bottom: $space-md;
+    }
+
     &__header {
         // TODO use another image
         @include backgroundImageWithDarkGradient(
