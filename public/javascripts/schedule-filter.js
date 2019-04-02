@@ -55,19 +55,26 @@ const resizeTalks = function() {
     }
 };
 
+const dataPanelOpened = 'data-panel-opened';
+const dataPanelMaxHeight = 'data-max-height';
+
 /**
  * Init the toggle filters panel.
  */
 const initToggleFilters = function() {
     let filtersPanel = document.getElementsByClassName('js-talksFilters');
     if (filtersPanel && filtersPanel.length > 0) {
-        // If a height was already defined, then it should be a window resize
-        let oldHeight = filtersPanel[0].style.height;
+        filtersPanel[0].style.height = null;
+        filtersPanel[0].removeAttribute(dataPanelMaxHeight);
+        // Test if panel was previously opepend (in case of windows resize)
+        let isFiltersPanelOpened = filtersPanel[0].getAttribute(
+            dataPanelOpened
+        );
         // Calculate max height of the filters panel to be able to do a CSS transition effect
         let maxHeight = filtersPanel[0].getBoundingClientRect().height + 'px';
         // Keep in data attribute the value to alternate between 0 and Max value when the user clicks on button
-        filtersPanel[0].setAttribute('max-height', maxHeight);
-        if (oldHeight && oldHeight != '0px') {
+        filtersPanel[0].setAttribute(dataPanelMaxHeight, maxHeight);
+        if (isFiltersPanelOpened) {
             // Window resize, re-init the height
             filtersPanel[0].style.height = maxHeight;
         } else {
@@ -212,7 +219,6 @@ $(function() {
      * Show/Hide filters pannel
      */
     window.toggleFiltersPannel = () => {
-        console.log('');
         let filtersPanel = document.getElementsByClassName('js-talksFilters');
         if (filtersPanel && filtersPanel.length > 0) {
             if (
@@ -220,10 +226,12 @@ $(function() {
                 filtersPanel[0].style.height == '0'
             ) {
                 filtersPanel[0].style.height = filtersPanel[0].getAttribute(
-                    'max-height'
+                    dataPanelMaxHeight
                 );
+                filtersPanel[0].setAttribute(dataPanelOpened, true);
             } else {
                 filtersPanel[0].style.height = 0;
+                filtersPanel[0].removeAttribute(dataPanelOpened);
             }
         }
     };
