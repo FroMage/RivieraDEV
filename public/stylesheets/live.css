@@ -189,20 +189,26 @@
   display: flex;
   font-size: 1.4rem;
   font-weight: 600;
-  margin: 0 1rem; }
+  margin: 0 1rem 1rem;
+  border-bottom: #ddd 0.1rem solid; }
   @media (min-width: 992px) {
     .schedule__days {
       width: 80%;
-      margin: 0 auto;
+      margin: 0 auto 1rem;
       font-size: 1.6rem; } }
 
 .schedule__day {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  margin-bottom: 0;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  color: inherit;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .schedule__day--selected {
+    color: #fdba1d;
     padding-bottom: 1rem;
     border-bottom: #fdba1d 0.4rem solid; }
   .schedule__day--desktop {

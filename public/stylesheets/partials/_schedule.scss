@@ -30,21 +30,26 @@ $avatar-size: 30px;
         display: flex;
         font-size: $font-xs;
         font-weight: $semi-bold;
-        margin: 0 $space-sm;
+        margin: 0 $space-sm $space-sm;
+        border-bottom: $color-gray-light 0.1rem solid;
 
         @media (min-width: $screen-md-min) {
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto $space-sm;
             font-size: $font-sm;
         }
     }
 
     &__day {
         flex: 1;
+        margin-bottom: 0;
         text-align: center;
         cursor: pointer;
+        color: inherit;
+        transition: color 0.2s;
 
         &--selected {
+            color: $color-yellow;
             padding-bottom: 1rem;
             border-bottom: $color-yellow 0.4rem solid;
         }
