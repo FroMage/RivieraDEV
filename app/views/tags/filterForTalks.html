@@ -15,11 +15,10 @@
                         type="checkbox"
                         name="${theme.theme.slugify()}"
                         value="${theme.theme.slugify()}"
-                    /><label for="${theme.theme.slugify()}">
+                        onclick="toggleTheme('${theme.theme.slugify()}')"/>
+                        <label for="${theme.theme.slugify()}">
                         <span
-                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()}"
-                            onclick="toggleTheme('${theme.theme.slugify()}')"
-                            >${theme}</span>
+                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-theme-${theme.theme.slugify()}">${theme}</span>
                         </label>
                 </div>
                 #{/list}
@@ -37,12 +36,10 @@
                         type="checkbox"
                         name="${type.toString().slugify()}"
                         value="${type.toString().slugify()}"
-                    /><label for="${type.toString().slugify()}">
-                        <span
-                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}"
-                            onclick="toggleType('${type.toString().slugify()}')"
-                            >${type}</span>
-                        </label>
+                        onclick="toggleType('${type.toString().slugify()}')"/>
+                    <label for="${type.toString().slugify()}">
+                        <span class="talksFilter__item--text js-talksFilter-item js-talksFilter-type-${type.toString().slugify()}">${type}</span>
+                    </label>
                 </div>
                 #{/list}
             </div>
@@ -59,14 +56,10 @@
                         type="checkbox"
                         name="${level.code}"
                         value="${level.code}"
-                    /><label for="${level.code}"
-                        ><span
-                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-level-${level.code}"
-                            onclick="toggleLevel('${level.code}')"
-                            >&{'views.application.schedule.level.' +
-                            level.code}</span
-                        ></label
-                    >
+                        onclick="toggleLevel('${level.code}')"/>
+                    <label for="${level.code}">
+                        <span class="talksFilter__item--text js-talksFilter-item js-talksFilter-level-${level.code}">&{'views.application.schedule.level.' + level.code}</span>
+                    </label>
                 </div>
                 #{/list}
             </div>
@@ -83,13 +76,10 @@
                         type="checkbox"
                         name="${language.toString().slugify()}"
                         value="${language.toString().slugify()}"
-                    /><label for="language-${language.toString().slugify()}"
-                        ><span
-                            class="talksFilter__item--text js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}"
-                            onclick="toggleLanguage('${language.toString().slugify()}')"
-                            >#{language language: language/}</span
-                        ></label
-                    >
+                        onclick="toggleLanguage('${language.toString().slugify()}')"/>
+                    <label for="language-${language.toString().slugify()}">
+                        <span class="talksFilter__item--text js-talksFilter-item js-talksFilter-language-${language.toString().slugify()}">#{language language: language/}</span>
+                    </label>
                 </div>
                 #{/list}
             </div>
