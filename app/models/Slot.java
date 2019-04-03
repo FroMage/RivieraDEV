@@ -61,8 +61,7 @@ public class Slot extends Model {
     public static List<Slot> findMultiPerDay(Date day) {
         List<Slot> slots = find("date_trunc('day', startDate) = ? ORDER BY startDate, endDate", day).fetch();
         Map<Date, Slot> multiSlots = new HashMap();
-        NEXT:
-        for (Slot slot : slots) {
+        NEXT: for (Slot slot : slots) {
             Slot existingSlot = multiSlots.get(slot.startDate);
             if (existingSlot != null) {
                 // Compare each EndDate
@@ -70,10 +69,11 @@ public class Slot extends Model {
                     multiSlots.put(slot.startDate, slot);
                 }
             } else {
-                // if we find a new slot who starts after accepted slots (due to ORDER BY above) and ends before or at
+                // if we find a new slot who starts after accepted slots (due to ORDER BY above)
+                // and ends before or at
                 // an accepted slot, it must be a smaller contained slot so we skip it
                 for (Slot acceptedSlot : multiSlots.values()) {
-                    if(slot.endDate.compareTo(acceptedSlot.endDate) <= 0)
+                    if (slot.endDate.compareTo(acceptedSlot.endDate) <= 0)
                         continue NEXT;
                 }
                 multiSlots.put(slot.startDate, slot);
@@ -129,6 +129,9 @@ public class Slot extends Model {
     }
 
     public Talk getAllTracksEvent() {
-        return talks.size() == 1 && talks.get(0).track == null ? talks.get(0) : null;
+        if (talks.size() == 1) {
+            return talks.get(0);
+        }
+        return null;
     }
 }
