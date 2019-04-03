@@ -14,17 +14,20 @@
         %{allTracksEvent = slot.allTracksEvent}%
         #{if allTracksEvent } <!-- One talk for all tracks -->
             <tr>
-                <td class="fullSchedule__${allTracksEvent.isBreak.code}">
                     #{if allTracksEvent.isBreak != models.BreakType.NotABreak}
+                    <td class="fullSchedule__${allTracksEvent.isBreak.code}">
                         <span class="fullSchedule__breakTitle">${allTracksEvent.title}</span>
+                        #{if _user}
+                            <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
+                        #{/if}
+                    </td>
                     #{/if}
                     #{else}
-                        <!-- If it's not a break, it should have a track assigned -->
+                    <td class="js-talksFilter-toFilter fullSchedule__talk__cell">
+                        <!-- If it's not a break, it's on all track like keynote -->
+                        #{talkItem talk: allTracksEvent, user: _user/}
+                    </td>
                     #{/else}
-                    #{if _user}
-                        <a class="fullSchedule__admin" href="@{Talks.show(allTracksEvent.id)}">edit</a>
-                    #{/if}
-                </td>
             </tr>
         #{/if}
         #{else}
