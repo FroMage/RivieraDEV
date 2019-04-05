@@ -134,44 +134,7 @@
     <div class="aboutUs__item aboutUs__photo3"></div>
 </div> <!-- ./aboutUs -->
 
-<div class="notFullWidth">
-    <h2 class="judcon__mainTitle home__title">&{'views.application.sponsors.title.platinum'} : Red Hat</h2>
-    <div class="judcon">
-        <figure class="personSummary judcon__person">
-            <div class="personSummary__photo" style="background-image: url('@{'/public/images/illustrations/Mark_Little.jpg'}')">
-            </div>
-            <figcaption class="personSummary__desc">
-                <div class="personSummary__name">Mark Little</div>
-                <div class="personSummary__title">VP Red Hat<br>CTO JBoss</div>
-            </figcaption>
-        </figure>
-                
-        <div class="judcon__quoteContainer">
-            <div class="judcon__quote">
-                <p>
-                    Welcome to the sunny French Riviera and our second JUDCon in this locale!
-                </p>
-                <p>
-                    I’m extremely excited for <strong>Red Hat</strong> to be able to sponsor a <strong>JUDCon</strong> here because throughout the history of JBoss and then Red Hat, French developers and users have been at the heart of everything we do.
-                </p>
-                <p>
-                    Whether it’s the Ceylon language, Camel, ActiveMQ, or WildFly, for instance, you can find French core developers working for us or other companies driving the innovation forward at a rapid pace. Therefore, it is only fitting that we have a JUDCon here because, as many of you will know from the history of JUDCon, this is an event ‘By Developers and For Developers’.
-                </p>
-                <p>
-                    We’ve been running JUDCons throughout the world for many years and whilst the themes of the tracks may have changed between events, the underlying theme remains the same: if you want to learn about the innovative things going on with enterprise Java in all of its guises then come to JUDCon and listen to the presentations; if you want to share your experiences with others in the audience then you’ll find plenty of opportunity at the events in and around the sessions; if you just want to be inspired for the next great coding adventure ahead of you then this is one of the best events to be at.
-                </p>
-                <p>
-                    JUDCon is about community participation in all of its forms and I really hope you enjoy this event as much as we have enjoyed pulling it together.
-                </p>
-                <p>
-                    Onward!
-                </p>
-            </div>
-        </div>
-    </div>
-</div> <!-- /.judcon -->
-
-<div class="days grey">
+<div class="days">
     <div class="days__container notFullWidth">
         <h2 class="days__mainTitle home__title">&{'views.application.index.days.title'}</h2>
 
@@ -218,6 +181,47 @@
     </div> <!-- /.days__container -->
 
 </div> <!-- /.days -->
+
+<div class="judcon grey">
+    <div class="judcon__container notFullWidth">
+        <h2 class="judcon__mainTitle home__title">
+            &{'views.application.index.judcon.title'}
+        </h2>
+        <div class="judcon__content">
+            <figure class="personSummary judcon__person">
+                <div class="personSummary__photo" style="background-image: url('@{'/public/images/illustrations/Mark_Little.jpg'}')">
+                </div>
+                <figcaption class="personSummary__desc">
+                    <div class="personSummary__name">Mark Little</div>
+                    <div class="personSummary__title">VP Red Hat<br>CTO JBoss</div>
+                </figcaption>
+            </figure>
+                    
+            <div class="judcon__quoteContainer">
+                <div class="judcon__quote">
+                    <p>
+                        Welcome to the sunny French Riviera and our second JUDCon in this locale!
+                    </p>
+                    <p>
+                        I’m extremely excited for <strong>Red Hat</strong> to be able to sponsor a <strong>JUDCon</strong> here because throughout the history of JBoss and then Red Hat, French developers and users have been at the heart of everything we do.
+                    </p>
+                    <p>
+                        Whether it’s the Ceylon language, Camel, ActiveMQ, or WildFly, for instance, you can find French core developers working for us or other companies driving the innovation forward at a rapid pace. Therefore, it is only fitting that we have a JUDCon here because, as many of you will know from the history of JUDCon, this is an event ‘By Developers and For Developers’.
+                    </p>
+                    <p>
+                        We’ve been running JUDCons throughout the world for many years and whilst the themes of the tracks may have changed between events, the underlying theme remains the same: if you want to learn about the innovative things going on with enterprise Java in all of its guises then come to JUDCon and listen to the presentations; if you want to share your experiences with others in the audience then you’ll find plenty of opportunity at the events in and around the sessions; if you just want to be inspired for the next great coding adventure ahead of you then this is one of the best events to be at.
+                    </p>
+                    <p>
+                        JUDCon is about community participation in all of its forms and I really hope you enjoy this event as much as we have enjoyed pulling it together.
+                    </p>
+                    <p>
+                        Onward!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /.judcon -->
 
 #{if !displayPreviousSpeakers && speakersStar != null && speakersStar.size() > 0}
 <div class="speakers">

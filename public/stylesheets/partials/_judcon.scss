@@ -4,16 +4,36 @@ $logo-size-sm: 150px;
 $quote-size: 3rem;
 
 .judcon {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: $space-xxl;
+    padding: $space-xl 0 $space-xxl 0;
 
-    @media (min-width: $screen-sm-min) {
-        flex-direction: row;
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $screen-sm-min) {
+            flex-direction: row;
+        }
     }
 
     &__mainTitle {
-        padding: $space-md $content-space-xs;
+        font-size: $font-lg;
+        font-weight: $semi-bold;
+        margin: 0 $space-md $space-md $space-md;
+        text-align: center;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-xl;
+            margin-bottom: $space-xl;
+            text-align: left;
+        }
+    }
+
+    &__logo {
+        $logo-size-xs: 100px;
+
+        @media (min-width: $screen-sm-min) {
+            width: $logo-size-sm;
+        }
     }
 
     &__person {
