@@ -128,8 +128,21 @@ public class Slot extends Model {
         return talks;
     }
 
+    /**
+     * Retourne le talk s'il doit être sur toutes les tracks, null sinon
+     */
     public Talk getAllTracksEvent() {
         if (talks.size() == 1) {
+            // Il faut aussi vérifier s'il n'existe pas de slot plus petits (cas des
+            // Snorkeling Session)
+            // (Car un grand slot peut avoir un seul talk mais il peut y avoir en parallèle
+            // des slots plus petits avec des talks)
+            List<Slot> slots = find("? <= startDate AND endDate <= ?", this.startDate, this.endDate).fetch();
+            if (slots.size() > 1) {
+                // Il y a au moins un autre slot en parralèle
+                return null;
+            }
+            // Ok, ce talk peut être affiché sur toutes les tracks
             return talks.get(0);
         }
         return null;
