@@ -6,11 +6,14 @@ $quote-size: 3rem;
 .judcon {
     display: flex;
     flex-direction: column;
-    margin-top: $space-xxl;
     margin-bottom: $space-xxl;
 
     @media (min-width: $screen-sm-min) {
         flex-direction: row;
+    }
+
+    &__mainTitle {
+        padding: $space-md $content-space-xs;
     }
 
     &__person {

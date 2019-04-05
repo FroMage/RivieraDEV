@@ -198,6 +198,7 @@ views.application.sponsors.level.silver=Silver
 views.application.sponsors.level.lunches=Lunches
 views.application.sponsors.level.party=Party
 views.application.sponsors.level.partner=Partners
+views.application.sponsors.title.platinum=Platinum sponsor
 
 views.application.becomeSponsor.title=Become sponsor
 views.application.becomeSponsor.why=Why sponsor Riviera DEV&nbsp;?

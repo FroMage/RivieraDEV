@@ -2637,7 +2637,6 @@ th.fullSchedule-time-title {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 5rem;
   margin-bottom: 5rem; }
   @media (min-width: 768px) {
     .judcon {
@@ -2645,6 +2644,8 @@ th.fullSchedule-time-title {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row; } }
+  .judcon__mainTitle {
+    padding: 2rem 2rem; }
   .judcon__person {
     margin-top: 0; }
   .judcon__quoteContainer {
