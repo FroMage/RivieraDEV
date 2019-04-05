@@ -11,6 +11,9 @@ function initMap() {
             zoom: 5, // 16,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControlOptions: {
+                position: google.maps.ControlPosition.TOP_RIGHT,
+            },
         };
 
         // Attach a map to the DOM Element, with the defined settings
