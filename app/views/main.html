@@ -87,7 +87,7 @@
                 A fake / hidden checkbox is used as click reciever,
                 so you can use the :checked selector on it.
                 -->
-                <input type="checkbox" class="js-burgerMenu-input" />
+                <input type="checkbox" id="js-burgerMenu-input" />
 
                 <!--
                 Some spans to act as a hamburger.
@@ -142,14 +142,15 @@
                         class="burgerMenu__item ${request.action == 'Application.cfp' ? 'burgerMenu__item--current' : ''}"
                     >
                         &{'views.main.cfp'}
-                    </a>
+                    </a>-->
 
                     <a
-                        href="@{Application.sponsors}"
-                        class="burgerMenu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'burgerMenu__item--current' : ''}"
+                        href="@{Application.index}#sponsors"
+                        class="burgerMenu__item"
+                        onclick="forceToggleBurgerMenu()"
                     >
                         &{'views.main.sponsors'}
-                    </a>-->
+                    </a>
 
                     <a
                         href="@{Application.organisers}"
@@ -246,14 +247,14 @@
                     class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.cfp'}
-                </a>
+                </a>-->
 
                 <a
-                    href="@{Application.sponsors}"
-                    class="menu__item ${(request.action == 'Application.sponsors' || request.action == 'Application.becomeSponsor') ? 'menu__item--current' : ''}"
+                    href="@{Application.index}#sponsors"
+                    class="menu__item"
                 >
                     &{'views.main.sponsors'}
-                </a>-->
+                </a>
 
                 <a
                     href="@{Application.organisers}"

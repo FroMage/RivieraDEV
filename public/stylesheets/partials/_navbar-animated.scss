@@ -271,7 +271,6 @@ body.burgerMenu--open .burgerMenu:before {
     }
 
     .navbar-animated {
-        $navbar-small-height: 4.5rem;
         transition: all 0.5s;
 
         &-small {
@@ -332,7 +331,12 @@ body.burgerMenu--open .burgerMenu:before {
         }
         &-RedHat {
             font-size: 0.65em;
-            display: flex;
+            display: none;
+
+            @media (min-width: $screen-lg-min) {
+                display: flex;
+            }
+
             & img.navbar-RedHat--logo {
                 display: inline-block;
                 align-self: flex-end;

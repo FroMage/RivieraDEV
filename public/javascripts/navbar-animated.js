@@ -1,11 +1,17 @@
+const burgerMenuId = 'js-burgerMenu-input';
+
+const forceToggleBurgerMenu = function() {
+    const burgerMenu = document.getElementById(burgerMenuId);
+    burgerMenu.click();
+};
+
 $(function() {
     // Mobile Menu -------
     window.initBurgerMenu = () => {
-        var burgerMenu = $('.js-burgerMenu-input');
-        let burgerMenuOpenClass = 'burgerMenu--open';
-
-        if (burgerMenu && burgerMenu.length > 0)
-            burgerMenu[0].addEventListener('change', event => {
+        const burgerMenu = document.getElementById(burgerMenuId);
+        const burgerMenuOpenClass = 'burgerMenu--open';
+        if (burgerMenu) {
+            burgerMenu.addEventListener('change', function(event) {
                 let body = document.getElementsByTagName('body')[0];
                 if (event.target.checked) {
                     body.classList.add(burgerMenuOpenClass);
@@ -13,6 +19,7 @@ $(function() {
                     body.classList.remove(burgerMenuOpenClass);
                 }
             });
+        }
     };
 
     // Desktop Menu ------

@@ -16,6 +16,15 @@ body {
     }
 }
 
+.underStickyHeader {
+    @media (min-width: $screen-md-min) {
+        display: block;
+        position: relative;
+        top: -#{$navbar-small-height};
+        visibility: hidden;
+    }
+}
+
 .loading {
     position: fixed;
     left: 0px;
