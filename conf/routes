@@ -32,7 +32,7 @@ GET     /session/{id}                           Application.talk(id)
 GET     /inscriptions                           Application.subscribe
 GET     /subscribe                              Application.subscribe
 GET     /sponsor/{id}                           Application.sponsor({id})
-GET     /sponsors                               Application.index
+GET     /sponsors                               Application.sponsors
 GET     /becomeSponsor                          Application.becomeSponsor
 GET     /orga                                   Application.organisers
 GET     /live                                   Application.live

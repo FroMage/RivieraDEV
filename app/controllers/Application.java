@@ -266,11 +266,16 @@ public class Application extends Controller {
     }
 
     public static void sponsors() {
-        SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
-        Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
-        List<Sponsor> sponsorsPreviousYears = sponsorsToDisplay.getSponsorsPreviousYears();
+        // Redirect to an anchor on home page
+        redirect("/#sponsors");
 
-        render(sponsors, sponsorsPreviousYears);
+        // Keep old code because previous sponsors is not yet implemented on new site
+        // SponsorsToDisplay sponsorsToDisplay = getSponsorsToDisplay();
+        // Map<SponsorShip, List<Sponsor>> sponsors = sponsorsToDisplay.getSponsors();
+        // List<Sponsor> sponsorsPreviousYears =
+        // sponsorsToDisplay.getSponsorsPreviousYears();
+
+        // render(sponsors, sponsorsPreviousYears);
     }
 
     public static void becomeSponsor() {
