@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Marché au poisson du ${day.format('yyyy-MM-dd')}</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css">
+		<link rel="stylesheet" href="@{'/public/stylesheets/fishmarket.css'}">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet"> 
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			#{list items: models.Slot.findMultiPerDay(day), as: 'slot'}
+				#{list items: tracksForDay, as: 'track'}
+					%{talks = slot.getTalksPerTrack(track);}%
+					#{list items: talks, as: 'talk'}
+					<section>
+						<div class="card">
+							<div class="talk">
+								#{list items: talk.speakers, as: 'speaker'}
+								<img class="speaker" 
+									src="@{Application.speakerPhoto(speaker.id)}" 
+									alt="${speaker.firstName} ${speaker.lastName}" />
+								#{/list}
+								<h1>${talk.title}</h1>
+							</div>
+							<div class="timer">30</div>
+						</div>
+					</section>
+					#{/list}
+				#{/list}
+			#{/list}
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.min.js"></script>
+
+		<script>
+			Reveal.addKeyBinding( { keyCode: 13, key: 'Enter', description: 'Start timer' }, function() {
+				var timeLeft = 30;
+				var timer = Reveal.getCurrentSlide().getElementsByClassName('timer')[0];
+				timer.classList.add('running')
+				var countDown = setInterval(function() {
+					timeLeft -= 1;
+					if (timeLeft == 0) {
+						clearInterval(countDown);
+						timer.classList.remove('running')
+						timer.classList.add('done')
+					}
+					timer.innerText = timeLeft;
+				}, 1000)
+			} )
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize();
+		</script>
+	</body>
+</html>
