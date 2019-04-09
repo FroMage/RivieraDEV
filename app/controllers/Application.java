@@ -330,6 +330,16 @@ public class Application extends Controller {
         render(orga);
     }
 
+    public static void fishMarket(String date) throws ParseException{
+        Date day = new Date(System.currentTimeMillis());
+        if(date != null) {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            day = format.parse(date);
+        }
+        List<Track> tracksForDay = Talk.findTracksPerDay(day);
+        render(tracksForDay, day);
+    }
+
     public static Integer likeTalk(Long id) {
         Talk talk = Talk.findById(id);
         if (talk != null) {
