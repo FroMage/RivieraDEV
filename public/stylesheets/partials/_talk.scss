@@ -142,15 +142,23 @@
     }
 
     &__header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: $borderRadius $borderRadius 0 0;
         color: $color-white;
         margin: 0 auto;
         padding: 5%;
         text-align: center;
         background-color: $color-yellow;
+
+        &--title,
+        &--schedule {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--schedule {
+            margin-top: $space-sm;
+        }
     }
 
     &__micro {
@@ -168,7 +176,8 @@
         background-repeat: no-repeat;
     }
 
-    &__speakers {
+    &__speakers,
+    &__track {
         margin-left: $space-sm;
         padding-left: $space-sm;
         text-align: left;

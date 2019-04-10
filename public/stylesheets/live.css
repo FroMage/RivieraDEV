@@ -583,21 +583,24 @@ th.fullSchedule-time-title {
     .talkDetails {
       width: 70%; } }
   .talkDetails__header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     border-radius: 0.5rem 0.5rem 0 0;
     color: #fff;
     margin: 0 auto;
     padding: 5%;
     text-align: center;
     background-color: #fdba1d; }
+    .talkDetails__header--title, .talkDetails__header--schedule {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .talkDetails__header--schedule {
+      margin-top: 1rem; }
   .talkDetails__micro {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -615,7 +618,7 @@ th.fullSchedule-time-title {
     height: 1.5em;
     background-image: url(../images/icons/microphone-white.svg);
     background-repeat: no-repeat; }
-  .talkDetails__speakers {
+  .talkDetails__speakers, .talkDetails__track {
     margin-left: 1rem;
     padding-left: 1rem;
     text-align: left;

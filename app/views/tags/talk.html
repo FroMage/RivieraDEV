@@ -1,18 +1,28 @@
 <div class="talkDetails">
     <div class="talkDetails__header">
-        <div class="talkDetails__micro">
-            <div class="talkDetails__title">&laquo; ${_talk.title} &raquo;</div>
-        </div>
-        #{if _talk.speakers}
-        <div class="talkDetails__speakers">
-            #{list items: _talk.speakers, as: 'speaker'}
-            <div class="talkDetails__speaker">
-                <a  class="talkDetails__speaker--link"
-                    href="@{Application.speaker(speaker.id)}">${speaker}</a>
+        <div class="talkDetails__header--title">
+            <div class="talkDetails__micro">
+                <div class="talkDetails__title">&laquo; ${_talk.title} &raquo;</div>
             </div>
-            #{/list}
+            #{if _talk.speakers}
+            <div class="talkDetails__speakers">
+                #{list items: _talk.speakers, as: 'speaker'}
+                <div class="talkDetails__speaker">
+                    <a  class="talkDetails__speaker--link"
+                        href="@{Application.speaker(speaker.id)}">${speaker}</a>
+                </div>
+                #{/list}
+            </div>
+            #{/if}
         </div>
-        #{/if}
+        <div class="talkDetails__header--schedule">
+            <div>
+                ${_talk.slot.startDate.format('HH:mm')} - ${_talk.slot.endDate.format('HH:mm')}
+            </div>
+            <div class="talkDetails__track">
+                ${_talk.track.title}
+            </div>
+        </div>
     </div>
     <div class="talkDetails__body">
         ${_talk.getDescription()?.md()}
