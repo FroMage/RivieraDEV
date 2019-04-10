@@ -39,10 +39,10 @@ import models.TalkThemeColor;
 import models.TalkType;
 import play.Logger;
 import play.db.jpa.Blob;
-import play.db.jpa.JPABase;
 import play.libs.IO;
 import play.libs.WS;
 import play.libs.WS.HttpResponse;
+import play.mvc.Before;
 import play.mvc.Controller;
 import play.mvc.With;
 import util.ImageUtil;
@@ -50,6 +50,11 @@ import util.JavaExtensions;
 
 @With(Secure.class)
 public class Admin extends Controller {
+    
+    @Before
+    private static void setup() {
+        renderArgs.put("user", Security.connected());
+    }
     
     public static class ProgramUpload {
         public String name;
@@ -280,4 +285,8 @@ public class Admin extends Controller {
         renderBinary(new ByteArrayInputStream(bytes), "speaker-photos.zip", bytes.length, "application/zip", false);
     }
     
+    public static void speakerEmails() {
+        List<Speaker> speakers = Speaker.find("ORDER BY firstName,lastName").fetch();
+        render(speakers);
+    }
 }

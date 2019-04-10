@@ -1,0 +1,10 @@
+#{extends 'main.html' /}
+#{set title:'Speaker list' /}
+
+<div class="page-title-container parallax parallax-page parallax-page-about">
+	<h1 class="title page-title"><span>Admin Actions</span></h1>
+</div>
+
+#{list speakers, as: 'speaker'}
+ ${speaker.firstName} ${speaker.lastName} &lt;${speaker.email}&gt;<br/>
+#{/list}
