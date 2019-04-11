@@ -90,6 +90,7 @@ body {
     color: $color-yellow;
     padding: 1.2rem 2rem;
     border: none;
+    cursor: pointer;
     // Use box-shadow instead of border because
     // we don't want the size of the button to change on hover
     // (1px normal, 2px hover)
