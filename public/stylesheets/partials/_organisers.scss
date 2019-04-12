@@ -1,7 +1,15 @@
-.orgas {
+.no-webp .orgas {
     &__header {
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/team-mini.jpg'
+        );
+    }
+}
+
+.orgas {
+    &__header {
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/team-mini'
         );
         background-position: top 35% right 0;
     }

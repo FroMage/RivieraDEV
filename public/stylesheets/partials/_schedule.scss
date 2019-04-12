@@ -1,5 +1,39 @@
 $avatar-size: 30px;
 
+.no-webp .schedule {
+    &__header {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/program-mini.jpg'
+        );
+    }
+}
+
+.no-webp .fullSchedule {
+    &__breakfast {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/croissants-mini.jpg'
+        );
+    }
+
+    &__lunch {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/lunch-mini.jpg'
+        );
+    }
+
+    &__cofeeBreak {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/cofee_break-mini.jpg'
+        );
+    }
+
+    &__party {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/guitars-mini.jpg'
+        );
+    }
+}
+
 .schedule {
     &__swiper {
         margin-bottom: $space-md;
@@ -10,8 +44,8 @@ $avatar-size: 30px;
         background-attachment: scroll;
 
         // TODO use another image
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/program-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/program-mini'
         );
         background-position: 0 75%;
     }
@@ -436,29 +470,29 @@ $avatar-size: 30px;
     }
 
     &__breakfast {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/croissants-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/croissants-mini'
         );
         background-position: 0 45%;
     }
 
     &__lunch {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/lunch-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/lunch-mini'
         );
         background-position: 0 75%;
     }
 
     &__cofeeBreak {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/cofee_break-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/cofee_break-mini'
         );
         background-position: 0 30%;
     }
 
     &__party {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/guitars-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/guitars-mini'
         );
         background-position: 0 75%;
     }

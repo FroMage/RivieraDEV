@@ -129,10 +129,18 @@ $sponsor-silver-height: 83px;
     }
 }
 
-.partenaireDetails {
+.no-webp .schedule {
     &__headerPage {
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/sponsor-mini.jpg'
+        );
+    }
+}
+
+.partenaireDetails {
+    &__headerPage {
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/sponsor-mini'
         );
         background-position: center;
     }

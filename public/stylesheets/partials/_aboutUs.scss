@@ -1,3 +1,12 @@
+
+.no-webp .aboutUs {
+    &__aboutUs {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/about_us_1-mini.jpg'
+        );
+    }
+}
+
 .aboutUs {
     color: $color-white;
 
@@ -18,8 +27,8 @@
 
     &__aboutUs {
         grid-area: photo1;
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/about_us_1-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/about_us_1-mini'
         );
         padding: $space-md;
 

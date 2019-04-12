@@ -1,3 +1,11 @@
+.no-webp .speakers {
+    &__header {
+        @include backgroundImageWithDarkGradient(
+            '../images/illustrations/speakers-mini.jpg'
+        );
+    }
+}
+
 .speakers {
     margin: 0 $space-md;
 
@@ -6,8 +14,8 @@
     }
 
     &__header {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/speakers-mini.jpg'
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/speakers-mini'
         );
         background-position: top;
     }

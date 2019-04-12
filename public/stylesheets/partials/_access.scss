@@ -1,7 +1,15 @@
-.access {
+.no-webp .access {
     &__header {
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/access-mini.jpg'
+        );
+    }
+}
+
+.access {
+    &__header {
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/access-mini'
         );
         background-position: center;
     }

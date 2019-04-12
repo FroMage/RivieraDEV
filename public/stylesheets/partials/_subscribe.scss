@@ -1,7 +1,15 @@
-.subscribe {
+.no-webp .subscribe {
     &__header {
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/tickets-mini.jpg'
+        );
+    }
+}
+
+.subscribe {
+    &__header {
+        @include backgroundImageWithDarkGradientWebP(
+            '../images/illustrations/responsives/tickets-mini'
         );
         background-position: 0 30%;
     }
