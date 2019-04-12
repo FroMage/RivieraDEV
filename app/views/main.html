@@ -443,6 +443,9 @@
 
         <!-- External libs -->
 
+        <!-- Modernizr build including the `webp` detect -->
+        <script src="@{'/public/javascripts/libs/modernizr/modernizr-custom-webp.js'}"></script>
+
         <!-- Custom JS -->
         <script src="@{'/public/javascripts/navbar-animated.js'}"></script>
         <script src="@{'/public/javascripts/map.js'}"></script>
@@ -481,6 +484,19 @@
                 $('.loading').fadeOut('slow');
                 window.onload = initLikedTalks;
                 window.initBurgerMenu();
+            });
+
+            // Detect if webp is supported by the web browser
+            Modernizr.on('webp', function (isSupported) {
+                let body = document.getElementsByTagName('body')[0];
+                if (isSupported) {
+                    // Has WebP support
+                    body.classList.add('webp');
+                }
+                else {
+                    // No WebP support
+                    body.classList.add('no-webp');
+                }
             });
         </script>
     </body>

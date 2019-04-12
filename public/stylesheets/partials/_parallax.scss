@@ -1,10 +1,35 @@
+.no-webp .parallax {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url(../images/photos/2018-mobile.jpg);
+
+    @media (min-width: $screen-sm-min) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url(../images/photos/2018-tablet.jpg);
+    }
+
+    @media (min-width: $screen-md-min) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url(../images/photos/2018.jpg);
+    }
+}
+
 .parallax {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 25vh 0 55vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url(../images/photos/2018.jpg);
+        url(../images/photos/2018-mobile.webp);
+
+    @media (min-width: $screen-sm-min) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url(../images/photos/2018-tablet.webp);
+    }
+
+    @media (min-width: $screen-md-min) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url(../images/photos/2018.webp);
+    }
 
     &__content {
         text-align: center;
