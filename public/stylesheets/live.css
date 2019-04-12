@@ -168,6 +168,7 @@
   margin-bottom: 2rem; }
 
 .schedule__header {
+  background-attachment: scroll;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/program-mini.jpg");
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/program-mini.jpg");
   background-position: 0 75%; }

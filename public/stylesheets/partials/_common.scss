@@ -188,6 +188,8 @@ a {
     &__header {
         color: $color-white;
         padding: $space-xxl;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
 

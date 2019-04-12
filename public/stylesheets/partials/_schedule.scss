@@ -6,6 +6,9 @@ $avatar-size: 30px;
     }
 
     &__header {
+        //TODO remove following line when a new image will be found
+        background-attachment: scroll;
+
         // TODO use another image
         @include backgroundImageWithDarkGradient(
             '../images/illustrations/program-mini.jpg'
