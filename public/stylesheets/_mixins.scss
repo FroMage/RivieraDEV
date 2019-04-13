@@ -7,29 +7,58 @@
         url($src);
 }
 
-@mixin backgroundImageWithDarkGradientWebP($src) {
-    background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url(#{$src}-mobile.webp);
-    
-    @media (min-width: $screen-sm-min) {
+@mixin responsiveBackgroundImage($cssSelector, $src) {
+    .no-webp #{$cssSelector} {
         background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url(#{$src}-tablet.webp);
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(#{$src}-mobile.jpg);
+        
+        @media (min-width: $screen-sm-min) {
+            background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(#{$src}-tablet.jpg);
+        }
+
+        @media (min-width: $screen-md-min) {
+            background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(#{$src}-desktop.jpg);
+        }
     }
 
-    @media (min-width: $screen-md-min) {
+    .webp #{$cssSelector}  {
         background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.35)
-        ),
-        url(#{$src}-desktop.webp);
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(#{$src}-mobile.webp);
+        
+        @media (min-width: $screen-sm-min) {
+            background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(#{$src}-tablet.webp);
+        }
+
+        @media (min-width: $screen-md-min) {
+            background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35)
+            ),
+            url(#{$src}-desktop.webp);
+        }
     }
 }

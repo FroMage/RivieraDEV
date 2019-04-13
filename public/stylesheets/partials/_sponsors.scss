@@ -129,19 +129,13 @@ $sponsor-silver-height: 83px;
     }
 }
 
-.no-webp .schedule {
-    &__headerPage {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/sponsor-mini.jpg'
-        );
-    }
-}
+@include responsiveBackgroundImage(
+    '.partenaireDetails__headerPage',
+    '../images/illustrations/responsives/sponsor-mini'
+);
 
 .partenaireDetails {
     &__headerPage {
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/sponsor-mini'
-        );
         background-position: center;
     }
 

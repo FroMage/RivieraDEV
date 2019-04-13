@@ -279,8 +279,28 @@ a {
     max-width: 100%; }
 
 .no-webp .aboutUs__aboutUs {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/about_us_1-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/about_us_1-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .aboutUs__aboutUs {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .aboutUs__aboutUs {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-desktop.jpg); } }
+
+.webp .aboutUs__aboutUs {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .aboutUs__aboutUs {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .aboutUs__aboutUs {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-desktop.webp); } }
 
 .aboutUs {
   color: #fff; }
@@ -296,17 +316,7 @@ a {
     background-size: cover; }
   .aboutUs__aboutUs {
     grid-area: photo1;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-mobile.webp);
     padding: 2rem; }
-    @media (min-width: 768px) {
-      .aboutUs__aboutUs {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .aboutUs__aboutUs {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/about_us_1-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/about_us_1-mini-desktop.webp); } }
     @media (min-width: 768px) {
       .aboutUs__aboutUs {
         font-size: 2rem;
@@ -1345,25 +1355,35 @@ body.burgerMenu--open .burgerMenu:before {
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
-.no-webp .schedule__headerPage {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/sponsor-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/sponsor-mini.jpg"); }
+.no-webp .partenaireDetails__headerPage {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .partenaireDetails__headerPage {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .partenaireDetails__headerPage {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-desktop.jpg); } }
+
+.webp .partenaireDetails__headerPage {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .partenaireDetails__headerPage {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .partenaireDetails__headerPage {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-desktop.webp); } }
 
 .partenaireDetails {
   position: relative;
   margin: 0 auto; }
   .partenaireDetails__headerPage {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-mobile.webp);
     background-position: center; }
-    @media (min-width: 768px) {
-      .partenaireDetails__headerPage {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .partenaireDetails__headerPage {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/sponsor-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/sponsor-mini-desktop.webp); } }
   @media (min-width: 768px) {
     .partenaireDetails {
       width: 70%; } }
@@ -1744,18 +1764,32 @@ body.burgerMenu--open .burgerMenu:before {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/access-mini.jpg");
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/access-mini.jpg"); }
 
-.access__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-mobile.webp);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-mobile.webp);
-  background-position: center; }
+.no-webp .access__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-mobile.jpg); }
   @media (min-width: 768px) {
-    .access__header {
+    .no-webp .access__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .access__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-desktop.jpg); } }
+
+.webp .access__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .access__header {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-tablet.webp);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-tablet.webp); } }
   @media (min-width: 992px) {
-    .access__header {
+    .webp .access__header {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/access-mini-desktop.webp);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/access-mini-desktop.webp); } }
+
+.access__header {
+  background-position: center; }
 
 .access__mainSubtitle p {
   margin: 0; }
@@ -2000,8 +2034,28 @@ body.burgerMenu--open .burgerMenu:before {
     bottom: 0; }
 
 .no-webp .speakers__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/speakers-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/speakers-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .speakers__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .speakers__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-desktop.jpg); } }
+
+.webp .speakers__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .speakers__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .speakers__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-desktop.webp); } }
 
 .speakers {
   margin: 0 2rem; }
@@ -2009,17 +2063,7 @@ body.burgerMenu--open .burgerMenu:before {
     .speakers {
       margin: 5rem 0; } }
   .speakers__header {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-mobile.webp);
     background-position: top; }
-    @media (min-width: 768px) {
-      .speakers__header {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .speakers__header {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-desktop.webp); } }
   .speakers__mainSubtitle p {
     margin: 0; }
   .speakers__mainSubtitle a {
@@ -2029,21 +2073,31 @@ body.burgerMenu--open .burgerMenu:before {
     margin: 3rem 0; }
 
 .no-webp .orgas__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/team-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/team-mini.jpg"); }
-
-.orgas__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-mobile.webp);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-mobile.webp);
-  background-position: top 35% right 0; }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-mobile.jpg); }
   @media (min-width: 768px) {
-    .orgas__header {
+    .no-webp .orgas__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .orgas__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-desktop.jpg); } }
+
+.webp .orgas__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .orgas__header {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-tablet.webp);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-tablet.webp); } }
   @media (min-width: 992px) {
-    .orgas__header {
+    .webp .orgas__header {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-desktop.webp);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-desktop.webp); } }
+
+.orgas__header {
+  background-position: center; }
 
 .orgas__mainSubtitle p {
   margin: 0; }
@@ -2064,41 +2118,131 @@ body.burgerMenu--open .burgerMenu:before {
   width: 100%; }
 
 .no-webp .schedule__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/program-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/program-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-desktop.jpg); } }
+
+.webp .schedule__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__breakfast {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/croissants-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/croissants-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-desktop.jpg); } }
+
+.webp .fullSchedule__breakfast {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__lunch {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/lunch-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/lunch-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-desktop.jpg); } }
+
+.webp .fullSchedule__lunch {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__cofeeBreak {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/cofee_break-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/cofee_break-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-desktop.jpg); } }
+
+.webp .fullSchedule__cofeeBreak {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__party {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/guitars-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/guitars-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-desktop.jpg); } }
+
+.webp .fullSchedule__party {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-desktop.webp); } }
 
 .schedule__swiper {
   margin-bottom: 2rem; }
 
 .schedule__header {
   background-attachment: scroll;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-mobile.webp);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-mobile.webp);
   background-position: 0 75%; }
-  @media (min-width: 768px) {
-    .schedule__header {
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-tablet.webp);
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-tablet.webp); } }
-  @media (min-width: 992px) {
-    .schedule__header {
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-desktop.webp);
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-desktop.webp); } }
 
 .schedule__container {
   width: 100%;
@@ -2409,53 +2553,13 @@ body.burgerMenu--open .burgerMenu:before {
       .fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
         padding: 10rem 0.8rem; } }
   .fullSchedule__breakfast {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-mobile.webp);
     background-position: 0 45%; }
-    @media (min-width: 768px) {
-      .fullSchedule__breakfast {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__breakfast {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-desktop.webp); } }
   .fullSchedule__lunch {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-mobile.webp);
     background-position: 0 75%; }
-    @media (min-width: 768px) {
-      .fullSchedule__lunch {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__lunch {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-desktop.webp); } }
   .fullSchedule__cofeeBreak {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp);
     background-position: 0 30%; }
-    @media (min-width: 768px) {
-      .fullSchedule__cofeeBreak {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__cofeeBreak {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp); } }
   .fullSchedule__party {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-mobile.webp);
     background-position: 0 75%; }
-    @media (min-width: 768px) {
-      .fullSchedule__party {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__party {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-desktop.webp); } }
 
 th.fullSchedule-time-title {
   border-top: none;
@@ -2847,21 +2951,32 @@ th.fullSchedule-time-title {
           margin-left: 1rem; } }
 
 .no-webp .subscribe__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/tickets-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/tickets-mini.jpg"); }
-
-.subscribe__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-mobile.webp);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-mobile.webp);
-  background-position: 0 30%; }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-mobile.jpg); }
   @media (min-width: 768px) {
-    .subscribe__header {
+    .no-webp .subscribe__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .subscribe__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-desktop.jpg); } }
+
+.webp .subscribe__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .subscribe__header {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-tablet.webp);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-tablet.webp); } }
   @media (min-width: 992px) {
-    .subscribe__header {
+    .webp .subscribe__header {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/tickets-mini-desktop.webp);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/tickets-mini-desktop.webp); } }
+
+@media (min-width: 992px) {
+  .subscribe__header {
+    background-position: 0 30%; } }
 
 @media (min-width: 992px) {
   .passes {

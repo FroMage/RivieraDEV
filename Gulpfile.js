@@ -45,12 +45,18 @@ gulp.task('sass:watch', function() {
 
 gulp.task('responsive-images', function() {
     return gulp
-        .src('public/images/illustrations/*-mini.{png,jpg}')
+        .src('public/images/illustrations/*-mini.jpg')
         .pipe(
             responsive(
                 {
-                    // Resize all JPG images to three different sizes: 200, 500, and 630 pixels
+                    // Resize all JPG images to three different sizes: 667 pixel 768pixels and default size
                     '*.jpg': [
+                        {
+                            width: 667,
+                            format: 'jpg',
+                            progressive: true,
+                            rename: { suffix: '-mobile' },
+                        },
                         {
                             width: 667,
                             format: 'webp',
@@ -58,8 +64,19 @@ gulp.task('responsive-images', function() {
                         },
                         {
                             width: 768,
+                            format: 'jpg',
+                            progressive: true,
+                            rename: { suffix: '-tablet' },
+                        },
+                        {
+                            width: 768,
                             format: 'webp',
                             rename: { suffix: '-tablet' },
+                        },
+                        {
+                            format: 'jpg',
+                            progressive: true,
+                            rename: { suffix: '-desktop' },
                         },
                         {
                             format: 'webp',
@@ -69,10 +86,6 @@ gulp.task('responsive-images', function() {
                 },
                 {
                     // Global configuration for all images
-                    // The output quality for JPEG, WebP and TIFF output formats
-                    quality: 70,
-                    // Use progressive (interlace) scan for JPEG and PNG output
-                    progressive: true,
                     // Strip all metadata
                     withMetadata: false,
                 }

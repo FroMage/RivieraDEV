@@ -165,41 +165,131 @@
     right: 1rem; }
 
 .no-webp .schedule__header {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/program-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/program-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-desktop.jpg); } }
+
+.webp .schedule__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .schedule__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__breakfast {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/croissants-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/croissants-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-desktop.jpg); } }
+
+.webp .fullSchedule__breakfast {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__breakfast {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__lunch {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/lunch-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/lunch-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-desktop.jpg); } }
+
+.webp .fullSchedule__lunch {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__lunch {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__cofeeBreak {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/cofee_break-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/cofee_break-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-desktop.jpg); } }
+
+.webp .fullSchedule__cofeeBreak {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__cofeeBreak {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp); } }
 
 .no-webp .fullSchedule__party {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url("../images/illustrations/guitars-mini.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url("../images/illustrations/guitars-mini.jpg"); }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-desktop.jpg); } }
+
+.webp .fullSchedule__party {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .fullSchedule__party {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-desktop.webp); } }
 
 .schedule__swiper {
   margin-bottom: 2rem; }
 
 .schedule__header {
   background-attachment: scroll;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-mobile.webp);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-mobile.webp);
   background-position: 0 75%; }
-  @media (min-width: 768px) {
-    .schedule__header {
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-tablet.webp);
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-tablet.webp); } }
-  @media (min-width: 992px) {
-    .schedule__header {
-      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/program-mini-desktop.webp);
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/program-mini-desktop.webp); } }
 
 .schedule__container {
   width: 100%;
@@ -510,53 +600,13 @@
       .fullSchedule__breakfast, .fullSchedule__lunch, .fullSchedule__cofeeBreak, .fullSchedule__party {
         padding: 10rem 0.8rem; } }
   .fullSchedule__breakfast {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-mobile.webp);
     background-position: 0 45%; }
-    @media (min-width: 768px) {
-      .fullSchedule__breakfast {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__breakfast {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/croissants-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/croissants-mini-desktop.webp); } }
   .fullSchedule__lunch {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-mobile.webp);
     background-position: 0 75%; }
-    @media (min-width: 768px) {
-      .fullSchedule__lunch {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__lunch {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/lunch-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/lunch-mini-desktop.webp); } }
   .fullSchedule__cofeeBreak {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-mobile.webp);
     background-position: 0 30%; }
-    @media (min-width: 768px) {
-      .fullSchedule__cofeeBreak {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__cofeeBreak {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/cofee_break-mini-desktop.webp); } }
   .fullSchedule__party {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-mobile.webp);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-mobile.webp);
     background-position: 0 75%; }
-    @media (min-width: 768px) {
-      .fullSchedule__party {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-tablet.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-tablet.webp); } }
-    @media (min-width: 992px) {
-      .fullSchedule__party {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/guitars-mini-desktop.webp);
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/guitars-mini-desktop.webp); } }
 
 th.fullSchedule-time-title {
   border-top: none;

@@ -3,13 +3,19 @@
         url(../images/photos/2018-mobile.jpg);
 
     @media (min-width: $screen-sm-min) {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url(../images/photos/2018-tablet.jpg);
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
+            url(../images/photos/2018-tablet.jpg);
     }
 
     @media (min-width: $screen-md-min) {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url(../images/photos/2018.jpg);
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
+            url(../images/photos/2018.jpg);
     }
 }
 
@@ -22,13 +28,19 @@
         url(../images/photos/2018-mobile.webp);
 
     @media (min-width: $screen-sm-min) {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url(../images/photos/2018-tablet.webp);
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
+            url(../images/photos/2018-tablet.webp);
     }
 
     @media (min-width: $screen-md-min) {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url(../images/photos/2018.webp);
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
+            url(../images/photos/2018.webp);
     }
 
     &__content {

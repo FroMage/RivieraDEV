@@ -1,38 +1,30 @@
 $avatar-size: 30px;
 
-.no-webp .schedule {
-    &__header {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/program-mini.jpg'
-        );
-    }
-}
 
-.no-webp .fullSchedule {
-    &__breakfast {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/croissants-mini.jpg'
-        );
-    }
+@include responsiveBackgroundImage(
+    '.schedule__header',
+    '../images/illustrations/responsives/program-mini'
+);
 
-    &__lunch {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/lunch-mini.jpg'
-        );
-    }
+@include responsiveBackgroundImage(
+    '.fullSchedule__breakfast',
+    '../images/illustrations/responsives/croissants-mini'
+);
 
-    &__cofeeBreak {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/cofee_break-mini.jpg'
-        );
-    }
+@include responsiveBackgroundImage(
+    '.fullSchedule__lunch',
+    '../images/illustrations/responsives/lunch-mini'
+);
 
-    &__party {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/guitars-mini.jpg'
-        );
-    }
-}
+@include responsiveBackgroundImage(
+    '.fullSchedule__cofeeBreak',
+    '../images/illustrations/responsives/cofee_break-mini'
+);
+
+@include responsiveBackgroundImage(
+    '.fullSchedule__party',
+    '../images/illustrations/responsives/guitars-mini'
+);
 
 .schedule {
     &__swiper {
@@ -42,11 +34,6 @@ $avatar-size: 30px;
     &__header {
         //TODO remove following line when a new image will be found
         background-attachment: scroll;
-
-        // TODO use another image
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/program-mini'
-        );
         background-position: 0 75%;
     }
 
@@ -470,30 +457,18 @@ $avatar-size: 30px;
     }
 
     &__breakfast {
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/croissants-mini'
-        );
         background-position: 0 45%;
     }
 
     &__lunch {
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/lunch-mini'
-        );
         background-position: 0 75%;
     }
 
     &__cofeeBreak {
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/cofee_break-mini'
-        );
         background-position: 0 30%;
     }
 
     &__party {
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/guitars-mini'
-        );
         background-position: 0 75%;
     }
 }

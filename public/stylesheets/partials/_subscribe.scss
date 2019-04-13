@@ -1,17 +1,13 @@
-.no-webp .subscribe {
-    &__header {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/tickets-mini.jpg'
-        );
-    }
-}
+@include responsiveBackgroundImage(
+    '.subscribe__header',
+    '../images/illustrations/responsives/tickets-mini'
+);
 
 .subscribe {
     &__header {
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/tickets-mini'
-        );
-        background-position: 0 30%;
+        @media (min-width: $screen-md-min) {
+            background-position: 0 30%;
+        }
     }
 }
 

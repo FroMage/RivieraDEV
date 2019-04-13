@@ -1,11 +1,8 @@
 
-.no-webp .aboutUs {
-    &__aboutUs {
-        @include backgroundImageWithDarkGradient(
-            '../images/illustrations/about_us_1-mini.jpg'
-        );
-    }
-}
+@include responsiveBackgroundImage(
+    '.aboutUs__aboutUs',
+    '../images/illustrations/responsives/about_us_1-mini'
+);
 
 .aboutUs {
     color: $color-white;
@@ -27,9 +24,6 @@
 
     &__aboutUs {
         grid-area: photo1;
-        @include backgroundImageWithDarkGradientWebP(
-            '../images/illustrations/responsives/about_us_1-mini'
-        );
         padding: $space-md;
 
         @media (min-width: $screen-sm-min) {
