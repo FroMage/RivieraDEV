@@ -155,7 +155,7 @@ public class Application extends Controller {
                 }
             }
             pricePackCurrentStateList.add(new PricePackCurrentState(pricePack.type, currentPrice, maxPrice,
-                    pricePack.studentPrice, currentPeriod, remainingDays));
+                    pricePack.studentPrice, currentPeriod, remainingDays, pricePack.soldOut));
         }
 
         render(ticketingUrl, ticketingIsOpen, pricePackCurrentStateList);

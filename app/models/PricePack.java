@@ -32,6 +32,8 @@ public class PricePack extends Model implements Comparable<PricePack> {
     @Required
     @MaxSize(3)
     public Integer studentPrice;
+    
+    public Boolean soldOut;
 
     @Override
     public String toString() {

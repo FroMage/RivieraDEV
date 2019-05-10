@@ -108,6 +108,7 @@ views.application.subscribe.pass.pass=Pass
 views.application.subscribe.pass.buy=Buy ticket
 views.application.subscribe.pass.saleover=The sale is over
 views.application.subscribe.pass.salenotyet=The sale is not yet open
+views.application.subscribe.pass.sold.out=Sold-out
 views.application.subscribe.pass.student=Students: %d€
 views.application.subscribe.pass.deepdive.name=Deep Dive
 views.application.subscribe.pass.deepdive.days=1 day : 15th May, 2019

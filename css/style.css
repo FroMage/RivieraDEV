@@ -2284,6 +2284,7 @@ th.fullSchedule-time-title {
     grid-column-gap: 3rem; } }
 
 .pass__mainContainer {
+  position: relative;
   padding: 4rem;
   border-radius: 16px 16px 0 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -2307,6 +2308,13 @@ th.fullSchedule-time-title {
   .pass__mainContainer--combi {
     grid-area: combiMain;
     background-color: #eb8815; }
+
+.pass__mainContainer .sold-out {
+    width: 150px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
 
 .pass__name {
   font-size: 3rem;
@@ -2399,3 +2407,5 @@ th.fullSchedule-time-title {
   color: #9a9a93;
   font-size: 1.4rem;
   margin-top: 3rem; }
+
+  

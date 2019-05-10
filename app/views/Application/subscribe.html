@@ -19,6 +19,9 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
     <div class="passes">
         #{list items: pricePackCurrentStateList, as: 'pricePack'}
             <div class="pass__mainContainer pass__mainContainer--${pricePack.type.code}">
+                #{if pricePack.soldOut}
+                    <img class="sold-out" src="@{'/public/images/sold-out.png'}"/>
+                #{/if}
                 <div class="pass__main">
                     <h3 class="pass__name">
                         <span class="pass__pass pass__pass--${pricePack.type.code}">
@@ -47,12 +50,19 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
                     </div>
                     
                     #{if ticketingIsOpen}
-                        <a class="button button--white pass__buy pass__buy--${pricePack.type.code}"
-                            href="${ticketingUrl}"
-                            target="_blank"
-                        >
-                            &{'views.application.subscribe.pass.buy'}
-                        </a>
+                        #{if pricePack.soldOut}
+                            <div class="pass_saleover">
+                                &{'views.application.subscribe.pass.sold.out'}
+                            </div>
+                        #{/if}
+                        #{else}
+                            <a class="button button--white pass__buy pass__buy--${pricePack.type.code}"
+                                href="${ticketingUrl}"
+                                target="_blank"
+                            >
+                                &{'views.application.subscribe.pass.buy'}
+                            </a>
+                        #{/else}
                     #{/if}
                     #{else}
                         <div class="pass__saleover">
