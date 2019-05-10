@@ -9,29 +9,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-<!-- Bootstrap -->
-<!-- Bootstrap has been customized to modify a variable :
-         Point at which the navbar becomes uncollapsed => @grid-float-breakpoint = @screen-md-min
-         (http://getbootstrap.com/customize/)
-    -->
-<link rel="stylesheet"
-	href="@{'/public/bootstrap/3.3.7/css/bootstrap.min.css'}">
-<link rel="stylesheet"
-	href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}">
-
 <!-- Google Fonts -->
-<link
-	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald"
-	rel="stylesheet">
-
-<!-- Font awesome -->
-<link
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet"
-	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-	crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet"> 
 
 <!-- Custom -->
 <link rel="stylesheet" href="@{'/public/stylesheets/live.css'}">
@@ -40,18 +19,26 @@
 </head>
 <body>
 
-	<div class="container-fluid">
+	<div class="liveList notFullWidth">
 
 		<ul>
-            <li><a href="@{Application.liveTrack("All")}">All tracks</a></li>
-			<!-- <li><a href="/live/${'Keynotes [Amphi 339]'.urlPathEncode()}">Keynotes [Amphi 339]</a></li> -->
+				<li>
+					<a href="@{Application.liveTrack("All")}" class="liveList__link">
+						All tracks
+					</a>
+				</li>
+
 		    #{list tracks, as: 'trackItem'}
-				<li><a href="/live/${trackItem.title.urlPathEncode()}">${trackItem.title}</a></li>
-			#{/list}
+					<li>
+						<a href="/live/${trackItem.title.urlPathEncode()}" class="liveList__link">
+							${trackItem.title}
+						</a>
+					</li>
+				#{/list}
 		</ul>
 
 	</div>
-	<!-- /.container -->
+	<!-- /.live__tracksList -->
 
 </body>
 </html>
