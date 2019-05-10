@@ -18,10 +18,19 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
 
     <div class="passes">
         #{list items: pricePackCurrentStateList, as: 'pricePack'}
-            <div class="pass__mainContainer pass__mainContainer--${pricePack.type.code}">
+            <div class="pass__mainContainer 
+                        pass__mainContainer--${pricePack.type.code} 
+                        #{if pricePack.soldOut}pass__mainContainer--soldout#{/if}">
+                
                 #{if pricePack.soldOut}
-                    <img class="sold-out" src="@{'/public/images/sold-out.png'}"/>
+                    <div class="pass__soldout">
+                        <img class="pass__soldoutImg" 
+                            src="@{'/public/images/sold-out.png'}"
+                            alt="&{'views.application.subscribe.pass.sold.out'}"
+                        />
+                    </div>
                 #{/if}
+
                 <div class="pass__main">
                     <h3 class="pass__name">
                         <span class="pass__pass pass__pass--${pricePack.type.code}">
@@ -50,19 +59,14 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
                     </div>
                     
                     #{if ticketingIsOpen}
-                        #{if pricePack.soldOut}
-                            <div class="pass_saleover">
-                                &{'views.application.subscribe.pass.sold.out'}
-                            </div>
-                        #{/if}
-                        #{else}
-                            <a class="button button--white pass__buy pass__buy--${pricePack.type.code}"
-                                href="${ticketingUrl}"
-                                target="_blank"
-                            >
-                                &{'views.application.subscribe.pass.buy'}
-                            </a>
-                        #{/else}
+                        <a class="button button--white 
+                                pass__buy pass__buy--${pricePack.type.code}
+                                #{if pricePack.soldOut}pass__buy--soldout#{/if}"
+                            href="${ticketingUrl}"
+                            target="_blank"
+                        >
+                            &{'views.application.subscribe.pass.buy'}
+                        </a>
                     #{/if}
                     #{else}
                         <div class="pass__saleover">
@@ -71,7 +75,9 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
                     #{/else}
                 </div>
             </div>
-            <div class="pass__descriptionContainer pass__descriptionContainer--${pricePack.type.code}">
+            <div class="pass__descriptionContainer 
+                        pass__descriptionContainer--${pricePack.type.code}
+                        #{if pricePack.soldOut}pass__descriptionContainer--soldout#{/if}">
                 <ul class="pass__description">
                     #{if pricePack.type.code == 'deepdive' || pricePack.type.code == 'combi'}
                         <li class="pass__descriptionItem">

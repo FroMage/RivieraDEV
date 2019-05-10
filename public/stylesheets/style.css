@@ -309,7 +309,7 @@ a {
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: 'photo1 photo2' 'photo1 photo3';
+      grid-template-areas: 'photo1 photo2' 'photo1 photo3';
       grid-gap: 1px; } }
   .aboutUs__item {
     background-repeat: no-repeat;
@@ -323,13 +323,13 @@ a {
         padding-top: 10rem;
         padding-right: 5rem;
         padding-bottom: 10rem;
-        padding-left: calc( ((100% * 1.5 - 750px) / 2) + 4rem); } }
+        padding-left: calc( ((100% * 1.5 - 750px) / 2) + 4rem); } }
     @media (min-width: 992px) {
       .aboutUs__aboutUs {
-        padding-left: calc( ((100% * 1.5 - 970px) / 2) + 4rem); } }
+        padding-left: calc( ((100% * 1.5 - 970px) / 2) + 4rem); } }
     @media (min-width: 1200px) {
       .aboutUs__aboutUs {
-        padding-left: calc( ((100% * 1.5 - 1170px) / 2) + 4rem); } }
+        padding-left: calc( ((100% * 1.5 - 1170px) / 2) + 4rem); } }
   .aboutUs__title {
     margin: 2rem 0; }
   .aboutUs__buttonContainer {
@@ -916,14 +916,14 @@ body.burgerMenu--open .burgerMenu:before {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 'intro1' 'content1' 'intro2' 'content2';
+    grid-template-areas: 'intro1' 'content1' 'intro2' 'content2';
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 5rem; }
     @media (min-width: 992px) {
       .days__contents {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'intro1 intro2' 'content1 content2';
+        grid-template-areas: 'intro1 intro2' 'content1 content2';
         grid-column-gap: 2rem;
         margin-left: 0;
         margin-right: 0; } }
@@ -936,7 +936,7 @@ body.burgerMenu--open .burgerMenu:before {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
-    grid-template-areas: 'illustration titleDate' 'description description';
+    grid-template-areas: 'illustration titleDate' 'description description';
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     -ms-flex-line-pack: start;
@@ -951,7 +951,7 @@ body.burgerMenu--open .burgerMenu:before {
     @media (min-width: 768px) {
       .days__intro {
         padding: 3rem;
-        grid-template-areas: 'illustration titleDate' 'illustration description'; } }
+        grid-template-areas: 'illustration titleDate' 'illustration description'; } }
     .days__intro--1 {
       grid-area: intro1; }
     .days__intro--2 {
@@ -1145,7 +1145,7 @@ body.burgerMenu--open .burgerMenu:before {
       padding-right: calc(600px - 35rem);
       margin-right: calc(-600px + 35rem);
       padding-top: calc(192px - 4rem);
-      margin-top: calc( -2rem - 4rem - 5rem); } }
+      margin-top: calc( -2rem - 4rem - 5rem); } }
   .newsletter__email {
     font-size: 1.8rem;
     height: 4rem;
@@ -1585,7 +1585,7 @@ body.burgerMenu--open .burgerMenu:before {
     .footer {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'followContact followContact' 'archives admin' 'logo copyright';
+      grid-template-areas: 'followContact followContact' 'archives admin' 'logo copyright';
       padding: 4rem 5rem; } }
   @media (min-width: 992px) {
     .footer {
@@ -2982,14 +2982,14 @@ th.fullSchedule-time-title {
   .passes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'deepdiveMain conferenceMain combiMain' 'deepdiveDesc conferenceDesc combiDesc';
+    grid-template-areas: 'deepdiveMain conferenceMain combiMain' 'deepdiveDesc conferenceDesc combiDesc';
     grid-column-gap: 3rem; } }
 
 @media (min-width: 992px) {
   .training {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'trainingMain trainingChapter trainingChapter' 'trainingDesc trainingChapter trainingChapter';
+    grid-template-areas: 'trainingMain trainingChapter trainingChapter' 'trainingDesc trainingChapter trainingChapter';
     grid-column-gap: 3rem; } }
 
 .training__description {
@@ -3038,13 +3038,6 @@ th.fullSchedule-time-title {
     grid-area: trainingMain;
     background-color: #eb8815; }
 
-.pass__mainContainer .sold-out {
-    width: 150px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
-
 .pass__name {
   font-size: 3rem;
   font-weight: 700;
@@ -3086,8 +3079,17 @@ th.fullSchedule-time-title {
     background-color: rgba(198, 141, 36, 0.3); }
   .pass__buy--training:hover, .pass__buy--training:focus, .pass__buy--training:active, .pass__buy--combi:hover, .pass__buy--combi:focus, .pass__buy--combi:active {
     background-color: rgba(198, 117, 23, 0.3); }
+  .pass__buy--soldout {
+    visibility: hidden; }
+
+.pass__soldout {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%; }
 
 .pass__descriptionContainer {
+  position: relative;
   -ms-flex-item-align: start;
   align-self: flex-start;
   padding: 4rem 4rem 3rem 4rem;
@@ -3147,3 +3149,12 @@ th.fullSchedule-time-title {
   color: #9a9a93;
   font-size: 1.4rem;
   margin-top: 3rem; }
+
+.pass__mainContainer--soldout::before, .pass__descriptionContainer--soldout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); }
