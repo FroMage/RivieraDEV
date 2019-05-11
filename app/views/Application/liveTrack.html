@@ -37,16 +37,11 @@
 </head>
 <body>
 
-	<div class="container-fluid">
+    <div class="live__currentDate">
+        <span id="js-live-currentDate"></span>
+    </div>
 
-		<div class="live-currentDate">
-			<span id="js-live-currentDate"></span>
-		</div>
-
-		<div id="target"></div>
-
-	</div>
-	<!-- /.container -->
+    <div id="js-target" class="live__talks"></div>
 
 	<!-- Custom JS -->
 	<script>
@@ -65,8 +60,14 @@
                                 "theme": "${talk.theme}",
                                 "themeColor": "${talk.theme.color.code}",
                             #{/if}
+                            #{if talk.type}
+                                "type": "${talk.type}",
+                            #{/if}
                             #{if talk.level}
                                 "level": "&{'views.application.schedule.level.' + talk.level.code}",
+                            #{/if}
+                            #{if talk.language}
+                                "language": "${talk.language}",
                             #{/if}
                             "track": "${track.title.jsonEscape()}", 
                             "speakers": [

@@ -1,9 +1,9 @@
 let now = new Date();
 
 const nowOffset = 0;
-// Debugging by adding 4 days and 18 hours and 40 minutes
+// Debugging by adding 2 days and 18 hours and 40 minutes
 /* const nowOffset =
-    1000 * 60 * 60 * 24 * 4 + 1000 * 60 * 60 * 18 + 1000 * 60 * 40; */
+    1000 * 60 * 60 * 24 * 2 + 1000 * 60 * 60 * 18 + 1000 * 60 * 40; */
 
 function showTalks() {
     const currentTalks = [];
@@ -37,90 +37,50 @@ function showTalks() {
     document.getElementById('js-live-currentDate').innerHTML =
         formatDate(new Date(now)) + ' ' + formatTimeSeconds(new Date(now));
 
-    const target = document.getElementById('target');
+    const target = document.getElementById('js-target');
     target.innerHTML = '';
     if (currentTalks.length + nextTalks.length > 8) {
-        target.classList.add('smaller');
+        target.classList.add('live__talks--smaller');
     } else {
-        target.classList.remove('smaller');
+        target.classList.remove('live__talks--smaller');
     }
 
-    let markup =
-        "<h2 class='schedule-day fullSchedule-day schedule-day1'>Currently</h2>";
+    let markup = "<h1 class='live__when'>Currently</h1>";
 
     // -- Current talks
     if (currentTalks.length > 0) {
-        markup += "<div class='current-other'>";
-        //markup += "Currently in other tracks:";
-        markup += "<div class='row'>";
+        markup += "<div class='live__talks'>";
         for (let n = 0; n < currentTalks.length; n++) {
             const talk = currentTalks[n];
-            markup += "<div class='col-md-3'>";
-            markup +=
-                "<div class='live-talk" +
-                (talk.track == showTrack ? ' live-currentTrack' : '') +
-                "'>";
-            markup +=
-                "<h2 class='schedule-day fullSchedule-day schedule-day2'>" +
-                talk.track +
-                '</h2>';
-            markup += talkToString(talk);
-            markup += '</div>';
-            markup += '</div>';
-            if (n == 3 && currentTalks.length > 4) {
-                // If there is more than 4 talks, a row is added because there is max 4 talks per row.
-                markup += '</div>';
-                markup += "<div class='row'>";
-            }
+            markup += talkToString(talk, showTrack);
         }
-        markup += '</div>';
-        markup += '</div>';
+        markup += '</div>'; // .live__talks
     } else {
-        markup += "<div class='nothing row'>";
+        markup += "<div class='live__nothing'>";
         markup +=
             "<img src='/public/images/Sal1.png' class='nothing-img col-xs-12'/>";
         markup +=
             '<span>Oh noes!! We haven’ts gots any talks righter now!! :(</span>';
-        markup += '</div>';
+        markup += '</div>'; // .live__nothing
     }
 
-    markup +=
-        "<h2 class='schedule-day fullSchedule-day schedule-day1'>Next</h2>";
+    markup += "<h1 class='live__when'>Next</h1>";
 
     // -- Next talks
     if (nextTalks.length > 0) {
-        markup += "<div class='next-other'>";
-        //markup += "Next in other tracks:";
-        markup += "<div class='row'>";
+        markup += "<div class='live__talks'>";
         for (let n = 0; n < nextTalks.length; n++) {
             const talk = nextTalks[n];
-            markup += "<div class='col-md-3'>";
-            markup +=
-                "<div class='live-talk" +
-                (talk.track == showTrack ? ' live-currentTrack' : '') +
-                "'>";
-            markup +=
-                "<h2 class='schedule-day fullSchedule-day schedule-day2'>" +
-                talk.track +
-                '</h2>';
-            markup += talkToString(talk);
-            markup += '</div>';
-            markup += '</div>';
-            if (n == 3 && nextTalks.length > 4) {
-                // If there is more than 4 talks, a row is added because there is max 4 talks per row.
-                markup += '</div>';
-                markup += "<div class='row'>";
-            }
+            markup += talkToString(talk, showTrack);
         }
-        markup += '</div>';
-        markup += '</div>';
+        markup += '</div>'; // .live__talks
     } else {
-        markup += "<div class='nothing row'>";
+        markup += "<div class='live__nothing'>";
         markup +=
             "<img src='/public/images/Sal2.png' class='nothing-img col-xs-12'/>";
         markup +=
             '<span>Oh noes!! Its a doner, see youse nexts years!! :)</span>';
-        markup += '</div>';
+        markup += '</div>'; // .live__nothing
     }
 
     target.innerHTML = markup;
@@ -183,66 +143,86 @@ function talkToString(talk) {
     } else {
         durationString = ' (' + duration(end.getTime() - now) + ' remaining)';
     }
-    let markup = "<div class='talk'>";
+
+    let markup = "<div class='liveTalk__container'>";
+    markup += "<h2 class='liveTalk__track'>" + talk.track + '</h2>';
+    markup +=
+        "<div class='liveTalk" +
+        (talk.track == showTrack ? ' liveTalk--currentTrack' : '') +
+        "'>";
+
+    markup += "<div class='liveTalk__part1'>";
 
     // Title
-    markup += "<div class='talkDetails-title'>" + talk.title + '</div>';
+    markup += "<div class='liveTalk__title'>" + talk.title + '</div>';
 
     // Slot
     markup +=
-        "<div class='talkDetails-slot-hour'>" +
-        "    <i class='far fa-clock talkDetails-icon'></i>" +
+        "<div class='liveTalk__slot'>" +
         formatTime(start) +
         ' - ' +
         formatTime(end) +
         durationString +
-        '</div>';
+        '</div>'; // .liveTalk__slot
 
     // Theme
     if (talk.theme) {
-        markup +=
-            "<span class='talk-theme talk-theme-" +
-            talk.themeColor +
-            "'>" +
-            talk.theme +
-            '</span>';
+        markup += "<span class='liveTalk__theme'>" + talk.theme + '</span>';
+    }
+
+    // Type
+    if (talk.type) {
+        markup += "<span class='liveTalk__type'>" + talk.type + '</span>';
     }
 
     // Level
     if (talk.level) {
-        markup += "<span class='talk-level'>" + talk.level + '</span>';
+        markup += "<span class='liveTalk__level'>" + talk.level + '</span>';
     }
 
-    //markup += "<div class='description'>"+talk.description+"</div>";
+    // Language
+    if (talk.level) {
+        markup +=
+            "<span class='liveTalk__language'>" + talk.language + '</span>';
+    }
+
+    markup += '</div>'; // .liveTalk__part1
+    markup += "<div class='liveTalk__part2 ";
+    if (talk.theme) {
+        markup += 'liveTalk__part2--' + talk.themeColor;
+    }
+    markup += "'>";
 
     // Speakers
-    markup += "<div class='talkDetails-speakers'>";
+    markup += "<div class='liveTalk__speakers'>";
     for (let n = 0; n < talk.speakers.length; n++) {
         const speaker = talk.speakers[n];
-        markup += "<div class='talkDetails-speaker'>";
+        markup += "<div class='liveTalk__speaker'>";
         markup +=
-            "<div class='talkDetails-speaker-photo' style='background-image: url(" +
+            "<div class='liveTalk__speakerPhoto' style='background-image: url(" +
             speaker.photo +
             ")'></div>";
         markup +=
-            "<div class='talkDetails-speaker-name'>" + speaker.name + '</div>';
+            "<div class='liveTalk__speakerName'>" + speaker.name + '</div>';
         markup += '</div>';
     }
-    markup += '</div>';
+    markup += '</div>'; // .liveTalk__speaker
+    markup += '</div>'; // .liveTalk__speakers
 
-    // End of the div .talk
-    markup += '</div>';
+    markup += '</div>'; // .liveTalk__part2
+    markup += '</div>'; // .liveTalk
+    markup += '</div>'; // .liveTalk__container
     return markup;
 }
 
 window.onload = function() {
-    now = new Date().getTime() + nowOffset;
+    // now = new Date().getTime() + nowOffset;
     showTalks();
-    // window.setInterval(function() {
-    //     now = new Date().getTime() + nowOffset;
-    //     showTalks();
-    // }, 1000);
-    // window.setInterval(function(){
-    // 	jQuery.get("http://rivieradev.fr");
-    // }, 1000 *60*30 );
+    window.setInterval(function() {
+        now = new Date().getTime() + nowOffset;
+        showTalks();
+    }, 1000);
+    window.setInterval(function() {
+        jQuery.get('http://rivieradev.fr');
+    }, 1000 * 60 * 30);
 };
