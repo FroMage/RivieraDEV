@@ -20,18 +20,15 @@
 	href="@{'/public/bootstrap/3.3.7/css/bootstrap-theme.min.css'}">
 
 <!-- Google Fonts -->
-<link
-	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Raleway:400,600|Righteous&amp;subset=latin-ext"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Oswald"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet"> 
 
 <!-- Font awesome -->
-<link
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet"
-	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-	crossorigin="anonymous">
+<script
+    defer
+    src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+    integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+    crossorigin="anonymous"
+></script>
 
 <!-- Custom -->
 <link rel="stylesheet" href="@{'/public/stylesheets/live.css'}">
@@ -43,7 +40,7 @@
 	<div class="container-fluid">
 
 		<div class="live-currentDate">
-			<span class="js-live-currentDate"></span>
+			<span id="js-live-currentDate"></span>
 		</div>
 
 		<div id="target"></div>
@@ -51,68 +48,42 @@
 	</div>
 	<!-- /.container -->
 
-	<!-- External libs -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
 	<!-- Custom JS -->
 	<script>
         var showTrack = "${track}";
 
         var tracks = {
-        /*"Keynotes [Amphi 339]": [
-        #{list keynotes, as: 'talk'}
-        {
-            "title": "${talk.getTitle().jsonEscape()}",
-            "description": "${talk.getDescription().jsonEscape()}", 
-            "start": ${talk.slot?.startDate?.time ?: "null"}, 
-            "end": ${talk.slot?.endDate?.time ?: "null"},
-            #{if talk.theme}
-                "theme": "${talk.theme}",
-                "themeColor": "${talk.theme.color.code}",
-            #{/if}
-            #{if talk.level}
-                "level": "&{'views.application.schedule.level.' + talk.level.code}",
-            #{/if}
-            "track": "Keynotes [Amphi 339]",
-            "speakers": [
-                #{list talk.speakers, as: 'speaker'}
-                {
-                    "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
-                    "photo": "@{Application.speakerPhoto(speaker.id)}"
-                }#{if !speaker_isLast},#{/if}
-                #{/list}
-            ]
-        }#{if !talk_isLast},#{/if}
-        #{/list}
-        ], */
-        #{list tracks, as: 'track'}
-        "${track.title}": [
-        #{list track.talks, as: 'talk'}
-            {
-            "title": "${talk.getTitle().jsonEscape()}",
-            "description": "${talk.getDescription().jsonEscape()}", 
-            "start": ${talk.slot?.startDate?.time ?: "null"}, 
-            "end": ${talk.slot?.endDate?.time ?: "null"},
-            #{if talk.theme}
-                "theme": "${talk.theme}",
-                "themeColor": "${talk.theme.color.code}",
-            #{/if}
-            #{if talk.level}
-                "level": "&{'views.application.schedule.level.' + talk.level.code}",
-            #{/if}
-            "track": "${track.title.jsonEscape()}", 
-            "speakers": [
-            #{list talk.speakers, as: 'speaker'}
-            {
-                "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
-                "photo": "@{Application.speakerPhoto(speaker.id)}"
-            }#{if !speaker_isLast},#{/if}
+            #{list tracks, as: 'track'}
+                "${track.title}": [
+                    #{list track.talks, as: 'talk'}
+                        {
+                            "title": "${talk.getTitle().jsonEscape()}",
+                            "description": "${talk.getDescription().jsonEscape()}", 
+                            "start": ${talk.slot?.startDate?.time ?: "null"}, 
+                            "end": ${talk.slot?.endDate?.time ?: "null"},
+                            #{if talk.theme}
+                                "theme": "${talk.theme}",
+                                "themeColor": "${talk.theme.color.code}",
+                            #{/if}
+                            #{if talk.level}
+                                "level": "&{'views.application.schedule.level.' + talk.level.code}",
+                            #{/if}
+                            "track": "${track.title.jsonEscape()}", 
+                            "speakers": [
+                            #{list talk.speakers, as: 'speaker'}
+                                {
+                                    "name": "${speaker.firstName.jsonEscape()} ${speaker.lastName.jsonEscape()}",
+                                    "photo": "@{Application.speakerPhoto(speaker.id)}"
+                                }
+                                #{if !speaker_isLast},#{/if}
+                            #{/list}
+                            ]
+                        }
+                        #{if !talk_isLast},#{/if}
+                    #{/list}
+                ]
+                #{if !track_isLast},#{/if} 
             #{/list}
-            ]
-            }#{if !talk_isLast},#{/if}
-        #{/list}
-        ]#{if !track_isLast},#{/if} 
-        #{/list}
         };
     </script>
 
