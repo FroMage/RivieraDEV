@@ -13,17 +13,22 @@
     }
 }
 
-.live__currentDate {
-    background-color: $color-purple-transparent;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    padding: 0.5em;
-    font-weight: normal;
-    font-size: 180%;
+.live {
+    padding: $space-md;
+
+    &__currentDate {
+        background: linear-gradient($color-blue, $color-blue-medium);
+        color: #fff;
+        position: absolute;
+        top: $space-sm;
+        right: $space-sm;
+        padding: $space-sm;
+        font-size: $font-xl;
+    }
+
+    &__when {
+        margin: 0;
+    }
 }
 
 .live__talks {
