@@ -1,9 +1,9 @@
 let now = new Date();
 
-const nowOffset = 0;
+// const nowOffset = 0;
 // Debugging by adding 2 days and 18 hours and 40 minutes
-/* const nowOffset =
-    1000 * 60 * 60 * 24 * 4 + 1000 * 60 * 60 * 23 + 1000 * 60 * 40; */
+const nowOffset =
+    1000 * 60 * 60 * 24 * 2 + 1000 * 60 * 60 * 15 + 1000 * 60 * 40;
 
 function showTalks() {
     const currentTalks = [];
@@ -42,12 +42,14 @@ function showTalks() {
 
     let markup = "<h1 class='live__when live__when--current'>Currently</h1>";
 
+    const smaller = currentTalks.length > 4 || nextTalks.length > 4;
+
     // -- Current talks
     if (currentTalks.length > 0) {
         markup += "<div class='live__talks'>";
         for (let n = 0; n < currentTalks.length; n++) {
             const talk = currentTalks[n];
-            markup += talkToString(talk, showTrack);
+            markup += talkToString(talk, showTrack, smaller);
         }
         markup += '</div>'; // .live__talks
     } else {
@@ -64,7 +66,7 @@ function showTalks() {
         markup += "<div class='live__talks'>";
         for (let n = 0; n < nextTalks.length; n++) {
             const talk = nextTalks[n];
-            markup += talkToString(talk, showTrack);
+            markup += talkToString(talk, showTrack, smaller);
         }
         markup += '</div>'; // .live__talks
     } else {
@@ -75,6 +77,11 @@ function showTalks() {
     }
 
     target.innerHTML = markup;
+
+    const titles = document.getElementsByClassName('js-liveTalks__title');
+    for (let title of titles) {
+        $clamp(title, { clamp: 3 });
+    }
 }
 const months = [
     'January',
@@ -133,20 +140,25 @@ function extractRoom(track) {
     return track;
 }
 
-function talkToString(talk) {
+function talkToString(talk, showTrack, smaller) {
     if (talk == null) return '';
+
     const start = new Date(talk.start);
     const end = new Date(talk.end);
     let durationString;
     if (start.getTime() > now) {
         durationString = ' (in ' + duration(start.getTime() - now) + ')';
-    } else {
+    } /* else {
         durationString = ' (' + duration(end.getTime() - now) + ' remaining)';
-    }
+    } */
 
     let markup = "<div class='liveTalk'>";
     markup +=
-        "<h2 class='liveTalk__track'>" + extractRoom(talk.track) + '</h2>';
+        "<h2 class='liveTalk__track" +
+        (smaller ? ' liveTalk__track--smaller' : '') +
+        "'>";
+    markup += extractRoom(talk.track);
+    markup += '</h2>';
     markup +=
         "<div class='liveTalk__content " +
         (talk.track == showTrack ? ' liveTalk__content--currentTrack ' : '') +
@@ -157,18 +169,27 @@ function talkToString(talk) {
 
     // Title
     markup +=
-        "<div class='liveTalk__title fullSchedule__talk__title'>" +
-        talk.title +
-        '</div>';
+        "<div class='js-liveTalks__title liveTalk__title fullSchedule__talk__title" +
+        (smaller ? ' liveTalk__title--smaller' : '') +
+        "'>";
+    markup += talk.title;
+    markup += '</div>';
 
     // Slot
-    markup += "<div class='fullSchedule__talk__slotTrack'>";
+    markup +=
+        "<div class='liveTalk__slotTrack fullSchedule__talk__slotTrack" +
+        (smaller ? ' liveTalk__slotTrack--smaller' : '') +
+        "'>";
     markup += "<div class='liveTalk__slot fullSchedule__talk__slot'>";
     markup += "<span class='liveTalk__slotWhen'>";
     markup += formatTime(start) + ' - ' + formatTime(end);
     markup += '</span>'; // .liveTalk__slotWhen
-    markup +=
-        "<span class='liveTalk__slotDuration'>" + durationString + '</span>';
+    if (durationString) {
+        markup +=
+            "<span class='liveTalk__slotDuration'>" +
+            durationString +
+            '</span>';
+    }
     markup += '</div>'; // .liveTalk__slot
     markup += '</div>'; // .fullSchedule__talk__slotTrack
 

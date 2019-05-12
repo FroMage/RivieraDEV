@@ -73,6 +73,10 @@
         font-size: $font-xxl;
         margin: 0 0 $space-sm 0;
         text-align: center;
+
+        &--smaller {
+            font-size: $font-xl;
+        }
     }
 
     &__content {
@@ -82,6 +86,16 @@
     &__title {
         font-size: $font-xl;
         font-weight: $bold;
+
+        &--smaller {
+            font-size: $font-lg;
+        }
+    }
+
+    &__slotTrack {
+        &--smaller {
+            margin-top: $space-sm;
+        }
     }
 
     &__slotWhen,

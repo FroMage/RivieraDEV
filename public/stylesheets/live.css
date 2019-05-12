@@ -1046,6 +1046,8 @@ th.fullSchedule-time-title {
     font-size: 3rem;
     margin: 0 0 1rem 0;
     text-align: center; }
+    .liveTalk__track--smaller {
+      font-size: 2.5rem; }
   .liveTalk__content {
     -webkit-box-flex: 2;
     -ms-flex-positive: 2;
@@ -1053,6 +1055,10 @@ th.fullSchedule-time-title {
   .liveTalk__title {
     font-size: 2.5rem;
     font-weight: 700; }
+    .liveTalk__title--smaller {
+      font-size: 2rem; }
+  .liveTalk__slotTrack--smaller {
+    margin-top: 1rem; }
   .liveTalk__slotWhen, .liveTalk__slotDuration {
     display: block; }
   .liveTalk__slotWhen {
