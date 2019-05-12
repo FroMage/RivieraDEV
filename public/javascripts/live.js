@@ -2,7 +2,7 @@ let now = new Date();
 
 // const nowOffset = 0;
 // Debugging by adding 2 days and 18 hours and 40 minutes
-const nowOffset = 1000 * 60 * 60 * 24 * 3 + 1000 * 60 * 60 * 1 + 1000 * 60 * 40;
+/* const nowOffset = 1000 * 60 * 60 * 24 * 5 + 1000 * 60 * 60 * 9 + 1000 * 60 * 40; */
 
 function showTalks() {
     const currentTalks = [];
@@ -204,6 +204,8 @@ function talkToString(talk) {
             talk.themeColor +
             ' fullSchedule__talk__part2--' +
             talk.themeColor;
+    } else {
+        markup += 'liveTalk__part2--none' + ' fullSchedule__talk__part2--none';
     }
     markup += "'>";
 
