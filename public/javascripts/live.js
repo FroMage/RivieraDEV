@@ -1,9 +1,8 @@
 let now = new Date();
 
-const nowOffset = 0;
+// const nowOffset = 0;
 // Debugging by adding 2 days and 18 hours and 40 minutes
-/* const nowOffset =
-    1000 * 60 * 60 * 24 * 2 + 1000 * 60 * 60 * 18 + 1000 * 60 * 40; */
+const nowOffset = 1000 * 60 * 60 * 24 * 3 + 1000 * 60 * 60 * 1 + 1000 * 60 * 40;
 
 function showTalks() {
     const currentTalks = [];
@@ -39,11 +38,6 @@ function showTalks() {
 
     const target = document.getElementById('js-target');
     target.innerHTML = '';
-    if (currentTalks.length + nextTalks.length > 8) {
-        target.classList.add('live__talks--smaller');
-    } else {
-        target.classList.remove('live__talks--smaller');
-    }
 
     let markup = "<h1 class='live__when live__when--current'>Currently</h1>";
 

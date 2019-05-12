@@ -45,12 +45,6 @@
         justify-content: left;
         align-items: stretch;
         margin-top: $space-md;
-
-        &--smaller {
-            @media (min-width: 767px) {
-                font-size: x-small;
-            }
-        }
     }
 }
 
