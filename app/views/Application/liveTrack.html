@@ -25,11 +25,33 @@
 
     <div id="js-target" class="live"></div>
 
-	<!-- Custom JS -->
-	<script>
-        var showTrack = "${track}";
+    <!-- Modernizr build including the `webp` detect -->
+    <script src="@{'/public/javascripts/libs/modernizr/modernizr-custom-webp.js'}"></script>
+    <script>
+        // Detect if webp is supported by the web browser
+        Modernizr.on('webp', function (isSupported) {
+            let body = document.getElementsByTagName('body')[0];
+            if (isSupported) {
+                // Has WebP support
+                body.classList.add('webp');
+            }
+            else {
+                // No WebP support
+                body.classList.add('no-webp');
+            }
+        });
+    </script>
+    
+    <!-- Add ellipsis when text is too long -->
+    <script src="@{'/public/javascripts/libs/clamp.js'}"></script>
 
-        var tracks = {
+    <!-- Fill and animate the Live page -->
+    <script type="module">
+	    import initLiveSchedule from "@{'/public/javascripts/live.js'}";
+
+        const showTrack = "${track}";
+
+        const tracks = {
             #{list tracks, as: 'track'}
                 "${track.title}": [
                     #{list track.talks, as: 'talk'}
@@ -68,30 +90,8 @@
                 #{if !track_isLast},#{/if} 
             #{/list}
         };
-    </script>
 
-    <!-- Modernizr build including the `webp` detect -->
-    <script src="@{'/public/javascripts/libs/modernizr/modernizr-custom-webp.js'}"></script>
-
-    <!-- Add ellipsis when text is too long -->
-    <script src="@{'/public/javascripts/libs/clamp.js'}"></script>
-
-    <!-- Custom JS -->
-	<script src="@{'/public/javascripts/live.js'}"></script>
-
-    <script>
-        // Detect if webp is supported by the web browser
-        Modernizr.on('webp', function (isSupported) {
-            let body = document.getElementsByTagName('body')[0];
-            if (isSupported) {
-                // Has WebP support
-                body.classList.add('webp');
-            }
-            else {
-                // No WebP support
-                body.classList.add('no-webp');
-            }
-        });
+        initLiveSchedule(tracks, showTrack);
     </script>
 </body>
 </html>

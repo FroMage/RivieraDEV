@@ -4,7 +4,7 @@ const nowOffset = 0;
 // Debugging by adding 3 days and 15 hours and 40 minutes
 // const nowOffset = 1000 * 60 * 60 * 24 * 3 + 1000 * 60 * 60 * 15 + 1000 * 60 * 40;
 
-function showTalks() {
+function showTalks(tracks, showTrack) {
     const currentTalks = [];
     const nextTalks = [];
 
@@ -263,14 +263,16 @@ function talkToString(talk, showTrack, smaller) {
     return markup;
 }
 
-window.onload = function() {
+const initLiveSchedule = (tracks, showTrack) => {
     now = new Date().getTime() + nowOffset;
-    showTalks();
-    // window.setInterval(function() {
-    //     now = new Date().getTime() + nowOffset;
-    //     showTalks();
-    // }, 1000);
+    showTalks(tracks, showTrack);
+    window.setInterval(function() {
+        now = new Date().getTime() + nowOffset;
+        showTalks(tracks, showTrack);
+    }, 1000);
     // window.setInterval(function() {
     //     jQuery.get('http://rivieradev.fr');
     // }, 1000 * 60 * 30);
 };
+
+export default initLiveSchedule;
