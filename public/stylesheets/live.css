@@ -1072,6 +1072,36 @@ th.fullSchedule-time-title {
     -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2; }
+    .liveTalk__content--currentTrack {
+      -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.7); }
+  .liveTalk__part1--currentTrack, .liveTalk__part2--currentTrack {
+    border-width: 4px;
+    border-style: solid; }
+  .liveTalk__part1--currentTrack {
+    border-bottom: 0; }
+  .liveTalk__part2--currentTrack {
+    border-top: 0; }
+  .liveTalk__part1--currentTrack--blue, .liveTalk__part2--currentTrack--blue {
+    border-color: #4b78cb; }
+  .liveTalk__part1--currentTrack--yellow, .liveTalk__part2--currentTrack--yellow {
+    border-color: #fdba1d; }
+  .liveTalk__part1--currentTrack--purple, .liveTalk__part2--currentTrack--purple {
+    border-color: #bf3fa7; }
+  .liveTalk__part1--currentTrack--green, .liveTalk__part2--currentTrack--green {
+    border-color: #4bac76; }
+  .liveTalk__part1--currentTrack--orange, .liveTalk__part2--currentTrack--orange {
+    border-color: #f6922e; }
+  .liveTalk__part1--currentTrack--red, .liveTalk__part2--currentTrack--red {
+    border-color: #f34e66; }
+  .liveTalk__part1--currentTrack--pink, .liveTalk__part2--currentTrack--pink {
+    border-color: #e3248b; }
+  .liveTalk__part1--currentTrack--turquoise, .liveTalk__part2--currentTrack--turquoise {
+    border-color: #33bab5; }
+  .liveTalk__part1--currentTrack--brown, .liveTalk__part2--currentTrack--brown {
+    border-color: #dca242; }
+  .liveTalk__part1--currentTrack--grey, .liveTalk__part1--currentTrack--none, .liveTalk__part2--currentTrack--grey, .liveTalk__part2--currentTrack--none {
+    border-color: #c1c1c1; }
   .liveTalk__title {
     font-size: 2.5rem;
     font-weight: 700; }

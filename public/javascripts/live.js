@@ -151,6 +151,8 @@ function talkToString(talk, showTrack, smaller) {
         durationString = ' (' + duration(end.getTime() - now) + ' remaining)';
     } */
 
+    const themeColor = talk.themeColor ? talk.themeColor : 'none';
+
     let markup = "<div class='liveTalk'>";
     markup +=
         "<h2 class='liveTalk__track" +
@@ -164,7 +166,13 @@ function talkToString(talk, showTrack, smaller) {
         'fullSchedule__talk__item' +
         "'>";
 
-    markup += "<div class='liveTalk__part1 fullSchedule__talk__part1'>";
+    markup +=
+        "<div class='liveTalk__part1" +
+        (talk.track == showTrack
+            ? ' liveTalk__part1--currentTrack liveTalk__part1--currentTrack--' +
+              themeColor
+            : '') +
+        " fullSchedule__talk__part1'>";
 
     // Title
     markup +=
@@ -228,16 +236,13 @@ function talkToString(talk, showTrack, smaller) {
 
     markup += '</div>'; // .fullSchedule__talk__infos
     markup += '</div>'; // .liveTalk__part1
-    markup += "<div class='liveTalk__part2 fullSchedule__talk__part2 ";
-    if (talk.theme) {
-        markup +=
-            'liveTalk__part2--' +
-            talk.themeColor +
-            ' fullSchedule__talk__part2--' +
-            talk.themeColor;
-    } else {
-        markup += 'liveTalk__part2--none' + ' fullSchedule__talk__part2--none';
-    }
+    markup += "<div class='liveTalk__part2 fullSchedule__talk__part2";
+    markup += ' fullSchedule__talk__part2--' + themeColor + ' ';
+    markup +=
+        talk.track == showTrack
+            ? ' liveTalk__part2--currentTrack  liveTalk__part2--currentTrack--' +
+              themeColor
+            : '';
     markup += "'>";
 
     // Speakers

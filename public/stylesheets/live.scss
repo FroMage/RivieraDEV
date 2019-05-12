@@ -101,6 +101,58 @@
 
     &__content {
         flex-grow: 2;
+
+        &--currentTrack {
+            box-shadow: $shadow-xl;
+        }
+    }
+
+    &__part1--currentTrack,
+    &__part2--currentTrack {
+        border-width: $border-lg;
+        border-style: solid;
+    }
+
+    &__part1--currentTrack {
+        border-bottom: 0;
+    }
+    &__part2--currentTrack {
+        border-top: 0;
+    }
+
+    &__part1--currentTrack,
+    &__part2--currentTrack {
+        &--blue {
+            border-color: $color-theme-blue;
+        }
+        &--yellow {
+            border-color: $color-theme-yellow;
+        }
+        &--purple {
+            border-color: $color-theme-purple;
+        }
+        &--green {
+            border-color: $color-theme-green;
+        }
+        &--orange {
+            border-color: $color-theme-orange;
+        }
+        &--red {
+            border-color: $color-theme-red;
+        }
+        &--pink {
+            border-color: $color-theme-pink;
+        }
+        &--turquoise {
+            border-color: $color-theme-turquoise;
+        }
+        &--brown {
+            border-color: $color-theme-brown;
+        }
+        &--grey,
+        &--none {
+            border-color: $color-theme-grey;
+        }
     }
 
     &__title {
