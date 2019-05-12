@@ -57,8 +57,7 @@ function showTalks() {
         markup += '</div>'; // .live__talks
     } else {
         markup += "<div class='live__nothing'>";
-        markup +=
-            "<img src='/public/images/Sal1.png' class='nothing-img col-xs-12'/>";
+        markup += "<img src='/public/images/Sal1.png' class='nothing-img'/>";
         markup +=
             '<span>Oh noes!! We haven’ts gots any talks righter now!! :(</span>';
         markup += '</div>'; // .live__nothing
@@ -76,8 +75,7 @@ function showTalks() {
         markup += '</div>'; // .live__talks
     } else {
         markup += "<div class='live__nothing'>";
-        markup +=
-            "<img src='/public/images/Sal2.png' class='nothing-img col-xs-12'/>";
+        markup += "<img src='/public/images/Sal2.png' class='nothing-img'/>";
         markup +=
             '<span>Oh noes!! Its a doner, see youse nexts years!! :)</span>';
         markup += '</div>'; // .live__nothing
@@ -204,9 +202,8 @@ function talkToString(talk) {
             ")'></div>";
         markup +=
             "<div class='liveTalk__speakerName'>" + speaker.name + '</div>';
-        markup += '</div>';
+        markup += '</div>'; // .liveTalk__speaker
     }
-    markup += '</div>'; // .liveTalk__speaker
     markup += '</div>'; // .liveTalk__speakers
 
     markup += '</div>'; // .liveTalk__part2
@@ -216,13 +213,13 @@ function talkToString(talk) {
 }
 
 window.onload = function() {
-    // now = new Date().getTime() + nowOffset;
+    now = new Date().getTime() + nowOffset;
     showTalks();
-    window.setInterval(function() {
-        now = new Date().getTime() + nowOffset;
-        showTalks();
-    }, 1000);
-    window.setInterval(function() {
-        jQuery.get('http://rivieradev.fr');
-    }, 1000 * 60 * 30);
+    // window.setInterval(function() {
+    //     now = new Date().getTime() + nowOffset;
+    //     showTalks();
+    // }, 1000);
+    // window.setInterval(function() {
+    //     jQuery.get('http://rivieradev.fr');
+    // }, 1000 * 60 * 30);
 };
