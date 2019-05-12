@@ -19,16 +19,24 @@
 }
 
 .live {
-    padding: $space-md;
+    padding: $space-sm;
+
+    @media (min-width: $screen-md-min) {
+        padding: $space-md;
+    }
 
     &__currentDate {
         background: linear-gradient($color-blue, $color-blue-medium);
         color: #fff;
-        position: absolute;
-        top: $space-sm;
-        right: $space-sm;
         padding: $space-sm;
         font-size: $font-xl;
+        text-align: center;
+
+        @media (min-width: $screen-md-min) {
+            position: absolute;
+            top: $space-sm;
+            right: $space-sm;
+        }
     }
 
     &__when {
@@ -54,9 +62,14 @@
 
     &__talks {
         display: flex;
+        flex-direction: column;
         justify-content: left;
         align-items: stretch;
         margin-top: $space-sm;
+
+        @media (min-width: $screen-md-min) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -66,7 +79,14 @@
     flex-direction: column;
 
     &:not(:last-child) {
-        margin-right: $space-sm;
+        margin-bottom: $space-xl;
+    }
+
+    @media (min-width: $screen-md-min) {
+        &:not(:last-child) {
+            margin-right: $space-sm;
+            margin-bottom: 0;
+        }
     }
 
     &__track {

@@ -994,16 +994,22 @@ th.fullSchedule-time-title {
   line-height: 2; }
 
 .live {
-  padding: 2rem; }
+  padding: 1rem; }
+  @media (min-width: 992px) {
+    .live {
+      padding: 2rem; } }
   .live__currentDate {
     background: -webkit-gradient(linear, left top, left bottom, from(#19b8d5), to(#1dc9f2));
     background: linear-gradient(#19b8d5, #1dc9f2);
     color: #fff;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     padding: 1rem;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    text-align: center; }
+    @media (min-width: 992px) {
+      .live__currentDate {
+        position: absolute;
+        top: 1rem;
+        right: 1rem; } }
   .live__when {
     margin: 0;
     color: #fdba1d;
@@ -1021,6 +1027,10 @@ th.fullSchedule-time-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: left;
     -ms-flex-pack: left;
     justify-content: left;
@@ -1028,6 +1038,12 @@ th.fullSchedule-time-title {
     -ms-flex-align: stretch;
     align-items: stretch;
     margin-top: 1rem; }
+    @media (min-width: 992px) {
+      .live__talks {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; } }
 
 .liveTalk {
   -webkit-box-flex: 1;
@@ -1041,7 +1057,11 @@ th.fullSchedule-time-title {
   -ms-flex-direction: column;
   flex-direction: column; }
   .liveTalk:not(:last-child) {
-    margin-right: 1rem; }
+    margin-bottom: 4rem; }
+  @media (min-width: 992px) {
+    .liveTalk:not(:last-child) {
+      margin-right: 1rem;
+      margin-bottom: 0; } }
   .liveTalk__track {
     font-size: 3rem;
     margin: 0 0 1rem 0;

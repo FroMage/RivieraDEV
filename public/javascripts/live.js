@@ -1,9 +1,8 @@
 let now = new Date();
 
-// const nowOffset = 0;
-// Debugging by adding 2 days and 18 hours and 40 minutes
-const nowOffset =
-    1000 * 60 * 60 * 24 * 2 + 1000 * 60 * 60 * 15 + 1000 * 60 * 40;
+const nowOffset = 0;
+// Debugging by adding 3 days and 15 hours and 40 minutes
+// const nowOffset = 1000 * 60 * 60 * 24 * 3 + 1000 * 60 * 60 * 15 + 1000 * 60 * 40;
 
 function showTalks() {
     const currentTalks = [];
