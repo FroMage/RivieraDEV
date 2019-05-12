@@ -142,73 +142,99 @@ function talkToString(talk) {
         durationString = ' (' + duration(end.getTime() - now) + ' remaining)';
     }
 
-    let markup = "<div class='liveTalk__container'>";
+    let markup = "<div class='liveTalk'>";
     markup += "<h2 class='liveTalk__track'>" + talk.track + '</h2>';
     markup +=
-        "<div class='liveTalk" +
-        (talk.track == showTrack ? ' liveTalk--currentTrack' : '') +
+        "<div class='liveTalk__content " +
+        (talk.track == showTrack ? ' liveTalk__content--currentTrack ' : '') +
+        'fullSchedule__talk__item' +
         "'>";
 
-    markup += "<div class='liveTalk__part1'>";
+    markup += "<div class='liveTalk__part1 fullSchedule__talk__part1'>";
 
     // Title
-    markup += "<div class='liveTalk__title'>" + talk.title + '</div>';
+    markup +=
+        "<div class='liveTalk__title fullSchedule__talk__title'>" +
+        talk.title +
+        '</div>';
 
     // Slot
+    markup += "<div class='fullSchedule__talk__slotTrack'>";
+    markup += "<div class='liveTalk__slot fullSchedule__talk__slot'>";
+    markup += "<span class='liveTalk__slotWhen'>";
+    markup += formatTime(start) + ' - ' + formatTime(end);
+    markup += '</span>'; // .liveTalk__slotWhen
     markup +=
-        "<div class='liveTalk__slot'>" +
-        formatTime(start) +
-        ' - ' +
-        formatTime(end) +
-        durationString +
-        '</div>'; // .liveTalk__slot
+        "<span class='liveTalk__slotDuration'>" + durationString + '</span>';
+    markup += '</div>'; // .liveTalk__slot
+    markup += '</div>'; // .fullSchedule__talk__slotTrack
+
+    markup += "<div class='fullSchedule__talk__infos'>";
 
     // Theme
     if (talk.theme) {
-        markup += "<span class='liveTalk__theme'>" + talk.theme + '</span>';
+        markup +=
+            "<div class='liveTalk__theme fullSchedule__talk__theme'>" +
+            talk.theme +
+            '</div>';
     }
 
     // Type
     if (talk.type) {
-        markup += "<span class='liveTalk__type'>" + talk.type + '</span>';
+        markup +=
+            "<div class='liveTalk__type fullSchedule__talk__type'>" +
+            talk.type +
+            '</div>';
     }
 
     // Level
     if (talk.level) {
-        markup += "<span class='liveTalk__level'>" + talk.level + '</span>';
+        markup +=
+            "<div class='liveTalk__level fullSchedule__talk__level'>" +
+            talk.level +
+            '</div>';
     }
 
     // Language
     if (talk.level) {
         markup +=
-            "<span class='liveTalk__language'>" + talk.language + '</span>';
+            "<div class='liveTalk__language fullSchedule__talk__language'>" +
+            talk.language +
+            '</div>';
     }
 
+    markup += '</div>'; // .fullSchedule__talk__infos
     markup += '</div>'; // .liveTalk__part1
-    markup += "<div class='liveTalk__part2 ";
+    markup += "<div class='liveTalk__part2 fullSchedule__talk__part2 ";
     if (talk.theme) {
-        markup += 'liveTalk__part2--' + talk.themeColor;
+        markup +=
+            'liveTalk__part2--' +
+            talk.themeColor +
+            ' fullSchedule__talk__part2--' +
+            talk.themeColor;
     }
     markup += "'>";
 
     // Speakers
-    markup += "<div class='liveTalk__speakers'>";
+    markup += "<ul class='liveTalk__speakers fullSchedule__talk__speakers'>";
     for (let n = 0; n < talk.speakers.length; n++) {
         const speaker = talk.speakers[n];
-        markup += "<div class='liveTalk__speaker'>";
+        markup += "<li class='liveTalk__speaker fullSchedule__talk__speaker'>";
         markup +=
-            "<div class='liveTalk__speakerPhoto' style='background-image: url(" +
+            "<div class='liveTalk__speakerPhoto fullSchedule__talk__speakerPhoto' style='background-image: url(" +
             speaker.photo +
-            ")'></div>";
+            ")'></div> ";
         markup +=
-            "<div class='liveTalk__speakerName'>" + speaker.name + '</div>';
-        markup += '</div>'; // .liveTalk__speaker
+            "<span class='liveTalk__speakerName fullSchedule__talk__speakerName'>" +
+            speaker.name +
+            '</span>';
+        markup += '</li>'; // .liveTalk__speaker
     }
-    markup += '</div>'; // .liveTalk__speakers
+    markup += '</ul>'; // .liveTalk__speakers
 
     markup += '</div>'; // .liveTalk__part2
+    markup += '</div>'; // .liveTalk__content
     markup += '</div>'; // .liveTalk
-    markup += '</div>'; // .liveTalk__container
     return markup;
 }
 
