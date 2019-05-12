@@ -1,8 +1,9 @@
 let now = new Date();
 
-// const nowOffset = 0;
+const nowOffset = 0;
 // Debugging by adding 2 days and 18 hours and 40 minutes
-/* const nowOffset = 1000 * 60 * 60 * 24 * 5 + 1000 * 60 * 60 * 9 + 1000 * 60 * 40; */
+/* const nowOffset =
+    1000 * 60 * 60 * 24 * 4 + 1000 * 60 * 60 * 23 + 1000 * 60 * 40; */
 
 function showTalks() {
     const currentTalks = [];
@@ -50,7 +51,8 @@ function showTalks() {
         }
         markup += '</div>'; // .live__talks
     } else {
-        markup += "<div class='live__nothing fullSchedule__cofeeBreak'>";
+        markup +=
+            "<div class='live__nothing live__nothing--current fullSchedule__cofeeBreak'>";
         markup += '<span>No talks for now. Enjoy!</span>';
         markup += '</div>'; // .live__nothing
     }
@@ -66,10 +68,9 @@ function showTalks() {
         }
         markup += '</div>'; // .live__talks
     } else {
-        markup += "<div class='live__nothing'>";
-        markup += "<img src='/public/images/Sal2.png' class='nothing-img'/>";
         markup +=
-            '<span>Oh noes!! Its a doner, see youse nexts years!! :)</span>';
+            "<div class='live__nothing live__nothing--next fullSchedule__cofeeBreak'>";
+        markup += '<span>See you next year !</span>';
         markup += '</div>'; // .live__nothing
     }
 
@@ -123,6 +124,15 @@ function duration(time) {
     return ret;
 }
 
+function extractRoom(track) {
+    const regexp = /.*\[(.*)\]/;
+    const match = regexp.exec(track);
+    if (match && match.length > 1) {
+        return match[1];
+    }
+    return track;
+}
+
 function talkToString(talk) {
     if (talk == null) return '';
     const start = new Date(talk.start);
@@ -135,7 +145,8 @@ function talkToString(talk) {
     }
 
     let markup = "<div class='liveTalk'>";
-    markup += "<h2 class='liveTalk__track'>" + talk.track + '</h2>';
+    markup +=
+        "<h2 class='liveTalk__track'>" + extractRoom(talk.track) + '</h2>';
     markup +=
         "<div class='liveTalk__content " +
         (talk.track == showTrack ? ' liveTalk__content--currentTrack ' : '') +

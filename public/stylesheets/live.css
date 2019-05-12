@@ -966,6 +966,30 @@ th.fullSchedule-time-title {
     bottom: 1rem;
     right: 1rem; }
 
+.no-webp .live__nothing--next {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .live__nothing--next {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .live__nothing--next {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-desktop.jpg); } }
+
+.webp .live__nothing--next {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .live__nothing--next {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .live__nothing--next {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/team-mini-desktop.webp); } }
+
 .liveList__link {
   line-height: 2; }
 
@@ -982,12 +1006,17 @@ th.fullSchedule-time-title {
     font-size: 2.5rem; }
   .live__when {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 700; }
+    color: #fdba1d;
+    font-size: 3rem;
+    font-weight: 700;
+    border-bottom: #fdba1d 2px solid; }
     .live__when--next {
       margin-top: 2rem; }
   .live__nothing {
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    font-size: 4rem; }
+    .live__nothing--next {
+      background-position: 0 35%; }
   .live__talks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -998,7 +1027,7 @@ th.fullSchedule-time-title {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    margin-top: 2rem; }
+    margin-top: 1rem; }
 
 .liveTalk {
   -webkit-box-flex: 1;
@@ -1015,13 +1044,18 @@ th.fullSchedule-time-title {
     margin-right: 1rem; }
   .liveTalk__track {
     font-size: 3rem;
-    margin: 0 0 1rem 0; }
+    margin: 0 0 1rem 0;
+    text-align: center; }
   .liveTalk__content {
     -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2; }
+  .liveTalk__title {
+    font-size: 2.5rem;
+    font-weight: 700; }
   .liveTalk__slotWhen, .liveTalk__slotDuration {
     display: block; }
   .liveTalk__slotWhen {
+    font-size: 2rem;
     font-weight: 600;
     color: #474747; }

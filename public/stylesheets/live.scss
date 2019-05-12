@@ -7,6 +7,11 @@
 @import './partials/schedule';
 @import './partials/talk';
 
+@include responsiveBackgroundImage(
+    '.live__nothing--next',
+    '../images/illustrations/responsives/team-mini'
+);
+
 .liveList {
     &__link {
         line-height: 2;
@@ -28,8 +33,10 @@
 
     &__when {
         margin: 0;
-        font-size: $font-xxxl;
+        color: $color-yellow;
+        font-size: $font-xxl;
         font-weight: $bold;
+        border-bottom: $color-yellow $border-md solid;
 
         &--next {
             margin-top: $space-md;
@@ -38,13 +45,18 @@
 
     &__nothing {
         margin-top: $space-md;
+        font-size: $font-xxxl;
+
+        &--next {
+            background-position: 0 35%;
+        }
     }
 
     &__talks {
         display: flex;
         justify-content: left;
         align-items: stretch;
-        margin-top: $space-md;
+        margin-top: $space-sm;
     }
 }
 
@@ -60,10 +72,16 @@
     &__track {
         font-size: $font-xxl;
         margin: 0 0 $space-sm 0;
+        text-align: center;
     }
 
     &__content {
         flex-grow: 2;
+    }
+
+    &__title {
+        font-size: $font-xl;
+        font-weight: $bold;
     }
 
     &__slotWhen,
@@ -72,6 +90,7 @@
     }
 
     &__slotWhen {
+        font-size: $font-lg;
         font-weight: $semi-bold;
         color: $color-black-light;
     }
