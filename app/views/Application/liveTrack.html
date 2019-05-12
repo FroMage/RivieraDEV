@@ -10,15 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet"> 
-
-<!-- Font awesome -->
-<script
-    defer
-    src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
-    integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
-    crossorigin="anonymous"
-></script>
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
 
 <!-- Custom -->
 <link rel="stylesheet" href="@{'/public/stylesheets/live.css'}">
@@ -78,7 +70,25 @@
         };
     </script>
 
+    <!-- Modernizr build including the `webp` detect -->
+    <script src="@{'/public/javascripts/libs/modernizr/modernizr-custom-webp.js'}"></script>
+
+    <!-- Custom JS -->
 	<script src="@{'/public/javascripts/live.js'}"></script>
 
+    <script>
+        // Detect if webp is supported by the web browser
+        Modernizr.on('webp', function (isSupported) {
+            let body = document.getElementsByTagName('body')[0];
+            if (isSupported) {
+                // Has WebP support
+                body.classList.add('webp');
+            }
+            else {
+                // No WebP support
+                body.classList.add('no-webp');
+            }
+        });
+    </script>
 </body>
 </html>

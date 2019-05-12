@@ -984,6 +984,10 @@ th.fullSchedule-time-title {
     margin: 0;
     font-size: 4rem;
     font-weight: 700; }
+    .live__when--next {
+      margin-top: 2rem; }
+  .live__nothing {
+    margin-top: 2rem; }
   .live__talks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1021,3 +1025,6 @@ th.fullSchedule-time-title {
     flex-grow: 2; }
   .liveTalk__slotWhen, .liveTalk__slotDuration {
     display: block; }
+  .liveTalk__slotWhen {
+    font-weight: 600;
+    color: #474747; }

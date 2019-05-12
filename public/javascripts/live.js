@@ -45,7 +45,7 @@ function showTalks() {
         target.classList.remove('live__talks--smaller');
     }
 
-    let markup = "<h1 class='live__when'>Currently</h1>";
+    let markup = "<h1 class='live__when live__when--current'>Currently</h1>";
 
     // -- Current talks
     if (currentTalks.length > 0) {
@@ -56,14 +56,12 @@ function showTalks() {
         }
         markup += '</div>'; // .live__talks
     } else {
-        markup += "<div class='live__nothing'>";
-        markup += "<img src='/public/images/Sal1.png' class='nothing-img'/>";
-        markup +=
-            '<span>Oh noes!! We haven’ts gots any talks righter now!! :(</span>';
+        markup += "<div class='live__nothing fullSchedule__cofeeBreak'>";
+        markup += '<span>No talks for now. Enjoy!</span>';
         markup += '</div>'; // .live__nothing
     }
 
-    markup += "<h1 class='live__when'>Next</h1>";
+    markup += "<h1 class='live__when live__when--next'>Next</h1>";
 
     // -- Next talks
     if (nextTalks.length > 0) {

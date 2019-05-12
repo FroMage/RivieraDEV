@@ -30,6 +30,14 @@
         margin: 0;
         font-size: $font-xxxl;
         font-weight: $bold;
+
+        &--next {
+            margin-top: $space-md;
+        }
+    }
+
+    &__nothing {
+        margin-top: $space-md;
     }
 
     &__talks {
@@ -67,5 +75,10 @@
     &__slotWhen,
     &__slotDuration {
         display: block;
+    }
+
+    &__slotWhen {
+        font-weight: $semi-bold;
+        color: $color-black-light;
     }
 }
