@@ -40,6 +40,12 @@
                 body.classList.add('no-webp');
             }
         });
+        
+        var globals = {
+                // Debugging by adding 3 days and 15 hours and 40 minutes
+                //nowOffset: 1000 * 60 * 60 * 24 * 1 + 1000 * 60 * 60 * 1 + 1000 * 60 * 40
+        		nowOffset: 0
+        };
     </script>
     
     <!-- Add ellipsis when text is too long -->
@@ -91,7 +97,7 @@
             #{/list}
         };
 
-        initLiveSchedule(tracks, showTrack);
+        initLiveSchedule(tracks, showTrack, globals);
     </script>
 </body>
 </html>

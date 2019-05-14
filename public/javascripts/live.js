@@ -1,9 +1,5 @@
 let now = new Date();
 
-const nowOffset = 0;
-// Debugging by adding 3 days and 15 hours and 40 minutes
-// const nowOffset = 1000 * 60 * 60 * 24 * 3 + 1000 * 60 * 60 * 15 + 1000 * 60 * 40;
-
 function showTalks(tracks, showTrack) {
     const currentTalks = [];
     const nextTalks = [];
@@ -268,11 +264,11 @@ function talkToString(talk, showTrack, smaller) {
     return markup;
 }
 
-const initLiveSchedule = (tracks, showTrack) => {
-    now = new Date().getTime() + nowOffset;
+const initLiveSchedule = (tracks, showTrack, globals) => {
+    now = new Date().getTime() + globals.nowOffset;
     showTalks(tracks, showTrack);
     window.setInterval(function() {
-        now = new Date().getTime() + nowOffset;
+        now = new Date().getTime() + globals.nowOffset;
         showTalks(tracks, showTrack);
     }, 1000);
     // window.setInterval(function() {
