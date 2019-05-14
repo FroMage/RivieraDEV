@@ -1117,3 +1117,5 @@ th.fullSchedule-time-title {
     color: #474747; }
   .liveTalk__slotDuration, .liveTalk__infos {
     color: #474747; }
+  .liveTalk__speakers {
+    text-shadow: 0 0 2px #000; }
