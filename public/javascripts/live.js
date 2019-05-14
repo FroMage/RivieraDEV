@@ -271,9 +271,9 @@ const initLiveSchedule = (tracks, showTrack, globals) => {
         now = new Date().getTime() + globals.nowOffset;
         showTalks(tracks, showTrack);
     }, 1000);
-    // window.setInterval(function() {
-    //     jQuery.get('http://rivieradev.fr');
-    // }, 1000 * 60 * 30);
-};
 
-export default initLiveSchedule;
+    // Refresh page every 5 minutes
+    window.setInterval(function() {
+        window.reload();
+    }, 1000 * 60 * 5);
+};
