@@ -196,7 +196,7 @@ function talkToString(talk, showTrack, smaller) {
     markup += '</div>'; // .liveTalk__slot
     markup += '</div>'; // .fullSchedule__talk__slotTrack
 
-    markup += "<div class='fullSchedule__talk__infos'>";
+    markup += "<div class='liveTalk__infos fullSchedule__talk__infos'>";
 
     // Theme
     if (talk.theme) {
@@ -267,10 +267,10 @@ function talkToString(talk, showTrack, smaller) {
 const initLiveSchedule = (tracks, showTrack, globals) => {
     now = new Date().getTime() + globals.nowOffset;
     showTalks(tracks, showTrack);
-    window.setInterval(function() {
-        now = new Date().getTime() + globals.nowOffset;
-        showTalks(tracks, showTrack);
-    }, 1000);
+    // window.setInterval(function() {
+    //     now = new Date().getTime() + globals.nowOffset;
+    //     showTalks(tracks, showTrack);
+    // }, 1000);
 
     // Refresh page every 5 minutes
     window.setInterval(function() {

@@ -180,4 +180,9 @@
         font-weight: $semi-bold;
         color: $color-black-light;
     }
+
+    &__slotDuration,
+    &__infos {
+        color: $color-gray-dark;
+    }
 }
