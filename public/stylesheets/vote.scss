@@ -1,0 +1,54 @@
+@import './variables';
+@import './partials/common';
+
+body {
+    padding: 0 20px;
+}
+
+.logo {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+}
+
+.vote {
+    &__title {
+        font-size: $font-xxl;
+    }
+
+    &__subtitle {
+        font-size: $font-xl;
+    }
+
+    &__infos {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__day {
+        text-transform: capitalize;
+    }
+
+    &__track {
+    }
+}
+
+.voteTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+
+    &__cell {
+        border: 2px solid black;
+        text-align: center;
+        padding-bottom: 120px;
+        width: 33%;
+    }
+}
+
+@media print {
+    .vote__infos {
+        page-break-after: always;
+    }
+}

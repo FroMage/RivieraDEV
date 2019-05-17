@@ -530,4 +530,10 @@ public class Application extends Controller {
         List<Talk> keynotes = Talk.findKeynotes();
         render(tracks, track, keynotes);
     }
+
+    public static void voteForTalks() {
+        List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
+        Collections.sort(talks);
+        render(talks);
+    }
 }

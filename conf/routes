@@ -42,6 +42,7 @@ POST    /like-talk/{id}                         Application.likeTalk({id})
 POST    /unlike-talk/{id}                       Application.unlikeTalk({id})
 GET     /fishmarket                             Application.fishMarket
 GET     /fishmarket/{date}                      Application.fishMarket
+GET     /vote                                   Application.voteForTalks
 
 *		/admin									module:crud
 *		/										module:secure

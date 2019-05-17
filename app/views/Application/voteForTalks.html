@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="&{play.i18n.Lang.get()}">
+<head>
+<title>${play.i18n.Messages.get('views.application.schedule.title')}</title>
+
+<link rel="icon" type="image/png" href="@{'/public/images/favicon.png'}">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet"> 
+
+<!-- Custom -->
+<link rel="stylesheet" href="@{'/public/stylesheets/vote.css'}">
+
+#{get 'moreStyles' /}
+</head>
+<body>
+
+  #{list items: talks, as: 'talk'}
+  
+  #{if talk.isBreak == models.BreakType.NotABreak}
+  
+  <!-- HACK des familles A SUPPRIMER pour 2020 !!! -->
+  #{if talk.slot.startDate.format('EEEE') == 'vendredi'}
+
+    <img
+      src="/public/images/logo_RD_black.svg"
+      alt="RivieraDEV"
+      class="logo"
+    />
+
+    <h1 class="vote__title">${talk.title}</h1>
+    <h2 class="vote__subtitle">
+      #{list items: talk.speakers, as: 'speaker'}
+        ${speaker}
+      #{/list}
+    </h2>
+
+    <table class="voteTable">
+      <tr>
+        <td class="voteTable__cell">J'ai appris quelque chose</td>
+        <td class="voteTable__cell">Trop rapide</td>
+        <td class="voteTable__cell">Hyper intéressant</td>
+      </tr>
+      <tr>
+        <td class="voteTable__cell">Fun !</td>
+        <td class="voteTable__cell">Top les démos</td>
+        <td class="voteTable__cell">Pas clair</td>
+      </tr>
+      <tr>
+        <td class="voteTable__cell">Manque de démo</td>
+        <td class="voteTable__cell">Meilleure prez de ma vie !</td>
+        <td class="voteTable__cell">Pas assez creusé</td>
+      </tr>
+    </table>
+
+    <div class="vote__infos">
+      <div class="vote__day">${talk.slot.startDate.format('EEEE')}</div>
+      <div class="vote__track">
+        #{if talk.track}
+          ${talk.track.title}
+        #{/if}
+      </div>
+    </div>
+
+    #{/if}
+    #{/if}
+  #{/list}
+
+</body>
+</html>
