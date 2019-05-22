@@ -40,7 +40,21 @@
                 >&{'views.application.talk.' + _talk.language}</span>
             #{/if}
         </div>
+        
+        #{if _talk.slidesUrl}
+            <div class="talkDetails__slides">
+                <a href="${_talk.slidesUrl}" target="_blank" class="button button--primary">
+                    <img
+                        src="/public/images/icons/computer-screen.svg"
+                        alt=""
+                        class="talkDetails__slidesIcon"
+                    />
+                    <span class="talkDetails__slidesLabel">&{'views.application.talk.slides'}</span>
+                </a>
+            </div>
+        #{/if}
     </div>
+
     #{if _user}
         <a class="talkDetails__admin" href="@{Talks.show(_talk.id)}">edit</a>
     #{/if}

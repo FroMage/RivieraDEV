@@ -227,6 +227,23 @@
         }
     }
 
+    &__slides {
+        text-align: center;
+        margin-bottom: $space-sm;
+    }
+
+    &__slidesIcon {
+        width: $icon-size-sm;
+        height: $icon-size-sm;
+        fill: currentColor;
+        vertical-align: middle;
+        margin-right: $space-xxs;
+    }
+
+    &__slidesLabel {
+        vertical-align: middle;
+    }
+
     &__admin {
         font-size: $font-xs;
         position: absolute;

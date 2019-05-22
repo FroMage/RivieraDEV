@@ -960,6 +960,17 @@ th.fullSchedule-time-title {
         margin-left: 0; }
       .talkDetails__metadata--item:last-child {
         margin-right: 0; }
+  .talkDetails__slides {
+    text-align: center;
+    margin-bottom: 1rem; }
+  .talkDetails__slidesIcon {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: currentColor;
+    vertical-align: middle;
+    margin-right: 0.6rem; }
+  .talkDetails__slidesLabel {
+    vertical-align: middle; }
   .talkDetails__admin {
     font-size: 1.4rem;
     position: absolute;
