@@ -2003,35 +2003,259 @@ body.burgerMenu--open .burgerMenu:before {
     bottom: 1rem;
     right: 1rem; }
 
-.photos {
-  display: grid;
-  grid-template-columns: 1fr; }
+.no-webp .photos__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-mobile.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-mobile.jpg); }
   @media (min-width: 768px) {
-    .photos {
-      grid-template-columns: 1fr 1fr; } }
+    .no-webp .photos__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-tablet.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-desktop.jpg);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-desktop.jpg); } }
+
+.webp .photos__header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-mobile.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-tablet.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-desktop.webp);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/speakers-mini-desktop.webp); } }
+
+.no-webp .photos__link--2017 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2017-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2017-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2017 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2017-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2017-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2017 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2017-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2017-mini-desktop.jpg); } }
+
+.webp .photos__link--2017 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2017-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2017-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2017 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2017-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2017-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2017 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2017-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2017-mini-desktop.webp); } }
+
+.no-webp .photos__link--2016 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2016-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2016-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2016 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2016-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2016-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2016 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2016-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2016-mini-desktop.jpg); } }
+
+.webp .photos__link--2016 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2016-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2016-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2016 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2016-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2016-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2016 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2016-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2016-mini-desktop.webp); } }
+
+.no-webp .photos__link--2015 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2015-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2015-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2015 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2015-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2015-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2015 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2015-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2015-mini-desktop.jpg); } }
+
+.webp .photos__link--2015 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2015-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2015-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2015 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2015-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2015-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2015 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2015-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2015-mini-desktop.webp); } }
+
+.no-webp .photos__link--2011 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2011-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2011-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2011 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2011-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2011-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2011 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2011-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2011-mini-desktop.jpg); } }
+
+.webp .photos__link--2011 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2011-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2011-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2011 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2011-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2011-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2011 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2011-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2011-mini-desktop.webp); } }
+
+.no-webp .photos__link--2010 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2010-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2010-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2010 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2010-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2010-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2010 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2010-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2010-mini-desktop.jpg); } }
+
+.webp .photos__link--2010 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2010-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2010-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2010 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2010-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2010-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2010 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2010-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2010-mini-desktop.webp); } }
+
+.no-webp .photos__link--2009-2 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-2-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-2-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2009-2 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-2-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-2-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2009-2 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-2-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-2-mini-desktop.jpg); } }
+
+.webp .photos__link--2009-2 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-2-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-2-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2009-2 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-2-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-2-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2009-2 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-2-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-2-mini-desktop.webp); } }
+
+.no-webp .photos__link--2009-1 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-1-mini-mobile.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-1-mini-mobile.jpg); }
+  @media (min-width: 768px) {
+    .no-webp .photos__link--2009-1 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-1-mini-tablet.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-1-mini-tablet.jpg); } }
+  @media (min-width: 992px) {
+    .no-webp .photos__link--2009-1 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-1-mini-desktop.jpg);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-1-mini-desktop.jpg); } }
+
+.webp .photos__link--2009-1 {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-1-mini-mobile.webp);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-1-mini-mobile.webp); }
+  @media (min-width: 768px) {
+    .webp .photos__link--2009-1 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-1-mini-tablet.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-1-mini-tablet.webp); } }
+  @media (min-width: 992px) {
+    .webp .photos__link--2009-1 {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/2009-1-mini-desktop.webp);
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35)), url(../images/illustrations/responsives/2009-1-mini-desktop.webp); } }
+
+.photos {
+  margin-left: 10rem;
+  margin-right: 10rem; }
+  .photos__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 3rem; }
+  .photos__link {
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    justify-self: stretch;
+    position: relative;
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    -webkit-transition: -webkit-box-shadow 0.1s ease-in-out;
+    transition: -webkit-box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out; }
+    .photos__link:hover, .photos__link:focus {
+      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6); }
+  .photos__title {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: #fff;
+    font-size: 2.5rem; }
 
 .photo {
-  position: relative;
-  margin-top: 2rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 300px; }
-  @media (min-width: 768px) {
-    .photo {
-      margin: 2rem; } }
-  .photo-year, .photo-title {
-    font-weight: bold;
-    font-size: 1.8rem;
-    position: absolute;
-    padding: 0 1rem;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff; }
-  .photo-year {
-    top: 0; }
-  .photo-title {
-    bottom: 0; }
+  /*
+    position: relative;
+    margin-top: $space-md;
+    min-height: $photo-height;
+
+    @media (min-width: $screen-sm-min) {
+        margin: $space-md;
+    }
+
+    &-year,
+    &-title {
+        font-weight: bold;
+        font-size: $font-md;
+        position: absolute;
+        padding: 0 $space-sm;
+        width: 100%;
+        background-color: $color-black-transparent2;
+        color: $color-white;
+    }
+
+    &-year {
+        top: 0;
+    }
+
+    &-title {
+        bottom: 0;
+    }
+    */ }
 
 .no-webp .speakers__header {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/speakers-mini-mobile.jpg);

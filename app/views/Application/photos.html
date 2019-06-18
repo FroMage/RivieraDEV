@@ -1,49 +1,40 @@
 #{extends 'main.html' /}
 #{set title:play.i18n.Messages.get('views.application.photos.title') /}
 
-<div class="page-title-container">
-    <h1 class="title page-title"><span>&{'views.application.photos.title'}</span></h1>
+<div class="page__header photos__header">
+    <h1 class="page__mainTitle">&{'views.application.photos.title'}</h1>
 </div>
 
-<div class="container page-container">
+<div class="page__container photos">
 
-    <div class="photos">
-        <a class="photo" 
-            href="https://get.google.com/albumarchive/103036382695763273919/album/AF1QipNt9kK2mTIiWQeBg9_GyehpXuYSjQgPCZB1VcpW"
-            style="background-image: url(@{'/public/images/photos/2009-1.jpg'})">
-            <div class="photo-year">2009</div>
-            <div class="photo-title">Mini-conf Java EE</div>
+    <div class="photos__gallery">
+        <a class="photos__link photos__link--2017"
+            href="https://photos.app.goo.gl/2p1Tv2PZAZkqnScU8">
+            <div class="photos__title">RivieraDEV 2017</div>
         </a>
-        <a class="photo" 
-            href="https://get.google.com/albumarchive/103036382695763273919/album/AF1QipO_qr05MUPl3o83C_DoifWpsZvAuCt3S4YLbwFC"
-            style="background-image: url(@{'/public/images/photos/2009-2.jpg'})">
-            <div class="photo-year">2009</div>
-            <div class="photo-title">Sophia fait sa Java</div>
+        <a class="photos__link photos__link--2016"
+            href="https://plus.google.com/photos/104322794282801309280/album/6307923088378568513">
+            <div class="photos__title">RivieraDEV 2016</div>
         </a>
-        <a class="photo" href="https://photos.app.goo.gl/ikoWQhHKfiP8QEvh6"
-            style="background-image: url(@{'/public/images/photos/2010.jpg'})">
-            <div class="photo-year">2010</div>
-            <div class="photo-title">SophiaConf 2010</div>
+        <a class="photos__link photos__link--2015"
+            href="https://plus.google.com/photos/104322794282801309280/album/6248693510062331857">
+            <div class="photos__title">RivieraDEV 2015</div>
         </a>
-        <a class="photo" href="https://photos.app.goo.gl/jsWdFV4mDYaiOmE83"
-          style="background-image: url(@{'/public/images/photos/2011.jpg'})">
-            <div class="photo-year">2011</div>
-            <div class="photo-title">RivieraDEV 2011</div>
+        <a class="photos__link photos__link--2011"
+            href="https://photos.app.goo.gl/M72DgjZYaJXK3Baf9">
+            <div class="photos__title">RivieraDEV 2011</div>
         </a>
-        <a class="photo" href="https://plus.google.com/photos/104322794282801309280/album/6248693510062331857"
-           style="background-image: url(@{'/public/images/photos/2015.jpg'})">
-            <div class="photo-year">2015</div>
-            <div class="photo-title">RivieraDEV 2015</div>
+        <a class="photos__link photos__link--2010"
+            href="https://photos.app.goo.gl/CM1zjTBcGSSJigk5A">
+            <div class="photos__title">2010 - SophiaConf</div>
         </a>
-        <a class="photo" href="https://plus.google.com/photos/104322794282801309280/album/6307923088378568513"
-          style="background-image: url(@{'/public/images/photos/2016.jpg'})">
-            <div class="photo-year">2016</div>
-            <div class="photo-title">RivieraDEV 2016</div>
+        <a class="photos__link photos__link--2009-2"
+            href="https://photos.app.goo.gl/i4YLNJUkLngcyzeT8">
+            <div class="photos__title">2009 - Sophia fait sa Java</div>
         </a>
-        <a class="photo" href="https://www.facebook.com/pg/RivieraDEVConf/photos/?tab=album&album_id=1331688560230246"
-          style="background-image: url(@{'/public/images/photos/2017.jpg'})">
-            <div class="photo-year">2017</div>
-            <div class="photo-title">RivieraDEV 2017</div>
+        <a class="photos__link photos__link--2009-1"
+            href="https://photos.app.goo.gl/YL36gAeZ7BMg29nD7">
+            <div class="photos__title">2009 - Mini-conf Java EE</div>
         </a>
     </div>
 

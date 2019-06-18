@@ -1,43 +1,82 @@
-$photo-height: 300px;
+@include responsiveBackgroundImage(
+    '.photos__header',
+    '../images/illustrations/responsives/speakers-mini' // TODO change
+);
 
+@include responsiveBackgroundImage(
+    '.photos__link--2017',
+    '../images/illustrations/responsives/2017-mini',
+    top
+);
+@include responsiveBackgroundImage(
+    '.photos__link--2016',
+    '../images/illustrations/responsives/2016-mini',
+    top
+);
+@include responsiveBackgroundImage(
+    '.photos__link--2015',
+    '../images/illustrations/responsives/2015-mini',
+    top
+);
+@include responsiveBackgroundImage(
+    '.photos__link--2011',
+    '../images/illustrations/responsives/2011-mini',
+    top
+);
+
+@include responsiveBackgroundImage(
+    '.photos__link--2010',
+    '../images/illustrations/responsives/2010-mini',
+    top
+);
+
+@include responsiveBackgroundImage(
+    '.photos__link--2009-2',
+    '../images/illustrations/responsives/2009-2-mini',
+    top
+);
+
+@include responsiveBackgroundImage(
+    '.photos__link--2009-1',
+    '../images/illustrations/responsives/2009-1-mini',
+    top
+);
+
+$photo-max-width: 500px;
+$photo-min-height: 300px;
 
 .photos {
-    display: grid;
-    grid-template-columns: 1fr;
+    margin-left: $space-xxxl;
+    margin-right: $space-xxxl;
 
-    @media (min-width: $screen-sm-min) {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.photo {
-    position: relative;
-    margin-top: $space-md;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: $photo-height;
-
-    @media (min-width: $screen-sm-min) {
-        margin: $space-md;
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax($photo-max-width, 1fr));
+        grid-gap: $space-lg;
     }
 
-    &-year,
-    &-title {
-        font-weight: bold;
-        font-size: $font-md;
+    &__link {
+        align-self: stretch;
+        justify-self: stretch;
+        position: relative;
+        min-height: $photo-min-height;
+        background-position: center;
+        background-size: cover;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        transition: box-shadow 0.1s ease-in-out;
+
+        &:hover,
+        &:focus {
+            box-shadow: $shadow-lg;
+        }
+    }
+
+    &__title {
         position: absolute;
-        padding: 0 $space-sm;
-        width: 100%;
-        background-color: $color-black-transparent2;
+        bottom: $space-lg;
+        left: $space-lg;
         color: $color-white;
-    }
-
-    &-year {
-        top: 0;
-    }
-
-    &-title {
-        bottom: 0;
+        font-size: $font-xl;
     }
 }

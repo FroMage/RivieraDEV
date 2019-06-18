@@ -7,58 +7,58 @@
         url($src);
 }
 
-@mixin responsiveBackgroundImage($cssSelector, $src) {
+@mixin responsiveBackgroundImage($cssSelector, $src, $direction: right) {
     .no-webp #{$cssSelector} {
         background-image: linear-gradient(
-                to right,
+                to $direction,
                 rgba(0, 0, 0, 0.75),
                 rgba(0, 0, 0, 0.35)
             ),
             url(#{$src}-mobile.jpg);
-        
+
         @media (min-width: $screen-sm-min) {
             background-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(#{$src}-tablet.jpg);
+                    to $direction,
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url(#{$src}-tablet.jpg);
         }
 
         @media (min-width: $screen-md-min) {
             background-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(#{$src}-desktop.jpg);
+                    to $direction,
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url(#{$src}-desktop.jpg);
         }
     }
 
-    .webp #{$cssSelector}  {
+    .webp #{$cssSelector} {
         background-image: linear-gradient(
-                to right,
+                to $direction,
                 rgba(0, 0, 0, 0.75),
                 rgba(0, 0, 0, 0.35)
             ),
             url(#{$src}-mobile.webp);
-        
+
         @media (min-width: $screen-sm-min) {
             background-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(#{$src}-tablet.webp);
+                    to $direction,
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url(#{$src}-tablet.webp);
         }
 
         @media (min-width: $screen-md-min) {
             background-image: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(#{$src}-desktop.webp);
+                    to $direction,
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url(#{$src}-desktop.webp);
         }
     }
 }
