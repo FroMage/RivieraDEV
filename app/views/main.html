@@ -145,6 +145,13 @@
                     </a>-->
 
                     <a
+                        href="@{Application.photos}"
+                        class="burgerMenu__item ${request.action == 'Application.photos' ? 'menu__item--current' : ''}"
+                    >
+                        &{'views.main.photos'}
+                    </a>
+
+                    <a
                         href="@{Application.index}#sponsors"
                         class="burgerMenu__item"
                         onclick="forceToggleBurgerMenu()"
@@ -248,6 +255,13 @@
                 >
                     &{'views.main.cfp'}
                 </a>-->
+
+                <a
+                    href="@{Application.photos}"
+                    class="menu__item ${request.action == 'Application.photos' ? 'menu__item--current' : ''}"
+                >
+                    &{'views.main.photos'}
+                </a>
 
                 <a
                     href="@{Application.index}#sponsors"
