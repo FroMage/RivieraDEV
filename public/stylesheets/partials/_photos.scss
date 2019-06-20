@@ -1,3 +1,13 @@
+$photo-max-width-lg: 425px;
+$photo-max-width-xs: 300px;
+$photo-min-height-xs: 300px;
+$photo-min-height-lg: 350px;
+$photos-gradient: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 25%
+);
+
 @include responsiveBackgroundImage(
     '.photos__header',
     '../images/illustrations/responsives/speakers-mini' // TODO change
@@ -6,65 +16,89 @@
 @include responsiveBackgroundImage(
     '.photos__link--2017',
     '../images/illustrations/responsives/2017-mini',
-    top
+    $photos-gradient
 );
 @include responsiveBackgroundImage(
     '.photos__link--2016',
     '../images/illustrations/responsives/2016-mini',
-    top
+    $photos-gradient
 );
 @include responsiveBackgroundImage(
     '.photos__link--2015',
     '../images/illustrations/responsives/2015-mini',
-    top
+    $photos-gradient
 );
 @include responsiveBackgroundImage(
     '.photos__link--2011',
     '../images/illustrations/responsives/2011-mini',
-    top
+    $photos-gradient
 );
 
 @include responsiveBackgroundImage(
     '.photos__link--2010',
     '../images/illustrations/responsives/2010-mini',
-    top
+    $photos-gradient
 );
 
 @include responsiveBackgroundImage(
     '.photos__link--2009-2',
     '../images/illustrations/responsives/2009-2-mini',
-    top
+    $photos-gradient
 );
 
 @include responsiveBackgroundImage(
     '.photos__link--2009-1',
     '../images/illustrations/responsives/2009-1-mini',
-    top
+    $photos-gradient
 );
 
-$photo-max-width: 500px;
-$photo-min-height: 300px;
-
 .photos {
-    margin-left: $space-xxxl;
-    margin-right: $space-xxxl;
+    margin-left: $space-md;
+    margin-right: $space-md;
+
+    @media (min-width: $screen-md-min) {
+        margin-left: $space-xl;
+        margin-right: $space-xl;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-left: $space-xxl;
+        margin-right: $space-xxl;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-left: $space-xxxl;
+        margin-right: $space-xxxl;
+    }
 
     &__gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax($photo-max-width, 1fr));
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax($photo-max-width-xs, 1fr)
+        );
         grid-gap: $space-lg;
+
+        @media (min-width: $screen-lg-min) {
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax($photo-max-width-lg, 1fr)
+            );
+        }
     }
 
     &__link {
         align-self: stretch;
         justify-self: stretch;
         position: relative;
-        min-height: $photo-min-height;
+        min-height: $photo-min-height-xs;
         background-position: center;
         background-size: cover;
         border-radius: $border-radius-md;
         box-shadow: $shadow-md;
         transition: box-shadow 0.1s ease-in-out;
+
+        @media (min-width: $screen-lg-min) {
+            min-height: $photo-min-height-lg;
+        }
 
         &:hover,
         &:focus {
@@ -74,7 +108,7 @@ $photo-min-height: 300px;
 
     &__title {
         position: absolute;
-        bottom: $space-lg;
+        bottom: $space-md;
         left: $space-lg;
         color: $color-white;
         font-size: $font-xl;

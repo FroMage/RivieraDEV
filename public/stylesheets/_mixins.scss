@@ -7,58 +7,33 @@
         url($src);
 }
 
-@mixin responsiveBackgroundImage($cssSelector, $src, $direction: right) {
+@mixin responsiveBackgroundImage(
+    $cssSelector,
+    $src,
+    $gradient:
+        linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35))
+) {
     .no-webp #{$cssSelector} {
-        background-image: linear-gradient(
-                to $direction,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(#{$src}-mobile.jpg);
+        background-image: $gradient, url(#{$src}-mobile.jpg);
 
         @media (min-width: $screen-sm-min) {
-            background-image: linear-gradient(
-                    to $direction,
-                    rgba(0, 0, 0, 0.75),
-                    rgba(0, 0, 0, 0.35)
-                ),
-                url(#{$src}-tablet.jpg);
+            background-image: $gradient, url(#{$src}-tablet.jpg);
         }
 
         @media (min-width: $screen-md-min) {
-            background-image: linear-gradient(
-                    to $direction,
-                    rgba(0, 0, 0, 0.75),
-                    rgba(0, 0, 0, 0.35)
-                ),
-                url(#{$src}-desktop.jpg);
+            background-image: $gradient, url(#{$src}-desktop.jpg);
         }
     }
 
     .webp #{$cssSelector} {
-        background-image: linear-gradient(
-                to $direction,
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.35)
-            ),
-            url(#{$src}-mobile.webp);
+        background-image: $gradient, url(#{$src}-mobile.webp);
 
         @media (min-width: $screen-sm-min) {
-            background-image: linear-gradient(
-                    to $direction,
-                    rgba(0, 0, 0, 0.75),
-                    rgba(0, 0, 0, 0.35)
-                ),
-                url(#{$src}-tablet.webp);
+            background-image: $gradient, url(#{$src}-tablet.webp);
         }
 
         @media (min-width: $screen-md-min) {
-            background-image: linear-gradient(
-                    to $direction,
-                    rgba(0, 0, 0, 0.75),
-                    rgba(0, 0, 0, 0.35)
-                ),
-                url(#{$src}-desktop.webp);
+            background-image: $gradient, url(#{$src}-desktop.webp);
         }
     }
 }
