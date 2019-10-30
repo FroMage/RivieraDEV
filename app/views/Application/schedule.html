@@ -71,15 +71,17 @@
 				#{/else}
 			</div>
 
-			#{temporarySchedule days: days/}
-
-			<div>
-				<p class="data-unavailable">
-					&{'views.application.schedule.subscribe'}
-				</p>
+            #{temporarySchedule days: days/}
+            
 			</div>
-			
-			#{newsletter /}
+
+            <div class="newsletter">
+                <h2 class="home__title newsletter__title">
+                    &{'views.application.index.get-in-touch'}
+                </h2>
+                #{newsletter /}
+            </div> <!-- /.newletter -->
+
 		</div>
 	#{/else}
 </div>
