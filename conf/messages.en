@@ -380,6 +380,7 @@ views.application.cfp.motivation.2=Don't miss the <strong>speaker dinner</strong
 views.application.cfp.motivation.3=dinner on the beach.
 
 tags.sponsorsPreviousYears.title=They trusted us the previous years
+tags.previousSpeakers.title=They were at Riviera DEV
 tags.newsletter.placeholder=Your email address
 tags.newsletter.subscribe=Subscribe to the newsletter
 tags.countdown.days=Days

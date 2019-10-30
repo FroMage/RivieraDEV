@@ -116,12 +116,12 @@
                         &{'views.main.home'}
                     </a>
 
-                    <a
+                    <!--<a
                         href="@{Application.subscribe}"
                         class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
                     >
                         &{'views.main.tickets'}
-                    </a>
+                    </a>-->
 
                     <a
                         href="@{Application.schedule}"
@@ -130,12 +130,12 @@
                         &{'views.main.schedule'}
                     </a>
 
-                    <a
+                    <!--<a
                         href="@{Application.speakers}"
                         class="burgerMenu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
                     >
                         &{'views.main.speakers'}
-                    </a>
+                    </a>-->
 
                     <!--<a
                         href="@{Application.cfp}"
@@ -151,10 +151,14 @@
                         &{'views.main.photos'}
                     </a>
 
-                    <a
+                    <!--<a
                         href="@{Application.index}#sponsors"
                         class="burgerMenu__item"
                         onclick="forceToggleBurgerMenu()"
+                    >-->
+                    <a
+                        href="https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E"
+                        class="burgerMenu__item"
                     >
                         &{'views.main.sponsors'}
                     </a>
@@ -228,12 +232,12 @@
                     &{'views.main.home'}
                 </a>
 
-                <a
+                <!--<a
                     href="@{Application.subscribe}"
                     class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.tickets'}
-                </a>
+                </a>-->
 
                 <a
                     href="@{Application.schedule}"
@@ -242,12 +246,12 @@
                     &{'views.main.schedule'}
                 </a>
 
-                <a
+                <!--<a
                     href="@{Application.speakers}"
                     class="menu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.speakers'}
-                </a>
+                </a>-->
 
                 <!--<a
                     href="@{Application.cfp}"
@@ -263,8 +267,13 @@
                     &{'views.main.photos'}
                 </a>
 
-                <a
+                
+                <!--<a
                     href="@{Application.index}#sponsors"
+                    class="menu__item"
+                >-->
+                <a
+                    href="https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E"
                     class="menu__item"
                 >
                     &{'views.main.sponsors'}

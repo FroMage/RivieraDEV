@@ -242,11 +242,13 @@
 <div class="speakers">
     <div class="speakers__container notFullWidth">
         <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
+        <div class="speakers__previousTitle">&{'tags.previousSpeakers.title'}</div>
         #{previousSpeakers speakers: speakersPreviousYears/}
         
-        <div class="speakers__buttonContainer">
+        <!-- TODO : Remettre quand CFP fixé et ouvert
+            <div class="speakers__buttonContainer">
             <a class="button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
-        </div>
+        </div>-->
     </div>
 </div>
 #{/elseif}
