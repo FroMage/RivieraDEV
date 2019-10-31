@@ -1,0 +1,4 @@
+etc/rivieradev-2020/routes
+etc/rivieradev-2020/log4j-prod.properties
+etc/rivieradev-2020/application.conf
+etc/rivieradev-2020/dependencies.yml
