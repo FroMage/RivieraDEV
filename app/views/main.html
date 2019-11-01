@@ -132,12 +132,14 @@
                         &{'views.main.schedule'}
                     </a>
 
-                    <!--<a
+                    #{if displayNewSpeakers}
+                    <a
                         href="@{Application.speakers}"
                         class="burgerMenu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
                     >
                         &{'views.main.speakers'}
-                    </a>-->
+                    </a>
+                    #{/if}
 
                     <!--<a
                         href="@{Application.cfp}"
@@ -250,12 +252,14 @@
                     &{'views.main.schedule'}
                 </a>
 
-                <!--<a
+                #{if displayNewSpeakers}
+                <a
                     href="@{Application.speakers}"
                     class="menu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.speakers'}
-                </a>-->
+                </a>
+                #{/if}
 
                 <!--<a
                     href="@{Application.cfp}"

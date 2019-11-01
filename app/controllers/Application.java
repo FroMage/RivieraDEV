@@ -47,6 +47,7 @@ public class Application extends Controller {
         renderArgs.put("promotedPage", getPromotedPage());
         renderArgs.put("displayTalks", displayTalks());
         renderArgs.put("ticketingIsOpen", ticketingIsOpen());
+        renderArgs.put("displayNewSpeakers", displayNewSpeakers());
     }
 
     public static void fr(String url) {
