@@ -95,9 +95,11 @@ public class Application extends Controller {
 
         boolean displayPreviousSpeakers = !displayNewSpeakers();
 
+        String sponsoringLeafletUrl = getSponsoringLeafletUrl();
+
         render(promotedPage2, displayCountdown, eventStartDateStr, eventEndDateStr, googleMapApiKey,
                 displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears,
-                speakersStar, latestNews);
+                speakersStar, latestNews, sponsoringLeafletUrl);
     }
 
     public static void news() {
@@ -281,10 +283,12 @@ public class Application extends Controller {
     }
 
     public static void becomeSponsor() {
-        // Until becomeSponsor.html has a new design
-        redirect("https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E");
+        String sponsoringLeafletUrl = getSponsoringLeafletUrl();
 
-        // render();
+        // Until becomeSponsor.html has a new design
+        redirect(sponsoringLeafletUrl);
+
+        // render(sponsoringLeafletUrl);
     }
 
     public static void previousSpeakerPhoto(Long id) {
@@ -500,6 +504,11 @@ public class Application extends Controller {
     private static boolean displayTalks() {
         Configuration config = Configuration.find("key", ConfigurationKey.DISPLAY_TALKS).first();
         return config != null && config.value.equals("true");
+    }
+
+    private static String getSponsoringLeafletUrl() {
+        Configuration config = Configuration.find("key", ConfigurationKey.SPONSORING_LEAFLET_URL).first();
+        return config != null ? config.value : "";
     }
 
     private static class SponsorsToDisplay {
