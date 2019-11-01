@@ -116,12 +116,14 @@
                         &{'views.main.home'}
                     </a>
 
-                    <!--<a
+                    #{if ticketingIsOpen}
+                    <a
                         href="@{Application.subscribe}"
                         class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
                     >
                         &{'views.main.tickets'}
-                    </a>-->
+                    </a>
+                    #{/if}
 
                     <a
                         href="@{Application.schedule}"
@@ -232,12 +234,14 @@
                     &{'views.main.home'}
                 </a>
 
-                <!--<a
+                #{if ticketingIsOpen}
+                <a
                     href="@{Application.subscribe}"
                     class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.tickets'}
-                </a>-->
+                </a>
+                #{/if}
 
                 <a
                     href="@{Application.schedule}"

@@ -46,6 +46,7 @@ public class Application extends Controller {
         renderArgs.put("user", Security.connected());
         renderArgs.put("promotedPage", getPromotedPage());
         renderArgs.put("displayTalks", displayTalks());
+        renderArgs.put("ticketingIsOpen", ticketingIsOpen());
     }
 
     public static void fr(String url) {
@@ -330,9 +331,9 @@ public class Application extends Controller {
         render(orga);
     }
 
-    public static void fishMarket(String date) throws ParseException{
+    public static void fishMarket(String date) throws ParseException {
         Date day = new Date(System.currentTimeMillis());
-        if(date != null) {
+        if (date != null) {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
             day = format.parse(date);
         }
