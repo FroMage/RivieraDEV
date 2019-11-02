@@ -116,12 +116,14 @@
                         &{'views.main.home'}
                     </a>
 
+                    #{if ticketingIsOpen}
                     <a
                         href="@{Application.subscribe}"
                         class="burgerMenu__item ${request.action == 'Application.subscribe' ? 'burgerMenu__item--current' : ''}"
                     >
                         &{'views.main.tickets'}
                     </a>
+                    #{/if}
 
                     <a
                         href="@{Application.schedule}"
@@ -130,12 +132,14 @@
                         &{'views.main.schedule'}
                     </a>
 
+                    #{if displayNewSpeakers}
                     <a
                         href="@{Application.speakers}"
                         class="burgerMenu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
                     >
                         &{'views.main.speakers'}
                     </a>
+                    #{/if}
 
                     <!--<a
                         href="@{Application.cfp}"
@@ -228,12 +232,14 @@
                     &{'views.main.home'}
                 </a>
 
+                #{if ticketingIsOpen}
                 <a
                     href="@{Application.subscribe}"
                     class="menu__item ${request.action == 'Application.subscribe' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.tickets'}
                 </a>
+                #{/if}
 
                 <a
                     href="@{Application.schedule}"
@@ -242,12 +248,14 @@
                     &{'views.main.schedule'}
                 </a>
 
+                #{if displayNewSpeakers}
                 <a
                     href="@{Application.speakers}"
                     class="menu__item ${request.action == 'Application.speakers' ? 'menu__item--current' : ''}"
                 >
                     &{'views.main.speakers'}
                 </a>
+                #{/if}
 
                 <!--<a
                     href="@{Application.cfp}"
@@ -263,6 +271,7 @@
                     &{'views.main.photos'}
                 </a>
 
+                
                 <a
                     href="@{Application.index}#sponsors"
                     class="menu__item"
@@ -455,7 +464,7 @@
             <!-- /.footer__followContact -->
 
             <div class="footer__copyright">
-                Copyright &copy; 2011-2019 Riviera JUG / Riviera DEV. All rights
+                Copyright &copy; 2011-2020 Riviera JUG / Riviera DEV. All rights
                 reserved.
             </div>
         </footer>

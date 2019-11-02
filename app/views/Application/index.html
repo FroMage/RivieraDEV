@@ -30,11 +30,11 @@
                     <a class="button button--primary registration__button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
                 #{/elseif}
                 #{elseif promotedPage == 'SPONSORS'}
-                    <a class="button button--primary registration__button" href="https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E">&{'views.application.index.sponsors.join'}</a>
+                    <a class="button button--primary registration__button" href="${sponsoringLeafletUrl}">&{'views.application.index.sponsors.join'}</a>
                 #{/elseif}
 
                 #{if promotedPage2 == 'SPONSORS'}
-                    <a class="button registration__button" href="https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E">&{'views.application.index.sponsors.join'}</a>
+                    <a class="button registration__button" href="${sponsoringLeafletUrl}">&{'views.application.index.sponsors.join'}</a>
                 #{/if}
                 #{elseif promotedPage2 == 'SCHEDULE'}
                     <a class="button registration__button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
@@ -242,11 +242,13 @@
 <div class="speakers">
     <div class="speakers__container notFullWidth">
         <h2 class="home__title speakers__title">&{'views.application.index.speakers'}</h2>
+        <div class="speakers__previousTitle">&{'tags.previousSpeakers.title'}</div>
         #{previousSpeakers speakers: speakersPreviousYears/}
         
-        <div class="speakers__buttonContainer">
+        <!-- TODO : Remettre quand CFP fixé et ouvert
+            <div class="speakers__buttonContainer">
             <a class="button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
-        </div>
+        </div>-->
     </div>
 </div>
 #{/elseif}
@@ -313,7 +315,7 @@
         #{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
 
         <div class="partenaires__buttonContainer">
-            <a class="button" href="https://drive.google.com/open?id=11csM3aImgC6xSCUIiTERGSEvggKbnx5E">&{'views.application.index.sponsors.join'}</a>
+            <a class="button" href="${sponsoringLeafletUrl}">&{'views.application.index.sponsors.join'}</a>
         </div>
 
     </div>

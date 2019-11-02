@@ -1,0 +1,72 @@
+@media print {
+
+    .menu,
+    .burgerMenu,
+    .page__mainSubtitle,
+    .talksFilter,
+    .schedule__likeExplanation,
+    .schedule__legend,
+    .schedule--mobile,
+    .schedule__days,
+    .fullSchedule__admin,
+    .talkDetails__admin,
+    .footer {
+        display: none;
+    }
+
+    .fullSchedule__breakfast ,
+    .fullSchedule__cofeeBreak,
+    .fullSchedule__party,
+    .fullSchedule__lunch{
+        border-radius: $border-radius-sm;
+        border: $border-sm solid $color-gray-light;
+    }
+
+    .swiper-wrapper {
+        display: block;
+        height: auto !important; // awful... but to override swiper.js inline style
+    }
+
+    .page__header.schedule__header,
+    .fullSchedule__breakfast,
+    .fullSchedule__lunch,
+    .fullSchedule__cofeeBreak,
+    .fullSchedule__party {
+        font-size: $font-sm;
+        background: none;
+        color: $color-black-light;
+        padding: 0;
+        margin: 0 3rem;
+    }
+
+    .fullSchedule__time {
+        padding: 0;
+        font-size: $font-lg;
+        line-height: $font-xxl;
+
+        & span {
+            font-size: $font-sm;
+        }
+    }
+
+    .fullSchedule__talk__title {
+        font-size: $font-xs;
+    }
+
+    .fullSchedule {
+        border-spacing: $space-xxs;
+    }
+
+    .fullSchedule__talk__item {
+        width: 100% !important; // awful... but to override swiper.js inline style
+        box-shadow: none;
+    }
+
+    .swiper-slide.swiper-slide-active {
+        width: 100% !important; // awful... but to override swiper.js inline style
+    }
+
+    .schedule--desktop {
+        display: block;
+    }
+}

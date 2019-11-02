@@ -63,11 +63,9 @@ $sponsor-silver-height: 83px;
         text-align: center;
     }
 
-    &-previous {
-        &-title {
-            font-size: 1.5em;
-            margin-bottom: 1.1em;
-        }
+    &__previousTitle {
+        font-size: 1.5em;
+        margin-bottom: 1.1em;
     }
 
     &-contactUs {

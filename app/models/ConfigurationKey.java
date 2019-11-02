@@ -34,5 +34,7 @@ public enum ConfigurationKey {
     /* Url de la page où on peut acheter les billets */
     TICKETING_URL,
     /* [true, false] Si true, permet d'accéder à la billeterie */
-    TICKETING_OPEN
+    TICKETING_OPEN,
+    /* URL de la plaquette de sponsoring */
+    SPONSORING_LEAFLET_URL
 }

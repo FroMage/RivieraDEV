@@ -1,11 +1,11 @@
 
 #{if _sponsorsPreviousYears != null && _sponsorsPreviousYears.size() > 0 }
 <div class="text-center">
-    <div class="partenaires-previous-title">&{'tags.sponsorsPreviousYears.title'}</div>
-    <div class="partenaires-list">
+    <div class="partenaires__previousTitle">&{'tags.sponsorsPreviousYears.title'}</div>
+    <div class="partenaires__list">
         #{list items: _sponsorsPreviousYears, as: 'sponsor'}
-            <a class="partenaire-logo" href="${sponsor.companyURL}" target="_blank" title="${sponsor.company}">
-                <img class="partenaire-logo-img" src="@{Application.sponsorLogo(sponsor.id)}" />
+            <a class="partenaire__logo" href="${sponsor.companyURL}" target="_blank" title="${sponsor.company}">
+                <img class="partenaire__logoImg" src="@{Application.sponsorLogo(sponsor.id)}" />
             </a>
         #{/list}
     </div>

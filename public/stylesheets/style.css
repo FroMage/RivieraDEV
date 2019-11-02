@@ -309,7 +309,7 @@ a {
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: 'photo1 photo2' 'photo1 photo3';
+      grid-template-areas: 'photo1 photo2' 'photo1 photo3';
       grid-gap: 1px; } }
   .aboutUs__item {
     background-repeat: no-repeat;
@@ -323,13 +323,13 @@ a {
         padding-top: 10rem;
         padding-right: 5rem;
         padding-bottom: 10rem;
-        padding-left: calc( ((100% * 1.5 - 750px) / 2) + 4rem); } }
+        padding-left: calc( ((100% * 1.5 - 750px) / 2) + 4rem); } }
     @media (min-width: 992px) {
       .aboutUs__aboutUs {
-        padding-left: calc( ((100% * 1.5 - 970px) / 2) + 4rem); } }
+        padding-left: calc( ((100% * 1.5 - 970px) / 2) + 4rem); } }
     @media (min-width: 1200px) {
       .aboutUs__aboutUs {
-        padding-left: calc( ((100% * 1.5 - 1170px) / 2) + 4rem); } }
+        padding-left: calc( ((100% * 1.5 - 1170px) / 2) + 4rem); } }
   .aboutUs__title {
     margin: 2rem 0; }
   .aboutUs__buttonContainer {
@@ -818,6 +818,7 @@ body.burgerMenu--open .burgerMenu:before {
   background: linear-gradient(#19b8d5, #1dc9f2);
   display: grid;
   -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
   column-gap: 2rem;
   row-gap: 2rem;
   grid-template-columns: 12rem 12rem;
@@ -916,14 +917,14 @@ body.burgerMenu--open .burgerMenu:before {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 'intro1' 'content1' 'intro2' 'content2';
+    grid-template-areas: 'intro1' 'content1' 'intro2' 'content2';
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 5rem; }
     @media (min-width: 992px) {
       .days__contents {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'intro1 intro2' 'content1 content2';
+        grid-template-areas: 'intro1 intro2' 'content1 content2';
         grid-column-gap: 2rem;
         margin-left: 0;
         margin-right: 0; } }
@@ -936,7 +937,7 @@ body.burgerMenu--open .burgerMenu:before {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
-    grid-template-areas: 'illustration titleDate' 'description description';
+    grid-template-areas: 'illustration titleDate' 'description description';
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     -ms-flex-line-pack: start;
@@ -951,7 +952,7 @@ body.burgerMenu--open .burgerMenu:before {
     @media (min-width: 768px) {
       .days__intro {
         padding: 3rem;
-        grid-template-areas: 'illustration titleDate' 'illustration description'; } }
+        grid-template-areas: 'illustration titleDate' 'illustration description'; } }
     .days__intro--1 {
       grid-area: intro1; }
     .days__intro--2 {
@@ -1145,7 +1146,7 @@ body.burgerMenu--open .burgerMenu:before {
       padding-right: calc(600px - 35rem);
       margin-right: calc(-600px + 35rem);
       padding-top: calc(192px - 4rem);
-      margin-top: calc( -2rem - 4rem - 5rem); } }
+      margin-top: calc( -2rem - 4rem - 5rem); } }
   .newsletter__email {
     font-size: 1.8rem;
     height: 4rem;
@@ -1155,6 +1156,8 @@ body.burgerMenu--open .burgerMenu:before {
         background-color: transparent;
         border: none; } }
     .newsletter__email::-webkit-input-placeholder {
+      color: #9a9a93; }
+    .newsletter__email::-moz-placeholder {
       color: #9a9a93; }
     .newsletter__email:-ms-input-placeholder {
       color: #9a9a93; }
@@ -1312,7 +1315,7 @@ body.burgerMenu--open .burgerMenu:before {
     flex-wrap: wrap; }
   .partenaires__buttonContainer {
     text-align: center; }
-  .partenaires-previous-title {
+  .partenaires__previousTitle {
     font-size: 1.5em;
     margin-bottom: 1.1em; }
   .partenaires-contactUs {
@@ -1585,7 +1588,7 @@ body.burgerMenu--open .burgerMenu:before {
     .footer {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'followContact followContact' 'archives admin' 'logo copyright';
+      grid-template-areas: 'followContact followContact' 'archives admin' 'logo copyright';
       padding: 4rem 5rem; } }
   @media (min-width: 992px) {
     .footer {
@@ -2283,6 +2286,9 @@ body.burgerMenu--open .burgerMenu:before {
   .speakers__buttonContainer {
     text-align: center;
     margin: 3rem 0; }
+  .speakers__previousTitle {
+    font-size: 1.5em;
+    margin-bottom: 1.1em; }
 
 .no-webp .orgas__header {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.35))), url(../images/illustrations/responsives/team-mini-mobile.jpg);
@@ -3205,14 +3211,14 @@ th.fullSchedule-time-title {
   .passes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'deepdiveMain conferenceMain combiMain' 'deepdiveDesc conferenceDesc combiDesc';
+    grid-template-areas: 'deepdiveMain conferenceMain combiMain' 'deepdiveDesc conferenceDesc combiDesc';
     grid-column-gap: 3rem; } }
 
 @media (min-width: 992px) {
   .training {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 'trainingMain trainingChapter trainingChapter' 'trainingDesc trainingChapter trainingChapter';
+    grid-template-areas: 'trainingMain trainingChapter trainingChapter' 'trainingDesc trainingChapter trainingChapter';
     grid-column-gap: 3rem; } }
 
 .training__description {
