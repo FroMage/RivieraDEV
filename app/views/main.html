@@ -141,12 +141,15 @@
                     </a>
                     #{/if}
 
-                    <!--<a
-                        href="@{Application.cfp}"
-                        class="burgerMenu__item ${request.action == 'Application.cfp' ? 'burgerMenu__item--current' : ''}"
+                    #{if cfpIsOpened}
+                    <a
+                        href="${cfpUrl}"
+                        class="burgerMenu__item"
+                        target="_blank"
                     >
                         &{'views.main.cfp'}
-                    </a>-->
+                    </a>
+                    #{/if}
 
                     <a
                         href="@{Application.photos}"
@@ -257,12 +260,15 @@
                 </a>
                 #{/if}
 
-                <!--<a
-                    href="@{Application.cfp}"
-                    class="menu__item ${request.action == 'Application.cfp' ? 'menu__item--current' : ''}"
+                #{if cfpIsOpened}
+                <a
+                    href="${cfpUrl}"
+                    class="menu__item"
+                    target="_blank"
                 >
                     &{'views.main.cfp'}
-                </a>-->
+                </a>
+                #{/if}
 
                 <a
                     href="@{Application.photos}"

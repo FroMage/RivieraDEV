@@ -36,5 +36,9 @@ public enum ConfigurationKey {
     /* [true, false] Si true, permet d'accéder à la billeterie */
     TICKETING_OPEN,
     /* URL de la plaquette de sponsoring */
-    SPONSORING_LEAFLET_URL
+    SPONSORING_LEAFLET_URL,
+    /* [true, false] true if the Call For Paper is opened, false otherwise */
+    CFP_OPEN,
+    /* Call For Paper URL */
+    CFP_URL
 }

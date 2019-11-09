@@ -48,6 +48,8 @@ public class Application extends Controller {
         renderArgs.put("displayTalks", displayTalks());
         renderArgs.put("ticketingIsOpen", ticketingIsOpen());
         renderArgs.put("displayNewSpeakers", displayNewSpeakers());
+        renderArgs.put("cfpIsOpened", cfpIsOpened());
+        renderArgs.put("cfpUrl", getCfpUrl());
     }
 
     public static void fr(String url) {
@@ -495,6 +497,22 @@ public class Application extends Controller {
     private static boolean ticketingIsOpen() {
         Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_OPEN).first();
         return config != null && config.value.equals("true");
+    }
+
+    /**
+     * Return true if Call For Paper is opened, false otherwise
+     */
+    private static boolean cfpIsOpened() {
+        Configuration config = Configuration.find("key", ConfigurationKey.CFP_OPEN).first();
+        return config != null && config.value.equals("true");
+    }
+
+    /**
+     * Return the Call for Paper URL
+     */
+    private static String getCfpUrl() {
+        Configuration config = Configuration.find("key", ConfigurationKey.CFP_URL).first();
+        return config != null ? config.value : "";
     }
 
     /**

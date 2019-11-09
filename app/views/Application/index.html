@@ -24,7 +24,7 @@
         <div class="registration__container">
             <div class="registration__buttons js-registration-buttons">
                 #{if promotedPage == 'CFP'}
-                    <a class="button button--primary registration__button" href="@{Application.cfp()}">&{'views.application.index.cfp.join.short'}</a>
+                    <a class="button button--primary registration__button" href="${cfpUrl}" target="_blank">&{'views.application.index.cfp.join.short'}</a>
                 #{/if}
                 #{elseif promotedPage == 'TICKETS'}
                     <a class="button button--primary registration__button" href="@{Application.subscribe()}">&{'views.application.index.tickets'}</a>
@@ -245,10 +245,12 @@
         <div class="speakers__previousTitle">&{'tags.previousSpeakers.title'}</div>
         #{previousSpeakers speakers: speakersPreviousYears/}
         
-        <!-- TODO : Remettre quand CFP fixé et ouvert
-            <div class="speakers__buttonContainer">
-            <a class="button" href="@{Application.cfp()}">&{'views.application.index.cfp.join'}</a>
-        </div>-->
+        #{if cfpIsOpened}
+        <div class="speakers__buttonContainer">
+            <a class="button" href="${cfpUrl}" target="_blank">&{'views.application.index.cfp.join'}</a>
+        </div>
+        #{/if}
+
     </div>
 </div>
 #{/elseif}
