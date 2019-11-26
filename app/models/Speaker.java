@@ -21,7 +21,7 @@ public class Speaker extends Model {
 	@Required
 	public String lastName;
 	public String title;
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@Required
 	@MaxSize(10000)

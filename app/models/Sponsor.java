@@ -25,12 +25,12 @@ import play.db.jpa.Model;
 public class Sponsor extends Model implements Comparable<Sponsor> {
 	@Required
 	public String company;
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@Required
 	@MaxSize(10000)
 	public String about;
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@Required
 	@MaxSize(10000)
