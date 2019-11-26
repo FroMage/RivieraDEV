@@ -28,7 +28,7 @@ public class Talk extends Model {
 	public String title;
 	
 	@Required
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@MaxSize(10000)
 	public String description; 
@@ -56,6 +56,6 @@ public class Talk extends Model {
 	}
 
 	public static List<Track> findTracksPerDay(Date day) {
-		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?", day).fetch();
+		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?1", day).fetch();
 	}
 }

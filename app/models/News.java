@@ -23,7 +23,7 @@ public class News extends Model {
 	public String title;
 	
 	@Required
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@MaxSize(10000)
 	public String contents; 
