@@ -21,7 +21,8 @@ USER=rivieradev
 CLUSTER=
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
-PLAY=/usr/share/play/1.2.4/play
+PLAY=/usr/share/play/1.7.1/play
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 PLAY_ID=
 PLAY_ARGS=
 
@@ -33,6 +34,7 @@ then
 else
 	APP_FOLDER=$APP
 	APP_NAME=$APP
+	PLAY_ID=prod
 fi
 
 APP_PATH=/usr/share/$APP_FOLDER
