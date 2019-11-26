@@ -7,11 +7,18 @@ Note: at the moment it requires Play 1.5.3.
 1. Download and install Postgres 9 or 11 on port 5433
 1. Open a shell and go to the `RivieraDEV` directory you just cloned
 1. Create your Postgres DB (9.x)
-    1. `sudo su - postgres`
-    1. `createuser -p 5433 -PSRD rivieradev`
-    1. _enter `rivieradev` as password when prompted_
-    1. `createdb -p 5433 -O rivieradev -E utf8 rivieradev`
-    1. exit
+    - On Linux:
+        1. `sudo su - postgres`
+        2. `createuser -p 5433 -PSRD rivieradev`
+        3. _enter `rivieradev` as password when prompted_
+        4. `createdb -p 5433 -O rivieradev -E utf8 rivieradev-2020`
+        5. exit
+    - On Windows:
+        1. `createuser -U postgres -p 5433 -PSRD rivieradev`
+        2. _enter `rivieradev` as password when prompted_
+        3. _enter the postgres password chosen during the installation when prompted_
+        4. `createdb -U postgres -p 5433 -O rivieradev -E utf8 rivieradev-2020`
+        5. _enter the postgres password chosen during the installation when prompted_
 1. Download the module dependencies
     1. `play dependencies --forProd`
 1. Run the application
