@@ -1,9 +1,8 @@
 # How to run the Riviera DEV web site
 
-Note: at the moment it requires Play 1.2 which does not work on Java 8, so proceed with Java 7. We
-are going to move it to Play 1.3 as soon as possible to fix that.
+Note: at the moment it requires Play 1.5.3.
 
-1. [Download Play Framework 1.2.7.2](https://downloads.typesafe.com/play/1.2.7.2/play-1.2.7.2.zip) and install it
+1. [Download Play Framework 1.5.3](https://downloads.typesafe.com/play/1.5.3/play-1.5.3.zip) and install it
 1. Clone the [RivieraDEV repository](https://github.com/FroMage/RivieraDEV)
 1. Open a shell and go to the `RivieraDEV` directory you just cloned
 1. Create your Postgres DB (9.x)
@@ -12,6 +11,10 @@ are going to move it to Play 1.3 as soon as possible to fix that.
     1. _enter `rivieradev` as password when prompted_
     1. `createdb -O rivieradev -E utf8 rivieradev`
     1. exit
+1. Download the module dependencies
+    1. `play dependencies`
+1. Restore your libs that the last command deleted FOR SOME REASON
+    1. `git checkout lib`
 1. Run the application
     1. `play run`
 
