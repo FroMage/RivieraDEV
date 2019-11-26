@@ -48,7 +48,7 @@ public class TemporarySlot extends Model {
 	}
 	
 	public static List<Slot> findPerDay(Date day){
-		return find("date_trunc('day', startDate) = ? ORDER BY startDate", day).fetch();
+		return find("date_trunc('day', startDate) = ?1 ORDER BY startDate", day).fetch();
 	}
 	
 }
