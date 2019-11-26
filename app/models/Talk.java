@@ -32,12 +32,12 @@ public class Talk extends Model implements Comparable<Talk> {
 	public String titleFR;
 	
 	// At least one description must be filled
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@MaxSize(10000)
 	public String descriptionEN;
 
-	@Type(type="org.hibernate.type.StringClobType")
+	@Type(type="org.hibernate.type.TextType")
 	@Lob
 	@MaxSize(10000)
 	public String descriptionFR; 
@@ -137,7 +137,7 @@ public class Talk extends Model implements Comparable<Talk> {
 	}
 
 	public static List<Track> findTracksPerDay(Date day) {
-		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?", day).fetch();
+		return find("SELECT DISTINCT talk.track FROM Talk talk LEFT JOIN talk.slot AS slot WHERE date_trunc('day', slot.startDate) = ?1", day).fetch();
 	}
 
 	public int compareTo(Talk other){

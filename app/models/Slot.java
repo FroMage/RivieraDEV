@@ -48,7 +48,7 @@ public class Slot extends Model {
     }
 
     public static List<Slot> findPerDay(Date day) {
-        List<Slot> slots = find("date_trunc('day', startDate) = ? ORDER BY startDate, endDate", day).fetch();
+        List<Slot> slots = find("date_trunc('day', startDate) = ?1 ORDER BY startDate, endDate", day).fetch();
         // En cas de slots déjà contenu dans 1 slots, ne renvoyer que le plus grand ?
         return slots;
     }
@@ -59,7 +59,7 @@ public class Slot extends Model {
      * sera retourné)
      */
     public static List<Slot> findMultiPerDay(Date day) {
-        List<Slot> slots = find("date_trunc('day', startDate) = ? ORDER BY startDate, endDate", day).fetch();
+        List<Slot> slots = find("date_trunc('day', startDate) = ?1 ORDER BY startDate, endDate", day).fetch();
         Map<Date, Slot> multiSlots = new HashMap();
         NEXT: for (Slot slot : slots) {
             Slot existingSlot = multiSlots.get(slot.startDate);
@@ -115,7 +115,7 @@ public class Slot extends Model {
     public List<Talk> getTalksPerTrack(Track track) {
         // Récupérer tous les talks pour la track qui contient dans ce Slot et les slots
         // contenus
-        List<Slot> slots = find("? <= startDate AND endDate <= ?", this.startDate, this.endDate).fetch();
+        List<Slot> slots = find("?1 <= startDate AND endDate <= ?2", this.startDate, this.endDate).fetch();
 
         List<Talk> talks = new ArrayList<Talk>();
         for (Slot slot : slots) {
@@ -137,7 +137,7 @@ public class Slot extends Model {
             // Snorkeling Session)
             // (Car un grand slot peut avoir un seul talk mais il peut y avoir en parallèle
             // des slots plus petits avec des talks)
-            List<Slot> slots = find("? <= startDate AND endDate <= ?", this.startDate, this.endDate).fetch();
+            List<Slot> slots = find("?1 <= startDate AND endDate <= ?2", this.startDate, this.endDate).fetch();
             if (slots.size() > 1) {
                 // Il y a au moins un autre slot en parralèle
                 return null;
