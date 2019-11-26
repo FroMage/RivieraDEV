@@ -14,7 +14,7 @@ debian/rivieradev.substvars
 data/attachments/*
 modules
 node_modules
-
+lib
 test-data-images/emmanuel-bernard.jpg
 test-data-images/katia-aresti.png
 test-data-images/thomas-Guenoux.jpg

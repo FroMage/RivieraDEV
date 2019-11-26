@@ -4,17 +4,16 @@ Note: at the moment it requires Play 1.5.3.
 
 1. [Download Play Framework 1.5.3](https://downloads.typesafe.com/play/1.5.3/play-1.5.3.zip) and install it
 1. Clone the [RivieraDEV repository](https://github.com/FroMage/RivieraDEV)
+1. Download and install Postgres 9 or 11 on port 5433
 1. Open a shell and go to the `RivieraDEV` directory you just cloned
 1. Create your Postgres DB (9.x)
     1. `sudo su - postgres`
-    1. `createuser -PSRD rivieradev`
+    1. `createuser -p 5433 -PSRD rivieradev`
     1. _enter `rivieradev` as password when prompted_
-    1. `createdb -O rivieradev -E utf8 rivieradev`
+    1. `createdb -p 5433 -O rivieradev -E utf8 rivieradev`
     1. exit
 1. Download the module dependencies
-    1. `play dependencies`
-1. Restore your libs that the last command deleted FOR SOME REASON
-    1. `git checkout lib`
+    1. `play dependencies --forProd`
 1. Run the application
     1. `play run`
 
@@ -24,16 +23,10 @@ This can only be done by hand for now:
 
 1. Pick a password
 1. Open a `psql` console to your database:
-    1. `psql -h localhost -U rivieradev`
+    1. `psql -p 5433 -h localhost -U rivieradev rivieradev-2020`
 1. Add your user (as admin)
     1. `INSERT INTO user_table (id, firstname, lastname, password, username) VALUES ((select nextval('hibernate_sequence')), 'FirstName', 'LastName', 'Password', 'UserName');`
 1. You can now log in and change your password using the UI
-
-# How to compile SCSS files into CSS files
-
-1. `npm install -g gulp` # If you haven't installed gulp globally before
-1. `npm install` # Install project dependencies
-1. `gulp` # Compile and watch SCSS files
 
 # License
 

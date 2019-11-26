@@ -5,3 +5,13 @@ require:
     - play -> db 1.1.1
     - play -> secure
     - play -> crud
+    - com.github.rjeschke -> txtmark 0.13
+    - fromage -> sass 2.0
+
+repositories:
+    
+    - fromage:
+        type:       http
+        artifact:   "http://stephane.epardaud.fr/play-repo/[module]-[revision].zip"
+        contains:
+            - fromage -> *
