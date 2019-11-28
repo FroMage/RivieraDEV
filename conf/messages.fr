@@ -25,6 +25,9 @@ views.main.editions.2016=Riviera DEV 2016
 views.main.editions.2015=Riviera DEV 2015
 views.main.editions.2011=Riviera DEV 2011
 views.main.private=Espace privé
+views.main.about=A propos
+views.main.about.team=L'équipe
+views.main.about.coc=Code de conduite
 views.main.follow=Suivez-nous
 views.main.motto=La conférence du Soleil
 views.main.logo.featuring=avec
@@ -89,6 +92,17 @@ views.application.index.sponsors=Nos Sponsors
 views.application.index.sponsors.join=Devenez sponsor
 
 views.application.photos.title=Photos
+
+views.application.coc.title=Code de conduite
+views.application.coc.chapter.1.title=À lire
+views.application.coc.chapter.1.content=Tous les participants, conférenciers, sponsors et bénévoles de notre conférence doivent accepter le code de conduite suivant. Nous attendons de tous les participants leur coopération afin d’assurer un environnement respectueux et sûr pour tout le monde.
+views.application.coc.chapter.2.title=Besoin d’aide ?
+views.application.coc.chapter.2.content=Durant la conférence, nous invitons toute personne ayant besoin d'aide à contacter de préférence l'équipe d’organisation RivieraDEV.
+views.application.coc.chapter.3.title=Version courte du code de bonne conduite
+views.application.coc.chapter.3.content.1=RivieraDEV est une communauté où l’on prône le partage, l’ouverture, l’originalité et la passion. Nous respectons les différences et la diversité. Nous ne tolérons pas le harcèlement sous quelque forme que ce soit des participants et de toutes personnes faisant partie de la conférence indépendamment du sexe, du genre, de l'âge, de l'orientation sexuelle, du handicap, de l'apparence physique, de la taille du corps, des origines ethniques ou encore de la religion (ou de son absence). Un langage explicite ou des images non appropriées ne sont pas tolérés à RivieraDEV.
+views.application.coc.chapter.3.content.2=Tout comportement non conforme au CdC pourra nous amener à vous faire exclure de la conférence RivieraDEV.
+views.application.coc.chapter.3.content.3=RivieraDEV est une association bénévole à but non lucratif composée de tech passionnés, notre priorité est l'organisation d'un évènement convivial, ou chacun puisse être respectueux d'autrui. Ce “code de bonne conduite" est une version courte, plus lisible qu'un "Code of Conduct policy". Vous trouverez le lien pour aller consulter la <a href="https://meta.wikimedia.org/wiki/Don't_be_a_jerk">Version complète</a>.
+views.application.coc.chapter.3.content.4=Pour toute question, merci de contacter l’équipe RivieraDEV par email : <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
 
 views.application.speakers.title=Orateurs
 views.application.speakers.subtitle=Découvrez tous nos super orateurs !

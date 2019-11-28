@@ -1,0 +1,15 @@
+.coc {
+    &__list {
+        font-size: $font-xl;
+        font-weight: bold;
+    }
+
+    &__title {
+        font-size: $font-xl;
+    }
+
+    &__paragraph {
+        font-size: $font-md;
+        font-weight: normal;
+    }
+}

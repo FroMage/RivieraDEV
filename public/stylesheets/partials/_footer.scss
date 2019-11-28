@@ -6,18 +6,24 @@ $footer-logo-height-sm: 7rem;
     color: $color-white;
     padding: $space-md;
 
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $screen-xs-max) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            'followContact followContact'
-            'archives admin'
-            'logo copyright';
-        padding: $space-xl $space-xxl;
+        'followContact followContact'
+        'archives about'
+        'admin admin'
+        'logo copyright';
+        padding: $space-xl $space-xxxl;
     }
 
     @media (min-width: $screen-md-min) {
-        padding: $space-xl $space-xxxl;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'followContact followContact followContact'
+            'archives about admin'
+            'logo copyright copyright';
+        padding: $space-xl $space-xxl;
     }
 
     // Necessary to override "a" style
@@ -86,6 +92,18 @@ $footer-logo-height-sm: 7rem;
         grid-template-rows: 1fr 1fr;
     }
 
+    &__about {
+        @media (min-width: $screen-sm-min) {
+            grid-area: about;
+            border-bottom: $border-sm solid $color-white;
+            padding: $space-xl 0 0 $space-md;
+        }
+
+        @media (min-width: $screen-lg-min) {
+            padding: $space-xl 0;
+        }
+    }
+
     &__archives {
         @media (min-width: $screen-sm-min) {
             grid-area: archives;
@@ -98,6 +116,10 @@ $footer-logo-height-sm: 7rem;
         @media (min-width: $screen-sm-min) {
             display: flex;
         }
+    }
+
+    &__aboutList {
+        grid-auto-flow: row;
     }
 
     &__archivesList {

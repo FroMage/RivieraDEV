@@ -126,6 +126,10 @@ public class Application extends Controller {
         render(orgas);
     }
 
+    public static void coc() {
+        render();
+    }
+
     public static void subscribe() {
         String ticketingUrl = getTicketingUrl();
         boolean ticketingIsOpen = ticketingIsOpen();

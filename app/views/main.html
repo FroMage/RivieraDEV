@@ -345,63 +345,77 @@
                 />
             </div>
 
-            <div class="footer__admin">
-                <h2 class="footer__title">
-                    &{'views.main.private'} #{if user}[${user}]#{/if}
-                </h2>
-                <ul class="footer__list footer__adminList">
-                    #{if user}
-                    <li class="footer__listItem">
-                        <a href="@{CRUD.index}">Admin</a>
-                    </li>
-                    <li class="footer__listItem">
-                        <a href="@{Secure.logout}">Logout</a>
-                    </li>
-                    #{/if} #{else}
-                    <li class="footer__listItem">
-                        <a href="@{Secure.login}">Login</a>
-                    </li>
-                    #{/else}
-                </ul>
-            </div>
-
             <div class="footer__archives">
-                <h2 class="footer__title">&{'views.main.archives'}</h2>
-                <div class="footer__archivesListContainer">
-                    <ul class="footer__list footer__archivesList">
+                    <h2 class="footer__title">&{'views.main.archives'}</h2>
+                    <div class="footer__archivesListContainer">
+                        <ul class="footer__list footer__archivesList">
+                            <li class="footer__listItem">
+                                <a href="//2019.rivieradev.fr"
+                                    >&{'views.main.editions.2019'}</a
+                                >
+                            </li>
+                            <li class="footer__listItem">
+                                <a href="//2018.rivieradev.fr"
+                                    >&{'views.main.editions.2018'}</a
+                                >
+                            </li>
+                            <li class="footer__listItem">
+                                <a href="//2017.rivieradev.fr"
+                                    >&{'views.main.editions.2017'}</a
+                                >
+                            </li>
+                            <li class="footer__listItem">
+                                <a href="//2016.rivieradev.fr"
+                                    >&{'views.main.editions.2016'}</a
+                                >
+                            </li>
+                            <li class="footer__listItem">
+                                <a href="//2015.rivieradev.fr"
+                                    >&{'views.main.editions.2015'}</a
+                                >
+                            </li>
+                            <li class="footer__listItem">
+                                <a href="//2011.rivieradev.fr"
+                                    >&{'views.main.editions.2011'}</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="footer__about">
+                <h2 class="footer__title">&{'views.main.about'}</h2>
+                <div class="footer__aboutListContainer">
+                    <ul class="footer__list footer__aboutList">
                         <li class="footer__listItem">
-                            <a href="//2019.rivieradev.fr"
-                                >&{'views.main.editions.2019'}</a
-                            >
+                            <a href="@{Application.organisers}">&{'views.main.about.team'}</a>
                         </li>
                         <li class="footer__listItem">
-                            <a href="//2018.rivieradev.fr"
-                                >&{'views.main.editions.2018'}</a
-                            >
-                        </li>
-                        <li class="footer__listItem">
-                            <a href="//2017.rivieradev.fr"
-                                >&{'views.main.editions.2017'}</a
-                            >
-                        </li>
-                        <li class="footer__listItem">
-                            <a href="//2016.rivieradev.fr"
-                                >&{'views.main.editions.2016'}</a
-                            >
-                        </li>
-                        <li class="footer__listItem">
-                            <a href="//2015.rivieradev.fr"
-                                >&{'views.main.editions.2015'}</a
-                            >
-                        </li>
-                        <li class="footer__listItem">
-                            <a href="//2011.rivieradev.fr"
-                                >&{'views.main.editions.2011'}</a
-                            >
+                            <a href="@{Application.coc}">&{'views.main.about.coc'}</a>
                         </li>
                     </ul>
                 </div>
             </div>
+
+            <div class="footer__admin">
+                    <h2 class="footer__title">
+                        &{'views.main.private'} #{if user}[${user}]#{/if}
+                    </h2>
+                    <ul class="footer__list footer__adminList">
+                        #{if user}
+                        <li class="footer__listItem">
+                            <a href="@{CRUD.index}">Admin</a>
+                        </li>
+                        <li class="footer__listItem">
+                            <a href="@{Secure.logout}">Logout</a>
+                        </li>
+                        #{/if} #{else}
+                        <li class="footer__listItem">
+                            <a href="@{Secure.login}">Login</a>
+                        </li>
+                        #{/else}
+                    </ul>
+                </div>
             <!-- /.footer__archives -->
 
             <div class="footer__followContact">

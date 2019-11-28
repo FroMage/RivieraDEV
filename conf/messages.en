@@ -26,6 +26,9 @@ views.main.editions.2016=Riviera DEV 2016
 views.main.editions.2015=Riviera DEV 2015
 views.main.editions.2011=Riviera DEV 2011
 views.main.private=Private space
+views.main.about=About
+views.main.about.team=The team
+views.main.about.coc=Code of conduct
 views.main.follow=Follow us
 views.main.motto=The shiny conference
 views.main.logo.featuring=with
@@ -90,6 +93,17 @@ views.application.index.sponsors=Our Sponsors
 views.application.index.sponsors.join=Become sponsor
 
 views.application.photos.title=Photos
+
+views.application.coc.title=Code of conduct
+views.application.coc.chapter.1.title=To read
+views.application.coc.chapter.1.content=All participants, speakers, sponsors and volunteers of our conference must accept the following code of conduct. We expect all participants to cooperate to ensure a respectful and safe environment for everyone.
+views.application.coc.chapter.2.title=Need help?
+views.application.coc.chapter.2.content=During the conference, we invite anyone who needs help to contact the RivieraDEV team.
+views.application.coc.chapter.3.title=Short version of the Code of Conduct
+views.application.coc.chapter.3.content.1=RivieraDEV is a community that promotes sharing, openness, originality and passion. We respect differences and diversity. We do not tolerate any form of harassment of participants and any other person in the conference regardless of gender, gender, age, sexual orientation, disability, physical appearance, the size of the body, ethnic origins or religion (or lack thereof). Explicit language or inappropriate images are not tolerated at RivieraDEV.
+views.application.coc.chapter.3.content.2=Any behavior that does not comply to our CoC, may lead to you being excluded from the RivieraDEV conference.
+views.application.coc.chapter.3.content.3=RivieraDEV is a voluntary non-profit association made up of passionate techs, our priority is the organization of a friendly event, where everyone can be respectful of others. This "code of conduct" is a short version, more readable than a "Code of Conduct policy" You will find the link to go to the <a href="https://meta.wikimedia.org/wiki/Don't_be_a_jerk">full version</a>.
+views.application.coc.chapter.3.content.4=If you have any questions, please contact the RivieraDEV team by email: <a href="mailto:info@rivieradev.fr">info@rivieradev.fr</a>
 
 views.application.speakers.title=Speakers
 views.application.speakers.subtitle=Discover all our amazing speakers !
