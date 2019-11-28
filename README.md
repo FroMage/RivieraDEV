@@ -35,6 +35,69 @@ This can only be done by hand for now:
     1. `INSERT INTO user_table (id, firstname, lastname, password, username) VALUES ((select nextval('hibernate_sequence')), 'FirstName', 'LastName', 'Password', 'UserName');`
 1. You can now log in and change your password using the UI
 
+# Configuration
+
+In the admin part (https://\<url\>/admin) there is a special table `Configurations`. All the keys are in defined in `app/models/ConfigurationKey.java`.
+
+Here is how to configure it.
+
+## Launch of the new edition
+
+When we set up the website for the new edition.
+
+-   `GOOGLE_MAP_API_KEY`: Reuse the same key as for the previous edition
+-   `EVENT_START_DATE`: Start date of the conference in ISO format. E.g. `2019-05-15T08:20:00`
+-   `EVENT_START_DATE`: End date of the conference in ISO format: E.g. `2019-05-17T18:00:00`
+-   `DISPLAY_FULL_SCHEDULE = false`: We don't want to display the schedule because we don't know it yet.
+-   `DISPLAY_NEW_SPEAKERS = false`: Same as above.
+-   `DISPLAY_TALKS = false`: Same as above.
+-   `PROMOTED_PAGE`: It's for the primary button shown on the home page below the logo. The possible values are be `CFP`, `TICKETS` or `SPONSORS`. At this time it's a bit tricky because none of them is available 😅 So let's not use it for now.
+-   `PROMOTED_PAGE_2`; It's the same as above but for the secondary button. The possible values are `SPONSORS` and `SCHEDULE`. And it's the same, let's not use it for now.
+-   `TICKETING_URL`: At this time the ticketing is not opened yet, but if we already know the URL, we can fill it.
+-   `TICKETING_OPEN = false`
+-   `SPONSORING_LEAFLET_URL`: URL to the sponsoring leaflet.
+-   `CFP_URL`: At this time the CFP is not opened yet, but if we know the URL, we can fill it.
+-   `CFP_OPEN = false`
+
+## When the sponsoring leaflet is ready
+
+-   `SPONSORING_LEAFLET_URL`: URL to the sponsoring leaflet if not already filled.
+-   `PROMOTED_PAGE = 'SPONSORS'`
+
+## When we open the CFP
+
+-   `CFP_URL`: Fill it if it's not already done.
+-   `CFP_OPEN = true`
+-   `PROMOTED_PAGE = CFP`
+-   `PROMOTED_PAGE_2 = SPONSORS` as soon as the leaflet is ready
+
+## When we open the ticketing
+
+-   `TICKETING_URL`: Fill it if it's not already done.
+-   `TICKETING_OPEN = true`
+
+## When we close the CFP
+
+-   `CFP_OPEN = false`
+-   `PROMOTED_PAGE = TICKETS`
+
+## When some talks and speakers are known
+
+Before changing the configuration, we need to add some talks and speakers.
+
+-   `DISPLAY_TALKS = true`
+-   `DISPLAY_NEW_SPEAKERS = true`
+
+## When the full schedule is known
+
+-   `DISPLAY_FULL_SCHEDULE = true`
+-   `PROMOTED_PAGE_2 = SCHEDULE`
+
+## When we close the ticketing
+
+-   `TICKETING_OPEN = false`
+-   `PROMOTED_PAGE = SPONSORS`
+
 # License
 
 The content of this repository is released under AGPLv3 as provided in
