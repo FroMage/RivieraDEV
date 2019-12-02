@@ -57,32 +57,30 @@
 
 	#{/if}
 	#{else}
-		<div class="container page-container">
 
-			<div>
-				#{if displayNewSpeakers}
-					<p class="data-unavailable">&{'views.application.schedule.unavailable.speakers.available'}</p>
-					<div class="text-center">
-						<a class="btn btn-primary btn-lg button-x-large button" href="@{Application.talks}">&{'views.application.schedule.unavailable.talks'}</a>
-					</div>
-				#{/if}
-				#{else}
-					<p class="data-unavailable">&{'views.application.schedule.unavailable'}</p>
-				#{/else}
-			</div>
+        <div>
+            #{if displayNewSpeakers}
+                <p class="data-unavailable">&{'views.application.schedule.unavailable.speakers.available'}</p>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg button-x-large button" href="@{Application.talks}">&{'views.application.schedule.unavailable.talks'}</a>
+                </div>
+            #{/if}
+            #{else}
+                <p class="data-unavailable">&{'views.application.schedule.unavailable'}</p>
+            #{/else}
+        </div>
 
-            #{temporarySchedule days: days/}
-            
-			</div>
+        #{temporarySchedule user: user, days: days/}
+        
+        </div>
 
-            <div class="newsletter">
-                <h2 class="home__title newsletter__title">
-                    &{'views.application.index.get-in-touch'}
-                </h2>
-                #{newsletter /}
-            </div> <!-- /.newletter -->
+        <div class="newsletter">
+            <h2 class="home__title newsletter__title">
+                &{'views.application.index.get-in-touch'}
+            </h2>
+            #{newsletter /}
+        </div> <!-- /.newletter -->
 
-		</div>
 	#{/else}
 </div>
 
