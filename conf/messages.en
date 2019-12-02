@@ -296,7 +296,7 @@ views.application.schedule.subtitle=Organize your day. Choose the talks and work
 views.application.schedule.unavailable=The detailed program is not available yet, but you can have a look at the <a href="http://2019.rivieradev.fr/programme" target="_blank">2019&nbsp;session</a> to get an idea&nbsp;:)
 views.application.schedule.unavailable.speakers.available=The detailed program will be available soon, in the meantime you can already have a look at <a href="http://rivieradev.fr/talks">the&nbsp;talks</a> as well as <a href="http://rivieradev.fr/speakers">the&nbsp;speakers</a>.
 views.application.schedule.unavailable.talks=Discover the talks
-views.application.schedule.unavailable.intro=You can see below how the days will be organized:
+views.application.schedule.unavailable.intro=In the meantime, you can see below how the days will be organized:
 views.application.schedule.filter=Filters
 views.application.schedule.filter.cancel=Cancel
 views.application.schedule.filter.apply=Apply filters
