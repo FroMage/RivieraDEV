@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 
 import play.data.validation.Required;
@@ -28,6 +30,10 @@ public class TemporarySlot extends Model {
 	@Field("labelFR")
 	public String labelFR;
 	
+	@Required
+	@Enumerated(EnumType.STRING)
+	public BreakType isBreak;
+
 	@Override
 	public String toString() {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -44,6 +50,10 @@ public class TemporarySlot extends Model {
 
 		strbuf.append(" " + labelEN);
 		
+		if (isBreak != null) {
+			strbuf.append(" (" + isBreak.getCode() + ")");
+		}
+
 		return strbuf.toString();
 	}
 	
