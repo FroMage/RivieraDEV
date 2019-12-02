@@ -1,28 +1,27 @@
 $avatar-size: 30px;
 
-
 @include responsiveBackgroundImage(
     '.schedule__header',
     '../images/illustrations/responsives/program-mini'
 );
 
 @include responsiveBackgroundImage(
-    '.fullSchedule__breakfast',
+    '.fullSchedule__breakfast, .tempSchedule__breakfast',
     '../images/illustrations/responsives/croissants-mini'
 );
 
 @include responsiveBackgroundImage(
-    '.fullSchedule__lunch',
+    '.fullSchedule__lunch, .tempSchedule__lunch',
     '../images/illustrations/responsives/lunch-mini'
 );
 
 @include responsiveBackgroundImage(
-    '.fullSchedule__cofeeBreak',
+    '.fullSchedule__cofeeBreak, .tempSchedule__cofeeBreak',
     '../images/illustrations/responsives/cofee_break-mini'
 );
 
 @include responsiveBackgroundImage(
-    '.fullSchedule__party',
+    '.fullSchedule__party, .tempSchedule__party',
     '../images/illustrations/responsives/guitars-mini'
 );
 
@@ -153,40 +152,7 @@ $avatar-size: 30px;
     }
 }
 
-.tempSchedule {
-    margin-top: $space-lg;
-
-    &-intro {
-        font-size: 1.25em;
-        margin-bottom: 0;
-    }
-
-    &-bloc {
-        margin-bottom: 3em;
-    }
-
-    &-day {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    &-slot {
-        border-bottom: 1px solid $color-gray-light;
-        margin-right: 0;
-        margin-left: 0;
-        font-size: 1.25em;
-    }
-
-    &-time {
-        padding-right: 0;
-        line-height: 2em;
-    }
-
-    &-title {
-        line-height: 2em;
-    }
-}
-
+.tempSchedule,
 .fullSchedule {
     width: 100%;
     table-layout: fixed;
@@ -196,18 +162,80 @@ $avatar-size: 30px;
         margin: -#{$space-sm};
     }
 
+    &__col {
+        &--time {
+            width: 10%;
+        }
+    }
+
+    &__time {
+        background-color: $color-gray-ultralight;
+        border-radius: $border-radius-sm;
+        text-align: center;
+        font-size: $font-xxl;
+        font-weight: initial;
+        color: $color-gray;
+        vertical-align: top;
+        padding: $space-md $space-xs;
+    }
+
     &__admin {
         font-size: $font-xxs;
         font-weight: normal;
     }
 
-    &__col {
-        &--time {
-            width: 20%;
-            @media (min-width: $screen-sm-min) {
-                width: 10%;
-            }
+    &__breakfast,
+    &__lunch,
+    &__cofeeBreak,
+    &__party {
+        text-align: center;
+        color: $color-white;
+        font-size: $font-xl;
+        font-weight: bold;
+        border-radius: $border-radius-sm;
+        padding: $space-xl $space-xs;
+        background-size: cover;
+
+        @media (min-width: $screen-sm-min) {
+            padding: $space-xxxl $space-xs;
         }
+    }
+
+    &__breakfast {
+        background-position: 0 45%;
+    }
+
+    &__lunch {
+        background-position: 0 75%;
+    }
+
+    &__cofeeBreak {
+        background-position: 0 30%;
+    }
+
+    &__party {
+        background-position: 0 75%;
+    }
+}
+
+.tempSchedule {
+    &__container {
+        margin-top: $space-lg;
+    }
+
+    &__cell {
+        vertical-align: center;
+        text-align: center;
+        font-size: $font-xl;
+        font-weight: bold;
+        border-radius: $border-radius-sm;
+        box-shadow: $shadow-sm;
+        border: $border-sm solid $color-gray-light;
+    }
+}
+
+.fullSchedule {
+    &__col {
         &--2tracks {
             width: 45%;
         }
@@ -226,24 +254,10 @@ $avatar-size: 30px;
         &--7tracks {
             width: 12.8%;
         }
-        &--xs {
-            width: 90%;
-        }
     }
 
     &__track {
         text-align: center;
-    }
-
-    &__time {
-        background-color: $color-gray-ultralight;
-        border-radius: $border-radius-sm;
-        text-align: center;
-        font-size: $font-xxl;
-        font-weight: initial;
-        color: $color-gray;
-        vertical-align: top;
-        padding: $space-md $space-xs;
     }
 
     &-track-title {
@@ -437,39 +451,6 @@ $avatar-size: 30px;
                 background-image: url(../images/icons/heart-selected.svg);
             }
         }
-    }
-
-    &__breakfast,
-    &__lunch,
-    &__cofeeBreak,
-    &__party {
-        text-align: center;
-        color: $color-white;
-        font-size: $font-xl;
-        font-weight: bold;
-        border-radius: $border-radius-sm;
-        padding: $space-xl $space-xs;
-        background-size: cover;
-
-        @media (min-width: $screen-sm-min) {
-            padding: $space-xxxl $space-xs;
-        }
-    }
-
-    &__breakfast {
-        background-position: 0 45%;
-    }
-
-    &__lunch {
-        background-position: 0 75%;
-    }
-
-    &__cofeeBreak {
-        background-position: 0 30%;
-    }
-
-    &__party {
-        background-position: 0 75%;
     }
 }
 
