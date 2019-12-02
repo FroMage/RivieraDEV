@@ -26,6 +26,10 @@ $avatar-size: 30px;
 );
 
 .schedule {
+    &__intro {
+        font-size: $font-lg;
+    }
+
     &__swiper {
         margin-bottom: $space-md;
     }
@@ -219,6 +223,8 @@ $avatar-size: 30px;
 }
 
 .tempSchedule {
+    margin-top: $space-md;
+
     &__cell {
         vertical-align: center;
         text-align: center;

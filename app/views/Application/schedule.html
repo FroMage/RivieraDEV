@@ -13,18 +13,15 @@
 <div class="page__container schedule__container">
 
     #{if !displayNewSchedule}
-        <div>
-            #{if displayNewSpeakers}
-                <p class="data-unavailable">&{'views.application.schedule.unavailable.speakers.available'}</p>
-                <div class="text-center">
-                    <a class="btn btn-primary btn-lg button-x-large button" href="@{Application.talks}">&{'views.application.schedule.unavailable.talks'}</a>
-                </div>
+        <div class="schedule__intro">
+            #{if displayNewSpeakers && displayTalks}
+                <p>&{'views.application.schedule.unavailable.speakers.available'}</p>
             #{/if}
             #{else}
-                <p class="data-unavailable">&{'views.application.schedule.unavailable'}</p>
+                <p>&{'views.application.schedule.unavailable'}</p>
             #{/else}
             
-            <p class="">&{'views.application.schedule.unavailable.intro'}</p>
+            <p>&{'views.application.schedule.unavailable.intro'}</p>
         </div>
     #{/if}
 

@@ -174,6 +174,7 @@ public class Application extends Controller {
     public static void schedule() {
         boolean displayFullSchedule = displayFullSchedule();
         boolean displayNewSpeakers = displayNewSpeakers();
+        boolean displayTalks = displayTalks();
 
         List<Date> days = null;
         if (!displayFullSchedule) {
@@ -199,7 +200,7 @@ public class Application extends Controller {
             tracksPerDays.put(day, tracksPerDay);
         }
 
-        render(displayFullSchedule, displayNewSpeakers, days, tracks, languages, tracksPerDays, themes, types, levels);
+        render(displayFullSchedule, displayNewSpeakers, displayTalks, days, tracks, languages, tracksPerDays, themes, types, levels);
     }
 
     public static void scheduleSuperSecret() {
