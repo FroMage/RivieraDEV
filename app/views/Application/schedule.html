@@ -12,7 +12,23 @@
 
 <div class="page__container schedule__container">
 
-	#{if displayFullSchedule }
+    #{if !displayNewSchedule}
+        <div>
+            #{if displayNewSpeakers}
+                <p class="data-unavailable">&{'views.application.schedule.unavailable.speakers.available'}</p>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-lg button-x-large button" href="@{Application.talks}">&{'views.application.schedule.unavailable.talks'}</a>
+                </div>
+            #{/if}
+            #{else}
+                <p class="data-unavailable">&{'views.application.schedule.unavailable'}</p>
+            #{/else}
+            
+            <p class="">&{'views.application.schedule.unavailable.intro'}</p>
+        </div>
+    #{/if}
+
+	#{if days != null && days.size() > 0}
 
         <div class="schedule__days">
             #{list items: days, as: 'day'}
@@ -22,6 +38,10 @@
                 </h2>
             #{/list}
         </div>
+
+    #{/if}
+
+    #{if displayFullSchedule }
 
         #{filterForTalks themes: themes, levels: levels, types: types, languages: languages/}
 
@@ -38,13 +58,20 @@
             &{'views.application.schedule.like.explanation'}
         </div>
 
-        <!-- Slider main container -->
-        <div class="swiper-container schedule__swiper">
-            <div class="swiper-wrapper">
+    #{/if}
+
+    <!-- Slider main container -->
+    <div class="swiper-container schedule__swiper">
+        <div class="swiper-wrapper">
             #{list items: days, as: 'day'}
                 <div class="swiper-slide">
                     <div class="schedule--desktop">
-                        #{fullSchedule user: user, day: day, tracksPerDays: tracksPerDays/}
+                        #{if displayNewSchedule}
+                            #{fullSchedule user: user, day: day, tracksPerDays: tracksPerDays/}
+                        #{/if}
+                        #{else}
+                            #{temporarySchedule user: user, day: day/}
+                        #{/else}
                     </div>
 
                     <div class="schedule--mobile">
@@ -52,36 +79,17 @@
                     </div>
                 </div>
             #{/list}
-            </div>
         </div>
+    </div>
 
-	#{/if}
-	#{else}
-
-        <div>
-            #{if displayNewSpeakers}
-                <p class="data-unavailable">&{'views.application.schedule.unavailable.speakers.available'}</p>
-                <div class="text-center">
-                    <a class="btn btn-primary btn-lg button-x-large button" href="@{Application.talks}">&{'views.application.schedule.unavailable.talks'}</a>
-                </div>
-            #{/if}
-            #{else}
-                <p class="data-unavailable">&{'views.application.schedule.unavailable'}</p>
-            #{/else}
-        </div>
-
-        #{temporarySchedule user: user, days: days/}
-        
-        </div>
-
+    #{if !displayNewSchedule}
         <div class="newsletter">
             <h2 class="home__title newsletter__title">
                 &{'views.application.index.get-in-touch'}
             </h2>
             #{newsletter /}
         </div> <!-- /.newletter -->
-
-	#{/else}
+	#{/if}
 </div>
 
 <!-- External Lib : SwiperJS -->

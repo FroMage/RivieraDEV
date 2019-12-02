@@ -1,55 +1,39 @@
-#{if _days != null && _days.size() > 0}
+<table class="tempSchedule">
 
-    <div class="tempSchedule__container">
+    <col class="tempSchedule__col--time">
+    <col class="tempSchedule__col">
 
-        <p class="tempSchedule__intro">&{'views.application.schedule.unavailable.intro'}</p>
+    #{list items: models.TemporarySlot.findPerDay(_day), as: 'slot'}
+        <tr>
+            <th class="tempSchedule__time" scope="row">
+                <span>${slot.startDate.format('HH:mm')}</span>
+                #{if _user}
+                    <a class="tempSchedule__admin" href="@{TemporarySlots.show(slot.id)}">edit</a>
+                #{/if}
+            </th>
 
-        #{list items: _days, as: 'day'}
-        
-            <h2 class="">${day.format('EEEE dd MMMM yyyy')}</h2>
-
-            <table class="tempSchedule">
-
-                <col class="tempSchedule__col--time">
-                <col class="">
-
-                #{list items: models.TemporarySlot.findPerDay(day), as: 'slot'}
-                    <tr>
-                        <th class="tempSchedule__time" scope="row">
-                            <span>${slot.startDate.format('HH:mm')}</span>
-                            #{if _user}
-                                <a class="tempSchedule__admin" href="@{TemporarySlots.show(slot.id)}">edit</a>
-                            #{/if}
-                        </th>
-
-                        #{if slot.isBreak != null && slot.isBreak != models.BreakType.NotABreak}
-                            <td class="tempSchedule__${slot.isBreak.code}">
-                                <span class="tempSchedule__breakTitle">
-                                    #{if play.i18n.Lang.get() == "en" && slot.labelEN}
-                                        ${slot.labelEN}
-                                    #{/if}
-                                    #{else}
-                                        ${slot.labelFR}
-                                    #{/else}
-                                </span>
-                            </td>
+            #{if slot.isBreak != null && slot.isBreak != models.BreakType.NotABreak}
+                <td class="tempSchedule__${slot.isBreak.code}">
+                    <span class="tempSchedule__breakTitle">
+                        #{if play.i18n.Lang.get() == "en" && slot.labelEN}
+                            ${slot.labelEN}
                         #{/if}
                         #{else}
-                            <td class="tempSchedule__cell">
-                                #{if play.i18n.Lang.get() == "en" && slot.labelEN}
-                                    ${slot.labelEN}
-                                #{/if}
-                                #{else}
-                                    ${slot.labelFR}
-                                #{/else}
-                            </td>
+                            ${slot.labelFR}
                         #{/else}
-                    </tr>
-                #{/list}
-            </table>
-
-        #{/list}
-
-    </div>
-
-#{/if}
+                    </span>
+                </td>
+            #{/if}
+            #{else}
+                <td class="tempSchedule__cell">
+                    #{if play.i18n.Lang.get() == "en" && slot.labelEN}
+                        ${slot.labelEN}
+                    #{/if}
+                    #{else}
+                        ${slot.labelFR}
+                    #{/else}
+                </td>
+            #{/else}
+        </tr>
+    #{/list}
+</table>
