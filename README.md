@@ -76,6 +76,8 @@ When we set up the website for the new edition.
 -   `TICKETING_URL`: Fill it if it's not already done.
 -   `TICKETING_OPEN = true`
 
+Don't forget to fill the tables `PricePacks` and `PricePackDates`.
+
 ## When we close the CFP
 
 -   `CFP_OPEN = false`
