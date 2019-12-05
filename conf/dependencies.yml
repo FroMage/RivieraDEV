@@ -2,10 +2,10 @@
 
 require:
     - play
-    - play -> db 1.1.1
     - play -> secure
     - play -> crud
     - com.github.rjeschke -> txtmark 0.13
+    - fromage -> db 2.0
     - fromage -> sass 2.0
 
 repositories:
