@@ -2,12 +2,12 @@
 #{set title:play.i18n.Messages.get('views.application.schedule.title') /}
 
 <div class="page__header schedule__header">
-		<h1 class="page__mainTitle">
-				&{'views.application.schedule.title'}
-		</h1>
-		<div class="page__mainSubtitle">
-				&{'views.application.schedule.subtitle'}
-		</div>
+    <h1 class="page__mainTitle">
+        &{'views.application.schedule.title'}
+    </h1>
+    <div class="page__mainSubtitle">
+           &{'views.application.schedule.subtitle'}
+    </div>
 </div>
 
 <div class="page__container schedule__container">
@@ -72,7 +72,12 @@
                     </div>
 
                     <div class="schedule--mobile">
-                        #{fullScheduleXs user: user, day: day, tracksPerDays: tracksPerDays/}
+                        #{if displayNewSchedule}
+                            #{fullScheduleXs user: user, day: day, tracksPerDays: tracksPerDays/}
+                        #{/if}
+                        #{else}
+                            #{temporaryScheduleXs user: user, day: day/}
+                        #{/else}
                     </div>
                 </div>
             #{/list}

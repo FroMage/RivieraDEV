@@ -28,6 +28,11 @@ $avatar-size: 30px;
 .schedule {
     &__intro {
         font-size: $font-lg;
+        margin: 0 $space-sm;
+
+        @media (min-width: $screen-md-min) {
+            margin: 0;
+        }
     }
 
     &__swiper {
@@ -233,6 +238,7 @@ $avatar-size: 30px;
         border-radius: $border-radius-sm;
         box-shadow: $shadow-sm;
         border: $border-sm solid $color-gray-light;
+        padding: $space-lg $space-xs;
     }
 }
 
