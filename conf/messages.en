@@ -147,7 +147,7 @@ views.application.subscribe.pass.include.party=Evening social event with buffet 
 views.application.subscribe.pass.period.blindBird=Blind bird
 views.application.subscribe.pass.period.earlyBird=Early bird
 views.application.subscribe.pass.period.regular=Regular
-views.application.subscribe.pass.remainingDays=&{%s}: %d remaining days, in limited number
+views.application.subscribe.pass.remainingDays=&{%s}: %d remaining days, limited by available tickets
 
 views.application.access.title=How to come
 views.application.access.text.1=Riviera DEV is located on the French Riviera,
