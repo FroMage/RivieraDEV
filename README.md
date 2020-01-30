@@ -2,6 +2,7 @@
 
 Note: at the moment it requires Play 1.5.3.
 
+1. Download and install **jdk-11**
 1. [Download Python 2](https://www.python.org/downloads/release/python-2717/) and install it
 1. [Download Play Framework 1.5.3](https://downloads.typesafe.com/play/1.5.3/play-1.5.3.zip) and install it
 1. Clone the [RivieraDEV repository](https://github.com/FroMage/RivieraDEV)
