@@ -133,6 +133,8 @@ public class Application extends Controller {
     public static void subscribe() {
         String ticketingUrl = getTicketingUrl();
         boolean ticketingIsOpen = ticketingIsOpen();
+        String ticketingTrainingUrl = getTicketingTrainingUrl();
+        boolean ticketingTrainingIsOpen = ticketingTrainingIsOpen();
 
         List<PricePack> pricePacks = PricePack.findAll();
         List<PricePackDate> pricePackDatesList = PricePackDate.findAll();
@@ -168,7 +170,7 @@ public class Application extends Controller {
                     pricePack.studentPrice, currentPeriod, remainingDays, pricePack.soldOut));
         }
 
-        render(ticketingUrl, ticketingIsOpen, pricePackCurrentStateList);
+        render(ticketingUrl, ticketingIsOpen, ticketingTrainingUrl, ticketingTrainingIsOpen, pricePackCurrentStateList);
     }
 
     public static void schedule() {
@@ -488,7 +490,7 @@ public class Application extends Controller {
     }
 
     /**
-     * Retourne lUrl de la page où on peut acheter les billets.
+     * Retourne l'Url de la page où on peut acheter les billets.
      */
     private static String getTicketingUrl() {
         Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_URL).first();
@@ -501,6 +503,23 @@ public class Application extends Controller {
      */
     private static boolean ticketingIsOpen() {
         Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_OPEN).first();
+        return config != null && config.value.equals("true");
+    }
+
+    /**
+     * Retourne l'Url de la page de l'organisme de formation.
+     */
+    private static String getTicketingTrainingUrl() {
+        Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_TRAINING_URL).first();
+        return config != null ? config.value : "";
+    }
+
+    /**
+     * Retourne true s'il est possible d'accéder à la page de l'organisme de formation 
+     * (utile en attendant que la page soit prête)
+     */
+    private static boolean ticketingTrainingIsOpen() {
+        Configuration config = Configuration.find("key", ConfigurationKey.TICKETING_TRAINING_OPEN).first();
         return config != null && config.value.equals("true");
     }
 

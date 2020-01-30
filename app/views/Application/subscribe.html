@@ -122,6 +122,7 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
     </div> <!-- /.passes -->
 
 
+    #{if ticketingTrainingIsOpen}
     <h2 class="page__title">
         &{'views.application.subscribe.title.training'}
     </h2>
@@ -145,7 +146,7 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
                 
                 #{if ticketingIsOpen}
                     <a class="button button--white pass__buy pass__buy--training"
-                        href="https://www.softeaminstitute.fr/developpement-logiciel/formation-riviera-dev-2019/"
+                        href="${ticketingTrainingUrl}"
                         target="_blank">
                         &{'views.application.subscribe.pass.training.button'}
                     </a>
@@ -191,5 +192,6 @@ title:play.i18n.Messages.get('views.application.subscribe.title') /}
             <p>&{'views.application.subscribe.pass.training.text3'}</p>
         </div>
     </div>
-    
+    #{/if}
+
 </div>

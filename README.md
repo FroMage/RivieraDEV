@@ -57,6 +57,8 @@ When we set up the website for the new edition.
 -   `PROMOTED_PAGE_2`; It's the same as above but for the secondary button. The possible values are `SPONSORS` and `SCHEDULE`. And it's the same, let's not use it for now.
 -   `TICKETING_URL`: At this time the ticketing is not opened yet, but if we already know the URL, we can fill it.
 -   `TICKETING_OPEN = false`
+-   `TICKETING_TRAINING_URL`: To be filled with the URL provided by the training organization, but you probably don't know it yet
+-   `TICKETING_TRAINING_OPEN = false` The training organization is not ready yet
 -   `SPONSORING_LEAFLET_URL`: URL to the sponsoring leaflet.
 -   `CFP_URL`: At this time the CFP is not opened yet, but if we know the URL, we can fill it.
 -   `CFP_OPEN = false`
@@ -79,6 +81,11 @@ When we set up the website for the new edition.
 -   `TICKETING_OPEN = true`
 
 Don't forget to fill the tables `PricePacks` and `PricePackDates`.
+
+## When the training organization is ready
+
+-   `TICKETING_TRAINING_URL`: Fill it if it's not already done.
+-   `TICKETING_TRAINING_OPEN = true`
 
 ## When we close the CFP
 
