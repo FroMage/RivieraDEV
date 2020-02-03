@@ -116,7 +116,7 @@ views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Speakers
 
 views.application.subscribe.title=Tickets
-views.application.subscribe.subtitle=Deep Dive pass, Conference pass or Combi pass, you choose!
+views.application.subscribe.subtitle=Deep Dive pass, Conference pass, Combi pass or even Training pass, you choose!
 views.application.subscribe.title.pack=Choose your option
 views.application.subscribe.title.training=Ask your employer to attend the conference
 views.application.subscribe.pass.pass=Pass
