@@ -1,11 +1,18 @@
-$sponsor-platinum-width: 350px;
-$sponsor-platinum-height: 161px;
+// Diamond
+$sponsor-diamond-width: 350px;
+$sponsor-diamond-height: 161px;
 
+// Platinum and Party
+$sponsor-platinum-width: 300px;
+$sponsor-platinum-height: 138px;
+
+// Gold
 $sponsor-gold-width: 250px;
 $sponsor-gold-height: 115px;
 
-$sponsor-silver-width: 180px;
-$sponsor-silver-height: 83px;
+// Silver, Lunches and Membership
+$sponsor-silver-width: 200px;
+$sponsor-silver-height: 92px;
 
 .partenaires {
     padding: $space-xl 0;
@@ -88,9 +95,9 @@ $sponsor-silver-height: 83px;
     }
 
     &__logo {
-        width: $sponsor-gold-width;
-        height: $sponsor-gold-height;
-        line-height: $sponsor-gold-height;
+        width: $sponsor-silver-width;
+        height: $sponsor-silver-height;
+        line-height: $sponsor-silver-height;
         display: inline-block;
 
         margin: 10px;
@@ -100,7 +107,14 @@ $sponsor-silver-height: 83px;
 
         overflow: hidden;
 
-        &--platinum {
+        &--gold {
+            width: $sponsor-gold-width;
+            height: $sponsor-gold-height;
+            line-height: $sponsor-gold-height;
+        }
+
+        &--platinum,
+        &--party {
             width: $sponsor-platinum-width;
             height: $sponsor-platinum-height;
             line-height: $sponsor-platinum-height;
@@ -111,11 +125,17 @@ $sponsor-silver-height: 83px;
                 line-height: $sponsor-gold-height;
             }
         }
-        &--silver,
-        &--partner {
-            width: $sponsor-silver-width;
-            height: $sponsor-silver-height;
-            line-height: $sponsor-silver-height;
+
+        &--diamond {
+            width: $sponsor-diamond-width;
+            height: $sponsor-diamond-height;
+            line-height: $sponsor-diamond-height;
+
+            @media (max-width: $screen-xs-max) {
+                width: $sponsor-gold-width;
+                height: $sponsor-gold-height;
+                line-height: $sponsor-gold-height;
+            }
         }
     }
 

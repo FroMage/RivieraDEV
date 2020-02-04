@@ -209,6 +209,7 @@ views.application.sponsor.title=Sponsor
 views.application.sponsors.title=Nos sponsors
 views.application.sponsors.thanks=Les sponsors nous aident à organiser Riviera DEV. Sans eux rien ne serait possible&nbsp;! Merci&nbsp;!
 views.application.sponsors.join=Devenir sponsor
+views.application.sponsors.level.diamond=Diamond
 views.application.sponsors.level.platinum=Platinum
 views.application.sponsors.level.gold=Gold
 views.application.sponsors.level.silver=Silver

@@ -1,6 +1,7 @@
 package models;
 
 public enum SponsorShip {
+	Diamond			("diamond"),
 	Platinum		("platinum"),
 	Gold			("gold"), 
 	Silver			("silver"), 
