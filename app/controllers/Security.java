@@ -1,14 +1,14 @@
 package controllers;
 
+import models.User;
 import play.Logger;
 import play.mvc.Http.Request;
-import models.User;
 
 public class Security extends Secure.Security {
     
     static boolean authenticate(String username, String password) {
         User user = User.find("byUserName", username).first();
-        if(user != null && user.password.equals(password)){
+        if(user != null && user.checkPassword(password)){
         	return true;
         }
         logSecurityAction("failed login for %s", username);
