@@ -134,6 +134,7 @@ views.application.subscribe.pass.training.name=Formation
 views.application.subscribe.pass.training.text1=Cette année, vous allez disposer d'un levier supplémentaire pour demander à votre employeur d'assister à Riviera DEV.
 views.application.subscribe.pass.training.text2=Grâce à notre partenaire <strong>SOFTEAM Institute</strong>, organisme de formation certifié, votre employeur aura la possibilité d'imputer les frais d'inscription et le temps de présence sur ses actions de formation, et d'adresser une <strong>demande de prise en charge à son OPCO</strong>.
 views.application.subscribe.pass.training.text3=A cet effet, vous pourrez demander une convention de formation auprès de SOFTEAM Institute, qui pourra être transmise à votre OPCO pour la constitution de votre dossier de prise en charge.
+views.application.subscribe.pass.training.text4=
 views.application.subscribe.pass.training.button=Faire la demande
 views.application.subscribe.pass.combi.days=3 jours : 13, 14 et 15 mai 2020
 views.application.subscribe.pass.include.deepdive.conferences=Conférences Deep Dive
