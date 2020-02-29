@@ -12,7 +12,7 @@
 
 <div class="page__container schedule__container">
 
-    #{if !displayNewSchedule}
+    #{if !displayFullSchedule}
         <div class="schedule__intro">
             #{if displayNewSpeakers && displayTalks}
                 <p>&{'views.application.schedule.unavailable.speakers.available'}</p>
@@ -63,7 +63,7 @@
             #{list items: days, as: 'day'}
                 <div class="swiper-slide">
                     <div class="schedule--desktop">
-                        #{if displayNewSchedule}
+                        #{if displayFullSchedule}
                             #{fullSchedule user: user, day: day, tracksPerDays: tracksPerDays/}
                         #{/if}
                         #{else}
@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="schedule--mobile">
-                        #{if displayNewSchedule}
+                        #{if displayFullSchedule}
                             #{fullScheduleXs user: user, day: day, tracksPerDays: tracksPerDays/}
                         #{/if}
                         #{else}
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    #{if !displayNewSchedule}
+    #{if !displayFullSchedule}
         <div class="newsletter">
             <h2 class="home__title newsletter__title">
                 &{'views.application.index.get-in-touch'}
