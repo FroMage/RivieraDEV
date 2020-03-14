@@ -38,6 +38,9 @@ views.application.common.website=Site web
 
 views.application.openGraph=Riviera DEV, c'est 3 jours de conférences et d'ateliers sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
+views.application.index.cancelled=Plus d'informations dans
+views.application.index.cancelledLink=notre communiqué
+
 views.application.index.title=Accueil
 views.application.index.date=Les 13, 14 et 15 mai 2020
 views.application.index.place=Sophia Antipolis
@@ -378,8 +381,8 @@ views.application.cfp.redhat.confInDepth.duration=3 heures
 views.application.cfp.redhat.confInDepth.slots=2 disponibles
 views.application.cfp.redhat.confInDepth.1=Venez plonger au cœur d'un sujet qui vous passionne, lié à Red Hat, séléctionné par notre partenaire Red Hat.
 views.application.cfp.redhat.confInDepth.2=Le format que nous vous proposons ici vous permettra de faire une présentation en profondeur, qui peut porter sur un large sujet, en prenant le temps d’examiner de nombreux exemples.
-views.application.cfp.workshopInDepth.title=Atelier approfondi
 views.application.cfp.workshopInDepth.attendees=10-30 personnes
+views.application.cfp.workshopInDepth.title=Atelier approfondi
 views.application.cfp.workshopInDepth.duration=3 heures
 views.application.cfp.workshopInDepth.slots=4 disponibles
 views.application.cfp.workshopInDepth.1=Emmenez les participants plus loin dans la mise en pratique d'un sujet que vous souhaitez partager.

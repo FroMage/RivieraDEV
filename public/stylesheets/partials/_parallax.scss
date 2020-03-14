@@ -101,4 +101,25 @@
             margin: 0 $space-sm;
         }
     }
+
+    &__cancelled {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__cancelledInfo {
+        color: $color-white;
+        font-size: $font-xxl;
+        font-weight: $light;
+
+        a {
+            color: #fe0000;
+
+            &:hover,
+            &:focus {
+                color: darken(#fe0000, 10%);
+            }
+        }
+    }
 }

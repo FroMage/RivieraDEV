@@ -98,10 +98,12 @@ public class Application extends Controller {
         boolean displayPreviousSpeakers = !displayNewSpeakers();
 
         String sponsoringLeafletUrl = getSponsoringLeafletUrl();
+        
+        String cancelledUrl = getCancelledUrl();
 
         render(promotedPage2, displayCountdown, eventStartDateStr, eventEndDateStr, googleMapApiKey,
                 displayPreviousSpeakers, sponsors, lunchesAndPartySoldOut, sponsorsPreviousYears, speakersPreviousYears,
-                speakersStar, latestNews, sponsoringLeafletUrl);
+                speakersStar, latestNews, sponsoringLeafletUrl, cancelledUrl);
     }
 
     public static void news() {
@@ -588,5 +590,14 @@ public class Application extends Controller {
         List<Talk> talks = Talk.find("isHiddenInTalksPage = false").fetch();
         Collections.sort(talks);
         render(talks);
+    }
+
+    
+    /**
+     * Covid19 newsletter URL
+     */
+    private static String getCancelledUrl() {
+        Configuration config = Configuration.find("key", ConfigurationKey.CANCELLED_URL).first();
+        return config != null ? config.value : "";
     }
 }

@@ -18,6 +18,17 @@
                 <span>&{'views.application.index.place'}</span>
             </div>
         </div>
+
+        <div class="parallax__cancelled">
+            #{if play.i18n.Lang.get() == 'en'}<img src="@{'/public/images/cancelled.png'}" alt="Cancelled event">#{/if}
+            #{else}<img src="@{'/public/images/annule.png'}" alt="Evènement annulé">#{/else}
+            
+
+            <p class="parallax__cancelledInfo">
+                ⚠ &{'views.application.index.cancelled'}
+                <a href="${cancelledUrl}">&{'views.application.index.cancelledLink'}</a> ⚠
+            </p>
+        </div>
     </div>
 
     <div class="registration">

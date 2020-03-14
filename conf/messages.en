@@ -39,6 +39,9 @@ views.application.common.website=Website
 
 views.application.openGraph=Riviera DEV, that’s 3 days of conferences and workshops on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
 
+views.application.index.cancelled=More information in
+views.application.index.cancelledLink=our newsletter
+
 views.application.index.title=Welcome
 views.application.index.date=May 13-14-15 2020
 views.application.index.place=Sophia Antipolis

@@ -44,5 +44,7 @@ public enum ConfigurationKey {
     /* [true, false] true if the Call For Paper is opened, false otherwise */
     CFP_OPEN,
     /* Call For Paper URL */
-    CFP_URL
+    CFP_URL,
+    /* Temporary for Covid19, unsed in the home page */
+    CANCELLED_URL
 }
