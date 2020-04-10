@@ -592,6 +592,11 @@ public class Application extends Controller {
         render(talks);
     }
 
+    public static void schools() {
+        SponsorShip sponsorShip = SponsorShip.Schools;
+        List<Sponsor> sponsors = Sponsor.find("level", sponsorShip).fetch();
+        render(sponsorShip, sponsors);
+    }
     
     /**
      * Covid19 newsletter URL

@@ -8,7 +8,8 @@ public enum SponsorShip {
 	Lunches			("lunches"), 
 	Party			("party"),
 	Partner			("partner"),
-	PreviousYears	("previousYears");
+	PreviousYears	("previousYears"),
+	Schools         ("schools");
 
 	private final String code;
 

@@ -1,6 +1,7 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+views.main.schools=Schools
 views.main.photos=Photos
 views.main.schedule=Program
 views.main.speakers=Speakers
@@ -41,6 +42,8 @@ views.application.openGraph=Riviera DEV, that’s 3 days of conferences and work
 
 views.application.index.cancelled=More information in
 views.application.index.cancelledLink=our newsletter
+
+views.application.schools.title=Riviera DEV action for schools
 
 views.application.index.title=Welcome
 views.application.index.date=May 13-14-15 2020
@@ -220,6 +223,7 @@ views.application.sponsors.level.silver=Silver
 views.application.sponsors.level.lunches=Lunches
 views.application.sponsors.level.party=Party
 views.application.sponsors.level.partner=Partners
+views.application.sponsors.level.schools=Schools
 views.application.sponsors.title.platinum=Platinum sponsor
 
 views.application.becomeSponsor.title=Become sponsor

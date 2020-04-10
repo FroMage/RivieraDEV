@@ -1,0 +1,35 @@
+@include responsiveBackgroundImage(
+    '.schools__header',
+    '../images/illustrations/responsives/schools-mini'
+);
+
+.schools {
+    &__header {
+        background-position: center;
+    }
+
+    &__mainSubtitle {
+        p {
+            margin: 0;
+        }
+        a {
+            color: $color-white;
+        }
+    }
+
+    &__button {
+        margin-top: $space-xl;
+    }
+
+    &-rivierajug {
+        width: auto;
+    }
+
+    &-contact {
+        margin-top: 2em;
+    }
+
+    &-photo {
+        width: 100%;
+    }
+}
