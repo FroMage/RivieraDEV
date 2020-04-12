@@ -1,21 +1,22 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
-views.main.photos=Photos
+views.main.home=Accueil
+views.main.tickets=Billetterie
 views.main.schedule=Programme
 views.main.speakers=Orateurs
-views.main.talks=Sessions
-views.main.home=Accueil
 views.main.cfp=CFP
-views.main.tickets=Billetterie
-views.main.access=Accès
-views.main.team=L'équipe
+views.main.schools=Écoles
+views.main.photos=Photos
 views.main.sponsors=Sponsors
 views.main.sponsors.list=Nos sponsors
 views.main.sponsors.join=Devenir sponsor
+views.main.team=L'équipe
+views.main.access=Accès
 views.main.language=Langue
 views.main.language.fr=FR
 views.main.language.en=EN
+
 views.main.contact=Contact
 views.main.archives=Voir les éditions précédentes
 views.main.editions.2019=Riviera DEV 2019
@@ -114,6 +115,14 @@ views.application.speakers.unavailable=La liste des orateurs n'est pas encore di
 views.application.speakers.subscribe=Abonnez-vous à la newsletter pour être prévenu dès que les orateurs sont connus.
 
 views.application.speaker.title=Orateur
+
+views.application.schools.title=Actions de Riviera DEV pour les écoles
+views.application.schools.subtitle=Riviera DEV aide les écoles à enseigner l'informatique
+views.application.schools.text1=Depuis 2019, Riviera DEV a commencé à former des enseignants ainsi qu'à donner du matériel pour les aider à enseigner l'informatique aux enfants.
+views.application.schools.text2=Au cour de la première année, nous avons formé plus de 30 enseignants d'écoles primaires de Nice, et donné 13000€ de matériel informatique, dont 42 ordinateurs portables.
+views.application.schools.text3=Ces enseignants ont à leur tour enseigné à près de 900 élèves les bases de la programmation informatique avec <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a>, ce qui les aidera à comprendre le fonctionnement des ordinateurs et, espérons-le, les amenera plus tard à envisager une carrière dans l'informatique.
+views.application.schools.text4=Étant donné que les enfants des écoles primaires présentent une bien plus grande diversité que les personnes qui étudient actuellement l'informatique, en termes d'origines, de sexe et de classe sociale, nous espérons que notre action conduira à une plus grande diversité des étudiants en informatique.
+views.application.schools.text5=Riviera DEV a fait un don de la moitié du budget pour le matériel, le reste a été aimablement fourni par nos chers sponsors École. Merci beaucoup !
 
 views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Orateurs
@@ -220,6 +229,7 @@ views.application.sponsors.level.silver=Silver
 views.application.sponsors.level.lunches=Buffets
 views.application.sponsors.level.party=Soirée
 views.application.sponsors.level.partner=Partenaires
+views.application.sponsors.level.schools=Écoles
 views.application.sponsors.title.platinum=Partenaire Platinum
 
 views.application.becomeSponsor.title=Devenir sponsor

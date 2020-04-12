@@ -1,23 +1,22 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
-views.main.schools=Schools
-views.main.photos=Photos
+views.main.home=Home
+views.main.tickets=Tickets
 views.main.schedule=Program
 views.main.speakers=Speakers
-views.main.talks=Talks
-views.main.judcon=JUDCon
-views.main.home=Home
 views.main.cfp=CFP
-views.main.tickets=Tickets
-views.main.access=Access
-views.main.team=Team
+views.main.schools=Schools
+views.main.photos=Photos
 views.main.sponsors=Sponsors
 views.main.sponsors.list=Our sponsors
 views.main.sponsors.join=Become sponsor
+views.main.team=Team
+views.main.access=Access
 views.main.language=Language
 views.main.language.fr=FR
 views.main.language.en=EN
+
 views.main.contact=Contact
 views.main.archives=See previous editions
 views.main.editions.2019=Riviera DEV 2019
@@ -42,8 +41,6 @@ views.application.openGraph=Riviera DEV, that’s 3 days of conferences and work
 
 views.application.index.cancelled=More information in
 views.application.index.cancelledLink=our newsletter
-
-views.application.schools.title=Riviera DEV action for schools
 
 views.application.index.title=Welcome
 views.application.index.date=May 13-14-15 2020
@@ -117,6 +114,14 @@ views.application.speakers.unavailable=The speaker list is not available yet.
 views.application.speakers.subscribe=Subscribe to the newsletter to be notified when the speaker list is published.
 
 views.application.speaker.title=Speaker
+
+views.application.schools.title=Riviera DEV action for schools
+views.application.schools.subtitle=Riviera DEV helps schools teach computer science
+views.application.schools.text1=Since 2019, Riviera DEV has started training school teachers as well as donating hardware to help them teach computer science to kids.
+views.application.schools.text2=In our first year, we trained more than 30 public primary school teachers from Nice, and gave 13000€ worth of hardware, including 42 laptops.
+views.application.schools.text3=Those teachers in turn trained almost 900 students to teach them the basics of programming with <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a>, which will help them understand how computers work, and hopefully get them to consider computer science as a career later.
+views.application.schools.text4=Given kids in primary schools have a much greater diversity than the people that currently study computer science, in terms of origins, gender and social class, we hope our action will lead to greater diversity in computer science students.
+views.application.schools.text5=Riviera DEV made a donation of half the budget for hardware, the rest was kindly contributed by our dear school sponsors. Thank you very much!
 
 views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Speakers
