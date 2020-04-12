@@ -5,7 +5,15 @@
 
 .schools {
     &__header {
-        background-position: center;
+        background-position: 75% -80px;
+
+        @media (min-width: $screen-md-min) {
+            background-position: 75% 0;
+        }
+
+        @media (min-width: $screen-lg-min) {
+            background-position: 0 20%;
+        }
     }
 
     &__mainSubtitle {
