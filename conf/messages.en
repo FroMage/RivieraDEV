@@ -120,7 +120,7 @@ views.application.schools.subtitle=Riviera DEV helps schools teach computer scie
 views.application.schools.text1=Since <strong>2019</strong>, Riviera DEV has started training school teachers as well as donating hardware to help them teach computer science to kids.
 views.application.schools.text2=In our first year, <strong>we trained more than 30 public primary school teachers</strong> from Nice, and gave <strong>13000€ worth of hardware</strong>, including 42 laptops.
 views.application.schools.text3=Those teachers in turn trained <strong>almost 900 students</strong> to teach them the basics of programming with <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a>, which will help them understand how computers work, and hopefully get them to consider computer science as a career later.
-views.application.schools.text4=Given kids in primary schools have a much greater <strong>diversity</strong> than the people that currently study computer science, in terms of origins, gender and social class, we hope our action will lead to greater diversity in computer science students.
+views.application.schools.text4=Given kids in primary schools have <strong>a much greater diversity</strong> than the people that currently study computer science, in terms of origins, gender and social class, we hope our action will lead to greater diversity in computer science students.
 views.application.schools.text5=Riviera DEV made a donation of half the budget for hardware, the rest was kindly contributed by our dear <strong>school sponsors</strong>. Thank you very much!
 views.application.schools.sponsors=Many thanks to our Schools sponsors
 

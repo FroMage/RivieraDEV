@@ -25,26 +25,24 @@
         }
     }
 
-    &__block {
+    &__tweets {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
-        padding: 0 $space-lg;
 
-        @media (min-width: $screen-sm-min) {
+        @media (min-width: $screen-md-min) {
             flex-direction: row;
-            justify-content: space-between;
             align-items: flex-start;
-            padding: 0;
         }
-    }
 
-    &__blockItem {
-        flex: 1 1 50%;
+        .twitter-tweet {
+            flex: 1;
 
-        @media (min-width: $screen-sm-min) {
-            margin-right: $space-xl;
+            &:not(:last-child) {
+                margin-right: $space-md;
+            }
         }
     }
 
