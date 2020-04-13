@@ -118,11 +118,12 @@ views.application.speaker.title=Orateur
 
 views.application.schools.title=Actions de Riviera DEV pour les écoles
 views.application.schools.subtitle=Riviera DEV aide les écoles à enseigner l'informatique
-views.application.schools.text1=Depuis 2019, Riviera DEV a commencé à former des enseignants ainsi qu'à donner du matériel pour les aider à enseigner l'informatique aux enfants.
-views.application.schools.text2=Au cour de la première année, nous avons formé plus de 30 enseignants d'écoles primaires de Nice, et donné 13000€ de matériel informatique, dont 42 ordinateurs portables.
-views.application.schools.text3=Ces enseignants ont à leur tour enseigné à près de 900 élèves les bases de la programmation informatique avec <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a>, ce qui les aidera à comprendre le fonctionnement des ordinateurs et, espérons-le, les amenera plus tard à envisager une carrière dans l'informatique.
-views.application.schools.text4=Étant donné que les enfants des écoles primaires présentent une bien plus grande diversité que les personnes qui étudient actuellement l'informatique, en termes d'origines, de sexe et de classe sociale, nous espérons que notre action conduira à une plus grande diversité des étudiants en informatique.
-views.application.schools.text5=Riviera DEV a fait un don de la moitié du budget pour le matériel, le reste a été aimablement fourni par nos chers sponsors École. Merci beaucoup !
+views.application.schools.text1=Depuis <strong>2019</strong>, Riviera DEV a commencé à former des enseignants ainsi qu'à donner du matériel pour les aider à enseigner l'informatique aux enfants.
+views.application.schools.text2=Au cour de la première année, <strong>nous avons formé plus de 30 enseignants</strong> d'écoles primaires de Nice, et donné <strong>13000€ de matériel informatique</strong>, dont 42 ordinateurs portables.
+views.application.schools.text3=Ces enseignants ont à leur tour enseigné à <strong>près de 900 élèves</strong> les bases de la programmation informatique avec <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a>, ce qui les aidera à comprendre le fonctionnement des ordinateurs et, espérons-le, les amenera plus tard à envisager une carrière dans l'informatique.
+views.application.schools.text4=Étant donné que les enfants des écoles primaires présentent une bien plus grande <strong>diversité</strong> que les personnes qui étudient actuellement l'informatique, en termes d'origines, de sexe et de classe sociale, nous espérons que notre action conduira à une plus grande diversité des étudiants en informatique.
+views.application.schools.text5=Riviera DEV a fait un don de la moitié du budget pour le matériel, le reste a été aimablement fourni par nos chers <strong>sponsors École</strong>. Merci beaucoup !
+views.application.schools.sponsors=Un grand merci à nos sponsors École
 
 views.application.judcon.title=JUDCon:Riviera
 views.application.judcon.speakers=Orateurs
@@ -221,7 +222,7 @@ views.application.orga.title=Organisateur
 views.application.sponsor.title=Sponsor
 views.application.sponsors.title=Nos sponsors
 views.application.sponsors.thanks=Les sponsors nous aident à organiser Riviera DEV. Sans eux rien ne serait possible&nbsp;! Merci&nbsp;!
-views.application.sponsors.join=Devenir sponsor
+views.application.sponsors.join=Devenez sponsor
 views.application.sponsors.level.diamond=Diamond
 views.application.sponsors.level.platinum=Platinum
 views.application.sponsors.level.gold=Gold
@@ -232,7 +233,7 @@ views.application.sponsors.level.partner=Partenaires
 views.application.sponsors.level.schools=Écoles
 views.application.sponsors.title.platinum=Partenaire Platinum
 
-views.application.becomeSponsor.title=Devenir sponsor
+views.application.becomeSponsor.title=Devenez sponsor
 views.application.becomeSponsor.why=Pourquoi sponsoriser Riviera DEV&nbsp;?
 views.application.becomeSponsor.reason.1=Riviera DEV est organisé par des geeks bénévoles dont la seule motivation est d'offrir
 views.application.becomeSponsor.reason.2=une conférence de qualité par et pour les développeurs sur Sophia Antipolis.
