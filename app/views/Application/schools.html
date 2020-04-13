@@ -9,25 +9,37 @@
 </div>
 
 <div class="page__container notFullWidth">
-        <p>&{'views.application.schools.text1'}</p>
+        <div class="schools__block">
+            <p class="schools__blockItem">&{'views.application.schools.text1'}</p>
 
-        <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Les enseignants sont là et tout le monde est très concentré 😊 <a href="https://t.co/j5W8cKPp7J">pic.twitter.com/j5W8cKPp7J</a></p>&mdash; RivieraDEV (@RivieraDEV) <a href="https://twitter.com/RivieraDEV/status/1139880227751047168?ref_src=twsrc%5Etfw">June 15, 2019</a></blockquote>
+            <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Les enseignants sont là et tout le monde est très concentré 😊 <a href="https://t.co/j5W8cKPp7J">pic.twitter.com/j5W8cKPp7J</a></p>&mdash; RivieraDEV (@RivieraDEV) <a href="https://twitter.com/RivieraDEV/status/1139880227751047168?ref_src=twsrc%5Etfw">June 15, 2019</a></blockquote>
+        </div>
+
+        <div class="schools__block">
+            <p class="schools__blockItem">&{'views.application.schools.text2'}</p>
+            
+            <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Et voilà, c&#39;est livré ! 42 laptops, 6 MakeyMakeys, 2 Lego Boosts, 1000 cartes Scratch imprimées sur supports plastiques, dont une série spéciale MakeyMakey par @SaskiaLois, soit 13 000 € de matériel pour les écoles des Alpes-Maritimes. <a href="https://t.co/RadIt5TUql">pic.twitter.com/RadIt5TUql</a></p>&mdash; RivieraDEV (@RivieraDEV) <a href="https://twitter.com/RivieraDEV/status/1170965709263966208?ref_src=twsrc%5Etfw">September 9, 2019</a></blockquote>
+        </div>
         
-        <p>&{'views.application.schools.text2'}</p>
-        
-        <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Et voilà, c&#39;est livré ! 42 laptops, 6 MakeyMakeys, 2 Lego Boosts, 1000 cartes Scratch imprimées sur supports plastiques, dont une série spéciale MakeyMakey par @SaskiaLois, soit 13 000 € de matériel pour les écoles des Alpes-Maritimes. <a href="https://t.co/RadIt5TUql">pic.twitter.com/RadIt5TUql</a></p>&mdash; RivieraDEV (@RivieraDEV) <a href="https://twitter.com/RivieraDEV/status/1170965709263966208?ref_src=twsrc%5Etfw">September 9, 2019</a></blockquote>
-        
-        <p>&{'views.application.schools.text3'}</p>
-        
-        <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Nos laptops se baladent dans les écoles et depuis quelques mois les élèves s&#39;initient à la programmation avec Scratch ! <a href="https://t.co/LZTx4VTkon">pic.twitter.com/LZTx4VTkon</a></p>&mdash; RivieraDEV (@RivieraDEV) <a href="https://twitter.com/RivieraDEV/status/1204761416030441472?ref_src=twsrc%5Etfw">December 11, 2019</a></blockquote>
+        <div class="schools__block">
+            <p class="schools__blockItem">&{'views.application.schools.text3'}</p>
+            
+            <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Nos laptops se baladent dans les écoles et depuis quelques mois les élèves s&#39;initient à la programmation avec Scratch ! <a href="https://t.co/LZTx4VTkon">pic.twitter.com/LZTx4VTkon</a></p>&mdash; RivieraDEV (@RivieraDEV) <a href="https://twitter.com/RivieraDEV/status/1204761416030441472?ref_src=twsrc%5Etfw">December 11, 2019</a></blockquote>
+        </div>
         
         <p>&{'views.application.schools.text4'}</p>
         <p>&{'views.application.schools.text5'}</p>
 
-        <div class="registration-buttons registration-partenaire">
-            <a class="btn btn-primary btn-lg button" href="@{Application.becomeSponsor()}">&{'views.application.sponsors.join'}</a>
+        #{if sponsors != null && sponsors.size() > 0}
+            <div class="schools__sponsors">
+                <h2 class="schools__sponsorsTitle">&{'views.application.schools.sponsors'}</h2>
+                #{sponsorsByLevel sponsors: sponsors, level: sponsorShip.code/}
+            </div>
+        #{/if}
+
+        <div class="schools__buttonContainer">
+            <a class="button" href="@{Application.becomeSponsor()}">&{'views.application.sponsors.join'}</a>
         </div>
     </div>
 
-    #{sponsorsByLevel sponsors: sponsors, level: sponsorShip.code/}
 </div>

@@ -25,19 +25,60 @@
         }
     }
 
-    &__button {
-        margin-top: $space-xl;
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 $space-lg;
+
+        @media (min-width: $screen-sm-min) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0;
+        }
     }
 
-    &-rivierajug {
-        width: auto;
+    &__blockItem {
+        flex: 1 1 50%;
+
+        @media (min-width: $screen-sm-min) {
+            margin-right: $space-xl;
+        }
     }
 
-    &-contact {
-        margin-top: 2em;
+    &__sponsors {
+        margin-top: $space-xxl;
+
+        @media (min-width: $screen-sm-min) {
+            margin-top: $space-xxxl;
+        }
+
+        .partenaires {
+            &__levelTitle {
+                display: none;
+            }
+
+            &__level {
+                margin-bottom: 0;
+            }
+        }
     }
 
-    &-photo {
-        width: 100%;
+    &__sponsorsTitle {
+        margin: 0 $content-space-xs $space-md $content-space-xs;
+        text-align: center;
+        font-size: $font-xl;
+        font-weight: 300;
+
+        @media (min-width: $screen-sm-min) {
+            margin: 0 $content-space-sm $space-sm $content-space-sm;
+            font-size: $font-xxxl;
+        }
+    }
+
+    &__buttonContainer {
+        text-align: center;
     }
 }
