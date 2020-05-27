@@ -12,6 +12,7 @@ GET     /a-propos                               Application.about
 GET     /about                                  Application.about
 # GET     /nouvelles                              Application.news
 GET     /nouvelles                              Application.index
+GET     /schools                                Application.schools
 GET     /program                                Application.schedule
 GET     /programme                              Application.schedule
 GET     /programme-supersecret                  Application.scheduleSuperSecret
