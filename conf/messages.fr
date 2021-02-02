@@ -37,7 +37,7 @@ views.application.common.company=Entreprise
 views.application.common.twitter=Compte Twitter
 views.application.common.website=Site web
 
-views.application.openGraph=Riviera DEV, c'est 1 jour de conférencessur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
+views.application.openGraph=Riviera DEV, c'est 1 jour de conférences sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
 views.application.index.teaser=Sous réserve de changement de dernière minute dûs au Covid
 
@@ -51,7 +51,7 @@ views.application.index.stats.attendees=participants
 views.application.index.stats.sessions=conférences
 views.application.index.stats.workshops=ateliers
 views.application.index.intro.subtitle1=À cause du Covid, nous avons dû annuler notre édition 2020, et nous ne pouvons pas planifier notre édition 2021 comme si tout était normal. Riviera DEV n'aura pas lieu pendant notre période habituelle de mai, et n'aura sans doute pas lieu à l'endroit habituel.
-views.application.index.intro.subtitle2=Mais nous n'avons pas abandonné. Cette période est folle ? On va faire encore plus fou. Nous comptons faire une conférence plut petite début juillet, dans le strict respect des normes sanitaires et lois en place, à un endroit exotique.
+views.application.index.intro.subtitle2=Mais nous n'avons pas abandonné. Cette période est folle ? On va faire encore plus fou. Nous comptons faire une conférence plus petite début juillet, dans le strict respect des normes sanitaires et lois en place, à un endroit exotique.
 views.application.index.intro.subtitle3=En conséquence, le format de la conférence sera entièrement différent, mais ça sera sans aucun doute la meilleure conférence de 2021.
 views.application.index.intro.subtitle4=Nous annoncerons les détails en mai, quand nous aurons une meilleure visibilité sur la situation sanitaire et légale. Si nous ne pouvons pas organiser cela de manière sûre et légale, nous annulerons l'édition 2021.
 views.application.index.intro.subtitle5=Mais si nous le pouvons, ce sera ÉPIQUE.
