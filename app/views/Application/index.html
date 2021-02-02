@@ -20,13 +20,10 @@
         </div>
 
         <div class="parallax__cancelled">
-            #{if play.i18n.Lang.get() == 'en'}<img src="@{'/public/images/cancelled.png'}" alt="Cancelled event">#{/if}
-            #{else}<img src="@{'/public/images/annule.png'}" alt="Evènement annulé">#{/else}
-            
+            <img src="@{'/public/images/teaser.jpg'}" alt="Teaser">
 
             <p class="parallax__cancelledInfo">
-                ⚠ &{'views.application.index.cancelled'}
-                <a href="${cancelledUrl}">&{'views.application.index.cancelledLink'}</a> ⚠
+                ⚠ &{'views.application.index.teaser'} ⚠
             </p>
         </div>
     </div>
@@ -61,10 +58,13 @@
     <div class="introCountdown__intro intro #{if displayCountdown} intro--withCountdown #{/if}">
       
       <div class="intro__titles">
-        <h2 class="home__title">Riviera DEV</h2>
+        <h2 class="home__title">Riviera DEV 2021</h2>
         <div class="intro__subtitle">
           <span class="intro__subtitle1">&{'views.application.index.intro.subtitle1'}</span>
-          <span class="intro__subtitle2">&{'views.application.index.intro.subtitle2'}</span>
+          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle2'}</span>
+          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle3'}</span>
+          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle4'}</span>
+          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle5'}</span>
         </div>
       </div> <!-- /intro__titles -->
 
@@ -110,22 +110,15 @@
     <div class="statistics__item">
         <span class="statistics__icon statistics__icon--attendees"></span>
         <div class="statistics__text">
-            <span class="statistics__number">500</span>
+            <span class="statistics__number">??</span>
             &{'views.application.index.stats.attendees'}
         </div>
     </div>
     <div class="statistics__item">
         <span class="statistics__icon statistics__icon--conferences"></span>
         <div class="statistics__text">
-            <span class="statistics__number">42</span>
+            <span class="statistics__number">?</span>
             &{'views.application.index.stats.sessions'}
-        </div>
-    </div>
-    <div class="statistics__item">
-        <span class="statistics__icon statistics__icon--workshops"></span>
-        <div class="statistics__text">
-            <span class="statistics__number">18</span>
-            &{'views.application.index.stats.workshops'}
         </div>
     </div>
 </div>
@@ -152,21 +145,6 @@
         <div class="days__contents">
 
             <div class="days__intro days__intro--1">
-                <img class="days__illustration" src="@{'/public/images/mascotte/Ray_Deep_Dive.png'}" alt="">
-                <div class="days__titleDate">
-                    <h3 class="days__title days__title--1">&{'views.application.index.days.deepdive.title'}</h3><!-- Do not remove this comment 
-                    --><div class="days__date">&{'views.application.index.days.deepdive.date'}</div>
-                </div>
-                <div class="days__desc">&{'views.application.index.days.deepdive.desc'}</div>
-            </div>
-            <div class="days__content days__content--1">
-                <h3 class="days__subtitle">&{'views.application.index.days.deepdive.conf.title'}</h3>
-                <p>&{'views.application.index.days.deepdive.conf.desc'}</p>
-                <h3 class="days__subtitle">&{'views.application.index.days.deepdive.workshop.title'}</h3>
-                <p>&{'views.application.index.days.deepdive.workshop.desc'}</p>
-            </div>
-
-            <div class="days__intro days__intro--2">
                 <img class="days__illustration" src="@{'/public/images/mascotte/Ray_ITv2.1.png'}" alt="">
                 <div class="days__titleDate">
                     <h3 class="days__title days__title--2">&{'views.application.index.days.conf.title'}</h3>
@@ -174,15 +152,9 @@
                 </div>
                 <div class="days__desc">&{'views.application.index.days.conf.desc'}</div>
             </div>
-            <div class="days__content days__content--2">
-                <h3 class="days__subtitle">&{'views.application.index.days.conf.keynote.title'}</h3>
-                <p>&{'views.application.index.days.conf.keynote.desc'}</p>
+            <div class="days__content days__content--1">
                 <h3 class="days__subtitle">&{'views.application.index.days.conf.conf.title'}</h3>
                 <p>&{'views.application.index.days.conf.conf.desc'}</p>
-                <h3 class="days__subtitle">&{'views.application.index.days.conf.snorkeling.title'}</h3>
-                <p>&{'views.application.index.days.conf.snorkeling.desc'}</p>
-                <h3 class="days__subtitle">&{'views.application.index.days.conf.notjustcoders.title'}</h3>
-                <p>&{'views.application.index.days.conf.notjustcoders.desc'}</p>
             </div>
         
         </div> <!-- /.days__contents -->
@@ -263,17 +235,14 @@
     <div class="location__cardContainer">
         <div class="location__card">
             <div class="location__cardHeader">
-                SKEMA Business School
+                Near Sophia-Antipolis
             </div>
             <div class="location__cardContent">
                 <div class="location__intro">
                     &{'views.application.index.location.intro'}
                 </div>
                 <div class="location__address">
-                    <span class="location__addressLine">SKEMA Business School - Sophia Antipolis</span>
-                    <span class="location__addressLine">Sophia Antipolis</span>
-                    <span class="location__addressLine">60 Rue Fedor Dostoïevski</span>
-                    <span class="location__addressLine">06902 Valbonne</span>
+                    <span class="location__addressLine">Near Sophia Antipolis</span>
                     <span class="location__addressLine">France</span>
                 </div>
                 <div class="location__buttonContainer">

@@ -1,0 +1,4 @@
+etc/rivieradev-2021/routes
+etc/rivieradev-2021/log4j-prod.properties
+etc/rivieradev-2021/application.conf
+etc/rivieradev-2021/dependencies.yml
