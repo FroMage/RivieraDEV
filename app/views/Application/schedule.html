@@ -20,8 +20,9 @@
             #{else}
                 <p>&{'views.application.schedule.unavailable'}</p>
             #{/else}
-            
-            <p>&{'views.application.schedule.unavailable.intro'}</p>
+            #{if days != null && days.size() > 0}        
+                <p>&{'views.application.schedule.unavailable.intro'}</p>
+            #{/if}
         </div>
     #{/if}
 

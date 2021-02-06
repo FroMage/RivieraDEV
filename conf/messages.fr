@@ -90,6 +90,7 @@ views.application.index.schedule=Découvrez le programme
 views.application.index.schedule.short=Programme
 views.application.index.judcon.title=Le mot de notre sponsor Platinum Red Hat
 views.application.index.location.intro=Situé sur la Côte d'Azur dans le cœur de Sophia Antipolis, la plus belle technopôle d'Europe
+views.application.index.location.temporary=Près de Sophia-Antipolis
 views.application.index.location.access=Accès
 views.application.index.get-in-touch=Restez au courant&nbsp;!
 views.application.index.speakers=Nos orateurs
