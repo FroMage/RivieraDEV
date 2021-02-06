@@ -2,13 +2,16 @@
 
 Note: at the moment it requires Play 1.5.3.
 
-1. Download and install **jdk-11**
-1. [Download Python 2](https://www.python.org/downloads/release/python-2717/) and install it
-1. [Download Play Framework 1.5.3](https://downloads.typesafe.com/play/1.5.3/play-1.5.3.zip) and install it
-1. Clone the [RivieraDEV repository](https://github.com/FroMage/RivieraDEV)
-1. Download and install **Postgres 9 or 11** on port 5433
-1. Open a shell and go to the `RivieraDEV` directory you just cloned
-1. Create your Postgres DB (9.x)
+1. Download and install [jdk-11](https://jdk.java.net/java-se-ri/11)
+    - On Windows: [Installation instructions](https://stackoverflow.com/questions/52511778/how-to-install-openjdk-11-on-windows)
+2. Download [Python 2](https://www.python.org/downloads/release/python-2717/) and install it
+3. Download [Play Framework 1.5.3](https://downloads.typesafe.com/play/1.5.3/play-1.5.3.zip) and install it
+    - [Installation guide](https://www.playframework.com/documentation/1.5.x/install)
+4. Clone the [RivieraDEV repository](https://github.com/FroMage/RivieraDEV)
+5. Download and install [Postgres 9 or 11](https://www.postgresql.org/download/) on port 5433
+    - On Windows, add `<path_to_postres>\bin` to the `Path` in Environment Variables
+6. Open a shell and go to the `RivieraDEV` directory you just cloned
+7. Create your Postgres DB (9.x)
     - On Linux:
         1. `sudo su - postgres`
         2. `createuser -p 5433 -PSRD rivieradev`
@@ -21,10 +24,12 @@ Note: at the moment it requires Play 1.5.3.
         3. _enter the postgres password chosen during the installation when prompted_
         4. `createdb -U postgres -p 5433 -O rivieradev -E utf8 rivieradev-2021`
         5. _enter the postgres password chosen during the installation when prompted_
-1. Download the module dependencies
-    1. `play dependencies --forProd`
-1. Run the application
-    1. `play run`
+8. Play (on Windows, you might need to run the following commands in a Powershell run as an Administrator)
+    1. Download the module dependencies
+        - `play dependencies --forProd`
+    2. Run the application
+        - `play run`
+9. You can visit the website at http://localhost:9001/ (if the text is not translated, just refresh)
 
 # How to make your user (if registration is disabled, which is the default for now)
 
