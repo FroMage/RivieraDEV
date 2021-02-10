@@ -39,7 +39,7 @@ views.application.common.website=Site web
 
 views.application.openGraph=Riviera DEV, c'est 1 jour de conférences sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
 
-views.application.index.teaser=Sous réserve de changement de dernière minute dûs au Covid
+views.application.index.teaser=Sous réserve de changement de dernière minute dû au Covid
 
 views.application.index.title=Accueil
 views.application.index.date=Début juillet 2021 ?
