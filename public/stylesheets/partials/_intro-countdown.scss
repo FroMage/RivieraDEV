@@ -48,6 +48,15 @@ $counter-item-size: 12rem;
         display: block;
     }
 
+    &__subtitle3 {
+        display: block;
+        font-size: $font-sm;
+        @media (min-width: $screen-sm-min) {
+            font-size: $font-lg;
+            margin-top: $space-md;
+        }
+    }
+
     &__questions {
         display: grid;
         row-gap: $space-md;
