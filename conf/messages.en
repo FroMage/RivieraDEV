@@ -158,6 +158,7 @@ views.application.subscribe.pass.include.conference.notjustcoders="We're not jus
 views.application.subscribe.pass.include.buffet=Breakfast and buffet
 views.application.subscribe.pass.include.buffets=Breakfasts and buffets
 views.application.subscribe.pass.include.party=Evening social event with buffet and concert
+views.application.subscribe.pass.include.lake=A day you will never forget: feet in the water, head full of stars
 views.application.subscribe.pass.period.blindBird=Blind bird
 views.application.subscribe.pass.period.earlyBird=Early bird
 views.application.subscribe.pass.period.regular=Regular
