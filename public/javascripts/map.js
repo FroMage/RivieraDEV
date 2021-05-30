@@ -1,9 +1,10 @@
+// See https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 function initMap() {
     // if HTML DOM Element that contains the map is found...
     var element = document.getElementById('location-map');
     if (element) {
         // Coordinates to center the map
-        var myLatlng = { lat: 43.613063, lng: 7.056227 };
+        var myLatlng = { lat: 43.451873097694246, lng: 6.632217840731058 };
 
         // Other options for the map, pretty much selfexplanatory
         var mapOptions = {
@@ -23,11 +24,10 @@ function initMap() {
             '<div id="content">' +
             '<div id="siteNotice">' +
             '</div>' +
-            '<span class="location__mapMarker__addressTitle">SKEMA Business School - Sophia Antipolis</span>' +
-            '<span class="location__mapMarker__addressLine">Sophia Antipolis</span>' +
-            '<span class="location__mapMarker__addressLine">60 Rue Fedor Dostoïevski</span>' +
-            '<span class="location__mapMarker__addressLine">06902 Valbonne</span>' +
-            '<div class="view-link"><a target="_blank" href="https://goo.gl/maps/ruuNcjcupC82"> <span>Voir sur Google&nbsp;Maps</span> </a> </div>' +
+            '<span class="location__mapMarker__addressTitle">Water Glisse Passion Aréna Plage Lac Perrin</span>' +
+            '<span class="location__mapMarker__addressLine">131 Chemin du Lac</span>' +
+            '<span class="location__mapMarker__addressLine">83520 Roquebrune-sur-Argens</span>' +
+            '<div class="view-link"><a target="_blank" href="https://goo.gl/maps/toYjU43S8gB4T2yt9"> <span>Voir sur Google&nbsp;Maps</span> </a> </div>' +
             '</div>';
 
         var infowindow = new google.maps.InfoWindow({
@@ -43,3 +43,4 @@ function initMap() {
         });
     }
 }
+

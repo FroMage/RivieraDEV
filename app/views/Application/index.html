@@ -59,10 +59,8 @@
         <h2 class="home__title">Riviera DEV 2021</h2>
         <div class="intro__subtitle">
           <span class="intro__subtitle1">&{'views.application.index.intro.subtitle1'}</span>
-          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle2'}</span>
-          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle3'}</span>
-          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle4'}</span>
-          <span class="intro__subtitle1">&{'views.application.index.intro.subtitle5'}</span>
+          <span class="intro__subtitle2">&{'views.application.index.intro.subtitle2'}</span>
+          <span class="intro__subtitle3">&{'views.application.index.intro.subtitle3'}</span>
         </div>
       </div> <!-- /intro__titles -->
 
@@ -93,7 +91,7 @@
     </div> <!-- /intro -->
     
     <!-- See countdown.js -->
-    <div id="js-countdown"></div>
+    <div id="js-countdown" class="countdownContainer"></div>
 
 </div> <!-- /introCountdown -->
 
@@ -108,14 +106,14 @@
     <div class="statistics__item">
         <span class="statistics__icon statistics__icon--attendees"></span>
         <div class="statistics__text">
-            <span class="statistics__number">??</span>
+            <span class="statistics__number">100</span>
             &{'views.application.index.stats.attendees'}
         </div>
     </div>
     <div class="statistics__item">
         <span class="statistics__icon statistics__icon--conferences"></span>
         <div class="statistics__text">
-            <span class="statistics__number">?</span>
+            <span class="statistics__number">18</span>
             &{'views.application.index.stats.sessions'}
         </div>
     </div>
@@ -145,12 +143,14 @@
             <div class="days__intro days__intro--1">
                 <img class="days__illustration" src="@{'/public/images/mascotte/Ray_ITv2.1.png'}" alt="">
                 <div class="days__titleDate">
-                    <h3 class="days__title days__title--2">&{'views.application.index.days.conf.title'}</h3>
+                    <h3 class="days__title days__title--1">&{'views.application.index.days.conf.title'}</h3>
                     <div class="days__date">&{'views.application.index.days.conf.date'}</div>
                 </div>
                 <div class="days__desc">&{'views.application.index.days.conf.desc'}</div>
             </div>
             <div class="days__content days__content--1">
+                <h3 class="days__subtitle">&{'views.application.index.days.conf.keynote.title'}</h3>
+                <p>&{'views.application.index.days.conf.keynote.desc'}</p>
                 <h3 class="days__subtitle">&{'views.application.index.days.conf.conf.title'}</h3>
                 <p>&{'views.application.index.days.conf.conf.desc'}</p>
             </div>
@@ -235,21 +235,23 @@
     <div class="location__cardContainer">
         <div class="location__card">
             <div class="location__cardHeader">
-                Near Sophia-Antipolis
+                &{'views.application.index.location.title'}
             </div>
             <div class="location__cardContent">
-                <!-- <div class="location__intro">
+                <div class="location__intro">
                     &{'views.application.index.location.intro'}
-                </div> -->
+                </div>
                 <div class="location__address">
-                    <span class="location__addressLine">&{'views.application.index.location.temporary'}</span>
+                    <span class="location__addressLine">Water Glisse Passion Aréna Plage Lac Perrin</span>
+                    <span class="location__addressLine">131 Chemin du Lac</span>
+                    <span class="location__addressLine">83520 Roquebrune sur Argens</span>
                     <span class="location__addressLine">France</span>
                 </div>
-                <div class="location__buttonContainer">
+                <!-- <div class="location__buttonContainer">
                     <a class="button location__button" href="@{Application.access}" role="button">
                         &{'views.application.index.location.access'}
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -287,9 +289,9 @@
 
         #{sponsorsPreviousYears sponsorsPreviousYears: sponsorsPreviousYears /}
 
-        <div class="partenaires__buttonContainer">
+        <!-- <div class="partenaires__buttonContainer">
             <a class="button" href="${sponsoringLeafletUrl}">&{'views.application.index.sponsors.join'}</a>
-        </div>
+        </div> -->
 
     </div>
 </div> <!-- /.partenaires -->
