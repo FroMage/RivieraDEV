@@ -37,7 +37,7 @@ views.application.common.company=Company
 views.application.common.twitter=Twitter account
 views.application.common.website=Website
 
-views.application.openGraph=Riviera DEV, that’s 1 day of conferences on the French Riviera in the heart of Sophia Antipolis, the most beautiful European technopole.
+views.application.openGraph=Riviera DEV, that’s 1 day of conferences on the French Riviera.
 
 views.application.index.teaser=Subject to last-minute changes due to Covid
 

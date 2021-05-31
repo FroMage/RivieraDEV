@@ -37,7 +37,7 @@ views.application.common.company=Entreprise
 views.application.common.twitter=Compte Twitter
 views.application.common.website=Site web
 
-views.application.openGraph=Riviera DEV, c'est 1 jour de conférences sur la Côte d'Azur en plein cœur de Sophia Antipolis, la plus belle technopole d'Europe.
+views.application.openGraph=Riviera DEV, c'est 1 jour de conférences sur la Côte d'Azur.
 
 views.application.index.teaser=Sous réserve de changement de dernière minute dû au Covid
 
