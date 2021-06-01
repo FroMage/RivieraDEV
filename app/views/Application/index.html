@@ -45,6 +45,9 @@
                 #{elseif promotedPage2 == 'SCHEDULE'}
                     <a class="button registration__button" href="@{Application.schedule()}">&{'views.application.index.schedule.short'}</a>
                 #{/elseif}
+                #{elseif promotedPage == 'CFP'}
+                    <a class="button registration__button" href="${cfpUrl}" target="_blank">&{'views.application.index.cfp.join.short'}</a>
+                #{/elseif}
             </div>
         </div>
     </div>
