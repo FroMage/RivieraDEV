@@ -59,7 +59,7 @@ When we set up the website for the new edition.
 -   `DISPLAY_NEW_SPEAKERS = false`: Same as above.
 -   `DISPLAY_TALKS = false`: Same as above.
 -   `PROMOTED_PAGE`: It's for the primary button shown on the home page below the logo. The possible values are be `CFP`, `TICKETS` or `SPONSORS`. At this time it's a bit tricky because none of them is available 😅 So let's not use it for now.
--   `PROMOTED_PAGE_2`; It's the same as above but for the secondary button. The possible values are `SPONSORS` and `SCHEDULE`. And it's the same, let's not use it for now.
+-   `PROMOTED_PAGE_2`; It's the same as above but for the secondary button. The possible values are `CFP`, `SPONSORS` and `SCHEDULE`. And it's the same, let's not use it for now.
 -   `TICKETING_URL`: At this time the ticketing is not opened yet, but if we already know the URL, we can fill it.
 -   `TICKETING_OPEN = false`
 -   `TICKETING_TRAINING_URL`: To be filled with the URL provided by the training organization, but you probably don't know it yet
