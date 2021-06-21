@@ -135,21 +135,23 @@ public class Admin extends Controller {
             int color = 0;
             TalkThemeColor[] colors = TalkThemeColor.values();
 
-            Logger.info("Importing %s categories", json.categories.size());
-            for (JsonCategory jsonCategory : json.categories) {
-                Logger.info(" Category %s", jsonCategory.name);
+            if(json.categories != null) {
+                Logger.info("Importing %s categories", json.categories.size());
+                for (JsonCategory jsonCategory : json.categories) {
+                    Logger.info(" Category %s", jsonCategory.name);
 
-                TalkTheme talkTheme = TalkTheme.find("importId", jsonCategory.id).first();
-                if(talkTheme == null) {
-                    talkTheme = new TalkTheme();
-                    talkTheme.theme = jsonCategory.name;
-                    talkTheme.color = colors[color % colors.length];
-                    talkTheme.importId = jsonCategory.id;
-                    talkTheme.save();
+                    TalkTheme talkTheme = TalkTheme.find("importId", jsonCategory.id).first();
+                    if(talkTheme == null) {
+                        talkTheme = new TalkTheme();
+                        talkTheme.theme = jsonCategory.name;
+                        talkTheme.color = colors[color % colors.length];
+                        talkTheme.importId = jsonCategory.id;
+                        talkTheme.save();
+                    }
+
+                    jsonCategoryIds.put(jsonCategory.id, talkTheme);
+                    color++;
                 }
-                
-                jsonCategoryIds.put(jsonCategory.id, talkTheme);
-                color++;
             }
 
             Logger.info("Importing %s formats", json.formats.size());
@@ -241,7 +243,9 @@ public class Admin extends Controller {
                     talk.isBreak = BreakType.NotABreak;
                     // FIXME: state?
                     talk.type = jsonFormatIds.get(jsonTalk.formats);
-                    talk.theme = jsonCategoryIds.get(jsonTalk.categories);
+                    if(jsonTalk.categories != null) {
+                        talk.theme = jsonCategoryIds.get(jsonTalk.categories);
+                    }
                     // FIXME:
                     talk.language = Language.FR;
                 }
