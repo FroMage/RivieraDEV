@@ -111,7 +111,8 @@ Before changing the configuration, we need to add some talks and speakers.
 
 ## When we close the ticketing
 
--   `TICKETING_OPEN = false`
+-   `TICKETING_OPEN = true` Yes, you read correctly, we don't change the value.
+-   Check the checkbox `soldout` in each concerned `PricePacks`
 -   `PROMOTED_PAGE = SPONSORS`
 
 # License
