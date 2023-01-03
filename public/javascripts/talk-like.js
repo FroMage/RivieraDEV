@@ -79,7 +79,7 @@ $(function() {
     function _getLikes() {
         if (window.localStorage) {
             let likes = JSON.parse(
-                localStorage.getItem('RivieraDEV-2021-Likes')
+                localStorage.getItem('RivieraDEV-2023-Likes')
             );
             if (!likes) {
                 // Initialize value
@@ -98,7 +98,7 @@ $(function() {
     function _setLikes(likes) {
         if (window.localStorage) {
             localStorage.setItem(
-                'RivieraDEV-2021-Likes',
+                'RivieraDEV-2023-Likes',
                 JSON.stringify(likes)
             );
         }

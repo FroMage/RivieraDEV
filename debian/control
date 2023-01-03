@@ -1,11 +1,11 @@
-Source: rivieradev-2021
+Source: rivieradev-2023
 Section: unknown
 Priority: extra
 Maintainer: Stephane Epardaud <stephane@epardaud.fr>
 Build-Depends: debhelper (>= 7), ant
 Standards-Version: 3.8.4
 
-Package: rivieradev-2021
+Package: rivieradev-2023
 Architecture: all
 Depends: ${misc:Depends}, play-1.5.3, openjdk-11-jdk
-Description: Riviera DEV 2021 application
+Description: Riviera DEV 2023 application

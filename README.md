@@ -16,13 +16,13 @@ Note: at the moment it requires Play 1.5.3.
         1. `sudo su - postgres`
         2. `createuser -p 5433 -PSRD rivieradev`
         3. _enter `rivieradev` as password when prompted_
-        4. `createdb -p 5433 -O rivieradev -E utf8 rivieradev-2021`
+        4. `createdb -p 5433 -O rivieradev -E utf8 rivieradev-2023`
         5. exit
     - On Windows:
         1. `createuser -U postgres -p 5433 -PSRD rivieradev`
         2. _enter `rivieradev` as password when prompted_
         3. _enter the postgres password chosen during the installation when prompted_
-        4. `createdb -U postgres -p 5433 -O rivieradev -E utf8 rivieradev-2021`
+        4. `createdb -U postgres -p 5433 -O rivieradev -E utf8 rivieradev-2023`
         5. _enter the postgres password chosen during the installation when prompted_
 8. Play (on Windows, you might need to run the following commands in a Powershell run as an Administrator)
     1. Download the module dependencies
@@ -37,7 +37,7 @@ This can only be done by hand for now:
 
 1. Pick a password
 1. Open a `psql` console to your database:
-    1. `psql -p 5433 -h localhost -U rivieradev rivieradev-2021`
+    1. `psql -p 5433 -h localhost -U rivieradev rivieradev-2023`
 1. Add your user (as admin)
     1. `INSERT INTO user_table (id, firstname, lastname, password, username) VALUES ((select nextval('hibernate_sequence')), 'FirstName', 'LastName', 'Password', 'UserName');`
 1. You can now log in and change your password using the UI

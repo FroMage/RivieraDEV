@@ -1,0 +1,4 @@
+/etc/rivieradev-2023/routes
+/etc/rivieradev-2023/log4j-prod.properties
+/etc/rivieradev-2023/application.conf
+/etc/rivieradev-2023/dependencies.yml

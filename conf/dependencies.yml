@@ -12,6 +12,6 @@ repositories:
     
     - fromage:
         type:       http
-        artifact:   "http://stephane.epardaud.fr/play-repo/[module]-[revision].zip"
+        artifact:   "https://stephane.epardaud.fr/play-repo/[module]-[revision].zip"
         contains:
             - fromage -> *
