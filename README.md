@@ -115,6 +115,73 @@ Before changing the configuration, we need to add some talks and speakers.
 -   Check the checkbox `soldout` in each concerned `PricePacks`
 -   `PROMOTED_PAGE = SPONSORS`
 
+# Publishing a new website
+
+- On your local machine
+- Make changes
+- Test it locally
+	- `play run`
+- Commit the files to git, push
+- Build a debian package
+	- `fakeroot ./debian/rules clean binary`
+- Copy the package to the production machine
+	- `scp ../rivieradev-2023_1.17_all.deb ssh.inforealm.org:`
+- Log into the production machine for the following commands
+	- `ssh ssh.inforealm.org`
+- Install the new version and restart it
+	- `sudo dpkg -i rivieradev-2023_1.17_all.deb`
+
+## Additional steps if there are DB changes
+
+- Locally, extract the new schema (use a number increment by looking at the files in `db/`
+	- `play db:export > db/db-X.sql`
+	- Edit the file to remove the Play header
+- Create an upgrade script manually, by starting with the diff which is a good hint generally:
+	- `diff -u db/db-(X-1).sql db/db-X.sql > db/upgrade-X.sql`
+	- Edit the file to turn it into a SQL upgrade script modifying tables
+	- Don't forget to update the rows too
+	- If you add a new column with a constraint, do it in three steps:
+		- Add the column without the constraint
+		- Update the rows to give a proper value to the new column
+		- Alter the column to add the constraint
+- Add the files to git, commit, push
+- Copy the upgrade file to the production machine:
+	- `scp db/upgrade-X.sql ssh.inforealm.org:`
+- Log into the production machine for the following commands
+	- `ssh ssh.inforealm.org`
+- Run the upgrade script
+	- `psql -h localhost -U rivieradev rivieradev-2023`
+	- `\i upgrade-X.sql`
+
+## Making a new RivieraDEV edition
+
+- Locally
+- In your IDE, do a global replace of 2023 to 2024 (except in `debian/changelog` and a few others)
+- Rename the files in `debian/` whose name contain 2023 to 2024
+- Add a new entry with the new package name in `debian/changelog`
+- Find a free port for the application on the production machine (you can usually bump the one from the config)
+
+- On the production machine
+- Update the DNS to add the new year 2024.rivieradev.fr and 2024.rivieradev.com in `/etc/bind/zones/rivieradev.fr` and `/etc/bind/zones/rivieradev.com`
+- Restart the DNS `/etc/init.d/bind reload`
+- Add the required folders with the proper permissions
+	- `mkdir -p /www/2024.rivieradev.fr/htdocs /www/2024.rivieradev.fr/logs`
+	- `chown -R www-data. /www/2024.rivieradev.fr`
+	- `cp -r /www/2023.rivieradev.fr/data /www/2024.rivieradev.fr/`
+	- `chown -R rivieradev. /www/2024.rivieradev.fr/data`
+- Get new certificates for the new DNS from letsencrypt
+	- `certbot certonly --apache -d 2024.rivieradev.fr,2024.rivieradev.com`
+- Create the new DB
+	- `sudo su - postgres`
+	- `createdb -O rivieradev -E utf8 rivieradev-2024`
+	- If it's the same DB you want to copy
+		- `pg_dump rivieradev-2023 > rdev23.sql`
+		- `psql rivieradev-2024`
+		- `\i rdev23.sql`
+	- If not, you can load the `db-X.sql` to get a blank DB
+	- Or start from the previous DB and apply the `upgrade-X.sql` script
+- Add the new apache entry in `/etc/apache/sites-enabled/rivieradev` by copying the previous year and changing the year
+
 # License
 
 The content of this repository is released under AGPLv3 as provided in
