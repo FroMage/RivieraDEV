@@ -19,6 +19,16 @@ $photos-gradient: linear-gradient(
     $photos-gradient
 );
 @include responsiveBackgroundImage(
+    '.photos__link--2019',
+    '../images/illustrations/responsives/2019-mini',
+    $photos-gradient
+);
+@include responsiveBackgroundImage(
+    '.photos__link--2018',
+    '../images/illustrations/responsives/2018-mini',
+    $photos-gradient
+);
+@include responsiveBackgroundImage(
     '.photos__link--2017',
     '../images/illustrations/responsives/2017-mini',
     $photos-gradient
