@@ -4,6 +4,12 @@ $days-illustration-size-sm: 10rem;
 .days {
     padding-bottom: $space-xxl;
 
+    &__judcon {
+        height: 5em;
+        float: right;
+        margin-left: 1em;
+    }
+    
     &__mainTitle {
         padding: $space-md $content-space-xs;
 
