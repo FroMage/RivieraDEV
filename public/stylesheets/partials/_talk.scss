@@ -1,3 +1,8 @@
+@include responsiveBackgroundImage(
+    '.talks__header',
+    '../images/illustrations/responsives/speakers-mini'
+);
+
 .talk-theme {
     padding: 0 0.4em;
     border-radius: 4px;

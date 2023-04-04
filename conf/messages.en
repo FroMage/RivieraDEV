@@ -315,7 +315,7 @@ views.application.becomeSponsor.download=Sponsoring leaflet
 views.application.schedule.title=Program
 views.application.schedule.subtitle=Organize your day. Choose the talks and workshops you want to attend.
 views.application.schedule.unavailable=The detailed program is not available yet, but you can have a look at the <a href="http://2019.rivieradev.fr/programme" target="_blank">2019&nbsp;session</a> to get an idea&nbsp;:)
-views.application.schedule.unavailable.speakers.available=The detailed program will be available soon, in the meantime you can already have a look at <a href="http://rivieradev.fr/talks">the&nbsp;talks</a> as well as <a href="http://rivieradev.fr/speakers">the&nbsp;speakers</a>.
+views.application.schedule.unavailable.speakers.available=The detailed program will be available soon, in the meantime you can already have a look at <a href="/talks">the&nbsp;talks</a> as well as <a href="/speakers">the&nbsp;speakers</a>.
 views.application.schedule.unavailable.talks=Discover the talks
 views.application.schedule.unavailable.intro=In the meantime, you can see below how the days will be organized:
 views.application.schedule.filter=Filters
@@ -336,6 +336,7 @@ views.application.schedule.like.explanation=Click on <i class="far fa-heart"></i
 views.application.schedule.allDays=All
 
 views.application.talks.title=Talks
+views.application.talks.subtitle=Discover all our amazing talks!
 
 views.application.talk.title=Talk
 views.application.talk.slides=Slides

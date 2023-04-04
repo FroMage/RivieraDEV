@@ -1,11 +1,14 @@
 #{extends 'main.html' /}
 #{set title:play.i18n.Messages.get('views.application.talks.title') /}
 
-<div class="page-title-container">
-	<h1 class="title page-title"><span>&{'views.application.talks.title'}</span></h1>
+<div class="page__header talks__header">
+    <h1 class="page__mainTitle">&{'views.application.talks.title'}</h1>
+    <div class="page__mainSubtitle talks__mainSubtitle">
+        <p>&{'views.application.talks.subtitle'}</p>
+    </div>
 </div>
 
-<div class="container page-container">
+<div class="page__container notFullWidth">
 
     #{if user}
         <a class="btn btn-default" href="@{Talks.blank()}">add</a>

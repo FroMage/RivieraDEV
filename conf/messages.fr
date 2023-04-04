@@ -317,7 +317,7 @@ views.application.becomeSponsor.download=Plaquette de sponsoring
 views.application.schedule.title=Programme
 views.application.schedule.subtitle=Organisez votre journée. Choisissez les talks et ateliers auxquels vous souhaitez assister.
 views.application.schedule.unavailable=Le programme n'est pas encore disponible, mais vous pouvez consulter <a href="http://2019.rivieradev.fr/programme" target="_blank">le programme de l'édition 2019</a> pour avoir une idée&nbsp;:)
-views.application.schedule.unavailable.speakers.available=Le programme heure par heure sera annoncé prochainement, en attendant vous pouvez déjà consulter <a href="http://rivieradev.fr/talks">les&nbsp;sessions</a> et <a href="http://rivieradev.fr/speakers">les&nbsp;orateurs</a>.
+views.application.schedule.unavailable.speakers.available=Le programme heure par heure sera annoncé prochainement, en attendant vous pouvez déjà consulter <a href="/talks">les&nbsp;sessions</a> et <a href="/speakers">les&nbsp;orateurs</a>.
 views.application.schedule.unavailable.talks=Découvrez les sessions
 views.application.schedule.unavailable.intro=En attendant, voici comment seront organisées les journées :
 views.application.schedule.filter=Filtres
@@ -338,6 +338,7 @@ views.application.schedule.like.explanation=Cliquez sur <i class="far fa-heart">
 views.application.schedule.allDays=Tous
 
 views.application.talks.title=Sessions
+views.application.talks.subtitle=Découvrez nos super sessions !
 
 views.application.talk.title=Session
 views.application.talk.slides=Slides
