@@ -191,8 +191,8 @@ views.application.access.car.skema.2=The entrance to SKEMA Business School campu
 views.application.access.train.title=By train
 views.application.access.train.station.to.1=The nearest train station to Sophia Antipolis is that of <strong>Antibes</strong>.
 views.application.access.train.station.to.2=Depending on your departing train station, check the timetables:
-views.application.access.train.station.to.3=for long-distance lines on the <a href="http://www.sncf.com/fr/" target="_blank">SNCF</a> website,
-views.application.access.train.station.to.4=and for regional lines those of <a href="http://www.ter.sncf.com/paca" target="_blank">TER</a>.
+views.application.access.train.station.to.3=for long-distance lines on the <a href="https://www.sncf-connect.com/" target="_blank">SNCF</a> website,
+views.application.access.train.station.to.4=and for regional lines those of <a href="https://www.ter.sncf.com/sud-provence-alpes-cote-d-azur" target="_blank">TER</a>.
 views.application.access.train.station.from.1=Once in the Antibes train station, take the
 views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">Envibus 100 Express but</a> - Price: 1€.
 views.application.access.train.station.from.3=To reach the bus stop, get out of the station and take the suspended walkway above the tracks.
@@ -206,15 +206,15 @@ views.application.access.bus.from.sophia.1=From the Sophia Antipolis municipalit
 views.application.access.bus.from.sophia.2=<a href="http://www.envibus.fr/" target="_blank">the Envibus network</a>.
 views.application.access.bus.from.elsewhere.1=From other cities : use
 views.application.access.bus.from.elsewhere.2=the regional network of busses
-views.application.access.bus.from.elsewhere.3=The 230 line goes from Nice Airport to Sophia Antipolis.
+views.application.access.bus.from.elsewhere.3=The 630 line goes from Nice Airport to Sophia Antipolis.
 views.application.access.plane.title=By plane
 views.application.access.plane.1=The Nice Côte d'Azur airport
-views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free shuttle to get to Terminal 1.
-views.application.access.plane.3=Take <a href="https://www.departement06.fr/deplacements/vous-deplacer-en-bus-3207.html" target="_blank">the 230 bus</a>:
-views.application.access.plane.4=Nice Sophia Express. Beware: the 230 line does not stop in the airport.
+views.application.access.plane.2=is 20 km from Sophia Antipolis. From Terminal 2, take the free TRAM to get to Terminal 1.
+views.application.access.plane.3=Take <a href="https://zou.maregionsud.fr/se-deplacer-en-bus/se-deplacer-en-bus-dans-les-alpes-maritimes/" target="_blank">the 630 bus</a>:
+views.application.access.plane.4=Nice Sophia Express. Beware: the 630 line does not stop directly at the airport.
 views.application.access.plane.5=The bus stop is at "Aéroport/Promenade" (in front of Terminal 1).
-views.application.access.plane.6=The trip duration is 45 minutes approximately and costs 1.50€. Get out at the "SKEMA" stop.
-views.application.access.plane.7=From Sophia Antipolis, this bus stops at the airport, but only if you notify the driver.
+views.application.access.plane.6=The trip duration is 45 minutes approximately and costs 2.10€. Get out at the "SKEMA" stop.
+views.application.access.plane.7=From Sophia Antipolis, this bus stops at "Aéroport/Promenade" station (in front of Terminal 1).
 
 views.application.orgas.title=About us
 views.application.orgas.text.1=Riviera DEV is a conference organised by developers for developers.
