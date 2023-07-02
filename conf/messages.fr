@@ -180,7 +180,8 @@ views.application.access.in-sophia.1=À Sophia Antipolis
 views.application.access.in-sophia.2=Rendez-vous au campus <strong>Skema Business School</strong>, en plein coeur de Sophia Antipolis.
 views.application.access.dates.1=Les 10, 11 et 12 mai 2023
 views.application.access.dates.2=Riviera DEV se déroulera en mai lorsque les beaux jours reviendront.
-views.application.access.car.title=En voiture
+views.application.access.bike.title=A vélo
+views.application.access.bike.1=Profitez du réseau de pistes cyclables de Sophia-Antipolis pour vous rendre à la conférence. Des arceaux vous permettront d'attacher votre vélo à Skema. Vous trouverez également une <a href="https://www.choisirlevelo.org/carte-velo/">carte des aménagements cyclables</a> sur le site de l'association <a href="https://www.choisirlevelo.org/">Choisir le vélo</a>.
 views.application.access.car.from.cannes.1=<strong>En provenance de Cannes</strong>&nbsp;: sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis".
 views.application.access.car.from.cannes.2=Après le péage prendre à droite "direction Sophia Antipolis" (D35).
 views.application.access.car.from.nice.1=<strong>En provenance de Nice</strong>&nbsp;: sur l'Autoroute A8 prendre la sortie 44 "Antibes/Sophia Antipolis".
