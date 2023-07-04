@@ -102,6 +102,7 @@
         }
     }
 
+    &__bike,
     &__car,
     &__plane,
     &__bus,
@@ -128,6 +129,11 @@
 
     &__how {
         background-image: url(../images/icons/how-to-get-here.svg);
+    }
+
+    &__bike {
+        background-image: url(../images/icons/bike.svg);
+        background-size: 150px 150px;
     }
 
     &__car {
