@@ -1,9 +1,8 @@
 package controllers;
 
-import java.util.ArrayList;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
@@ -31,11 +30,9 @@ import models.TalkTheme;
 import models.TalkType;
 import models.TemporarySlot;
 import models.Track;
-
 import play.i18n.Lang;
 import play.mvc.Before;
 import play.mvc.Controller;
-
 import util.DateUtils;
 import util.StringUtils;
 

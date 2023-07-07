@@ -293,4 +293,9 @@ public class Admin extends Controller {
         List<Speaker> speakers = Speaker.find("ORDER BY firstName,lastName").fetch();
         render(speakers);
     }
+
+    public static void speakerEmailCompany() {
+        List<Speaker> speakers = Speaker.find("ORDER BY firstName,lastName").fetch();
+        render(speakers);
+    }
 }
