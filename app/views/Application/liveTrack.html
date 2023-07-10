@@ -63,7 +63,6 @@
                     #{list track.talks, as: 'talk'}
                         {
                             "title": "${talk.getTitle().jsonEscape()}",
-                            "description": "${talk.getDescription().jsonEscape()}", 
                             "start": ${talk.slot?.startDate?.time ?: "null"}, 
                             "end": ${talk.slot?.endDate?.time ?: "null"},
                             #{if talk.theme}
