@@ -35,6 +35,28 @@ body {
 
 .reveal .slides section div.talk {
   flex: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.reveal .slides section div.speakers {
+  justify-content: center;
+  display: flex;
+}
+
+.reveal .slides section div.slot {
+  font-size: 2em;
+  color: #4b78cb;
+  font-weight: bold;
+}
+
+.reveal .slides section div.speaker {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em;
+  align-items: center;
+  color: #33bab5;
+  font-weight: bold;
 }
 
 .reveal .slides section div.timer {
@@ -131,12 +153,16 @@ body {
   border-color: #00008B;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
-.reveal section img.speaker {
+.reveal section img.speaker_logo {
   border: 4px solid #4b78cb;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   width: 100px;
-  margin: 20px
+  margin: 10px 20px 20px 20px;
+}
+
+.reveal section span.speaker_name {
+  font-size: 2em;
 }
 
 /*********************************************

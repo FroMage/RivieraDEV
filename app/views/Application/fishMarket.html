@@ -22,12 +22,28 @@
 					<section>
 						<div class="card">
 							<div class="talk">
-								#{list items: talk.speakers, as: 'speaker'}
-								<img class="speaker" 
-									src="@{Application.speakerPhoto(speaker.id)}" 
-									alt="${speaker.firstName} ${speaker.lastName}" />
-								#{/list}
+								<div class="speakers">
+									#{list items: talk.speakers, as: 'speaker'}
+									<div class="speaker">
+										<span class="speaker_name">
+											${speaker.firstName} ${speaker.lastName}
+										</span>
+										<img class="speaker_logo" 
+											src="@{Application.speakerPhoto(speaker.id)}" 
+											alt="${speaker.firstName} ${speaker.lastName}" />
+									</div>
+									#{/list}
+								</div>
 								<h1>${talk.title}</h1>
+                                <div class="slot">
+                                    #{if talk.slot}
+                                        ${talk.slot.startDate.format('HH:mm')} - ${talk.slot.endDate.format('HH:mm')}
+                                    #{/if}
+                                    —
+                                    #{if talk.track}
+                                        ${talk.track.title}
+                                    #{/if}
+                                </div>
 							</div>
 							<div class="timer">30</div>
 						</div>
