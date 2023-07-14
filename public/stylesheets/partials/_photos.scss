@@ -14,6 +14,11 @@ $photos-gradient: linear-gradient(
 );
 
 @include responsiveBackgroundImage(
+    '.photos__link--2023',
+    '../images/illustrations/responsives/2023-mini',
+    $photos-gradient
+);
+@include responsiveBackgroundImage(
     '.photos__link--2021',
     '../images/illustrations/responsives/2021-mini',
     $photos-gradient
