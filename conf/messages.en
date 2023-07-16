@@ -196,12 +196,12 @@ views.application.access.train.station.to.2=Depending on your departing train st
 views.application.access.train.station.to.3=for long-distance lines on the <a href="https://www.sncf-connect.com/" target="_blank">SNCF</a> website,
 views.application.access.train.station.to.4=and for regional lines those of <a href="https://www.ter.sncf.com/sud-provence-alpes-cote-d-azur" target="_blank">TER</a>.
 views.application.access.train.station.from.1=Once in the Antibes train station, take the
-views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">Envibus 100 Express but</a> - Price: 1€.
+views.application.access.train.station.from.2=<a href="https://www.envibus.fr/toutes-les-lignes-urbaines/ligne-b.html" target="_blank">Envibus B bus</a> - Price: 1€.
 views.application.access.train.station.from.3=To reach the bus stop, get out of the station and take the suspended walkway above the tracks.
 views.application.access.train.station.from.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
 views.application.access.bus.title=By bus
 views.application.access.bus.from.antibes.1=From the Antibes train station: you can take
-views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">the Envibus 100 Express bus</a>
+views.application.access.bus.from.antibes.2=<a href="https://www.envibus.fr/toutes-les-lignes-urbaines/ligne-b.html" target="_blank">the Envibus B bus</a>
 views.application.access.bus.from.antibes.3=- Price: 1€.
 views.application.access.bus.from.antibes.4=The trip duration is approximately 30 minutes, get out at the SKEMA stop.
 views.application.access.bus.from.sophia.1=From the Sophia Antipolis municipality: use

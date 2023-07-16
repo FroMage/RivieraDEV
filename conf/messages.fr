@@ -197,12 +197,12 @@ views.application.access.train.station.to.2=Selon votre gare de départ, consult
 views.application.access.train.station.to.3=pour les grandes lignes sur le site de la <a href="https://www.sncf-connect.com/" target="_blank">SNCF</a>
 views.application.access.train.station.to.4=et pour les trains régionaux ceux du <a href="https://www.ter.sncf.com/sud-provence-alpes-cote-d-azur" target="_blank">TER</a>.
 views.application.access.train.station.from.1=Arrivé à la Gare d'Antibes, prendre le
-views.application.access.train.station.from.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">bus Envibus 100 Express</a> - Prix&nbsp;: 1€.
+views.application.access.train.station.from.2=<a href="https://www.envibus.fr/toutes-les-lignes-urbaines/ligne-b.html" target="_blank">bus Envibus B</a> - Prix&nbsp;: 1€.
 views.application.access.train.station.from.3=Pour joindre l'arrêt, sortir de la gare et prendre la passerelle piétonne au-dessus des voies.
 views.application.access.train.station.from.4=La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA.
 views.application.access.bus.title=En bus
 views.application.access.bus.from.antibes.1=À partir de la gare d'Antibes&nbsp;: vous pouvez prendre
-views.application.access.bus.from.antibes.2=<a href="http://www.envibus.fr/toutes-les-lignes-urbaines/ligne-100.html" target="_blank">le bus Envibus 100 Express</a>
+views.application.access.bus.from.antibes.2=<a href="https://www.envibus.fr/toutes-les-lignes-urbaines/ligne-b.html" target="_blank">le bus Envibus B</a>
 views.application.access.bus.from.antibes.3=- Prix&nbsp;: 1€.
 views.application.access.bus.from.antibes.4=La durée du trajet est d'environ 30 minutes, il faut descendre à l’arrêt SKEMA.
 views.application.access.bus.from.sophia.1=À partir des communes de la Communauté d'Agglomération Sophia Antipolis&nbsp;: utiliser
