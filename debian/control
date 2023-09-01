@@ -7,5 +7,5 @@ Standards-Version: 3.8.4
 
 Package: rivieradev-2023
 Architecture: all
-Depends: ${misc:Depends}, play-1.5.3, openjdk-11-jdk
+Depends: ${misc:Depends}, play-1.7.1, openjdk-11-jdk
 Description: Riviera DEV 2023 application
