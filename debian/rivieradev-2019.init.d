@@ -34,6 +34,7 @@ then
 else
 	APP_FOLDER=$APP
 	APP_NAME=$APP
+	PLAY_ID=prod
 fi
 
 APP_PATH=/usr/share/$APP_FOLDER
